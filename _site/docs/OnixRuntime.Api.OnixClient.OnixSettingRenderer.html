@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OnixSettingRenderer | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OnixSettingRenderer | Onix Plugin Documentation ">
+      
+      <meta name="description" content="This is the base class for all setting renderers. You must create a class that inherits from this and implement the Render and GetHeight function.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_OnixClient_OnixSettingRenderer.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.OnixSettingRenderer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer">
+
+
+
+  <h1 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer" class="text-break">
+Class OnixSettingRenderer  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.html">OnixClient</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This is the base class for all setting renderers.
+You must create a class that inherits from this and implement the Render and GetHeight function.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OnixSettingRenderer : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OnixSettingRenderer</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer__ctor_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer__ctor_OnixRuntime_Api_OnixClient_OnixSetting_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor(OnixRuntime.Api.OnixClient.OnixSetting)">
+  OnixSettingRenderer(OnixSetting)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingRenderer.html">OnixSettingRenderer</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected OnixSettingRenderer(OnixSetting setting)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setting</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a></dt>
+    <dd><p>The setting this renderer will be rendering.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_Setting" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.Setting">
+  Setting
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The setting this renderer is responsible for rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSetting Setting</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_Dispose_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_Dispose" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes resources used by the renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetGlobalPosition_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetGlobalPosition_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition(OnixRuntime.Api.Maths.Vec2)">
+  GetGlobalPosition(Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the global position of the setting renderer based on the mouse position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2 GetGlobalPosition(Vec2 mousePosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The local mouse position within the setting.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The global position as a <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHeight_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHeight_OnixRuntime_Api_Rendering_RendererDirect2D_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight(OnixRuntime.Api.Rendering.RendererDirect2D)">
+  GetHeight(RendererDirect2D)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the height of the setting for layout purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float GetHeight(RendererDirect2D gfx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererDirect2D.html">RendererDirect2D</a></dt>
+    <dd><p>The graphics renderer, used for measuring text or other layout calculations.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The height of the setting in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightAdditionalOpacity_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightAdditionalOpacity_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_System_Int32_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32)">
+  GetHighlightAdditionalOpacity(Rect, Vec2, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the additional highlight opacity based on whether the mouse is inside a given region.
+This animates smoothly, matching the client's highlight behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetHighlightAdditionalOpacity(Rect region, Vec2 mousePosition, int id = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The region to test against.</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The current mouse position.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Additional opacity to add to your highlight.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightAdditionalOpacity_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightAdditionalOpacity_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Int32_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32)">
+  GetHighlightAdditionalOpacity(Vec2, Vec2, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the additional highlight opacity based on whether the mouse is within a region defined by size starting at (0,0).
+This animates smoothly, matching the client's highlight behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetHighlightAdditionalOpacity(Vec2 size, Vec2 mousePosition, int id = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The size of the region (assumed to start at origin).</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The current mouse position.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Additional opacity to add to your highlight.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightAdditionalOpacity_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightAdditionalOpacity_System_Boolean_System_Int32_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(System.Boolean,System.Int32)">
+  GetHighlightAdditionalOpacity(bool, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the additional highlight opacity based on whether the mouse is inside a region.
+This animates smoothly, matching the client's highlight behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetHighlightAdditionalOpacity(bool mouseInside, int id = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mouseInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the mouse is currently inside the region.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Additional opacity to add to your highlight.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightColor_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightColor_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_System_Int32_OnixRuntime_Api_OnixClient_OnixClientThemeV3_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)">
+  GetHighlightColor(Rect, Vec2, int, OnixClientThemeV3?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the highlight color based on whether the mouse is inside a specified region.
+This animates smoothly, matching the client's highlight behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingColor.ValueType GetHighlightColor(Rect region, Vec2 mousePosition, int id = 0, OnixClientThemeV3? cachedTheme = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The region to test against.</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The current mouse position.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+    <dt><code>cachedTheme</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientThemeV3.html">OnixClientThemeV3</a></dt>
+    <dd><p>Optional cached theme to avoid repeated access to the global theme.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html">OnixSettingColor</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html">ValueType</a></dt>
+    <dd><p>The adjusted highlight color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightColor_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightColor_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Int32_OnixRuntime_Api_OnixClient_OnixClientThemeV3_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)">
+  GetHighlightColor(Vec2, Vec2, int, OnixClientThemeV3?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the highlight color based on whether the mouse is inside a region defined by a size starting at (0,0).
+This animates smoothly, matching the client's highlight behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingColor.ValueType GetHighlightColor(Vec2 size, Vec2 mousePosition, int id = 0, OnixClientThemeV3? cachedTheme = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The size of the region (assumed to start at origin).</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The current mouse position.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+    <dt><code>cachedTheme</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientThemeV3.html">OnixClientThemeV3</a></dt>
+    <dd><p>Optional cached theme to avoid repeated access to the global theme.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html">OnixSettingColor</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html">ValueType</a></dt>
+    <dd><p>The adjusted highlight color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightColor_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightColor_System_Boolean_System_Int32_OnixRuntime_Api_OnixClient_OnixClientThemeV3_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(System.Boolean,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)">
+  GetHighlightColor(bool, int, OnixClientThemeV3?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a highlight color adjusted by the animated opacity effect.
+This animates smoothly, matching the client's highlight behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingColor.ValueType GetHighlightColor(bool mouseInside, int id = 0, OnixClientThemeV3? cachedTheme = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mouseInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the mouse is currently inside the region.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+    <dt><code>cachedTheme</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientThemeV3.html">OnixClientThemeV3</a></dt>
+    <dd><p>Optional cached theme to avoid repeated access to the global theme.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html">OnixSettingColor</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html">ValueType</a></dt>
+    <dd><p>The adjusted highlight color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightLinear_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightLinear_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_System_Single_System_Int32_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)">
+  GetHighlightLinear(Rect, Vec2, float, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the linear highlight opacity based on whether the mouse is inside a specified region.
+This overload checks if the mouse position is within the given rectangle and animates the highlight accordingly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetHighlightLinear(Rect region, Vec2 mousePosition, float animationTime, int id = 0, bool restartSmoothly = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The region to test against.</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The current mouse position.</p>
+</dd>
+    <dt><code>animationTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The time in seconds for the animation to complete.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+    <dt><code>restartSmoothly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the animation will restart smoothly when the mouse enters or exits before the animation is over.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The linear highlight value between 0 and 1.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightLinear_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightLinear_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Single_System_Int32_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)">
+  GetHighlightLinear(Vec2, Vec2, float, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the linear highlight opacity based on whether the mouse is inside a region defined by a size starting at (0,0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetHighlightLinear(Vec2 size, Vec2 mousePosition, float animationTime, int id = 0, bool restartSmoothly = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The size of the region (assumed to start at origin).</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The current mouse position.</p>
+</dd>
+    <dt><code>animationTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The time in seconds for the animation to complete.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+    <dt><code>restartSmoothly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the animation will restart smoothly when the mouse enters or exits before the animation is over.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The linear highlight value between 0 and 1.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightLinear_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightLinear_System_Boolean_System_Single_System_Int32_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(System.Boolean,System.Single,System.Int32,System.Boolean)">
+  GetHighlightLinear(bool, float, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the linear highlight opacity based on whether the mouse is inside a given region identified with its id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetHighlightLinear(bool mouseInside, float animationTime, int id = 0, bool restartSmoothly = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mouseInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the mouse is currently inside the region.</p>
+</dd>
+    <dt><code>animationTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The time in seconds for the animation to complete.</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An optional ID to track multiple highlight regions independently.</p>
+</dd>
+    <dt><code>restartSmoothly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the animation will restart smoothly when the mouse enters or exits before the animation is over.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The linear highlight value between 0 and 1.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_HandleNameCopy_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_HandleNameCopy_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Inputs_InputKey_ClickType__" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType@)">
+  HandleNameCopy(Vec2, Vec2, ref ClickType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles the developer options name copy shortcuts on your setting renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HandleNameCopy(Vec2 size, Vec2 mousePosition, ref InputKey.ClickType click)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The size of the area given to you.</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The position of the mouse given to you.</p>
+</dd>
+    <dt><code>click</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.ClickType.html">ClickType</a></dt>
+    <dd><p>The click input given to you.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when the click has been handled here.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_PreDispose_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_PreDispose_OnixRuntime_Api_Rendering_RendererDirect2D_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose(OnixRuntime.Api.Rendering.RendererDirect2D)">
+  PreDispose(RendererDirect2D?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called right before the setting is disposed, on the Direct2D thread, so you can do any cleanup you need to do.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PreDispose(RendererDirect2D? gfx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererDirect2D.html">RendererDirect2D</a></dt>
+    <dd><p>The graphics renderer if needed to dispose of some things.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_Render_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_Render_OnixRuntime_Api_Rendering_RendererDirect2D_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Inputs_InputKey_ClickType_System_Boolean_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render(OnixRuntime.Api.Rendering.RendererDirect2D,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Boolean,System.Boolean,System.Boolean)">
+  Render(RendererDirect2D, Vec2, Vec2, ClickType, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the setting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Render(RendererDirect2D gfx, Vec2 size, Vec2 mousePosition, InputKey.ClickType click, bool mouseInside, bool lmbDown, bool rmbDown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererDirect2D.html">RendererDirect2D</a></dt>
+    <dd><p>The graphics renderer. Use this to render the setting's content.</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The size of the current setting.</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The position of the mouse within that setting.</p>
+</dd>
+    <dt><code>click</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.ClickType.html">ClickType</a></dt>
+    <dd><p>The click input that was done this frame.</p>
+</dd>
+    <dt><code>mouseInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the mouse is inside the bounds of this setting.</p>
+</dd>
+    <dt><code>lmbDown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the left mouse button is held down at this time. Can be used for implementing sliders.</p>
+</dd>
+    <dt><code>rmbDown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the right mouse button is held down at this time.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the click was handled; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_SetTooltip_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_SetTooltip_System_String_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)">
+  SetTooltip(string, Rect, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the tooltip text if the mouse is within the bounds of the specified region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTooltip(string text, Rect region, Vec2 mousePosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text of the tooltip.</p>
+</dd>
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The region the tooltip shows up in.</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The position of the mouse the Render function gave you.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_SetTooltip_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingRenderer_SetTooltip_System_String_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)">
+  SetTooltip(string, Vec2, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the tooltip text if the mouse is within the bounds of the setting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTooltip(string text, Vec2 size, Vec2 mousePosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text of the tooltip.</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The size the Render function gave you.</p>
+</dd>
+    <dt><code>mousePosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The position of the mouse the Render function gave you.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

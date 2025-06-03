@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Quaternion | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Quaternion | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a quaternion for 3D rotations.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Maths_Quaternion.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Maths.Quaternion%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Maths.Quaternion">
+
+
+
+  <h1 id="OnixRuntime_Api_Maths_Quaternion" data-uid="OnixRuntime.Api.Maths.Quaternion" class="text-break">
+Struct Quaternion  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Maths.html">Maths</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a quaternion for 3D rotations.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Quaternion</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion__ctor_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion__ctor" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor">
+  Quaternion()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs the identity quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion__ctor_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion__ctor_OnixRuntime_Api_Maths_Angles_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor(OnixRuntime.Api.Maths.Angles)">
+  Quaternion(Angles)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(Angles eulerAngles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eulerAngles</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles.html">Angles</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion__ctor_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion__ctor_OnixRuntime_Api_Maths_Angles_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor(OnixRuntime.Api.Maths.Angles,System.Single)">
+  Quaternion(Angles, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (degrees).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(Angles axis, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles.html">Angles</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion__ctor_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion__ctor_OnixRuntime_Api_Maths_Angles3_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor(OnixRuntime.Api.Maths.Angles3)">
+  Quaternion(Angles3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch, Roll).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(Angles3 eulerAngles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eulerAngles</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion__ctor_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion__ctor_OnixRuntime_Api_Maths_Angles3_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor(OnixRuntime.Api.Maths.Angles3,System.Single)">
+  Quaternion(Angles3, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (degrees).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(Angles3 axis, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion__ctor_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion__ctor_OnixRuntime_Api_Maths_TransformationMatrix_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor(OnixRuntime.Api.Maths.TransformationMatrix)">
+  Quaternion(TransformationMatrix)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from a transformation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(TransformationMatrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion__ctor_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">
+  Quaternion(float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(float x, float y, float z, float w)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>w</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_W" data-uid="OnixRuntime.Api.Maths.Quaternion.W">
+  W
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>W component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float W</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_X" data-uid="OnixRuntime.Api.Maths.Quaternion.X">
+  X
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>X component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Y" data-uid="OnixRuntime.Api.Maths.Quaternion.Y">
+  Y
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Y component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Z" data-uid="OnixRuntime.Api.Maths.Quaternion.Z">
+  Z
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Z component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Z</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Conjugated_" data-uid="OnixRuntime.Api.Maths.Quaternion.Conjugated*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Conjugated" data-uid="OnixRuntime.Api.Maths.Quaternion.Conjugated">
+  Conjugated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the conjugate of this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion Conjugated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Euler_" data-uid="OnixRuntime.Api.Maths.Quaternion.Euler*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Euler" data-uid="OnixRuntime.Api.Maths.Quaternion.Euler">
+  Euler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Euler angles (degrees) representation of this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Angles3 Euler { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_EulerRadians_" data-uid="OnixRuntime.Api.Maths.Quaternion.EulerRadians*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_EulerRadians" data-uid="OnixRuntime.Api.Maths.Quaternion.EulerRadians">
+  EulerRadians
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Euler angles (radians) representation of this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Angles3 EulerRadians { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Identity_" data-uid="OnixRuntime.Api.Maths.Quaternion.Identity*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Identity" data-uid="OnixRuntime.Api.Maths.Quaternion.Identity">
+  Identity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The identity quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Identity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Inversed_" data-uid="OnixRuntime.Api.Maths.Quaternion.Inversed*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Inversed" data-uid="OnixRuntime.Api.Maths.Quaternion.Inversed">
+  Inversed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the inverse of this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion Inversed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_IsIdentity_" data-uid="OnixRuntime.Api.Maths.Quaternion.IsIdentity*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_IsIdentity" data-uid="OnixRuntime.Api.Maths.Quaternion.IsIdentity">
+  IsIdentity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if this is the identity quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsIdentity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Length_" data-uid="OnixRuntime.Api.Maths.Quaternion.Length*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Length" data-uid="OnixRuntime.Api.Maths.Quaternion.Length">
+  Length
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The length (magnitude) of the quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Length { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_LengthSquared_" data-uid="OnixRuntime.Api.Maths.Quaternion.LengthSquared*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_LengthSquared" data-uid="OnixRuntime.Api.Maths.Quaternion.LengthSquared">
+  LengthSquared
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The squared length (magnitude) of the quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LengthSquared { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Matrix_" data-uid="OnixRuntime.Api.Maths.Quaternion.Matrix*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Matrix" data-uid="OnixRuntime.Api.Maths.Quaternion.Matrix">
+  Matrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the transformation matrix representation of this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformationMatrix Matrix { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Normalized_" data-uid="OnixRuntime.Api.Maths.Quaternion.Normalized*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Normalized" data-uid="OnixRuntime.Api.Maths.Quaternion.Normalized">
+  Normalized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a normalized copy of this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion Normalized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Zero_" data-uid="OnixRuntime.Api.Maths.Quaternion.Zero*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Zero" data-uid="OnixRuntime.Api.Maths.Quaternion.Zero">
+  Zero
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The zero quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Zero { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Dot_" data-uid="OnixRuntime.Api.Maths.Quaternion.Dot*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Dot_OnixRuntime_Api_Maths_Quaternion_OnixRuntime_Api_Maths_Quaternion_" data-uid="OnixRuntime.Api.Maths.Quaternion.Dot(OnixRuntime.Api.Maths.Quaternion,OnixRuntime.Api.Maths.Quaternion)">
+  Dot(Quaternion, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the dot product of two quaternions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Dot(Quaternion a, Quaternion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Equals_" data-uid="OnixRuntime.Api.Maths.Quaternion.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Equals_System_Object_" data-uid="OnixRuntime.Api.Maths.Quaternion.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if this quaternion is equal to another object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngle_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngle*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngle_OnixRuntime_Api_Maths_Angles_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngle(OnixRuntime.Api.Maths.Angles,System.Single)">
+  FromAxisAngle(Angles, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (degrees).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromAxisAngle(Angles axis, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles.html">Angles</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngle_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngle*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngle_OnixRuntime_Api_Maths_Angles3_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngle(OnixRuntime.Api.Maths.Angles3,System.Single)">
+  FromAxisAngle(Angles3, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (degrees).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromAxisAngle(Angles3 axis, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngle_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngle*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngle_System_Single_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngle(System.Single,System.Single,System.Single,System.Single)">
+  FromAxisAngle(float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (degrees).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromAxisAngle(float x, float y, float z, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngleRadians_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngleRadians*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngleRadians_OnixRuntime_Api_Maths_Angles_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngleRadians(OnixRuntime.Api.Maths.Angles,System.Single)">
+  FromAxisAngleRadians(Angles, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (radians).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromAxisAngleRadians(Angles axis, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles.html">Angles</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngleRadians_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngleRadians*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngleRadians_OnixRuntime_Api_Maths_Angles3_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngleRadians(OnixRuntime.Api.Maths.Angles3,System.Single)">
+  FromAxisAngleRadians(Angles3, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (radians).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromAxisAngleRadians(Angles3 axis, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngleRadians_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngleRadians*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromAxisAngleRadians_System_Single_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromAxisAngleRadians(System.Single,System.Single,System.Single,System.Single)">
+  FromAxisAngleRadians(float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from an axis and angle (radians).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromAxisAngleRadians(float x, float y, float z, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromEuler_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEuler*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromEuler_OnixRuntime_Api_Maths_Angles_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEuler(OnixRuntime.Api.Maths.Angles)">
+  FromEuler(Angles)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromEuler(Angles eulerAngles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eulerAngles</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles.html">Angles</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromEuler_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEuler*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromEuler_OnixRuntime_Api_Maths_Angles3_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEuler(OnixRuntime.Api.Maths.Angles3)">
+  FromEuler(Angles3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch, Roll).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromEuler(Angles3 eulerAngles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eulerAngles</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromEuler_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEuler*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromEuler_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEuler(System.Single,System.Single,System.Single)">
+  FromEuler(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch, Roll).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromEuler(float yaw, float pitch, float roll)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>yaw</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>pitch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>roll</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromEulerRadians_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEulerRadians*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromEulerRadians_OnixRuntime_Api_Maths_Angles_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEulerRadians(OnixRuntime.Api.Maths.Angles)">
+  FromEulerRadians(Angles)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch) in radians.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromEulerRadians(Angles eulerAngles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eulerAngles</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles.html">Angles</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromEulerRadians_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEulerRadians*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromEulerRadians_OnixRuntime_Api_Maths_Angles3_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEulerRadians(OnixRuntime.Api.Maths.Angles3)">
+  FromEulerRadians(Angles3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch, Roll) in radians.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromEulerRadians(Angles3 eulerAngles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eulerAngles</code> <a class="xref" href="OnixRuntime.Api.Maths.Angles3.html">Angles3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromEulerRadians_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEulerRadians*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromEulerRadians_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromEulerRadians(System.Single,System.Single,System.Single)">
+  FromEulerRadians(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from Euler angles (Yaw, Pitch, Roll) in radians.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromEulerRadians(float yaw, float pitch, float roll)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>yaw</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>pitch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>roll</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_FromMatrix_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromMatrix*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_FromMatrix_OnixRuntime_Api_Maths_TransformationMatrix_" data-uid="OnixRuntime.Api.Maths.Quaternion.FromMatrix(OnixRuntime.Api.Maths.TransformationMatrix)">
+  FromMatrix(TransformationMatrix)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a quaternion from a transformation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion FromMatrix(TransformationMatrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_GetHashCode_" data-uid="OnixRuntime.Api.Maths.Quaternion.GetHashCode*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_GetHashCode" data-uid="OnixRuntime.Api.Maths.Quaternion.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Multiply_" data-uid="OnixRuntime.Api.Maths.Quaternion.Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Multiply_OnixRuntime_Api_Maths_Quaternion_" data-uid="OnixRuntime.Api.Maths.Quaternion.Multiply(OnixRuntime.Api.Maths.Quaternion)">
+  Multiply(Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies this quaternion by another quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion Multiply(Quaternion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Multiply_" data-uid="OnixRuntime.Api.Maths.Quaternion.Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Multiply_OnixRuntime_Api_Maths_TransformationMatrix_" data-uid="OnixRuntime.Api.Maths.Quaternion.Multiply(OnixRuntime.Api.Maths.TransformationMatrix)">
+  Multiply(TransformationMatrix)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies this quaternion by a transformation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformationMatrix Multiply(TransformationMatrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Multiply_" data-uid="OnixRuntime.Api.Maths.Quaternion.Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Multiply_OnixRuntime_Api_Maths_Vec3_" data-uid="OnixRuntime.Api.Maths.Quaternion.Multiply(OnixRuntime.Api.Maths.Vec3)">
+  Multiply(Vec3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a vector by this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec3 Multiply(Vec3 vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_Slerp_" data-uid="OnixRuntime.Api.Maths.Quaternion.Slerp*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_Slerp_OnixRuntime_Api_Maths_Quaternion_OnixRuntime_Api_Maths_Quaternion_System_Single_" data-uid="OnixRuntime.Api.Maths.Quaternion.Slerp(OnixRuntime.Api.Maths.Quaternion,OnixRuntime.Api.Maths.Quaternion,System.Single)">
+  Slerp(Quaternion, Quaternion, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spherical linear interpolation between two quaternions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Slerp(Quaternion a, Quaternion b, float t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_ToString_" data-uid="OnixRuntime.Api.Maths.Quaternion.ToString*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_ToString" data-uid="OnixRuntime.Api.Maths.Quaternion.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string representation of this quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_op_Equality_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_op_Equality_OnixRuntime_Api_Maths_Quaternion_OnixRuntime_Api_Maths_Quaternion_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Equality(OnixRuntime.Api.Maths.Quaternion,OnixRuntime.Api.Maths.Quaternion)">
+  operator ==(Quaternion, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if two quaternions are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Quaternion a, Quaternion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_op_Inequality_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_op_Inequality_OnixRuntime_Api_Maths_Quaternion_OnixRuntime_Api_Maths_Quaternion_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Inequality(OnixRuntime.Api.Maths.Quaternion,OnixRuntime.Api.Maths.Quaternion)">
+  operator !=(Quaternion, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if two quaternions are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Quaternion a, Quaternion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_op_Multiply_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_op_Multiply_OnixRuntime_Api_Maths_Quaternion_OnixRuntime_Api_Maths_Quaternion_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Multiply(OnixRuntime.Api.Maths.Quaternion,OnixRuntime.Api.Maths.Quaternion)">
+  operator *(Quaternion, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies two quaternions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion operator *(Quaternion a, Quaternion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_op_Multiply_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_op_Multiply_OnixRuntime_Api_Maths_Quaternion_OnixRuntime_Api_Maths_TransformationMatrix_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Multiply(OnixRuntime.Api.Maths.Quaternion,OnixRuntime.Api.Maths.TransformationMatrix)">
+  operator *(Quaternion, TransformationMatrix)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies a quaternion by a transformation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransformationMatrix operator *(Quaternion q, TransformationMatrix m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>q</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>m</code> <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Quaternion_op_Multiply_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Quaternion_op_Multiply_OnixRuntime_Api_Maths_Quaternion_OnixRuntime_Api_Maths_Vec3_" data-uid="OnixRuntime.Api.Maths.Quaternion.op_Multiply(OnixRuntime.Api.Maths.Quaternion,OnixRuntime.Api.Maths.Vec3)">
+  operator *(Quaternion, Vec3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a vector by a quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec3 operator *(Quaternion q, Vec3 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>q</code> <a class="xref" href="OnixRuntime.Api.Maths.Quaternion.html">Quaternion</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Quaternion.cs/#L7" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

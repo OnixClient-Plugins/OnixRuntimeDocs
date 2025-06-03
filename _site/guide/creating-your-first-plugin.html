@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h3 id="-creating-your-first-plugin">🚀 Creating Your First Plugin</h3>
+<p>Getting started with your first plugin is simple with the easy-to-use Onix Client plugin project generator. Follow these steps to quickly set up a new project:</p>
+<ol>
+<li><strong>Launch Minecraft: Bedrock Edition</strong> with <strong>Onix Client</strong>.</li>
+<li>In Minecraft's in-game chat, with Onix Client injected, use the <strong><code>.plugin create {name}</code></strong> command to start creating a new Onix Client Plugin.</li>
+<li>Follow the plugin project generator prompts to configure your plugin settings. Once you're happy with your choices, click <strong>Generate Project</strong> to create the project files.</li>
+<li>Open the generated solution in your preferred IDE (e.g., <strong>Visual Studio</strong>, <strong>Visual Studio Code</strong>, or <strong>Rider</strong>) and start coding!</li>
+</ol>
+<p>With the project set up, you're ready to begin developing your very own plugin!</p>
+<h3 id="-example-plugin">📝 Example Plugin</h3>
+<p>If you have followed the steps above, you should have a basic plugin project set up. Here's a simple example of what your plugin might look like:</p>
+<pre><code class="lang-csharp">using OnixRuntime.Api;
+using OnixRuntime.Plugin;
+
+namespace ExamplePlugin {
+    public class ExamplePlugin : OnixPluginBase {
+        public static ExamplePlugin Instance { get; private set; } = null!;
+        public static ExamplePluginConfig Config { get; private set; } = null!;
+
+        public ExamplePlugin(OnixPluginInitInfo initInfo) : base(initInfo) {
+            Instance = this;
+            // If you can clean up what the plugin leaves behind manually, please do not unload the plugin when disabling.
+            base.DisablingShouldUnloadPlugin = false;
+#if DEBUG
+           // base.WaitForDebuggerToBeAttached();
+#endif
+        }
+
+        protected override void OnLoaded() {
+            Console.WriteLine($&quot;Plugin {CurrentPluginManifest.Name} loaded!&quot;);
+            Config = new ExamplePluginConfig(PluginDisplayModule);
+        }
+
+        protected override void OnEnabled() {
+
+        }
+
+        protected override void OnDisabled() {
+
+        }
+
+        protected override void OnUnloaded() {
+            // Ensure every task or thread is stopped when this function returns.
+            // You can give them base.PluginEjectionCancellationToken which will be cancelled when this function returns. 
+            Console.WriteLine($&quot;Plugin {CurrentPluginManifest.Name} unloaded!&quot;);
+        }
+    }
+}
+</code></pre>
+<p>This example plugin simply logs a message to the console when it is loaded and unloaded. You can modify this code to add your own functionality and features.</p>
+<h3 id="-changing-the-plugin-details">✏️ Changing the Plugin Details</h3>
+<p>If you already used the plugin generator and would like to change the name, description or other details of your plugin to something else, you can edit the <code>manifest.json</code> file located in the root of your plugin project. This file contains all the metadata for your plugin, including its name, description, version, author, and more.</p>
+<ul>
+<li>We recommend leaving the <code>uuid</code> field, <code>runtime_version</code>, and <code>target_assembly</code> fields as they are, as they are automatically generated and managed by the Onix Client Plugin API.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

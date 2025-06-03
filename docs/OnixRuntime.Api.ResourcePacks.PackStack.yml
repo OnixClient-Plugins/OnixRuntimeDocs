@@ -1,0 +1,728 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.ResourcePacks.PackStack
+  commentId: T:OnixRuntime.Api.ResourcePacks.PackStack
+  id: PackStack
+  parent: OnixRuntime.Api.ResourcePacks
+  children:
+  - OnixRuntime.Api.ResourcePacks.PackStack.#ctor(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance})
+  - OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator
+  - OnixRuntime.Api.ResourcePacks.PackStack.Packs
+  langs:
+  - csharp
+  - vb
+  name: PackStack
+  nameWithType: PackStack
+  fullName: OnixRuntime.Api.ResourcePacks.PackStack
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/ResourcePacks/PackManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PackStack
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/ResourcePacks/PackManager.cs
+    startLine: 9
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.ResourcePacks
+  summary: A stack of resource packs. This is used to represent the order of packs.
+  example: []
+  syntax:
+    content: 'public class PackStack : IEnumerable<PackInstance>, IEnumerable'
+    content.vb: Public Class PackStack Implements IEnumerable(Of PackInstance), IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.ResourcePacks.PackStack.Packs
+  commentId: F:OnixRuntime.Api.ResourcePacks.PackStack.Packs
+  id: Packs
+  parent: OnixRuntime.Api.ResourcePacks.PackStack
+  langs:
+  - csharp
+  - vb
+  name: Packs
+  nameWithType: PackStack.Packs
+  fullName: OnixRuntime.Api.ResourcePacks.PackStack.Packs
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/ResourcePacks/PackManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Packs
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/ResourcePacks/PackManager.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.ResourcePacks
+  summary: The list of packs in this stack.
+  example: []
+  syntax:
+    content: public IReadOnlyList<PackInstance> Packs
+    return:
+      type: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance}
+    content.vb: Public Packs As IReadOnlyList(Of PackInstance)
+- uid: OnixRuntime.Api.ResourcePacks.PackStack.#ctor(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance})
+  commentId: M:OnixRuntime.Api.ResourcePacks.PackStack.#ctor(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance})
+  id: '#ctor(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance})'
+  parent: OnixRuntime.Api.ResourcePacks.PackStack
+  langs:
+  - csharp
+  - vb
+  name: PackStack(IReadOnlyList<PackInstance>)
+  nameWithType: PackStack.PackStack(IReadOnlyList<PackInstance>)
+  fullName: OnixRuntime.Api.ResourcePacks.PackStack.PackStack(System.Collections.Generic.IReadOnlyList<OnixRuntime.Api.ResourcePacks.PackInstance>)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/ResourcePacks/PackManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/ResourcePacks/PackManager.cs
+    startLine: 19
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.ResourcePacks
+  summary: Creates a new pack stack, not sure why you would do that yourself but have fun.
+  example: []
+  syntax:
+    content: public PackStack(IReadOnlyList<PackInstance> packs)
+    parameters:
+    - id: packs
+      type: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance}
+      description: ''
+    content.vb: Public Sub New(packs As IReadOnlyList(Of PackInstance))
+  overload: OnixRuntime.Api.ResourcePacks.PackStack.#ctor*
+  nameWithType.vb: PackStack.New(IReadOnlyList(Of PackInstance))
+  fullName.vb: OnixRuntime.Api.ResourcePacks.PackStack.New(System.Collections.Generic.IReadOnlyList(Of OnixRuntime.Api.ResourcePacks.PackInstance))
+  name.vb: New(IReadOnlyList(Of PackInstance))
+- uid: OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator
+  commentId: M:OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator
+  id: GetEnumerator
+  parent: OnixRuntime.Api.ResourcePacks.PackStack
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: PackStack.GetEnumerator()
+  fullName: OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/ResourcePacks/PackManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetEnumerator
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/ResourcePacks/PackManager.cs
+    startLine: 23
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.ResourcePacks
+  summary: Returns an enumerator that iterates through the collection.
+  example: []
+  syntax:
+    content: public IEnumerator<PackInstance> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{OnixRuntime.Api.ResourcePacks.PackInstance}
+      description: An enumerator that can be used to iterate through the collection.
+    content.vb: Public Function GetEnumerator() As IEnumerator(Of PackInstance)
+  overload: OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}.GetEnumerator
+references:
+- uid: OnixRuntime.Api.ResourcePacks
+  commentId: N:OnixRuntime.Api.ResourcePacks
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.ResourcePacks
+  nameWithType: OnixRuntime.Api.ResourcePacks
+  fullName: OnixRuntime.Api.ResourcePacks
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.ResourcePacks
+    name: ResourcePacks
+    href: OnixRuntime.Api.ResourcePacks.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.ResourcePacks
+    name: ResourcePacks
+    href: OnixRuntime.Api.ResourcePacks.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}
+  commentId: T:System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<PackInstance>
+  nameWithType: IEnumerable<PackInstance>
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.ResourcePacks.PackInstance>
+  nameWithType.vb: IEnumerable(Of PackInstance)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.ResourcePacks.PackInstance)
+  name.vb: IEnumerable(Of PackInstance)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: OnixRuntime.Api.ResourcePacks.PackInstance
+    name: PackInstance
+    href: OnixRuntime.Api.ResourcePacks.PackInstance.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.ResourcePacks.PackInstance
+    name: PackInstance
+    href: OnixRuntime.Api.ResourcePacks.PackInstance.html
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance}
+  commentId: T:System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.ResourcePacks.PackInstance}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<PackInstance>
+  nameWithType: IReadOnlyList<PackInstance>
+  fullName: System.Collections.Generic.IReadOnlyList<OnixRuntime.Api.ResourcePacks.PackInstance>
+  nameWithType.vb: IReadOnlyList(Of PackInstance)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of OnixRuntime.Api.ResourcePacks.PackInstance)
+  name.vb: IReadOnlyList(Of PackInstance)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: OnixRuntime.Api.ResourcePacks.PackInstance
+    name: PackInstance
+    href: OnixRuntime.Api.ResourcePacks.PackInstance.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.ResourcePacks.PackInstance
+    name: PackInstance
+    href: OnixRuntime.Api.ResourcePacks.PackInstance.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.ResourcePacks.PackStack.#ctor*
+  commentId: Overload:OnixRuntime.Api.ResourcePacks.PackStack.#ctor
+  href: OnixRuntime.Api.ResourcePacks.PackStack.html#OnixRuntime_Api_ResourcePacks_PackStack__ctor_System_Collections_Generic_IReadOnlyList_OnixRuntime_Api_ResourcePacks_PackInstance__
+  name: PackStack
+  nameWithType: PackStack.PackStack
+  fullName: OnixRuntime.Api.ResourcePacks.PackStack.PackStack
+  nameWithType.vb: PackStack.New
+  fullName.vb: OnixRuntime.Api.ResourcePacks.PackStack.New
+  name.vb: New
+- uid: OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator*
+  commentId: Overload:OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator
+  href: OnixRuntime.Api.ResourcePacks.PackStack.html#OnixRuntime_Api_ResourcePacks_PackStack_GetEnumerator
+  name: GetEnumerator
+  nameWithType: PackStack.GetEnumerator
+  fullName: OnixRuntime.Api.ResourcePacks.PackStack.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<PackInstance>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.ResourcePacks.PackInstance>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of PackInstance).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.ResourcePacks.PackInstance).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.ResourcePacks.PackInstance}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator{OnixRuntime.Api.ResourcePacks.PackInstance}
+  commentId: T:System.Collections.Generic.IEnumerator{OnixRuntime.Api.ResourcePacks.PackInstance}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<PackInstance>
+  nameWithType: IEnumerator<PackInstance>
+  fullName: System.Collections.Generic.IEnumerator<OnixRuntime.Api.ResourcePacks.PackInstance>
+  nameWithType.vb: IEnumerator(Of PackInstance)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of OnixRuntime.Api.ResourcePacks.PackInstance)
+  name.vb: IEnumerator(Of PackInstance)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - uid: OnixRuntime.Api.ResourcePacks.PackInstance
+    name: PackInstance
+    href: OnixRuntime.Api.ResourcePacks.PackInstance.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.ResourcePacks.PackInstance
+    name: PackInstance
+    href: OnixRuntime.Api.ResourcePacks.PackInstance.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

@@ -1,0 +1,1667 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.OnixModule
+  commentId: T:OnixRuntime.Api.OnixClient.OnixModule
+  id: OnixModule
+  parent: OnixRuntime.Api.OnixClient
+  children:
+  - OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixModule.Description
+  - OnixRuntime.Api.OnixClient.OnixModule.Dispose
+  - OnixRuntime.Api.OnixClient.OnixModule.Enabled
+  - OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+  - OnixRuntime.Api.OnixClient.OnixModule.IsFavorite
+  - OnixRuntime.Api.OnixClient.OnixModule.IsHidden
+  - OnixRuntime.Api.OnixClient.OnixModule.IsToggle
+  - OnixRuntime.Api.OnixClient.OnixModule.Load(System.Text.Json.Nodes.JsonNode)
+  - OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson(System.String)
+  - OnixRuntime.Api.OnixClient.OnixModule.ModuleType
+  - OnixRuntime.Api.OnixClient.OnixModule.Name
+  - OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
+  - OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI
+  - OnixRuntime.Api.OnixClient.OnixModule.Save
+  - OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson
+  - OnixRuntime.Api.OnixClient.OnixModule.SaveName
+  - OnixRuntime.Api.OnixClient.OnixModule.Settings
+  - OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere
+  - OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
+  - OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer
+  langs:
+  - csharp
+  - vb
+  name: OnixModule
+  nameWithType: OnixModule
+  fullName: OnixRuntime.Api.OnixClient.OnixModule
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: OnixModule
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 175
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: A module in the onix client.
+  example: []
+  syntax:
+    content: 'public class OnixModule : MightOwnMemoryAddressContainer, IDisposable'
+    content.vb: Public Class OnixModule Inherits MightOwnMemoryAddressContainer Implements IDisposable
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  derivedClasses:
+  - OnixRuntime.Api.OnixClient.OnixModuleVisual
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  id: '#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean)'
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: OnixModule(string, string, string, bool, bool)
+  nameWithType: OnixModule.OnixModule(string, string, string, bool, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.OnixModule(string, string, string, bool, bool)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 221
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Creates a new module.
+  example: []
+  syntax:
+    content: public OnixModule(string name, string description, string saveName, bool includeToggleKey = true, bool register = true)
+    parameters:
+    - id: name
+      type: System.String
+      description: The visual name of the module.
+    - id: description
+      type: System.String
+      description: A description for the module.
+    - id: saveName
+      type: System.String
+      description: The save name of the module, it will be saved under this name.
+    - id: includeToggleKey
+      type: System.Boolean
+      description: If the module should have a key to toggle it on and off.
+    - id: register
+      type: System.Boolean
+      description: If you want to register the module in the client.
+    content.vb: Public Sub New(name As String, description As String, saveName As String, includeToggleKey As Boolean = True, register As Boolean = True)
+  overload: OnixRuntime.Api.OnixClient.OnixModule.#ctor*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.OnixRuntimeException
+    commentId: T:OnixRuntime.Api.Errors.OnixRuntimeException
+    description: ''
+  nameWithType.vb: OnixModule.New(String, String, String, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModule.New(String, String, String, Boolean, Boolean)
+  name.vb: New(String, String, String, Boolean, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Dispose
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.Dispose
+  id: Dispose
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: OnixModule.Dispose()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Dispose()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Dispose
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 260
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OnixRuntime.Api.OnixClient.OnixModule.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.Boolean,System.Boolean)
+  id: '#ctor(System.String,System.String,System.Boolean,System.Boolean)'
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: OnixModule(string, string, bool, bool)
+  nameWithType: OnixModule.OnixModule(string, string, bool, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.OnixModule(string, string, bool, bool)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 273
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Creates a new module.
+  example: []
+  syntax:
+    content: public OnixModule(string name, string description, bool includeToggleKey = true, bool register = true)
+    parameters:
+    - id: name
+      type: System.String
+      description: The visual name of the module.
+    - id: description
+      type: System.String
+      description: A description for the module.
+    - id: includeToggleKey
+      type: System.Boolean
+      description: If the module should have a key to toggle it on and off.
+    - id: register
+      type: System.Boolean
+      description: If you want to register the module in the client.
+    content.vb: Public Sub New(name As String, description As String, includeToggleKey As Boolean = True, register As Boolean = True)
+  overload: OnixRuntime.Api.OnixClient.OnixModule.#ctor*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.OnixRuntimeException
+    commentId: T:OnixRuntime.Api.Errors.OnixRuntimeException
+    description: ''
+  nameWithType.vb: OnixModule.New(String, String, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModule.New(String, String, Boolean, Boolean)
+  name.vb: New(String, String, Boolean, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
+  id: PluginUuid
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: PluginUuid
+  nameWithType: OnixModule.PluginUuid
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PluginUuid
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 289
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The UUID of the plugin that created this module or nil if it is not a plugin module.
+  example: []
+  syntax:
+    content: public string? PluginUuid { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PluginUuid As String
+  overload: OnixRuntime.Api.OnixClient.OnixModule.PluginUuid*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Name
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.Name
+  id: Name
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: OnixModule.Name
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Name
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Name
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 294
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: OnixRuntime.Api.OnixClient.OnixModule.Name*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.SaveName
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.SaveName
+  id: SaveName
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: SaveName
+  nameWithType: OnixModule.SaveName
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.SaveName
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SaveName
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 298
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The name used to save the module.
+  example: []
+  syntax:
+    content: public string SaveName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SaveName As String
+  overload: OnixRuntime.Api.OnixClient.OnixModule.SaveName*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Description
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.Description
+  id: Description
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: OnixModule.Description
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Description
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Description
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 302
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The description of the module.
+  example: []
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: OnixRuntime.Api.OnixClient.OnixModule.Description*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Enabled
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.Enabled
+  id: Enabled
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: Enabled
+  nameWithType: OnixModule.Enabled
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Enabled
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Enabled
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 309
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: If the module is enabled or not.
+  example: []
+  syntax:
+    content: public bool Enabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Enabled As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModule.Enabled*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+  id: IsBlocked
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: IsBlocked
+  nameWithType: OnixModule.IsBlocked
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsBlocked
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 313
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  syntax:
+    content: public bool IsBlocked { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBlocked As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModule.IsBlocked*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
+  id: ToggleKey
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: ToggleKey
+  nameWithType: OnixModule.ToggleKey
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ToggleKey
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 317
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The keybind used to toggle the module on and off.
+  example: []
+  syntax:
+    content: public InputKey ToggleKey { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Inputs.InputKey
+    content.vb: Public Property ToggleKey As InputKey
+  overload: OnixRuntime.Api.OnixClient.OnixModule.ToggleKey*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsToggle
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.IsToggle
+  id: IsToggle
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: IsToggle
+  nameWithType: OnixModule.IsToggle
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsToggle
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsToggle
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 324
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Whether the module is a toggle module. If true it means you can enable the mod and it stays on. If false it means you have to hold the key for it to remain on.
+  example: []
+  syntax:
+    content: public bool IsToggle { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsToggle As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModule.IsToggle*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsFavorite
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.IsFavorite
+  id: IsFavorite
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: IsFavorite
+  nameWithType: OnixModule.IsFavorite
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsFavorite
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsFavorite
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 332
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: If the module is in the favorites or not.
+  example: []
+  syntax:
+    content: public bool IsFavorite { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFavorite As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModule.IsFavorite*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsHidden
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.IsHidden
+  id: IsHidden
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: IsHidden
+  nameWithType: OnixModule.IsHidden
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsHidden
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsHidden
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 340
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: If the module is hidden in the UI or not.
+  example: []
+  syntax:
+    content: public bool IsHidden { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsHidden As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModule.IsHidden*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer
+  id: UsesLegacyRenderer
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: UsesLegacyRenderer
+  nameWithType: OnixModule.UsesLegacyRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: UsesLegacyRenderer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 349
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Gets or sets whether the visual module uses the legacy rendering system.
+
+    This property can only be set for C# modules.
+  example: []
+  syntax:
+    content: public bool UsesLegacyRenderer { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UsesLegacyRenderer As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.ModuleType
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.ModuleType
+  id: ModuleType
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: ModuleType
+  nameWithType: OnixModule.ModuleType
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.ModuleType
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ModuleType
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 361
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The type of module this is.
+  example: []
+  syntax:
+    content: public OnixModuleType ModuleType { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixModuleType
+    content.vb: Public ReadOnly Property ModuleType As OnixModuleType
+  overload: OnixRuntime.Api.OnixClient.OnixModule.ModuleType*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Settings
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.Settings
+  id: Settings
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: Settings
+  nameWithType: OnixModule.Settings
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Settings
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Settings
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 366
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The settings of the module.
+  example: []
+  syntax:
+    content: public OnixSettingsList Settings { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixSettingsList
+    content.vb: Public ReadOnly Property Settings As OnixSettingsList
+  overload: OnixRuntime.Api.OnixClient.OnixModule.Settings*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson
+  id: SaveAsJson
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: SaveAsJson()
+  nameWithType: OnixModule.SaveAsJson()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SaveAsJson
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 372
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the serialized JSON of the module.
+  example: []
+  syntax:
+    content: public string SaveAsJson()
+    return:
+      type: System.String
+      description: The JSON of the module.
+    content.vb: Public Function SaveAsJson() As String
+  overload: OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson(System.String)
+  id: LoadFromJson(System.String)
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: LoadFromJson(string)
+  nameWithType: OnixModule.LoadFromJson(string)
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: LoadFromJson
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 378
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Loads the module from a JSON string.
+  example: []
+  syntax:
+    content: public void LoadFromJson(string json)
+    parameters:
+    - id: json
+      type: System.String
+      description: ''
+    content.vb: Public Sub LoadFromJson(json As String)
+  overload: OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson*
+  nameWithType.vb: OnixModule.LoadFromJson(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson(String)
+  name.vb: LoadFromJson(String)
+- uid: OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI
+  id: RefreshSettingsInUI
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: RefreshSettingsInUI()
+  nameWithType: OnixModule.RefreshSettingsInUI()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RefreshSettingsInUI
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 384
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Refreshes the settings list in the user interface.
+
+    This is only useful if you edit the settings list while the module's page is opened.
+  example: []
+  syntax:
+    content: public void RefreshSettingsInUI()
+    content.vb: Public Sub RefreshSettingsInUI()
+  overload: OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  id: InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: InsertSetting(OnixSetting, int, SettingInsertionPosition, bool)
+  nameWithType: OnixModule.InsertSetting(OnixSetting, int, OnixModule.SettingInsertionPosition, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting, int, OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: InsertSetting
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 396
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Inserts a setting into a module.
+
+    Make sure that the setting does not have any parents or it will throw an exception.
+  example: []
+  syntax:
+    content: public void InsertSetting(OnixSetting setting, int index = 0, OnixModule.SettingInsertionPosition mode = SettingInsertionPosition.End, bool correctCategory = true)
+    parameters:
+    - id: setting
+      type: OnixRuntime.Api.OnixClient.OnixSetting
+      description: The setting to insert.
+    - id: index
+      type: System.Int32
+      description: The index of where you want the setting to be added (depends on mode).
+    - id: mode
+      type: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
+      description: How do you want the setting to be inserted.
+    - id: correctCategory
+      type: System.Boolean
+      description: If categories should be corrected to include your setting if they would have.
+    content.vb: Public Sub InsertSetting(setting As OnixSetting, index As Integer = 0, mode As OnixModule.SettingInsertionPosition = SettingInsertionPosition.End, correctCategory As Boolean = True)
+  overload: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+    commentId: T:OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+    description: When the setting already has a parent.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: When the setting is inserted at an invalid position.
+  nameWithType.vb: OnixModule.InsertSetting(OnixSetting, Integer, OnixModule.SettingInsertionPosition, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting, Integer, OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition, Boolean)
+  name.vb: InsertSetting(OnixSetting, Integer, SettingInsertionPosition, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  id: InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: InsertSetting(OnixSetting, OnixSetting, SettingInsertionPosition, bool)
+  nameWithType: OnixModule.InsertSetting(OnixSetting, OnixSetting, OnixModule.SettingInsertionPosition, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting, OnixRuntime.Api.OnixClient.OnixSetting, OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: InsertSetting
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 408
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Inserts a setting into a module.
+  example: []
+  syntax:
+    content: public void InsertSetting(OnixSetting setting, OnixSetting settingToUseAsIndex, OnixModule.SettingInsertionPosition mode = SettingInsertionPosition.After, bool correctCategory = true)
+    parameters:
+    - id: setting
+      type: OnixRuntime.Api.OnixClient.OnixSetting
+      description: The setting to add.
+    - id: settingToUseAsIndex
+      type: OnixRuntime.Api.OnixClient.OnixSetting
+      description: A setting that will be your index, only works with before or after modes.
+    - id: mode
+      type: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
+      description: Insert it before or after the setting. Any other value is invalid and will default to an index of 0 or 1.
+    - id: correctCategory
+      type: System.Boolean
+      description: If categories should be corrected to include your setting if they would have.
+    content.vb: Public Sub InsertSetting(setting As OnixSetting, settingToUseAsIndex As OnixSetting, mode As OnixModule.SettingInsertionPosition = SettingInsertionPosition.After, correctCategory As Boolean = True)
+  overload: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+    commentId: T:OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+    description: When the setting already has a parent.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: When the setting is inserted at an invalid position.
+  nameWithType.vb: OnixModule.InsertSetting(OnixSetting, OnixSetting, OnixModule.SettingInsertionPosition, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting, OnixRuntime.Api.OnixClient.OnixSetting, OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition, Boolean)
+  name.vb: InsertSetting(OnixSetting, OnixSetting, SettingInsertionPosition, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere
+  id: StopLastCategoryHere
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: StopLastCategoryHere()
+  nameWithType: OnixModule.StopLastCategoryHere()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: StopLastCategoryHere
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 433
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Makes a category stop considering settings that are added after this function was called.
+  example: []
+  syntax:
+    content: public void StopLastCategoryHere()
+    content.vb: Public Sub StopLastCategoryHere()
+  overload: OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Save
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.Save
+  id: Save
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: Save()
+  nameWithType: OnixModule.Save()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Save()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Save
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 442
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Saves the setting to json for persistent storage.
+  example: []
+  syntax:
+    content: public virtual JsonNode? Save()
+    return:
+      type: System.Text.Json.Nodes.JsonNode
+      description: The json or null if there is nothing to save.
+    content.vb: Public Overridable Function Save() As JsonNode
+  overload: OnixRuntime.Api.OnixClient.OnixModule.Save*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Load(System.Text.Json.Nodes.JsonNode)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.Load(System.Text.Json.Nodes.JsonNode)
+  id: Load(System.Text.Json.Nodes.JsonNode)
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: Load(JsonNode)
+  nameWithType: OnixModule.Load(JsonNode)
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Load(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Load
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 469
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Loads the setting from json.
+
+    If the value was null this will not get called so what you're getting is whatever the last value you returned in <xref href="OnixRuntime.Api.OnixClient.OnixModule.Save" data-throw-if-not-resolved="false"></xref> was.
+
+    Read it lazily like there is no tomorrow, every setting is in its own try-catch.
+
+    If you change what you save make sure to have migration code in place.
+  example: []
+  syntax:
+    content: public virtual void Load(JsonNode root)
+    parameters:
+    - id: root
+      type: System.Text.Json.Nodes.JsonNode
+      description: The json you last saved.
+    content.vb: Public Overridable Sub Load(root As JsonNode)
+  overload: OnixRuntime.Api.OnixClient.OnixModule.Load*
+references:
+- uid: OnixRuntime.Api.OnixClient
+  commentId: N:OnixRuntime.Api.OnixClient
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient
+  nameWithType: OnixRuntime.Api.OnixClient
+  fullName: OnixRuntime.Api.OnixClient
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html
+  name: MightOwnMemoryAddressContainer
+  nameWithType: MightOwnMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  commentId: P:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership
+  name: HasMemoryOwnership
+  nameWithType: MightOwnMemoryAddressContainer.HasMemoryOwnership
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  name: SetMemoryAddressValues(nint, nint)
+  nameWithType: MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  nameWithType.vb: MightOwnMemoryAddressContainer.SetMemoryAddressValues(IntPtr, IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr, System.IntPtr)
+  name.vb: SetMemoryAddressValues(IntPtr, IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Errors.OnixRuntimeException
+  commentId: T:OnixRuntime.Api.Errors.OnixRuntimeException
+  parent: OnixRuntime.Api.Errors
+  href: OnixRuntime.Api.Errors.OnixRuntimeException.html
+  name: OnixRuntimeException
+  nameWithType: OnixRuntimeException
+  fullName: OnixRuntime.Api.Errors.OnixRuntimeException
+- uid: OnixRuntime.Api.OnixClient.OnixModule.#ctor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.#ctor
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule__ctor_System_String_System_String_System_String_System_Boolean_System_Boolean_
+  name: OnixModule
+  nameWithType: OnixModule.OnixModule
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.OnixModule
+  nameWithType.vb: OnixModule.New
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModule.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Errors
+  commentId: N:OnixRuntime.Api.Errors
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Errors
+  nameWithType: OnixRuntime.Api.Errors
+  fullName: OnixRuntime.Api.Errors
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Errors
+    name: Errors
+    href: OnixRuntime.Api.Errors.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Errors
+    name: Errors
+    href: OnixRuntime.Api.Errors.html
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Dispose*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.Dispose
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Dispose
+  name: Dispose
+  nameWithType: OnixModule.Dispose
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixModule.PluginUuid*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_PluginUuid
+  name: PluginUuid
+  nameWithType: OnixModule.PluginUuid
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Name*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.Name
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Name
+  name: Name
+  nameWithType: OnixModule.Name
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Name
+- uid: OnixRuntime.Api.OnixClient.OnixModule.SaveName*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.SaveName
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_SaveName
+  name: SaveName
+  nameWithType: OnixModule.SaveName
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.SaveName
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Description*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.Description
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Description
+  name: Description
+  nameWithType: OnixModule.Description
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Description
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Enabled*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.Enabled
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Enabled
+  name: Enabled
+  nameWithType: OnixModule.Enabled
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Enabled
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsBlocked*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_IsBlocked
+  name: IsBlocked
+  nameWithType: OnixModule.IsBlocked
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+- uid: OnixRuntime.Api.OnixClient.OnixModule.ToggleKey*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_ToggleKey
+  name: ToggleKey
+  nameWithType: OnixModule.ToggleKey
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
+- uid: OnixRuntime.Api.Inputs.InputKey
+  commentId: T:OnixRuntime.Api.Inputs.InputKey
+  parent: OnixRuntime.Api.Inputs
+  href: OnixRuntime.Api.Inputs.InputKey.html
+  name: InputKey
+  nameWithType: InputKey
+  fullName: OnixRuntime.Api.Inputs.InputKey
+- uid: OnixRuntime.Api.Inputs
+  commentId: N:OnixRuntime.Api.Inputs
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Inputs
+  nameWithType: OnixRuntime.Api.Inputs
+  fullName: OnixRuntime.Api.Inputs
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsToggle*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.IsToggle
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_IsToggle
+  name: IsToggle
+  nameWithType: OnixModule.IsToggle
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsToggle
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsFavorite*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.IsFavorite
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_IsFavorite
+  name: IsFavorite
+  nameWithType: OnixModule.IsFavorite
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsFavorite
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsHidden*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.IsHidden
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_IsHidden
+  name: IsHidden
+  nameWithType: OnixModule.IsHidden
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsHidden
+- uid: OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_UsesLegacyRenderer
+  name: UsesLegacyRenderer
+  nameWithType: OnixModule.UsesLegacyRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer
+- uid: OnixRuntime.Api.OnixClient.OnixModule.ModuleType*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.ModuleType
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_ModuleType
+  name: ModuleType
+  nameWithType: OnixModule.ModuleType
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.ModuleType
+- uid: OnixRuntime.Api.OnixClient.OnixModuleType
+  commentId: T:OnixRuntime.Api.OnixClient.OnixModuleType
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixModuleType.html
+  name: OnixModuleType
+  nameWithType: OnixModuleType
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleType
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Settings*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.Settings
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Settings
+  name: Settings
+  nameWithType: OnixModule.Settings
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Settings
+- uid: OnixRuntime.Api.OnixClient.OnixSettingsList
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSettingsList
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixSettingsList.html
+  name: OnixSettingsList
+  nameWithType: OnixSettingsList
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingsList
+- uid: OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_SaveAsJson
+  name: SaveAsJson
+  nameWithType: OnixModule.SaveAsJson
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson
+- uid: OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_LoadFromJson_System_String_
+  name: LoadFromJson
+  nameWithType: OnixModule.LoadFromJson
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson
+- uid: OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_RefreshSettingsInUI
+  name: RefreshSettingsInUI
+  nameWithType: OnixModule.RefreshSettingsInUI
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI
+- uid: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+  commentId: T:OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+  href: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.html
+  name: SettingAlreadyHasAParentException
+  nameWithType: SettingAlreadyHasAParentException
+  fullName: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_OnixRuntime_Api_OnixClient_OnixSetting_System_Int32_OnixRuntime_Api_OnixClient_OnixModule_SettingInsertionPosition_System_Boolean_
+  name: InsertSetting
+  nameWithType: OnixModule.InsertSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting
+- uid: OnixRuntime.Api.OnixClient.OnixSetting
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSetting
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  name: OnixSetting
+  nameWithType: OnixSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixSetting
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
+  commentId: T:OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixModule.html
+  name: OnixModule.SettingInsertionPosition
+  nameWithType: OnixModule.SettingInsertionPosition
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule
+    name: OnixModule
+    href: OnixRuntime.Api.OnixClient.OnixModule.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
+    name: SettingInsertionPosition
+    href: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition.html
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule
+    name: OnixModule
+    href: OnixRuntime.Api.OnixClient.OnixModule.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
+    name: SettingInsertionPosition
+    href: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition.html
+- uid: OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_StopLastCategoryHere
+  name: StopLastCategoryHere
+  nameWithType: OnixModule.StopLastCategoryHere
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Save*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.Save
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Save
+  name: Save
+  nameWithType: OnixModule.Save
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Save
+- uid: System.Text.Json.Nodes.JsonNode
+  commentId: T:System.Text.Json.Nodes.JsonNode
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode
+  name: JsonNode
+  nameWithType: JsonNode
+  fullName: System.Text.Json.Nodes.JsonNode
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Save
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.Save
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Save
+  name: Save()
+  nameWithType: OnixModule.Save()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Save()
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.Save
+    name: Save
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Save
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.Save
+    name: Save
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Save
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Load*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.Load
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Load_System_Text_Json_Nodes_JsonNode_
+  name: Load
+  nameWithType: OnixModule.Load
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Load
+- uid: OnixRuntime.Api.OnixClient.OnixModule
+  commentId: T:OnixRuntime.Api.OnixClient.OnixModule
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixModule.html
+  name: OnixModule
+  nameWithType: OnixModule
+  fullName: OnixRuntime.Api.OnixClient.OnixModule

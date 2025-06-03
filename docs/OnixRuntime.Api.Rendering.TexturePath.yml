@@ -1,0 +1,1186 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Rendering.TexturePath
+  commentId: T:OnixRuntime.Api.Rendering.TexturePath
+  id: TexturePath
+  parent: OnixRuntime.Api.Rendering
+  children:
+  - OnixRuntime.Api.Rendering.TexturePath.#ctor(System.String,OnixRuntime.Api.Rendering.TexturePathBase)
+  - OnixRuntime.Api.Rendering.TexturePath.Assets(System.String)
+  - OnixRuntime.Api.Rendering.TexturePath.Base
+  - OnixRuntime.Api.Rendering.TexturePath.Game(System.String)
+  - OnixRuntime.Api.Rendering.TexturePath.GetHashCode
+  - OnixRuntime.Api.Rendering.TexturePath.ItemAtlas
+  - OnixRuntime.Api.Rendering.TexturePath.Path
+  - OnixRuntime.Api.Rendering.TexturePath.PersistentData(System.String)
+  - OnixRuntime.Api.Rendering.TexturePath.Raw(System.String)
+  - OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas
+  - OnixRuntime.Api.Rendering.TexturePath.ToString
+  - OnixRuntime.Api.Rendering.TexturePath.Url(System.String)
+  - OnixRuntime.Api.Rendering.TexturePath.Url(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  langs:
+  - csharp
+  - vb
+  name: TexturePath
+  nameWithType: TexturePath
+  fullName: OnixRuntime.Api.Rendering.TexturePath
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TexturePath
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 30
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Represents a path to a texture resource, supporting various base locations and plugin asset resolution.
+  example: []
+  syntax:
+    content: 'public class TexturePath : MightOwnMemoryAddressContainer, IDisposable'
+    content.vb: Public Class TexturePath Inherits MightOwnMemoryAddressContainer Implements IDisposable
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OnixRuntime.Api.Rendering.TexturePath.#ctor(System.String,OnixRuntime.Api.Rendering.TexturePathBase)
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.#ctor(System.String,OnixRuntime.Api.Rendering.TexturePathBase)
+  id: '#ctor(System.String,OnixRuntime.Api.Rendering.TexturePathBase)'
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: TexturePath(string, TexturePathBase)
+  nameWithType: TexturePath.TexturePath(string, TexturePathBase)
+  fullName: OnixRuntime.Api.Rendering.TexturePath.TexturePath(string, OnixRuntime.Api.Rendering.TexturePathBase)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 38
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> class with the specified path and base type.
+  example: []
+  syntax:
+    content: public TexturePath(string path, TexturePathBase baseType)
+    parameters:
+    - id: path
+      type: System.String
+      description: The texture path.
+    - id: baseType
+      type: OnixRuntime.Api.Rendering.TexturePathBase
+      description: The base location type.
+    content.vb: Public Sub New(path As String, baseType As TexturePathBase)
+  overload: OnixRuntime.Api.Rendering.TexturePath.#ctor*
+  nameWithType.vb: TexturePath.New(String, TexturePathBase)
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.New(String, OnixRuntime.Api.Rendering.TexturePathBase)
+  name.vb: New(String, TexturePathBase)
+- uid: OnixRuntime.Api.Rendering.TexturePath.Game(System.String)
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.Game(System.String)
+  id: Game(System.String)
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: Game(string)
+  nameWithType: TexturePath.Game(string)
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Game(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Game
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 67
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Creates a <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> with the Game base.
+  example: []
+  syntax:
+    content: public static TexturePath Game(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The texture path.
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: A <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Game(path As String) As TexturePath
+  overload: OnixRuntime.Api.Rendering.TexturePath.Game*
+  nameWithType.vb: TexturePath.Game(String)
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.Game(String)
+  name.vb: Game(String)
+- uid: OnixRuntime.Api.Rendering.TexturePath.Raw(System.String)
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.Raw(System.String)
+  id: Raw(System.String)
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: Raw(string)
+  nameWithType: TexturePath.Raw(string)
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Raw(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Raw
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 74
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Creates a <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> with the Raw base.
+  example: []
+  syntax:
+    content: public static TexturePath Raw(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The texture path.
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: A <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Raw(path As String) As TexturePath
+  overload: OnixRuntime.Api.Rendering.TexturePath.Raw*
+  nameWithType.vb: TexturePath.Raw(String)
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.Raw(String)
+  name.vb: Raw(String)
+- uid: OnixRuntime.Api.Rendering.TexturePath.Assets(System.String)
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.Assets(System.String)
+  id: Assets(System.String)
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: Assets(string)
+  nameWithType: TexturePath.Assets(string)
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Assets(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Assets
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 81
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Creates a <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> with the Assets base, resolved for the calling plugin.
+  example: []
+  syntax:
+    content: public static TexturePath Assets(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The texture path.
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: A <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Assets(path As String) As TexturePath
+  overload: OnixRuntime.Api.Rendering.TexturePath.Assets*
+  nameWithType.vb: TexturePath.Assets(String)
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.Assets(String)
+  name.vb: Assets(String)
+- uid: OnixRuntime.Api.Rendering.TexturePath.PersistentData(System.String)
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.PersistentData(System.String)
+  id: PersistentData(System.String)
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: PersistentData(string)
+  nameWithType: TexturePath.PersistentData(string)
+  fullName: OnixRuntime.Api.Rendering.TexturePath.PersistentData(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PersistentData
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 88
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Creates a <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> with the PersistentData base, resolved for the calling plugin.
+  example: []
+  syntax:
+    content: public static TexturePath PersistentData(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The texture path.
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: A <xref href="OnixRuntime.Api.Rendering.TexturePath" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function PersistentData(path As String) As TexturePath
+  overload: OnixRuntime.Api.Rendering.TexturePath.PersistentData*
+  nameWithType.vb: TexturePath.PersistentData(String)
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.PersistentData(String)
+  name.vb: PersistentData(String)
+- uid: OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas
+  commentId: F:OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas
+  id: TerrainAtlas
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: TerrainAtlas
+  nameWithType: TexturePath.TerrainAtlas
+  fullName: OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TerrainAtlas
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 95
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the terrain atlas texture path.
+  example: []
+  syntax:
+    content: public static TexturePath TerrainAtlas
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+    content.vb: Public Shared TerrainAtlas As TexturePath
+- uid: OnixRuntime.Api.Rendering.TexturePath.ItemAtlas
+  commentId: F:OnixRuntime.Api.Rendering.TexturePath.ItemAtlas
+  id: ItemAtlas
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: ItemAtlas
+  nameWithType: TexturePath.ItemAtlas
+  fullName: OnixRuntime.Api.Rendering.TexturePath.ItemAtlas
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ItemAtlas
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 100
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the item atlas texture path.
+  example: []
+  syntax:
+    content: public static TexturePath ItemAtlas
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+    content.vb: Public Shared ItemAtlas As TexturePath
+- uid: OnixRuntime.Api.Rendering.TexturePath.Url(System.String)
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.Url(System.String)
+  id: Url(System.String)
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: Url(string)
+  nameWithType: TexturePath.Url(string)
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Url(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Url
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 110
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Creates a texture path from a URL. The image will be downloaded and uploaded for you.
+
+    In the event that the image cannot be downloaded, it will render a red square.
+
+    You may unload the texture using <xref href="OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)" data-throw-if-not-resolved="false"></xref> which will retry next time.
+
+    What will happen if the texture is rendered before <xref href="OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)" data-throw-if-not-resolved="false"></xref> tells you <xref href="OnixRuntime.Api.Rendering.RendererTextureStatus.Loaded" data-throw-if-not-resolved="false"></xref> can be anything from pink, missing texture.
+  example: []
+  syntax:
+    content: public static TexturePath Url(string url)
+    parameters:
+    - id: url
+      type: System.String
+      description: The url to download
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture path for that texture to use in gfx.
+    content.vb: Public Shared Function Url(url As String) As TexturePath
+  overload: OnixRuntime.Api.Rendering.TexturePath.Url*
+  nameWithType.vb: TexturePath.Url(String)
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.Url(String)
+  name.vb: Url(String)
+- uid: OnixRuntime.Api.Rendering.TexturePath.Url(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.Url(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  id: Url(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: Url(string, Dictionary<string, string>)
+  nameWithType: TexturePath.Url(string, Dictionary<string, string>)
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Url(string, System.Collections.Generic.Dictionary<string, string>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Url
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 122
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Creates a texture path from a URL. The image will be downloaded and uploaded for you.
+
+    In the event that the image cannot be downloaded, it will render a red square.
+
+    You may unload the texture using <xref href="OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)" data-throw-if-not-resolved="false"></xref> which will retry next time.
+
+    What will happen if the texture is rendered before <xref href="OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)" data-throw-if-not-resolved="false"></xref> tells you <xref href="OnixRuntime.Api.Rendering.RendererTextureStatus.Loaded" data-throw-if-not-resolved="false"></xref> can be anything from pink, missing texture.
+  example: []
+  syntax:
+    content: public static TexturePath Url(string url, Dictionary<string, string> headers)
+    parameters:
+    - id: url
+      type: System.String
+      description: The url to download
+    - id: headers
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: The headers to use when downloading the image.
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture path for that texture to use in gfx.
+    content.vb: Public Shared Function Url(url As String, headers As Dictionary(Of String, String)) As TexturePath
+  overload: OnixRuntime.Api.Rendering.TexturePath.Url*
+  nameWithType.vb: TexturePath.Url(String, Dictionary(Of String, String))
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.Url(String, System.Collections.Generic.Dictionary(Of String, String))
+  name.vb: Url(String, Dictionary(Of String, String))
+- uid: OnixRuntime.Api.Rendering.TexturePath.Base
+  commentId: P:OnixRuntime.Api.Rendering.TexturePath.Base
+  id: Base
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: Base
+  nameWithType: TexturePath.Base
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Base
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Base
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 130
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the base type of this texture path.
+  example: []
+  syntax:
+    content: public TexturePathBase Base { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.TexturePathBase
+    content.vb: Public ReadOnly Property Base As TexturePathBase
+  overload: OnixRuntime.Api.Rendering.TexturePath.Base*
+- uid: OnixRuntime.Api.Rendering.TexturePath.Path
+  commentId: P:OnixRuntime.Api.Rendering.TexturePath.Path
+  id: Path
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: TexturePath.Path
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Path
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Path
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 135
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the resolved path string for this texture path.
+  example: []
+  syntax:
+    content: public string Path { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Path As String
+  overload: OnixRuntime.Api.Rendering.TexturePath.Path*
+- uid: OnixRuntime.Api.Rendering.TexturePath.GetHashCode
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.GetHashCode
+  id: GetHashCode
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: TexturePath.GetHashCode()
+  fullName: OnixRuntime.Api.Rendering.TexturePath.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHashCode
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 167
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Returns the hash code for this texture path.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: The hash code.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: OnixRuntime.Api.Rendering.TexturePath.GetHashCode*
+- uid: OnixRuntime.Api.Rendering.TexturePath.ToString
+  commentId: M:OnixRuntime.Api.Rendering.TexturePath.ToString
+  id: ToString
+  parent: OnixRuntime.Api.Rendering.TexturePath
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TexturePath.ToString()
+  fullName: OnixRuntime.Api.Rendering.TexturePath.ToString()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/TexturePath.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ToString
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/TexturePath.cs
+    startLine: 176
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Returns a string representation of the texture path.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string containing the base and path.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OnixRuntime.Api.Rendering.TexturePath.ToString*
+references:
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html
+  name: MightOwnMemoryAddressContainer
+  nameWithType: MightOwnMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  commentId: P:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership
+  name: HasMemoryOwnership
+  nameWithType: MightOwnMemoryAddressContainer.HasMemoryOwnership
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  name: SetMemoryAddressValues(nint, nint)
+  nameWithType: MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  nameWithType.vb: MightOwnMemoryAddressContainer.SetMemoryAddressValues(IntPtr, IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr, System.IntPtr)
+  name.vb: SetMemoryAddressValues(IntPtr, IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+  commentId: M:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose
+  name: Dispose()
+  nameWithType: MightOwnMemoryAddressContainer.Dispose()
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Rendering.TexturePath
+  commentId: T:OnixRuntime.Api.Rendering.TexturePath
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.TexturePath.html
+  name: TexturePath
+  nameWithType: TexturePath
+  fullName: OnixRuntime.Api.Rendering.TexturePath
+- uid: OnixRuntime.Api.Rendering.TexturePath.#ctor*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.#ctor
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath__ctor_System_String_OnixRuntime_Api_Rendering_TexturePathBase_
+  name: TexturePath
+  nameWithType: TexturePath.TexturePath
+  fullName: OnixRuntime.Api.Rendering.TexturePath.TexturePath
+  nameWithType.vb: TexturePath.New
+  fullName.vb: OnixRuntime.Api.Rendering.TexturePath.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Rendering.TexturePathBase
+  commentId: T:OnixRuntime.Api.Rendering.TexturePathBase
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.TexturePathBase.html
+  name: TexturePathBase
+  nameWithType: TexturePathBase
+  fullName: OnixRuntime.Api.Rendering.TexturePathBase
+- uid: OnixRuntime.Api.Rendering.TexturePath.Game*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.Game
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_Game_System_String_
+  name: Game
+  nameWithType: TexturePath.Game
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Game
+- uid: OnixRuntime.Api.Rendering.TexturePath.Raw*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.Raw
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_Raw_System_String_
+  name: Raw
+  nameWithType: TexturePath.Raw
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Raw
+- uid: OnixRuntime.Api.Rendering.TexturePath.Assets*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.Assets
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_Assets_System_String_
+  name: Assets
+  nameWithType: TexturePath.Assets
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Assets
+- uid: OnixRuntime.Api.Rendering.TexturePath.PersistentData*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.PersistentData
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_PersistentData_System_String_
+  name: PersistentData
+  nameWithType: TexturePath.PersistentData
+  fullName: OnixRuntime.Api.Rendering.TexturePath.PersistentData
+- uid: OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)
+  commentId: M:OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)
+  parent: OnixRuntime.Api.Rendering.RendererCommon
+  href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_UnloadTexture_OnixRuntime_Api_Rendering_TexturePath_
+  name: UnloadTexture(TexturePath)
+  nameWithType: RendererCommon.UnloadTexture(TexturePath)
+  fullName: OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)
+    name: UnloadTexture
+    href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_UnloadTexture_OnixRuntime_Api_Rendering_TexturePath_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.TexturePath
+    name: TexturePath
+    href: OnixRuntime.Api.Rendering.TexturePath.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)
+    name: UnloadTexture
+    href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_UnloadTexture_OnixRuntime_Api_Rendering_TexturePath_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.TexturePath
+    name: TexturePath
+    href: OnixRuntime.Api.Rendering.TexturePath.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)
+  commentId: M:OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)
+  parent: OnixRuntime.Api.Rendering.RendererCommon
+  href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_GetTextureStatus_OnixRuntime_Api_Rendering_TexturePath_
+  name: GetTextureStatus(TexturePath)
+  nameWithType: RendererCommon.GetTextureStatus(TexturePath)
+  fullName: OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)
+    name: GetTextureStatus
+    href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_GetTextureStatus_OnixRuntime_Api_Rendering_TexturePath_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.TexturePath
+    name: TexturePath
+    href: OnixRuntime.Api.Rendering.TexturePath.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)
+    name: GetTextureStatus
+    href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_GetTextureStatus_OnixRuntime_Api_Rendering_TexturePath_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.TexturePath
+    name: TexturePath
+    href: OnixRuntime.Api.Rendering.TexturePath.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.RendererTextureStatus.Loaded
+  commentId: F:OnixRuntime.Api.Rendering.RendererTextureStatus.Loaded
+  href: OnixRuntime.Api.Rendering.RendererTextureStatus.html#OnixRuntime_Api_Rendering_RendererTextureStatus_Loaded
+  name: Loaded
+  nameWithType: RendererTextureStatus.Loaded
+  fullName: OnixRuntime.Api.Rendering.RendererTextureStatus.Loaded
+- uid: OnixRuntime.Api.Rendering.TexturePath.Url*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.Url
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_Url_System_String_
+  name: Url
+  nameWithType: TexturePath.Url
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Url
+- uid: OnixRuntime.Api.Rendering.RendererCommon
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererCommon.html
+  name: RendererCommon
+  nameWithType: RendererCommon
+  fullName: OnixRuntime.Api.Rendering.RendererCommon
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OnixRuntime.Api.Rendering.TexturePath.Base*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.Base
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_Base
+  name: Base
+  nameWithType: TexturePath.Base
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Base
+- uid: OnixRuntime.Api.Rendering.TexturePath.Path*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.Path
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_Path
+  name: Path
+  nameWithType: TexturePath.Path
+  fullName: OnixRuntime.Api.Rendering.TexturePath.Path
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Rendering.TexturePath.GetHashCode*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.GetHashCode
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_GetHashCode
+  name: GetHashCode
+  nameWithType: TexturePath.GetHashCode
+  fullName: OnixRuntime.Api.Rendering.TexturePath.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Rendering.TexturePath.ToString*
+  commentId: Overload:OnixRuntime.Api.Rendering.TexturePath.ToString
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_ToString
+  name: ToString
+  nameWithType: TexturePath.ToString
+  fullName: OnixRuntime.Api.Rendering.TexturePath.ToString

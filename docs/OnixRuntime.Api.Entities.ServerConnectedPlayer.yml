@@ -1,0 +1,729 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  commentId: T:OnixRuntime.Api.Entities.ServerConnectedPlayer
+  id: ServerConnectedPlayer
+  parent: OnixRuntime.Api.Entities
+  children:
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin(OnixRuntime.Api.Entities.PlayerSkin,System.Boolean)
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.Username
+  - OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid
+  langs:
+  - csharp
+  - vb
+  name: ServerConnectedPlayer
+  nameWithType: ServerConnectedPlayer
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ServerConnectedPlayer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 28
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Represents a player connected to the server, including platform, identity, and skin information.
+  example: []
+  syntax:
+    content: 'public class ServerConnectedPlayer : MemoryAddressContainer'
+    content.vb: Public Class ServerConnectedPlayer Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer
+  commentId: P:OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer
+  id: ClientPlayer
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: ClientPlayer
+  nameWithType: ServerConnectedPlayer.ClientPlayer
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ClientPlayer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 34
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Tries to get the client player entity from the player entry. Won't work if the entity is not loaded.
+  remarks: This function requires trust or creative mode.
+  example: []
+  syntax:
+    content: public Player? ClientPlayer { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.Player
+    content.vb: Public ReadOnly Property ClientPlayer As Player
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer
+  commentId: P:OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer
+  id: ServerPlayer
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: ServerPlayer
+  nameWithType: ServerConnectedPlayer.ServerPlayer
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ServerPlayer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 39
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the server player instance associated with this connected player.
+  example: []
+  syntax:
+    content: public ServerPlayer ServerPlayer { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.ServerPlayer
+    content.vb: Public ReadOnly Property ServerPlayer As ServerPlayer
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer*
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId
+  commentId: P:OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId
+  id: UniqueEntityId
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: UniqueEntityId
+  nameWithType: ServerConnectedPlayer.UniqueEntityId
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: UniqueEntityId
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 44
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the unique entity ID for this player.
+  example: []
+  syntax:
+    content: public ulong UniqueEntityId { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property UniqueEntityId As ULong
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId*
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Username
+  commentId: P:OnixRuntime.Api.Entities.ServerConnectedPlayer.Username
+  id: Username
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: ServerConnectedPlayer.Username
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Username
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Username
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 49
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the username of the player.
+  example: []
+  syntax:
+    content: public string Username { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Username As String
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.Username*
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid
+  commentId: P:OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid
+  id: Xuid
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: Xuid
+  nameWithType: ServerConnectedPlayer.Xuid
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Xuid
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 54
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the XUID of the player.
+  example: []
+  syntax:
+    content: public string Xuid { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Xuid As String
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid*
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform
+  commentId: P:OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform
+  id: Platform
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: Platform
+  nameWithType: ServerConnectedPlayer.Platform
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Platform
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 59
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the platform the player is connected from.
+  example: []
+  syntax:
+    content: public GameBuildPlatform Platform { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.GameBuildPlatform
+    content.vb: Public ReadOnly Property Platform As GameBuildPlatform
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform*
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin
+  commentId: P:OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin
+  id: Skin
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: Skin
+  nameWithType: ServerConnectedPlayer.Skin
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Skin
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the player's skin.
+  example: []
+  syntax:
+    content: public PlayerSkin Skin { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.PlayerSkin
+    content.vb: Public Property Skin As PlayerSkin
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin*
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin(OnixRuntime.Api.Entities.PlayerSkin,System.Boolean)
+  commentId: M:OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin(OnixRuntime.Api.Entities.PlayerSkin,System.Boolean)
+  id: SetSkin(OnixRuntime.Api.Entities.PlayerSkin,System.Boolean)
+  parent: OnixRuntime.Api.Entities.ServerConnectedPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetSkin(PlayerSkin, bool)
+  nameWithType: ServerConnectedPlayer.SetSkin(PlayerSkin, bool)
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin(OnixRuntime.Api.Entities.PlayerSkin, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetSkin
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/ServerConnectedPlayer.cs
+    startLine: 74
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Sets the player's skin, optionally only affecting the client.
+  example: []
+  syntax:
+    content: public void SetSkin(PlayerSkin skin, bool onlyAffectsClient = false)
+    parameters:
+    - id: skin
+      type: OnixRuntime.Api.Entities.PlayerSkin
+      description: The new player skin.
+    - id: onlyAffectsClient
+      type: System.Boolean
+      description: If true, only affects the client.
+    content.vb: Public Sub SetSkin(skin As PlayerSkin, onlyAffectsClient As Boolean = False)
+  overload: OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin*
+  nameWithType.vb: ServerConnectedPlayer.SetSkin(PlayerSkin, Boolean)
+  fullName.vb: OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin(OnixRuntime.Api.Entities.PlayerSkin, Boolean)
+  name.vb: SetSkin(PlayerSkin, Boolean)
+references:
+- uid: OnixRuntime.Api.Entities
+  commentId: N:OnixRuntime.Api.Entities
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Entities
+  nameWithType: OnixRuntime.Api.Entities
+  fullName: OnixRuntime.Api.Entities
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Errors.InsufficientTrustException
+  commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+  href: OnixRuntime.Api.Errors.InsufficientTrustException.html
+  name: InsufficientTrustException
+  nameWithType: InsufficientTrustException
+  fullName: OnixRuntime.Api.Errors.InsufficientTrustException
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_ClientPlayer
+  name: ClientPlayer
+  nameWithType: ServerConnectedPlayer.ClientPlayer
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.ClientPlayer
+- uid: OnixRuntime.Api.Entities.Player
+  commentId: T:OnixRuntime.Api.Entities.Player
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.Player.html
+  name: Player
+  nameWithType: Player
+  fullName: OnixRuntime.Api.Entities.Player
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_ServerPlayer
+  name: ServerPlayer
+  nameWithType: ServerConnectedPlayer.ServerPlayer
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.ServerPlayer
+- uid: OnixRuntime.Api.Entities.ServerPlayer
+  commentId: T:OnixRuntime.Api.Entities.ServerPlayer
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.ServerPlayer.html
+  name: ServerPlayer
+  nameWithType: ServerPlayer
+  fullName: OnixRuntime.Api.Entities.ServerPlayer
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_UniqueEntityId
+  name: UniqueEntityId
+  nameWithType: ServerConnectedPlayer.UniqueEntityId
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.UniqueEntityId
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Username*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.Username
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_Username
+  name: Username
+  nameWithType: ServerConnectedPlayer.Username
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Username
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_Xuid
+  name: Xuid
+  nameWithType: ServerConnectedPlayer.Xuid
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Xuid
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_Platform
+  name: Platform
+  nameWithType: ServerConnectedPlayer.Platform
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Platform
+- uid: OnixRuntime.Api.Entities.GameBuildPlatform
+  commentId: T:OnixRuntime.Api.Entities.GameBuildPlatform
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.GameBuildPlatform.html
+  name: GameBuildPlatform
+  nameWithType: GameBuildPlatform
+  fullName: OnixRuntime.Api.Entities.GameBuildPlatform
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_Skin
+  name: Skin
+  nameWithType: ServerConnectedPlayer.Skin
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.Skin
+- uid: OnixRuntime.Api.Entities.PlayerSkin
+  commentId: T:OnixRuntime.Api.Entities.PlayerSkin
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.PlayerSkin.html
+  name: PlayerSkin
+  nameWithType: PlayerSkin
+  fullName: OnixRuntime.Api.Entities.PlayerSkin
+- uid: OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin
+  href: OnixRuntime.Api.Entities.ServerConnectedPlayer.html#OnixRuntime_Api_Entities_ServerConnectedPlayer_SetSkin_OnixRuntime_Api_Entities_PlayerSkin_System_Boolean_
+  name: SetSkin
+  nameWithType: ServerConnectedPlayer.SetSkin
+  fullName: OnixRuntime.Api.Entities.ServerConnectedPlayer.SetSkin
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

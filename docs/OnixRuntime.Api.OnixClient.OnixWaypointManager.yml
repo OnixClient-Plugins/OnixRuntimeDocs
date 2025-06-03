@@ -1,0 +1,1710 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  commentId: T:OnixRuntime.Api.OnixClient.OnixWaypointManager
+  id: OnixWaypointManager
+  parent: OnixRuntime.Api.OnixClient
+  children:
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Find(System.String)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint(System.UInt64)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(System.String,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(System.UInt64)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll(System.Predicate{OnixRuntime.Api.OnixClient.OnixWaypoint})
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Save
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName(System.String)
+  - OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints
+  langs:
+  - csharp
+  - vb
+  name: OnixWaypointManager
+  nameWithType: OnixWaypointManager
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: OnixWaypointManager
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 9
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  syntax:
+    content: 'public class OnixWaypointManager : IEnumerable<OnixWaypoint>, IEnumerable'
+    content.vb: Public Class OnixWaypointManager Implements IEnumerable(Of OnixWaypoint), IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+  id: Enabled
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Enabled
+  nameWithType: OnixWaypointManager.Enabled
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Enabled
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 15
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Checks if the waypoint mod is enabled, you can also force it on by setting this to true.
+
+    If waypoints is not the primary purpose of your mod you should probably not force it on.
+
+    You should probably check if it's enabled and maybe show a little warning to the user.
+  example: []
+  syntax:
+    content: public bool Enabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Enabled As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled*
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints
+  id: Waypoints
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Waypoints
+  nameWithType: OnixWaypointManager.Waypoints
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Waypoints
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 35
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    The list of all waypoints.
+
+    Note that you can make your for loop on the waypoint manager, no need to do Waypoints.Waypoints
+
+    <example>
+
+
+    <pre><code class="lang-csharp">foreach (var waypoint in Onix.Client.Waypoints) {
+        // ...
+    }</code></pre>
+
+    </example>
+
+    <remarks>
+
+    You can iterate over this list even when the waypoint mod is off, it is the only exception.
+
+    When it is disabled you will get an empty list.
+
+    </remarks>
+  example: []
+  syntax:
+    content: public IReadOnlyList<OnixWaypoint> Waypoints { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixWaypoint}
+    content.vb: Public ReadOnly Property Waypoints As IReadOnlyList(Of OnixWaypoint)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints*
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName(System.String)
+  id: SetCustomWorldName(System.String)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: SetCustomWorldName(string)
+  nameWithType: OnixWaypointManager.SetCustomWorldName(string)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetCustomWorldName
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 50
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    If you provide an empty string, this will load waypoints from the normal location for the current world.
+
+    If you provide a custom world name, this will load waypoints from the custom location of that name.
+
+    This is the equivalent of ".waypoint setworld worldName" in the client
+  example: []
+  syntax:
+    content: public void SetCustomWorldName(string worldName)
+    parameters:
+    - id: worldName
+      type: System.String
+      description: The custom world name to load from.
+    content.vb: Public Sub SetCustomWorldName(worldName As String)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: Make sure that <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled" data-throw-if-not-resolved="false"></xref> is true before you call this!
+  nameWithType.vb: OnixWaypointManager.SetCustomWorldName(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName(String)
+  name.vb: SetCustomWorldName(String)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Save
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Save
+  id: Save
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Save()
+  nameWithType: OnixWaypointManager.Save()
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Save()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Save
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 59
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Forces a save of the waypoints, you don't really need to call this ever as any change you make should internally call this.
+  example: []
+  syntax:
+    content: public void Save()
+    content.vb: Public Sub Save()
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Save*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  id: AddOrUpdate(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: AddOrUpdate(OnixWaypoint)
+  nameWithType: OnixWaypointManager.AddOrUpdate(OnixWaypoint)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AddOrUpdate
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 71
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Adds or updates a waypoint.
+
+    Note that if your waypoint does not have an ID, it will be added as a new waypoint always.
+
+    If you use an existing waypoint that has an ID, you do not need to call this method when <xref href="OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged" data-throw-if-not-resolved="false"></xref> is true.
+
+    If making a lot of changes/updates, you should set that to false and call this method manually.
+  example: []
+  syntax:
+    content: public void AddOrUpdate(OnixWaypoint waypoint)
+    parameters:
+    - id: waypoint
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: The waypoint to add or update
+    content.vb: Public Sub AddOrUpdate(waypoint As OnixWaypoint)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  id: Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Add(OnixWaypoint)
+  nameWithType: OnixWaypointManager.Add(OnixWaypoint)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Add
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 80
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Adds a waypoint, this will always add a new waypoint unless <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled" data-throw-if-not-resolved="false"></xref> is false.
+  example: []
+  syntax:
+    content: public void Add(OnixWaypoint waypoint)
+    parameters:
+    - id: waypoint
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: ''
+    content.vb: Public Sub Add(waypoint As OnixWaypoint)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Find(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Find(System.String)
+  id: Find(System.String)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Find(string)
+  nameWithType: OnixWaypointManager.Find(string)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Find(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Find
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 93
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Finds a waypoint by its exact case-sensitive name.
+
+    This will give you the first one that matches that name.
+
+    If you want all of them you can call <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> or <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func%7bOnixRuntime.Api.OnixClient.OnixWaypoint%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public OnixWaypoint? Find(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to look for.
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: The waypoint or null.
+    content.vb: Public Function Find(name As String) As OnixWaypoint
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Find*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.Find(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.Find(String)
+  name.vb: Find(String)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  id: FirstOrDefault(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: FirstOrDefault(Func<OnixWaypoint, bool>)
+  nameWithType: OnixWaypointManager.FirstOrDefault(Func<OnixWaypoint, bool>)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault(System.Func<OnixRuntime.Api.OnixClient.OnixWaypoint, bool>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FirstOrDefault
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 106
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Finds a waypoint by using a predicate.
+
+    This will return the first waypoint that matches the predicate.
+
+    If nothing matches the predicate, you get null.
+
+    If you want all the waypoints that match the predicate, you can call <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func%7bOnixRuntime.Api.OnixClient.OnixWaypoint%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public OnixWaypoint? FirstOrDefault(Func<OnixWaypoint, bool> match)
+    parameters:
+    - id: match
+      type: System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean}
+      description: The predicate to test against.
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: ''
+    content.vb: Public Function FirstOrDefault(match As Func(Of OnixWaypoint, Boolean)) As OnixWaypoint
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.FirstOrDefault(Func(Of OnixWaypoint, Boolean))
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault(System.Func(Of OnixRuntime.Api.OnixClient.OnixWaypoint, Boolean))
+  name.vb: FirstOrDefault(Func(Of OnixWaypoint, Boolean))
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  id: FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: FindAll(Func<OnixWaypoint, bool>)
+  nameWithType: OnixWaypointManager.FindAll(Func<OnixWaypoint, bool>)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func<OnixRuntime.Api.OnixClient.OnixWaypoint, bool>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FindAll
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 116
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Finds all waypoints that match the predicate.
+  example: []
+  syntax:
+    content: public IEnumerable<OnixWaypoint> FindAll(Func<OnixWaypoint, bool> match)
+    parameters:
+    - id: match
+      type: System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean}
+      description: The predicate to test against.
+    return:
+      type: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}
+      description: ''
+    content.vb: Public Function FindAll(match As Func(Of OnixWaypoint, Boolean)) As IEnumerable(Of OnixWaypoint)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.FindAll(Func(Of OnixWaypoint, Boolean))
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func(Of OnixRuntime.Api.OnixClient.OnixWaypoint, Boolean))
+  name.vb: FindAll(Func(Of OnixWaypoint, Boolean))
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String,System.Boolean)
+  id: FindAll(System.String,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: FindAll(string, bool)
+  nameWithType: OnixWaypointManager.FindAll(string, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(string, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FindAll
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 130
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Finds all waypoints that match the name.
+
+    You can make use contains instead of == but it will remain case-sensitive.
+
+    If you want more control you should use <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func%7bOnixRuntime.Api.OnixClient.OnixWaypoint%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IReadOnlyList<OnixWaypoint> FindAll(string name, bool useContains = false)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the waypoints to try to find.
+    - id: useContains
+      type: System.Boolean
+      description: If it should use .Contains() instead of == for comparison.
+    return:
+      type: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixWaypoint}
+      description: A list of every waypoint that were found.
+    content.vb: Public Function FindAll(name As String, useContains As Boolean = False) As IReadOnlyList(Of OnixWaypoint)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.FindAll(String, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(String, Boolean)
+  name.vb: FindAll(String, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint(System.UInt64)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint(System.UInt64)
+  id: GetWaypoint(System.UInt64)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: GetWaypoint(ulong)
+  nameWithType: OnixWaypointManager.GetWaypoint(ulong)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint(ulong)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetWaypoint
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 141
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets a waypoint by its ID.
+  example: []
+  syntax:
+    content: public OnixWaypoint? GetWaypoint(ulong id)
+    parameters:
+    - id: id
+      type: System.UInt64
+      description: The id of the waypoint to try to get.
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: The waypoint or null when it no longer exists.
+    content.vb: Public Function GetWaypoint(id As ULong) As OnixWaypoint
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.GetWaypoint(ULong)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint(ULong)
+  name.vb: GetWaypoint(ULong)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear
+  id: Clear
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: OnixWaypointManager.Clear()
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Clear
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 150
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Removes all waypoints.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(System.UInt64)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(System.UInt64)
+  id: Remove(System.UInt64)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Remove(ulong)
+  nameWithType: OnixWaypointManager.Remove(ulong)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(ulong)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Remove
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 161
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Removes a waypoint by its ID.
+  example: []
+  syntax:
+    content: public bool Remove(ulong id)
+    parameters:
+    - id: id
+      type: System.UInt64
+      description: The id of the waypoint to remove.
+    return:
+      type: System.Boolean
+      description: True if the waypoint was removed successfully.
+    content.vb: Public Function Remove(id As ULong) As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.Remove(ULong)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(ULong)
+  name.vb: Remove(ULong)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  id: Remove(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Remove(OnixWaypoint)
+  nameWithType: OnixWaypointManager.Remove(OnixWaypoint)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Remove
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 171
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Removes a waypoint.
+  example: []
+  syntax:
+    content: public bool Remove(OnixWaypoint waypoint)
+    parameters:
+    - id: waypoint
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: The waypoint to remove.
+    return:
+      type: System.Boolean
+      description: True when the was removed successfully.
+    content.vb: Public Function Remove(waypoint As OnixWaypoint) As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove*
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(System.String,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(System.String,System.Boolean,System.Boolean)
+  id: Remove(System.String,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: Remove(string, bool, bool)
+  nameWithType: OnixWaypointManager.Remove(string, bool, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(string, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Remove
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 180
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Removes a waypoint or multiple waypoints by their name.
+  example: []
+  syntax:
+    content: public bool Remove(string name, bool all = true, bool useContains = false)
+    parameters:
+    - id: name
+      type: System.String
+      description: The case-sensitive name of the waypoint to delete.
+    - id: all
+      type: System.Boolean
+      description: If all waypoints matching that name should be deleted or just the first one.
+    - id: useContains
+      type: System.Boolean
+      description: If it should use .Contains() instead of == for comparison.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function Remove(name As String, all As Boolean = True, useContains As Boolean = False) As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.Remove(String, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove(String, Boolean, Boolean)
+  name.vb: Remove(String, Boolean, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll(System.Predicate{OnixRuntime.Api.OnixClient.OnixWaypoint})
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll(System.Predicate{OnixRuntime.Api.OnixClient.OnixWaypoint})
+  id: RemoveAll(System.Predicate{OnixRuntime.Api.OnixClient.OnixWaypoint})
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveAll(Predicate<OnixWaypoint>)
+  nameWithType: OnixWaypointManager.RemoveAll(Predicate<OnixWaypoint>)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll(System.Predicate<OnixRuntime.Api.OnixClient.OnixWaypoint>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RemoveAll
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 202
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Removes all waypoints that match a predicate.
+  example: []
+  syntax:
+    content: public bool RemoveAll(Predicate<OnixWaypoint> match)
+    parameters:
+    - id: match
+      type: System.Predicate{OnixRuntime.Api.OnixClient.OnixWaypoint}
+      description: The predicate to try to match.
+    return:
+      type: System.Boolean
+      description: True when at least one waypoint was removed.
+    content.vb: Public Function RemoveAll(match As Predicate(Of OnixWaypoint)) As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+  nameWithType.vb: OnixWaypointManager.RemoveAll(Predicate(Of OnixWaypoint))
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll(System.Predicate(Of OnixRuntime.Api.OnixClient.OnixWaypoint))
+  name.vb: RemoveAll(Predicate(Of OnixWaypoint))
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator
+  id: GetEnumerator
+  parent: OnixRuntime.Api.OnixClient.OnixWaypointManager
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: OnixWaypointManager.GetEnumerator()
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetEnumerator
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 214
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Returns an enumerator that iterates through the collection.
+  example: []
+  syntax:
+    content: public IEnumerator<OnixWaypoint> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{OnixRuntime.Api.OnixClient.OnixWaypoint}
+      description: An enumerator that can be used to iterate through the collection.
+    content.vb: Public Function GetEnumerator() As IEnumerator(Of OnixWaypoint)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}.GetEnumerator
+references:
+- uid: OnixRuntime.Api.OnixClient
+  commentId: N:OnixRuntime.Api.OnixClient
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient
+  nameWithType: OnixRuntime.Api.OnixClient
+  fullName: OnixRuntime.Api.OnixClient
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  commentId: T:System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<OnixWaypoint>
+  nameWithType: IEnumerable<OnixWaypoint>
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.OnixClient.OnixWaypoint>
+  nameWithType.vb: IEnumerable(Of OnixWaypoint)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.OnixClient.OnixWaypoint)
+  name.vb: IEnumerable(Of OnixWaypoint)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Enabled
+  name: Enabled
+  nameWithType: OnixWaypointManager.Enabled
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Waypoints
+  name: Waypoints
+  nameWithType: OnixWaypointManager.Waypoints
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Waypoints
+- uid: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  commentId: T:System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<OnixWaypoint>
+  nameWithType: IReadOnlyList<OnixWaypoint>
+  fullName: System.Collections.Generic.IReadOnlyList<OnixRuntime.Api.OnixClient.OnixWaypoint>
+  nameWithType.vb: IReadOnlyList(Of OnixWaypoint)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of OnixRuntime.Api.OnixClient.OnixWaypoint)
+  name.vb: IReadOnlyList(Of OnixWaypoint)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Enabled
+  name: Enabled
+  nameWithType: OnixWaypointManager.Enabled
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
+- uid: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+  commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+  href: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException.html
+  name: WaypointsNotEnabledException
+  nameWithType: WaypointsNotEnabledException
+  fullName: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_SetCustomWorldName_System_String_
+  name: SetCustomWorldName
+  nameWithType: OnixWaypointManager.SetCustomWorldName
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.SetCustomWorldName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Save*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.Save
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Save
+  name: Save
+  nameWithType: OnixWaypointManager.Save
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Save
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_AutomaticallyUpdateWaypointWhenChanged
+  name: AutomaticallyUpdateWaypointWhenChanged
+  nameWithType: OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_AddOrUpdate_OnixRuntime_Api_OnixClient_OnixWaypoint_
+  name: AddOrUpdate
+  nameWithType: OnixWaypointManager.AddOrUpdate
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.AddOrUpdate
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+  commentId: T:OnixRuntime.Api.OnixClient.OnixWaypoint
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  name: OnixWaypoint
+  nameWithType: OnixWaypoint
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.Add
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Add_OnixRuntime_Api_OnixClient_OnixWaypoint_
+  name: Add
+  nameWithType: OnixWaypointManager.Add
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String,System.Boolean)
+  isExternal: true
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FindAll_System_String_System_Boolean_
+  name: FindAll(string, bool)
+  nameWithType: OnixWaypointManager.FindAll(string, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(string, bool)
+  nameWithType.vb: OnixWaypointManager.FindAll(String, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(String, Boolean)
+  name.vb: FindAll(String, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String,System.Boolean)
+    name: FindAll
+    href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FindAll_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.String,System.Boolean)
+    name: FindAll
+    href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FindAll_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+  isExternal: true
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FindAll_System_Func_OnixRuntime_Api_OnixClient_OnixWaypoint_System_Boolean__
+  name: FindAll(Func<OnixWaypoint, bool>)
+  nameWithType: OnixWaypointManager.FindAll(Func<OnixWaypoint, bool>)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func<OnixRuntime.Api.OnixClient.OnixWaypoint, bool>)
+  nameWithType.vb: OnixWaypointManager.FindAll(Func(Of OnixWaypoint, Boolean))
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func(Of OnixRuntime.Api.OnixClient.OnixWaypoint, Boolean))
+  name.vb: FindAll(Func(Of OnixWaypoint, Boolean))
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+    name: FindAll
+    href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FindAll_System_Func_OnixRuntime_Api_OnixClient_OnixWaypoint_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll(System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean})
+    name: FindAll
+    href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FindAll_System_Func_OnixRuntime_Api_OnixClient_OnixWaypoint_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Find*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.Find
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Find_System_String_
+  name: Find
+  nameWithType: OnixWaypointManager.Find
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Find
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FirstOrDefault_System_Func_OnixRuntime_Api_OnixClient_OnixWaypoint_System_Boolean__
+  name: FirstOrDefault
+  nameWithType: OnixWaypointManager.FirstOrDefault
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.FirstOrDefault
+- uid: System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean}
+  commentId: T:System.Func{OnixRuntime.Api.OnixClient.OnixWaypoint,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<OnixWaypoint, bool>
+  nameWithType: Func<OnixWaypoint, bool>
+  fullName: System.Func<OnixRuntime.Api.OnixClient.OnixWaypoint, bool>
+  nameWithType.vb: Func(Of OnixWaypoint, Boolean)
+  fullName.vb: System.Func(Of OnixRuntime.Api.OnixClient.OnixWaypoint, Boolean)
+  name.vb: Func(Of OnixWaypoint, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_FindAll_System_Func_OnixRuntime_Api_OnixClient_OnixWaypoint_System_Boolean__
+  name: FindAll
+  nameWithType: OnixWaypointManager.FindAll
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.FindAll
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_GetWaypoint_System_UInt64_
+  name: GetWaypoint
+  nameWithType: OnixWaypointManager.GetWaypoint
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetWaypoint
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Clear
+  name: Clear
+  nameWithType: OnixWaypointManager.Clear
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Clear
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Remove_System_UInt64_
+  name: Remove
+  nameWithType: OnixWaypointManager.Remove
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Remove
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_RemoveAll_System_Predicate_OnixRuntime_Api_OnixClient_OnixWaypoint__
+  name: RemoveAll
+  nameWithType: OnixWaypointManager.RemoveAll
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.RemoveAll
+- uid: System.Predicate{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  commentId: T:System.Predicate{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  parent: System
+  definition: System.Predicate`1
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<OnixWaypoint>
+  nameWithType: Predicate<OnixWaypoint>
+  fullName: System.Predicate<OnixRuntime.Api.OnixClient.OnixWaypoint>
+  nameWithType.vb: Predicate(Of OnixWaypoint)
+  fullName.vb: System.Predicate(Of OnixRuntime.Api.OnixClient.OnixWaypoint)
+  name.vb: Predicate(Of OnixWaypoint)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: )
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.predicate-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_GetEnumerator
+  name: GetEnumerator
+  nameWithType: OnixWaypointManager.GetEnumerator
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<OnixWaypoint>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.OnixClient.OnixWaypoint>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of OnixWaypoint).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.OnixClient.OnixWaypoint).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.OnixWaypoint}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  commentId: T:System.Collections.Generic.IEnumerator{OnixRuntime.Api.OnixClient.OnixWaypoint}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<OnixWaypoint>
+  nameWithType: IEnumerator<OnixWaypoint>
+  fullName: System.Collections.Generic.IEnumerator<OnixRuntime.Api.OnixClient.OnixWaypoint>
+  nameWithType.vb: IEnumerator(Of OnixWaypoint)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of OnixRuntime.Api.OnixClient.OnixWaypoint)
+  name.vb: IEnumerator(Of OnixWaypoint)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

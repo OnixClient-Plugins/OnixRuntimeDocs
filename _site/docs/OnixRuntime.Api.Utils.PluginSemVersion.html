@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PluginSemVersion | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PluginSemVersion | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a semantic version for plugins, supporting comparison and parsing.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Utils_PluginSemVersion.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Utils.PluginSemVersion%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Utils.PluginSemVersion">
+
+
+
+  <h1 id="OnixRuntime_Api_Utils_PluginSemVersion" data-uid="OnixRuntime.Api.Utils.PluginSemVersion" class="text-break">
+Class PluginSemVersion  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Utils.html">Utils</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a semantic version for plugins, supporting comparison and parsing.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PluginSemVersion : IComparable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PluginSemVersion</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion__ctor_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion__ctor_System_Int32_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.#ctor(System.Int32,System.Int32,System.Int32)">
+  PluginSemVersion(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a> class with the specified major, minor, and patch values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginSemVersion(int major, int minor, int patch)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>major</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The major version.</p>
+</dd>
+    <dt><code>minor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minor version.</p>
+</dd>
+    <dt><code>patch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The patch version.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion__ctor_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion__ctor_System_ReadOnlySpan_System_Char__" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.#ctor(System.ReadOnlySpan{System.Char})">
+  PluginSemVersion(ReadOnlySpan&lt;char&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a> class from a version string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginSemVersion(ReadOnlySpan&lt;char&gt; versionText)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>versionText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The version string in the format 'major.minor.patch'.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the version string is not in the correct format.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_GameVersionInteger_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.GameVersionInteger*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_GameVersionInteger" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.GameVersionInteger">
+  GameVersionInteger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the integer representation of the version for game versioning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GameVersionInteger { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_Major_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Major*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_Major" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Major">
+  Major
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the major version component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Major { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_Minor_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Minor*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_Minor" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Minor">
+  Minor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the minor version component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Minor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_Patch_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Patch*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_Patch" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Patch">
+  Patch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the patch version component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Patch { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_CompareTo_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.CompareTo*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_CompareTo_System_Object_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.CompareTo(System.Object)">
+  CompareTo(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance to another object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare to.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An integer indicating the relative order.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the object is not a <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_Equals_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_Equals_System_Object_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_FromGameVersionInteger_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.FromGameVersionInteger*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_FromGameVersionInteger_System_Int32_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.FromGameVersionInteger(System.Int32)">
+  FromGameVersionInteger(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a> from a game version integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PluginSemVersion FromGameVersionInteger(int gameVersion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The integer representing the game version.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a> instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_GetHashCode_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.GetHashCode*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_GetHashCode" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_ToString_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.ToString*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_ToString" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the string representation of the version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string in the format 'major.minor.patch'.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_op_Equality_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_op_Equality_OnixRuntime_Api_Utils_PluginSemVersion_OnixRuntime_Api_Utils_PluginSemVersion_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_Equality(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)">
+  operator ==(PluginSemVersion, PluginSemVersion?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if two versions are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(PluginSemVersion a, PluginSemVersion? b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The first version.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The second version.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the versions are equal; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_op_GreaterThan_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_GreaterThan*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_op_GreaterThan_OnixRuntime_Api_Utils_PluginSemVersion_OnixRuntime_Api_Utils_PluginSemVersion_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_GreaterThan(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)">
+  operator &gt;(PluginSemVersion, PluginSemVersion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if one version is greater than another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;(PluginSemVersion a, PluginSemVersion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The first version.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The second version.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">a</code> is greater than <code class="paramref">b</code>; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_op_GreaterThanOrEqual_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_GreaterThanOrEqual*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_op_GreaterThanOrEqual_OnixRuntime_Api_Utils_PluginSemVersion_OnixRuntime_Api_Utils_PluginSemVersion_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_GreaterThanOrEqual(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)">
+  operator &gt;=(PluginSemVersion, PluginSemVersion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if one version is greater than or equal to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;=(PluginSemVersion a, PluginSemVersion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The first version.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The second version.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">a</code> is greater than or equal to <code class="paramref">b</code>; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_op_Inequality_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_op_Inequality_OnixRuntime_Api_Utils_PluginSemVersion_OnixRuntime_Api_Utils_PluginSemVersion_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_Inequality(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)">
+  operator !=(PluginSemVersion, PluginSemVersion?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if two versions are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(PluginSemVersion a, PluginSemVersion? b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The first version.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The second version.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the versions are not equal; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_op_LessThan_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_LessThan*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_op_LessThan_OnixRuntime_Api_Utils_PluginSemVersion_OnixRuntime_Api_Utils_PluginSemVersion_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_LessThan(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)">
+  operator &lt;(PluginSemVersion, PluginSemVersion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if one version is less than another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;(PluginSemVersion a, PluginSemVersion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The first version.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The second version.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">a</code> is less than <code class="paramref">b</code>; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Utils_PluginSemVersion_op_LessThanOrEqual_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_LessThanOrEqual*"></a>
+
+  <h3 id="OnixRuntime_Api_Utils_PluginSemVersion_op_LessThanOrEqual_OnixRuntime_Api_Utils_PluginSemVersion_OnixRuntime_Api_Utils_PluginSemVersion_" data-uid="OnixRuntime.Api.Utils.PluginSemVersion.op_LessThanOrEqual(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)">
+  operator &lt;=(PluginSemVersion, PluginSemVersion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if one version is less than or equal to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;=(PluginSemVersion a, PluginSemVersion b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The first version.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Utils.PluginSemVersion.html">PluginSemVersion</a></dt>
+    <dd><p>The second version.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">a</code> is less than or equal to <code class="paramref">b</code>; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Utils/PluginSemVersion.cs/#L5" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1631 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+  commentId: T:OnixRuntime.Api.OnixClient.OnixWaypoint
+  id: OnixWaypoint
+  parent: OnixRuntime.Api.OnixClient
+  children:
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.#ctor(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Color
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Create
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Delete
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Id
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Name
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Position
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Visible
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.X
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Y
+  - OnixRuntime.Api.OnixClient.OnixWaypoint.Z
+  langs:
+  - csharp
+  - vb
+  name: OnixWaypoint
+  nameWithType: OnixWaypoint
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: OnixWaypoint
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Represents a waypoint in the onix client.
+  example: []
+  syntax:
+    content: public class OnixWaypoint
+    content.vb: Public Class OnixWaypoint
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Name
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Name
+  id: Name
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: OnixWaypoint.Name
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Name
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Name
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 19
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The name of the waypoint.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("name")>
+
+      Public Property Name As String
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Name*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Position
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Position
+  id: Position
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: OnixWaypoint.Position
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Position
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Position
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 31
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The position of the waypoint in its dimension.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public BlockPos Position { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property Position As BlockPos
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Position*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.X
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.X
+  id: X
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: OnixWaypoint.X
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.X
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: X
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 43
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The X position of the waypoint in its dimension.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("x")]
+
+      public int X { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("x")>
+
+      Public Property X As Integer
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.X*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: x
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Y
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Y
+  id: Y
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: OnixWaypoint.Y
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Y
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Y
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 51
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The Y position of the waypoint in its dimension.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("y")]
+
+      public int Y { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("y")>
+
+      Public Property Y As Integer
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Y*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: y
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Z
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Z
+  id: Z
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: OnixWaypoint.Z
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Z
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Z
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 59
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The Z position of the waypoint in its dimension.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("z")]
+
+      public int Z { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("z")>
+
+      Public Property Z As Integer
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Z*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: z
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension
+  id: Dimension
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Dimension
+  nameWithType: OnixWaypoint.Dimension
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Dimension
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 68
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The dimension of the waypoint.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("dimension_id")]
+
+      public DimensionType Dimension { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.DimensionType
+    content.vb: >-
+      <JsonPropertyName("dimension_id")>
+
+      Public Property Dimension As DimensionType
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: dimension_id
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Color
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Color
+  id: Color
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: OnixWaypoint.Color
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Color
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Color
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 81
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    The color of the waypoint.
+
+    This is not implemented right now in the client. It will be part of a future waypoint update.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("color")]
+
+      public OnixSettingColor.ValueType Color { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+    content.vb: >-
+      <JsonPropertyName("color")>
+
+      Public Property Color As OnixSettingColor.ValueType
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Color*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: color
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Visible
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Visible
+  id: Visible
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Visible
+  nameWithType: OnixWaypoint.Visible
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Visible
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Visible
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 93
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  syntax:
+    content: >-
+      [JsonPropertyName("visible")]
+
+      public bool Visible { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("visible")>
+
+      Public Property Visible As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Visible*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: visible
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam
+  id: ShowBeam
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: ShowBeam
+  nameWithType: OnixWaypoint.ShowBeam
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ShowBeam
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 106
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Whether the waypoint should show a beam in the world.
+
+    This is not implemented right now in the client. It will be part of a future waypoint update.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("show_beam")]
+
+      public bool ShowBeam { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("show_beam")>
+
+      Public Property ShowBeam As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: show_beam
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText
+  id: ShowText
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: ShowText
+  nameWithType: OnixWaypoint.ShowText
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ShowText
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 118
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Whether the waypoint should show text in the world.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("show_text")]
+
+      public bool ShowText { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("show_text")>
+
+      Public Property ShowText As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: show_text
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival
+  id: RemoveOnArrival
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: RemoveOnArrival
+  nameWithType: OnixWaypoint.RemoveOnArrival
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RemoveOnArrival
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 130
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Whether the waypoint should be removed when the player arrives near it.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("remove_on_arrival")]
+
+      public bool RemoveOnArrival { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("remove_on_arrival")>
+
+      Public Property RemoveOnArrival As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: remove_on_arrival
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary
+  id: Temporary
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Temporary
+  nameWithType: OnixWaypoint.Temporary
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Temporary
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 143
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  syntax:
+    content: >-
+      [JsonPropertyName("remove_on_world_closed")]
+
+      public bool Temporary { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("remove_on_world_closed")>
+
+      Public Property Temporary As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: remove_on_world_closed
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle
+  id: ShowCircle
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: ShowCircle
+  nameWithType: OnixWaypoint.ShowCircle
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ShowCircle
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 156
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Whether the waypoint should show a circle in the world.
+
+    This is not implemented right now in the client. It will be part of a future waypoint update.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("show_circle")]
+
+      public bool ShowCircle { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("show_circle")>
+
+      Public Property ShowCircle As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: show_circle
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+  id: AlwaysShowAcrossDimensions
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: AlwaysShowAcrossDimensions
+  nameWithType: OnixWaypoint.AlwaysShowAcrossDimensions
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AlwaysShowAcrossDimensions
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 167
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  syntax:
+    content: >-
+      [JsonPropertyName("always_show_across_dimensions")]
+
+      public bool AlwaysShowAcrossDimensions { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("always_show_across_dimensions")>
+
+      Public Property AlwaysShowAcrossDimensions As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: always_show_across_dimensions
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition
+  id: TranslatePosition
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: TranslatePosition
+  nameWithType: OnixWaypoint.TranslatePosition
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TranslatePosition
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 181
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Whether the waypoint should be translated to the player's current dimension coordinates.
+
+    This does nothing unless <xref href="OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions" data-throw-if-not-resolved="false"></xref> is true.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("translate_position")]
+
+      public bool TranslatePosition { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("translate_position")>
+
+      Public Property TranslatePosition As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: translate_position
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Id
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.Id
+  id: Id
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: OnixWaypoint.Id
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Id
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Id
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 192
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The unique ID of the waypoint.
+  example: []
+  syntax:
+    content: >-
+      [JsonInclude]
+
+      [JsonPropertyName("id")]
+
+      public ulong Id { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <JsonInclude>
+
+      <JsonPropertyName("id")>
+
+      Public Property Id As ULong
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Id*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIncludeAttribute
+    ctor: System.Text.Json.Serialization.JsonIncludeAttribute.#ctor
+    arguments: []
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  id: AutomaticallyUpdateWaypointWhenChanged
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: AutomaticallyUpdateWaypointWhenChanged
+  nameWithType: OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AutomaticallyUpdateWaypointWhenChanged
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 199
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Whether the waypoint should automatically update in the client when you change any of the properties of the waypoint.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public bool AutomaticallyUpdateWaypointWhenChanged { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property AutomaticallyUpdateWaypointWhenChanged As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Create
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypoint.Create
+  id: Create
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Create()
+  nameWithType: OnixWaypoint.Create()
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Create()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Create
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 254
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Creates a brand new <xref href="OnixRuntime.Api.OnixClient.OnixWaypoint" data-throw-if-not-resolved="false"></xref>.
+
+    You should probably use <xref href="OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String%2cOnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.DimensionType)" data-throw-if-not-resolved="false"></xref> instead of this.
+
+    If you don't make sure to set at least the name, position and dimension.
+
+    This will NOT add it to the waypoint manager.
+
+    You still need to call <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static OnixWaypoint Create()
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: The created waypoint.
+    content.vb: Public Shared Function Create() As OnixWaypoint
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Create*
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  id: Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Create(string, BlockPos, DimensionType)
+  nameWithType: OnixWaypoint.Create(string, BlockPos, DimensionType)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(string, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.DimensionType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Create
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 265
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Creates a new <xref href="OnixRuntime.Api.OnixClient.OnixWaypoint" data-throw-if-not-resolved="false"></xref> with the given name, position and dimension.
+
+    This will NOT add it to the waypoint manager.
+
+    You still need to call <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static OnixWaypoint Create(string name, BlockPos position, DimensionType dimension = DimensionType.Overworld)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the new waypoint
+    - id: position
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The position of the new waypoint
+    - id: dimension
+      type: OnixRuntime.Api.World.DimensionType
+      description: ''
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixWaypoint
+      description: The brand-new waypoint, fresh from the oven.
+    content.vb: Public Shared Function Create(name As String, position As BlockPos, dimension As DimensionType = DimensionType.Overworld) As OnixWaypoint
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Create*
+  nameWithType.vb: OnixWaypoint.Create(String, BlockPos, DimensionType)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(String, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.DimensionType)
+  name.vb: Create(String, BlockPos, DimensionType)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.#ctor(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypoint.#ctor(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  id: '#ctor(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)'
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: OnixWaypoint(string, BlockPos, DimensionType)
+  nameWithType: OnixWaypoint.OnixWaypoint(string, BlockPos, DimensionType)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.OnixWaypoint(string, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.DimensionType)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 281
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Creates a new <xref href="OnixRuntime.Api.OnixClient.OnixWaypoint" data-throw-if-not-resolved="false"></xref> with the given name, position and dimension.
+
+    This will NOT add it to the waypoint manager.
+
+    You still need to call <xref href="OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public OnixWaypoint(string name, BlockPos position, DimensionType dimension = DimensionType.Overworld)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the new waypoint
+    - id: position
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The position of the new waypoint
+    - id: dimension
+      type: OnixRuntime.Api.World.DimensionType
+      description: ''
+    content.vb: Public Sub New(name As String, position As BlockPos, dimension As DimensionType = DimensionType.Overworld)
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.#ctor*
+  nameWithType.vb: OnixWaypoint.New(String, BlockPos, DimensionType)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypoint.New(String, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.DimensionType)
+  name.vb: New(String, BlockPos, DimensionType)
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Delete
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypoint.Delete
+  id: Delete
+  parent: OnixRuntime.Api.OnixClient.OnixWaypoint
+  langs:
+  - csharp
+  - vb
+  name: Delete()
+  nameWithType: OnixWaypoint.Delete()
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Delete()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Delete
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypoint.cs
+    startLine: 305
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Deletes the waypoint from the waypoint manager.
+  example: []
+  syntax:
+    content: public void Delete()
+    content.vb: Public Sub Delete()
+  overload: OnixRuntime.Api.OnixClient.OnixWaypoint.Delete*
+  exceptions:
+  - type: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+    description: ''
+references:
+- uid: OnixRuntime.Api.OnixClient
+  commentId: N:OnixRuntime.Api.OnixClient
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient
+  nameWithType: OnixRuntime.Api.OnixClient
+  fullName: OnixRuntime.Api.OnixClient
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Name*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Name
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Name
+  name: Name
+  nameWithType: OnixWaypoint.Name
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Position*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Position
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Position
+  name: Position
+  nameWithType: OnixWaypoint.Position
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Position
+- uid: OnixRuntime.Api.Maths.BlockPos
+  commentId: T:OnixRuntime.Api.Maths.BlockPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BlockPos.html
+  name: BlockPos
+  nameWithType: BlockPos
+  fullName: OnixRuntime.Api.Maths.BlockPos
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.X*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.X
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_X
+  name: X
+  nameWithType: OnixWaypoint.X
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.X
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Y*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Y
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Y
+  name: Y
+  nameWithType: OnixWaypoint.Y
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Y
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Z*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Z
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Z
+  name: Z
+  nameWithType: OnixWaypoint.Z
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Z
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Dimension
+  name: Dimension
+  nameWithType: OnixWaypoint.Dimension
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Dimension
+- uid: OnixRuntime.Api.World.DimensionType
+  commentId: T:OnixRuntime.Api.World.DimensionType
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.DimensionType.html
+  name: DimensionType
+  nameWithType: DimensionType
+  fullName: OnixRuntime.Api.World.DimensionType
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Color*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Color
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Color
+  name: Color
+  nameWithType: OnixWaypoint.Color
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Color
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+  commentId: T:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+  parent: OnixRuntime.Api.OnixClient.Settings
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html
+  name: OnixSettingColor.ValueType
+  nameWithType: OnixSettingColor.ValueType
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor
+    name: OnixSettingColor
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+    name: ValueType
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor
+    name: OnixSettingColor
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+    name: ValueType
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html
+- uid: OnixRuntime.Api.OnixClient.Settings
+  commentId: N:OnixRuntime.Api.OnixClient.Settings
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Settings
+  nameWithType: OnixRuntime.Api.OnixClient.Settings
+  fullName: OnixRuntime.Api.OnixClient.Settings
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings
+    name: Settings
+    href: OnixRuntime.Api.OnixClient.Settings.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings
+    name: Settings
+    href: OnixRuntime.Api.OnixClient.Settings.html
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Visible*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Visible
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Visible
+  name: Visible
+  nameWithType: OnixWaypoint.Visible
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Visible
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_ShowBeam
+  name: ShowBeam
+  nameWithType: OnixWaypoint.ShowBeam
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowBeam
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_ShowText
+  name: ShowText
+  nameWithType: OnixWaypoint.ShowText
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowText
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_RemoveOnArrival
+  name: RemoveOnArrival
+  nameWithType: OnixWaypoint.RemoveOnArrival
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.RemoveOnArrival
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Temporary
+  name: Temporary
+  nameWithType: OnixWaypoint.Temporary
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Temporary
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_ShowCircle
+  name: ShowCircle
+  nameWithType: OnixWaypoint.ShowCircle
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.ShowCircle
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_AlwaysShowAcrossDimensions
+  name: AlwaysShowAcrossDimensions
+  nameWithType: OnixWaypoint.AlwaysShowAcrossDimensions
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+  commentId: P:OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_AlwaysShowAcrossDimensions
+  name: AlwaysShowAcrossDimensions
+  nameWithType: OnixWaypoint.AlwaysShowAcrossDimensions
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.AlwaysShowAcrossDimensions
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_TranslatePosition
+  name: TranslatePosition
+  nameWithType: OnixWaypoint.TranslatePosition
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.TranslatePosition
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Id*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Id
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Id
+  name: Id
+  nameWithType: OnixWaypoint.Id
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Id
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_AutomaticallyUpdateWaypointWhenChanged
+  name: AutomaticallyUpdateWaypointWhenChanged
+  nameWithType: OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.AutomaticallyUpdateWaypointWhenChanged
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+  commentId: T:OnixRuntime.Api.OnixClient.OnixWaypoint
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  name: OnixWaypoint
+  nameWithType: OnixWaypoint
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+  isExternal: true
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Create_System_String_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_DimensionType_
+  name: Create(string, BlockPos, DimensionType)
+  nameWithType: OnixWaypoint.Create(string, BlockPos, DimensionType)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(string, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.DimensionType)
+  nameWithType.vb: OnixWaypoint.Create(String, BlockPos, DimensionType)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(String, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.DimensionType)
+  name.vb: Create(String, BlockPos, DimensionType)
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+    name: Create
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Create_System_String_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_DimensionType_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.DimensionType
+    name: DimensionType
+    href: OnixRuntime.Api.World.DimensionType.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Create(System.String,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.DimensionType)
+    name: Create
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Create_System_String_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_DimensionType_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.DimensionType
+    name: DimensionType
+    href: OnixRuntime.Api.World.DimensionType.html
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Add_OnixRuntime_Api_OnixClient_OnixWaypoint_
+  name: Add(OnixWaypoint)
+  nameWithType: OnixWaypointManager.Add(OnixWaypoint)
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+    name: Add
+    href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Add_OnixRuntime_Api_OnixClient_OnixWaypoint_
+  - name: (
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Add(OnixRuntime.Api.OnixClient.OnixWaypoint)
+    name: Add
+    href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Add_OnixRuntime_Api_OnixClient_OnixWaypoint_
+  - name: (
+  - uid: OnixRuntime.Api.OnixClient.OnixWaypoint
+    name: OnixWaypoint
+    href: OnixRuntime.Api.OnixClient.OnixWaypoint.html
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Create*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Create
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Create
+  name: Create
+  nameWithType: OnixWaypoint.Create
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Create
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.#ctor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.#ctor
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint__ctor_System_String_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_DimensionType_
+  name: OnixWaypoint
+  nameWithType: OnixWaypoint.OnixWaypoint
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.OnixWaypoint
+  nameWithType.vb: OnixWaypoint.New
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixWaypoint.New
+  name.vb: New
+- uid: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+  commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+  href: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException.html
+  name: WaypointsNotEnabledException
+  nameWithType: WaypointsNotEnabledException
+  fullName: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+- uid: OnixRuntime.Api.OnixClient.OnixWaypoint.Delete*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixWaypoint.Delete
+  href: OnixRuntime.Api.OnixClient.OnixWaypoint.html#OnixRuntime_Api_OnixClient_OnixWaypoint_Delete
+  name: Delete
+  nameWithType: OnixWaypoint.Delete
+  fullName: OnixRuntime.Api.OnixClient.OnixWaypoint.Delete

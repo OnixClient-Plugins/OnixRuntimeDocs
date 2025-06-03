@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Player | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Player | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a player entity, providing access to player-specific properties and inventory handling.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Entities_Player.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Entities.Player%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Entities.Player">
+
+
+
+  <h1 id="OnixRuntime_Api_Entities_Player" data-uid="OnixRuntime.Api.Entities.Player" class="text-break">
+Class Player  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Entities.html">Entities</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a player entity, providing access to player-specific properties and inventory handling.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Player : Mob</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html">MemoryAddressContainer</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Entities.Entity.html">Entity</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Entities.Mob.html">Mob</a></div>
+      <div><span class="xref">Player</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="OnixRuntime.Api.Entities.LocalPlayer.html">LocalPlayer</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Entities.ServerPlayer.html">ServerPlayer</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_RawBodyRot">Mob.RawBodyRot</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_RawBodyRotOld">Mob.RawBodyRotOld</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_RawHeadRot">Mob.RawHeadRot</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_RawHeadRotOld">Mob.RawHeadRotOld</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_HurtTime">Mob.HurtTime</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_FallTime">Mob.FallTime</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_CardinalHeadRotation">Mob.CardinalHeadRotation</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_SendInventory_System_Boolean_">Mob.SendInventory(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_OffhandItem">Mob.OffhandItem</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_HelmetItem">Mob.HelmetItem</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_ChestplateItem">Mob.ChestplateItem</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_LeggingsItem">Mob.LeggingsItem</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_BootsItem">Mob.BootsItem</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Mob.html#OnixRuntime_Api_Entities_Mob_ArmorItems">Mob.ArmorItems</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Categories">Entity.Categories</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsClientSide">Entity.IsClientSide</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_HasCategory_OnixRuntime_Api_Entities_EntityCategory_">Entity.HasCategory(EntityCategory)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_GetFlag_OnixRuntime_Api_Entities_EntityFlag_">Entity.GetFlag(EntityFlag)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_SetFlag_OnixRuntime_Api_Entities_EntityFlag_System_Boolean_">Entity.SetFlag(EntityFlag, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsTargetable">Entity.IsTargetable</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Nametag">Entity.Nametag</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_RawPosition">Entity.RawPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Position">Entity.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ForwardPosition_System_Single_">Entity.ForwardPosition(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BlockPosition">Entity.BlockPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ChunkPosition">Entity.ChunkPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Velocity">Entity.Velocity</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Rotation">Entity.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_TypeName">Entity.TypeName</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_TypeNamespace">Entity.TypeNamespace</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_TypeNameFull">Entity.TypeNameFull</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_UniqueId">Entity.UniqueId</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_RuntimeId">Entity.RuntimeId</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ScoreboardIdentity">Entity.ScoreboardIdentity</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_HeightOffset">Entity.HeightOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_StepHeight">Entity.StepHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_AliveDuration">Entity.AliveDuration</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_AliveTicks">Entity.AliveTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Attributes">Entity.Attributes</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_GetAttribute_OnixRuntime_Api_Entities_EntityAttributeId_">Entity.GetAttribute(EntityAttributeId)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_GetAttribute_System_String_">Entity.GetAttribute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_UpdateAttribute_OnixRuntime_Api_Entities_EntityAttribute_">Entity.UpdateAttribute(EntityAttribute)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_UpdateAttribute_OnixRuntime_Api_Entities_EntityAttributeId_System_Action_OnixRuntime_Api_Entities_MutableEntityAttribute__">Entity.UpdateAttribute(EntityAttributeId, Action&lt;MutableEntityAttribute&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Kill">Entity.Kill()</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Effects">Entity.Effects</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BoundingBox">Entity.BoundingBox</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BoundingBoxRaw">Entity.BoundingBoxRaw</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BoundingBoxSize">Entity.BoundingBoxSize</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_SimpleMolangVariables">Entity.SimpleMolangVariables</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Dimension">Entity.Dimension</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Region">Entity.Region</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_World">Entity.World</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Riding">Entity.Riding</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_RiddenBy">Entity.RiddenBy</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ToString">Entity.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Entities_Player_AuthenticatedUsername_" data-uid="OnixRuntime.Api.Entities.Player.AuthenticatedUsername*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_AuthenticatedUsername" data-uid="OnixRuntime.Api.Entities.Player.AuthenticatedUsername">
+  AuthenticatedUsername
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the authenticated username of the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AuthenticatedUsername { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_CommandPermissionLevel_" data-uid="OnixRuntime.Api.Entities.Player.CommandPermissionLevel*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_CommandPermissionLevel" data-uid="OnixRuntime.Api.Entities.Player.CommandPermissionLevel">
+  CommandPermissionLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the command permission level of the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandPermissionLevel CommandPermissionLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.CommandPermissionLevel.html">CommandPermissionLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_CooldownTicks_" data-uid="OnixRuntime.Api.Entities.Player.CooldownTicks*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_CooldownTicks" data-uid="OnixRuntime.Api.Entities.Player.CooldownTicks">
+  CooldownTicks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives you the list of all the cooldown types as ticks. These may or may not match the item name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, int&gt; CooldownTicks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_Cooldowns_" data-uid="OnixRuntime.Api.Entities.Player.Cooldowns*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_Cooldowns" data-uid="OnixRuntime.Api.Entities.Player.Cooldowns">
+  Cooldowns
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives you the list of all the cooldown types. These may or may not match the item name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, TimeSpan&gt; Cooldowns { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_DestroyBlockProgress_" data-uid="OnixRuntime.Api.Entities.Player.DestroyBlockProgress*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_DestroyBlockProgress" data-uid="OnixRuntime.Api.Entities.Player.DestroyBlockProgress">
+  DestroyBlockProgress
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the progress of block destruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DestroyBlockProgress { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_GameMode_" data-uid="OnixRuntime.Api.Entities.Player.GameMode*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_GameMode" data-uid="OnixRuntime.Api.Entities.Player.GameMode">
+  GameMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the player's current game type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMode GameMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.GameMode.html">GameMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_GameModeOrDefault_" data-uid="OnixRuntime.Api.Entities.Player.GameModeOrDefault*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_GameModeOrDefault" data-uid="OnixRuntime.Api.Entities.Player.GameModeOrDefault">
+  GameModeOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This one can return GameMode.Default</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMode GameModeOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.GameMode.html">GameMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_Inventory_" data-uid="OnixRuntime.Api.Entities.Player.Inventory*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_Inventory" data-uid="OnixRuntime.Api.Entities.Player.Inventory">
+  Inventory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the player's inventory container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemContainer Inventory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Items.ItemContainer.html">ItemContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_IsDestroyingBlock_" data-uid="OnixRuntime.Api.Entities.Player.IsDestroyingBlock*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_IsDestroyingBlock" data-uid="OnixRuntime.Api.Entities.Player.IsDestroyingBlock">
+  IsDestroyingBlock
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the player is currently destroying a block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDestroyingBlock { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_MainHandItem_" data-uid="OnixRuntime.Api.Entities.Player.MainHandItem*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_MainHandItem" data-uid="OnixRuntime.Api.Entities.Player.MainHandItem">
+  MainHandItem
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the item in the player's main hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ItemStack MainHandItem { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Items.ItemStack.html">ItemStack</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_PermissionLevel_" data-uid="OnixRuntime.Api.Entities.Player.PermissionLevel*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_PermissionLevel" data-uid="OnixRuntime.Api.Entities.Player.PermissionLevel">
+  PermissionLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the player permission level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerPermissionLevel PermissionLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.PlayerPermissionLevel.html">PlayerPermissionLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_RemainingItemUseDuration_" data-uid="OnixRuntime.Api.Entities.Player.RemainingItemUseDuration*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_RemainingItemUseDuration" data-uid="OnixRuntime.Api.Entities.Player.RemainingItemUseDuration">
+  RemainingItemUseDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the remaining item use duration as a TimeSpan.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan RemainingItemUseDuration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_RemainingItemUseDurationTicks_" data-uid="OnixRuntime.Api.Entities.Player.RemainingItemUseDurationTicks*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_RemainingItemUseDurationTicks" data-uid="OnixRuntime.Api.Entities.Player.RemainingItemUseDurationTicks">
+  RemainingItemUseDurationTicks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the remaining item use duration in game ticks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemainingItemUseDurationTicks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_SelectedSlot_" data-uid="OnixRuntime.Api.Entities.Player.SelectedSlot*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_SelectedSlot" data-uid="OnixRuntime.Api.Entities.Player.SelectedSlot">
+  SelectedSlot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the selected hotbar slot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SelectedSlot { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_ServerConnectedPlayerEntry_" data-uid="OnixRuntime.Api.Entities.Player.ServerConnectedPlayerEntry*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_ServerConnectedPlayerEntry" data-uid="OnixRuntime.Api.Entities.Player.ServerConnectedPlayerEntry">
+  ServerConnectedPlayerEntry
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the server connected player entry, if available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ServerConnectedPlayer? ServerConnectedPlayerEntry { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.ServerConnectedPlayer.html">ServerConnectedPlayer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_Skin_" data-uid="OnixRuntime.Api.Entities.Player.Skin*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_Skin" data-uid="OnixRuntime.Api.Entities.Player.Skin">
+  Skin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the player's skin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerSkin Skin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.PlayerSkin.html">PlayerSkin</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_UIContainer_" data-uid="OnixRuntime.Api.Entities.Player.UIContainer*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_UIContainer" data-uid="OnixRuntime.Api.Entities.Player.UIContainer">
+  UIContainer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the player's UI container. Avoid writing items to this container directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemContainer UIContainer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Items.ItemContainer.html">ItemContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_Username_" data-uid="OnixRuntime.Api.Entities.Player.Username*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_Username" data-uid="OnixRuntime.Api.Entities.Player.Username">
+  Username
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the username of the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Username { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_Uuid_" data-uid="OnixRuntime.Api.Entities.Player.Uuid*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_Uuid" data-uid="OnixRuntime.Api.Entities.Player.Uuid">
+  Uuid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the UUID of the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Uuid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_Xuid_" data-uid="OnixRuntime.Api.Entities.Player.Xuid*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_Xuid" data-uid="OnixRuntime.Api.Entities.Player.Xuid">
+  Xuid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the XUID of the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Xuid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Entities_Player_SetInventoryItem_" data-uid="OnixRuntime.Api.Entities.Player.SetInventoryItem*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_SetInventoryItem_OnixRuntime_Api_Items_ItemStack_System_Int32_" data-uid="OnixRuntime.Api.Entities.Player.SetInventoryItem(OnixRuntime.Api.Items.ItemStack,System.Int32)">
+  SetInventoryItem(ItemStack, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets an item in the player's inventory at the specified slot. Sends inventory update if changed server-side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInventoryItem(ItemStack item, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <a class="xref" href="OnixRuntime.Api.Items.ItemStack.html">ItemStack</a></dt>
+    <dd></dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Entities_Player_SetInventoryItem_OnixRuntime_Api_Items_ItemStack_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This function requires trust on the client side.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Entities_Player_SetSkin_" data-uid="OnixRuntime.Api.Entities.Player.SetSkin*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_Player_SetSkin_OnixRuntime_Api_Entities_PlayerSkin_System_Boolean_" data-uid="OnixRuntime.Api.Entities.Player.SetSkin(OnixRuntime.Api.Entities.PlayerSkin,System.Boolean)">
+  SetSkin(PlayerSkin, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the player's skin, optionally only affecting the client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSkin(PlayerSkin skin, bool onlyAffectClient = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>skin</code> <a class="xref" href="OnixRuntime.Api.Entities.PlayerSkin.html">PlayerSkin</a></dt>
+    <dd></dd>
+    <dt><code>onlyAffectClient</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Entities/Player.cs/#L41" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

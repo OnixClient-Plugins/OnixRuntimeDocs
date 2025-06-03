@@ -1,0 +1,1014 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.World.WorldChunk
+  commentId: T:OnixRuntime.Api.World.WorldChunk
+  id: WorldChunk
+  parent: OnixRuntime.Api.World
+  children:
+  - OnixRuntime.Api.World.WorldChunk.Dimension
+  - OnixRuntime.Api.World.WorldChunk.FindBlocks(OnixRuntime.Api.World.Block,System.Boolean)
+  - OnixRuntime.Api.World.WorldChunk.GetBlock(System.Int32,System.Int32,System.Int32)
+  - OnixRuntime.Api.World.WorldChunk.GetHeightAt(System.Int32,System.Int32)
+  - OnixRuntime.Api.World.WorldChunk.GetRainHeightAt(System.Int32,System.Int32)
+  - OnixRuntime.Api.World.WorldChunk.LastTick
+  - OnixRuntime.Api.World.WorldChunk.LoadState
+  - OnixRuntime.Api.World.WorldChunk.MaxHeight
+  - OnixRuntime.Api.World.WorldChunk.MinHeight
+  - OnixRuntime.Api.World.WorldChunk.Position
+  - OnixRuntime.Api.World.WorldChunk.World
+  - OnixRuntime.Api.World.WorldChunk.WorldPosMax
+  - OnixRuntime.Api.World.WorldChunk.WorldPosMin
+  langs:
+  - csharp
+  - vb
+  name: WorldChunk
+  nameWithType: WorldChunk
+  fullName: OnixRuntime.Api.World.WorldChunk
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: WorldChunk
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 9
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Represents a chunk in the world, providing access to its properties, state, and block data.
+  example: []
+  syntax:
+    content: 'public class WorldChunk : MemoryAddressContainer'
+    content.vb: Public Class WorldChunk Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.World.WorldChunk.Dimension
+  commentId: P:OnixRuntime.Api.World.WorldChunk.Dimension
+  id: Dimension
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: Dimension
+  nameWithType: WorldChunk.Dimension
+  fullName: OnixRuntime.Api.World.WorldChunk.Dimension
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Dimension
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 54
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the dimension associated with this chunk.
+  example: []
+  syntax:
+    content: public Dimension Dimension { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.Dimension
+    content.vb: Public ReadOnly Property Dimension As Dimension
+  overload: OnixRuntime.Api.World.WorldChunk.Dimension*
+- uid: OnixRuntime.Api.World.WorldChunk.World
+  commentId: P:OnixRuntime.Api.World.WorldChunk.World
+  id: World
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: WorldChunk.World
+  fullName: OnixRuntime.Api.World.WorldChunk.World
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: World
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 58
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the runtime world associated with this chunk.
+  example: []
+  syntax:
+    content: public RuntimeWorld World { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.RuntimeWorld
+    content.vb: Public ReadOnly Property World As RuntimeWorld
+  overload: OnixRuntime.Api.World.WorldChunk.World*
+- uid: OnixRuntime.Api.World.WorldChunk.Position
+  commentId: P:OnixRuntime.Api.World.WorldChunk.Position
+  id: Position
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: WorldChunk.Position
+  fullName: OnixRuntime.Api.World.WorldChunk.Position
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Position
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 62
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the chunk position.
+  example: []
+  syntax:
+    content: public ChunkPos Position { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.ChunkPos
+    content.vb: Public ReadOnly Property Position As ChunkPos
+  overload: OnixRuntime.Api.World.WorldChunk.Position*
+- uid: OnixRuntime.Api.World.WorldChunk.WorldPosMax
+  commentId: P:OnixRuntime.Api.World.WorldChunk.WorldPosMax
+  id: WorldPosMax
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: WorldPosMax
+  nameWithType: WorldChunk.WorldPosMax
+  fullName: OnixRuntime.Api.World.WorldChunk.WorldPosMax
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: WorldPosMax
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 66
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the maximum world position of the chunk.
+  example: []
+  syntax:
+    content: public BlockPos WorldPosMax { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+    content.vb: Public ReadOnly Property WorldPosMax As BlockPos
+  overload: OnixRuntime.Api.World.WorldChunk.WorldPosMax*
+- uid: OnixRuntime.Api.World.WorldChunk.WorldPosMin
+  commentId: P:OnixRuntime.Api.World.WorldChunk.WorldPosMin
+  id: WorldPosMin
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: WorldPosMin
+  nameWithType: WorldChunk.WorldPosMin
+  fullName: OnixRuntime.Api.World.WorldChunk.WorldPosMin
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: WorldPosMin
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 70
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the minimum world position of the chunk.
+  example: []
+  syntax:
+    content: public BlockPos WorldPosMin { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+    content.vb: Public ReadOnly Property WorldPosMin As BlockPos
+  overload: OnixRuntime.Api.World.WorldChunk.WorldPosMin*
+- uid: OnixRuntime.Api.World.WorldChunk.LoadState
+  commentId: P:OnixRuntime.Api.World.WorldChunk.LoadState
+  id: LoadState
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: LoadState
+  nameWithType: WorldChunk.LoadState
+  fullName: OnixRuntime.Api.World.WorldChunk.LoadState
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: LoadState
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 74
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the current load state of the chunk.
+  example: []
+  syntax:
+    content: public WorldChunk.ChunkState LoadState { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.WorldChunk.ChunkState
+    content.vb: Public ReadOnly Property LoadState As WorldChunk.ChunkState
+  overload: OnixRuntime.Api.World.WorldChunk.LoadState*
+- uid: OnixRuntime.Api.World.WorldChunk.LastTick
+  commentId: P:OnixRuntime.Api.World.WorldChunk.LastTick
+  id: LastTick
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: LastTick
+  nameWithType: WorldChunk.LastTick
+  fullName: OnixRuntime.Api.World.WorldChunk.LastTick
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: LastTick
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 78
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the last tick value for the chunk.
+  example: []
+  syntax:
+    content: public int LastTick { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LastTick As Integer
+  overload: OnixRuntime.Api.World.WorldChunk.LastTick*
+- uid: OnixRuntime.Api.World.WorldChunk.MinHeight
+  commentId: P:OnixRuntime.Api.World.WorldChunk.MinHeight
+  id: MinHeight
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: MinHeight
+  nameWithType: WorldChunk.MinHeight
+  fullName: OnixRuntime.Api.World.WorldChunk.MinHeight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MinHeight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 82
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the minimum height of the chunk.
+  example: []
+  syntax:
+    content: public int MinHeight { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinHeight As Integer
+  overload: OnixRuntime.Api.World.WorldChunk.MinHeight*
+- uid: OnixRuntime.Api.World.WorldChunk.MaxHeight
+  commentId: P:OnixRuntime.Api.World.WorldChunk.MaxHeight
+  id: MaxHeight
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: MaxHeight
+  nameWithType: WorldChunk.MaxHeight
+  fullName: OnixRuntime.Api.World.WorldChunk.MaxHeight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MaxHeight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 86
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the maximum height of the chunk.
+  example: []
+  syntax:
+    content: public int MaxHeight { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxHeight As Integer
+  overload: OnixRuntime.Api.World.WorldChunk.MaxHeight*
+- uid: OnixRuntime.Api.World.WorldChunk.GetRainHeightAt(System.Int32,System.Int32)
+  commentId: M:OnixRuntime.Api.World.WorldChunk.GetRainHeightAt(System.Int32,System.Int32)
+  id: GetRainHeightAt(System.Int32,System.Int32)
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: GetRainHeightAt(int, int)
+  nameWithType: WorldChunk.GetRainHeightAt(int, int)
+  fullName: OnixRuntime.Api.World.WorldChunk.GetRainHeightAt(int, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetRainHeightAt
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 100
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the rain height at the specified relative coordinates in the chunk.
+  example: []
+  syntax:
+    content: public int GetRainHeightAt(int relativeX, int relativeZ)
+    parameters:
+    - id: relativeX
+      type: System.Int32
+      description: The relative X coordinate in the chunk.
+    - id: relativeZ
+      type: System.Int32
+      description: The relative Z coordinate in the chunk.
+    return:
+      type: System.Int32
+      description: The rain height at the specified coordinates.
+    content.vb: Public Function GetRainHeightAt(relativeX As Integer, relativeZ As Integer) As Integer
+  overload: OnixRuntime.Api.World.WorldChunk.GetRainHeightAt*
+  nameWithType.vb: WorldChunk.GetRainHeightAt(Integer, Integer)
+  fullName.vb: OnixRuntime.Api.World.WorldChunk.GetRainHeightAt(Integer, Integer)
+  name.vb: GetRainHeightAt(Integer, Integer)
+- uid: OnixRuntime.Api.World.WorldChunk.GetHeightAt(System.Int32,System.Int32)
+  commentId: M:OnixRuntime.Api.World.WorldChunk.GetHeightAt(System.Int32,System.Int32)
+  id: GetHeightAt(System.Int32,System.Int32)
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: GetHeightAt(int, int)
+  nameWithType: WorldChunk.GetHeightAt(int, int)
+  fullName: OnixRuntime.Api.World.WorldChunk.GetHeightAt(int, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHeightAt
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 109
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the height at the specified relative coordinates in the chunk.
+  example: []
+  syntax:
+    content: public int GetHeightAt(int relativeX, int relativeZ)
+    parameters:
+    - id: relativeX
+      type: System.Int32
+      description: The relative X coordinate in the chunk.
+    - id: relativeZ
+      type: System.Int32
+      description: The relative Z coordinate in the chunk.
+    return:
+      type: System.Int32
+      description: The height at the specified coordinates.
+    content.vb: Public Function GetHeightAt(relativeX As Integer, relativeZ As Integer) As Integer
+  overload: OnixRuntime.Api.World.WorldChunk.GetHeightAt*
+  nameWithType.vb: WorldChunk.GetHeightAt(Integer, Integer)
+  fullName.vb: OnixRuntime.Api.World.WorldChunk.GetHeightAt(Integer, Integer)
+  name.vb: GetHeightAt(Integer, Integer)
+- uid: OnixRuntime.Api.World.WorldChunk.GetBlock(System.Int32,System.Int32,System.Int32)
+  commentId: M:OnixRuntime.Api.World.WorldChunk.GetBlock(System.Int32,System.Int32,System.Int32)
+  id: GetBlock(System.Int32,System.Int32,System.Int32)
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: GetBlock(int, int, int)
+  nameWithType: WorldChunk.GetBlock(int, int, int)
+  fullName: OnixRuntime.Api.World.WorldChunk.GetBlock(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetBlock
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 120
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Gets the block at the specified coordinates within the chunk.
+  example: []
+  syntax:
+    content: public Block? GetBlock(int inChunkX, int inChunkY, int inChunkZ)
+    parameters:
+    - id: inChunkX
+      type: System.Int32
+      description: The X coordinate within the chunk.
+    - id: inChunkY
+      type: System.Int32
+      description: The Y coordinate within the chunk.
+    - id: inChunkZ
+      type: System.Int32
+      description: The Z coordinate within the chunk.
+    return:
+      type: OnixRuntime.Api.World.Block
+      description: The <xref href="OnixRuntime.Api.World.Block" data-throw-if-not-resolved="false"></xref> at the specified coordinates, or null if not found.
+    content.vb: Public Function GetBlock(inChunkX As Integer, inChunkY As Integer, inChunkZ As Integer) As Block
+  overload: OnixRuntime.Api.World.WorldChunk.GetBlock*
+  nameWithType.vb: WorldChunk.GetBlock(Integer, Integer, Integer)
+  fullName.vb: OnixRuntime.Api.World.WorldChunk.GetBlock(Integer, Integer, Integer)
+  name.vb: GetBlock(Integer, Integer, Integer)
+- uid: OnixRuntime.Api.World.WorldChunk.FindBlocks(OnixRuntime.Api.World.Block,System.Boolean)
+  commentId: M:OnixRuntime.Api.World.WorldChunk.FindBlocks(OnixRuntime.Api.World.Block,System.Boolean)
+  id: FindBlocks(OnixRuntime.Api.World.Block,System.Boolean)
+  parent: OnixRuntime.Api.World.WorldChunk
+  langs:
+  - csharp
+  - vb
+  name: FindBlocks(Block?, bool)
+  nameWithType: WorldChunk.FindBlocks(Block?, bool)
+  fullName: OnixRuntime.Api.World.WorldChunk.FindBlocks(OnixRuntime.Api.World.Block?, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldChunk.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FindBlocks
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunk.cs
+    startLine: 130
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Finds every position/instances of that block in the chunk.
+  example: []
+  syntax:
+    content: public WorldChunk.FoundBlock[] FindBlocks(Block? block, bool discriminateState)
+    parameters:
+    - id: block
+      type: OnixRuntime.Api.World.Block
+      description: The block to search for.
+    - id: discriminateState
+      type: System.Boolean
+      description: True if only that state/data of the block will be considered the same blocks, false if any state/data of that block is fine.
+    return:
+      type: OnixRuntime.Api.World.WorldChunk.FoundBlock[]
+      description: The list of blocks it found. This has the Data and it's position.
+    content.vb: Public Function FindBlocks(block As Block, discriminateState As Boolean) As WorldChunk.FoundBlock()
+  overload: OnixRuntime.Api.World.WorldChunk.FindBlocks*
+  nameWithType.vb: WorldChunk.FindBlocks(Block, Boolean)
+  fullName.vb: OnixRuntime.Api.World.WorldChunk.FindBlocks(OnixRuntime.Api.World.Block, Boolean)
+  name.vb: FindBlocks(Block, Boolean)
+references:
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.World.WorldChunk.Dimension*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.Dimension
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_Dimension
+  name: Dimension
+  nameWithType: WorldChunk.Dimension
+  fullName: OnixRuntime.Api.World.WorldChunk.Dimension
+- uid: OnixRuntime.Api.World.Dimension
+  commentId: T:OnixRuntime.Api.World.Dimension
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.Dimension.html
+  name: Dimension
+  nameWithType: Dimension
+  fullName: OnixRuntime.Api.World.Dimension
+- uid: OnixRuntime.Api.World.WorldChunk.World*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.World
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_World
+  name: World
+  nameWithType: WorldChunk.World
+  fullName: OnixRuntime.Api.World.WorldChunk.World
+- uid: OnixRuntime.Api.World.RuntimeWorld
+  commentId: T:OnixRuntime.Api.World.RuntimeWorld
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.RuntimeWorld.html
+  name: RuntimeWorld
+  nameWithType: RuntimeWorld
+  fullName: OnixRuntime.Api.World.RuntimeWorld
+- uid: OnixRuntime.Api.World.WorldChunk.Position*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.Position
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_Position
+  name: Position
+  nameWithType: WorldChunk.Position
+  fullName: OnixRuntime.Api.World.WorldChunk.Position
+- uid: OnixRuntime.Api.Maths.ChunkPos
+  commentId: T:OnixRuntime.Api.Maths.ChunkPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.ChunkPos.html
+  name: ChunkPos
+  nameWithType: ChunkPos
+  fullName: OnixRuntime.Api.Maths.ChunkPos
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.World.WorldChunk.WorldPosMax*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.WorldPosMax
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_WorldPosMax
+  name: WorldPosMax
+  nameWithType: WorldChunk.WorldPosMax
+  fullName: OnixRuntime.Api.World.WorldChunk.WorldPosMax
+- uid: OnixRuntime.Api.Maths.BlockPos
+  commentId: T:OnixRuntime.Api.Maths.BlockPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BlockPos.html
+  name: BlockPos
+  nameWithType: BlockPos
+  fullName: OnixRuntime.Api.Maths.BlockPos
+- uid: OnixRuntime.Api.World.WorldChunk.WorldPosMin*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.WorldPosMin
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_WorldPosMin
+  name: WorldPosMin
+  nameWithType: WorldChunk.WorldPosMin
+  fullName: OnixRuntime.Api.World.WorldChunk.WorldPosMin
+- uid: OnixRuntime.Api.World.WorldChunk.LoadState*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.LoadState
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_LoadState
+  name: LoadState
+  nameWithType: WorldChunk.LoadState
+  fullName: OnixRuntime.Api.World.WorldChunk.LoadState
+- uid: OnixRuntime.Api.World.WorldChunk.ChunkState
+  commentId: T:OnixRuntime.Api.World.WorldChunk.ChunkState
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.WorldChunk.html
+  name: WorldChunk.ChunkState
+  nameWithType: WorldChunk.ChunkState
+  fullName: OnixRuntime.Api.World.WorldChunk.ChunkState
+  spec.csharp:
+  - uid: OnixRuntime.Api.World.WorldChunk
+    name: WorldChunk
+    href: OnixRuntime.Api.World.WorldChunk.html
+  - name: .
+  - uid: OnixRuntime.Api.World.WorldChunk.ChunkState
+    name: ChunkState
+    href: OnixRuntime.Api.World.WorldChunk.ChunkState.html
+  spec.vb:
+  - uid: OnixRuntime.Api.World.WorldChunk
+    name: WorldChunk
+    href: OnixRuntime.Api.World.WorldChunk.html
+  - name: .
+  - uid: OnixRuntime.Api.World.WorldChunk.ChunkState
+    name: ChunkState
+    href: OnixRuntime.Api.World.WorldChunk.ChunkState.html
+- uid: OnixRuntime.Api.World.WorldChunk.LastTick*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.LastTick
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_LastTick
+  name: LastTick
+  nameWithType: WorldChunk.LastTick
+  fullName: OnixRuntime.Api.World.WorldChunk.LastTick
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.World.WorldChunk.MinHeight*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.MinHeight
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_MinHeight
+  name: MinHeight
+  nameWithType: WorldChunk.MinHeight
+  fullName: OnixRuntime.Api.World.WorldChunk.MinHeight
+- uid: OnixRuntime.Api.World.WorldChunk.MaxHeight*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.MaxHeight
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_MaxHeight
+  name: MaxHeight
+  nameWithType: WorldChunk.MaxHeight
+  fullName: OnixRuntime.Api.World.WorldChunk.MaxHeight
+- uid: OnixRuntime.Api.World.WorldChunk.GetRainHeightAt*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.GetRainHeightAt
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_GetRainHeightAt_System_Int32_System_Int32_
+  name: GetRainHeightAt
+  nameWithType: WorldChunk.GetRainHeightAt
+  fullName: OnixRuntime.Api.World.WorldChunk.GetRainHeightAt
+- uid: OnixRuntime.Api.World.WorldChunk.GetHeightAt*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.GetHeightAt
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_GetHeightAt_System_Int32_System_Int32_
+  name: GetHeightAt
+  nameWithType: WorldChunk.GetHeightAt
+  fullName: OnixRuntime.Api.World.WorldChunk.GetHeightAt
+- uid: OnixRuntime.Api.World.Block
+  commentId: T:OnixRuntime.Api.World.Block
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: OnixRuntime.Api.World.Block
+- uid: OnixRuntime.Api.World.WorldChunk.GetBlock*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.GetBlock
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_GetBlock_System_Int32_System_Int32_System_Int32_
+  name: GetBlock
+  nameWithType: WorldChunk.GetBlock
+  fullName: OnixRuntime.Api.World.WorldChunk.GetBlock
+- uid: OnixRuntime.Api.World.WorldChunk.FindBlocks*
+  commentId: Overload:OnixRuntime.Api.World.WorldChunk.FindBlocks
+  href: OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_FindBlocks_OnixRuntime_Api_World_Block_System_Boolean_
+  name: FindBlocks
+  nameWithType: WorldChunk.FindBlocks
+  fullName: OnixRuntime.Api.World.WorldChunk.FindBlocks
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.World.WorldChunk.FoundBlock[]
+  isExternal: true
+  href: OnixRuntime.Api.World.WorldChunk.FoundBlock.html
+  name: FoundBlock[]
+  nameWithType: WorldChunk.FoundBlock[]
+  fullName: OnixRuntime.Api.World.WorldChunk.FoundBlock[]
+  nameWithType.vb: WorldChunk.FoundBlock()
+  fullName.vb: OnixRuntime.Api.World.WorldChunk.FoundBlock()
+  name.vb: FoundBlock()
+  spec.csharp:
+  - uid: OnixRuntime.Api.World.WorldChunk.FoundBlock
+    name: FoundBlock
+    href: OnixRuntime.Api.World.WorldChunk.FoundBlock.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OnixRuntime.Api.World.WorldChunk.FoundBlock
+    name: FoundBlock
+    href: OnixRuntime.Api.World.WorldChunk.FoundBlock.html
+  - name: (
+  - name: )

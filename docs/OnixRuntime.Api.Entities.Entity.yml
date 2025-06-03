@@ -1,0 +1,2843 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Entities.Entity
+  commentId: T:OnixRuntime.Api.Entities.Entity
+  id: Entity
+  parent: OnixRuntime.Api.Entities
+  children:
+  - OnixRuntime.Api.Entities.Entity.AliveDuration
+  - OnixRuntime.Api.Entities.Entity.AliveTicks
+  - OnixRuntime.Api.Entities.Entity.ArmorItems
+  - OnixRuntime.Api.Entities.Entity.Attributes
+  - OnixRuntime.Api.Entities.Entity.BlockPosition
+  - OnixRuntime.Api.Entities.Entity.BootsItem
+  - OnixRuntime.Api.Entities.Entity.BoundingBox
+  - OnixRuntime.Api.Entities.Entity.BoundingBoxRaw
+  - OnixRuntime.Api.Entities.Entity.BoundingBoxSize
+  - OnixRuntime.Api.Entities.Entity.Categories
+  - OnixRuntime.Api.Entities.Entity.ChestplateItem
+  - OnixRuntime.Api.Entities.Entity.ChunkPosition
+  - OnixRuntime.Api.Entities.Entity.Dimension
+  - OnixRuntime.Api.Entities.Entity.Effects
+  - OnixRuntime.Api.Entities.Entity.ForwardPosition(System.Single)
+  - OnixRuntime.Api.Entities.Entity.GetAttribute(OnixRuntime.Api.Entities.EntityAttributeId)
+  - OnixRuntime.Api.Entities.Entity.GetAttribute(System.String)
+  - OnixRuntime.Api.Entities.Entity.GetFlag(OnixRuntime.Api.Entities.EntityFlag)
+  - OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
+  - OnixRuntime.Api.Entities.Entity.HeightOffset
+  - OnixRuntime.Api.Entities.Entity.HelmetItem
+  - OnixRuntime.Api.Entities.Entity.IsClientSide
+  - OnixRuntime.Api.Entities.Entity.IsTargetable
+  - OnixRuntime.Api.Entities.Entity.Kill
+  - OnixRuntime.Api.Entities.Entity.LeggingsItem
+  - OnixRuntime.Api.Entities.Entity.MainHandItem
+  - OnixRuntime.Api.Entities.Entity.Nametag
+  - OnixRuntime.Api.Entities.Entity.OffhandItem
+  - OnixRuntime.Api.Entities.Entity.Position
+  - OnixRuntime.Api.Entities.Entity.RawPosition
+  - OnixRuntime.Api.Entities.Entity.Region
+  - OnixRuntime.Api.Entities.Entity.RiddenBy
+  - OnixRuntime.Api.Entities.Entity.Riding
+  - OnixRuntime.Api.Entities.Entity.Rotation
+  - OnixRuntime.Api.Entities.Entity.RuntimeId
+  - OnixRuntime.Api.Entities.Entity.ScoreboardIdentity
+  - OnixRuntime.Api.Entities.Entity.SetFlag(OnixRuntime.Api.Entities.EntityFlag,System.Boolean)
+  - OnixRuntime.Api.Entities.Entity.SimpleMolangVariables
+  - OnixRuntime.Api.Entities.Entity.StepHeight
+  - OnixRuntime.Api.Entities.Entity.ToString
+  - OnixRuntime.Api.Entities.Entity.TypeName
+  - OnixRuntime.Api.Entities.Entity.TypeNameFull
+  - OnixRuntime.Api.Entities.Entity.TypeNamespace
+  - OnixRuntime.Api.Entities.Entity.UniqueId
+  - OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttribute)
+  - OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttributeId,System.Action{OnixRuntime.Api.Entities.MutableEntityAttribute})
+  - OnixRuntime.Api.Entities.Entity.Velocity
+  - OnixRuntime.Api.Entities.Entity.World
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: Entity
+  fullName: OnixRuntime.Api.Entities.Entity
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Entity
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 47
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Represents an entity in the world. Entity methods and properties are only available from a game logic thread.
+  example: []
+  syntax:
+    content: 'public class Entity : MemoryAddressContainer'
+    content.vb: Public Class Entity Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  derivedClasses:
+  - OnixRuntime.Api.Entities.ItemEntity
+  - OnixRuntime.Api.Entities.Mob
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OnixRuntime.Api.Entities.Entity.Categories
+  commentId: P:OnixRuntime.Api.Entities.Entity.Categories
+  id: Categories
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Categories
+  nameWithType: Entity.Categories
+  fullName: OnixRuntime.Api.Entities.Entity.Categories
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Categories
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 54
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the categories this entity belongs to.
+  example: []
+  syntax:
+    content: public EntityCategory Categories { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.EntityCategory
+    content.vb: Public ReadOnly Property Categories As EntityCategory
+  overload: OnixRuntime.Api.Entities.Entity.Categories*
+- uid: OnixRuntime.Api.Entities.Entity.IsClientSide
+  commentId: P:OnixRuntime.Api.Entities.Entity.IsClientSide
+  id: IsClientSide
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsClientSide
+  nameWithType: Entity.IsClientSide
+  fullName: OnixRuntime.Api.Entities.Entity.IsClientSide
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsClientSide
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 58
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets whether this entity is client-side only.
+  example: []
+  syntax:
+    content: public bool IsClientSide { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsClientSide As Boolean
+  overload: OnixRuntime.Api.Entities.Entity.IsClientSide*
+- uid: OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
+  commentId: M:OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
+  id: HasCategory(OnixRuntime.Api.Entities.EntityCategory)
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: HasCategory(EntityCategory)
+  nameWithType: Entity.HasCategory(EntityCategory)
+  fullName: OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HasCategory
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 63
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Checks if the entity has the specified category.
+  example: []
+  syntax:
+    content: public bool HasCategory(EntityCategory category)
+    parameters:
+    - id: category
+      type: OnixRuntime.Api.Entities.EntityCategory
+    return:
+      type: System.Boolean
+    content.vb: Public Function HasCategory(category As EntityCategory) As Boolean
+  overload: OnixRuntime.Api.Entities.Entity.HasCategory*
+- uid: OnixRuntime.Api.Entities.Entity.GetFlag(OnixRuntime.Api.Entities.EntityFlag)
+  commentId: M:OnixRuntime.Api.Entities.Entity.GetFlag(OnixRuntime.Api.Entities.EntityFlag)
+  id: GetFlag(OnixRuntime.Api.Entities.EntityFlag)
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: GetFlag(EntityFlag)
+  nameWithType: Entity.GetFlag(EntityFlag)
+  fullName: OnixRuntime.Api.Entities.Entity.GetFlag(OnixRuntime.Api.Entities.EntityFlag)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetFlag
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 70
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Checks if the entity has the specified flag.
+  example: []
+  syntax:
+    content: public bool GetFlag(EntityFlag flag)
+    parameters:
+    - id: flag
+      type: OnixRuntime.Api.Entities.EntityFlag
+    return:
+      type: System.Boolean
+    content.vb: Public Function GetFlag(flag As EntityFlag) As Boolean
+  overload: OnixRuntime.Api.Entities.Entity.GetFlag*
+- uid: OnixRuntime.Api.Entities.Entity.SetFlag(OnixRuntime.Api.Entities.EntityFlag,System.Boolean)
+  commentId: M:OnixRuntime.Api.Entities.Entity.SetFlag(OnixRuntime.Api.Entities.EntityFlag,System.Boolean)
+  id: SetFlag(OnixRuntime.Api.Entities.EntityFlag,System.Boolean)
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: SetFlag(EntityFlag, bool)
+  nameWithType: Entity.SetFlag(EntityFlag, bool)
+  fullName: OnixRuntime.Api.Entities.Entity.SetFlag(OnixRuntime.Api.Entities.EntityFlag, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetFlag
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 78
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: >-
+    Checks if the entity has the specified flag.
+
+    You should only use this from the server side.
+  example: []
+  syntax:
+    content: public void SetFlag(EntityFlag flag, bool value)
+    parameters:
+    - id: flag
+      type: OnixRuntime.Api.Entities.EntityFlag
+    - id: value
+      type: System.Boolean
+    content.vb: Public Sub SetFlag(flag As EntityFlag, value As Boolean)
+  overload: OnixRuntime.Api.Entities.Entity.SetFlag*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: When running on the client.
+  nameWithType.vb: Entity.SetFlag(EntityFlag, Boolean)
+  fullName.vb: OnixRuntime.Api.Entities.Entity.SetFlag(OnixRuntime.Api.Entities.EntityFlag, Boolean)
+  name.vb: SetFlag(EntityFlag, Boolean)
+- uid: OnixRuntime.Api.Entities.Entity.IsTargetable
+  commentId: P:OnixRuntime.Api.Entities.Entity.IsTargetable
+  id: IsTargetable
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsTargetable
+  nameWithType: Entity.IsTargetable
+  fullName: OnixRuntime.Api.Entities.Entity.IsTargetable
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsTargetable
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 85
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets whether the entity can be targeted.
+  example: []
+  syntax:
+    content: public bool IsTargetable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTargetable As Boolean
+  overload: OnixRuntime.Api.Entities.Entity.IsTargetable*
+- uid: OnixRuntime.Api.Entities.Entity.Nametag
+  commentId: P:OnixRuntime.Api.Entities.Entity.Nametag
+  id: Nametag
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Nametag
+  nameWithType: Entity.Nametag
+  fullName: OnixRuntime.Api.Entities.Entity.Nametag
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Nametag
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 90
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the nametag of the entity.
+  example: []
+  syntax:
+    content: public string Nametag { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Nametag As String
+  overload: OnixRuntime.Api.Entities.Entity.Nametag*
+- uid: OnixRuntime.Api.Entities.Entity.RawPosition
+  commentId: P:OnixRuntime.Api.Entities.Entity.RawPosition
+  id: RawPosition
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: RawPosition
+  nameWithType: Entity.RawPosition
+  fullName: OnixRuntime.Api.Entities.Entity.RawPosition
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RawPosition
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 97
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the raw position and previous position of the entity.
+  example: []
+  syntax:
+    content: public Tuple<Vec3, Vec3> RawPosition { get; }
+    parameters: []
+    return:
+      type: System.Tuple{OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3}
+    content.vb: Public ReadOnly Property RawPosition As Tuple(Of Vec3, Vec3)
+  overload: OnixRuntime.Api.Entities.Entity.RawPosition*
+- uid: OnixRuntime.Api.Entities.Entity.Position
+  commentId: P:OnixRuntime.Api.Entities.Entity.Position
+  id: Position
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Entity.Position
+  fullName: OnixRuntime.Api.Entities.Entity.Position
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Position
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 101
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the position of the entity.
+  example: []
+  syntax:
+    content: public Vec3 Position { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public Property Position As Vec3
+  overload: OnixRuntime.Api.Entities.Entity.Position*
+- uid: OnixRuntime.Api.Entities.Entity.ForwardPosition(System.Single)
+  commentId: M:OnixRuntime.Api.Entities.Entity.ForwardPosition(System.Single)
+  id: ForwardPosition(System.Single)
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: ForwardPosition(float)
+  nameWithType: Entity.ForwardPosition(float)
+  fullName: OnixRuntime.Api.Entities.Entity.ForwardPosition(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ForwardPosition
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 109
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the position in front of the entity at the specified distance.
+  example: []
+  syntax:
+    content: public Vec3 ForwardPosition(float distance = 1)
+    parameters:
+    - id: distance
+      type: System.Single
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public Function ForwardPosition(distance As Single = 1) As Vec3
+  overload: OnixRuntime.Api.Entities.Entity.ForwardPosition*
+  nameWithType.vb: Entity.ForwardPosition(Single)
+  fullName.vb: OnixRuntime.Api.Entities.Entity.ForwardPosition(Single)
+  name.vb: ForwardPosition(Single)
+- uid: OnixRuntime.Api.Entities.Entity.BlockPosition
+  commentId: P:OnixRuntime.Api.Entities.Entity.BlockPosition
+  id: BlockPosition
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: BlockPosition
+  nameWithType: Entity.BlockPosition
+  fullName: OnixRuntime.Api.Entities.Entity.BlockPosition
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BlockPosition
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 113
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the block position of the entity.
+  example: []
+  syntax:
+    content: public BlockPos BlockPosition { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+    content.vb: Public ReadOnly Property BlockPosition As BlockPos
+  overload: OnixRuntime.Api.Entities.Entity.BlockPosition*
+- uid: OnixRuntime.Api.Entities.Entity.ChunkPosition
+  commentId: P:OnixRuntime.Api.Entities.Entity.ChunkPosition
+  id: ChunkPosition
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: ChunkPosition
+  nameWithType: Entity.ChunkPosition
+  fullName: OnixRuntime.Api.Entities.Entity.ChunkPosition
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ChunkPosition
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 117
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the chunk position of the entity.
+  example: []
+  syntax:
+    content: public ChunkPos ChunkPosition { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.ChunkPos
+    content.vb: Public ReadOnly Property ChunkPosition As ChunkPos
+  overload: OnixRuntime.Api.Entities.Entity.ChunkPosition*
+- uid: OnixRuntime.Api.Entities.Entity.Velocity
+  commentId: P:OnixRuntime.Api.Entities.Entity.Velocity
+  id: Velocity
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Velocity
+  nameWithType: Entity.Velocity
+  fullName: OnixRuntime.Api.Entities.Entity.Velocity
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Velocity
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 121
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the velocity of the entity.
+  example: []
+  syntax:
+    content: public Vec3 Velocity { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property Velocity As Vec3
+  overload: OnixRuntime.Api.Entities.Entity.Velocity*
+- uid: OnixRuntime.Api.Entities.Entity.Rotation
+  commentId: P:OnixRuntime.Api.Entities.Entity.Rotation
+  id: Rotation
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: Entity.Rotation
+  fullName: OnixRuntime.Api.Entities.Entity.Rotation
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Rotation
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 125
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the rotation angles of the entity.
+  example: []
+  syntax:
+    content: public Angles Rotation { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Angles
+    content.vb: Public ReadOnly Property Rotation As Angles
+  overload: OnixRuntime.Api.Entities.Entity.Rotation*
+- uid: OnixRuntime.Api.Entities.Entity.TypeName
+  commentId: P:OnixRuntime.Api.Entities.Entity.TypeName
+  id: TypeName
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: TypeName
+  nameWithType: Entity.TypeName
+  fullName: OnixRuntime.Api.Entities.Entity.TypeName
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TypeName
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 129
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the type name of the entity.
+  example: []
+  syntax:
+    content: public string TypeName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TypeName As String
+  overload: OnixRuntime.Api.Entities.Entity.TypeName*
+- uid: OnixRuntime.Api.Entities.Entity.TypeNamespace
+  commentId: P:OnixRuntime.Api.Entities.Entity.TypeNamespace
+  id: TypeNamespace
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: TypeNamespace
+  nameWithType: Entity.TypeNamespace
+  fullName: OnixRuntime.Api.Entities.Entity.TypeNamespace
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TypeNamespace
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 133
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the type namespace of the entity.
+  example: []
+  syntax:
+    content: public string TypeNamespace { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TypeNamespace As String
+  overload: OnixRuntime.Api.Entities.Entity.TypeNamespace*
+- uid: OnixRuntime.Api.Entities.Entity.TypeNameFull
+  commentId: P:OnixRuntime.Api.Entities.Entity.TypeNameFull
+  id: TypeNameFull
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: TypeNameFull
+  nameWithType: Entity.TypeNameFull
+  fullName: OnixRuntime.Api.Entities.Entity.TypeNameFull
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TypeNameFull
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 137
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the full type name of the entity.
+  example: []
+  syntax:
+    content: public string TypeNameFull { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property TypeNameFull As String
+  overload: OnixRuntime.Api.Entities.Entity.TypeNameFull*
+- uid: OnixRuntime.Api.Entities.Entity.UniqueId
+  commentId: P:OnixRuntime.Api.Entities.Entity.UniqueId
+  id: UniqueId
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: UniqueId
+  nameWithType: Entity.UniqueId
+  fullName: OnixRuntime.Api.Entities.Entity.UniqueId
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: UniqueId
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 141
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the unique identifier of the entity.
+  example: []
+  syntax:
+    content: public ulong UniqueId { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property UniqueId As ULong
+  overload: OnixRuntime.Api.Entities.Entity.UniqueId*
+- uid: OnixRuntime.Api.Entities.Entity.RuntimeId
+  commentId: P:OnixRuntime.Api.Entities.Entity.RuntimeId
+  id: RuntimeId
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: RuntimeId
+  nameWithType: Entity.RuntimeId
+  fullName: OnixRuntime.Api.Entities.Entity.RuntimeId
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RuntimeId
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 145
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the runtime identifier of the entity.
+  example: []
+  syntax:
+    content: public ulong RuntimeId { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property RuntimeId As ULong
+  overload: OnixRuntime.Api.Entities.Entity.RuntimeId*
+- uid: OnixRuntime.Api.Entities.Entity.ScoreboardIdentity
+  commentId: P:OnixRuntime.Api.Entities.Entity.ScoreboardIdentity
+  id: ScoreboardIdentity
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: ScoreboardIdentity
+  nameWithType: Entity.ScoreboardIdentity
+  fullName: OnixRuntime.Api.Entities.Entity.ScoreboardIdentity
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ScoreboardIdentity
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 149
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the scoreboard identity of the entity, if available.
+  example: []
+  syntax:
+    content: public ScoreboardIdentity? ScoreboardIdentity { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.Scoreboards.ScoreboardIdentity
+    content.vb: Public ReadOnly Property ScoreboardIdentity As ScoreboardIdentity
+  overload: OnixRuntime.Api.Entities.Entity.ScoreboardIdentity*
+- uid: OnixRuntime.Api.Entities.Entity.HeightOffset
+  commentId: P:OnixRuntime.Api.Entities.Entity.HeightOffset
+  id: HeightOffset
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: HeightOffset
+  nameWithType: Entity.HeightOffset
+  fullName: OnixRuntime.Api.Entities.Entity.HeightOffset
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HeightOffset
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 153
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the height offset of the entity.
+  example: []
+  syntax:
+    content: public float HeightOffset { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property HeightOffset As Single
+  overload: OnixRuntime.Api.Entities.Entity.HeightOffset*
+- uid: OnixRuntime.Api.Entities.Entity.StepHeight
+  commentId: P:OnixRuntime.Api.Entities.Entity.StepHeight
+  id: StepHeight
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: StepHeight
+  nameWithType: Entity.StepHeight
+  fullName: OnixRuntime.Api.Entities.Entity.StepHeight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: StepHeight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 157
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the step height of the entity.
+  example: []
+  syntax:
+    content: public float StepHeight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property StepHeight As Single
+  overload: OnixRuntime.Api.Entities.Entity.StepHeight*
+- uid: OnixRuntime.Api.Entities.Entity.AliveDuration
+  commentId: P:OnixRuntime.Api.Entities.Entity.AliveDuration
+  id: AliveDuration
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: AliveDuration
+  nameWithType: Entity.AliveDuration
+  fullName: OnixRuntime.Api.Entities.Entity.AliveDuration
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AliveDuration
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 161
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the duration the entity has been alive as a TimeSpan.
+  example: []
+  syntax:
+    content: public TimeSpan AliveDuration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public ReadOnly Property AliveDuration As TimeSpan
+  overload: OnixRuntime.Api.Entities.Entity.AliveDuration*
+- uid: OnixRuntime.Api.Entities.Entity.AliveTicks
+  commentId: P:OnixRuntime.Api.Entities.Entity.AliveTicks
+  id: AliveTicks
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: AliveTicks
+  nameWithType: Entity.AliveTicks
+  fullName: OnixRuntime.Api.Entities.Entity.AliveTicks
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AliveTicks
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 165
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the number of game ticks the entity has been alive.
+  example: []
+  syntax:
+    content: public int AliveTicks { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property AliveTicks As Integer
+  overload: OnixRuntime.Api.Entities.Entity.AliveTicks*
+- uid: OnixRuntime.Api.Entities.Entity.Attributes
+  commentId: P:OnixRuntime.Api.Entities.Entity.Attributes
+  id: Attributes
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: Entity.Attributes
+  fullName: OnixRuntime.Api.Entities.Entity.Attributes
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Attributes
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 169
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the attributes of the entity.
+  example: []
+  syntax:
+    content: public Dictionary<EntityAttributeId, EntityAttribute> Attributes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{OnixRuntime.Api.Entities.EntityAttributeId,OnixRuntime.Api.Entities.EntityAttribute}
+    content.vb: Public ReadOnly Property Attributes As Dictionary(Of EntityAttributeId, EntityAttribute)
+  overload: OnixRuntime.Api.Entities.Entity.Attributes*
+- uid: OnixRuntime.Api.Entities.Entity.GetAttribute(OnixRuntime.Api.Entities.EntityAttributeId)
+  commentId: M:OnixRuntime.Api.Entities.Entity.GetAttribute(OnixRuntime.Api.Entities.EntityAttributeId)
+  id: GetAttribute(OnixRuntime.Api.Entities.EntityAttributeId)
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: GetAttribute(EntityAttributeId)
+  nameWithType: Entity.GetAttribute(EntityAttributeId)
+  fullName: OnixRuntime.Api.Entities.Entity.GetAttribute(OnixRuntime.Api.Entities.EntityAttributeId)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetAttribute
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 173
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the attribute with the specified ID.
+  example: []
+  syntax:
+    content: public EntityAttribute? GetAttribute(EntityAttributeId attributeId)
+    parameters:
+    - id: attributeId
+      type: OnixRuntime.Api.Entities.EntityAttributeId
+    return:
+      type: OnixRuntime.Api.Entities.EntityAttribute
+    content.vb: Public Function GetAttribute(attributeId As EntityAttributeId) As EntityAttribute
+  overload: OnixRuntime.Api.Entities.Entity.GetAttribute*
+- uid: OnixRuntime.Api.Entities.Entity.GetAttribute(System.String)
+  commentId: M:OnixRuntime.Api.Entities.Entity.GetAttribute(System.String)
+  id: GetAttribute(System.String)
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: GetAttribute(string)
+  nameWithType: Entity.GetAttribute(string)
+  fullName: OnixRuntime.Api.Entities.Entity.GetAttribute(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetAttribute
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 177
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the attribute with the specified name, if it exists.
+  example: []
+  syntax:
+    content: public EntityAttribute? GetAttribute(string attributeName)
+    parameters:
+    - id: attributeName
+      type: System.String
+    return:
+      type: OnixRuntime.Api.Entities.EntityAttribute
+    content.vb: Public Function GetAttribute(attributeName As String) As EntityAttribute
+  overload: OnixRuntime.Api.Entities.Entity.GetAttribute*
+  nameWithType.vb: Entity.GetAttribute(String)
+  fullName.vb: OnixRuntime.Api.Entities.Entity.GetAttribute(String)
+  name.vb: GetAttribute(String)
+- uid: OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttribute)
+  commentId: M:OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttribute)
+  id: UpdateAttribute(OnixRuntime.Api.Entities.EntityAttribute)
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: UpdateAttribute(EntityAttribute)
+  nameWithType: Entity.UpdateAttribute(EntityAttribute)
+  fullName: OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttribute)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: UpdateAttribute
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 181
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Updates the specified attribute instance.
+  example: []
+  syntax:
+    content: public void UpdateAttribute(EntityAttribute attribute)
+    parameters:
+    - id: attribute
+      type: OnixRuntime.Api.Entities.EntityAttribute
+    content.vb: Public Sub UpdateAttribute(attribute As EntityAttribute)
+  overload: OnixRuntime.Api.Entities.Entity.UpdateAttribute*
+- uid: OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttributeId,System.Action{OnixRuntime.Api.Entities.MutableEntityAttribute})
+  commentId: M:OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttributeId,System.Action{OnixRuntime.Api.Entities.MutableEntityAttribute})
+  id: UpdateAttribute(OnixRuntime.Api.Entities.EntityAttributeId,System.Action{OnixRuntime.Api.Entities.MutableEntityAttribute})
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: UpdateAttribute(EntityAttributeId, Action<MutableEntityAttribute>)
+  nameWithType: Entity.UpdateAttribute(EntityAttributeId, Action<MutableEntityAttribute>)
+  fullName: OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttributeId, System.Action<OnixRuntime.Api.Entities.MutableEntityAttribute>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: UpdateAttribute
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 187
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: >-
+    Updates the specified attribute by ID using a callback to modify it.
+
+    If the attribute cannot be found it will not call the callback.
+  example: []
+  syntax:
+    content: public void UpdateAttribute(EntityAttributeId id, Action<MutableEntityAttribute> callback)
+    parameters:
+    - id: id
+      type: OnixRuntime.Api.Entities.EntityAttributeId
+    - id: callback
+      type: System.Action{OnixRuntime.Api.Entities.MutableEntityAttribute}
+    content.vb: Public Sub UpdateAttribute(id As EntityAttributeId, callback As Action(Of MutableEntityAttribute))
+  overload: OnixRuntime.Api.Entities.Entity.UpdateAttribute*
+  nameWithType.vb: Entity.UpdateAttribute(EntityAttributeId, Action(Of MutableEntityAttribute))
+  fullName.vb: OnixRuntime.Api.Entities.Entity.UpdateAttribute(OnixRuntime.Api.Entities.EntityAttributeId, System.Action(Of OnixRuntime.Api.Entities.MutableEntityAttribute))
+  name.vb: UpdateAttribute(EntityAttributeId, Action(Of MutableEntityAttribute))
+- uid: OnixRuntime.Api.Entities.Entity.Kill
+  commentId: M:OnixRuntime.Api.Entities.Entity.Kill
+  id: Kill
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Kill()
+  nameWithType: Entity.Kill()
+  fullName: OnixRuntime.Api.Entities.Entity.Kill()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Kill
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 198
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Kills the entity by setting its health to zero.
+  example: []
+  syntax:
+    content: public void Kill()
+    content.vb: Public Sub Kill()
+  overload: OnixRuntime.Api.Entities.Entity.Kill*
+- uid: OnixRuntime.Api.Entities.Entity.Effects
+  commentId: P:OnixRuntime.Api.Entities.Entity.Effects
+  id: Effects
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Effects
+  nameWithType: Entity.Effects
+  fullName: OnixRuntime.Api.Entities.Entity.Effects
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Effects
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 202
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the list of mob effect instances applied to the entity.
+  example: []
+  syntax:
+    content: public MobEffectInstance[] Effects { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.MobEffectInstance[]
+    content.vb: Public ReadOnly Property Effects As MobEffectInstance()
+  overload: OnixRuntime.Api.Entities.Entity.Effects*
+- uid: OnixRuntime.Api.Entities.Entity.BoundingBox
+  commentId: P:OnixRuntime.Api.Entities.Entity.BoundingBox
+  id: BoundingBox
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox
+  nameWithType: Entity.BoundingBox
+  fullName: OnixRuntime.Api.Entities.Entity.BoundingBox
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BoundingBox
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 206
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the bounding box of the entity.
+  example: []
+  syntax:
+    content: public BoundingBox BoundingBox { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public ReadOnly Property BoundingBox As BoundingBox
+  overload: OnixRuntime.Api.Entities.Entity.BoundingBox*
+- uid: OnixRuntime.Api.Entities.Entity.BoundingBoxRaw
+  commentId: P:OnixRuntime.Api.Entities.Entity.BoundingBoxRaw
+  id: BoundingBoxRaw
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: BoundingBoxRaw
+  nameWithType: Entity.BoundingBoxRaw
+  fullName: OnixRuntime.Api.Entities.Entity.BoundingBoxRaw
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BoundingBoxRaw
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 210
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the raw bounding box of the entity.
+  example: []
+  syntax:
+    content: public BoundingBox BoundingBoxRaw { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public ReadOnly Property BoundingBoxRaw As BoundingBox
+  overload: OnixRuntime.Api.Entities.Entity.BoundingBoxRaw*
+- uid: OnixRuntime.Api.Entities.Entity.BoundingBoxSize
+  commentId: P:OnixRuntime.Api.Entities.Entity.BoundingBoxSize
+  id: BoundingBoxSize
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: BoundingBoxSize
+  nameWithType: Entity.BoundingBoxSize
+  fullName: OnixRuntime.Api.Entities.Entity.BoundingBoxSize
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BoundingBoxSize
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 214
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the size of the entity's bounding box.
+  example: []
+  syntax:
+    content: public Vec2 BoundingBoxSize { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec2
+    content.vb: Public ReadOnly Property BoundingBoxSize As Vec2
+  overload: OnixRuntime.Api.Entities.Entity.BoundingBoxSize*
+- uid: OnixRuntime.Api.Entities.Entity.SimpleMolangVariables
+  commentId: P:OnixRuntime.Api.Entities.Entity.SimpleMolangVariables
+  id: SimpleMolangVariables
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: SimpleMolangVariables
+  nameWithType: Entity.SimpleMolangVariables
+  fullName: OnixRuntime.Api.Entities.Entity.SimpleMolangVariables
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SimpleMolangVariables
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 218
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the simple Molang variables for the entity.
+  example: []
+  syntax:
+    content: public Dictionary<string, float> SimpleMolangVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Single}
+    content.vb: Public ReadOnly Property SimpleMolangVariables As Dictionary(Of String, Single)
+  overload: OnixRuntime.Api.Entities.Entity.SimpleMolangVariables*
+- uid: OnixRuntime.Api.Entities.Entity.Dimension
+  commentId: P:OnixRuntime.Api.Entities.Entity.Dimension
+  id: Dimension
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Dimension
+  nameWithType: Entity.Dimension
+  fullName: OnixRuntime.Api.Entities.Entity.Dimension
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Dimension
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 222
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the dimension the entity is in.
+  example: []
+  syntax:
+    content: public Dimension Dimension { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.Dimension
+    content.vb: Public ReadOnly Property Dimension As Dimension
+  overload: OnixRuntime.Api.Entities.Entity.Dimension*
+- uid: OnixRuntime.Api.Entities.Entity.Region
+  commentId: P:OnixRuntime.Api.Entities.Entity.Region
+  id: Region
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: Entity.Region
+  fullName: OnixRuntime.Api.Entities.Entity.Region
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Region
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 226
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the Region of world blocks the entity is in.
+  example: []
+  syntax:
+    content: public WorldBlocks Region { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+    content.vb: Public ReadOnly Property Region As WorldBlocks
+  overload: OnixRuntime.Api.Entities.Entity.Region*
+- uid: OnixRuntime.Api.Entities.Entity.World
+  commentId: P:OnixRuntime.Api.Entities.Entity.World
+  id: World
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: Entity.World
+  fullName: OnixRuntime.Api.Entities.Entity.World
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: World
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 230
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the runtime world the entity is in.
+  example: []
+  syntax:
+    content: public RuntimeWorld World { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.RuntimeWorld
+    content.vb: Public ReadOnly Property World As RuntimeWorld
+  overload: OnixRuntime.Api.Entities.Entity.World*
+- uid: OnixRuntime.Api.Entities.Entity.Riding
+  commentId: P:OnixRuntime.Api.Entities.Entity.Riding
+  id: Riding
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: Riding
+  nameWithType: Entity.Riding
+  fullName: OnixRuntime.Api.Entities.Entity.Riding
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Riding
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 234
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the entity this entity is riding, if any.
+  example: []
+  syntax:
+    content: public Entity? Riding { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.Entity
+    content.vb: Public ReadOnly Property Riding As Entity
+  overload: OnixRuntime.Api.Entities.Entity.Riding*
+- uid: OnixRuntime.Api.Entities.Entity.RiddenBy
+  commentId: P:OnixRuntime.Api.Entities.Entity.RiddenBy
+  id: RiddenBy
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: RiddenBy
+  nameWithType: Entity.RiddenBy
+  fullName: OnixRuntime.Api.Entities.Entity.RiddenBy
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RiddenBy
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 238
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the entity riding this entity, if any.
+  example: []
+  syntax:
+    content: public Entity? RiddenBy { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.Entity
+    content.vb: Public ReadOnly Property RiddenBy As Entity
+  overload: OnixRuntime.Api.Entities.Entity.RiddenBy*
+- uid: OnixRuntime.Api.Entities.Entity.MainHandItem
+  commentId: P:OnixRuntime.Api.Entities.Entity.MainHandItem
+  id: MainHandItem
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: MainHandItem
+  nameWithType: Entity.MainHandItem
+  fullName: OnixRuntime.Api.Entities.Entity.MainHandItem
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MainHandItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 246
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the item in the entity's main hand.
+  example: []
+  syntax:
+    content: public virtual ItemStack MainHandItem { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+    content.vb: Public Overridable Property MainHandItem As ItemStack
+  overload: OnixRuntime.Api.Entities.Entity.MainHandItem*
+- uid: OnixRuntime.Api.Entities.Entity.OffhandItem
+  commentId: P:OnixRuntime.Api.Entities.Entity.OffhandItem
+  id: OffhandItem
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: OffhandItem
+  nameWithType: Entity.OffhandItem
+  fullName: OnixRuntime.Api.Entities.Entity.OffhandItem
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: OffhandItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 254
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the item in the entity's offhand.
+  example: []
+  syntax:
+    content: public virtual ItemStack OffhandItem { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+    content.vb: Public Overridable Property OffhandItem As ItemStack
+  overload: OnixRuntime.Api.Entities.Entity.OffhandItem*
+- uid: OnixRuntime.Api.Entities.Entity.HelmetItem
+  commentId: P:OnixRuntime.Api.Entities.Entity.HelmetItem
+  id: HelmetItem
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: HelmetItem
+  nameWithType: Entity.HelmetItem
+  fullName: OnixRuntime.Api.Entities.Entity.HelmetItem
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HelmetItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 262
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the item in the entity's helmet slot.
+  example: []
+  syntax:
+    content: public virtual ItemStack HelmetItem { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+    content.vb: Public Overridable Property HelmetItem As ItemStack
+  overload: OnixRuntime.Api.Entities.Entity.HelmetItem*
+- uid: OnixRuntime.Api.Entities.Entity.ChestplateItem
+  commentId: P:OnixRuntime.Api.Entities.Entity.ChestplateItem
+  id: ChestplateItem
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: ChestplateItem
+  nameWithType: Entity.ChestplateItem
+  fullName: OnixRuntime.Api.Entities.Entity.ChestplateItem
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ChestplateItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 270
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the item in the entity's chestplate slot.
+  example: []
+  syntax:
+    content: public virtual ItemStack ChestplateItem { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+    content.vb: Public Overridable Property ChestplateItem As ItemStack
+  overload: OnixRuntime.Api.Entities.Entity.ChestplateItem*
+- uid: OnixRuntime.Api.Entities.Entity.LeggingsItem
+  commentId: P:OnixRuntime.Api.Entities.Entity.LeggingsItem
+  id: LeggingsItem
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: LeggingsItem
+  nameWithType: Entity.LeggingsItem
+  fullName: OnixRuntime.Api.Entities.Entity.LeggingsItem
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: LeggingsItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 278
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the item in the entity's leggings slot.
+  example: []
+  syntax:
+    content: public virtual ItemStack LeggingsItem { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+    content.vb: Public Overridable Property LeggingsItem As ItemStack
+  overload: OnixRuntime.Api.Entities.Entity.LeggingsItem*
+- uid: OnixRuntime.Api.Entities.Entity.BootsItem
+  commentId: P:OnixRuntime.Api.Entities.Entity.BootsItem
+  id: BootsItem
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: BootsItem
+  nameWithType: Entity.BootsItem
+  fullName: OnixRuntime.Api.Entities.Entity.BootsItem
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BootsItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 286
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets the item in the entity's boots slot.
+  example: []
+  syntax:
+    content: public virtual ItemStack BootsItem { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+    content.vb: Public Overridable Property BootsItem As ItemStack
+  overload: OnixRuntime.Api.Entities.Entity.BootsItem*
+- uid: OnixRuntime.Api.Entities.Entity.ArmorItems
+  commentId: P:OnixRuntime.Api.Entities.Entity.ArmorItems
+  id: ArmorItems
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: ArmorItems
+  nameWithType: Entity.ArmorItems
+  fullName: OnixRuntime.Api.Entities.Entity.ArmorItems
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ArmorItems
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 294
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets or sets all armor items of the entity.
+  example: []
+  syntax:
+    content: public virtual ItemStack[] ArmorItems { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack[]
+    content.vb: Public Overridable Property ArmorItems As ItemStack()
+  overload: OnixRuntime.Api.Entities.Entity.ArmorItems*
+- uid: OnixRuntime.Api.Entities.Entity.ToString
+  commentId: M:OnixRuntime.Api.Entities.Entity.ToString
+  id: ToString
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Entity.ToString()
+  fullName: OnixRuntime.Api.Entities.Entity.ToString()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ToString
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 308
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Returns a string representation of the entity.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OnixRuntime.Api.Entities.Entity.ToString*
+references:
+- uid: OnixRuntime.Api.Entities
+  commentId: N:OnixRuntime.Api.Entities
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Entities
+  nameWithType: OnixRuntime.Api.Entities
+  fullName: OnixRuntime.Api.Entities
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Entities.Entity.Categories*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Categories
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Categories
+  name: Categories
+  nameWithType: Entity.Categories
+  fullName: OnixRuntime.Api.Entities.Entity.Categories
+- uid: OnixRuntime.Api.Entities.EntityCategory
+  commentId: T:OnixRuntime.Api.Entities.EntityCategory
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.EntityCategory.html
+  name: EntityCategory
+  nameWithType: EntityCategory
+  fullName: OnixRuntime.Api.Entities.EntityCategory
+- uid: OnixRuntime.Api.Entities.Entity.IsClientSide*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.IsClientSide
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsClientSide
+  name: IsClientSide
+  nameWithType: Entity.IsClientSide
+  fullName: OnixRuntime.Api.Entities.Entity.IsClientSide
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Entities.Entity.HasCategory*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.HasCategory
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_HasCategory_OnixRuntime_Api_Entities_EntityCategory_
+  name: HasCategory
+  nameWithType: Entity.HasCategory
+  fullName: OnixRuntime.Api.Entities.Entity.HasCategory
+- uid: OnixRuntime.Api.Entities.Entity.GetFlag*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.GetFlag
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_GetFlag_OnixRuntime_Api_Entities_EntityFlag_
+  name: GetFlag
+  nameWithType: Entity.GetFlag
+  fullName: OnixRuntime.Api.Entities.Entity.GetFlag
+- uid: OnixRuntime.Api.Entities.EntityFlag
+  commentId: T:OnixRuntime.Api.Entities.EntityFlag
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.EntityFlag.html
+  name: EntityFlag
+  nameWithType: EntityFlag
+  fullName: OnixRuntime.Api.Entities.EntityFlag
+- uid: OnixRuntime.Api.Errors.InsufficientTrustException
+  commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+  href: OnixRuntime.Api.Errors.InsufficientTrustException.html
+  name: InsufficientTrustException
+  nameWithType: InsufficientTrustException
+  fullName: OnixRuntime.Api.Errors.InsufficientTrustException
+- uid: OnixRuntime.Api.Entities.Entity.SetFlag*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.SetFlag
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_SetFlag_OnixRuntime_Api_Entities_EntityFlag_System_Boolean_
+  name: SetFlag
+  nameWithType: Entity.SetFlag
+  fullName: OnixRuntime.Api.Entities.Entity.SetFlag
+- uid: OnixRuntime.Api.Entities.Entity.IsTargetable*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.IsTargetable
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsTargetable
+  name: IsTargetable
+  nameWithType: Entity.IsTargetable
+  fullName: OnixRuntime.Api.Entities.Entity.IsTargetable
+- uid: OnixRuntime.Api.Entities.Entity.Nametag*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Nametag
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Nametag
+  name: Nametag
+  nameWithType: Entity.Nametag
+  fullName: OnixRuntime.Api.Entities.Entity.Nametag
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Entities.Entity.RawPosition*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.RawPosition
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_RawPosition
+  name: RawPosition
+  nameWithType: Entity.RawPosition
+  fullName: OnixRuntime.Api.Entities.Entity.RawPosition
+- uid: System.Tuple{OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3}
+  commentId: T:System.Tuple{OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3}
+  parent: System
+  definition: System.Tuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  name: Tuple<Vec3, Vec3>
+  nameWithType: Tuple<Vec3, Vec3>
+  fullName: System.Tuple<OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.Vec3>
+  nameWithType.vb: Tuple(Of Vec3, Vec3)
+  fullName.vb: System.Tuple(Of OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.Vec3)
+  name.vb: Tuple(Of Vec3, Vec3)
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: <
+  - uid: OnixRuntime.Api.Maths.Vec3
+    name: Vec3
+    href: OnixRuntime.Api.Maths.Vec3.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Vec3
+    name: Vec3
+    href: OnixRuntime.Api.Maths.Vec3.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Vec3
+    name: Vec3
+    href: OnixRuntime.Api.Maths.Vec3.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Vec3
+    name: Vec3
+    href: OnixRuntime.Api.Maths.Vec3.html
+  - name: )
+- uid: System.Tuple`2
+  commentId: T:System.Tuple`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  name: Tuple<T1, T2>
+  nameWithType: Tuple<T1, T2>
+  fullName: System.Tuple<T1, T2>
+  nameWithType.vb: Tuple(Of T1, T2)
+  fullName.vb: System.Tuple(Of T1, T2)
+  name.vb: Tuple(Of T1, T2)
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: OnixRuntime.Api.Entities.Entity.Position*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Position
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Position
+  name: Position
+  nameWithType: Entity.Position
+  fullName: OnixRuntime.Api.Entities.Entity.Position
+- uid: OnixRuntime.Api.Maths.Vec3
+  commentId: T:OnixRuntime.Api.Maths.Vec3
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec3.html
+  name: Vec3
+  nameWithType: Vec3
+  fullName: OnixRuntime.Api.Maths.Vec3
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.Entities.Entity.ForwardPosition*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.ForwardPosition
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ForwardPosition_System_Single_
+  name: ForwardPosition
+  nameWithType: Entity.ForwardPosition
+  fullName: OnixRuntime.Api.Entities.Entity.ForwardPosition
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Entities.Entity.BlockPosition*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.BlockPosition
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BlockPosition
+  name: BlockPosition
+  nameWithType: Entity.BlockPosition
+  fullName: OnixRuntime.Api.Entities.Entity.BlockPosition
+- uid: OnixRuntime.Api.Maths.BlockPos
+  commentId: T:OnixRuntime.Api.Maths.BlockPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BlockPos.html
+  name: BlockPos
+  nameWithType: BlockPos
+  fullName: OnixRuntime.Api.Maths.BlockPos
+- uid: OnixRuntime.Api.Entities.Entity.ChunkPosition*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.ChunkPosition
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ChunkPosition
+  name: ChunkPosition
+  nameWithType: Entity.ChunkPosition
+  fullName: OnixRuntime.Api.Entities.Entity.ChunkPosition
+- uid: OnixRuntime.Api.Maths.ChunkPos
+  commentId: T:OnixRuntime.Api.Maths.ChunkPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.ChunkPos.html
+  name: ChunkPos
+  nameWithType: ChunkPos
+  fullName: OnixRuntime.Api.Maths.ChunkPos
+- uid: OnixRuntime.Api.Entities.Entity.Velocity*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Velocity
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Velocity
+  name: Velocity
+  nameWithType: Entity.Velocity
+  fullName: OnixRuntime.Api.Entities.Entity.Velocity
+- uid: OnixRuntime.Api.Entities.Entity.Rotation*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Rotation
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Rotation
+  name: Rotation
+  nameWithType: Entity.Rotation
+  fullName: OnixRuntime.Api.Entities.Entity.Rotation
+- uid: OnixRuntime.Api.Maths.Angles
+  commentId: T:OnixRuntime.Api.Maths.Angles
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Angles.html
+  name: Angles
+  nameWithType: Angles
+  fullName: OnixRuntime.Api.Maths.Angles
+- uid: OnixRuntime.Api.Entities.Entity.TypeName*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.TypeName
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_TypeName
+  name: TypeName
+  nameWithType: Entity.TypeName
+  fullName: OnixRuntime.Api.Entities.Entity.TypeName
+- uid: OnixRuntime.Api.Entities.Entity.TypeNamespace*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.TypeNamespace
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_TypeNamespace
+  name: TypeNamespace
+  nameWithType: Entity.TypeNamespace
+  fullName: OnixRuntime.Api.Entities.Entity.TypeNamespace
+- uid: OnixRuntime.Api.Entities.Entity.TypeNameFull*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.TypeNameFull
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_TypeNameFull
+  name: TypeNameFull
+  nameWithType: Entity.TypeNameFull
+  fullName: OnixRuntime.Api.Entities.Entity.TypeNameFull
+- uid: OnixRuntime.Api.Entities.Entity.UniqueId*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.UniqueId
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_UniqueId
+  name: UniqueId
+  nameWithType: Entity.UniqueId
+  fullName: OnixRuntime.Api.Entities.Entity.UniqueId
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: OnixRuntime.Api.Entities.Entity.RuntimeId*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.RuntimeId
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_RuntimeId
+  name: RuntimeId
+  nameWithType: Entity.RuntimeId
+  fullName: OnixRuntime.Api.Entities.Entity.RuntimeId
+- uid: OnixRuntime.Api.Entities.Entity.ScoreboardIdentity*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.ScoreboardIdentity
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ScoreboardIdentity
+  name: ScoreboardIdentity
+  nameWithType: Entity.ScoreboardIdentity
+  fullName: OnixRuntime.Api.Entities.Entity.ScoreboardIdentity
+- uid: OnixRuntime.Api.World.Scoreboards.ScoreboardIdentity
+  commentId: T:OnixRuntime.Api.World.Scoreboards.ScoreboardIdentity
+  parent: OnixRuntime.Api.World.Scoreboards
+  href: OnixRuntime.Api.World.Scoreboards.ScoreboardIdentity.html
+  name: ScoreboardIdentity
+  nameWithType: ScoreboardIdentity
+  fullName: OnixRuntime.Api.World.Scoreboards.ScoreboardIdentity
+- uid: OnixRuntime.Api.World.Scoreboards
+  commentId: N:OnixRuntime.Api.World.Scoreboards
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World.Scoreboards
+  nameWithType: OnixRuntime.Api.World.Scoreboards
+  fullName: OnixRuntime.Api.World.Scoreboards
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  - name: .
+  - uid: OnixRuntime.Api.World.Scoreboards
+    name: Scoreboards
+    href: OnixRuntime.Api.World.Scoreboards.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  - name: .
+  - uid: OnixRuntime.Api.World.Scoreboards
+    name: Scoreboards
+    href: OnixRuntime.Api.World.Scoreboards.html
+- uid: OnixRuntime.Api.Entities.Entity.HeightOffset*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.HeightOffset
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_HeightOffset
+  name: HeightOffset
+  nameWithType: Entity.HeightOffset
+  fullName: OnixRuntime.Api.Entities.Entity.HeightOffset
+- uid: OnixRuntime.Api.Entities.Entity.StepHeight*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.StepHeight
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_StepHeight
+  name: StepHeight
+  nameWithType: Entity.StepHeight
+  fullName: OnixRuntime.Api.Entities.Entity.StepHeight
+- uid: OnixRuntime.Api.Entities.Entity.AliveDuration*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.AliveDuration
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_AliveDuration
+  name: AliveDuration
+  nameWithType: Entity.AliveDuration
+  fullName: OnixRuntime.Api.Entities.Entity.AliveDuration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OnixRuntime.Api.Entities.Entity.AliveTicks*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.AliveTicks
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_AliveTicks
+  name: AliveTicks
+  nameWithType: Entity.AliveTicks
+  fullName: OnixRuntime.Api.Entities.Entity.AliveTicks
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Entities.Entity.Attributes*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Attributes
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Attributes
+  name: Attributes
+  nameWithType: Entity.Attributes
+  fullName: OnixRuntime.Api.Entities.Entity.Attributes
+- uid: System.Collections.Generic.Dictionary{OnixRuntime.Api.Entities.EntityAttributeId,OnixRuntime.Api.Entities.EntityAttribute}
+  commentId: T:System.Collections.Generic.Dictionary{OnixRuntime.Api.Entities.EntityAttributeId,OnixRuntime.Api.Entities.EntityAttribute}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<EntityAttributeId, EntityAttribute>
+  nameWithType: Dictionary<EntityAttributeId, EntityAttribute>
+  fullName: System.Collections.Generic.Dictionary<OnixRuntime.Api.Entities.EntityAttributeId, OnixRuntime.Api.Entities.EntityAttribute>
+  nameWithType.vb: Dictionary(Of EntityAttributeId, EntityAttribute)
+  fullName.vb: System.Collections.Generic.Dictionary(Of OnixRuntime.Api.Entities.EntityAttributeId, OnixRuntime.Api.Entities.EntityAttribute)
+  name.vb: Dictionary(Of EntityAttributeId, EntityAttribute)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: OnixRuntime.Api.Entities.EntityAttributeId
+    name: EntityAttributeId
+    href: OnixRuntime.Api.Entities.EntityAttributeId.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Entities.EntityAttribute
+    name: EntityAttribute
+    href: OnixRuntime.Api.Entities.EntityAttribute.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Entities.EntityAttributeId
+    name: EntityAttributeId
+    href: OnixRuntime.Api.Entities.EntityAttributeId.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Entities.EntityAttribute
+    name: EntityAttribute
+    href: OnixRuntime.Api.Entities.EntityAttribute.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OnixRuntime.Api.Entities.Entity.GetAttribute*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.GetAttribute
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_GetAttribute_OnixRuntime_Api_Entities_EntityAttributeId_
+  name: GetAttribute
+  nameWithType: Entity.GetAttribute
+  fullName: OnixRuntime.Api.Entities.Entity.GetAttribute
+- uid: OnixRuntime.Api.Entities.EntityAttributeId
+  commentId: T:OnixRuntime.Api.Entities.EntityAttributeId
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.EntityAttributeId.html
+  name: EntityAttributeId
+  nameWithType: EntityAttributeId
+  fullName: OnixRuntime.Api.Entities.EntityAttributeId
+- uid: OnixRuntime.Api.Entities.EntityAttribute
+  commentId: T:OnixRuntime.Api.Entities.EntityAttribute
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.EntityAttribute.html
+  name: EntityAttribute
+  nameWithType: EntityAttribute
+  fullName: OnixRuntime.Api.Entities.EntityAttribute
+- uid: OnixRuntime.Api.Entities.Entity.UpdateAttribute*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.UpdateAttribute
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_UpdateAttribute_OnixRuntime_Api_Entities_EntityAttribute_
+  name: UpdateAttribute
+  nameWithType: Entity.UpdateAttribute
+  fullName: OnixRuntime.Api.Entities.Entity.UpdateAttribute
+- uid: System.Action{OnixRuntime.Api.Entities.MutableEntityAttribute}
+  commentId: T:System.Action{OnixRuntime.Api.Entities.MutableEntityAttribute}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<MutableEntityAttribute>
+  nameWithType: Action<MutableEntityAttribute>
+  fullName: System.Action<OnixRuntime.Api.Entities.MutableEntityAttribute>
+  nameWithType.vb: Action(Of MutableEntityAttribute)
+  fullName.vb: System.Action(Of OnixRuntime.Api.Entities.MutableEntityAttribute)
+  name.vb: Action(Of MutableEntityAttribute)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: OnixRuntime.Api.Entities.MutableEntityAttribute
+    name: MutableEntityAttribute
+    href: OnixRuntime.Api.Entities.MutableEntityAttribute.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Entities.MutableEntityAttribute
+    name: MutableEntityAttribute
+    href: OnixRuntime.Api.Entities.MutableEntityAttribute.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.Entities.Entity.Kill*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Kill
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Kill
+  name: Kill
+  nameWithType: Entity.Kill
+  fullName: OnixRuntime.Api.Entities.Entity.Kill
+- uid: OnixRuntime.Api.Entities.Entity.Effects*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Effects
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Effects
+  name: Effects
+  nameWithType: Entity.Effects
+  fullName: OnixRuntime.Api.Entities.Entity.Effects
+- uid: OnixRuntime.Api.Entities.MobEffectInstance[]
+  isExternal: true
+  href: OnixRuntime.Api.Entities.MobEffectInstance.html
+  name: MobEffectInstance[]
+  nameWithType: MobEffectInstance[]
+  fullName: OnixRuntime.Api.Entities.MobEffectInstance[]
+  nameWithType.vb: MobEffectInstance()
+  fullName.vb: OnixRuntime.Api.Entities.MobEffectInstance()
+  name.vb: MobEffectInstance()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Entities.MobEffectInstance
+    name: MobEffectInstance
+    href: OnixRuntime.Api.Entities.MobEffectInstance.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OnixRuntime.Api.Entities.MobEffectInstance
+    name: MobEffectInstance
+    href: OnixRuntime.Api.Entities.MobEffectInstance.html
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Entities.Entity.BoundingBox*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.BoundingBox
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BoundingBox
+  name: BoundingBox
+  nameWithType: Entity.BoundingBox
+  fullName: OnixRuntime.Api.Entities.Entity.BoundingBox
+- uid: OnixRuntime.Api.Maths.BoundingBox
+  commentId: T:OnixRuntime.Api.Maths.BoundingBox
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BoundingBox.html
+  name: BoundingBox
+  nameWithType: BoundingBox
+  fullName: OnixRuntime.Api.Maths.BoundingBox
+- uid: OnixRuntime.Api.Entities.Entity.BoundingBoxRaw*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.BoundingBoxRaw
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BoundingBoxRaw
+  name: BoundingBoxRaw
+  nameWithType: Entity.BoundingBoxRaw
+  fullName: OnixRuntime.Api.Entities.Entity.BoundingBoxRaw
+- uid: OnixRuntime.Api.Entities.Entity.BoundingBoxSize*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.BoundingBoxSize
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BoundingBoxSize
+  name: BoundingBoxSize
+  nameWithType: Entity.BoundingBoxSize
+  fullName: OnixRuntime.Api.Entities.Entity.BoundingBoxSize
+- uid: OnixRuntime.Api.Maths.Vec2
+  commentId: T:OnixRuntime.Api.Maths.Vec2
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: OnixRuntime.Api.Maths.Vec2
+- uid: OnixRuntime.Api.Entities.Entity.SimpleMolangVariables*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.SimpleMolangVariables
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_SimpleMolangVariables
+  name: SimpleMolangVariables
+  nameWithType: Entity.SimpleMolangVariables
+  fullName: OnixRuntime.Api.Entities.Entity.SimpleMolangVariables
+- uid: System.Collections.Generic.Dictionary{System.String,System.Single}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, float>
+  nameWithType: Dictionary<string, float>
+  fullName: System.Collections.Generic.Dictionary<string, float>
+  nameWithType.vb: Dictionary(Of String, Single)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Single)
+  name.vb: Dictionary(Of String, Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: OnixRuntime.Api.Entities.Entity.Dimension*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Dimension
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Dimension
+  name: Dimension
+  nameWithType: Entity.Dimension
+  fullName: OnixRuntime.Api.Entities.Entity.Dimension
+- uid: OnixRuntime.Api.World.Dimension
+  commentId: T:OnixRuntime.Api.World.Dimension
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.Dimension.html
+  name: Dimension
+  nameWithType: Dimension
+  fullName: OnixRuntime.Api.World.Dimension
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: OnixRuntime.Api.Entities.Entity.Region*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Region
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Region
+  name: Region
+  nameWithType: Entity.Region
+  fullName: OnixRuntime.Api.Entities.Entity.Region
+- uid: OnixRuntime.Api.World.WorldBlocks
+  commentId: T:OnixRuntime.Api.World.WorldBlocks
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.WorldBlocks.html
+  name: WorldBlocks
+  nameWithType: WorldBlocks
+  fullName: OnixRuntime.Api.World.WorldBlocks
+- uid: OnixRuntime.Api.Entities.Entity.World*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.World
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_World
+  name: World
+  nameWithType: Entity.World
+  fullName: OnixRuntime.Api.Entities.Entity.World
+- uid: OnixRuntime.Api.World.RuntimeWorld
+  commentId: T:OnixRuntime.Api.World.RuntimeWorld
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.RuntimeWorld.html
+  name: RuntimeWorld
+  nameWithType: RuntimeWorld
+  fullName: OnixRuntime.Api.World.RuntimeWorld
+- uid: OnixRuntime.Api.Entities.Entity.Riding*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.Riding
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_Riding
+  name: Riding
+  nameWithType: Entity.Riding
+  fullName: OnixRuntime.Api.Entities.Entity.Riding
+- uid: OnixRuntime.Api.Entities.Entity
+  commentId: T:OnixRuntime.Api.Entities.Entity
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: OnixRuntime.Api.Entities.Entity
+- uid: OnixRuntime.Api.Entities.Entity.RiddenBy*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.RiddenBy
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_RiddenBy
+  name: RiddenBy
+  nameWithType: Entity.RiddenBy
+  fullName: OnixRuntime.Api.Entities.Entity.RiddenBy
+- uid: OnixRuntime.Api.Entities.Entity.MainHandItem*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.MainHandItem
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_MainHandItem
+  name: MainHandItem
+  nameWithType: Entity.MainHandItem
+  fullName: OnixRuntime.Api.Entities.Entity.MainHandItem
+- uid: OnixRuntime.Api.Items.ItemStack
+  commentId: T:OnixRuntime.Api.Items.ItemStack
+  parent: OnixRuntime.Api.Items
+  href: OnixRuntime.Api.Items.ItemStack.html
+  name: ItemStack
+  nameWithType: ItemStack
+  fullName: OnixRuntime.Api.Items.ItemStack
+- uid: OnixRuntime.Api.Items
+  commentId: N:OnixRuntime.Api.Items
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Items
+  nameWithType: OnixRuntime.Api.Items
+  fullName: OnixRuntime.Api.Items
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+- uid: OnixRuntime.Api.Entities.Entity.OffhandItem*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.OffhandItem
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_OffhandItem
+  name: OffhandItem
+  nameWithType: Entity.OffhandItem
+  fullName: OnixRuntime.Api.Entities.Entity.OffhandItem
+- uid: OnixRuntime.Api.Entities.Entity.HelmetItem*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.HelmetItem
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_HelmetItem
+  name: HelmetItem
+  nameWithType: Entity.HelmetItem
+  fullName: OnixRuntime.Api.Entities.Entity.HelmetItem
+- uid: OnixRuntime.Api.Entities.Entity.ChestplateItem*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.ChestplateItem
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ChestplateItem
+  name: ChestplateItem
+  nameWithType: Entity.ChestplateItem
+  fullName: OnixRuntime.Api.Entities.Entity.ChestplateItem
+- uid: OnixRuntime.Api.Entities.Entity.LeggingsItem*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.LeggingsItem
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_LeggingsItem
+  name: LeggingsItem
+  nameWithType: Entity.LeggingsItem
+  fullName: OnixRuntime.Api.Entities.Entity.LeggingsItem
+- uid: OnixRuntime.Api.Entities.Entity.BootsItem*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.BootsItem
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_BootsItem
+  name: BootsItem
+  nameWithType: Entity.BootsItem
+  fullName: OnixRuntime.Api.Entities.Entity.BootsItem
+- uid: OnixRuntime.Api.Entities.Entity.ArmorItems*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.ArmorItems
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ArmorItems
+  name: ArmorItems
+  nameWithType: Entity.ArmorItems
+  fullName: OnixRuntime.Api.Entities.Entity.ArmorItems
+- uid: OnixRuntime.Api.Items.ItemStack[]
+  isExternal: true
+  href: OnixRuntime.Api.Items.ItemStack.html
+  name: ItemStack[]
+  nameWithType: ItemStack[]
+  fullName: OnixRuntime.Api.Items.ItemStack[]
+  nameWithType.vb: ItemStack()
+  fullName.vb: OnixRuntime.Api.Items.ItemStack()
+  name.vb: ItemStack()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Items.ItemStack
+    name: ItemStack
+    href: OnixRuntime.Api.Items.ItemStack.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OnixRuntime.Api.Items.ItemStack
+    name: ItemStack
+    href: OnixRuntime.Api.Items.ItemStack.html
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Entities.Entity.ToString*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.ToString
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ToString
+  name: ToString
+  nameWithType: Entity.ToString
+  fullName: OnixRuntime.Api.Entities.Entity.ToString

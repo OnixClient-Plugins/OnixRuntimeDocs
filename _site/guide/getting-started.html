@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="-getting-started">🚀 Getting Started</h2>
+<hr>
+<h3 id="-requirements">🛠️ Requirements</h3>
+<ul>
+<li>To start developing plugins for Onix Client, you will need the following tools and software. Each section below includes a link to the official download page and a tutorial to help you get set up.<br>
+<br></li>
+</ul>
+<h4 id="-onix-client-premium">💎 Onix Client Premium</h4>
+<ul>
+<li><a href="https://onixclient.com/buy" target="_blank"><strong>Get Onix Client Premium</strong></a><br></li>
+<li>Required to use the Onix Client Plugin API.<br>
+<br></li>
+</ul>
+<hr>
+<h4 id="-minecraft-bedrock-edition">🎮 Minecraft: Bedrock Edition</h4>
+<ul>
+<li>The game you will be modding so you need to have it installed.<br>
+<br></li>
+</ul>
+<hr>
+<h4 id="-net-80-sdk">🟣 .NET 8.0 SDK</h4>
+<ul>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank"><strong>Download .NET 8.0 SDK</strong></a><br>
+<ul>
+<li>Download the latest <strong>Windows x64 SDK</strong> in the <strong>Binaries</strong> section.<br></li>
+<li>Extract the downloaded archive, then rename it to <code>dotnet8</code> and place the entire <code>dotnet8</code> folder (with <code>dotnet.exe</code> in its root) into:<br><code>%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Plugins\</code><br></li>
+<li>Your folder structure should look like:<br><code>OnixClient\Plugins\dotnet8\dotnet.exe</code><br></li>
+<li><strong>Note:</strong> <code>dotnet.exe</code> is just an example. You must place the entire <code>dotnet8</code> folder (not just the exe) in the Plugins directory.<br>
+<br>
+<img src="../images/dotnet8binary.png" alt="Download the Windows x64 SDK in Binaries"><br>
+<br></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="-ide-integrated-development-environment">💻 IDE (Integrated Development Environment)</h3>
+<p>To develop plugins for Onix Client, you will need an IDE to write and compile your code. I would personally recommend using Visual Studio or JetBrains Rider as they are both good IDEs, but it always comes down to personal preference. If your PC struggles to run either, then feel free to use Visual Studio Code, as it's lightweight and only needs a few extensions to work well with C#.<br></p>
+<ul>
+<li><strong>Note:</strong> Make sure to install the C# extension for Visual Studio Code if you choose to use it.<br>
+<br></li>
+</ul>
+<hr>
+<h4 id="-visual-studio">🏢 Visual Studio</h4>
+<ul>
+<li><a href="https://visualstudio.microsoft.com/" target="_blank"><strong>Download Visual Studio</strong></a> (<a href="https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022">Tutorial</a> <a href="https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022" target="_blank">here</a>)<br></li>
+<li>A powerful IDE for C# development made by Microsoft. One of their last good products.<br>
+<br></li>
+</ul>
+<hr>
+<h4 id="-jetbrains-rider">🦄 JetBrains Rider</h4>
+<ul>
+<li><a href="https://www.jetbrains.com/rider/download/" target="_blank"><strong>Download JetBrains Rider</strong> here</a><br></li>
+<li>A cross-platform C# IDE from JetBrains. Pretty good IDE, I personally use it. It has a lot of features and is very powerful.<br>
+<br></li>
+</ul>
+<hr>
+<h4 id="-visual-studio-code">📝 Visual Studio Code</h4>
+<ul>
+<li><a href="https://code.visualstudio.com/" target="_blank"><strong>Download Visual Studio Code</strong></a> (<a href="https://code.visualstudio.com/docs/setup/setup-overview">Tutorial</a> <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">here</a>)<br></li>
+<li>A lightweight, cross-platform code editor. Make sure to install the C# extension. I don't personally use it, but it's a good option if you have a low-end PC.<br>
+<br></li>
+</ul>
+<hr>
+<h3 id="-creating-your-first-plugin">🧩 Creating Your First Plugin</h3>
+<ul>
+<li>To get started with your first plugin, head over to the <a href="creating-your-first-plugin.html">Creating Your First Plugin</a> page. It will guide you through the process of creating a simple plugin and give you an overview of the Onix Client Plugin API.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

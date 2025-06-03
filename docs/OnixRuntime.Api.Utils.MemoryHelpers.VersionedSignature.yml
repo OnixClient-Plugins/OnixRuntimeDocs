@@ -1,0 +1,705 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  commentId: T:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  id: MemoryHelpers.VersionedSignature
+  parent: OnixRuntime.Api.Utils
+  children:
+  - OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor(OnixRuntime.Api.Utils.PluginSemVersion,System.String)
+  - OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor(System.String,System.String)
+  - OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  - OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature
+  - OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version
+  langs:
+  - csharp
+  - vb
+  name: MemoryHelpers.VersionedSignature
+  nameWithType: MemoryHelpers.VersionedSignature
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/MemoryHelpers.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: VersionedSignature
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
+    startLine: 72
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: >-
+    Represents a signature pattern tied to a specific version of the game.
+
+
+    This class is used to associate a signature with the version where it first became valid.
+
+    When scanning, the appropriate signature is selected based on the current version context.
+  example: []
+  syntax:
+    content: 'public class MemoryHelpers.VersionedSignature : IComparable<MemoryHelpers.VersionedSignature>'
+    content.vb: Public Class MemoryHelpers.VersionedSignature Implements IComparable(Of MemoryHelpers.VersionedSignature)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor(OnixRuntime.Api.Utils.PluginSemVersion,System.String)
+  commentId: M:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor(OnixRuntime.Api.Utils.PluginSemVersion,System.String)
+  id: '#ctor(OnixRuntime.Api.Utils.PluginSemVersion,System.String)'
+  parent: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  langs:
+  - csharp
+  - vb
+  name: VersionedSignature(PluginSemVersion, string)
+  nameWithType: MemoryHelpers.VersionedSignature.VersionedSignature(PluginSemVersion, string)
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.VersionedSignature(OnixRuntime.Api.Utils.PluginSemVersion, string)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/MemoryHelpers.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
+    startLine: 78
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: Initializes a new instance of <xref href="OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature" data-throw-if-not-resolved="false"></xref> using a strongly typed version.
+  example: []
+  syntax:
+    content: public VersionedSignature(PluginSemVersion version, string signature)
+    parameters:
+    - id: version
+      type: OnixRuntime.Api.Utils.PluginSemVersion
+      description: The version when this signature became valid.
+    - id: signature
+      type: System.String
+      description: The signature pattern string.
+    content.vb: Public Sub New(version As PluginSemVersion, signature As String)
+  overload: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor*
+  nameWithType.vb: MemoryHelpers.VersionedSignature.New(PluginSemVersion, String)
+  fullName.vb: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.New(OnixRuntime.Api.Utils.PluginSemVersion, String)
+  name.vb: New(PluginSemVersion, String)
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor(System.String,System.String)
+  commentId: M:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  langs:
+  - csharp
+  - vb
+  name: VersionedSignature(string, string)
+  nameWithType: MemoryHelpers.VersionedSignature.VersionedSignature(string, string)
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.VersionedSignature(string, string)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/MemoryHelpers.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
+    startLine: 88
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: Initializes a new instance of <xref href="OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature" data-throw-if-not-resolved="false"></xref> using a version string.
+  example: []
+  syntax:
+    content: public VersionedSignature(string version, string signature)
+    parameters:
+    - id: version
+      type: System.String
+      description: The version string (will be parsed into <xref href="OnixRuntime.Api.Utils.PluginSemVersion" data-throw-if-not-resolved="false"></xref>).
+    - id: signature
+      type: System.String
+      description: The signature pattern string.
+    content.vb: Public Sub New(version As String, signature As String)
+  overload: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor*
+  nameWithType.vb: MemoryHelpers.VersionedSignature.New(String, String)
+  fullName.vb: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.New(String, String)
+  name.vb: New(String, String)
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature
+  commentId: P:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature
+  id: Signature
+  parent: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  langs:
+  - csharp
+  - vb
+  name: Signature
+  nameWithType: MemoryHelpers.VersionedSignature.Signature
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/MemoryHelpers.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Signature
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
+    startLine: 96
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: Gets the signature pattern associated with this version.
+  example: []
+  syntax:
+    content: public string Signature { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Signature As String
+  overload: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature*
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version
+  commentId: P:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version
+  id: Version
+  parent: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: MemoryHelpers.VersionedSignature.Version
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/MemoryHelpers.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Version
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
+    startLine: 101
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: Gets the version this signature is tied to.
+  example: []
+  syntax:
+    content: public PluginSemVersion Version { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Utils.PluginSemVersion
+    content.vb: Public ReadOnly Property Version As PluginSemVersion
+  overload: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version*
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  commentId: M:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  id: CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  parent: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(VersionedSignature?)
+  nameWithType: MemoryHelpers.VersionedSignature.CompareTo(MemoryHelpers.VersionedSignature?)
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/MemoryHelpers.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: CompareTo
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
+    startLine: 103
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+  example: []
+  syntax:
+    content: public int CompareTo(MemoryHelpers.VersionedSignature? other)
+    parameters:
+    - id: other
+      type: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+      description: An object to compare with this instance.
+    return:
+      type: System.Int32
+      description: >-
+        A value that indicates the relative order of the objects being compared. The return value has these meanings:  
+
+         <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+    content.vb: Public Function CompareTo(other As MemoryHelpers.VersionedSignature) As Integer
+  overload: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo*
+  implements:
+  - System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  nameWithType.vb: MemoryHelpers.VersionedSignature.CompareTo(MemoryHelpers.VersionedSignature)
+  fullName.vb: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  name.vb: CompareTo(VersionedSignature)
+references:
+- uid: OnixRuntime.Api.Utils
+  commentId: N:OnixRuntime.Api.Utils
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Utils
+  nameWithType: OnixRuntime.Api.Utils
+  fullName: OnixRuntime.Api.Utils
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils
+    name: Utils
+    href: OnixRuntime.Api.Utils.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils
+    name: Utils
+    href: OnixRuntime.Api.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}
+  commentId: T:System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}
+  parent: System
+  definition: System.IComparable`1
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<MemoryHelpers.VersionedSignature>
+  nameWithType: IComparable<MemoryHelpers.VersionedSignature>
+  fullName: System.IComparable<OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature>
+  nameWithType.vb: IComparable(Of MemoryHelpers.VersionedSignature)
+  fullName.vb: System.IComparable(Of OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  name.vb: IComparable(Of MemoryHelpers.VersionedSignature)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers
+    name: MemoryHelpers
+    href: OnixRuntime.Api.Utils.MemoryHelpers.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+    name: VersionedSignature
+    href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers
+    name: MemoryHelpers
+    href: OnixRuntime.Api.Utils.MemoryHelpers.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+    name: VersionedSignature
+    href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  commentId: T:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  parent: OnixRuntime.Api.Utils
+  href: OnixRuntime.Api.Utils.MemoryHelpers.html
+  name: MemoryHelpers.VersionedSignature
+  nameWithType: MemoryHelpers.VersionedSignature
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+  spec.csharp:
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers
+    name: MemoryHelpers
+    href: OnixRuntime.Api.Utils.MemoryHelpers.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+    name: VersionedSignature
+    href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers
+    name: MemoryHelpers
+    href: OnixRuntime.Api.Utils.MemoryHelpers.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+    name: VersionedSignature
+    href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor*
+  commentId: Overload:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.#ctor
+  href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html#OnixRuntime_Api_Utils_MemoryHelpers_VersionedSignature__ctor_OnixRuntime_Api_Utils_PluginSemVersion_System_String_
+  name: VersionedSignature
+  nameWithType: MemoryHelpers.VersionedSignature.VersionedSignature
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.VersionedSignature
+  nameWithType.vb: MemoryHelpers.VersionedSignature.New
+  fullName.vb: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.New
+  name.vb: New
+- uid: OnixRuntime.Api.Utils.PluginSemVersion
+  commentId: T:OnixRuntime.Api.Utils.PluginSemVersion
+  parent: OnixRuntime.Api.Utils
+  href: OnixRuntime.Api.Utils.PluginSemVersion.html
+  name: PluginSemVersion
+  nameWithType: PluginSemVersion
+  fullName: OnixRuntime.Api.Utils.PluginSemVersion
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature*
+  commentId: Overload:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature
+  href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html#OnixRuntime_Api_Utils_MemoryHelpers_VersionedSignature_Signature
+  name: Signature
+  nameWithType: MemoryHelpers.VersionedSignature.Signature
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Signature
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version*
+  commentId: Overload:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version
+  href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html#OnixRuntime_Api_Utils_MemoryHelpers_VersionedSignature_Version
+  name: Version
+  nameWithType: MemoryHelpers.VersionedSignature.Version
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.Version
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo*
+  commentId: Overload:OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo
+  href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html#OnixRuntime_Api_Utils_MemoryHelpers_VersionedSignature_CompareTo_OnixRuntime_Api_Utils_MemoryHelpers_VersionedSignature_
+  name: CompareTo
+  nameWithType: MemoryHelpers.VersionedSignature.CompareTo
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.CompareTo
+- uid: System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  commentId: M:System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  parent: System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}
+  definition: System.IComparable`1.CompareTo(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  name: CompareTo(VersionedSignature)
+  nameWithType: IComparable<MemoryHelpers.VersionedSignature>.CompareTo(MemoryHelpers.VersionedSignature)
+  fullName: System.IComparable<OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature>.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  nameWithType.vb: IComparable(Of MemoryHelpers.VersionedSignature).CompareTo(MemoryHelpers.VersionedSignature)
+  fullName.vb: System.IComparable(Of OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature).CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+  spec.csharp:
+  - uid: System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+    name: VersionedSignature
+    href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html
+  - name: )
+  spec.vb:
+  - uid: System.IComparable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature}.CompareTo(OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - uid: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature
+    name: VersionedSignature
+    href: OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature.html
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.IComparable`1.CompareTo(`0)
+  commentId: M:System.IComparable`1.CompareTo(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  name: CompareTo(T)
+  nameWithType: IComparable<T>.CompareTo(T)
+  fullName: System.IComparable<T>.CompareTo(T)
+  nameWithType.vb: IComparable(Of T).CompareTo(T)
+  fullName.vb: System.IComparable(Of T).CompareTo(T)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - name: T
+  - name: )

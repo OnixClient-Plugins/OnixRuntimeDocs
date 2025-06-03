@@ -1,0 +1,840 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Rendering.IGameRenderer
+  commentId: T:OnixRuntime.Api.Rendering.IGameRenderer
+  id: IGameRenderer
+  parent: OnixRuntime.Api.Rendering
+  children:
+  - OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
+  - OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath)
+  - OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF})
+  - OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,OnixRuntime.Api.Rendering.TexturePath)
+  - OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
+  - OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  - OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(System.Single,System.Single,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  - OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  - OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,System.UInt32,System.UInt32)
+  - OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  langs:
+  - csharp
+  - vb
+  name: IGameRenderer
+  nameWithType: IGameRenderer
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer
+  type: Interface
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IGameRenderer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 7
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Provides methods for rendering game items and meshes.
+  example: []
+  syntax:
+    content: public interface IGameRenderer
+    content.vb: Public Interface IGameRenderer
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
+  commentId: P:OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
+  id: MeshBuilder
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: MeshBuilder
+  nameWithType: IGameRenderer.MeshBuilder
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MeshBuilder
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 11
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the mesh builder used for rendering.
+  example: []
+  syntax:
+    content: GameMeshBuilder MeshBuilder { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.GameMeshBuilder
+    content.vb: ReadOnly Property MeshBuilder As GameMeshBuilder
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder*
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(System.Single,System.Single,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(System.Single,System.Single,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  id: RenderItem(System.Single,System.Single,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderItem(float, float, ItemStack, bool, float, bool)
+  nameWithType: IGameRenderer.RenderItem(float, float, ItemStack, bool, float, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(float, float, OnixRuntime.Api.Items.ItemStack, bool, float, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RenderItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 23
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders an item at the specified coordinates.
+  remarks: You can set the <xref href="OnixRuntime.Api.Items.ItemStack.ShowPickup" data-throw-if-not-resolved="false"></xref>.ShowPickup to false.
+  example: []
+  syntax:
+    content: void RenderItem(float x, float y, ItemStack item, bool renderDecorations = true, float scale = 1, bool forceEnchantEffect = false)
+    parameters:
+    - id: x
+      type: System.Single
+      description: The x-coordinate.
+    - id: y
+      type: System.Single
+      description: The y-coordinate.
+    - id: item
+      type: OnixRuntime.Api.Items.ItemStack
+      description: The item stack to render.
+    - id: renderDecorations
+      type: System.Boolean
+      description: Whether to render decorations.
+    - id: scale
+      type: System.Single
+      description: The scale factor.
+    - id: forceEnchantEffect
+      type: System.Boolean
+      description: Whether to force the enchant effect.
+    content.vb: Sub RenderItem(x As Single, y As Single, item As ItemStack, renderDecorations As Boolean = True, scale As Single = 1, forceEnchantEffect As Boolean = False)
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem*
+  nameWithType.vb: IGameRenderer.RenderItem(Single, Single, ItemStack, Boolean, Single, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(Single, Single, OnixRuntime.Api.Items.ItemStack, Boolean, Single, Boolean)
+  name.vb: RenderItem(Single, Single, ItemStack, Boolean, Single, Boolean)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  id: RenderItem(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderItem(Vec2, ItemStack, bool, float, bool)
+  nameWithType: IGameRenderer.RenderItem(Vec2, ItemStack, bool, float, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Items.ItemStack, bool, float, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RenderItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 33
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders an item at the specified position.
+  remarks: You can set the <xref href="OnixRuntime.Api.Items.ItemStack.ShowPickup" data-throw-if-not-resolved="false"></xref>.ShowPickup to false.
+  example: []
+  syntax:
+    content: void RenderItem(Vec2 position, ItemStack item, bool renderDecorations = true, float scale = 1, bool forceEnchantEffect = false)
+    parameters:
+    - id: position
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The position vector.
+    - id: item
+      type: OnixRuntime.Api.Items.ItemStack
+      description: The item stack to render.
+    - id: renderDecorations
+      type: System.Boolean
+      description: Whether to render decorations.
+    - id: scale
+      type: System.Single
+      description: The scale factor.
+    - id: forceEnchantEffect
+      type: System.Boolean
+      description: Whether to force the enchant effect.
+    content.vb: Sub RenderItem(position As Vec2, item As ItemStack, renderDecorations As Boolean = True, scale As Single = 1, forceEnchantEffect As Boolean = False)
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem*
+  nameWithType.vb: IGameRenderer.RenderItem(Vec2, ItemStack, Boolean, Single, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Items.ItemStack, Boolean, Single, Boolean)
+  name.vb: RenderItem(Vec2, ItemStack, Boolean, Single, Boolean)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  id: RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderMesh(GameMesh, ColorF, TexturePath, uint, uint)
+  nameWithType: IGameRenderer.RenderMesh(GameMesh, ColorF, TexturePath, uint, uint)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh, OnixRuntime.Api.Maths.ColorF, OnixRuntime.Api.Rendering.TexturePath, uint, uint)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RenderMesh
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 43
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders a mesh with the specified color and texture.
+  remarks: You can set the <xref href="OnixRuntime.Api.Items.ItemStack" data-throw-if-not-resolved="false"></xref>.ShowPickup to false.
+  example: []
+  syntax:
+    content: void RenderMesh(GameMesh mesh, ColorF color, TexturePath texture, uint startOffset = 0, uint count = 0)
+    parameters:
+    - id: mesh
+      type: OnixRuntime.Api.Rendering.GameMesh
+      description: The mesh to render.
+    - id: color
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color to apply.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to use.
+    - id: startOffset
+      type: System.UInt32
+      description: The starting offset.
+    - id: count
+      type: System.UInt32
+      description: The number of elements to render.
+    content.vb: Sub RenderMesh(mesh As GameMesh, color As ColorF, texture As TexturePath, startOffset As UInteger = 0, count As UInteger = 0)
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh*
+  nameWithType.vb: IGameRenderer.RenderMesh(GameMesh, ColorF, TexturePath, UInteger, UInteger)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh, OnixRuntime.Api.Maths.ColorF, OnixRuntime.Api.Rendering.TexturePath, UInteger, UInteger)
+  name.vb: RenderMesh(GameMesh, ColorF, TexturePath, UInteger, UInteger)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,System.UInt32,System.UInt32)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,System.UInt32,System.UInt32)
+  id: RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,System.UInt32,System.UInt32)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderMesh(GameMesh, ColorF, uint, uint)
+  nameWithType: IGameRenderer.RenderMesh(GameMesh, ColorF, uint, uint)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh, OnixRuntime.Api.Maths.ColorF, uint, uint)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RenderMesh
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 51
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders a mesh with the specified color.
+  example: []
+  syntax:
+    content: void RenderMesh(GameMesh mesh, ColorF color, uint startOffset = 0, uint count = 0)
+    parameters:
+    - id: mesh
+      type: OnixRuntime.Api.Rendering.GameMesh
+      description: The mesh to render.
+    - id: color
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color to apply.
+    - id: startOffset
+      type: System.UInt32
+      description: The starting offset.
+    - id: count
+      type: System.UInt32
+      description: The number of elements to render.
+    content.vb: Sub RenderMesh(mesh As GameMesh, color As ColorF, startOffset As UInteger = 0, count As UInteger = 0)
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh*
+  nameWithType.vb: IGameRenderer.RenderMesh(GameMesh, ColorF, UInteger, UInteger)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh, OnixRuntime.Api.Maths.ColorF, UInteger, UInteger)
+  name.vb: RenderMesh(GameMesh, ColorF, UInteger, UInteger)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  id: RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderMesh(GameMesh, TexturePath, uint, uint)
+  nameWithType: IGameRenderer.RenderMesh(GameMesh, TexturePath, uint, uint)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh, OnixRuntime.Api.Rendering.TexturePath, uint, uint)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RenderMesh
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 59
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders a mesh with the specified texture.
+  example: []
+  syntax:
+    content: void RenderMesh(GameMesh mesh, TexturePath texture, uint startOffset = 0, uint count = 0)
+    parameters:
+    - id: mesh
+      type: OnixRuntime.Api.Rendering.GameMesh
+      description: The mesh to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to use.
+    - id: startOffset
+      type: System.UInt32
+      description: The starting offset.
+    - id: count
+      type: System.UInt32
+      description: The number of elements to render.
+    content.vb: Sub RenderMesh(mesh As GameMesh, texture As TexturePath, startOffset As UInteger = 0, count As UInteger = 0)
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh*
+  nameWithType.vb: IGameRenderer.RenderMesh(GameMesh, TexturePath, UInteger, UInteger)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh, OnixRuntime.Api.Rendering.TexturePath, UInteger, UInteger)
+  name.vb: RenderMesh(GameMesh, TexturePath, UInteger, UInteger)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF})
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF})
+  id: NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF})
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: NewMeshBuilderSession(TexturePath?, MeshBuilderPrimitiveType, ColorF?)
+  nameWithType: IGameRenderer.NewMeshBuilderSession(TexturePath?, MeshBuilderPrimitiveType, ColorF?)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath?, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType, OnixRuntime.Api.Maths.ColorF?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: NewMeshBuilderSession
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 79
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Starts a new mesh builder session.
+
+    Disposing the session will cause the mesh to be rendered.
+
+    You should use this one whenever possible since it will properly handle more cases like when you push <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref>&gt; matrices.
+
+    Remember to use <xref href="OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)" data-throw-if-not-resolved="false"></xref> for when you position it in the world after your initial transformations.
+  example:
+  - >-
+    <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewMeshBuilderSession(...)) {
+        //Define the vertices for the mesh however you want
+        //mb.Vertex(...)
+    }</code></pre>
+  syntax:
+    content: GameMeshBuilder.GameMeshBuilderSession NewMeshBuilderSession(TexturePath? texture = null, MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, ColorF? color = null)
+    parameters:
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture that will be used when rendering.
+    - id: primitiveType
+      type: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType
+      description: The type of primitive the vertices will represent.
+    - id: color
+      type: System.Nullable{OnixRuntime.Api.Maths.ColorF}
+      description: ''
+    return:
+      type: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+      description: ''
+    content.vb: Function NewMeshBuilderSession(texture As TexturePath = Nothing, primitiveType As MeshBuilderPrimitiveType = MeshBuilderPrimitiveType.Quad, color As ColorF? = Nothing) As GameMeshBuilder.GameMeshBuilderSession
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession*
+  nameWithType.vb: IGameRenderer.NewMeshBuilderSession(TexturePath, MeshBuilderPrimitiveType, ColorF?)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType, OnixRuntime.Api.Maths.ColorF?)
+  name.vb: NewMeshBuilderSession(TexturePath, MeshBuilderPrimitiveType, ColorF?)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath)
+  id: NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: NewMeshBuilderSession(MeshBuilderPrimitiveType, ColorF?, TexturePath?)
+  nameWithType: IGameRenderer.NewMeshBuilderSession(MeshBuilderPrimitiveType, ColorF?, TexturePath?)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType, OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.TexturePath?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: NewMeshBuilderSession
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 99
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Starts a new mesh builder session.
+
+    Disposing the session will cause the mesh to be rendered.
+
+    You should use this one whenever possible since it will properly handle more cases like when you push <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref>&gt; matrices.
+
+    Remember to use <xref href="OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)" data-throw-if-not-resolved="false"></xref> for when you position it in the world after your initial transformations.
+  example:
+  - >-
+    <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewMeshBuilderSession(...)) {
+        //Define the vertices for the mesh however you want
+        //mb.Vertex(...)
+    }</code></pre>
+  syntax:
+    content: GameMeshBuilder.GameMeshBuilderSession NewMeshBuilderSession(MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, ColorF? color = null, TexturePath? texture = null)
+    parameters:
+    - id: primitiveType
+      type: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType
+      description: The type of primitive the vertices will represent.
+    - id: color
+      type: System.Nullable{OnixRuntime.Api.Maths.ColorF}
+      description: ''
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture that will be used when rendering.
+    return:
+      type: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+      description: ''
+    content.vb: Function NewMeshBuilderSession(primitiveType As MeshBuilderPrimitiveType = MeshBuilderPrimitiveType.Quad, color As ColorF? = Nothing, texture As TexturePath = Nothing) As GameMeshBuilder.GameMeshBuilderSession
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession*
+  nameWithType.vb: IGameRenderer.NewMeshBuilderSession(MeshBuilderPrimitiveType, ColorF?, TexturePath)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType, OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.TexturePath)
+  name.vb: NewMeshBuilderSession(MeshBuilderPrimitiveType, ColorF?, TexturePath)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,OnixRuntime.Api.Rendering.TexturePath)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,OnixRuntime.Api.Rendering.TexturePath)
+  id: NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,OnixRuntime.Api.Rendering.TexturePath)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: NewMeshBuilderSession(ColorF?, MeshBuilderPrimitiveType, TexturePath?)
+  nameWithType: IGameRenderer.NewMeshBuilderSession(ColorF?, MeshBuilderPrimitiveType, TexturePath?)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType, OnixRuntime.Api.Rendering.TexturePath?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: NewMeshBuilderSession
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 119
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Starts a new mesh builder session.
+
+    Disposing the session will cause the mesh to be rendered.
+
+    You should use this one whenever possible since it will properly handle more cases like when you push <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref>&gt; matrices.
+
+    Remember to use <xref href="OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)" data-throw-if-not-resolved="false"></xref> for when you position it in the world after your initial transformations.
+  example:
+  - >-
+    <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewMeshBuilderSession()) {
+        //Define the vertices for the mesh however you want
+        //mb.Vertex(...)
+    }</code></pre>
+  syntax:
+    content: GameMeshBuilder.GameMeshBuilderSession NewMeshBuilderSession(ColorF? color = null, MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, TexturePath? texture = null)
+    parameters:
+    - id: color
+      type: System.Nullable{OnixRuntime.Api.Maths.ColorF}
+      description: ''
+    - id: primitiveType
+      type: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType
+      description: The type of primitive the vertices will represent.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture that will be used when rendering.
+    return:
+      type: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+      description: ''
+    content.vb: Function NewMeshBuilderSession(color As ColorF? = Nothing, primitiveType As MeshBuilderPrimitiveType = MeshBuilderPrimitiveType.Quad, texture As TexturePath = Nothing) As GameMeshBuilder.GameMeshBuilderSession
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession*
+  nameWithType.vb: IGameRenderer.NewMeshBuilderSession(ColorF?, MeshBuilderPrimitiveType, TexturePath)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType, OnixRuntime.Api.Rendering.TexturePath)
+  name.vb: NewMeshBuilderSession(ColorF?, MeshBuilderPrimitiveType, TexturePath)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
+  id: NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: NewMeshBuilderSession(ColorF?, TexturePath?, MeshBuilderPrimitiveType)
+  nameWithType: IGameRenderer.NewMeshBuilderSession(ColorF?, TexturePath?, MeshBuilderPrimitiveType)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.TexturePath?, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: NewMeshBuilderSession
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 139
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Starts a new mesh builder session.
+
+    Disposing the session will cause the mesh to be rendered.
+
+    You should use this one whenever possible since it will properly handle more cases like when you push <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref>&gt; matrices.
+
+    Remember to use <xref href="OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)" data-throw-if-not-resolved="false"></xref> for when you position it in the world after your initial transformations.
+  example:
+  - >-
+    <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewMeshBuilderSession()) {
+        //Define the vertices for the mesh however you want
+        //mb.Vertex(...)
+    }</code></pre>
+  syntax:
+    content: GameMeshBuilder.GameMeshBuilderSession NewMeshBuilderSession(ColorF? color = null, TexturePath? texture = null, MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad)
+    parameters:
+    - id: color
+      type: System.Nullable{OnixRuntime.Api.Maths.ColorF}
+      description: ''
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture that will be used when rendering.
+    - id: primitiveType
+      type: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType
+      description: The type of primitive the vertices will represent.
+    return:
+      type: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+      description: ''
+    content.vb: Function NewMeshBuilderSession(color As ColorF? = Nothing, texture As TexturePath = Nothing, primitiveType As MeshBuilderPrimitiveType = MeshBuilderPrimitiveType.Quad) As GameMeshBuilder.GameMeshBuilderSession
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession*
+  nameWithType.vb: IGameRenderer.NewMeshBuilderSession(ColorF?, TexturePath, MeshBuilderPrimitiveType)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.TexturePath, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
+  name.vb: NewMeshBuilderSession(ColorF?, TexturePath, MeshBuilderPrimitiveType)
+references:
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_MeshBuilder
+  name: MeshBuilder
+  nameWithType: IGameRenderer.MeshBuilder
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+  commentId: T:OnixRuntime.Api.Rendering.GameMeshBuilder
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  name: GameMeshBuilder
+  nameWithType: GameMeshBuilder
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder
+- uid: OnixRuntime.Api.Items.ItemStack.ShowPickup
+  commentId: P:OnixRuntime.Api.Items.ItemStack.ShowPickup
+  href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_ShowPickup
+  name: ShowPickup
+  nameWithType: ItemStack.ShowPickup
+  fullName: OnixRuntime.Api.Items.ItemStack.ShowPickup
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.RenderItem
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_RenderItem_System_Single_System_Single_OnixRuntime_Api_Items_ItemStack_System_Boolean_System_Single_System_Boolean_
+  name: RenderItem
+  nameWithType: IGameRenderer.RenderItem
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.RenderItem
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Items.ItemStack
+  commentId: T:OnixRuntime.Api.Items.ItemStack
+  parent: OnixRuntime.Api.Items
+  href: OnixRuntime.Api.Items.ItemStack.html
+  name: ItemStack
+  nameWithType: ItemStack
+  fullName: OnixRuntime.Api.Items.ItemStack
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Items
+  commentId: N:OnixRuntime.Api.Items
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Items
+  nameWithType: OnixRuntime.Api.Items
+  fullName: OnixRuntime.Api.Items
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+- uid: OnixRuntime.Api.Maths.Vec2
+  commentId: T:OnixRuntime.Api.Maths.Vec2
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: OnixRuntime.Api.Maths.Vec2
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_RenderMesh_OnixRuntime_Api_Rendering_GameMesh_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Rendering_TexturePath_System_UInt32_System_UInt32_
+  name: RenderMesh
+  nameWithType: IGameRenderer.RenderMesh
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh
+- uid: OnixRuntime.Api.Rendering.GameMesh
+  commentId: T:OnixRuntime.Api.Rendering.GameMesh
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMesh.html
+  name: GameMesh
+  nameWithType: GameMesh
+  fullName: OnixRuntime.Api.Rendering.GameMesh
+- uid: OnixRuntime.Api.Maths.ColorF
+  commentId: T:OnixRuntime.Api.Maths.ColorF
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.ColorF.html
+  name: ColorF
+  nameWithType: ColorF
+  fullName: OnixRuntime.Api.Maths.ColorF
+- uid: OnixRuntime.Api.Rendering.TexturePath
+  commentId: T:OnixRuntime.Api.Rendering.TexturePath
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.TexturePath.html
+  name: TexturePath
+  nameWithType: TexturePath
+  fullName: OnixRuntime.Api.Rendering.TexturePath
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: OnixRuntime.Api.Maths.TransformationMatrix
+  commentId: T:OnixRuntime.Api.Maths.TransformationMatrix
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  name: TransformationMatrix
+  nameWithType: TransformationMatrix
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_TranslateWorldPosition_OnixRuntime_Api_Maths_Vec3_
+  name: TranslateWorldPosition(Vec3)
+  nameWithType: TransformationMatrix.TranslateWorldPosition(Vec3)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)
+    name: TranslateWorldPosition
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_TranslateWorldPosition_OnixRuntime_Api_Maths_Vec3_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.Vec3
+    name: Vec3
+    href: OnixRuntime.Api.Maths.Vec3.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)
+    name: TranslateWorldPosition
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_TranslateWorldPosition_OnixRuntime_Api_Maths_Vec3_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.Vec3
+    name: Vec3
+    href: OnixRuntime.Api.Maths.Vec3.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_NewMeshBuilderSession_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__
+  name: NewMeshBuilderSession
+  nameWithType: IGameRenderer.NewMeshBuilderSession
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession
+- uid: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType
+  commentId: T:OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html
+  name: MeshBuilderPrimitiveType
+  nameWithType: MeshBuilderPrimitiveType
+  fullName: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType
+- uid: System.Nullable{OnixRuntime.Api.Maths.ColorF}
+  commentId: T:System.Nullable{OnixRuntime.Api.Maths.ColorF}
+  parent: System
+  definition: System.Nullable`1
+  href: OnixRuntime.Api.Maths.ColorF.html
+  name: ColorF?
+  nameWithType: ColorF?
+  fullName: OnixRuntime.Api.Maths.ColorF?
+  spec.csharp:
+  - uid: OnixRuntime.Api.Maths.ColorF
+    name: ColorF
+    href: OnixRuntime.Api.Maths.ColorF.html
+  - name: '?'
+  spec.vb:
+  - uid: OnixRuntime.Api.Maths.ColorF
+    name: ColorF
+    href: OnixRuntime.Api.Maths.ColorF.html
+  - name: '?'
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+  commentId: T:OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  name: GameMeshBuilder.GameMeshBuilderSession
+  nameWithType: GameMeshBuilder.GameMeshBuilderSession
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+    name: GameMeshBuilder
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+    name: GameMeshBuilderSession
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+    name: GameMeshBuilder
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
+    name: GameMeshBuilderSession
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession.html
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

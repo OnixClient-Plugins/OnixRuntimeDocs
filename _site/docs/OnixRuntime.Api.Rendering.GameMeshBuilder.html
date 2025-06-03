@@ -1,0 +1,3947 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GameMeshBuilder | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GameMeshBuilder | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Provides methods to build and render meshes at runtime.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Rendering_GameMeshBuilder.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Rendering.GameMeshBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder">
+
+
+
+  <h1 id="OnixRuntime_Api_Rendering_GameMeshBuilder" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder" class="text-break">
+Class GameMeshBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Rendering.html">Rendering</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides methods to build and render meshes at runtime.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GameMeshBuilder : MemoryAddressContainer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html">MemoryAddressContainer</a></div>
+      <div><span class="xref">GameMeshBuilder</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_HasStarted_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.HasStarted*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_HasStarted" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.HasStarted">
+  HasStarted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the mesh builder has started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasStarted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_PostScaleOffset_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.PostScaleOffset*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_PostScaleOffset" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.PostScaleOffset">
+  PostScaleOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the post-scale offset for the mesh builder. This will essentially be Vertex * Scale + Offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec3 PostScaleOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_PostTransformOffset_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.PostTransformOffset*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_PostTransformOffset" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.PostTransformOffset">
+  PostTransformOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the post-transform offset for the mesh builder. This will essentially be Vertex * Scale + Offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec3 PostTransformOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_PrimitiveType_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.PrimitiveType*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_PrimitiveType" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.PrimitiveType">
+  PrimitiveType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the primitive type of the mesh builder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MeshBuilderPrimitiveType PrimitiveType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html">MeshBuilderPrimitiveType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVertices_OnixRuntime_Api_Maths_BoundingBox_PerBlockFaceFaceData_System_Boolean__System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVertices(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},System.Boolean,System.Boolean)">
+  AddBoundingBoxVertices(BoundingBox, PerBlockFaceFaceData&lt;bool&gt;, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L777"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVertices(BoundingBox box, PerBlockFaceFaceData&lt;bool&gt; renderFace, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>renderFace</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whcih faces should be rendered (does not work with lines).</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVertices_OnixRuntime_Api_Maths_BoundingBox_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVertices(OnixRuntime.Api.Maths.BoundingBox,System.Boolean,System.Boolean)">
+  AddBoundingBoxVertices(BoundingBox, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L963"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVertices(BoundingBox box, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesForFace_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesForFace*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesForFace_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_World_BlockFace_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesForFace(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.World.BlockFace,System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesForFace(BoundingBox, BlockFace, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L638"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesForFace(BoundingBox box, BlockFace face, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>face</code> <a class="xref" href="OnixRuntime.Api.World.BlockFace.html">BlockFace</a></dt>
+    <dd><p>The face of the bounding box to render.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesForFaceUv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesForFaceUv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesForFaceUv_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_World_BlockFace_BlockFaceUvRotation_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesForFaceUv(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.World.BlockFace,BlockFaceUvRotation,System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesForFaceUv(BoundingBox, BlockFace, BlockFaceUvRotation, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L628"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box with uvs, it will use <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> (0,0,1,1) as its uv.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesForFaceUv(BoundingBox box, BlockFace face, BlockFaceUvRotation blockFaceUvRotation = BlockFaceUvRotation.NoRotation, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>face</code> <a class="xref" href="OnixRuntime.Api.World.BlockFace.html">BlockFace</a></dt>
+    <dd><p>The face of the bounding box to render.</p>
+</dd>
+    <dt><code>blockFaceUvRotation</code> <a class="xref" href="BlockFaceUvRotation.html">BlockFaceUvRotation</a></dt>
+    <dd><p>The rotation to apply to the UV coordinates.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesForFaceUv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesForFaceUv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesForFaceUv_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_World_BlockFace_OnixRuntime_Api_Maths_Rect_BlockFaceUvRotation_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesForFaceUv(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Rect,BlockFaceUvRotation,System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesForFaceUv(BoundingBox, BlockFace, Rect, BlockFaceUvRotation, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L461"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box with uv coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesForFaceUv(BoundingBox box, BlockFace face, Rect uv, BlockFaceUvRotation blockFaceUvRotation = BlockFaceUvRotation.NoRotation, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>face</code> <a class="xref" href="OnixRuntime.Api.World.BlockFace.html">BlockFace</a></dt>
+    <dd><p>The face of the bounding box to render.</p>
+</dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The UV coordinates to use for that face.</p>
+</dd>
+    <dt><code>blockFaceUvRotation</code> <a class="xref" href="BlockFaceUvRotation.html">BlockFaceUvRotation</a></dt>
+    <dd><p>The rotation to apply to the UV coordinates.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_OnixRuntime_Api_Maths_BoundingBox_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_BlockFaceUvRotation__System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesUv(BoundingBox, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box with uvs, it will use <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> (0,0,1,1) as its uv.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesUv(BoundingBox box, PerBlockFaceFaceData&lt;bool&gt; renderFace, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt; faceUvRotation, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>renderFace</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Which faces should be rendered.</p>
+</dd>
+    <dt><code>faceUvRotation</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="BlockFaceUvRotation.html">BlockFaceUvRotation</a>&gt;</dt>
+    <dd><p>The rotation to apply to the UV coordinates.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_OnixRuntime_Api_Maths_BoundingBox_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_OnixRuntime_Api_Maths_Rect__PerBlockFaceFaceData_BlockFaceUvRotation__System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation},System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesUv(BoundingBox, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;Rect&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L975"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box with uv coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesUv(BoundingBox box, PerBlockFaceFaceData&lt;bool&gt; renderFace, PerBlockFaceFaceData&lt;Rect&gt; faceUv, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt; faceUvRotation, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>renderFace</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Which faces should be rendered.</p>
+</dd>
+    <dt><code>faceUv</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a>&gt;</dt>
+    <dd><p>The uv coordinates of each face.</p>
+</dd>
+    <dt><code>faceUvRotation</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="BlockFaceUvRotation.html">BlockFaceUvRotation</a>&gt;</dt>
+    <dd><p>The rotation to apply to the UV coordinates.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_OnixRuntime_Api_Maths_BoundingBox_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_OnixRuntime_Api_Maths_Rect__System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesUv(BoundingBox, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;Rect&gt;, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box with uv coordinates and no rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesUv(BoundingBox box, PerBlockFaceFaceData&lt;bool&gt; renderFace, PerBlockFaceFaceData&lt;Rect&gt; faceUv, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>renderFace</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Which faces should be rendered.</p>
+</dd>
+    <dt><code>faceUv</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a>&gt;</dt>
+    <dd><p>The uv coordinates of each face.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_OnixRuntime_Api_Maths_BoundingBox_PerBlockFaceFaceData_System_Boolean__System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesUv(BoundingBox, PerBlockFaceFaceData&lt;bool&gt;, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a bounding box with uvs, it will use <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> (0,0,1,1) as its uv with no rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesUv(BoundingBox box, PerBlockFaceFaceData&lt;bool&gt; renderFace, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>renderFace</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Which faces should be rendered.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddBoundingBoxVerticesUv_OnixRuntime_Api_Maths_BoundingBox_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddBoundingBoxVerticesUv(OnixRuntime.Api.Maths.BoundingBox,System.Boolean,System.Boolean)">
+  AddBoundingBoxVerticesUv(BoundingBox, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a complete bounding box with uvs, it will use <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> (0,0,1,1) as its uv with no rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBoundingBoxVerticesUv(BoundingBox box, bool backFace = false, bool frontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box.</p>
+</dd>
+    <dt><code>backFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the back face vertices.</p>
+</dd>
+    <dt><code>frontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, adds the front face vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleOutlineVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleOutlineVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleOutlineVertices_OnixRuntime_Api_Maths_Vec2_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleOutlineVertices(OnixRuntime.Api.Maths.Vec2,System.Single,System.Single,System.Int32)">
+  AddCircleOutlineVertices(Vec2, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a circle outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCircleOutlineVertices(Vec2 centerPosition, float radius, float lineWidth, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centerPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center position of the circle.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+    <dt><code>lineWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the circle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleOutlineVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleOutlineVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleOutlineVertices_System_Single_System_Single_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleOutlineVertices(System.Single,System.Single,System.Single,System.Single,System.Int32)">
+  AddCircleOutlineVertices(float, float, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a circle outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCircleOutlineVertices(float x, float y, float radius, float lineWidth, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-coordinate of the center position.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-coordinate of the center position.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+    <dt><code>lineWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the circle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleVertices_OnixRuntime_Api_Maths_Vec2_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleVertices(OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32)">
+  AddCircleVertices(Vec2, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a circle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCircleVertices(Vec2 centerPosition, float radius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centerPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center position of the circle.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the circle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddCircleVertices_System_Single_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddCircleVertices(System.Single,System.Single,System.Single,System.Int32)">
+  AddCircleVertices(float, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a circle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCircleVertices(float x, float y, float radius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-coordinate of the center position.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-coordinate of the center position.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the circle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32)">
+  AddEllipseOutlineVertices(Vec2, Vec2, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseOutlineVertices(Vec2 centerPosition, Vec2 radius, float lineWidth, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centerPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center position of the ellipse.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radius of the ellipse.</p>
+</dd>
+    <dt><code>lineWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_OnixRuntime_Api_Maths_Vec2_System_Single_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices(OnixRuntime.Api.Maths.Vec2,System.Single,System.Single,System.Single,System.Int32)">
+  AddEllipseOutlineVertices(Vec2, float, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseOutlineVertices(Vec2 centerPosition, float radiusX, float radiusY, float lineWidth, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centerPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center position of the ellipse.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+    <dt><code>lineWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_System_Single_System_Single_OnixRuntime_Api_Maths_Vec2_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices(System.Single,System.Single,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32)">
+  AddEllipseOutlineVertices(float, float, Vec2, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseOutlineVertices(float x, float y, Vec2 radius, float lineWidth, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-coordinate of the center position.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-coordinate of the center position.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radius of the ellipse.</p>
+</dd>
+    <dt><code>lineWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseOutlineVertices_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseOutlineVertices(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32)">
+  AddEllipseOutlineVertices(float, float, float, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseOutlineVertices(float x, float y, float radiusX, float radiusY, float lineWidth, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-coordinate of the center position.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-coordinate of the center position.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+    <dt><code>lineWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32)">
+  AddEllipseVertices(Vec2, Vec2, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseVertices(Vec2 centerPosition, Vec2 radius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centerPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center position of the ellipse.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radius of the ellipse.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_OnixRuntime_Api_Maths_Vec2_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices(OnixRuntime.Api.Maths.Vec2,System.Single,System.Single,System.Int32)">
+  AddEllipseVertices(Vec2, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseVertices(Vec2 centerPosition, float radiusX, float radiusY, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centerPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center position of the ellipse.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_System_Single_System_Single_OnixRuntime_Api_Maths_Vec2_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices(System.Single,System.Single,OnixRuntime.Api.Maths.Vec2,System.Int32)">
+  AddEllipseVertices(float, float, Vec2, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseVertices(float x, float y, Vec2 radius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-coordinate of the center position.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-coordinate of the center position.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radius of the ellipse.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddEllipseVertices_System_Single_System_Single_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddEllipseVertices(System.Single,System.Single,System.Single,System.Single,System.Int32)">
+  AddEllipseVertices(float, float, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEllipseVertices(float x, float y, float radiusX, float radiusY, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-coordinate of the center position.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-coordinate of the center position.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF)">
+  AddQuadGradientVertices(Vec2, ColorF, Vec2, ColorF, Vec2, ColorF, Vec2, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadGradientVertices(Vec2 TopLeft, ColorF TopLeftColor, Vec2 TopRight, ColorF TopRightColor, Vec2 BottomLeft, ColorF BottomLeftcolor, Vec2 BottomRight, ColorF BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftcolor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices(OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,System.UInt32)">
+  AddQuadGradientVertices(Vec2, uint, Vec2, uint, Vec2, uint, Vec2, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadGradientVertices(Vec2 TopLeft, uint TopLeftColor, Vec2 TopRight, uint TopRightColor, Vec2 BottomLeft, uint BottomLeftcolor, Vec2 BottomRight, uint BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftcolor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF)">
+  AddQuadGradientVertices(Vec3, ColorF, Vec3, ColorF, Vec3, ColorF, Vec3, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadGradientVertices(Vec3 TopLeft, ColorF TopLeftColor, Vec3 TopRight, ColorF TopRightColor, Vec3 BottomLeft, ColorF BottomLeftcolor, Vec3 BottomRight, ColorF BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftcolor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadGradientVertices_OnixRuntime_Api_Maths_Vec3_System_UInt32_OnixRuntime_Api_Maths_Vec3_System_UInt32_OnixRuntime_Api_Maths_Vec3_System_UInt32_OnixRuntime_Api_Maths_Vec3_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadGradientVertices(OnixRuntime.Api.Maths.Vec3,System.UInt32,OnixRuntime.Api.Maths.Vec3,System.UInt32,OnixRuntime.Api.Maths.Vec3,System.UInt32,OnixRuntime.Api.Maths.Vec3,System.UInt32)">
+  AddQuadGradientVertices(Vec3, uint, Vec3, uint, Vec3, uint, Vec3, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadGradientVertices(Vec3 TopLeft, uint TopLeftColor, Vec3 TopRight, uint TopRightColor, Vec3 BottomLeft, uint BottomLeftcolor, Vec3 BottomRight, uint BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftcolor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadQuadVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadQuadVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadQuadVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadQuadVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)">
+  AddQuadQuadVertices(Vec2, Vec2, Vec2, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadQuadVertices(Vec2 TopLeft, Vec2 TopRight, Vec2 BottomLeft, Vec2 BottomRight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadQuadVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadQuadVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadQuadVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadQuadVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)">
+  AddQuadQuadVertices(Vec3, Vec3, Vec3, Vec3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadQuadVertices(Vec3 TopLeft, Vec3 TopRight, Vec3 BottomLeft, Vec3 BottomRight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF)">
+  AddQuadUvGradientVertices(Vec2, Vec2, ColorF, Vec2, Vec2, ColorF, Vec2, Vec2, ColorF, Vec2, Vec2, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadUvGradientVertices(Vec2 TopLeft, Vec2 TopLeftUV, ColorF TopLeftColor, Vec2 TopRight, Vec2 TopRightUV, ColorF TopRightColor, Vec2 BottomLeft, Vec2 BottomLeftUV, ColorF BottomLeftColor, Vec2 BottomRight, Vec2 BottomRightUV, ColorF BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.UInt32)">
+  AddQuadUvGradientVertices(Vec2, Vec2, uint, Vec2, Vec2, uint, Vec2, Vec2, uint, Vec2, Vec2, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadUvGradientVertices(Vec2 TopLeft, Vec2 TopLeftUV, uint TopLeftColor, Vec2 TopRight, Vec2 TopRightUV, uint TopRightColor, Vec2 BottomLeft, Vec2 BottomLeftUV, uint BottomLeftColor, Vec2 BottomRight, Vec2 BottomRightUV, uint BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF)">
+  AddQuadUvGradientVertices(Vec3, Vec2, ColorF, Vec3, Vec2, ColorF, Vec3, Vec2, ColorF, Vec3, Vec2, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadUvGradientVertices(Vec3 TopLeft, Vec2 TopLeftUV, ColorF TopLeftColor, Vec3 TopRight, Vec2 TopRightUV, ColorF TopRightColor, Vec3 BottomLeft, Vec2 BottomLeftUV, ColorF BottomLeftColor, Vec3 BottomRight, Vec2 BottomRightUV, ColorF BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvGradientVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvGradientVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,System.UInt32)">
+  AddQuadUvGradientVertices(Vec3, Vec2, uint, Vec3, Vec2, uint, Vec3, Vec2, uint, Vec3, Vec2, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadUvGradientVertices(Vec3 TopLeft, Vec2 TopLeftUV, uint TopLeftColor, Vec3 TopRight, Vec2 TopRightUV, uint TopRightColor, Vec3 BottomLeft, Vec2 BottomLeftUV, uint BottomLeftColor, Vec3 BottomRight, Vec2 BottomRightUV, uint BottomRightColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-right vertex.</p>
+</dd>
+    <dt><code>TopRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)">
+  AddQuadUvVertices(Vec2, Vec2, Vec2, Vec2, Vec2, Vec2, Vec2, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadUvVertices(Vec2 TopLeft, Vec2 TopLeftUV, Vec2 TopRight, Vec2 TopRightUV, Vec2 BottomLeft, Vec2 BottomLeftUV, Vec2 BottomRight, Vec2 BottomRightUV)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddQuadUvVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddQuadUvVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2)">
+  AddQuadUvVertices(Vec3, Vec2, Vec3, Vec2, Vec3, Vec2, Vec3, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a quad with UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddQuadUvVertices(Vec3 TopLeft, Vec2 TopLeftUV, Vec3 TopRight, Vec2 TopRightUV, Vec3 BottomLeft, Vec2 BottomLeftUV, Vec3 BottomRight, Vec2 BottomRightUV)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TopLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-left vertex.</p>
+</dd>
+    <dt><code>TopLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-left vertex.</p>
+</dd>
+    <dt><code>TopRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The top-right vertex.</p>
+</dd>
+    <dt><code>TopRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the top-right vertex.</p>
+</dd>
+    <dt><code>BottomLeft</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomLeftUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-left vertex.</p>
+</dd>
+    <dt><code>BottomRight</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The bottom-right vertex.</p>
+</dd>
+    <dt><code>BottomRightUV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the bottom-right vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddRoundRectOutlineVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddRoundRectOutlineVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddRoundRectOutlineVertices_OnixRuntime_Api_Maths_Rect_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddRoundRectOutlineVertices(OnixRuntime.Api.Maths.Rect,System.Single,System.Single,System.Int32)">
+  AddRoundRectOutlineVertices(Rect, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a rounded rectangle outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRoundRectOutlineVertices(Rect position, float cornerRadius, float width, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position of the rectangle.</p>
+</dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the corners.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the rounded corners.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddRoundRectVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddRoundRectVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddRoundRectVertices_OnixRuntime_Api_Maths_Rect_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddRoundRectVertices(OnixRuntime.Api.Maths.Rect,System.Single,System.Int32)">
+  AddRoundRectVertices(Rect, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a rounded rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRoundRectVertices(Rect position, float cornerRadius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position of the rectangle.</p>
+</dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the corners.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the rounded corners.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF)">
+  AddTriangleGradientVertices(Vec2, ColorF, Vec2, ColorF, Vec2, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleGradientVertices(Vec2 point1, ColorF point1Color, Vec2 point2, ColorF point2Color, Vec2 point3, ColorF point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices(OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,System.UInt32)">
+  AddTriangleGradientVertices(Vec2, uint, Vec2, uint, Vec2, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleGradientVertices(Vec2 point1, uint point1Color, Vec2 point2, uint point2Color, Vec2 point3, uint point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF)">
+  AddTriangleGradientVertices(Vec3, ColorF, Vec3, ColorF, Vec3, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1431"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleGradientVertices(Vec3 point1, ColorF point1Color, Vec3 point2, ColorF point2Color, Vec3 point3, ColorF point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleGradientVertices_OnixRuntime_Api_Maths_Vec3_System_UInt32_OnixRuntime_Api_Maths_Vec3_System_UInt32_OnixRuntime_Api_Maths_Vec3_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleGradientVertices(OnixRuntime.Api.Maths.Vec3,System.UInt32,OnixRuntime.Api.Maths.Vec3,System.UInt32,OnixRuntime.Api.Maths.Vec3,System.UInt32)">
+  AddTriangleGradientVertices(Vec3, uint, Vec3, uint, Vec3, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1411"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleGradientVertices(Vec3 point1, uint point1Color, Vec3 point2, uint point2Color, Vec3 point3, uint point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF)">
+  AddTriangleUvGradientVertices(Vec2, Vec2, ColorF, Vec2, Vec2, ColorF, Vec2, Vec2, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1513"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleUvGradientVertices(Vec2 point1, Vec2 point1UV, ColorF point1Color, Vec2 point2, Vec2 point2UV, ColorF point2Color, Vec2 point3, Vec2 point3UV, ColorF point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.UInt32)">
+  AddTriangleUvGradientVertices(Vec2, Vec2, uint, Vec2, Vec2, uint, Vec2, Vec2, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1487"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleUvGradientVertices(Vec2 point1, Vec2 point1UV, uint point1Color, Vec2 point2, Vec2 point2UV, uint point2Color, Vec2 point3, Vec2 point3UV, uint point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF)">
+  AddTriangleUvGradientVertices(Vec3, Vec2, ColorF, Vec3, Vec2, ColorF, Vec3, Vec2, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1500"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleUvGradientVertices(Vec3 point1, Vec2 point1UV, ColorF point1Color, Vec3 point2, Vec2 point2UV, ColorF point2Color, Vec3 point3, Vec2 point3UV, ColorF point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvGradientVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_System_UInt32_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvGradientVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,System.UInt32,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,System.UInt32)">
+  AddTriangleUvGradientVertices(Vec3, Vec2, uint, Vec3, Vec2, uint, Vec3, Vec2, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1474"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with UV coordinates and gradient colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleUvGradientVertices(Vec3 point1, Vec2 point1UV, uint point1Color, Vec3 point2, Vec2 point2UV, uint point2Color, Vec3 point3, Vec2 point3UV, uint point3Color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the first vertex.</p>
+</dd>
+    <dt><code>point1Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the second vertex.</p>
+</dd>
+    <dt><code>point2Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the third vertex.</p>
+</dd>
+    <dt><code>point3Color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The color of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)">
+  AddTriangleUvVertices(Vec2, Vec2, Vec2, Vec2, Vec2, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1461"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleUvVertices(Vec2 point1, Vec2 point1UV, Vec2 point2, Vec2 point2UV, Vec2 point3, Vec2 point3UV)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleUvVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleUvVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2)">
+  AddTriangleUvVertices(Vec3, Vec2, Vec3, Vec2, Vec3, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle with UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleUvVertices(Vec3 point1, Vec2 point1UV, Vec3 point2, Vec2 point2UV, Vec3 point3, Vec2 point3UV)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point1UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point2UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+    <dt><code>point3UV</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The UV coordinates of the third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleVertices_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleVertices(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)">
+  AddTriangleVertices(Vec2, Vec2, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleVertices(Vec2 point1, Vec2 point2, Vec2 point3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleVertices_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleVertices*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_AddTriangleVertices_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.AddTriangleVertices(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)">
+  AddTriangleVertices(Vec3, Vec3, Vec3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds vertices for a triangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleVertices(Vec3 point1, Vec3 point2, Vec3 point3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The first vertex.</p>
+</dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The second vertex.</p>
+</dd>
+    <dt><code>point3</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd><p>The third vertex.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Build_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Build*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Build_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Build(System.Boolean,System.Boolean)">
+  Build(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds the current mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMesh Build(bool immediate = false, bool clear = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>immediate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the mesh is built immediately.</p>
+</dd>
+    <dt><code>clear</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, the mesh is cleared after building.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html">GameMesh</a></dt>
+    <dd><p>The built mesh.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Clear_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Clear*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Clear" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the current mesh so you're ready to start a new one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Color_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Color*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Color_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Color(OnixRuntime.Api.Maths.ColorF)">
+  Color(ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the color for subsequent vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Color(ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Color_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Color*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Color_System_UInt32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Color(System.UInt32)">
+  Color(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the color for subsequent vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Color(uint color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_New_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.New*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_New_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.New(OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Boolean)">
+  New(ColorF, MeshBuilderPrimitiveType, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a new mesh with the specified color and primitive type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void New(ColorF color, MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, bool applyReverseOriginOffsetIf3D = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the mesh.</p>
+</dd>
+    <dt><code>primitiveType</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html">MeshBuilderPrimitiveType</a></dt>
+    <dd><p>What primitive are the vertices defining?</p>
+</dd>
+    <dt><code>applyReverseOriginOffsetIf3D</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, applies a reverse origin offset if the renderer is 3D. This makes it visible in 3d space.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_New_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.New*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_New_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.New(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Boolean)">
+  New(MeshBuilderPrimitiveType, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a new mesh with the specified primitive type (color defaults to white).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void New(MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, bool applyReverseOriginOffsetIf3D = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>primitiveType</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html">MeshBuilderPrimitiveType</a></dt>
+    <dd><p>What primitive are the vertices defining?</p>
+</dd>
+    <dt><code>applyReverseOriginOffsetIf3D</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, applies a reverse origin offset if the renderer is 3D. This makes it visible in 3d space.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_TexturePath_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath,System.Boolean)">
+  NewSession(MeshBuilderPrimitiveType, ColorF?, TexturePath?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a new mesh builder session.
+Disposing the session will cause the mesh to be rendered.
+You should prefer the renderer's <a class="xref" href="OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_NewMeshBuilderSession_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_TexturePath_">NewMeshBuilderSession(MeshBuilderPrimitiveType, ColorF?, TexturePath?)</a> to this one since they will hand it to you in a more ready state based on its current parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMeshBuilder.GameMeshBuilderSession NewSession(MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, ColorF? color = null, TexturePath? texture = null, bool applyReverseOriginOffsetIf3D = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>primitiveType</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html">MeshBuilderPrimitiveType</a></dt>
+    <dd><p>The type of primitive the vertices will represent.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a>?</dt>
+    <dd></dd>
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture that will be used when rendering.</p>
+</dd>
+    <dt><code>applyReverseOriginOffsetIf3D</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, applies a reverse origin offset if the renderer is 3D. This makes it visible in 3d space.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a>.<a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession.html">GameMeshBuilderSession</a></dt>
+    <dd><p>The new session, don't forget to dispose it!</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_TexturePath_System_Boolean__examples">Examples</h4>
+  <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewSession(...)) {
+    //Define the vertices for the mesh however you want
+    //mb.Vertex(...)
+}</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},System.Boolean)">
+  NewSession(TexturePath?, MeshBuilderPrimitiveType, ColorF?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a new mesh builder session.
+Disposing the session will cause the mesh to be rendered.
+You should prefer the renderer's <a class="xref" href="OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_NewMeshBuilderSession_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__">NewMeshBuilderSession(TexturePath?, MeshBuilderPrimitiveType, ColorF?)</a> to this one since they will hand it to you in a more ready state based on its current parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMeshBuilder.GameMeshBuilderSession NewSession(TexturePath? texture = null, MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, ColorF? color = null, bool applyReverseOriginOffsetIf3D = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture that will be used when rendering.</p>
+</dd>
+    <dt><code>primitiveType</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html">MeshBuilderPrimitiveType</a></dt>
+    <dd><p>The type of primitive the vertices will represent.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a>?</dt>
+    <dd></dd>
+    <dt><code>applyReverseOriginOffsetIf3D</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, applies a reverse origin offset if the renderer is 3D. This makes it visible in 3d space.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a>.<a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession.html">GameMeshBuilderSession</a></dt>
+    <dd><p>The new session, don't forget to dispose it!</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__System_Boolean__examples">Examples</h4>
+  <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewSession(...)) {
+    //Define the vertices for the mesh however you want
+    //mb.Vertex(...)
+}</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_OnixRuntime_Api_Rendering_TexturePath_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,OnixRuntime.Api.Rendering.TexturePath,System.Boolean)">
+  NewSession(ColorF?, MeshBuilderPrimitiveType, TexturePath?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a new mesh builder session.
+Disposing the session will cause the mesh to be rendered.
+/// You should prefer the renderer's <a class="xref" href="OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_NewMeshBuilderSession_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_OnixRuntime_Api_Rendering_TexturePath_">NewMeshBuilderSession(ColorF?, MeshBuilderPrimitiveType, TexturePath?)</a> to this one since they will hand it to you in a more ready state based on its current parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMeshBuilder.GameMeshBuilderSession NewSession(ColorF? color = null, MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, TexturePath? texture = null, bool applyReverseOriginOffsetIf3D = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a>?</dt>
+    <dd></dd>
+    <dt><code>primitiveType</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html">MeshBuilderPrimitiveType</a></dt>
+    <dd><p>The type of primitive the vertices will represent.</p>
+</dd>
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture that will be used when rendering.</p>
+</dd>
+    <dt><code>applyReverseOriginOffsetIf3D</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, applies a reverse origin offset if the renderer is 3D. This makes it visible in 3d space.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a>.<a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession.html">GameMeshBuilderSession</a></dt>
+    <dd><p>The new session, don't forget to dispose it!</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_OnixRuntime_Api_Rendering_TexturePath_System_Boolean__examples">Examples</h4>
+  <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewSession()) {
+    //Define the vertices for the mesh however you want
+    //mb.Vertex(...)
+}</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.NewSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Boolean)">
+  NewSession(ColorF?, TexturePath?, MeshBuilderPrimitiveType, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a new mesh builder session.
+Disposing the session will cause the mesh to be rendered.
+/// /// You should prefer the renderer's <a class="xref" href="OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_NewMeshBuilderSession_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_">NewMeshBuilderSession(ColorF?, TexturePath?, MeshBuilderPrimitiveType)</a> to this one since they will hand it to you in a more ready state based on its current parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMeshBuilder.GameMeshBuilderSession NewSession(ColorF? color = null, TexturePath? texture = null, MeshBuilderPrimitiveType primitiveType = MeshBuilderPrimitiveType.Quad, bool applyReverseOriginOffsetIf3D = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a>?</dt>
+    <dd></dd>
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture that will be used when rendering.</p>
+</dd>
+    <dt><code>primitiveType</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html">MeshBuilderPrimitiveType</a></dt>
+    <dd><p>The type of primitive the vertices will represent.</p>
+</dd>
+    <dt><code>applyReverseOriginOffsetIf3D</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, applies a reverse origin offset if the renderer is 3D. This makes it visible in 3d space.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a>.<a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession.html">GameMeshBuilderSession</a></dt>
+    <dd><p>The new session, don't forget to dispose it!</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_GameMeshBuilder_NewSession_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Boolean__examples">Examples</h4>
+  <pre><code class="lang-csharp">using (var mb = Onix.Render.Game.NewSession()) {
+    //Define the vertices for the mesh however you want
+    //mb.Vertex(...)
+}</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Normal_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Normal*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Normal_OnixRuntime_Api_Maths_Vec3_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Normal(OnixRuntime.Api.Maths.Vec3)">
+  Normal(Vec3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the normal vector for subsequent vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Normal(Vec3 normal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>normal</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Normal_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Normal*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Normal_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Normal(System.Single,System.Single,System.Single)">
+  Normal(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the normal vector for subsequent vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Normal(float x, float y, float z)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Render_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Render*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Render" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Render">
+  Render()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the current mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Render()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Render_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Render*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Render_OnixRuntime_Api_Rendering_TexturePath_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Render(OnixRuntime.Api.Rendering.TexturePath)">
+  Render(TexturePath)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the current mesh with the specified texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Render(TexturePath texture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Uv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Uv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Uv_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Uv(OnixRuntime.Api.Maths.Vec2)">
+  Uv(Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the UV coordinates for subsequent vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Uv(Vec2 uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Uv_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Uv*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Uv_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Uv(System.Single,System.Single)">
+  Uv(float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the UV coordinates for subsequent vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Uv(float u, float v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>u</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(OnixRuntime.Api.Maths.Vec2)">
+  Vertex(Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex to the mesh using a 2D vector (z defaults to 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(Vec2 position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)">
+  Vertex(Vec2, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with a 2D position and UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(Vec2 position, Vec2 uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_OnixRuntime_Api_Maths_Vec2_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(OnixRuntime.Api.Maths.Vec2,System.Single,System.Single)">
+  Vertex(Vec2, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with a 2D position and separate UV values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(Vec2 position, float u, float v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>u</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_OnixRuntime_Api_Maths_Vec3_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(OnixRuntime.Api.Maths.Vec3)">
+  Vertex(Vec3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex to the mesh using a 3D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(Vec3 position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec2)">
+  Vertex(Vec3, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with a 3D position and UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(Vec3 position, Vec2 uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_OnixRuntime_Api_Maths_Vec3_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(OnixRuntime.Api.Maths.Vec3,System.Single,System.Single)">
+  Vertex(Vec3, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with a 3D position and separate UV values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(Vec3 position, float u, float v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>u</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(System.Single,System.Single)">
+  Vertex(float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex to the mesh with the specified coordinates (z defaults to 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(float x, float y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_System_Single_System_Single_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(System.Single,System.Single,OnixRuntime.Api.Maths.Vec2)">
+  Vertex(float, float, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with a 2D position and UV coordinates (z defaults to 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(float x, float y, Vec2 uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(System.Single,System.Single,System.Single)">
+  Vertex(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex to the mesh with the specified coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(float x, float y, float z)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_System_Single_System_Single_System_Single_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.Vec2)">
+  Vertex(float, float, float, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with a 3D position and UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(float x, float y, float z, Vec2 uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_System_Single_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(System.Single,System.Single,System.Single,System.Single)">
+  Vertex(float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with UV coordinates (z defaults to 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(float x, float y, float u, float v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>u</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_Vertex_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.Vertex(System.Single,System.Single,System.Single,System.Single,System.Single)">
+  Vertex(float, float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a vertex with UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Vertex(float x, float y, float z, float u, float v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>z</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>u</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertexColorNormal___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertexColorNormal[],System.Int32)">
+  VertexBatch(MeshBuilderVertexColorNormal[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1557"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertexColorNormal[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertexColorNormal.html">MeshBuilderVertexColorNormal</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertexColorUvNormal___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertexColorUvNormal[],System.Int32)">
+  VertexBatch(MeshBuilderVertexColorUvNormal[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1571"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertexColorUvNormal[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertexColorUvNormal.html">MeshBuilderVertexColorUvNormal</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertexColorUv___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertexColorUv[],System.Int32)">
+  VertexBatch(MeshBuilderVertexColorUv[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1550"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertexColorUv[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertexColorUv.html">MeshBuilderVertexColorUv</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertexColor___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertexColor[],System.Int32)">
+  VertexBatch(MeshBuilderVertexColor[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1529"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertexColor[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertexColor.html">MeshBuilderVertexColor</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertexNormal___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertexNormal[],System.Int32)">
+  VertexBatch(MeshBuilderVertexNormal[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1543"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertexNormal[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertexNormal.html">MeshBuilderVertexNormal</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertexUvNormal___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertexUvNormal[],System.Int32)">
+  VertexBatch(MeshBuilderVertexUvNormal[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1564"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertexUvNormal[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertexUvNormal.html">MeshBuilderVertexUvNormal</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertexUv___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertexUv[],System.Int32)">
+  VertexBatch(MeshBuilderVertexUv[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1536"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertexUv[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertexUv.html">MeshBuilderVertexUv</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMeshBuilder_VertexBatch_OnixRuntime_Api_Rendering_MeshBuilderVertex___System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch(OnixRuntime.Api.Rendering.MeshBuilderVertex[],System.Int32)">
+  VertexBatch(MeshBuilderVertex[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L1522"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a bunch of vertices to the mesh builder at once.
+This allows you to save some Managed -&gt; Native calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VertexBatch(MeshBuilderVertex[] vertices, int len = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertices</code> <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderVertex.html">MeshBuilderVertex</a>[]</dt>
+    <dd><p>The vertices to add</p>
+</dd>
+    <dt><code>len</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/GameMeshBuilder.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

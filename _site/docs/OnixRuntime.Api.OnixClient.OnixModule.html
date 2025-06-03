@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OnixModule | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OnixModule | Onix Plugin Documentation ">
+      
+      <meta name="description" content="A module in the onix client.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_OnixClient_OnixModule.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.OnixModule%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.OnixClient.OnixModule">
+
+
+
+  <h1 id="OnixRuntime_Api_OnixClient_OnixModule" data-uid="OnixRuntime.Api.OnixClient.OnixModule" class="text-break">
+Class OnixModule  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.html">OnixClient</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A module in the onix client.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OnixModule : MightOwnMemoryAddressContainer, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html">MightOwnMemoryAddressContainer</a></div>
+      <div><span class="xref">OnixModule</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleVisual.html">OnixModuleVisual</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership">MightOwnMemoryAddressContainer.HasMemoryOwnership</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_">MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule__ctor_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule__ctor_System_String_System_String_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.Boolean,System.Boolean)">
+  OnixModule(string, string, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixModule(string name, string description, bool includeToggleKey = true, bool register = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The visual name of the module.</p>
+</dd>
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A description for the module.</p>
+</dd>
+    <dt><code>includeToggleKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the module should have a key to toggle it on and off.</p>
+</dd>
+    <dt><code>register</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If you want to register the module in the client.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.OnixRuntimeException.html">OnixRuntimeException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule__ctor_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule__ctor_System_String_System_String_System_String_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.#ctor(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+  OnixModule(string, string, string, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixModule(string name, string description, string saveName, bool includeToggleKey = true, bool register = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The visual name of the module.</p>
+</dd>
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A description for the module.</p>
+</dd>
+    <dt><code>saveName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The save name of the module, it will be saved under this name.</p>
+</dd>
+    <dt><code>includeToggleKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the module should have a key to toggle it on and off.</p>
+</dd>
+    <dt><code>register</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If you want to register the module in the client.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.OnixRuntimeException.html">OnixRuntimeException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_Description_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Description*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_Description" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The description of the module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_Enabled_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Enabled*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_Enabled" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Enabled">
+  Enabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If the module is enabled or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Enabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_IsBlocked_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsBlocked*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_IsBlocked" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsBlocked">
+  IsBlocked
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBlocked { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_IsFavorite_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsFavorite*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_IsFavorite" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsFavorite">
+  IsFavorite
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If the module is in the favorites or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFavorite { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_IsHidden_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsHidden*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_IsHidden" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsHidden">
+  IsHidden
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If the module is hidden in the UI or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsHidden { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_IsToggle_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsToggle*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_IsToggle" data-uid="OnixRuntime.Api.OnixClient.OnixModule.IsToggle">
+  IsToggle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the module is a toggle module. If true it means you can enable the mod and it stays on. If false it means you have to hold the key for it to remain on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsToggle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_ModuleType_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.ModuleType*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_ModuleType" data-uid="OnixRuntime.Api.OnixClient.OnixModule.ModuleType">
+  ModuleType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of module this is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixModuleType ModuleType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleType.html">OnixModuleType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_Name_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Name*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_Name" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_PluginUuid_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.PluginUuid*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_PluginUuid" data-uid="OnixRuntime.Api.OnixClient.OnixModule.PluginUuid">
+  PluginUuid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The UUID of the plugin that created this module or nil if it is not a plugin module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? PluginUuid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_SaveName_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.SaveName*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_SaveName" data-uid="OnixRuntime.Api.OnixClient.OnixModule.SaveName">
+  SaveName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name used to save the module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaveName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_Settings_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Settings*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_Settings" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Settings">
+  Settings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The settings of the module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingsList Settings { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingsList.html">OnixSettingsList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_ToggleKey_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.ToggleKey*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_ToggleKey" data-uid="OnixRuntime.Api.OnixClient.OnixModule.ToggleKey">
+  ToggleKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The keybind used to toggle the module on and off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputKey ToggleKey { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_UsesLegacyRenderer_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_UsesLegacyRenderer" data-uid="OnixRuntime.Api.OnixClient.OnixModule.UsesLegacyRenderer">
+  UsesLegacyRenderer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether the visual module uses the legacy rendering system.
+This property can only be set for C# modules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UsesLegacyRenderer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_Dispose_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Dispose*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_Dispose" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_OnixRuntime_Api_OnixClient_OnixSetting_OnixRuntime_Api_OnixClient_OnixSetting_OnixRuntime_Api_OnixClient_OnixModule_SettingInsertionPosition_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)">
+  InsertSetting(OnixSetting, OnixSetting, SettingInsertionPosition, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a setting into a module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertSetting(OnixSetting setting, OnixSetting settingToUseAsIndex, OnixModule.SettingInsertionPosition mode = SettingInsertionPosition.After, bool correctCategory = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setting</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a></dt>
+    <dd><p>The setting to add.</p>
+</dd>
+    <dt><code>settingToUseAsIndex</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a></dt>
+    <dd><p>A setting that will be your index, only works with before or after modes.</p>
+</dd>
+    <dt><code>mode</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition.html">SettingInsertionPosition</a></dt>
+    <dd><p>Insert it before or after the setting. Any other value is invalid and will default to an index of 0 or 1.</p>
+</dd>
+    <dt><code>correctCategory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If categories should be corrected to include your setting if they would have.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.html">SettingAlreadyHasAParentException</a></dt>
+    <dd><p>When the setting already has a parent.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>When the setting is inserted at an invalid position.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_OnixRuntime_Api_OnixClient_OnixSetting_System_Int32_OnixRuntime_Api_OnixClient_OnixModule_SettingInsertionPosition_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)">
+  InsertSetting(OnixSetting, int, SettingInsertionPosition, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a setting into a module.
+Make sure that the setting does not have any parents or it will throw an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertSetting(OnixSetting setting, int index = 0, OnixModule.SettingInsertionPosition mode = SettingInsertionPosition.End, bool correctCategory = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setting</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a></dt>
+    <dd><p>The setting to insert.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of where you want the setting to be added (depends on mode).</p>
+</dd>
+    <dt><code>mode</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition.html">SettingInsertionPosition</a></dt>
+    <dd><p>How do you want the setting to be inserted.</p>
+</dd>
+    <dt><code>correctCategory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If categories should be corrected to include your setting if they would have.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.html">SettingAlreadyHasAParentException</a></dt>
+    <dd><p>When the setting already has a parent.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>When the setting is inserted at an invalid position.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_Load_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Load*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_Load_System_Text_Json_Nodes_JsonNode_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Load(System.Text.Json.Nodes.JsonNode)">
+  Load(JsonNode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L470"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the setting from json.
+If the value was null this will not get called so what you're getting is whatever the last value you returned in <a class="xref" href="OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Save">Save()</a> was.
+Read it lazily like there is no tomorrow, every setting is in its own try-catch.
+If you change what you save make sure to have migration code in place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Load(JsonNode root)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></dt>
+    <dd><p>The json you last saved.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_LoadFromJson_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_LoadFromJson_System_String_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson(System.String)">
+  LoadFromJson(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the module from a JSON string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadFromJson(string json)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_RefreshSettingsInUI_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_RefreshSettingsInUI" data-uid="OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI">
+  RefreshSettingsInUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Refreshes the settings list in the user interface.
+This is only useful if you edit the settings list while the module's page is opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshSettingsInUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_Save_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Save*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_Save" data-uid="OnixRuntime.Api.OnixClient.OnixModule.Save">
+  Save()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Saves the setting to json for persistent storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JsonNode? Save()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></dt>
+    <dd><p>The json or null if there is nothing to save.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_SaveAsJson_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_SaveAsJson" data-uid="OnixRuntime.Api.OnixClient.OnixModule.SaveAsJson">
+  SaveAsJson()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the serialized JSON of the module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaveAsJson()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The JSON of the module.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_OnixModule_StopLastCategoryHere_" data-uid="OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_OnixModule_StopLastCategoryHere" data-uid="OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere">
+  StopLastCategoryHere()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes a category stop considering settings that are added after this function was called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopLastCategoryHere()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModule.cs/#L176" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

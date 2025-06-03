@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Vec2I | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Vec2I | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a 2D vector with integer X and Y components, and provides vector operations and utilities.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Maths_Vec2I.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Maths.Vec2I%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Maths.Vec2I">
+
+
+
+  <h1 id="OnixRuntime_Api_Maths_Vec2I" data-uid="OnixRuntime.Api.Maths.Vec2I" class="text-break">
+Struct Vec2I  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Maths.html">Maths</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a 2D vector with integer X and Y components, and provides vector operations and utilities.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Vec2I : IEquatable&lt;Vec2I&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I__ctor_" data-uid="OnixRuntime.Api.Maths.Vec2I.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I__ctor" data-uid="OnixRuntime.Api.Maths.Vec2I.#ctor">
+  Vec2I()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a> struct with zero values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I__ctor_" data-uid="OnixRuntime.Api.Maths.Vec2I.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I__ctor_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.#ctor(System.Int32)">
+  Vec2I(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a> struct with both X and Y set to the same value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The value for both X and Y.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I__ctor_" data-uid="OnixRuntime.Api.Maths.Vec2I.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I__ctor_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.#ctor(System.Int32,System.Int32)">
+  Vec2I(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a> struct with the specified X and Y values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The X component.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The Y component.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_X" data-uid="OnixRuntime.Api.Maths.Vec2I.X">
+  X
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The X component of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Y" data-uid="OnixRuntime.Api.Maths.Vec2I.Y">
+  Y
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Y component of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Length_" data-uid="OnixRuntime.Api.Maths.Vec2I.Length*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Length" data-uid="OnixRuntime.Api.Maths.Vec2I.Length">
+  Length
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the Euclidean length of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Length { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Magnitude_" data-uid="OnixRuntime.Api.Maths.Vec2I.Magnitude*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Magnitude" data-uid="OnixRuntime.Api.Maths.Vec2I.Magnitude">
+  Magnitude
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the magnitude (length) of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Magnitude { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_MagnitudeSqr_" data-uid="OnixRuntime.Api.Maths.Vec2I.MagnitudeSqr*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_MagnitudeSqr" data-uid="OnixRuntime.Api.Maths.Vec2I.MagnitudeSqr">
+  MagnitudeSqr
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the squared magnitude of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MagnitudeSqr { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Normalized_" data-uid="OnixRuntime.Api.Maths.Vec2I.Normalized*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Normalized" data-uid="OnixRuntime.Api.Maths.Vec2I.Normalized">
+  Normalized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a normalized version of this vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Normalized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_One_" data-uid="OnixRuntime.Api.Maths.Vec2I.One*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_One" data-uid="OnixRuntime.Api.Maths.Vec2I.One">
+  One
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a Vec2I with both components set to one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I One { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Zero_" data-uid="OnixRuntime.Api.Maths.Vec2I.Zero*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Zero" data-uid="OnixRuntime.Api.Maths.Vec2I.Zero">
+  Zero
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a Vec2I with both components set to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I Zero { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Angle_" data-uid="OnixRuntime.Api.Maths.Vec2I.Angle*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Angle_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Angle(OnixRuntime.Api.Maths.Vec2I)">
+  Angle(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Angle(Vec2I vec)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vec</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Clamp_" data-uid="OnixRuntime.Api.Maths.Vec2I.Clamp*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Clamp_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Clamp(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  Clamp(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Clamp(Vec2I min, Vec2I max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>min</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>max</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Clamp_" data-uid="OnixRuntime.Api.Maths.Vec2I.Clamp*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Clamp_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.Clamp(System.Int32,System.Int32)">
+  Clamp(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Clamp(int min, int max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>min</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Cross_" data-uid="OnixRuntime.Api.Maths.Vec2I.Cross*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Cross_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Cross(OnixRuntime.Api.Maths.Vec2I)">
+  Cross(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Cross(Vec2I vec)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vec</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Distance_" data-uid="OnixRuntime.Api.Maths.Vec2I.Distance*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Distance_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Distance(OnixRuntime.Api.Maths.Vec2I)">
+  Distance(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Distance(Vec2I vec)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vec</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Dot_" data-uid="OnixRuntime.Api.Maths.Vec2I.Dot*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Dot_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Dot(OnixRuntime.Api.Maths.Vec2I)">
+  Dot(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Dot(Vec2I vec)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vec</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Equals_" data-uid="OnixRuntime.Api.Maths.Vec2I.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Equals_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Equals(OnixRuntime.Api.Maths.Vec2I)">
+  Equals(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Vec2I other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd><p>An object to compare with this object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Equals_" data-uid="OnixRuntime.Api.Maths.Vec2I.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Equals_System_Object_" data-uid="OnixRuntime.Api.Maths.Vec2I.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_GetHashCode_" data-uid="OnixRuntime.Api.Maths.Vec2I.GetHashCode*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_GetHashCode" data-uid="OnixRuntime.Api.Maths.Vec2I.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Lerp_" data-uid="OnixRuntime.Api.Maths.Vec2I.Lerp*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Lerp_OnixRuntime_Api_Maths_Vec2I_System_Single_" data-uid="OnixRuntime.Api.Maths.Vec2I.Lerp(OnixRuntime.Api.Maths.Vec2I,System.Single)">
+  Lerp(Vec2I, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Lerp(Vec2I vec, float t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vec</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Max_" data-uid="OnixRuntime.Api.Maths.Vec2I.Max*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Max_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Max(OnixRuntime.Api.Maths.Vec2I)">
+  Max(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Max(Vec2I vec)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vec</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Max_" data-uid="OnixRuntime.Api.Maths.Vec2I.Max*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Max_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.Max(System.Int32)">
+  Max(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Max(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Min_" data-uid="OnixRuntime.Api.Maths.Vec2I.Min*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Min_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.Min(OnixRuntime.Api.Maths.Vec2I)">
+  Min(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Min(Vec2I vec)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vec</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Min_" data-uid="OnixRuntime.Api.Maths.Vec2I.Min*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Min_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.Min(System.Int32)">
+  Min(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I Min(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_SetDirection_" data-uid="OnixRuntime.Api.Maths.Vec2I.SetDirection*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_SetDirection_System_Single_" data-uid="OnixRuntime.Api.Maths.Vec2I.SetDirection(System.Single)">
+  SetDirection(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDirection(float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_SetMagnitude_" data-uid="OnixRuntime.Api.Maths.Vec2I.SetMagnitude*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_SetMagnitude_System_Single_" data-uid="OnixRuntime.Api.Maths.Vec2I.SetMagnitude(System.Single)">
+  SetMagnitude(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMagnitude(float magnitude)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>magnitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_ToString_" data-uid="OnixRuntime.Api.Maths.Vec2I.ToString*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_ToString" data-uid="OnixRuntime.Api.Maths.Vec2I.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_ToString_" data-uid="OnixRuntime.Api.Maths.Vec2I.ToString*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_ToString_System_String_System_Globalization_CultureInfo_" data-uid="OnixRuntime.Api.Maths.Vec2I.ToString(System.String,System.Globalization.CultureInfo)">
+  ToString(string, CultureInfo?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(string format, CultureInfo? formatProvider = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>formatProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_Vec2Random_" data-uid="OnixRuntime.Api.Maths.Vec2I.Vec2Random*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_Vec2Random" data-uid="OnixRuntime.Api.Maths.Vec2I.Vec2Random">
+  Vec2Random()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a random Vec2I with X and Y in [0, 100).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I Vec2Random()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Addition_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Addition*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Addition_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Addition(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator +(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator +(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Addition_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Addition*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Addition_OnixRuntime_Api_Maths_Vec2I_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Addition(OnixRuntime.Api.Maths.Vec2I,System.Int32)">
+  operator +(Vec2I, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator +(Vec2I a, int b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Division_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Division*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Division_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Division(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator /(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator /(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Division_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Division*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Division_OnixRuntime_Api_Maths_Vec2I_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Division(OnixRuntime.Api.Maths.Vec2I,System.Int32)">
+  operator /(Vec2I, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator /(Vec2I a, int b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Division_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Division*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Division_System_Int32_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Division(System.Int32,OnixRuntime.Api.Maths.Vec2I)">
+  operator /(int, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator /(int a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Equality_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Equality_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Equality(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator ==(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_GreaterThan_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_GreaterThan*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_GreaterThan_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_GreaterThan(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator &gt;(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_GreaterThanOrEqual_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_GreaterThanOrEqual*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_GreaterThanOrEqual_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_GreaterThanOrEqual(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator &gt;=(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;=(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Implicit_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Implicit*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Implicit_OnixRuntime_Api_Maths_Vec2I__System_Numerics_Vector2" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Implicit(OnixRuntime.Api.Maths.Vec2I)~System.Numerics.Vector2">
+  implicit operator Vector2(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Vector2(Vec2I value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Implicit_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Implicit*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Implicit_System_Numerics_Vector2__OnixRuntime_Api_Maths_Vec2I" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Implicit(System.Numerics.Vector2)~OnixRuntime.Api.Maths.Vec2I">
+  implicit operator Vec2I(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Vec2I(Vector2 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Inequality_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Inequality_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Inequality(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator !=(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_LessThan_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_LessThan*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_LessThan_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_LessThan(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator &lt;(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_LessThanOrEqual_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_LessThanOrEqual*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_LessThanOrEqual_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_LessThanOrEqual(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator &lt;=(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;=(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Multiply_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Multiply_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Multiply(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator *(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator *(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Multiply_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Multiply_OnixRuntime_Api_Maths_Vec2I_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Multiply(OnixRuntime.Api.Maths.Vec2I,System.Int32)">
+  operator *(Vec2I, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator *(Vec2I a, int b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Multiply_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Multiply*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Multiply_System_Int32_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Multiply(System.Int32,OnixRuntime.Api.Maths.Vec2I)">
+  operator *(int, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator *(int a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Subtraction_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Subtraction*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Subtraction_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Subtraction(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I)">
+  operator -(Vec2I, Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator -(Vec2I a, Vec2I b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_Subtraction_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Subtraction*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_Subtraction_OnixRuntime_Api_Maths_Vec2I_System_Int32_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_Subtraction(OnixRuntime.Api.Maths.Vec2I,System.Int32)">
+  operator -(Vec2I, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator -(Vec2I a, int b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_Vec2I_op_UnaryNegation_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_UnaryNegation*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_Vec2I_op_UnaryNegation_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Maths.Vec2I.op_UnaryNegation(OnixRuntime.Api.Maths.Vec2I)">
+  operator -(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vec2I operator -(Vec2I a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Maths/Vec2I.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

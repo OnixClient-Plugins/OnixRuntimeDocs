@@ -1,0 +1,1833 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Core.Items.ItemStack
+  commentId: T:OnixRuntime.Core.Items.ItemStack
+  id: ItemStack
+  parent: OnixRuntime.Core.Items
+  children:
+  - OnixRuntime.Core.Items.ItemStack.#ctor
+  - OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.Items.Item,System.Int32,System.Int32)
+  - OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.NBT.ObjectTag)
+  - OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.World.Block,System.Int32)
+  - OnixRuntime.Core.Items.ItemStack.#ctor(System.String,System.Int32,System.Int32)
+  - OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  - OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  - OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  - OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  - OnixRuntime.Core.Items.ItemStack.Aux
+  - OnixRuntime.Core.Items.ItemStack.Block
+  - OnixRuntime.Core.Items.ItemStack.CanBeDamaged
+  - OnixRuntime.Core.Items.ItemStack.Clone
+  - OnixRuntime.Core.Items.ItemStack.Count
+  - OnixRuntime.Core.Items.ItemStack.CustomName
+  - OnixRuntime.Core.Items.ItemStack.Damage
+  - OnixRuntime.Core.Items.ItemStack.DisplayName
+  - OnixRuntime.Core.Items.ItemStack.Durability
+  - OnixRuntime.Core.Items.ItemStack.Enchants
+  - OnixRuntime.Core.Items.ItemStack.GetEnchant(OnixRuntime.Core.Items.EnchantType)
+  - OnixRuntime.Core.Items.ItemStack.IsEmpty
+  - OnixRuntime.Core.Items.ItemStack.Item
+  - OnixRuntime.Core.Items.ItemStack.LoadFromNbt(OnixRuntime.Core.NBT.ObjectTag)
+  - OnixRuntime.Core.Items.ItemStack.Lore
+  - OnixRuntime.Core.Items.ItemStack.Nbt
+  - OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.Items.Item,System.Int32,System.Int32,System.Boolean)
+  - OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.World.Block,System.Int32,System.Boolean)
+  - OnixRuntime.Core.Items.ItemStack.Reinit(System.String,System.Int32,System.Int32,System.Boolean)
+  - OnixRuntime.Core.Items.ItemStack.RemoveEnchant(OnixRuntime.Core.Items.EnchantType)
+  - OnixRuntime.Core.Items.ItemStack.SaveToNbt
+  - OnixRuntime.Core.Items.ItemStack.SetEmpty
+  - OnixRuntime.Core.Items.ItemStack.ShowPickup
+  - OnixRuntime.Core.Items.ItemStack.ToString
+  langs:
+  - csharp
+  - vb
+  name: ItemStack
+  nameWithType: ItemStack
+  fullName: OnixRuntime.Core.Items.ItemStack
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ItemStack
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 12
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: >-
+    Creation must be done in a game logic thread.
+
+    The other functions are fine but avoid reading from random threads/places if you don't own it.
+
+    If you get it from the source every time it should be safe to read.
+  example: []
+  syntax:
+    content: 'public class ItemStack : MightOwnMemoryAddressContainer, IDisposable'
+    content.vb: Public Class ItemStack Inherits MightOwnMemoryAddressContainer Implements IDisposable
+  inheritance:
+  - System.Object
+  - OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  - OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  - OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OnixRuntime.Core.Items.ItemStack.Count
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Count
+  id: Count
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ItemStack.Count
+  fullName: OnixRuntime.Core.Items.ItemStack.Count
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Count
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 15
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public int Count { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Count As Integer
+  overload: OnixRuntime.Core.Items.ItemStack.Count*
+- uid: OnixRuntime.Core.Items.ItemStack.Aux
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Aux
+  id: Aux
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Aux
+  nameWithType: ItemStack.Aux
+  fullName: OnixRuntime.Core.Items.ItemStack.Aux
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Aux
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 23
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public int Aux { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Aux As Integer
+  overload: OnixRuntime.Core.Items.ItemStack.Aux*
+- uid: OnixRuntime.Core.Items.ItemStack.ShowPickup
+  commentId: P:OnixRuntime.Core.Items.ItemStack.ShowPickup
+  id: ShowPickup
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: ShowPickup
+  nameWithType: ItemStack.ShowPickup
+  fullName: OnixRuntime.Core.Items.ItemStack.ShowPickup
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ShowPickup
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 31
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public bool ShowPickup { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ShowPickup As Boolean
+  overload: OnixRuntime.Core.Items.ItemStack.ShowPickup*
+- uid: OnixRuntime.Core.Items.ItemStack.Item
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Item
+  id: Item
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: ItemStack.Item
+  fullName: OnixRuntime.Core.Items.ItemStack.Item
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Item
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 39
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public Item? Item { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Core.Items.Item
+    content.vb: Public ReadOnly Property Item As Item
+  overload: OnixRuntime.Core.Items.ItemStack.Item*
+- uid: OnixRuntime.Core.Items.ItemStack.IsEmpty
+  commentId: P:OnixRuntime.Core.Items.ItemStack.IsEmpty
+  id: IsEmpty
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: ItemStack.IsEmpty
+  fullName: OnixRuntime.Core.Items.ItemStack.IsEmpty
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsEmpty
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 40
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: OnixRuntime.Core.Items.ItemStack.IsEmpty*
+- uid: OnixRuntime.Core.Items.ItemStack.Block
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Block
+  id: Block
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Block
+  nameWithType: ItemStack.Block
+  fullName: OnixRuntime.Core.Items.ItemStack.Block
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Block
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 41
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public Block? Block { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Core.World.Block
+    content.vb: Public ReadOnly Property Block As Block
+  overload: OnixRuntime.Core.Items.ItemStack.Block*
+- uid: OnixRuntime.Core.Items.ItemStack.Nbt
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Nbt
+  id: Nbt
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Nbt
+  nameWithType: ItemStack.Nbt
+  fullName: OnixRuntime.Core.Items.ItemStack.Nbt
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Nbt
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 43
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public ObjectTag? Nbt { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Core.NBT.ObjectTag
+    content.vb: Public Property Nbt As ObjectTag
+  overload: OnixRuntime.Core.Items.ItemStack.Nbt*
+- uid: OnixRuntime.Core.Items.ItemStack.#ctor
+  commentId: M:OnixRuntime.Core.Items.ItemStack.#ctor
+  id: '#ctor'
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: ItemStack()
+  nameWithType: ItemStack.ItemStack()
+  fullName: OnixRuntime.Core.Items.ItemStack.ItemStack()
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 57
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public ItemStack()
+    content.vb: Public Sub New()
+  overload: OnixRuntime.Core.Items.ItemStack.#ctor*
+  nameWithType.vb: ItemStack.New()
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.New()
+  name.vb: New()
+- uid: OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.Items.Item,System.Int32,System.Int32)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.Items.Item,System.Int32,System.Int32)
+  id: '#ctor(OnixRuntime.Core.Items.Item,System.Int32,System.Int32)'
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: ItemStack(Item, int, int)
+  nameWithType: ItemStack.ItemStack(Item, int, int)
+  fullName: OnixRuntime.Core.Items.ItemStack.ItemStack(OnixRuntime.Core.Items.Item, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 66
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public ItemStack(Item item, int count, int aux = 0)
+    parameters:
+    - id: item
+      type: OnixRuntime.Core.Items.Item
+    - id: count
+      type: System.Int32
+    - id: aux
+      type: System.Int32
+    content.vb: Public Sub New(item As Item, count As Integer, aux As Integer = 0)
+  overload: OnixRuntime.Core.Items.ItemStack.#ctor*
+  nameWithType.vb: ItemStack.New(Item, Integer, Integer)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.New(OnixRuntime.Core.Items.Item, Integer, Integer)
+  name.vb: New(Item, Integer, Integer)
+- uid: OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.World.Block,System.Int32)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.World.Block,System.Int32)
+  id: '#ctor(OnixRuntime.Core.World.Block,System.Int32)'
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: ItemStack(Block, int)
+  nameWithType: ItemStack.ItemStack(Block, int)
+  fullName: OnixRuntime.Core.Items.ItemStack.ItemStack(OnixRuntime.Core.World.Block, int)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 76
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public ItemStack(Block block, int count)
+    parameters:
+    - id: block
+      type: OnixRuntime.Core.World.Block
+    - id: count
+      type: System.Int32
+    content.vb: Public Sub New(block As Block, count As Integer)
+  overload: OnixRuntime.Core.Items.ItemStack.#ctor*
+  nameWithType.vb: ItemStack.New(Block, Integer)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.New(OnixRuntime.Core.World.Block, Integer)
+  name.vb: New(Block, Integer)
+- uid: OnixRuntime.Core.Items.ItemStack.#ctor(System.String,System.Int32,System.Int32)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.#ctor(System.String,System.Int32,System.Int32)
+  id: '#ctor(System.String,System.Int32,System.Int32)'
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: ItemStack(string, int, int)
+  nameWithType: ItemStack.ItemStack(string, int, int)
+  fullName: OnixRuntime.Core.Items.ItemStack.ItemStack(string, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 86
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public ItemStack(string itemName, int count, int aux = 0)
+    parameters:
+    - id: itemName
+      type: System.String
+    - id: count
+      type: System.Int32
+    - id: aux
+      type: System.Int32
+    content.vb: Public Sub New(itemName As String, count As Integer, aux As Integer = 0)
+  overload: OnixRuntime.Core.Items.ItemStack.#ctor*
+  nameWithType.vb: ItemStack.New(String, Integer, Integer)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.New(String, Integer, Integer)
+  name.vb: New(String, Integer, Integer)
+- uid: OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.NBT.ObjectTag)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.#ctor(OnixRuntime.Core.NBT.ObjectTag)
+  id: '#ctor(OnixRuntime.Core.NBT.ObjectTag)'
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: ItemStack(ObjectTag)
+  nameWithType: ItemStack.ItemStack(ObjectTag)
+  fullName: OnixRuntime.Core.Items.ItemStack.ItemStack(OnixRuntime.Core.NBT.ObjectTag)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 96
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public ItemStack(ObjectTag tag)
+    parameters:
+    - id: tag
+      type: OnixRuntime.Core.NBT.ObjectTag
+    content.vb: Public Sub New(tag As ObjectTag)
+  overload: OnixRuntime.Core.Items.ItemStack.#ctor*
+  nameWithType.vb: ItemStack.New(ObjectTag)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.New(OnixRuntime.Core.NBT.ObjectTag)
+  name.vb: New(ObjectTag)
+- uid: OnixRuntime.Core.Items.ItemStack.Clone
+  commentId: M:OnixRuntime.Core.Items.ItemStack.Clone
+  id: Clone
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: ItemStack.Clone()
+  fullName: OnixRuntime.Core.Items.ItemStack.Clone()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Clone
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 106
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation/Cloning must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public ItemStack Clone()
+    return:
+      type: OnixRuntime.Core.Items.ItemStack
+    content.vb: Public Function Clone() As ItemStack
+  overload: OnixRuntime.Core.Items.ItemStack.Clone*
+- uid: OnixRuntime.Core.Items.ItemStack.SetEmpty
+  commentId: M:OnixRuntime.Core.Items.ItemStack.SetEmpty
+  id: SetEmpty
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: SetEmpty()
+  nameWithType: ItemStack.SetEmpty()
+  fullName: OnixRuntime.Core.Items.ItemStack.SetEmpty()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetEmpty
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 112
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public void SetEmpty()
+    content.vb: Public Sub SetEmpty()
+  overload: OnixRuntime.Core.Items.ItemStack.SetEmpty*
+- uid: OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.Items.Item,System.Int32,System.Int32,System.Boolean)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.Items.Item,System.Int32,System.Int32,System.Boolean)
+  id: Reinit(OnixRuntime.Core.Items.Item,System.Int32,System.Int32,System.Boolean)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Reinit(Item, int, int, bool)
+  nameWithType: ItemStack.Reinit(Item, int, int, bool)
+  fullName: OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.Items.Item, int, int, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Reinit
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 120
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation/Initialization must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public void Reinit(Item item, int count, int aux = 0, bool keepNbt = false)
+    parameters:
+    - id: item
+      type: OnixRuntime.Core.Items.Item
+    - id: count
+      type: System.Int32
+    - id: aux
+      type: System.Int32
+    - id: keepNbt
+      type: System.Boolean
+    content.vb: Public Sub Reinit(item As Item, count As Integer, aux As Integer = 0, keepNbt As Boolean = False)
+  overload: OnixRuntime.Core.Items.ItemStack.Reinit*
+  nameWithType.vb: ItemStack.Reinit(Item, Integer, Integer, Boolean)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.Items.Item, Integer, Integer, Boolean)
+  name.vb: Reinit(Item, Integer, Integer, Boolean)
+- uid: OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.World.Block,System.Int32,System.Boolean)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.World.Block,System.Int32,System.Boolean)
+  id: Reinit(OnixRuntime.Core.World.Block,System.Int32,System.Boolean)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Reinit(Block, int, bool)
+  nameWithType: ItemStack.Reinit(Block, int, bool)
+  fullName: OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.World.Block, int, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Reinit
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 128
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation/Initialization must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public void Reinit(Block block, int count, bool keepNbt = false)
+    parameters:
+    - id: block
+      type: OnixRuntime.Core.World.Block
+    - id: count
+      type: System.Int32
+    - id: keepNbt
+      type: System.Boolean
+    content.vb: Public Sub Reinit(block As Block, count As Integer, keepNbt As Boolean = False)
+  overload: OnixRuntime.Core.Items.ItemStack.Reinit*
+  nameWithType.vb: ItemStack.Reinit(Block, Integer, Boolean)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.Reinit(OnixRuntime.Core.World.Block, Integer, Boolean)
+  name.vb: Reinit(Block, Integer, Boolean)
+- uid: OnixRuntime.Core.Items.ItemStack.Reinit(System.String,System.Int32,System.Int32,System.Boolean)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.Reinit(System.String,System.Int32,System.Int32,System.Boolean)
+  id: Reinit(System.String,System.Int32,System.Int32,System.Boolean)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Reinit(string, int, int, bool)
+  nameWithType: ItemStack.Reinit(string, int, int, bool)
+  fullName: OnixRuntime.Core.Items.ItemStack.Reinit(string, int, int, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Reinit
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 136
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation/Initialization must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public void Reinit(string itemName, int count, int aux = 0, bool keepNbt = false)
+    parameters:
+    - id: itemName
+      type: System.String
+    - id: count
+      type: System.Int32
+    - id: aux
+      type: System.Int32
+    - id: keepNbt
+      type: System.Boolean
+    content.vb: Public Sub Reinit(itemName As String, count As Integer, aux As Integer = 0, keepNbt As Boolean = False)
+  overload: OnixRuntime.Core.Items.ItemStack.Reinit*
+  nameWithType.vb: ItemStack.Reinit(String, Integer, Integer, Boolean)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.Reinit(String, Integer, Integer, Boolean)
+  name.vb: Reinit(String, Integer, Integer, Boolean)
+- uid: OnixRuntime.Core.Items.ItemStack.SaveToNbt
+  commentId: M:OnixRuntime.Core.Items.ItemStack.SaveToNbt
+  id: SaveToNbt
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: SaveToNbt()
+  nameWithType: ItemStack.SaveToNbt()
+  fullName: OnixRuntime.Core.Items.ItemStack.SaveToNbt()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SaveToNbt
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 141
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public ObjectTag SaveToNbt()
+    return:
+      type: OnixRuntime.Core.NBT.ObjectTag
+    content.vb: Public Function SaveToNbt() As ObjectTag
+  overload: OnixRuntime.Core.Items.ItemStack.SaveToNbt*
+- uid: OnixRuntime.Core.Items.ItemStack.LoadFromNbt(OnixRuntime.Core.NBT.ObjectTag)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.LoadFromNbt(OnixRuntime.Core.NBT.ObjectTag)
+  id: LoadFromNbt(OnixRuntime.Core.NBT.ObjectTag)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: LoadFromNbt(ObjectTag)
+  nameWithType: ItemStack.LoadFromNbt(ObjectTag)
+  fullName: OnixRuntime.Core.Items.ItemStack.LoadFromNbt(OnixRuntime.Core.NBT.ObjectTag)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: LoadFromNbt
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 148
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Creation/Initialization must be done in a game logic thread.
+  example: []
+  syntax:
+    content: public void LoadFromNbt(ObjectTag tag)
+    parameters:
+    - id: tag
+      type: OnixRuntime.Core.NBT.ObjectTag
+    content.vb: Public Sub LoadFromNbt(tag As ObjectTag)
+  overload: OnixRuntime.Core.Items.ItemStack.LoadFromNbt*
+- uid: OnixRuntime.Core.Items.ItemStack.DisplayName
+  commentId: P:OnixRuntime.Core.Items.ItemStack.DisplayName
+  id: DisplayName
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: ItemStack.DisplayName
+  fullName: OnixRuntime.Core.Items.ItemStack.DisplayName
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: DisplayName
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 153
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public string DisplayName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property DisplayName As String
+  overload: OnixRuntime.Core.Items.ItemStack.DisplayName*
+- uid: OnixRuntime.Core.Items.ItemStack.CustomName
+  commentId: P:OnixRuntime.Core.Items.ItemStack.CustomName
+  id: CustomName
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: CustomName
+  nameWithType: ItemStack.CustomName
+  fullName: OnixRuntime.Core.Items.ItemStack.CustomName
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: CustomName
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 155
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public string CustomName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomName As String
+  overload: OnixRuntime.Core.Items.ItemStack.CustomName*
+- uid: OnixRuntime.Core.Items.ItemStack.Damage
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Damage
+  id: Damage
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Damage
+  nameWithType: ItemStack.Damage
+  fullName: OnixRuntime.Core.Items.ItemStack.Damage
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Damage
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 162
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public int Damage { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Damage As Integer
+  overload: OnixRuntime.Core.Items.ItemStack.Damage*
+- uid: OnixRuntime.Core.Items.ItemStack.Durability
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Durability
+  id: Durability
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Durability
+  nameWithType: ItemStack.Durability
+  fullName: OnixRuntime.Core.Items.ItemStack.Durability
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Durability
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 170
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public int Durability { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Durability As Integer
+  overload: OnixRuntime.Core.Items.ItemStack.Durability*
+- uid: OnixRuntime.Core.Items.ItemStack.CanBeDamaged
+  commentId: P:OnixRuntime.Core.Items.ItemStack.CanBeDamaged
+  id: CanBeDamaged
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: CanBeDamaged
+  nameWithType: ItemStack.CanBeDamaged
+  fullName: OnixRuntime.Core.Items.ItemStack.CanBeDamaged
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: CanBeDamaged
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 181
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public bool CanBeDamaged { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanBeDamaged As Boolean
+  overload: OnixRuntime.Core.Items.ItemStack.CanBeDamaged*
+- uid: OnixRuntime.Core.Items.ItemStack.Lore
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Lore
+  id: Lore
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Lore
+  nameWithType: ItemStack.Lore
+  fullName: OnixRuntime.Core.Items.ItemStack.Lore
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Lore
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 183
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public string[] Lore { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public Property Lore As String()
+  overload: OnixRuntime.Core.Items.ItemStack.Lore*
+- uid: OnixRuntime.Core.Items.ItemStack.Enchants
+  commentId: P:OnixRuntime.Core.Items.ItemStack.Enchants
+  id: Enchants
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: Enchants
+  nameWithType: ItemStack.Enchants
+  fullName: OnixRuntime.Core.Items.ItemStack.Enchants
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Enchants
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 191
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public EnchantmentInstance[] Enchants { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Core.Items.EnchantmentInstance[]
+    content.vb: Public Property Enchants As EnchantmentInstance()
+  overload: OnixRuntime.Core.Items.ItemStack.Enchants*
+- uid: OnixRuntime.Core.Items.ItemStack.GetEnchant(OnixRuntime.Core.Items.EnchantType)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.GetEnchant(OnixRuntime.Core.Items.EnchantType)
+  id: GetEnchant(OnixRuntime.Core.Items.EnchantType)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: GetEnchant(EnchantType)
+  nameWithType: ItemStack.GetEnchant(EnchantType)
+  fullName: OnixRuntime.Core.Items.ItemStack.GetEnchant(OnixRuntime.Core.Items.EnchantType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetEnchant
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 199
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public EnchantmentInstance? GetEnchant(EnchantType type)
+    parameters:
+    - id: type
+      type: OnixRuntime.Core.Items.EnchantType
+    return:
+      type: OnixRuntime.Core.Items.EnchantmentInstance
+    content.vb: Public Function GetEnchant(type As EnchantType) As EnchantmentInstance
+  overload: OnixRuntime.Core.Items.ItemStack.GetEnchant*
+- uid: OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  id: AddEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: AddEnchant(EnchantType, int)
+  nameWithType: ItemStack.AddEnchant(EnchantType, int)
+  fullName: OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantType, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AddEnchant
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 200
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public void AddEnchant(EnchantType enchant, int level)
+    parameters:
+    - id: enchant
+      type: OnixRuntime.Core.Items.EnchantType
+    - id: level
+      type: System.Int32
+    content.vb: Public Sub AddEnchant(enchant As EnchantType, level As Integer)
+  overload: OnixRuntime.Core.Items.ItemStack.AddEnchant*
+  nameWithType.vb: ItemStack.AddEnchant(EnchantType, Integer)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantType, Integer)
+  name.vb: AddEnchant(EnchantType, Integer)
+- uid: OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  id: AddEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: AddEnchant(EnchantmentInstance)
+  nameWithType: ItemStack.AddEnchant(EnchantmentInstance)
+  fullName: OnixRuntime.Core.Items.ItemStack.AddEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AddEnchant
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 201
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public void AddEnchant(EnchantmentInstance enchant)
+    parameters:
+    - id: enchant
+      type: OnixRuntime.Core.Items.EnchantmentInstance
+    content.vb: Public Sub AddEnchant(enchant As EnchantmentInstance)
+  overload: OnixRuntime.Core.Items.ItemStack.AddEnchant*
+- uid: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  id: AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantType,System.Int32)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: AddOrUpdateEnchant(EnchantType, int)
+  nameWithType: ItemStack.AddOrUpdateEnchant(EnchantType, int)
+  fullName: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantType, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AddOrUpdateEnchant
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 206
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public void AddOrUpdateEnchant(EnchantType enchant, int level)
+    parameters:
+    - id: enchant
+      type: OnixRuntime.Core.Items.EnchantType
+    - id: level
+      type: System.Int32
+    content.vb: Public Sub AddOrUpdateEnchant(enchant As EnchantType, level As Integer)
+  overload: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant*
+  nameWithType.vb: ItemStack.AddOrUpdateEnchant(EnchantType, Integer)
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantType, Integer)
+  name.vb: AddOrUpdateEnchant(EnchantType, Integer)
+- uid: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  id: AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: AddOrUpdateEnchant(EnchantmentInstance)
+  nameWithType: ItemStack.AddOrUpdateEnchant(EnchantmentInstance)
+  fullName: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant(OnixRuntime.Core.Items.EnchantmentInstance)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AddOrUpdateEnchant
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 207
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public void AddOrUpdateEnchant(EnchantmentInstance enchant)
+    parameters:
+    - id: enchant
+      type: OnixRuntime.Core.Items.EnchantmentInstance
+    content.vb: Public Sub AddOrUpdateEnchant(enchant As EnchantmentInstance)
+  overload: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant*
+- uid: OnixRuntime.Core.Items.ItemStack.RemoveEnchant(OnixRuntime.Core.Items.EnchantType)
+  commentId: M:OnixRuntime.Core.Items.ItemStack.RemoveEnchant(OnixRuntime.Core.Items.EnchantType)
+  id: RemoveEnchant(OnixRuntime.Core.Items.EnchantType)
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: RemoveEnchant(EnchantType)
+  nameWithType: ItemStack.RemoveEnchant(EnchantType)
+  fullName: OnixRuntime.Core.Items.ItemStack.RemoveEnchant(OnixRuntime.Core.Items.EnchantType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: RemoveEnchant
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 219
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  syntax:
+    content: public bool RemoveEnchant(EnchantType type)
+    parameters:
+    - id: type
+      type: OnixRuntime.Core.Items.EnchantType
+    return:
+      type: System.Boolean
+    content.vb: Public Function RemoveEnchant(type As EnchantType) As Boolean
+  overload: OnixRuntime.Core.Items.ItemStack.RemoveEnchant*
+- uid: OnixRuntime.Core.Items.ItemStack.ToString
+  commentId: M:OnixRuntime.Core.Items.ItemStack.ToString
+  id: ToString
+  parent: OnixRuntime.Core.Items.ItemStack
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ItemStack.ToString()
+  fullName: OnixRuntime.Core.Items.ItemStack.ToString()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Core/Items/ItemStack.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ToString
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Core/Items/ItemStack.cs
+    startLine: 232
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Core.Items
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OnixRuntime.Core.Items.ItemStack.ToString*
+references:
+- uid: OnixRuntime.Core.Items
+  commentId: N:OnixRuntime.Core.Items
+  href: OnixRuntime.html
+  name: OnixRuntime.Core.Items
+  nameWithType: OnixRuntime.Core.Items
+  fullName: OnixRuntime.Core.Items
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.Items
+    name: Items
+    href: OnixRuntime.Core.Items.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.Items
+    name: Items
+    href: OnixRuntime.Core.Items.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer
+  commentId: T:OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer
+  parent: OnixRuntime.Core.Internal
+  href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html
+  name: MightOwnMemoryAddressContainer
+  nameWithType: MightOwnMemoryAddressContainer
+  fullName: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  commentId: P:OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  parent: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Core_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership
+  name: HasMemoryOwnership
+  nameWithType: MightOwnMemoryAddressContainer.HasMemoryOwnership
+  fullName: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+- uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  commentId: M:OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  parent: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Core_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  name: SetMemoryAddressValues(nint, nint)
+  nameWithType: MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  fullName: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  nameWithType.vb: MightOwnMemoryAddressContainer.SetMemoryAddressValues(IntPtr, IntPtr)
+  fullName.vb: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr, System.IntPtr)
+  name.vb: SetMemoryAddressValues(IntPtr, IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Core_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Core_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.Dispose
+  commentId: M:OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.Dispose
+  parent: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Core_Internal_MightOwnMemoryAddressContainer_Dispose
+  name: Dispose()
+  nameWithType: MightOwnMemoryAddressContainer.Dispose()
+  fullName: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.Dispose()
+  spec.csharp:
+  - uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Core_Internal_MightOwnMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Core.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Core_Internal_MightOwnMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Core.Internal
+  commentId: N:OnixRuntime.Core.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Core.Internal
+  nameWithType: OnixRuntime.Core.Internal
+  fullName: OnixRuntime.Core.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.Internal
+    name: Internal
+    href: OnixRuntime.Core.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.Internal
+    name: Internal
+    href: OnixRuntime.Core.Internal.html
+- uid: OnixRuntime.Core.Items.ItemStack.Count*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Count
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Count
+  name: Count
+  nameWithType: ItemStack.Count
+  fullName: OnixRuntime.Core.Items.ItemStack.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Core.Items.ItemStack.Aux*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Aux
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Aux
+  name: Aux
+  nameWithType: ItemStack.Aux
+  fullName: OnixRuntime.Core.Items.ItemStack.Aux
+- uid: OnixRuntime.Core.Items.ItemStack.ShowPickup*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.ShowPickup
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_ShowPickup
+  name: ShowPickup
+  nameWithType: ItemStack.ShowPickup
+  fullName: OnixRuntime.Core.Items.ItemStack.ShowPickup
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Core.Items.ItemStack.Item*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Item
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Item
+  name: Item
+  nameWithType: ItemStack.Item
+  fullName: OnixRuntime.Core.Items.ItemStack.Item
+- uid: OnixRuntime.Core.Items.Item
+  commentId: T:OnixRuntime.Core.Items.Item
+  parent: OnixRuntime.Core.Items
+  href: OnixRuntime.Core.Items.Item.html
+  name: Item
+  nameWithType: Item
+  fullName: OnixRuntime.Core.Items.Item
+- uid: OnixRuntime.Core.Items.ItemStack.IsEmpty*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.IsEmpty
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_IsEmpty
+  name: IsEmpty
+  nameWithType: ItemStack.IsEmpty
+  fullName: OnixRuntime.Core.Items.ItemStack.IsEmpty
+- uid: OnixRuntime.Core.Items.ItemStack.Block*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Block
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Block
+  name: Block
+  nameWithType: ItemStack.Block
+  fullName: OnixRuntime.Core.Items.ItemStack.Block
+- uid: OnixRuntime.Core.World.Block
+  commentId: T:OnixRuntime.Core.World.Block
+  parent: OnixRuntime.Core.World
+  href: OnixRuntime.Core.World.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: OnixRuntime.Core.World.Block
+- uid: OnixRuntime.Core.World
+  commentId: N:OnixRuntime.Core.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Core.World
+  nameWithType: OnixRuntime.Core.World
+  fullName: OnixRuntime.Core.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.World
+    name: World
+    href: OnixRuntime.Core.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.World
+    name: World
+    href: OnixRuntime.Core.World.html
+- uid: OnixRuntime.Core.Items.ItemStack.Nbt*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Nbt
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Nbt
+  name: Nbt
+  nameWithType: ItemStack.Nbt
+  fullName: OnixRuntime.Core.Items.ItemStack.Nbt
+- uid: OnixRuntime.Core.NBT.ObjectTag
+  commentId: T:OnixRuntime.Core.NBT.ObjectTag
+  parent: OnixRuntime.Core.NBT
+  href: OnixRuntime.Core.NBT.ObjectTag.html
+  name: ObjectTag
+  nameWithType: ObjectTag
+  fullName: OnixRuntime.Core.NBT.ObjectTag
+- uid: OnixRuntime.Core.NBT
+  commentId: N:OnixRuntime.Core.NBT
+  href: OnixRuntime.html
+  name: OnixRuntime.Core.NBT
+  nameWithType: OnixRuntime.Core.NBT
+  fullName: OnixRuntime.Core.NBT
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.NBT
+    name: NBT
+    href: OnixRuntime.Core.NBT.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Core
+    name: Core
+    href: OnixRuntime.Core.html
+  - name: .
+  - uid: OnixRuntime.Core.NBT
+    name: NBT
+    href: OnixRuntime.Core.NBT.html
+- uid: OnixRuntime.Core.Items.ItemStack.#ctor*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.#ctor
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack__ctor
+  name: ItemStack
+  nameWithType: ItemStack.ItemStack
+  fullName: OnixRuntime.Core.Items.ItemStack.ItemStack
+  nameWithType.vb: ItemStack.New
+  fullName.vb: OnixRuntime.Core.Items.ItemStack.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Core.Items.ItemStack.Clone*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Clone
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Clone
+  name: Clone
+  nameWithType: ItemStack.Clone
+  fullName: OnixRuntime.Core.Items.ItemStack.Clone
+- uid: OnixRuntime.Core.Items.ItemStack
+  commentId: T:OnixRuntime.Core.Items.ItemStack
+  parent: OnixRuntime.Core.Items
+  href: OnixRuntime.Core.Items.ItemStack.html
+  name: ItemStack
+  nameWithType: ItemStack
+  fullName: OnixRuntime.Core.Items.ItemStack
+- uid: OnixRuntime.Core.Items.ItemStack.SetEmpty*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.SetEmpty
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_SetEmpty
+  name: SetEmpty
+  nameWithType: ItemStack.SetEmpty
+  fullName: OnixRuntime.Core.Items.ItemStack.SetEmpty
+- uid: OnixRuntime.Core.Items.ItemStack.Reinit*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Reinit
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Reinit_OnixRuntime_Core_Items_Item_System_Int32_System_Int32_System_Boolean_
+  name: Reinit
+  nameWithType: ItemStack.Reinit
+  fullName: OnixRuntime.Core.Items.ItemStack.Reinit
+- uid: OnixRuntime.Core.Items.ItemStack.SaveToNbt*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.SaveToNbt
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_SaveToNbt
+  name: SaveToNbt
+  nameWithType: ItemStack.SaveToNbt
+  fullName: OnixRuntime.Core.Items.ItemStack.SaveToNbt
+- uid: OnixRuntime.Core.Items.ItemStack.LoadFromNbt*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.LoadFromNbt
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_LoadFromNbt_OnixRuntime_Core_NBT_ObjectTag_
+  name: LoadFromNbt
+  nameWithType: ItemStack.LoadFromNbt
+  fullName: OnixRuntime.Core.Items.ItemStack.LoadFromNbt
+- uid: OnixRuntime.Core.Items.ItemStack.DisplayName*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.DisplayName
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_DisplayName
+  name: DisplayName
+  nameWithType: ItemStack.DisplayName
+  fullName: OnixRuntime.Core.Items.ItemStack.DisplayName
+- uid: OnixRuntime.Core.Items.ItemStack.CustomName*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.CustomName
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_CustomName
+  name: CustomName
+  nameWithType: ItemStack.CustomName
+  fullName: OnixRuntime.Core.Items.ItemStack.CustomName
+- uid: OnixRuntime.Core.Items.ItemStack.Damage*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Damage
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Damage
+  name: Damage
+  nameWithType: ItemStack.Damage
+  fullName: OnixRuntime.Core.Items.ItemStack.Damage
+- uid: OnixRuntime.Core.Items.ItemStack.Durability*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Durability
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Durability
+  name: Durability
+  nameWithType: ItemStack.Durability
+  fullName: OnixRuntime.Core.Items.ItemStack.Durability
+- uid: OnixRuntime.Core.Items.ItemStack.CanBeDamaged*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.CanBeDamaged
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_CanBeDamaged
+  name: CanBeDamaged
+  nameWithType: ItemStack.CanBeDamaged
+  fullName: OnixRuntime.Core.Items.ItemStack.CanBeDamaged
+- uid: OnixRuntime.Core.Items.ItemStack.Lore*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Lore
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Lore
+  name: Lore
+  nameWithType: ItemStack.Lore
+  fullName: OnixRuntime.Core.Items.ItemStack.Lore
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OnixRuntime.Core.Items.ItemStack.Enchants*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.Enchants
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_Enchants
+  name: Enchants
+  nameWithType: ItemStack.Enchants
+  fullName: OnixRuntime.Core.Items.ItemStack.Enchants
+- uid: OnixRuntime.Core.Items.EnchantmentInstance[]
+  isExternal: true
+  href: OnixRuntime.Core.Items.EnchantmentInstance.html
+  name: EnchantmentInstance[]
+  nameWithType: EnchantmentInstance[]
+  fullName: OnixRuntime.Core.Items.EnchantmentInstance[]
+  nameWithType.vb: EnchantmentInstance()
+  fullName.vb: OnixRuntime.Core.Items.EnchantmentInstance()
+  name.vb: EnchantmentInstance()
+  spec.csharp:
+  - uid: OnixRuntime.Core.Items.EnchantmentInstance
+    name: EnchantmentInstance
+    href: OnixRuntime.Core.Items.EnchantmentInstance.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OnixRuntime.Core.Items.EnchantmentInstance
+    name: EnchantmentInstance
+    href: OnixRuntime.Core.Items.EnchantmentInstance.html
+  - name: (
+  - name: )
+- uid: OnixRuntime.Core.Items.ItemStack.GetEnchant*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.GetEnchant
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_GetEnchant_OnixRuntime_Core_Items_EnchantType_
+  name: GetEnchant
+  nameWithType: ItemStack.GetEnchant
+  fullName: OnixRuntime.Core.Items.ItemStack.GetEnchant
+- uid: OnixRuntime.Core.Items.EnchantType
+  commentId: T:OnixRuntime.Core.Items.EnchantType
+  parent: OnixRuntime.Core.Items
+  href: OnixRuntime.Core.Items.EnchantType.html
+  name: EnchantType
+  nameWithType: EnchantType
+  fullName: OnixRuntime.Core.Items.EnchantType
+- uid: OnixRuntime.Core.Items.EnchantmentInstance
+  commentId: T:OnixRuntime.Core.Items.EnchantmentInstance
+  parent: OnixRuntime.Core.Items
+  href: OnixRuntime.Core.Items.EnchantmentInstance.html
+  name: EnchantmentInstance
+  nameWithType: EnchantmentInstance
+  fullName: OnixRuntime.Core.Items.EnchantmentInstance
+- uid: OnixRuntime.Core.Items.ItemStack.AddEnchant*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.AddEnchant
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_AddEnchant_OnixRuntime_Core_Items_EnchantType_System_Int32_
+  name: AddEnchant
+  nameWithType: ItemStack.AddEnchant
+  fullName: OnixRuntime.Core.Items.ItemStack.AddEnchant
+- uid: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_AddOrUpdateEnchant_OnixRuntime_Core_Items_EnchantType_System_Int32_
+  name: AddOrUpdateEnchant
+  nameWithType: ItemStack.AddOrUpdateEnchant
+  fullName: OnixRuntime.Core.Items.ItemStack.AddOrUpdateEnchant
+- uid: OnixRuntime.Core.Items.ItemStack.RemoveEnchant*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.RemoveEnchant
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_RemoveEnchant_OnixRuntime_Core_Items_EnchantType_
+  name: RemoveEnchant
+  nameWithType: ItemStack.RemoveEnchant
+  fullName: OnixRuntime.Core.Items.ItemStack.RemoveEnchant
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OnixRuntime.Core.Items.ItemStack.ToString*
+  commentId: Overload:OnixRuntime.Core.Items.ItemStack.ToString
+  href: OnixRuntime.Core.Items.ItemStack.html#OnixRuntime_Core_Items_ItemStack_ToString
+  name: ToString
+  nameWithType: ItemStack.ToString
+  fullName: OnixRuntime.Core.Items.ItemStack.ToString

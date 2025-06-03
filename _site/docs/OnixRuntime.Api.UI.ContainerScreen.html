@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ContainerScreen | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ContainerScreen | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a UI screen for interacting with containers such as chests or inventories.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_UI_ContainerScreen.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.UI.ContainerScreen%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.UI.ContainerScreen">
+
+
+
+  <h1 id="OnixRuntime_Api_UI_ContainerScreen" data-uid="OnixRuntime.Api.UI.ContainerScreen" class="text-break">
+Class ContainerScreen  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a UI screen for interacting with containers such as chests or inventories.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ContainerScreen : MemoryAddressContainer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html">MemoryAddressContainer</a></div>
+      <div><span class="xref">ContainerScreen</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen__ctor_" data-uid="OnixRuntime.Api.UI.ContainerScreen.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen__ctor_System_IntPtr_" data-uid="OnixRuntime.Api.UI.ContainerScreen.#ctor(System.IntPtr)">
+  ContainerScreen(nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainerScreen(nint currentMemoryAddress)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentMemoryAddress</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The memory address of the container screen.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_BlockPos_" data-uid="OnixRuntime.Api.UI.ContainerScreen.BlockPos*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_BlockPos" data-uid="OnixRuntime.Api.UI.ContainerScreen.BlockPos">
+  BlockPos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the block position associated with this container, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockPos BlockPos { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_Entity_" data-uid="OnixRuntime.Api.UI.ContainerScreen.Entity*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_Entity" data-uid="OnixRuntime.Api.UI.ContainerScreen.Entity">
+  Entity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the entity associated with this container, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity? Entity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_EntityId_" data-uid="OnixRuntime.Api.UI.ContainerScreen.EntityId*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_EntityId" data-uid="OnixRuntime.Api.UI.ContainerScreen.EntityId">
+  EntityId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the entity ID associated with this container, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong EntityId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_HoveredContainer_" data-uid="OnixRuntime.Api.UI.ContainerScreen.HoveredContainer*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_HoveredContainer" data-uid="OnixRuntime.Api.UI.ContainerScreen.HoveredContainer">
+  HoveredContainer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the currently hovered container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string HoveredContainer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_HoveredSlot_" data-uid="OnixRuntime.Api.UI.ContainerScreen.HoveredSlot*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_HoveredSlot" data-uid="OnixRuntime.Api.UI.ContainerScreen.HoveredSlot">
+  HoveredSlot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the slot index currently hovered by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int HoveredSlot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_HoveringItem_" data-uid="OnixRuntime.Api.UI.ContainerScreen.HoveringItem*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_HoveringItem" data-uid="OnixRuntime.Api.UI.ContainerScreen.HoveringItem">
+  HoveringItem
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Will be true when the player is hovering over an item, not a slot in the container screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HoveringItem { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_InventoryLayout_" data-uid="OnixRuntime.Api.UI.ContainerScreen.InventoryLayout*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_InventoryLayout" data-uid="OnixRuntime.Api.UI.ContainerScreen.InventoryLayout">
+  InventoryLayout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which tab of the inventory is selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InventoryLayout InventoryLayout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.UI.InventoryLayout.html">InventoryLayout</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_Type_" data-uid="OnixRuntime.Api.UI.ContainerScreen.Type*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_Type" data-uid="OnixRuntime.Api.UI.ContainerScreen.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of this container screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainerScreenType Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.UI.ContainerScreenType.html">ContainerScreenType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_AutoPlace_" data-uid="OnixRuntime.Api.UI.ContainerScreen.AutoPlace*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_AutoPlace_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32)">
+  AutoPlace(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Automatically places as many items as possible into the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AutoPlace(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_AutoPlace_" data-uid="OnixRuntime.Api.UI.ContainerScreen.AutoPlace*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_AutoPlace_System_String_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32,System.Int32)">
+  AutoPlace(string, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Automatically places a specified quantity of items into the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AutoPlace(string containerName, int slot, int quantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+    <dt><code>quantity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The quantity to place.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_Close_" data-uid="OnixRuntime.Api.UI.ContainerScreen.Close*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_Close" data-uid="OnixRuntime.Api.UI.ContainerScreen.Close">
+  Close()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the container screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_DropAll_" data-uid="OnixRuntime.Api.UI.ContainerScreen.DropAll*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_DropAll_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.DropAll(System.String,System.Int32)">
+  DropAll(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Drops all items from the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DropAll(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_DropOne_" data-uid="OnixRuntime.Api.UI.ContainerScreen.DropOne*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_DropOne_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.DropOne(System.String,System.Int32)">
+  DropOne(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Drops one item from the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DropOne(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_GetItem_" data-uid="OnixRuntime.Api.UI.ContainerScreen.GetItem*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_GetItem_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.GetItem(System.String,System.Int32)">
+  GetItem(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the item in the specified container and slot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemStack GetItem(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the container.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Items.ItemStack.html">ItemStack</a></dt>
+    <dd><p>The <a class="xref" href="OnixRuntime.Api.Items.ItemStack.html">ItemStack</a> in the specified slot.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_PlaceAll_" data-uid="OnixRuntime.Api.UI.ContainerScreen.PlaceAll*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_PlaceAll_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.PlaceAll(System.String,System.Int32)">
+  PlaceAll(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Places all items into the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlaceAll(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_PlaceOne_" data-uid="OnixRuntime.Api.UI.ContainerScreen.PlaceOne*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_PlaceOne_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.PlaceOne(System.String,System.Int32)">
+  PlaceOne(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Places one item into the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlaceOne(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_SendFlyingItem_" data-uid="OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_SendFlyingItem_OnixRuntime_Api_Items_ItemStack_System_String_System_Int32_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(OnixRuntime.Api.Items.ItemStack,System.String,System.Int32,System.String,System.Int32)">
+  SendFlyingItem(ItemStack, string, int, string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a flying item animation from a source to a target container and slot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendFlyingItem(ItemStack stack, string sourceContainerName, int sourceSlot, string targetContainerName, int targetSlot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stack</code> <a class="xref" href="OnixRuntime.Api.Items.ItemStack.html">ItemStack</a></dt>
+    <dd><p>The item stack to animate.</p>
+</dd>
+    <dt><code>sourceContainerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The source container name.</p>
+</dd>
+    <dt><code>sourceSlot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The source slot index.</p>
+</dd>
+    <dt><code>targetContainerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The target container name.</p>
+</dd>
+    <dt><code>targetSlot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The target slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_SendFlyingItem_" data-uid="OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_SendFlyingItem_System_String_System_Int32_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(System.String,System.Int32,System.String,System.Int32)">
+  SendFlyingItem(string, int, string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a flying item animation from a source to a target container and slot, automatically retrieving the item from the source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendFlyingItem(string sourceContainerName, int sourceSlot, string targetContainerName, int targetSlot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceContainerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The source container name.</p>
+</dd>
+    <dt><code>sourceSlot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The source slot index.</p>
+</dd>
+    <dt><code>targetContainerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The target container name.</p>
+</dd>
+    <dt><code>targetSlot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The target slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_TakeAll_" data-uid="OnixRuntime.Api.UI.ContainerScreen.TakeAll*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_TakeAll_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.TakeAll(System.String,System.Int32)">
+  TakeAll(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes all items from the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TakeAll(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_UI_ContainerScreen_TakeHalf_" data-uid="OnixRuntime.Api.UI.ContainerScreen.TakeHalf*"></a>
+
+  <h3 id="OnixRuntime_Api_UI_ContainerScreen_TakeHalf_System_String_System_Int32_" data-uid="OnixRuntime.Api.UI.ContainerScreen.TakeHalf(System.String,System.Int32)">
+  TakeHalf(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes half of the items from the specified slot in the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TakeHalf(string containerName, int slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>containerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The container name.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The slot index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/UI/ContainerScreen.cs/#L51" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

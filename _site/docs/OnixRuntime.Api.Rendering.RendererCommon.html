@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RendererCommon | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RendererCommon | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Provides common rendering methods for 2D and 3D drawing operations.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Rendering_RendererCommon.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Rendering.RendererCommon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Rendering.RendererCommon">
+
+
+
+  <h1 id="OnixRuntime_Api_Rendering_RendererCommon" data-uid="OnixRuntime.Api.Rendering.RendererCommon" class="text-break">
+Class RendererCommon  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Rendering.html">Rendering</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides common rendering methods for 2D and 3D drawing operations.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RendererCommon</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RendererCommon</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="OnixRuntime.Api.Rendering.RendererTwoDimentional.html">RendererTwoDimentional</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Rendering.RendererWorld.html">RendererWorld</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon__ctor_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon__ctor" data-uid="OnixRuntime.Api.Rendering.RendererCommon.#ctor">
+  RendererCommon()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RendererCommon()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FontType_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FontType*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FontType" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FontType">
+  FontType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lets you set a specific font type to use instead of user preference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontType FontType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.FontType.html">FontType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FontUsage_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FontUsage*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FontUsage" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FontUsage">
+  FontUsage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lets you set the usage for the font so that it respects the user's choice if you're doing something else.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontUsage FontUsage { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.FontUsage.html">FontUsage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_Height_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.Height*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_Height" data-uid="OnixRuntime.Api.Rendering.RendererCommon.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the height of the rendering area.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float Height { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_Size_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.Size*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_Size" data-uid="OnixRuntime.Api.Rendering.RendererCommon.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the size of the rendering area as a vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Vec2 Size { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_Width_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.Width*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_Width" data-uid="OnixRuntime.Api.Rendering.RendererCommon.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the width of the rendering area.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float Width { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawCircle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawCircle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawCircle_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawCircle(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single)">
+  DrawCircle(Vec2, ColorF, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of a circle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawCircle(Vec2 center, ColorF color, float radius, float width)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the circle.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the outline.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawCircle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawCircle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawCircle_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawCircle(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Int32)">
+  DrawCircle(Vec2, ColorF, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of a circle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawCircle(Vec2 center, ColorF color, float radius, float width, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the circle.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the outline.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the circle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,System.Single)">
+  DrawEllipse(Vec2, ColorF, Vec2, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawEllipse(Vec2 center, ColorF color, Vec2 radius, float width)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the outline.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radii of the ellipse.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32)">
+  DrawEllipse(Vec2, ColorF, Vec2, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawEllipse(Vec2 center, ColorF color, Vec2 radius, float width, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the outline.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radii of the ellipse.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Single)">
+  DrawEllipse(Vec2, ColorF, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawEllipse(Vec2 center, ColorF color, float radiusX, float radiusY, float width)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the outline.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Single,System.Int32)">
+  DrawEllipse(Vec2, ColorF, float, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of an ellipse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawEllipse(Vec2 center, ColorF color, float radiusX, float radiusY, float width, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the outline.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawRectangle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawRectangle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawRectangle_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single)">
+  DrawRectangle(Rect, ColorF, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of a rectangle towards the inside only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawRectangle(Rect position, ColorF color, float width)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to draw.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The outline color.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawRoundedRectangle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawRoundedRectangle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawRoundedRectangle_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawRoundedRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single)">
+  DrawRoundedRectangle(Rect, ColorF, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of a rounded rectangle towards the inside only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawRoundedRectangle(Rect position, ColorF color, float width, float cornerRadius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to draw.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The outline color.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the corners.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_DrawRoundedRectangle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawRoundedRectangle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_DrawRoundedRectangle_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.DrawRoundedRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Int32)">
+  DrawRoundedRectangle(Rect, ColorF, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the outline of a rounded rectangle towards the inside only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawRoundedRectangle(Rect position, ColorF color, float width, float cornerRadius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to draw.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The outline color.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The width of the outline.</p>
+</dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the corners.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the rounded corners.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillCircle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillCircle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillCircle_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillCircle(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single)">
+  FillCircle(Vec2, ColorF, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills a circle with the specified color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillCircle(Vec2 center, ColorF color, float radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the circle.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillCircle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillCircle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillCircle_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillCircle(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Int32)">
+  FillCircle(Vec2, ColorF, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills a circle with the specified color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillCircle(Vec2 center, ColorF color, float radius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the circle.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the circle.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the circle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2)">
+  FillEllipse(Vec2, ColorF, Vec2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills an ellipse with the specified color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillEllipse(Vec2 center, ColorF color, Vec2 radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radii of the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Vec2_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Vec2,System.Int32)">
+  FillEllipse(Vec2, ColorF, Vec2, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills an ellipse with the specified color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillEllipse(Vec2 center, ColorF color, Vec2 radius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The radii of the ellipse.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single)">
+  FillEllipse(Vec2, ColorF, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills an ellipse with the specified color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillEllipse(Vec2 center, ColorF color, float radiusX, float radiusY)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillEllipse_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Int32)">
+  FillEllipse(Vec2, ColorF, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills an ellipse with the specified color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillEllipse(Vec2 center, ColorF color, float radiusX, float radiusY, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The center of the ellipse.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The x-radius of the ellipse.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The y-radius of the ellipse.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the ellipse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillRectangle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillRectangle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillRectangle_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)">
+  FillRectangle(Rect, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills a rectangle with the specified color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillRectangle(Rect position, ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to fill.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillRoundedRectangle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillRoundedRectangle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillRoundedRectangle_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillRoundedRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single)">
+  FillRoundedRectangle(Rect, ColorF, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills a rounded rectangle with the specified color and corner radius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillRoundedRectangle(Rect position, ColorF color, float cornerRadius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to fill.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the corners.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_FillRoundedRectangle_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillRoundedRectangle*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_FillRoundedRectangle_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.FillRoundedRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single,System.Int32)">
+  FillRoundedRectangle(Rect, ColorF, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills a rounded rectangle with the specified color and corner radius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillRoundedRectangle(Rect position, ColorF color, float cornerRadius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to fill.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The fill color.</p>
+</dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The radius of the corners.</p>
+</dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations for the rounded corners.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_GetOpacity_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.GetOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_GetOpacity_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.GetOpacity(System.Single)">
+  GetOpacity(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the resulting opacity after applying the opacity stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float GetOpacity(float opacity = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The base opacity value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The resulting opacity.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_GetTextureStatus_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_GetTextureStatus_OnixRuntime_Api_Rendering_TexturePath_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.GetTextureStatus(OnixRuntime.Api.Rendering.TexturePath)">
+  GetTextureStatus(TexturePath)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the status of a texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual RendererTextureStatus GetTextureStatus(TexturePath texture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture texture.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.RendererTextureStatus.html">RendererTextureStatus</a></dt>
+    <dd><p>The status of the texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_MeasureText_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.MeasureText*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_MeasureText_System_String_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.MeasureText(System.String,System.Single)">
+  MeasureText(string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measures the size of the specified text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Vec2 MeasureText(string text, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to measure.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scale of the text.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The size of the text as a vector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_PopOpacity_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PopOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_PopOpacity" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PopOpacity">
+  PopOpacity()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L471"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PopOpacity()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_PopTransformation_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PopTransformation*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_PopTransformation" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PopTransformation">
+  PopTransformation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PopTransformation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_PushOpacity_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PushOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_PushOpacity_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PushOpacity(System.Single)">
+  PushOpacity(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pushes an opacity value onto the stack and returns a popper for automatic management.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual RendererCommon.OpacityPopper PushOpacity(float opacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity value to push.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a>.<a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.OpacityPopper.html">OpacityPopper</a></dt>
+    <dd><p>An <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.OpacityPopper.html">RendererCommon.OpacityPopper</a> for automatic pop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_PushTransformation_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PushTransformation*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_PushTransformation_OnixRuntime_Api_Maths_TransformationMatrix_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)">
+  PushTransformation(TransformationMatrix, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pushes a transformation matrix onto the stack and returns a popper for automatic management.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual RendererCommon.TransformationPopper PushTransformation(TransformationMatrix transformation, bool multiplyPrevious = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>transformation</code> <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd><p>The transformation matrix to push.</p>
+</dd>
+    <dt><code>multiplyPrevious</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to multiply with the previous transformation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a>.<a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper.html">TransformationPopper</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper.html">RendererCommon.TransformationPopper</a> for automatic pop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderText_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderText*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderText_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_String_OnixRuntime_Api_Rendering_TextAlignment_OnixRuntime_Api_Rendering_TextAlignment_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderText(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.String,OnixRuntime.Api.Rendering.TextAlignment,OnixRuntime.Api.Rendering.TextAlignment,System.Single)">
+  RenderText(Vec2, ColorF, string, TextAlignment, TextAlignment, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders aligned text at the specified position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderText(Vec2 position, ColorF color, string text, TextAlignment alignmentX, TextAlignment alignmentY, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The position to render the text.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the text.</p>
+</dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to render.</p>
+</dd>
+    <dt><code>alignmentX</code> <a class="xref" href="OnixRuntime.Api.Rendering.TextAlignment.html">TextAlignment</a></dt>
+    <dd><p>The horizontal alignment.</p>
+</dd>
+    <dt><code>alignmentY</code> <a class="xref" href="OnixRuntime.Api.Rendering.TextAlignment.html">TextAlignment</a></dt>
+    <dd><p>The vertical alignment.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scale of the text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderText_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderText*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderText_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_String_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderText(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.String,System.Single)">
+  RenderText(Vec2, ColorF, string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders text at the specified position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderText(Vec2 position, ColorF color, string text, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The position to render the text.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the text.</p>
+</dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to render.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scale of the text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderText_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderText*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderText_System_Drawing_Rectangle_OnixRuntime_Api_Maths_ColorF_System_String_OnixRuntime_Api_Rendering_TextAlignment_OnixRuntime_Api_Rendering_TextAlignment_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderText(System.Drawing.Rectangle,OnixRuntime.Api.Maths.ColorF,System.String,OnixRuntime.Api.Rendering.TextAlignment,OnixRuntime.Api.Rendering.TextAlignment,System.Single)">
+  RenderText(Rectangle, ColorF, string, TextAlignment, TextAlignment, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders aligned text within a rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RenderText(Rectangle position, ColorF color, string text, TextAlignment alignmentX, TextAlignment alignmentY, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.rectangle">Rectangle</a></dt>
+    <dd><p>The rectangle to render the text in.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the text.</p>
+</dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to render.</p>
+</dd>
+    <dt><code>alignmentX</code> <a class="xref" href="OnixRuntime.Api.Rendering.TextAlignment.html">TextAlignment</a></dt>
+    <dd><p>The horizontal alignment.</p>
+</dd>
+    <dt><code>alignmentY</code> <a class="xref" href="OnixRuntime.Api.Rendering.TextAlignment.html">TextAlignment</a></dt>
+    <dd><p>The vertical alignment.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scale of the text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderTextCentered_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTextCentered*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderTextCentered_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_System_String_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTextCentered(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.String,System.Single)">
+  RenderTextCentered(Rect, ColorF, string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders centered text within a rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderTextCentered(Rect position, ColorF color, string text, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to center the text in.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the text.</p>
+</dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to render.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scale of the text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderTextCentered_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTextCentered*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderTextCentered_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_ColorF_System_String_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTextCentered(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.String,System.Single)">
+  RenderTextCentered(Vec2, ColorF, string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders centered text at the specified position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderTextCentered(Vec2 position, ColorF color, string text, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a></dt>
+    <dd><p>The position to render the text.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the text.</p>
+</dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to render.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scale of the text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)">
+  RenderTexture(Rect, TexturePath, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders a texture in the specified Region with a color tint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderTexture(Rect region, TexturePath texture, ColorF tint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The Region to render the texture in.</p>
+</dd>
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture texture.</p>
+</dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color tint.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Rect_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Rect)">
+  RenderTexture(Rect, TexturePath, ColorF, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders a texture in the specified Region with a color tint and UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderTexture(Rect region, TexturePath texture, ColorF tint, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The Region to render the texture in.</p>
+</dd>
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture texture.</p>
+</dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color tint.</p>
+</dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The UV coordinates.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Rendering_TexturePath_System_Single_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Rendering.TexturePath,System.Single)">
+  RenderTexture(Rect, TexturePath, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders a texture in the specified Region with optional opacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderTexture(Rect region, TexturePath texture, float opacity = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The Region to render the texture in.</p>
+</dd>
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture texture.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity of the texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_RenderTexture_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Rendering_TexturePath_System_Single_OnixRuntime_Api_Maths_Rect_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.RenderTexture(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Rendering.TexturePath,System.Single,OnixRuntime.Api.Maths.Rect)">
+  RenderTexture(Rect, TexturePath, float, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders a texture in the specified Region with optional opacity and UV coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderTexture(Rect region, TexturePath texture, float opacity, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The Region to render the texture in.</p>
+</dd>
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture texture.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity of the texture.</p>
+</dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The UV coordinates.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_SetDefaultState_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.SetDefaultState*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_SetDefaultState_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.SetDefaultState(System.Boolean)">
+  SetDefaultState(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L505"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the default state of the renderer, optionally as the final state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetDefaultState(bool final)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>final</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether this is the final state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_UnloadTexture_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_UnloadTexture_OnixRuntime_Api_Rendering_TexturePath_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.UnloadTexture(OnixRuntime.Api.Rendering.TexturePath)">
+  UnloadTexture(TexturePath)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads the specified texture from the renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UnloadTexture(TexturePath texture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_UploadTexture_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.UploadTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_UploadTexture_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Utils_RawImageData_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.UploadTexture(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Utils.RawImageData)">
+  UploadTexture(TexturePath, RawImageData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uploads a texture to the renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UploadTexture(TexturePath path, RawImageData data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd><p>The texture path.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a></dt>
+    <dd><p>The raw image data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererCommon_WrapText_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.WrapText*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererCommon_WrapText_System_String_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererCommon.WrapText(System.String,System.Single,System.Single,System.Int32)">
+  WrapText(string, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wraps text to fit within a maximum width and number of lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string WrapText(string text, float maxWidth, float scale = 1, int maxLines = 6000)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to wrap.</p>
+</dd>
+    <dt><code>maxWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The maximum width for the text.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scale of the text.</p>
+</dd>
+    <dt><code>maxLines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of lines.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The wrapped text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Rendering/RendererCommon.cs/#L74" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

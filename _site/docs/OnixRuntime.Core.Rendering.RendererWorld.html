@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RendererWorld | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RendererWorld | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Core_Rendering_RendererWorld.md&amp;value=---%0Auid%3A%20OnixRuntime.Core.Rendering.RendererWorld%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Core.Rendering.RendererWorld">
+
+
+
+  <h1 id="OnixRuntime_Core_Rendering_RendererWorld" data-uid="OnixRuntime.Core.Rendering.RendererWorld" class="text-break">
+Class RendererWorld  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Core.html">Core</a>.<a class="xref" href="OnixRuntime.Core.Rendering.html">Rendering</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RendererWorld : RendererCommon, IGameRenderer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html">RendererCommon</a></div>
+      <div><span class="xref">RendererWorld</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="OnixRuntime.Core.Rendering.IGameRenderer.html">IGameRenderer</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_FillRoundedRectangle_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Maths_ColorF_System_Single_">RendererCommon.FillRoundedRectangle(Rect, ColorF, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_DrawRoundedRectangle_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_">RendererCommon.DrawRoundedRectangle(Rect, ColorF, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_DrawEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_OnixRuntime_Core_Maths_Vec2_System_Single_System_Int32_">RendererCommon.DrawEllipse(Vec2, ColorF, Vec2, float, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_DrawEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_System_Single_">RendererCommon.DrawEllipse(Vec2, ColorF, float, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_DrawEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_OnixRuntime_Core_Maths_Vec2_System_Single_">RendererCommon.DrawEllipse(Vec2, ColorF, Vec2, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_FillEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_OnixRuntime_Core_Maths_Vec2_System_Int32_">RendererCommon.FillEllipse(Vec2, ColorF, Vec2, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_FillEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_">RendererCommon.FillEllipse(Vec2, ColorF, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_FillEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_OnixRuntime_Core_Maths_Vec2_">RendererCommon.FillEllipse(Vec2, ColorF, Vec2)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_FillCircle_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_System_Int32_">RendererCommon.FillCircle(Vec2, ColorF, float, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_FillCircle_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_">RendererCommon.FillCircle(Vec2, ColorF, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_DrawCircle_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_System_Int32_">RendererCommon.DrawCircle(Vec2, ColorF, float, float, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_DrawCircle_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_">RendererCommon.DrawCircle(Vec2, ColorF, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_RenderTextCentered_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_String_System_Single_">RendererCommon.RenderTextCentered(Vec2, ColorF, string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_RenderTextCentered_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Maths_ColorF_System_String_System_Single_">RendererCommon.RenderTextCentered(Rect, ColorF, string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_RenderText_System_Drawing_Rectangle_OnixRuntime_Core_Maths_ColorF_System_String_OnixRuntime_Core_Rendering_TextAlignment_OnixRuntime_Core_Rendering_TextAlignment_System_Single_">RendererCommon.RenderText(Rectangle, ColorF, string, TextAlignment, TextAlignment, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_WrapText_System_String_System_Single_System_Single_System_Int32_">RendererCommon.WrapText(string, float, float, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_MeasureText_System_String_System_Single_">RendererCommon.MeasureText(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_UnloadTexture_OnixRuntime_Core_Rendering_TexturePath_">RendererCommon.UnloadTexture(TexturePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_UploadTexture_OnixRuntime_Core_Rendering_TexturePath_OnixRuntime_Core_Utils_RawImageData_">RendererCommon.UploadTexture(TexturePath, RawImageData)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_GetTextureStatus_OnixRuntime_Core_Rendering_TexturePath_">RendererCommon.GetTextureStatus(TexturePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_GetOpacity_System_Single_">RendererCommon.GetOpacity(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_PushOpacity_System_Single_">RendererCommon.PushOpacity(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html#OnixRuntime_Core_Rendering_RendererCommon_PopOpacity">RendererCommon.PopOpacity()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_Height_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.Height*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_Height" data-uid="OnixRuntime.Core.Rendering.RendererWorld.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float Height { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_MeshBuilder_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.MeshBuilder*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_MeshBuilder" data-uid="OnixRuntime.Core.Rendering.RendererWorld.MeshBuilder">
+  MeshBuilder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMeshBuilder MeshBuilder { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Core.Rendering.GameMeshBuilder.html">GameMeshBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_Size_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.Size*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_Size" data-uid="OnixRuntime.Core.Rendering.RendererWorld.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vec2 Size { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_Width_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.Width*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_Width" data-uid="OnixRuntime.Core.Rendering.RendererWorld.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float Width { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_DrawEllipse_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawEllipse*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_DrawEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawEllipse(OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.ColorF,System.Single,System.Single,System.Single,System.Int32)">
+  DrawEllipse(Vec2, ColorF, float, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DrawEllipse(Vec2 center, ColorF color, float radiusX, float radiusY, float width, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_DrawLine_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawLine*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_DrawLine_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawLine(OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.ColorF)">
+  DrawLine(Vec2, Vec2, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawLine(Vec2 point1, Vec2 point2, ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_DrawLine_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawLine*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_DrawLine_OnixRuntime_Core_Maths_Vec3_OnixRuntime_Core_Maths_Vec3_OnixRuntime_Core_Maths_ColorF_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawLine(OnixRuntime.Core.Maths.Vec3,OnixRuntime.Core.Maths.Vec3,OnixRuntime.Core.Maths.ColorF)">
+  DrawLine(Vec3, Vec3, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawLine(Vec3 point1, Vec3 point2, ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_DrawLine_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawLine*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_DrawLine_OnixRuntime_Core_Maths_Vec3_OnixRuntime_Core_Maths_Vec3_OnixRuntime_Core_Maths_ColorF_OnixRuntime_Core_Maths_ColorF_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawLine(OnixRuntime.Core.Maths.Vec3,OnixRuntime.Core.Maths.Vec3,OnixRuntime.Core.Maths.ColorF,OnixRuntime.Core.Maths.ColorF)">
+  DrawLine(Vec3, Vec3, ColorF, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DrawLine(Vec3 point1, Vec3 point2, ColorF color1, ColorF color2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>color1</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>color2</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_DrawRectangle_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawRectangle*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_DrawRectangle_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Maths_ColorF_System_Single_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawRectangle(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Maths.ColorF,System.Single)">
+  DrawRectangle(Rect, ColorF, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>this will fill towards the inside of the rectangle only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DrawRectangle(Rect position, ColorF color, float width)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_DrawRoundedRectangle_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawRoundedRectangle*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_DrawRoundedRectangle_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.DrawRoundedRectangle(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Maths.ColorF,System.Single,System.Single,System.Int32)">
+  DrawRoundedRectangle(Rect, ColorF, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>this will fill towards the inside of the rectangle only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DrawRoundedRectangle(Rect position, ColorF color, float width, float cornerRadius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_EnableLights_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.EnableLights*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_EnableLights_System_Boolean_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.EnableLights(System.Boolean)">
+  EnableLights(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void EnableLights(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_FillEllipse_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FillEllipse*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_FillEllipse_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_Single_System_Single_System_Int32_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FillEllipse(OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.ColorF,System.Single,System.Single,System.Int32)">
+  FillEllipse(Vec2, ColorF, float, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void FillEllipse(Vec2 center, ColorF color, float radiusX, float radiusY, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_FillRectangle_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FillRectangle*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_FillRectangle_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Maths_ColorF_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FillRectangle(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Maths.ColorF)">
+  FillRectangle(Rect, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void FillRectangle(Rect position, ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_FillRoundedRectangle_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FillRoundedRectangle*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_FillRoundedRectangle_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Maths_ColorF_System_Single_System_Int32_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FillRoundedRectangle(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Maths.ColorF,System.Single,System.Int32)">
+  FillRoundedRectangle(Rect, ColorF, float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void FillRoundedRectangle(Rect position, ColorF color, float cornerRadius, int iterations)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>cornerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_FlushMesh_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FlushMesh*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_FlushMesh" data-uid="OnixRuntime.Core.Rendering.RendererWorld.FlushMesh">
+  FlushMesh()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FlushMesh()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_GetWorldRenderSettings_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.GetWorldRenderSettings*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_GetWorldRenderSettings" data-uid="OnixRuntime.Core.Rendering.RendererWorld.GetWorldRenderSettings">
+  GetWorldRenderSettings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RendererWorld.WorldRenderSettingsPopper GetWorldRenderSettings()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.html">RendererWorld</a>.<a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.WorldRenderSettingsPopper.html">WorldRenderSettingsPopper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_InternalPushWorldRenderSettings_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.InternalPushWorldRenderSettings*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_InternalPushWorldRenderSettings_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.InternalPushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  InternalPushWorldRenderSettings(bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void InternalPushWorldRenderSettings(bool depthTest = true, bool renderBackface = false, bool simulateUI = false, bool renderFrontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthTest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>renderBackface</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>simulateUI</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>renderFrontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_PopTransformation_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PopTransformation*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_PopTransformation" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PopTransformation">
+  PopTransformation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PopTransformation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_PushTransformation_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushTransformation*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_PushTransformation_OnixRuntime_Core_Maths_TransformationMatrix_System_Boolean_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushTransformation(OnixRuntime.Core.Maths.TransformationMatrix,System.Boolean)">
+  PushTransformation(TransformationMatrix, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L320"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override RendererCommon.TransformationPopper PushTransformation(TransformationMatrix transformation, bool multiplyPrevious = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>transformation</code> <a class="xref" href="OnixRuntime.Core.Maths.TransformationMatrix.html">TransformationMatrix</a></dt>
+    <dd></dd>
+    <dt><code>multiplyPrevious</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.html">RendererCommon</a>.<a class="xref" href="OnixRuntime.Core.Rendering.RendererCommon.TransformationPopper.html">TransformationPopper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_PushWorldRenderSettings_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushWorldRenderSettings*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_PushWorldRenderSettings_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  PushWorldRenderSettings(bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RendererWorld.WorldRenderSettingsPopper PushWorldRenderSettings(bool depthTest = true, bool renderBackface = false, bool simulateUI = false, bool renderFrontFace = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthTest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>renderBackface</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>simulateUI</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>renderFrontFace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.html">RendererWorld</a>.<a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.WorldRenderSettingsPopper.html">WorldRenderSettingsPopper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_PushWorldUIRenderSettings_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushWorldUIRenderSettings*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_PushWorldUIRenderSettings_OnixRuntime_Core_Maths_BlockPos_OnixRuntime_Core_World_BlockFace_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_Vec2_System_Single_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Core.Maths.BlockPos,OnixRuntime.Core.World.BlockFace,OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.Vec2,System.Single)">
+  PushWorldUIRenderSettings(BlockPos, BlockFace, Vec2, Vec2, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RendererWorld.WorldUIRenderSettingsPopper PushWorldUIRenderSettings(BlockPos position, BlockFace face, Vec2 pixelsPerBlock, Vec2 sizeInBlocks, float extraRotation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+    <dt><code>face</code> <a class="xref" href="OnixRuntime.Core.World.BlockFace.html">BlockFace</a></dt>
+    <dd></dd>
+    <dt><code>pixelsPerBlock</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>sizeInBlocks</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>extraRotation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.html">RendererWorld</a>.<a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.WorldUIRenderSettingsPopper.html">WorldUIRenderSettingsPopper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_PushWorldUIRenderSettings_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushWorldUIRenderSettings*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_PushWorldUIRenderSettings_OnixRuntime_Core_Maths_Vec3_OnixRuntime_Core_World_BlockFace_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_Vec2_System_Single_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Core.Maths.Vec3,OnixRuntime.Core.World.BlockFace,OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.Vec2,System.Single)">
+  PushWorldUIRenderSettings(Vec3, BlockFace, Vec2, Vec2, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RendererWorld.WorldUIRenderSettingsPopper PushWorldUIRenderSettings(Vec3 position, BlockFace face, Vec2 pixelsPerBlock, Vec2 sizeInBlocks, float extraRotation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>face</code> <a class="xref" href="OnixRuntime.Core.World.BlockFace.html">BlockFace</a></dt>
+    <dd></dd>
+    <dt><code>pixelsPerBlock</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>sizeInBlocks</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>extraRotation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.html">RendererWorld</a>.<a class="xref" href="OnixRuntime.Core.Rendering.RendererWorld.WorldUIRenderSettingsPopper.html">WorldUIRenderSettingsPopper</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderBoundingBox_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderBoundingBox*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderBoundingBox_OnixRuntime_Core_Maths_BoundingBox_OnixRuntime_Core_Maths_ColorF_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderBoundingBox(OnixRuntime.Core.Maths.BoundingBox,OnixRuntime.Core.Maths.ColorF)">
+  RenderBoundingBox(BoundingBox, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderBoundingBox(BoundingBox box, ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Core.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderItem_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderItem*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderItem_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Items_ItemStack_System_Boolean_System_Single_System_Boolean_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderItem(OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Items.ItemStack,System.Boolean,System.Single,System.Boolean)">
+  RenderItem(Vec2, ItemStack, bool, float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RenderItem(Vec2 position, ItemStack item, bool renderDecorations = false, float scale = 1, bool forceEnchantEffect = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>item</code> <a class="xref" href="OnixRuntime.Core.Items.ItemStack.html">ItemStack</a></dt>
+    <dd></dd>
+    <dt><code>renderDecorations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>forceEnchantEffect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderItem_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderItem*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderItem_System_Single_System_Single_OnixRuntime_Core_Items_ItemStack_System_Boolean_System_Single_System_Boolean_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderItem(System.Single,System.Single,OnixRuntime.Core.Items.ItemStack,System.Boolean,System.Single,System.Boolean)">
+  RenderItem(float, float, ItemStack, bool, float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderItem(float x, float y, ItemStack item, bool renderDecorations = false, float scale = 1, bool forceEnchantEffect = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>item</code> <a class="xref" href="OnixRuntime.Core.Items.ItemStack.html">ItemStack</a></dt>
+    <dd></dd>
+    <dt><code>renderDecorations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>forceEnchantEffect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderText_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderText*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderText_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_String_OnixRuntime_Core_Rendering_TextAlignment_OnixRuntime_Core_Rendering_TextAlignment_System_Single_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderText(OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.ColorF,System.String,OnixRuntime.Core.Rendering.TextAlignment,OnixRuntime.Core.Rendering.TextAlignment,System.Single)">
+  RenderText(Vec2, ColorF, string, TextAlignment, TextAlignment, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RenderText(Vec2 position, ColorF color, string text, TextAlignment alignmentX, TextAlignment alignmentY, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>alignmentX</code> <a class="xref" href="OnixRuntime.Core.Rendering.TextAlignment.html">TextAlignment</a></dt>
+    <dd></dd>
+    <dt><code>alignmentY</code> <a class="xref" href="OnixRuntime.Core.Rendering.TextAlignment.html">TextAlignment</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderText_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderText*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderText_OnixRuntime_Core_Maths_Vec2_OnixRuntime_Core_Maths_ColorF_System_String_System_Single_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderText(OnixRuntime.Core.Maths.Vec2,OnixRuntime.Core.Maths.ColorF,System.String,System.Single)">
+  RenderText(Vec2, ColorF, string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RenderText(Vec2 position, ColorF color, string text, float scale = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec2.html">Vec2</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Rendering_TexturePath_OnixRuntime_Core_Maths_ColorF_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Rendering.TexturePath,OnixRuntime.Core.Maths.ColorF)">
+  RenderTexture(Rect, TexturePath, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RenderTexture(Rect region, TexturePath path, ColorF tint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>path</code> <a class="xref" href="OnixRuntime.Core.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd></dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Rendering_TexturePath_OnixRuntime_Core_Maths_ColorF_OnixRuntime_Core_Maths_Rect_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Rendering.TexturePath,OnixRuntime.Core.Maths.ColorF,OnixRuntime.Core.Maths.Rect)">
+  RenderTexture(Rect, TexturePath, ColorF, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RenderTexture(Rect region, TexturePath path, ColorF tint, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>path</code> <a class="xref" href="OnixRuntime.Core.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd></dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Core.Maths.ColorF.html">ColorF</a></dt>
+    <dd></dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Rendering_TexturePath_System_Single_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Rendering.TexturePath,System.Single)">
+  RenderTexture(Rect, TexturePath, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RenderTexture(Rect region, TexturePath path, float opacity = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>path</code> <a class="xref" href="OnixRuntime.Core.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd></dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_RenderTexture_OnixRuntime_Core_Maths_Rect_OnixRuntime_Core_Rendering_TexturePath_System_Single_OnixRuntime_Core_Maths_Rect_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.RenderTexture(OnixRuntime.Core.Maths.Rect,OnixRuntime.Core.Rendering.TexturePath,System.Single,OnixRuntime.Core.Maths.Rect)">
+  RenderTexture(Rect, TexturePath, float, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RenderTexture(Rect region, TexturePath path, float opacity, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>path</code> <a class="xref" href="OnixRuntime.Core.Rendering.TexturePath.html">TexturePath</a></dt>
+    <dd></dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Core.Maths.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_SetDefaultState_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetDefaultState*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_SetDefaultState_System_Boolean_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetDefaultState(System.Boolean)">
+  SetDefaultState(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetDefaultState(bool final)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>final</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_SetupLights_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetupLights*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_SetupLights_OnixRuntime_Core_Entities_Entity_System_Int32_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetupLights(OnixRuntime.Core.Entities.Entity,System.Int32)">
+  SetupLights(Entity, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetupLights(Entity entity, int lightEmission = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="OnixRuntime.Core.Entities.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>lightEmission</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_SetupLights_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetupLights*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_SetupLights_OnixRuntime_Core_Maths_BoundingBox_OnixRuntime_Core_Maths_Vec3_System_Int32_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetupLights(OnixRuntime.Core.Maths.BoundingBox,OnixRuntime.Core.Maths.Vec3,System.Int32)">
+  SetupLights(BoundingBox, Vec3, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetupLights(BoundingBox boundingBox, Vec3 center, int lightEmission = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>boundingBox</code> <a class="xref" href="OnixRuntime.Core.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd></dd>
+    <dt><code>center</code> <a class="xref" href="OnixRuntime.Core.Maths.Vec3.html">Vec3</a></dt>
+    <dd></dd>
+    <dt><code>lightEmission</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Core_Rendering_RendererWorld_SetupLights_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetupLights*"></a>
+
+  <h3 id="OnixRuntime_Core_Rendering_RendererWorld_SetupLights_OnixRuntime_Core_Maths_BoundingBox_System_Int32_" data-uid="OnixRuntime.Core.Rendering.RendererWorld.SetupLights(OnixRuntime.Core.Maths.BoundingBox,System.Int32)">
+  SetupLights(BoundingBox, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetupLights(BoundingBox boundingBox, int lightEmission = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>boundingBox</code> <a class="xref" href="OnixRuntime.Core.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd></dd>
+    <dt><code>lightEmission</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Core/Rendering/RendererWorld.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

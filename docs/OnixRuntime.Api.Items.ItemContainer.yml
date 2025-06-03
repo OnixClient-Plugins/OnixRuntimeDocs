@@ -1,0 +1,576 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Items.ItemContainer
+  commentId: T:OnixRuntime.Api.Items.ItemContainer
+  id: ItemContainer
+  parent: OnixRuntime.Api.Items
+  children:
+  - OnixRuntime.Api.Items.ItemContainer.GetItem(System.Int32)
+  - OnixRuntime.Api.Items.ItemContainer.SetItem(System.Int32,OnixRuntime.Api.Items.ItemStack)
+  - OnixRuntime.Api.Items.ItemContainer.Size
+  - OnixRuntime.Api.Items.ItemContainer.Slots
+  langs:
+  - csharp
+  - vb
+  name: ItemContainer
+  nameWithType: ItemContainer
+  fullName: OnixRuntime.Api.Items.ItemContainer
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/ItemContainer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ItemContainer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/ItemContainer.cs
+    startLine: 7
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Represents a container for item stacks, providing access to items and slots.
+  example: []
+  syntax:
+    content: 'public class ItemContainer : MemoryAddressContainer'
+    content.vb: Public Class ItemContainer Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Items.ItemContainer.Size
+  commentId: P:OnixRuntime.Api.Items.ItemContainer.Size
+  id: Size
+  parent: OnixRuntime.Api.Items.ItemContainer
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: ItemContainer.Size
+  fullName: OnixRuntime.Api.Items.ItemContainer.Size
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/ItemContainer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Size
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/ItemContainer.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Gets the number of slots in the container.
+  example: []
+  syntax:
+    content: public int Size { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Size As Integer
+  overload: OnixRuntime.Api.Items.ItemContainer.Size*
+- uid: OnixRuntime.Api.Items.ItemContainer.GetItem(System.Int32)
+  commentId: M:OnixRuntime.Api.Items.ItemContainer.GetItem(System.Int32)
+  id: GetItem(System.Int32)
+  parent: OnixRuntime.Api.Items.ItemContainer
+  langs:
+  - csharp
+  - vb
+  name: GetItem(int)
+  nameWithType: ItemContainer.GetItem(int)
+  fullName: OnixRuntime.Api.Items.ItemContainer.GetItem(int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/ItemContainer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/ItemContainer.cs
+    startLine: 21
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Gets the item stack at the specified index.
+  example: []
+  syntax:
+    content: public ItemStack GetItem(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index of the item to retrieve.
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+      description: The <xref href="OnixRuntime.Api.Items.ItemStack" data-throw-if-not-resolved="false"></xref> at the specified index.
+    content.vb: Public Function GetItem(index As Integer) As ItemStack
+  overload: OnixRuntime.Api.Items.ItemContainer.GetItem*
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    commentId: T:System.IndexOutOfRangeException
+    description: Thrown if the index is out of range.
+  nameWithType.vb: ItemContainer.GetItem(Integer)
+  fullName.vb: OnixRuntime.Api.Items.ItemContainer.GetItem(Integer)
+  name.vb: GetItem(Integer)
+- uid: OnixRuntime.Api.Items.ItemContainer.SetItem(System.Int32,OnixRuntime.Api.Items.ItemStack)
+  commentId: M:OnixRuntime.Api.Items.ItemContainer.SetItem(System.Int32,OnixRuntime.Api.Items.ItemStack)
+  id: SetItem(System.Int32,OnixRuntime.Api.Items.ItemStack)
+  parent: OnixRuntime.Api.Items.ItemContainer
+  langs:
+  - csharp
+  - vb
+  name: SetItem(int, ItemStack)
+  nameWithType: ItemContainer.SetItem(int, ItemStack)
+  fullName: OnixRuntime.Api.Items.ItemContainer.SetItem(int, OnixRuntime.Api.Items.ItemStack)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/ItemContainer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/ItemContainer.cs
+    startLine: 36
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Sets an item in a container.
+  remarks: This function requires trust or creative mode.
+  example: []
+  syntax:
+    content: public void SetItem(int index, ItemStack item)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index of the item to set.
+    - id: item
+      type: OnixRuntime.Api.Items.ItemStack
+      description: The item to be set.
+    content.vb: Public Sub SetItem(index As Integer, item As ItemStack)
+  overload: OnixRuntime.Api.Items.ItemContainer.SetItem*
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    commentId: T:System.IndexOutOfRangeException
+    description: Thrown if the index is out of range.
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ItemContainer.SetItem(Integer, ItemStack)
+  fullName.vb: OnixRuntime.Api.Items.ItemContainer.SetItem(Integer, OnixRuntime.Api.Items.ItemStack)
+  name.vb: SetItem(Integer, ItemStack)
+- uid: OnixRuntime.Api.Items.ItemContainer.Slots
+  commentId: P:OnixRuntime.Api.Items.ItemContainer.Slots
+  id: Slots
+  parent: OnixRuntime.Api.Items.ItemContainer
+  langs:
+  - csharp
+  - vb
+  name: Slots
+  nameWithType: ItemContainer.Slots
+  fullName: OnixRuntime.Api.Items.ItemContainer.Slots
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/ItemContainer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Slots
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/ItemContainer.cs
+    startLine: 44
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Gets all item stacks in the container slots.
+  example: []
+  syntax:
+    content: public ItemStack[] Slots { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Items.ItemStack[]
+    content.vb: Public ReadOnly Property Slots As ItemStack()
+  overload: OnixRuntime.Api.Items.ItemContainer.Slots*
+references:
+- uid: OnixRuntime.Api.Items
+  commentId: N:OnixRuntime.Api.Items
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Items
+  nameWithType: OnixRuntime.Api.Items
+  fullName: OnixRuntime.Api.Items
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Items.ItemContainer.Size*
+  commentId: Overload:OnixRuntime.Api.Items.ItemContainer.Size
+  href: OnixRuntime.Api.Items.ItemContainer.html#OnixRuntime_Api_Items_ItemContainer_Size
+  name: Size
+  nameWithType: ItemContainer.Size
+  fullName: OnixRuntime.Api.Items.ItemContainer.Size
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Items.ItemStack
+  commentId: T:OnixRuntime.Api.Items.ItemStack
+  parent: OnixRuntime.Api.Items
+  href: OnixRuntime.Api.Items.ItemStack.html
+  name: ItemStack
+  nameWithType: ItemStack
+  fullName: OnixRuntime.Api.Items.ItemStack
+- uid: System.IndexOutOfRangeException
+  commentId: T:System.IndexOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception
+  name: IndexOutOfRangeException
+  nameWithType: IndexOutOfRangeException
+  fullName: System.IndexOutOfRangeException
+- uid: OnixRuntime.Api.Items.ItemContainer.GetItem*
+  commentId: Overload:OnixRuntime.Api.Items.ItemContainer.GetItem
+  href: OnixRuntime.Api.Items.ItemContainer.html#OnixRuntime_Api_Items_ItemContainer_GetItem_System_Int32_
+  name: GetItem
+  nameWithType: ItemContainer.GetItem
+  fullName: OnixRuntime.Api.Items.ItemContainer.GetItem
+- uid: OnixRuntime.Api.Errors.InsufficientTrustException
+  commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+  href: OnixRuntime.Api.Errors.InsufficientTrustException.html
+  name: InsufficientTrustException
+  nameWithType: InsufficientTrustException
+  fullName: OnixRuntime.Api.Errors.InsufficientTrustException
+- uid: OnixRuntime.Api.Items.ItemContainer.SetItem*
+  commentId: Overload:OnixRuntime.Api.Items.ItemContainer.SetItem
+  href: OnixRuntime.Api.Items.ItemContainer.html#OnixRuntime_Api_Items_ItemContainer_SetItem_System_Int32_OnixRuntime_Api_Items_ItemStack_
+  name: SetItem
+  nameWithType: ItemContainer.SetItem
+  fullName: OnixRuntime.Api.Items.ItemContainer.SetItem
+- uid: OnixRuntime.Api.Items.ItemContainer.Slots*
+  commentId: Overload:OnixRuntime.Api.Items.ItemContainer.Slots
+  href: OnixRuntime.Api.Items.ItemContainer.html#OnixRuntime_Api_Items_ItemContainer_Slots
+  name: Slots
+  nameWithType: ItemContainer.Slots
+  fullName: OnixRuntime.Api.Items.ItemContainer.Slots
+- uid: OnixRuntime.Api.Items.ItemStack[]
+  isExternal: true
+  href: OnixRuntime.Api.Items.ItemStack.html
+  name: ItemStack[]
+  nameWithType: ItemStack[]
+  fullName: OnixRuntime.Api.Items.ItemStack[]
+  nameWithType.vb: ItemStack()
+  fullName.vb: OnixRuntime.Api.Items.ItemStack()
+  name.vb: ItemStack()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Items.ItemStack
+    name: ItemStack
+    href: OnixRuntime.Api.Items.ItemStack.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OnixRuntime.Api.Items.ItemStack
+    name: ItemStack
+    href: OnixRuntime.Api.Items.ItemStack.html
+  - name: (
+  - name: )

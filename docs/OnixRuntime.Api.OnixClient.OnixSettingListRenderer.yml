@@ -1,0 +1,1069 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  id: OnixSettingListRenderer
+  parent: OnixRuntime.Api.OnixClient
+  children:
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.#ctor
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Int32)
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll
+  - OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+  langs:
+  - csharp
+  - vb
+  name: OnixSettingListRenderer
+  nameWithType: OnixSettingListRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: OnixSettingListRenderer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 9
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Represents a renderer for a list of Onix settings, allowing configuration and rendering of settings in a UI.
+  example: []
+  syntax:
+    content: 'public class OnixSettingListRenderer : MightOwnMemoryAddressContainer, IDisposable'
+    content.vb: Public Class OnixSettingListRenderer Inherits MightOwnMemoryAddressContainer Implements IDisposable
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.#ctor
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.#ctor
+  id: '#ctor'
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: OnixSettingListRenderer()
+  nameWithType: OnixSettingListRenderer.OnixSettingListRenderer()
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.OnixSettingListRenderer()
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 15
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.OnixClient.OnixSettingListRenderer" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public OnixSettingListRenderer()
+    content.vb: Public Sub New()
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.#ctor*
+  nameWithType.vb: OnixSettingListRenderer.New()
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.New()
+  name.vb: New()
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings
+  id: GetSettings
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetSettings()
+  nameWithType: OnixSettingListRenderer.GetSettings()
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetSettings
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 24
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the list of settings in this renderer. Note that while this is a List, until you call <xref href="OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList%7bOnixRuntime.Api.OnixClient.OnixSetting%7d)" data-throw-if-not-resolved="false"></xref> no changes will be made. It is provided as a List so you don't need to create a new list every time you want to add or remove a setting.
+  example: []
+  syntax:
+    content: public List<OnixSetting> GetSettings()
+    return:
+      type: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.OnixSetting}
+      description: The list of the settings in this renderer.
+    content.vb: Public Function GetSettings() As List(Of OnixSetting)
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings*
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+  id: SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetSettings(IReadOnlyList<OnixSetting>)
+  nameWithType: OnixSettingListRenderer.SetSettings(IReadOnlyList<OnixSetting>)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList<OnixRuntime.Api.OnixClient.OnixSetting>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetSettings
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 30
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Sets the list of settings to be rendered.
+  example: []
+  syntax:
+    content: public void SetSettings(IReadOnlyList<OnixSetting> settings)
+    parameters:
+    - id: settings
+      type: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting}
+      description: The settings to render.
+    content.vb: Public Sub SetSettings(settings As IReadOnlyList(Of OnixSetting))
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings*
+  nameWithType.vb: OnixSettingListRenderer.SetSettings(IReadOnlyList(Of OnixSetting))
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList(Of OnixRuntime.Api.OnixClient.OnixSetting))
+  name.vb: SetSettings(IReadOnlyList(Of OnixSetting))
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll
+  id: ResetScroll
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: ResetScroll()
+  nameWithType: OnixSettingListRenderer.ResetScroll()
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ResetScroll
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 35
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Resets the scroll position of the renderer.
+  example: []
+  syntax:
+    content: public void ResetScroll()
+    content.vb: Public Sub ResetScroll()
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll*
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding
+  commentId: P:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding
+  id: Padding
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: Padding
+  nameWithType: OnixSettingListRenderer.Padding
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Padding
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 40
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets or sets the padding between settings in the renderer.
+  example: []
+  syntax:
+    content: public float Padding { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Padding As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding*
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation
+  id: ResetAnimation
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: ResetAnimation()
+  nameWithType: OnixSettingListRenderer.ResetAnimation()
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ResetAnimation
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 48
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Resets the animation state of the renderer.
+  example: []
+  syntax:
+    content: public void ResetAnimation()
+    content.vb: Public Sub ResetAnimation()
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation*
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource
+  commentId: P:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource
+  id: ModuleSource
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: ModuleSource
+  nameWithType: OnixSettingListRenderer.ModuleSource
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ModuleSource
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 53
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets or sets the module source for the settings in this renderer.
+  example: []
+  syntax:
+    content: public OnixModule? ModuleSource { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixModule
+    content.vb: Public Property ModuleSource As OnixModule
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource*
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Int32)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Int32)
+  id: Render(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Int32)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  langs:
+  - csharp
+  - vb
+  name: Render(Rect, ClickType, int)
+  nameWithType: OnixSettingListRenderer.Render(Rect, InputKey.ClickType, int)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Inputs.InputKey.ClickType, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Render
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingListRenderer.cs
+    startLine: 70
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Renders the settings list at the specified position, handling input and scroll.
+  example: []
+  syntax:
+    content: public void Render(Rect position, InputKey.ClickType click, int scrollCount)
+    parameters:
+    - id: position
+      type: OnixRuntime.Api.Maths.Rect
+      description: The position and size to render at.
+    - id: click
+      type: OnixRuntime.Api.Inputs.InputKey.ClickType
+      description: The click type input.
+    - id: scrollCount
+      type: System.Int32
+      description: The scroll count input.
+    content.vb: Public Sub Render(position As Rect, click As InputKey.ClickType, scrollCount As Integer)
+  overload: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render*
+  nameWithType.vb: OnixSettingListRenderer.Render(Rect, InputKey.ClickType, Integer)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Inputs.InputKey.ClickType, Integer)
+  name.vb: Render(Rect, ClickType, Integer)
+references:
+- uid: OnixRuntime.Api.OnixClient
+  commentId: N:OnixRuntime.Api.OnixClient
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient
+  nameWithType: OnixRuntime.Api.OnixClient
+  fullName: OnixRuntime.Api.OnixClient
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html
+  name: MightOwnMemoryAddressContainer
+  nameWithType: MightOwnMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  commentId: P:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership
+  name: HasMemoryOwnership
+  nameWithType: MightOwnMemoryAddressContainer.HasMemoryOwnership
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  name: SetMemoryAddressValues(nint, nint)
+  nameWithType: MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
+  nameWithType.vb: MightOwnMemoryAddressContainer.SetMemoryAddressValues(IntPtr, IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr, System.IntPtr)
+  name.vb: SetMemoryAddressValues(IntPtr, IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+  commentId: M:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose
+  name: Dispose()
+  nameWithType: MightOwnMemoryAddressContainer.Dispose()
+  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html
+  name: OnixSettingListRenderer
+  nameWithType: OnixSettingListRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.#ctor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.#ctor
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer__ctor
+  name: OnixSettingListRenderer
+  nameWithType: OnixSettingListRenderer.OnixSettingListRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.OnixSettingListRenderer
+  nameWithType.vb: OnixSettingListRenderer.New
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.New
+  name.vb: New
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+  isExternal: true
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_SetSettings_System_Collections_Generic_IReadOnlyList_OnixRuntime_Api_OnixClient_OnixSetting__
+  name: SetSettings(IReadOnlyList<OnixSetting>)
+  nameWithType: OnixSettingListRenderer.SetSettings(IReadOnlyList<OnixSetting>)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList<OnixRuntime.Api.OnixClient.OnixSetting>)
+  nameWithType.vb: OnixSettingListRenderer.SetSettings(IReadOnlyList(Of OnixSetting))
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList(Of OnixRuntime.Api.OnixClient.OnixSetting))
+  name.vb: SetSettings(IReadOnlyList(Of OnixSetting))
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+    name: SetSettings
+    href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_SetSettings_System_Collections_Generic_IReadOnlyList_OnixRuntime_Api_OnixClient_OnixSetting__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixSetting
+    name: OnixSetting
+    href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings(System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting})
+    name: SetSettings
+    href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_SetSettings_System_Collections_Generic_IReadOnlyList_OnixRuntime_Api_OnixClient_OnixSetting__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixSetting
+    name: OnixSetting
+    href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  - name: )
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_GetSettings
+  name: GetSettings
+  nameWithType: OnixSettingListRenderer.GetSettings
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.GetSettings
+- uid: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.OnixSetting}
+  commentId: T:System.Collections.Generic.List{OnixRuntime.Api.OnixClient.OnixSetting}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<OnixSetting>
+  nameWithType: List<OnixSetting>
+  fullName: System.Collections.Generic.List<OnixRuntime.Api.OnixClient.OnixSetting>
+  nameWithType.vb: List(Of OnixSetting)
+  fullName.vb: System.Collections.Generic.List(Of OnixRuntime.Api.OnixClient.OnixSetting)
+  name.vb: List(Of OnixSetting)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixSetting
+    name: OnixSetting
+    href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixSetting
+    name: OnixSetting
+    href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_SetSettings_System_Collections_Generic_IReadOnlyList_OnixRuntime_Api_OnixClient_OnixSetting__
+  name: SetSettings
+  nameWithType: OnixSettingListRenderer.SetSettings
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.SetSettings
+- uid: System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting}
+  commentId: T:System.Collections.Generic.IReadOnlyList{OnixRuntime.Api.OnixClient.OnixSetting}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<OnixSetting>
+  nameWithType: IReadOnlyList<OnixSetting>
+  fullName: System.Collections.Generic.IReadOnlyList<OnixRuntime.Api.OnixClient.OnixSetting>
+  nameWithType.vb: IReadOnlyList(Of OnixSetting)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of OnixRuntime.Api.OnixClient.OnixSetting)
+  name.vb: IReadOnlyList(Of OnixSetting)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.OnixSetting
+    name: OnixSetting
+    href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixSetting
+    name: OnixSetting
+    href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_ResetScroll
+  name: ResetScroll
+  nameWithType: OnixSettingListRenderer.ResetScroll
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetScroll
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_Padding
+  name: Padding
+  nameWithType: OnixSettingListRenderer.Padding
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Padding
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_ResetAnimation
+  name: ResetAnimation
+  nameWithType: OnixSettingListRenderer.ResetAnimation
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ResetAnimation
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_ModuleSource
+  name: ModuleSource
+  nameWithType: OnixSettingListRenderer.ModuleSource
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.ModuleSource
+- uid: OnixRuntime.Api.OnixClient.OnixModule
+  commentId: T:OnixRuntime.Api.OnixClient.OnixModule
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixModule.html
+  name: OnixModule
+  nameWithType: OnixModule
+  fullName: OnixRuntime.Api.OnixClient.OnixModule
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingListRenderer_Render_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Inputs_InputKey_ClickType_System_Int32_
+  name: Render
+  nameWithType: OnixSettingListRenderer.Render
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.Render
+- uid: OnixRuntime.Api.Maths.Rect
+  commentId: T:OnixRuntime.Api.Maths.Rect
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: OnixRuntime.Api.Maths.Rect
+- uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+  commentId: T:OnixRuntime.Api.Inputs.InputKey.ClickType
+  parent: OnixRuntime.Api.Inputs
+  href: OnixRuntime.Api.Inputs.InputKey.html
+  name: InputKey.ClickType
+  nameWithType: InputKey.ClickType
+  fullName: OnixRuntime.Api.Inputs.InputKey.ClickType
+  spec.csharp:
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+    name: ClickType
+    href: OnixRuntime.Api.Inputs.InputKey.ClickType.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+    name: ClickType
+    href: OnixRuntime.Api.Inputs.InputKey.ClickType.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.Inputs
+  commentId: N:OnixRuntime.Api.Inputs
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Inputs
+  nameWithType: OnixRuntime.Api.Inputs
+  fullName: OnixRuntime.Api.Inputs
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html

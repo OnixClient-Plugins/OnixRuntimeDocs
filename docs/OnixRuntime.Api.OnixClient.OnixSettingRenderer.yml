@@ -1,0 +1,1506 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  id: OnixSettingRenderer
+  parent: OnixRuntime.Api.OnixClient
+  children:
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor(OnixRuntime.Api.OnixClient.OnixSetting)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition(OnixRuntime.Api.Maths.Vec2)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight(OnixRuntime.Api.Rendering.RendererDirect2D)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(System.Boolean,System.Int32)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(System.Boolean,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(System.Boolean,System.Single,System.Int32,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType@)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose(OnixRuntime.Api.Rendering.RendererDirect2D)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render(OnixRuntime.Api.Rendering.RendererDirect2D,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Boolean,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)
+  - OnixRuntime.Api.OnixClient.OnixSettingRenderer.Setting
+  langs:
+  - csharp
+  - vb
+  name: OnixSettingRenderer
+  nameWithType: OnixSettingRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: OnixSettingRenderer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 11
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    This is the base class for all setting renderers.
+
+    You must create a class that inherits from this and implement the Render and GetHeight function.
+  example: []
+  syntax:
+    content: 'public class OnixSettingRenderer : IDisposable'
+    content.vb: Public Class OnixSettingRenderer Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Setting
+  commentId: F:OnixRuntime.Api.OnixClient.OnixSettingRenderer.Setting
+  id: Setting
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: Setting
+  nameWithType: OnixSettingRenderer.Setting
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Setting
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Setting
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 15
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: The setting this renderer is responsible for rendering.
+  example: []
+  syntax:
+    content: public OnixSetting Setting
+    return:
+      type: OnixRuntime.Api.OnixClient.OnixSetting
+    content.vb: Public Setting As OnixSetting
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor(OnixRuntime.Api.OnixClient.OnixSetting)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor(OnixRuntime.Api.OnixClient.OnixSetting)
+  id: '#ctor(OnixRuntime.Api.OnixClient.OnixSetting)'
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: OnixSettingRenderer(OnixSetting)
+  nameWithType: OnixSettingRenderer.OnixSettingRenderer(OnixSetting)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.OnixSettingRenderer(OnixRuntime.Api.OnixClient.OnixSetting)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.OnixClient.OnixSettingRenderer" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: protected OnixSettingRenderer(OnixSetting setting)
+    parameters:
+    - id: setting
+      type: OnixRuntime.Api.OnixClient.OnixSetting
+      description: The setting this renderer will be rendering.
+    content.vb: Protected Sub New(setting As OnixSetting)
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor*
+  nameWithType.vb: OnixSettingRenderer.New(OnixSetting)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.New(OnixRuntime.Api.OnixClient.OnixSetting)
+  name.vb: New(OnixSetting)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight(OnixRuntime.Api.Rendering.RendererDirect2D)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight(OnixRuntime.Api.Rendering.RendererDirect2D)
+  id: GetHeight(OnixRuntime.Api.Rendering.RendererDirect2D)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHeight(RendererDirect2D)
+  nameWithType: OnixSettingRenderer.GetHeight(RendererDirect2D)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight(OnixRuntime.Api.Rendering.RendererDirect2D)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHeight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 73
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the height of the setting for layout purposes.
+  example: []
+  syntax:
+    content: public virtual float GetHeight(RendererDirect2D gfx)
+    parameters:
+    - id: gfx
+      type: OnixRuntime.Api.Rendering.RendererDirect2D
+      description: The graphics renderer, used for measuring text or other layout calculations.
+    return:
+      type: System.Single
+      description: The height of the setting in pixels.
+    content.vb: Public Overridable Function GetHeight(gfx As RendererDirect2D) As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight*
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render(OnixRuntime.Api.Rendering.RendererDirect2D,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render(OnixRuntime.Api.Rendering.RendererDirect2D,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Boolean,System.Boolean,System.Boolean)
+  id: Render(OnixRuntime.Api.Rendering.RendererDirect2D,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType,System.Boolean,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: Render(RendererDirect2D, Vec2, Vec2, ClickType, bool, bool, bool)
+  nameWithType: OnixSettingRenderer.Render(RendererDirect2D, Vec2, Vec2, InputKey.ClickType, bool, bool, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render(OnixRuntime.Api.Rendering.RendererDirect2D, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Inputs.InputKey.ClickType, bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Render
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 88
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Renders the setting.
+  example: []
+  syntax:
+    content: public virtual bool Render(RendererDirect2D gfx, Vec2 size, Vec2 mousePosition, InputKey.ClickType click, bool mouseInside, bool lmbDown, bool rmbDown)
+    parameters:
+    - id: gfx
+      type: OnixRuntime.Api.Rendering.RendererDirect2D
+      description: The graphics renderer. Use this to render the setting's content.
+    - id: size
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The size of the current setting.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The position of the mouse within that setting.
+    - id: click
+      type: OnixRuntime.Api.Inputs.InputKey.ClickType
+      description: The click input that was done this frame.
+    - id: mouseInside
+      type: System.Boolean
+      description: If the mouse is inside the bounds of this setting.
+    - id: lmbDown
+      type: System.Boolean
+      description: If the left mouse button is held down at this time. Can be used for implementing sliders.
+    - id: rmbDown
+      type: System.Boolean
+      description: If the right mouse button is held down at this time.
+    return:
+      type: System.Boolean
+      description: True if the click was handled; otherwise, false.
+    content.vb: Public Overridable Function Render(gfx As RendererDirect2D, size As Vec2, mousePosition As Vec2, click As InputKey.ClickType, mouseInside As Boolean, lmbDown As Boolean, rmbDown As Boolean) As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render*
+  nameWithType.vb: OnixSettingRenderer.Render(RendererDirect2D, Vec2, Vec2, InputKey.ClickType, Boolean, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render(OnixRuntime.Api.Rendering.RendererDirect2D, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Inputs.InputKey.ClickType, Boolean, Boolean, Boolean)
+  name.vb: Render(RendererDirect2D, Vec2, Vec2, ClickType, Boolean, Boolean, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose(OnixRuntime.Api.Rendering.RendererDirect2D)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose(OnixRuntime.Api.Rendering.RendererDirect2D)
+  id: PreDispose(OnixRuntime.Api.Rendering.RendererDirect2D)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: PreDispose(RendererDirect2D?)
+  nameWithType: OnixSettingRenderer.PreDispose(RendererDirect2D?)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose(OnixRuntime.Api.Rendering.RendererDirect2D?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PreDispose
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 97
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Called right before the setting is disposed, on the Direct2D thread, so you can do any cleanup you need to do.
+  example: []
+  syntax:
+    content: public virtual void PreDispose(RendererDirect2D? gfx)
+    parameters:
+    - id: gfx
+      type: OnixRuntime.Api.Rendering.RendererDirect2D
+      description: The graphics renderer if needed to dispose of some things.
+    content.vb: Public Overridable Sub PreDispose(gfx As RendererDirect2D)
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose*
+  nameWithType.vb: OnixSettingRenderer.PreDispose(RendererDirect2D)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose(OnixRuntime.Api.Rendering.RendererDirect2D)
+  name.vb: PreDispose(RendererDirect2D)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition(OnixRuntime.Api.Maths.Vec2)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition(OnixRuntime.Api.Maths.Vec2)
+  id: GetGlobalPosition(OnixRuntime.Api.Maths.Vec2)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalPosition(Vec2)
+  nameWithType: OnixSettingRenderer.GetGlobalPosition(Vec2)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition(OnixRuntime.Api.Maths.Vec2)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetGlobalPosition
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 106
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the global position of the setting renderer based on the mouse position.
+  example: []
+  syntax:
+    content: public Vec2 GetGlobalPosition(Vec2 mousePosition)
+    parameters:
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The local mouse position within the setting.
+    return:
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The global position as a <xref href="OnixRuntime.Api.Maths.Vec2" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function GetGlobalPosition(mousePosition As Vec2) As Vec2
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition*
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)
+  id: SetTooltip(System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetTooltip(string, Vec2, Vec2)
+  nameWithType: OnixSettingRenderer.SetTooltip(string, Vec2, Vec2)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(string, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetTooltip
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 116
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Sets the tooltip text if the mouse is within the bounds of the setting.
+  example: []
+  syntax:
+    content: public void SetTooltip(string text, Vec2 size, Vec2 mousePosition)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text of the tooltip.
+    - id: size
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The size the Render function gave you.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The position of the mouse the Render function gave you.
+    content.vb: Public Sub SetTooltip(text As String, size As Vec2, mousePosition As Vec2)
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip*
+  nameWithType.vb: OnixSettingRenderer.SetTooltip(String, Vec2, Vec2)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(String, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2)
+  name.vb: SetTooltip(String, Vec2, Vec2)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(System.String,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  id: SetTooltip(System.String,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetTooltip(string, Rect, Vec2)
+  nameWithType: OnixSettingRenderer.SetTooltip(string, Rect, Vec2)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(string, OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SetTooltip
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 128
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Sets the tooltip text if the mouse is within the bounds of the specified region.
+  example: []
+  syntax:
+    content: public void SetTooltip(string text, Rect region, Vec2 mousePosition)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text of the tooltip.
+    - id: region
+      type: OnixRuntime.Api.Maths.Rect
+      description: The region the tooltip shows up in.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The position of the mouse the Render function gave you.
+    content.vb: Public Sub SetTooltip(text As String, region As Rect, mousePosition As Vec2)
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip*
+  nameWithType.vb: OnixSettingRenderer.SetTooltip(String, Rect, Vec2)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip(String, OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2)
+  name.vb: SetTooltip(String, Rect, Vec2)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType@)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType@)
+  id: HandleNameCopy(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Inputs.InputKey.ClickType@)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: HandleNameCopy(Vec2, Vec2, ref ClickType)
+  nameWithType: OnixSettingRenderer.HandleNameCopy(Vec2, Vec2, ref InputKey.ClickType)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, ref OnixRuntime.Api.Inputs.InputKey.ClickType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HandleNameCopy
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 141
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Handles the developer options name copy shortcuts on your setting renderer.
+  example: []
+  syntax:
+    content: public bool HandleNameCopy(Vec2 size, Vec2 mousePosition, ref InputKey.ClickType click)
+    parameters:
+    - id: size
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The size of the area given to you.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The position of the mouse given to you.
+    - id: click
+      type: OnixRuntime.Api.Inputs.InputKey.ClickType
+      description: The click input given to you.
+    return:
+      type: System.Boolean
+      description: True when the click has been handled here.
+    content.vb: Public Function HandleNameCopy(size As Vec2, mousePosition As Vec2, click As InputKey.ClickType) As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy*
+  nameWithType.vb: OnixSettingRenderer.HandleNameCopy(Vec2, Vec2, InputKey.ClickType)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Inputs.InputKey.ClickType)
+  name.vb: HandleNameCopy(Vec2, Vec2, ClickType)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(System.Boolean,System.Single,System.Int32,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(System.Boolean,System.Single,System.Int32,System.Boolean)
+  id: GetHighlightLinear(System.Boolean,System.Single,System.Int32,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightLinear(bool, float, int, bool)
+  nameWithType: OnixSettingRenderer.GetHighlightLinear(bool, float, int, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(bool, float, int, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightLinear
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 171
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the linear highlight opacity based on whether the mouse is inside a given region identified with its id.
+  example: []
+  syntax:
+    content: public float GetHighlightLinear(bool mouseInside, float animationTime, int id = 0, bool restartSmoothly = true)
+    parameters:
+    - id: mouseInside
+      type: System.Boolean
+      description: True if the mouse is currently inside the region.
+    - id: animationTime
+      type: System.Single
+      description: The time in seconds for the animation to complete.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    - id: restartSmoothly
+      type: System.Boolean
+      description: If true, the animation will restart smoothly when the mouse enters or exits before the animation is over.
+    return:
+      type: System.Single
+      description: The linear highlight value between 0 and 1.
+    content.vb: Public Function GetHighlightLinear(mouseInside As Boolean, animationTime As Single, id As Integer = 0, restartSmoothly As Boolean = True) As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightLinear(Boolean, Single, Integer, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(Boolean, Single, Integer, Boolean)
+  name.vb: GetHighlightLinear(Boolean, Single, Integer, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  id: GetHighlightLinear(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightLinear(Rect, Vec2, float, int, bool)
+  nameWithType: OnixSettingRenderer.GetHighlightLinear(Rect, Vec2, float, int, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2, float, int, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightLinear
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 187
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Gets the linear highlight opacity based on whether the mouse is inside a specified region.
+
+    This overload checks if the mouse position is within the given rectangle and animates the highlight accordingly.
+  example: []
+  syntax:
+    content: public float GetHighlightLinear(Rect region, Vec2 mousePosition, float animationTime, int id = 0, bool restartSmoothly = false)
+    parameters:
+    - id: region
+      type: OnixRuntime.Api.Maths.Rect
+      description: The region to test against.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current mouse position.
+    - id: animationTime
+      type: System.Single
+      description: The time in seconds for the animation to complete.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    - id: restartSmoothly
+      type: System.Boolean
+      description: If true, the animation will restart smoothly when the mouse enters or exits before the animation is over.
+    return:
+      type: System.Single
+      description: The linear highlight value between 0 and 1.
+    content.vb: Public Function GetHighlightLinear(region As Rect, mousePosition As Vec2, animationTime As Single, id As Integer = 0, restartSmoothly As Boolean = False) As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightLinear(Rect, Vec2, Single, Integer, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2, Single, Integer, Boolean)
+  name.vb: GetHighlightLinear(Rect, Vec2, Single, Integer, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  id: GetHighlightLinear(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single,System.Int32,System.Boolean)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightLinear(Vec2, Vec2, float, int, bool)
+  nameWithType: OnixSettingRenderer.GetHighlightLinear(Vec2, Vec2, float, int, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, float, int, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightLinear
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 199
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the linear highlight opacity based on whether the mouse is inside a region defined by a size starting at (0,0).
+  example: []
+  syntax:
+    content: public float GetHighlightLinear(Vec2 size, Vec2 mousePosition, float animationTime, int id = 0, bool restartSmoothly = false)
+    parameters:
+    - id: size
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The size of the region (assumed to start at origin).
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current mouse position.
+    - id: animationTime
+      type: System.Single
+      description: The time in seconds for the animation to complete.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    - id: restartSmoothly
+      type: System.Boolean
+      description: If true, the animation will restart smoothly when the mouse enters or exits before the animation is over.
+    return:
+      type: System.Single
+      description: The linear highlight value between 0 and 1.
+    content.vb: Public Function GetHighlightLinear(size As Vec2, mousePosition As Vec2, animationTime As Single, id As Integer = 0, restartSmoothly As Boolean = False) As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightLinear(Vec2, Vec2, Single, Integer, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, Single, Integer, Boolean)
+  name.vb: GetHighlightLinear(Vec2, Vec2, Single, Integer, Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(System.Boolean,System.Int32)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(System.Boolean,System.Int32)
+  id: GetHighlightAdditionalOpacity(System.Boolean,System.Int32)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightAdditionalOpacity(bool, int)
+  nameWithType: OnixSettingRenderer.GetHighlightAdditionalOpacity(bool, int)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(bool, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightAdditionalOpacity
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 209
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Returns the additional highlight opacity based on whether the mouse is inside a region.
+
+    This animates smoothly, matching the client's highlight behavior.
+  example: []
+  syntax:
+    content: public float GetHighlightAdditionalOpacity(bool mouseInside, int id = 0)
+    parameters:
+    - id: mouseInside
+      type: System.Boolean
+      description: True if the mouse is currently inside the region.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    return:
+      type: System.Single
+      description: Additional opacity to add to your highlight.
+    content.vb: Public Function GetHighlightAdditionalOpacity(mouseInside As Boolean, id As Integer = 0) As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightAdditionalOpacity(Boolean, Integer)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(Boolean, Integer)
+  name.vb: GetHighlightAdditionalOpacity(Boolean, Integer)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  id: GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightAdditionalOpacity(Rect, Vec2, int)
+  nameWithType: OnixSettingRenderer.GetHighlightAdditionalOpacity(Rect, Vec2, int)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightAdditionalOpacity
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 220
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Returns the additional highlight opacity based on whether the mouse is inside a given region.
+
+    This animates smoothly, matching the client's highlight behavior.
+  example: []
+  syntax:
+    content: public float GetHighlightAdditionalOpacity(Rect region, Vec2 mousePosition, int id = 0)
+    parameters:
+    - id: region
+      type: OnixRuntime.Api.Maths.Rect
+      description: The region to test against.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current mouse position.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    return:
+      type: System.Single
+      description: Additional opacity to add to your highlight.
+    content.vb: Public Function GetHighlightAdditionalOpacity(region As Rect, mousePosition As Vec2, id As Integer = 0) As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightAdditionalOpacity(Rect, Vec2, Integer)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2, Integer)
+  name.vb: GetHighlightAdditionalOpacity(Rect, Vec2, Integer)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  id: GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightAdditionalOpacity(Vec2, Vec2, int)
+  nameWithType: OnixSettingRenderer.GetHighlightAdditionalOpacity(Vec2, Vec2, int)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightAdditionalOpacity
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 231
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Returns the additional highlight opacity based on whether the mouse is within a region defined by size starting at (0,0).
+
+    This animates smoothly, matching the client's highlight behavior.
+  example: []
+  syntax:
+    content: public float GetHighlightAdditionalOpacity(Vec2 size, Vec2 mousePosition, int id = 0)
+    parameters:
+    - id: size
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The size of the region (assumed to start at origin).
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current mouse position.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    return:
+      type: System.Single
+      description: Additional opacity to add to your highlight.
+    content.vb: Public Function GetHighlightAdditionalOpacity(size As Vec2, mousePosition As Vec2, id As Integer = 0) As Single
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightAdditionalOpacity(Vec2, Vec2, Integer)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, Integer)
+  name.vb: GetHighlightAdditionalOpacity(Vec2, Vec2, Integer)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(System.Boolean,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(System.Boolean,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  id: GetHighlightColor(System.Boolean,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightColor(bool, int, OnixClientThemeV3?)
+  nameWithType: OnixSettingRenderer.GetHighlightColor(bool, int, OnixClientThemeV3?)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(bool, int, OnixRuntime.Api.OnixClient.OnixClientThemeV3?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightColor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 242
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Returns a highlight color adjusted by the animated opacity effect.
+
+    This animates smoothly, matching the client's highlight behavior.
+  example: []
+  syntax:
+    content: public OnixSettingColor.ValueType GetHighlightColor(bool mouseInside, int id = 0, OnixClientThemeV3? cachedTheme = null)
+    parameters:
+    - id: mouseInside
+      type: System.Boolean
+      description: True if the mouse is currently inside the region.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    - id: cachedTheme
+      type: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+      description: Optional cached theme to avoid repeated access to the global theme.
+    return:
+      type: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+      description: The adjusted highlight color.
+    content.vb: Public Function GetHighlightColor(mouseInside As Boolean, id As Integer = 0, cachedTheme As OnixClientThemeV3 = Nothing) As OnixSettingColor.ValueType
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightColor(Boolean, Integer, OnixClientThemeV3)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(Boolean, Integer, OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  name.vb: GetHighlightColor(Boolean, Integer, OnixClientThemeV3)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  id: GetHighlightColor(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightColor(Rect, Vec2, int, OnixClientThemeV3?)
+  nameWithType: OnixSettingRenderer.GetHighlightColor(Rect, Vec2, int, OnixClientThemeV3?)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2, int, OnixRuntime.Api.OnixClient.OnixClientThemeV3?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightColor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 261
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Returns the highlight color based on whether the mouse is inside a specified region.
+
+    This animates smoothly, matching the client's highlight behavior.
+  example: []
+  syntax:
+    content: public OnixSettingColor.ValueType GetHighlightColor(Rect region, Vec2 mousePosition, int id = 0, OnixClientThemeV3? cachedTheme = null)
+    parameters:
+    - id: region
+      type: OnixRuntime.Api.Maths.Rect
+      description: The region to test against.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current mouse position.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    - id: cachedTheme
+      type: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+      description: Optional cached theme to avoid repeated access to the global theme.
+    return:
+      type: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+      description: The adjusted highlight color.
+    content.vb: Public Function GetHighlightColor(region As Rect, mousePosition As Vec2, id As Integer = 0, cachedTheme As OnixClientThemeV3 = Nothing) As OnixSettingColor.ValueType
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightColor(Rect, Vec2, Integer, OnixClientThemeV3)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2, Integer, OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  name.vb: GetHighlightColor(Rect, Vec2, Integer, OnixClientThemeV3)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  id: GetHighlightColor(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Int32,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightColor(Vec2, Vec2, int, OnixClientThemeV3?)
+  nameWithType: OnixSettingRenderer.GetHighlightColor(Vec2, Vec2, int, OnixClientThemeV3?)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, int, OnixRuntime.Api.OnixClient.OnixClientThemeV3?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHighlightColor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 273
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Returns the highlight color based on whether the mouse is inside a region defined by a size starting at (0,0).
+
+    This animates smoothly, matching the client's highlight behavior.
+  example: []
+  syntax:
+    content: public OnixSettingColor.ValueType GetHighlightColor(Vec2 size, Vec2 mousePosition, int id = 0, OnixClientThemeV3? cachedTheme = null)
+    parameters:
+    - id: size
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The size of the region (assumed to start at origin).
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current mouse position.
+    - id: id
+      type: System.Int32
+      description: An optional ID to track multiple highlight regions independently.
+    - id: cachedTheme
+      type: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+      description: Optional cached theme to avoid repeated access to the global theme.
+    return:
+      type: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+      description: The adjusted highlight color.
+    content.vb: Public Function GetHighlightColor(size As Vec2, mousePosition As Vec2, id As Integer = 0, cachedTheme As OnixClientThemeV3 = Nothing) As OnixSettingColor.ValueType
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor*
+  nameWithType.vb: OnixSettingRenderer.GetHighlightColor(Vec2, Vec2, Integer, OnixClientThemeV3)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor(OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, Integer, OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  name.vb: GetHighlightColor(Vec2, Vec2, Integer, OnixClientThemeV3)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose
+  id: Dispose
+  parent: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: OnixSettingRenderer.Dispose()
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Dispose
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRenderer.cs
+    startLine: 279
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Disposes resources used by the renderer.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: OnixRuntime.Api.OnixClient
+  commentId: N:OnixRuntime.Api.OnixClient
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient
+  nameWithType: OnixRuntime.Api.OnixClient
+  fullName: OnixRuntime.Api.OnixClient
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.OnixClient.OnixSetting
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSetting
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixSetting.html
+  name: OnixSetting
+  nameWithType: OnixSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixSetting
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSettingRenderer
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html
+  name: OnixSettingRenderer
+  nameWithType: OnixSettingRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.#ctor
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer__ctor_OnixRuntime_Api_OnixClient_OnixSetting_
+  name: OnixSettingRenderer
+  nameWithType: OnixSettingRenderer.OnixSettingRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.OnixSettingRenderer
+  nameWithType.vb: OnixSettingRenderer.New
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRenderer.New
+  name.vb: New
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHeight_OnixRuntime_Api_Rendering_RendererDirect2D_
+  name: GetHeight
+  nameWithType: OnixSettingRenderer.GetHeight
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHeight
+- uid: OnixRuntime.Api.Rendering.RendererDirect2D
+  commentId: T:OnixRuntime.Api.Rendering.RendererDirect2D
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererDirect2D.html
+  name: RendererDirect2D
+  nameWithType: RendererDirect2D
+  fullName: OnixRuntime.Api.Rendering.RendererDirect2D
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_Render_OnixRuntime_Api_Rendering_RendererDirect2D_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Inputs_InputKey_ClickType_System_Boolean_System_Boolean_System_Boolean_
+  name: Render
+  nameWithType: OnixSettingRenderer.Render
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render
+- uid: OnixRuntime.Api.Maths.Vec2
+  commentId: T:OnixRuntime.Api.Maths.Vec2
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: OnixRuntime.Api.Maths.Vec2
+- uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+  commentId: T:OnixRuntime.Api.Inputs.InputKey.ClickType
+  parent: OnixRuntime.Api.Inputs
+  href: OnixRuntime.Api.Inputs.InputKey.html
+  name: InputKey.ClickType
+  nameWithType: InputKey.ClickType
+  fullName: OnixRuntime.Api.Inputs.InputKey.ClickType
+  spec.csharp:
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+    name: ClickType
+    href: OnixRuntime.Api.Inputs.InputKey.ClickType.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+    name: ClickType
+    href: OnixRuntime.Api.Inputs.InputKey.ClickType.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.Inputs
+  commentId: N:OnixRuntime.Api.Inputs
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Inputs
+  nameWithType: OnixRuntime.Api.Inputs
+  fullName: OnixRuntime.Api.Inputs
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_PreDispose_OnixRuntime_Api_Rendering_RendererDirect2D_
+  name: PreDispose
+  nameWithType: OnixSettingRenderer.PreDispose
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.PreDispose
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetGlobalPosition_OnixRuntime_Api_Maths_Vec2_
+  name: GetGlobalPosition
+  nameWithType: OnixSettingRenderer.GetGlobalPosition
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetGlobalPosition
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_SetTooltip_System_String_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_
+  name: SetTooltip
+  nameWithType: OnixSettingRenderer.SetTooltip
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.SetTooltip
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Maths.Rect
+  commentId: T:OnixRuntime.Api.Maths.Rect
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: OnixRuntime.Api.Maths.Rect
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_HandleNameCopy_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Inputs_InputKey_ClickType__
+  name: HandleNameCopy
+  nameWithType: OnixSettingRenderer.HandleNameCopy
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.HandleNameCopy
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightLinear_System_Boolean_System_Single_System_Int32_System_Boolean_
+  name: GetHighlightLinear
+  nameWithType: OnixSettingRenderer.GetHighlightLinear
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightLinear
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightAdditionalOpacity_System_Boolean_System_Int32_
+  name: GetHighlightAdditionalOpacity
+  nameWithType: OnixSettingRenderer.GetHighlightAdditionalOpacity
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightAdditionalOpacity
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_GetHighlightColor_System_Boolean_System_Int32_OnixRuntime_Api_OnixClient_OnixClientThemeV3_
+  name: GetHighlightColor
+  nameWithType: OnixSettingRenderer.GetHighlightColor
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.GetHighlightColor
+- uid: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+  commentId: T:OnixRuntime.Api.OnixClient.OnixClientThemeV3
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixClientThemeV3.html
+  name: OnixClientThemeV3
+  nameWithType: OnixClientThemeV3
+  fullName: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+  commentId: T:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+  parent: OnixRuntime.Api.OnixClient.Settings
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html
+  name: OnixSettingColor.ValueType
+  nameWithType: OnixSettingColor.ValueType
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor
+    name: OnixSettingColor
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+    name: ValueType
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor
+    name: OnixSettingColor
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
+    name: ValueType
+    href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html
+- uid: OnixRuntime.Api.OnixClient.Settings
+  commentId: N:OnixRuntime.Api.OnixClient.Settings
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Settings
+  nameWithType: OnixRuntime.Api.OnixClient.Settings
+  fullName: OnixRuntime.Api.OnixClient.Settings
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings
+    name: Settings
+    href: OnixRuntime.Api.OnixClient.Settings.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Settings
+    name: Settings
+    href: OnixRuntime.Api.OnixClient.Settings.html
+- uid: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose
+  href: OnixRuntime.Api.OnixClient.OnixSettingRenderer.html#OnixRuntime_Api_OnixClient_OnixSettingRenderer_Dispose
+  name: Dispose
+  nameWithType: OnixSettingRenderer.Dispose
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingRenderer.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

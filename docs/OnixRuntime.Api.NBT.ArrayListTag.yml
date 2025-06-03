@@ -1,0 +1,948 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.NBT.ArrayListTag
+  commentId: T:OnixRuntime.Api.NBT.ArrayListTag
+  id: ArrayListTag
+  parent: OnixRuntime.Api.NBT
+  children:
+  - OnixRuntime.Api.NBT.ArrayListTag.#ctor
+  - OnixRuntime.Api.NBT.ArrayListTag.#ctor(System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag})
+  - OnixRuntime.Api.NBT.ArrayListTag.Add(OnixRuntime.Api.NBT.NbtTag)
+  - OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator
+  - OnixRuntime.Api.NBT.ArrayListTag.TagType
+  - OnixRuntime.Api.NBT.ArrayListTag.Value
+  - OnixRuntime.Api.NBT.ArrayListTag.ValueTagType
+  langs:
+  - csharp
+  - vb
+  name: ArrayListTag
+  nameWithType: ArrayListTag
+  fullName: OnixRuntime.Api.NBT.ArrayListTag
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ArrayListTag
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 6
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: Represents a tag containing a list of NBT tags, enforcing that all contained tags are of the same type.
+  example: []
+  syntax:
+    content: 'public class ArrayListTag : NbtTag, IEnumerable<NbtTag>, IEnumerable'
+    content.vb: Public Class ArrayListTag Inherits NbtTag Implements IEnumerable(Of NbtTag), IEnumerable
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.NBT.NbtTag
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - OnixRuntime.Api.NBT.NbtTag.CreateTag(OnixRuntime.Api.NBT.NbtTagType)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.NBT.ArrayListTag.Value
+  commentId: P:OnixRuntime.Api.NBT.ArrayListTag.Value
+  id: Value
+  parent: OnixRuntime.Api.NBT.ArrayListTag
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ArrayListTag.Value
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.Value
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Value
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 10
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: The list of NBT tags contained in this ArrayListTag.
+  example: []
+  syntax:
+    content: public List<NbtTag> Value { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag}
+    content.vb: Public Property Value As List(Of NbtTag)
+  overload: OnixRuntime.Api.NBT.ArrayListTag.Value*
+- uid: OnixRuntime.Api.NBT.ArrayListTag.Add(OnixRuntime.Api.NBT.NbtTag)
+  commentId: M:OnixRuntime.Api.NBT.ArrayListTag.Add(OnixRuntime.Api.NBT.NbtTag)
+  id: Add(OnixRuntime.Api.NBT.NbtTag)
+  parent: OnixRuntime.Api.NBT.ArrayListTag
+  langs:
+  - csharp
+  - vb
+  name: Add(NbtTag)
+  nameWithType: ArrayListTag.Add(NbtTag)
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.Add(OnixRuntime.Api.NBT.NbtTag)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Add
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 17
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: Adds a tag to the list, enforcing type consistency.
+  example: []
+  syntax:
+    content: public void Add(NbtTag tag)
+    parameters:
+    - id: tag
+      type: OnixRuntime.Api.NBT.NbtTag
+      description: The NBT tag to add.
+    content.vb: Public Sub Add(tag As NbtTag)
+  overload: OnixRuntime.Api.NBT.ArrayListTag.Add*
+  exceptions:
+  - type: System.ArrayTypeMismatchException
+    commentId: T:System.ArrayTypeMismatchException
+    description: Thrown if the tag type does not match the existing type in the list.
+- uid: OnixRuntime.Api.NBT.ArrayListTag.#ctor
+  commentId: M:OnixRuntime.Api.NBT.ArrayListTag.#ctor
+  id: '#ctor'
+  parent: OnixRuntime.Api.NBT.ArrayListTag
+  langs:
+  - csharp
+  - vb
+  name: ArrayListTag()
+  nameWithType: ArrayListTag.ArrayListTag()
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.ArrayListTag()
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 28
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.NBT.ArrayListTag" data-throw-if-not-resolved="false"></xref> class with an empty list.
+  example: []
+  syntax:
+    content: public ArrayListTag()
+    content.vb: Public Sub New()
+  overload: OnixRuntime.Api.NBT.ArrayListTag.#ctor*
+  nameWithType.vb: ArrayListTag.New()
+  fullName.vb: OnixRuntime.Api.NBT.ArrayListTag.New()
+  name.vb: New()
+- uid: OnixRuntime.Api.NBT.ArrayListTag.#ctor(System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag})
+  commentId: M:OnixRuntime.Api.NBT.ArrayListTag.#ctor(System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag})
+  id: '#ctor(System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag})'
+  parent: OnixRuntime.Api.NBT.ArrayListTag
+  langs:
+  - csharp
+  - vb
+  name: ArrayListTag(List<NbtTag>)
+  nameWithType: ArrayListTag.ArrayListTag(List<NbtTag>)
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.ArrayListTag(System.Collections.Generic.List<OnixRuntime.Api.NBT.NbtTag>)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 35
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.NBT.ArrayListTag" data-throw-if-not-resolved="false"></xref> class with the specified list of tags.
+  example: []
+  syntax:
+    content: public ArrayListTag(List<NbtTag> value)
+    parameters:
+    - id: value
+      type: System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag}
+      description: The list of NBT tags.
+    content.vb: Public Sub New(value As List(Of NbtTag))
+  overload: OnixRuntime.Api.NBT.ArrayListTag.#ctor*
+  nameWithType.vb: ArrayListTag.New(List(Of NbtTag))
+  fullName.vb: OnixRuntime.Api.NBT.ArrayListTag.New(System.Collections.Generic.List(Of OnixRuntime.Api.NBT.NbtTag))
+  name.vb: New(List(Of NbtTag))
+- uid: OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator
+  commentId: M:OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator
+  id: GetEnumerator
+  parent: OnixRuntime.Api.NBT.ArrayListTag
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ArrayListTag.GetEnumerator()
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetEnumerator
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 42
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: Returns an enumerator that iterates through the list of tags.
+  example: []
+  syntax:
+    content: public IEnumerator<NbtTag> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{OnixRuntime.Api.NBT.NbtTag}
+    content.vb: Public Function GetEnumerator() As IEnumerator(Of NbtTag)
+  overload: OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}.GetEnumerator
+- uid: OnixRuntime.Api.NBT.ArrayListTag.ValueTagType
+  commentId: P:OnixRuntime.Api.NBT.ArrayListTag.ValueTagType
+  id: ValueTagType
+  parent: OnixRuntime.Api.NBT.ArrayListTag
+  langs:
+  - csharp
+  - vb
+  name: ValueTagType
+  nameWithType: ArrayListTag.ValueTagType
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.ValueTagType
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ValueTagType
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 55
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: Gets the type of tags contained in the list, or End if the list is empty.
+  example: []
+  syntax:
+    content: public NbtTagType ValueTagType { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.NBT.NbtTagType
+    content.vb: Public ReadOnly Property ValueTagType As NbtTagType
+  overload: OnixRuntime.Api.NBT.ArrayListTag.ValueTagType*
+- uid: OnixRuntime.Api.NBT.ArrayListTag.TagType
+  commentId: P:OnixRuntime.Api.NBT.ArrayListTag.TagType
+  id: TagType
+  parent: OnixRuntime.Api.NBT.ArrayListTag
+  langs:
+  - csharp
+  - vb
+  name: TagType
+  nameWithType: ArrayListTag.TagType
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.TagType
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/NBT/ArrayListTag.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TagType
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/NBT/ArrayListTag.cs
+    startLine: 60
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.NBT
+  summary: Gets the tag type for this tag (ArrayList).
+  example: []
+  syntax:
+    content: public override NbtTagType TagType { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.NBT.NbtTagType
+    content.vb: Public Overrides ReadOnly Property TagType As NbtTagType
+  overridden: OnixRuntime.Api.NBT.NbtTag.TagType
+  overload: OnixRuntime.Api.NBT.ArrayListTag.TagType*
+references:
+- uid: OnixRuntime.Api.NBT
+  commentId: N:OnixRuntime.Api.NBT
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.NBT
+  nameWithType: OnixRuntime.Api.NBT
+  fullName: OnixRuntime.Api.NBT
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.NBT
+    name: NBT
+    href: OnixRuntime.Api.NBT.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.NBT
+    name: NBT
+    href: OnixRuntime.Api.NBT.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.NBT.NbtTag
+  commentId: T:OnixRuntime.Api.NBT.NbtTag
+  parent: OnixRuntime.Api.NBT
+  href: OnixRuntime.Api.NBT.NbtTag.html
+  name: NbtTag
+  nameWithType: NbtTag
+  fullName: OnixRuntime.Api.NBT.NbtTag
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}
+  commentId: T:System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<NbtTag>
+  nameWithType: IEnumerable<NbtTag>
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.NBT.NbtTag>
+  nameWithType.vb: IEnumerable(Of NbtTag)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.NBT.NbtTag)
+  name.vb: IEnumerable(Of NbtTag)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: OnixRuntime.Api.NBT.NbtTag
+    name: NbtTag
+    href: OnixRuntime.Api.NBT.NbtTag.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.NBT.NbtTag
+    name: NbtTag
+    href: OnixRuntime.Api.NBT.NbtTag.html
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: OnixRuntime.Api.NBT.NbtTag.CreateTag(OnixRuntime.Api.NBT.NbtTagType)
+  commentId: M:OnixRuntime.Api.NBT.NbtTag.CreateTag(OnixRuntime.Api.NBT.NbtTagType)
+  parent: OnixRuntime.Api.NBT.NbtTag
+  href: OnixRuntime.Api.NBT.NbtTag.html#OnixRuntime_Api_NBT_NbtTag_CreateTag_OnixRuntime_Api_NBT_NbtTagType_
+  name: CreateTag(NbtTagType)
+  nameWithType: NbtTag.CreateTag(NbtTagType)
+  fullName: OnixRuntime.Api.NBT.NbtTag.CreateTag(OnixRuntime.Api.NBT.NbtTagType)
+  spec.csharp:
+  - uid: OnixRuntime.Api.NBT.NbtTag.CreateTag(OnixRuntime.Api.NBT.NbtTagType)
+    name: CreateTag
+    href: OnixRuntime.Api.NBT.NbtTag.html#OnixRuntime_Api_NBT_NbtTag_CreateTag_OnixRuntime_Api_NBT_NbtTagType_
+  - name: (
+  - uid: OnixRuntime.Api.NBT.NbtTagType
+    name: NbtTagType
+    href: OnixRuntime.Api.NBT.NbtTagType.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.NBT.NbtTag.CreateTag(OnixRuntime.Api.NBT.NbtTagType)
+    name: CreateTag
+    href: OnixRuntime.Api.NBT.NbtTag.html#OnixRuntime_Api_NBT_NbtTag_CreateTag_OnixRuntime_Api_NBT_NbtTagType_
+  - name: (
+  - uid: OnixRuntime.Api.NBT.NbtTagType
+    name: NbtTagType
+    href: OnixRuntime.Api.NBT.NbtTagType.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: OnixRuntime.Api.NBT.ArrayListTag.Value*
+  commentId: Overload:OnixRuntime.Api.NBT.ArrayListTag.Value
+  href: OnixRuntime.Api.NBT.ArrayListTag.html#OnixRuntime_Api_NBT_ArrayListTag_Value
+  name: Value
+  nameWithType: ArrayListTag.Value
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.Value
+- uid: System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag}
+  commentId: T:System.Collections.Generic.List{OnixRuntime.Api.NBT.NbtTag}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<NbtTag>
+  nameWithType: List<NbtTag>
+  fullName: System.Collections.Generic.List<OnixRuntime.Api.NBT.NbtTag>
+  nameWithType.vb: List(Of NbtTag)
+  fullName.vb: System.Collections.Generic.List(Of OnixRuntime.Api.NBT.NbtTag)
+  name.vb: List(Of NbtTag)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OnixRuntime.Api.NBT.NbtTag
+    name: NbtTag
+    href: OnixRuntime.Api.NBT.NbtTag.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.NBT.NbtTag
+    name: NbtTag
+    href: OnixRuntime.Api.NBT.NbtTag.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ArrayTypeMismatchException
+  commentId: T:System.ArrayTypeMismatchException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.arraytypemismatchexception
+  name: ArrayTypeMismatchException
+  nameWithType: ArrayTypeMismatchException
+  fullName: System.ArrayTypeMismatchException
+- uid: OnixRuntime.Api.NBT.ArrayListTag.Add*
+  commentId: Overload:OnixRuntime.Api.NBT.ArrayListTag.Add
+  href: OnixRuntime.Api.NBT.ArrayListTag.html#OnixRuntime_Api_NBT_ArrayListTag_Add_OnixRuntime_Api_NBT_NbtTag_
+  name: Add
+  nameWithType: ArrayListTag.Add
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.Add
+- uid: OnixRuntime.Api.NBT.ArrayListTag
+  commentId: T:OnixRuntime.Api.NBT.ArrayListTag
+  href: OnixRuntime.Api.NBT.ArrayListTag.html
+  name: ArrayListTag
+  nameWithType: ArrayListTag
+  fullName: OnixRuntime.Api.NBT.ArrayListTag
+- uid: OnixRuntime.Api.NBT.ArrayListTag.#ctor*
+  commentId: Overload:OnixRuntime.Api.NBT.ArrayListTag.#ctor
+  href: OnixRuntime.Api.NBT.ArrayListTag.html#OnixRuntime_Api_NBT_ArrayListTag__ctor
+  name: ArrayListTag
+  nameWithType: ArrayListTag.ArrayListTag
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.ArrayListTag
+  nameWithType.vb: ArrayListTag.New
+  fullName.vb: OnixRuntime.Api.NBT.ArrayListTag.New
+  name.vb: New
+- uid: OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator*
+  commentId: Overload:OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator
+  href: OnixRuntime.Api.NBT.ArrayListTag.html#OnixRuntime_Api_NBT_ArrayListTag_GetEnumerator
+  name: GetEnumerator
+  nameWithType: ArrayListTag.GetEnumerator
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<NbtTag>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.NBT.NbtTag>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of NbtTag).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.NBT.NbtTag).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.NBT.NbtTag}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator{OnixRuntime.Api.NBT.NbtTag}
+  commentId: T:System.Collections.Generic.IEnumerator{OnixRuntime.Api.NBT.NbtTag}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<NbtTag>
+  nameWithType: IEnumerator<NbtTag>
+  fullName: System.Collections.Generic.IEnumerator<OnixRuntime.Api.NBT.NbtTag>
+  nameWithType.vb: IEnumerator(Of NbtTag)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of OnixRuntime.Api.NBT.NbtTag)
+  name.vb: IEnumerator(Of NbtTag)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - uid: OnixRuntime.Api.NBT.NbtTag
+    name: NbtTag
+    href: OnixRuntime.Api.NBT.NbtTag.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.NBT.NbtTag
+    name: NbtTag
+    href: OnixRuntime.Api.NBT.NbtTag.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.NBT.ArrayListTag.ValueTagType*
+  commentId: Overload:OnixRuntime.Api.NBT.ArrayListTag.ValueTagType
+  href: OnixRuntime.Api.NBT.ArrayListTag.html#OnixRuntime_Api_NBT_ArrayListTag_ValueTagType
+  name: ValueTagType
+  nameWithType: ArrayListTag.ValueTagType
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.ValueTagType
+- uid: OnixRuntime.Api.NBT.NbtTagType
+  commentId: T:OnixRuntime.Api.NBT.NbtTagType
+  parent: OnixRuntime.Api.NBT
+  href: OnixRuntime.Api.NBT.NbtTagType.html
+  name: NbtTagType
+  nameWithType: NbtTagType
+  fullName: OnixRuntime.Api.NBT.NbtTagType
+- uid: OnixRuntime.Api.NBT.NbtTag.TagType
+  commentId: P:OnixRuntime.Api.NBT.NbtTag.TagType
+  parent: OnixRuntime.Api.NBT.NbtTag
+  href: OnixRuntime.Api.NBT.NbtTag.html#OnixRuntime_Api_NBT_NbtTag_TagType
+  name: TagType
+  nameWithType: NbtTag.TagType
+  fullName: OnixRuntime.Api.NBT.NbtTag.TagType
+- uid: OnixRuntime.Api.NBT.ArrayListTag.TagType*
+  commentId: Overload:OnixRuntime.Api.NBT.ArrayListTag.TagType
+  href: OnixRuntime.Api.NBT.ArrayListTag.html#OnixRuntime_Api_NBT_ArrayListTag_TagType
+  name: TagType
+  nameWithType: ArrayListTag.TagType
+  fullName: OnixRuntime.Api.NBT.ArrayListTag.TagType

@@ -1,0 +1,1126 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Items.Item
+  commentId: T:OnixRuntime.Api.Items.Item
+  id: Item
+  parent: OnixRuntime.Api.Items
+  children:
+  - OnixRuntime.Api.Items.Item.AllowsOffhand
+  - OnixRuntime.Api.Items.Item.CanExplode
+  - OnixRuntime.Api.Items.Item.CreativeCategory
+  - OnixRuntime.Api.Items.Item.DefaultBlock
+  - OnixRuntime.Api.Items.Item.HasEnchantedOverlay
+  - OnixRuntime.Api.Items.Item.Id
+  - OnixRuntime.Api.Items.Item.IsFireResistant
+  - OnixRuntime.Api.Items.Item.IsHandEquipped
+  - OnixRuntime.Api.Items.Item.IsStackedByData
+  - OnixRuntime.Api.Items.Item.IsValidAuxValue(System.Int32)
+  - OnixRuntime.Api.Items.Item.MaxDamage
+  - OnixRuntime.Api.Items.Item.MaxStackSize
+  - OnixRuntime.Api.Items.Item.MaxUseDuration
+  - OnixRuntime.Api.Items.Item.MaxUseDurationTicks
+  - OnixRuntime.Api.Items.Item.Name
+  - OnixRuntime.Api.Items.Item.NameFull
+  - OnixRuntime.Api.Items.Item.Namespace
+  - OnixRuntime.Api.Items.Item.ToString
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: Item
+  fullName: OnixRuntime.Api.Items.Item
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Item
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 7
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  syntax:
+    content: 'public class Item : MemoryAddressContainer'
+    content.vb: Public Class Item Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OnixRuntime.Api.Items.Item.Id
+  commentId: P:OnixRuntime.Api.Items.Item.Id
+  id: Id
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Item.Id
+  fullName: OnixRuntime.Api.Items.Item.Id
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Id
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: This id might not be reliable across versions/servers.
+  example: []
+  syntax:
+    content: public int Id { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Id As Integer
+  overload: OnixRuntime.Api.Items.Item.Id*
+- uid: OnixRuntime.Api.Items.Item.MaxStackSize
+  commentId: P:OnixRuntime.Api.Items.Item.MaxStackSize
+  id: MaxStackSize
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: MaxStackSize
+  nameWithType: Item.MaxStackSize
+  fullName: OnixRuntime.Api.Items.Item.MaxStackSize
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MaxStackSize
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 18
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: >-
+    What is the max size of a stack of this item.
+
+    Note that this is not accurate for all items.
+  example: []
+  syntax:
+    content: public int MaxStackSize { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxStackSize As Integer
+  overload: OnixRuntime.Api.Items.Item.MaxStackSize*
+- uid: OnixRuntime.Api.Items.Item.MaxDamage
+  commentId: P:OnixRuntime.Api.Items.Item.MaxDamage
+  id: MaxDamage
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: MaxDamage
+  nameWithType: Item.MaxDamage
+  fullName: OnixRuntime.Api.Items.Item.MaxDamage
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MaxDamage
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 23
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: >-
+    How much damage does that item need to take before it breaks.
+
+    Zero means that it does not have durability.
+  example: []
+  syntax:
+    content: public int MaxDamage { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxDamage As Integer
+  overload: OnixRuntime.Api.Items.Item.MaxDamage*
+- uid: OnixRuntime.Api.Items.Item.MaxUseDurationTicks
+  commentId: P:OnixRuntime.Api.Items.Item.MaxUseDurationTicks
+  id: MaxUseDurationTicks
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: MaxUseDurationTicks
+  nameWithType: Item.MaxUseDurationTicks
+  fullName: OnixRuntime.Api.Items.Item.MaxUseDurationTicks
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MaxUseDurationTicks
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 27
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: How long does it take to use the item in game ticks.
+  example: []
+  syntax:
+    content: public int MaxUseDurationTicks { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxUseDurationTicks As Integer
+  overload: OnixRuntime.Api.Items.Item.MaxUseDurationTicks*
+- uid: OnixRuntime.Api.Items.Item.MaxUseDuration
+  commentId: P:OnixRuntime.Api.Items.Item.MaxUseDuration
+  id: MaxUseDuration
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: MaxUseDuration
+  nameWithType: Item.MaxUseDuration
+  fullName: OnixRuntime.Api.Items.Item.MaxUseDuration
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: MaxUseDuration
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 31
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: How long does it take to use the item.
+  example: []
+  syntax:
+    content: public TimeSpan MaxUseDuration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public ReadOnly Property MaxUseDuration As TimeSpan
+  overload: OnixRuntime.Api.Items.Item.MaxUseDuration*
+- uid: OnixRuntime.Api.Items.Item.CreativeCategory
+  commentId: P:OnixRuntime.Api.Items.Item.CreativeCategory
+  id: CreativeCategory
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: CreativeCategory
+  nameWithType: Item.CreativeCategory
+  fullName: OnixRuntime.Api.Items.Item.CreativeCategory
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: CreativeCategory
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 35
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Which part of the creative menu this item belongs to.
+  example: []
+  syntax:
+    content: public CreativeItemCategory CreativeCategory { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.CreativeItemCategory
+    content.vb: Public ReadOnly Property CreativeCategory As CreativeItemCategory
+  overload: OnixRuntime.Api.Items.Item.CreativeCategory*
+- uid: OnixRuntime.Api.Items.Item.HasEnchantedOverlay
+  commentId: P:OnixRuntime.Api.Items.Item.HasEnchantedOverlay
+  id: HasEnchantedOverlay
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: HasEnchantedOverlay
+  nameWithType: Item.HasEnchantedOverlay
+  fullName: OnixRuntime.Api.Items.Item.HasEnchantedOverlay
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HasEnchantedOverlay
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 39
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If this item has the enchanted overlay without being enchanted (like enchanted golden apples.)
+  example: []
+  syntax:
+    content: public bool HasEnchantedOverlay { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasEnchantedOverlay As Boolean
+  overload: OnixRuntime.Api.Items.Item.HasEnchantedOverlay*
+- uid: OnixRuntime.Api.Items.Item.IsHandEquipped
+  commentId: P:OnixRuntime.Api.Items.Item.IsHandEquipped
+  id: IsHandEquipped
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: IsHandEquipped
+  nameWithType: Item.IsHandEquipped
+  fullName: OnixRuntime.Api.Items.Item.IsHandEquipped
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsHandEquipped
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 43
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If this item can be equipped from right-clicking it in your hand.
+  example: []
+  syntax:
+    content: public bool IsHandEquipped { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHandEquipped As Boolean
+  overload: OnixRuntime.Api.Items.Item.IsHandEquipped*
+- uid: OnixRuntime.Api.Items.Item.IsStackedByData
+  commentId: P:OnixRuntime.Api.Items.Item.IsStackedByData
+  id: IsStackedByData
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: IsStackedByData
+  nameWithType: Item.IsStackedByData
+  fullName: OnixRuntime.Api.Items.Item.IsStackedByData
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsStackedByData
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 47
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If the item is stacked by data (like different colored wool.)
+  example: []
+  syntax:
+    content: public bool IsStackedByData { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsStackedByData As Boolean
+  overload: OnixRuntime.Api.Items.Item.IsStackedByData*
+- uid: OnixRuntime.Api.Items.Item.CanExplode
+  commentId: P:OnixRuntime.Api.Items.Item.CanExplode
+  id: CanExplode
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: CanExplode
+  nameWithType: Item.CanExplode
+  fullName: OnixRuntime.Api.Items.Item.CanExplode
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: CanExplode
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 52
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If this item can be destroyed by explosions.
+  example: []
+  syntax:
+    content: public bool CanExplode { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanExplode As Boolean
+  overload: OnixRuntime.Api.Items.Item.CanExplode*
+- uid: OnixRuntime.Api.Items.Item.IsFireResistant
+  commentId: P:OnixRuntime.Api.Items.Item.IsFireResistant
+  id: IsFireResistant
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: IsFireResistant
+  nameWithType: Item.IsFireResistant
+  fullName: OnixRuntime.Api.Items.Item.IsFireResistant
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsFireResistant
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 56
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If this item cannot be destroyed by fire.
+  example: []
+  syntax:
+    content: public bool IsFireResistant { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFireResistant As Boolean
+  overload: OnixRuntime.Api.Items.Item.IsFireResistant*
+- uid: OnixRuntime.Api.Items.Item.AllowsOffhand
+  commentId: P:OnixRuntime.Api.Items.Item.AllowsOffhand
+  id: AllowsOffhand
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: AllowsOffhand
+  nameWithType: Item.AllowsOffhand
+  fullName: OnixRuntime.Api.Items.Item.AllowsOffhand
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AllowsOffhand
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 60
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If this item can be placed in the offhand.
+  example: []
+  syntax:
+    content: public bool AllowsOffhand { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property AllowsOffhand As Boolean
+  overload: OnixRuntime.Api.Items.Item.AllowsOffhand*
+- uid: OnixRuntime.Api.Items.Item.Name
+  commentId: P:OnixRuntime.Api.Items.Item.Name
+  id: Name
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Item.Name
+  fullName: OnixRuntime.Api.Items.Item.Name
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Name
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: The name of the item like "diamond_sword"
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: OnixRuntime.Api.Items.Item.Name*
+- uid: OnixRuntime.Api.Items.Item.Namespace
+  commentId: P:OnixRuntime.Api.Items.Item.Namespace
+  id: Namespace
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Namespace
+  nameWithType: Item.Namespace
+  fullName: OnixRuntime.Api.Items.Item.Namespace
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Namespace
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 68
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: The namespace this item is in like "minecraft"
+  example: []
+  syntax:
+    content: public string Namespace { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property [Namespace] As String
+  overload: OnixRuntime.Api.Items.Item.Namespace*
+- uid: OnixRuntime.Api.Items.Item.NameFull
+  commentId: P:OnixRuntime.Api.Items.Item.NameFull
+  id: NameFull
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: NameFull
+  nameWithType: Item.NameFull
+  fullName: OnixRuntime.Api.Items.Item.NameFull
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: NameFull
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 72
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: The full name of the item like "minecraft:diamond_sword"
+  example: []
+  syntax:
+    content: public string NameFull { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property NameFull As String
+  overload: OnixRuntime.Api.Items.Item.NameFull*
+- uid: OnixRuntime.Api.Items.Item.DefaultBlock
+  commentId: P:OnixRuntime.Api.Items.Item.DefaultBlock
+  id: DefaultBlock
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: DefaultBlock
+  nameWithType: Item.DefaultBlock
+  fullName: OnixRuntime.Api.Items.Item.DefaultBlock
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: DefaultBlock
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 76
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If this item is a block this will be its default Block State
+  example: []
+  syntax:
+    content: public Block? DefaultBlock { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.Block
+    content.vb: Public ReadOnly Property DefaultBlock As Block
+  overload: OnixRuntime.Api.Items.Item.DefaultBlock*
+- uid: OnixRuntime.Api.Items.Item.IsValidAuxValue(System.Int32)
+  commentId: M:OnixRuntime.Api.Items.Item.IsValidAuxValue(System.Int32)
+  id: IsValidAuxValue(System.Int32)
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: IsValidAuxValue(int)
+  nameWithType: Item.IsValidAuxValue(int)
+  fullName: OnixRuntime.Api.Items.Item.IsValidAuxValue(int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsValidAuxValue
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 82
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: If this item finds the aux value valid.
+  example: []
+  syntax:
+    content: public bool IsValidAuxValue(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value to check
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsValidAuxValue(value As Integer) As Boolean
+  overload: OnixRuntime.Api.Items.Item.IsValidAuxValue*
+  nameWithType.vb: Item.IsValidAuxValue(Integer)
+  fullName.vb: OnixRuntime.Api.Items.Item.IsValidAuxValue(Integer)
+  name.vb: IsValidAuxValue(Integer)
+- uid: OnixRuntime.Api.Items.Item.ToString
+  commentId: M:OnixRuntime.Api.Items.Item.ToString
+  id: ToString
+  parent: OnixRuntime.Api.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Item.ToString()
+  fullName: OnixRuntime.Api.Items.Item.ToString()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/Item.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ToString
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/Item.cs
+    startLine: 83
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OnixRuntime.Api.Items.Item.ToString*
+references:
+- uid: OnixRuntime.Api.Items
+  commentId: N:OnixRuntime.Api.Items
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Items
+  nameWithType: OnixRuntime.Api.Items
+  fullName: OnixRuntime.Api.Items
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Items.Item.Id*
+  commentId: Overload:OnixRuntime.Api.Items.Item.Id
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_Id
+  name: Id
+  nameWithType: Item.Id
+  fullName: OnixRuntime.Api.Items.Item.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Items.Item.MaxStackSize*
+  commentId: Overload:OnixRuntime.Api.Items.Item.MaxStackSize
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_MaxStackSize
+  name: MaxStackSize
+  nameWithType: Item.MaxStackSize
+  fullName: OnixRuntime.Api.Items.Item.MaxStackSize
+- uid: OnixRuntime.Api.Items.Item.MaxDamage*
+  commentId: Overload:OnixRuntime.Api.Items.Item.MaxDamage
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_MaxDamage
+  name: MaxDamage
+  nameWithType: Item.MaxDamage
+  fullName: OnixRuntime.Api.Items.Item.MaxDamage
+- uid: OnixRuntime.Api.Items.Item.MaxUseDurationTicks*
+  commentId: Overload:OnixRuntime.Api.Items.Item.MaxUseDurationTicks
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_MaxUseDurationTicks
+  name: MaxUseDurationTicks
+  nameWithType: Item.MaxUseDurationTicks
+  fullName: OnixRuntime.Api.Items.Item.MaxUseDurationTicks
+- uid: OnixRuntime.Api.Items.Item.MaxUseDuration*
+  commentId: Overload:OnixRuntime.Api.Items.Item.MaxUseDuration
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_MaxUseDuration
+  name: MaxUseDuration
+  nameWithType: Item.MaxUseDuration
+  fullName: OnixRuntime.Api.Items.Item.MaxUseDuration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OnixRuntime.Api.Items.Item.CreativeCategory*
+  commentId: Overload:OnixRuntime.Api.Items.Item.CreativeCategory
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_CreativeCategory
+  name: CreativeCategory
+  nameWithType: Item.CreativeCategory
+  fullName: OnixRuntime.Api.Items.Item.CreativeCategory
+- uid: OnixRuntime.Api.World.CreativeItemCategory
+  commentId: T:OnixRuntime.Api.World.CreativeItemCategory
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.CreativeItemCategory.html
+  name: CreativeItemCategory
+  nameWithType: CreativeItemCategory
+  fullName: OnixRuntime.Api.World.CreativeItemCategory
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: OnixRuntime.Api.Items.Item.HasEnchantedOverlay*
+  commentId: Overload:OnixRuntime.Api.Items.Item.HasEnchantedOverlay
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_HasEnchantedOverlay
+  name: HasEnchantedOverlay
+  nameWithType: Item.HasEnchantedOverlay
+  fullName: OnixRuntime.Api.Items.Item.HasEnchantedOverlay
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Items.Item.IsHandEquipped*
+  commentId: Overload:OnixRuntime.Api.Items.Item.IsHandEquipped
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_IsHandEquipped
+  name: IsHandEquipped
+  nameWithType: Item.IsHandEquipped
+  fullName: OnixRuntime.Api.Items.Item.IsHandEquipped
+- uid: OnixRuntime.Api.Items.Item.IsStackedByData*
+  commentId: Overload:OnixRuntime.Api.Items.Item.IsStackedByData
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_IsStackedByData
+  name: IsStackedByData
+  nameWithType: Item.IsStackedByData
+  fullName: OnixRuntime.Api.Items.Item.IsStackedByData
+- uid: OnixRuntime.Api.Items.Item.CanExplode*
+  commentId: Overload:OnixRuntime.Api.Items.Item.CanExplode
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_CanExplode
+  name: CanExplode
+  nameWithType: Item.CanExplode
+  fullName: OnixRuntime.Api.Items.Item.CanExplode
+- uid: OnixRuntime.Api.Items.Item.IsFireResistant*
+  commentId: Overload:OnixRuntime.Api.Items.Item.IsFireResistant
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_IsFireResistant
+  name: IsFireResistant
+  nameWithType: Item.IsFireResistant
+  fullName: OnixRuntime.Api.Items.Item.IsFireResistant
+- uid: OnixRuntime.Api.Items.Item.AllowsOffhand*
+  commentId: Overload:OnixRuntime.Api.Items.Item.AllowsOffhand
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_AllowsOffhand
+  name: AllowsOffhand
+  nameWithType: Item.AllowsOffhand
+  fullName: OnixRuntime.Api.Items.Item.AllowsOffhand
+- uid: OnixRuntime.Api.Items.Item.Name*
+  commentId: Overload:OnixRuntime.Api.Items.Item.Name
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_Name
+  name: Name
+  nameWithType: Item.Name
+  fullName: OnixRuntime.Api.Items.Item.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Items.Item.Namespace*
+  commentId: Overload:OnixRuntime.Api.Items.Item.Namespace
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_Namespace
+  name: Namespace
+  nameWithType: Item.Namespace
+  fullName: OnixRuntime.Api.Items.Item.Namespace
+- uid: OnixRuntime.Api.Items.Item.NameFull*
+  commentId: Overload:OnixRuntime.Api.Items.Item.NameFull
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_NameFull
+  name: NameFull
+  nameWithType: Item.NameFull
+  fullName: OnixRuntime.Api.Items.Item.NameFull
+- uid: OnixRuntime.Api.Items.Item.DefaultBlock*
+  commentId: Overload:OnixRuntime.Api.Items.Item.DefaultBlock
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_DefaultBlock
+  name: DefaultBlock
+  nameWithType: Item.DefaultBlock
+  fullName: OnixRuntime.Api.Items.Item.DefaultBlock
+- uid: OnixRuntime.Api.World.Block
+  commentId: T:OnixRuntime.Api.World.Block
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: OnixRuntime.Api.World.Block
+- uid: OnixRuntime.Api.Items.Item.IsValidAuxValue*
+  commentId: Overload:OnixRuntime.Api.Items.Item.IsValidAuxValue
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_IsValidAuxValue_System_Int32_
+  name: IsValidAuxValue
+  nameWithType: Item.IsValidAuxValue
+  fullName: OnixRuntime.Api.Items.Item.IsValidAuxValue
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Items.Item.ToString*
+  commentId: Overload:OnixRuntime.Api.Items.Item.ToString
+  href: OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_ToString
+  name: ToString
+  nameWithType: Item.ToString
+  fullName: OnixRuntime.Api.Items.Item.ToString

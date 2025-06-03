@@ -1,0 +1,921 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixGame
+  commentId: T:OnixRuntime.Api.OnixGame
+  id: OnixGame
+  parent: OnixRuntime.Api
+  children:
+  - OnixRuntime.Api.OnixGame.AudioEngine
+  - OnixRuntime.Api.OnixGame.ExecuteCommand(System.String)
+  - OnixRuntime.Api.OnixGame.GetTranslatedMessage(System.String,System.Collections.Generic.IEnumerable{System.String})
+  - OnixRuntime.Api.OnixGame.GetTranslatedMessage(System.String,System.String[])
+  - OnixRuntime.Api.OnixGame.LanguageCode
+  - OnixRuntime.Api.OnixGame.PackManager
+  - OnixRuntime.Api.OnixGame.PackManagerBehavior
+  - OnixRuntime.Api.OnixGame.SendChatMessage(System.String)
+  - OnixRuntime.Api.OnixGame.Version
+  langs:
+  - csharp
+  - vb
+  name: OnixGame
+  nameWithType: OnixGame
+  fullName: OnixRuntime.Api.OnixGame
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: OnixGame
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 9
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Provides access to core Onix game features, including version, pack managers, chat, commands, and language code.
+  example: []
+  syntax:
+    content: public class OnixGame
+    content.vb: Public Class OnixGame
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixGame.Version
+  commentId: P:OnixRuntime.Api.OnixGame.Version
+  id: Version
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: OnixGame.Version
+  fullName: OnixRuntime.Api.OnixGame.Version
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Version
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Gets the Onix game version.
+  example: []
+  syntax:
+    content: public PluginSemVersion Version { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Utils.PluginSemVersion
+    content.vb: Public ReadOnly Property Version As PluginSemVersion
+  overload: OnixRuntime.Api.OnixGame.Version*
+- uid: OnixRuntime.Api.OnixGame.PackManager
+  commentId: P:OnixRuntime.Api.OnixGame.PackManager
+  id: PackManager
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: PackManager
+  nameWithType: OnixGame.PackManager
+  fullName: OnixRuntime.Api.OnixGame.PackManager
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PackManager
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 18
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: >-
+    The pack manager of the client, this is the one you will/should use most of the time.
+
+    It includes global packs, world packs, treatment packs and whatever else is active!
+  example: []
+  syntax:
+    content: public PackManager PackManager { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.ResourcePacks.PackManager
+    content.vb: Public ReadOnly Property PackManager As PackManager
+  overload: OnixRuntime.Api.OnixGame.PackManager*
+- uid: OnixRuntime.Api.OnixGame.PackManagerBehavior
+  commentId: P:OnixRuntime.Api.OnixGame.PackManagerBehavior
+  id: PackManagerBehavior
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: PackManagerBehavior
+  nameWithType: OnixGame.PackManagerBehavior
+  fullName: OnixRuntime.Api.OnixGame.PackManagerBehavior
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PackManagerBehavior
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 22
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: The pack manager, mainly for behavior packs like vanilla behavior packs. This is the client one so there won't be much in there.
+  example: []
+  syntax:
+    content: public PackManager PackManagerBehavior { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.ResourcePacks.PackManager
+    content.vb: Public ReadOnly Property PackManagerBehavior As PackManager
+  overload: OnixRuntime.Api.OnixGame.PackManagerBehavior*
+- uid: OnixRuntime.Api.OnixGame.SendChatMessage(System.String)
+  commentId: M:OnixRuntime.Api.OnixGame.SendChatMessage(System.String)
+  id: SendChatMessage(System.String)
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: SendChatMessage(string)
+  nameWithType: OnixGame.SendChatMessage(string)
+  fullName: OnixRuntime.Api.OnixGame.SendChatMessage(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SendChatMessage
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 28
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Sends a chat message to the game.
+  example: []
+  syntax:
+    content: public void SendChatMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to send.
+    content.vb: Public Sub SendChatMessage(message As String)
+  overload: OnixRuntime.Api.OnixGame.SendChatMessage*
+  nameWithType.vb: OnixGame.SendChatMessage(String)
+  fullName.vb: OnixRuntime.Api.OnixGame.SendChatMessage(String)
+  name.vb: SendChatMessage(String)
+- uid: OnixRuntime.Api.OnixGame.ExecuteCommand(System.String)
+  commentId: M:OnixRuntime.Api.OnixGame.ExecuteCommand(System.String)
+  id: ExecuteCommand(System.String)
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: ExecuteCommand(string)
+  nameWithType: OnixGame.ExecuteCommand(string)
+  fullName: OnixRuntime.Api.OnixGame.ExecuteCommand(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ExecuteCommand
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 34
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Executes a command in the game.
+  example: []
+  syntax:
+    content: public void ExecuteCommand(string command)
+    parameters:
+    - id: command
+      type: System.String
+      description: The command to execute.
+    content.vb: Public Sub ExecuteCommand(command As String)
+  overload: OnixRuntime.Api.OnixGame.ExecuteCommand*
+  nameWithType.vb: OnixGame.ExecuteCommand(String)
+  fullName.vb: OnixRuntime.Api.OnixGame.ExecuteCommand(String)
+  name.vb: ExecuteCommand(String)
+- uid: OnixRuntime.Api.OnixGame.GetTranslatedMessage(System.String,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:OnixRuntime.Api.OnixGame.GetTranslatedMessage(System.String,System.Collections.Generic.IEnumerable{System.String})
+  id: GetTranslatedMessage(System.String,System.Collections.Generic.IEnumerable{System.String})
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: GetTranslatedMessage(string, IEnumerable<string>)
+  nameWithType: OnixGame.GetTranslatedMessage(string, IEnumerable<string>)
+  fullName: OnixRuntime.Api.OnixGame.GetTranslatedMessage(string, System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetTranslatedMessage
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 50
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: >-
+    Gets a translated message from the game.
+
+    This lets you get game text in the user's game language.
+  example: []
+  syntax:
+    content: public string GetTranslatedMessage(string message, IEnumerable<string> arguments)
+    parameters:
+    - id: message
+      type: System.String
+      description: The translation key as found in the default pack's en_US.lang or any other lang file.
+    - id: arguments
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The parameters this key uses, like player names or things like that.
+    return:
+      type: System.String
+      description: The translated message or the same as what came in.
+    content.vb: Public Function GetTranslatedMessage(message As String, arguments As IEnumerable(Of String)) As String
+  overload: OnixRuntime.Api.OnixGame.GetTranslatedMessage*
+  nameWithType.vb: OnixGame.GetTranslatedMessage(String, IEnumerable(Of String))
+  fullName.vb: OnixRuntime.Api.OnixGame.GetTranslatedMessage(String, System.Collections.Generic.IEnumerable(Of String))
+  name.vb: GetTranslatedMessage(String, IEnumerable(Of String))
+- uid: OnixRuntime.Api.OnixGame.GetTranslatedMessage(System.String,System.String[])
+  commentId: M:OnixRuntime.Api.OnixGame.GetTranslatedMessage(System.String,System.String[])
+  id: GetTranslatedMessage(System.String,System.String[])
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: GetTranslatedMessage(string, params string[])
+  nameWithType: OnixGame.GetTranslatedMessage(string, params string[])
+  fullName: OnixRuntime.Api.OnixGame.GetTranslatedMessage(string, params string[])
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetTranslatedMessage
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 60
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: >-
+    Gets a translated message from the game.
+
+    This lets you get game text in the user's game language.
+  example: []
+  syntax:
+    content: public string GetTranslatedMessage(string message, params string[] arguments)
+    parameters:
+    - id: message
+      type: System.String
+      description: The translation key as found in the default pack's en_US.lang or any other lang file.
+    - id: arguments
+      type: System.String[]
+      description: The parameters this key uses, like player names or things like that.
+    return:
+      type: System.String
+      description: The translated message or the same as what came in.
+    content.vb: Public Function GetTranslatedMessage(message As String, ParamArray arguments As String()) As String
+  overload: OnixRuntime.Api.OnixGame.GetTranslatedMessage*
+  nameWithType.vb: OnixGame.GetTranslatedMessage(String, ParamArray String())
+  fullName.vb: OnixRuntime.Api.OnixGame.GetTranslatedMessage(String, ParamArray String())
+  name.vb: GetTranslatedMessage(String, ParamArray String())
+- uid: OnixRuntime.Api.OnixGame.AudioEngine
+  commentId: P:OnixRuntime.Api.OnixGame.AudioEngine
+  id: AudioEngine
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: AudioEngine
+  nameWithType: OnixGame.AudioEngine
+  fullName: OnixRuntime.Api.OnixGame.AudioEngine
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AudioEngine
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 68
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: >-
+    Gets the audio engine of the game.
+
+    This allows you to play game sounds as well as stop them.
+  example: []
+  syntax:
+    content: public GameAudioEngine AudioEngine { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Audio.GameAudioEngine
+    content.vb: Public ReadOnly Property AudioEngine As GameAudioEngine
+  overload: OnixRuntime.Api.OnixGame.AudioEngine*
+- uid: OnixRuntime.Api.OnixGame.LanguageCode
+  commentId: P:OnixRuntime.Api.OnixGame.LanguageCode
+  id: LanguageCode
+  parent: OnixRuntime.Api.OnixGame
+  langs:
+  - csharp
+  - vb
+  name: LanguageCode
+  nameWithType: OnixGame.LanguageCode
+  fullName: OnixRuntime.Api.OnixGame.LanguageCode
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixGame.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: LanguageCode
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixGame.cs
+    startLine: 73
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Gets the current language code of the game.
+  example: []
+  syntax:
+    content: public string LanguageCode { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property LanguageCode As String
+  overload: OnixRuntime.Api.OnixGame.LanguageCode*
+references:
+- uid: OnixRuntime.Api
+  commentId: N:OnixRuntime.Api
+  href: OnixRuntime.html
+  name: OnixRuntime.Api
+  nameWithType: OnixRuntime.Api
+  fullName: OnixRuntime.Api
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.OnixGame.Version*
+  commentId: Overload:OnixRuntime.Api.OnixGame.Version
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_Version
+  name: Version
+  nameWithType: OnixGame.Version
+  fullName: OnixRuntime.Api.OnixGame.Version
+- uid: OnixRuntime.Api.Utils.PluginSemVersion
+  commentId: T:OnixRuntime.Api.Utils.PluginSemVersion
+  parent: OnixRuntime.Api.Utils
+  href: OnixRuntime.Api.Utils.PluginSemVersion.html
+  name: PluginSemVersion
+  nameWithType: PluginSemVersion
+  fullName: OnixRuntime.Api.Utils.PluginSemVersion
+- uid: OnixRuntime.Api.Utils
+  commentId: N:OnixRuntime.Api.Utils
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Utils
+  nameWithType: OnixRuntime.Api.Utils
+  fullName: OnixRuntime.Api.Utils
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils
+    name: Utils
+    href: OnixRuntime.Api.Utils.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils
+    name: Utils
+    href: OnixRuntime.Api.Utils.html
+- uid: OnixRuntime.Api.OnixGame.PackManager*
+  commentId: Overload:OnixRuntime.Api.OnixGame.PackManager
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_PackManager
+  name: PackManager
+  nameWithType: OnixGame.PackManager
+  fullName: OnixRuntime.Api.OnixGame.PackManager
+- uid: OnixRuntime.Api.ResourcePacks.PackManager
+  commentId: T:OnixRuntime.Api.ResourcePacks.PackManager
+  parent: OnixRuntime.Api.ResourcePacks
+  href: OnixRuntime.Api.ResourcePacks.PackManager.html
+  name: PackManager
+  nameWithType: PackManager
+  fullName: OnixRuntime.Api.ResourcePacks.PackManager
+- uid: OnixRuntime.Api.ResourcePacks
+  commentId: N:OnixRuntime.Api.ResourcePacks
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.ResourcePacks
+  nameWithType: OnixRuntime.Api.ResourcePacks
+  fullName: OnixRuntime.Api.ResourcePacks
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.ResourcePacks
+    name: ResourcePacks
+    href: OnixRuntime.Api.ResourcePacks.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.ResourcePacks
+    name: ResourcePacks
+    href: OnixRuntime.Api.ResourcePacks.html
+- uid: OnixRuntime.Api.OnixGame.PackManagerBehavior*
+  commentId: Overload:OnixRuntime.Api.OnixGame.PackManagerBehavior
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_PackManagerBehavior
+  name: PackManagerBehavior
+  nameWithType: OnixGame.PackManagerBehavior
+  fullName: OnixRuntime.Api.OnixGame.PackManagerBehavior
+- uid: OnixRuntime.Api.OnixGame.SendChatMessage*
+  commentId: Overload:OnixRuntime.Api.OnixGame.SendChatMessage
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_SendChatMessage_System_String_
+  name: SendChatMessage
+  nameWithType: OnixGame.SendChatMessage
+  fullName: OnixRuntime.Api.OnixGame.SendChatMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.OnixGame.ExecuteCommand*
+  commentId: Overload:OnixRuntime.Api.OnixGame.ExecuteCommand
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_ExecuteCommand_System_String_
+  name: ExecuteCommand
+  nameWithType: OnixGame.ExecuteCommand
+  fullName: OnixRuntime.Api.OnixGame.ExecuteCommand
+- uid: OnixRuntime.Api.OnixGame.GetTranslatedMessage*
+  commentId: Overload:OnixRuntime.Api.OnixGame.GetTranslatedMessage
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_GetTranslatedMessage_System_String_System_Collections_Generic_IEnumerable_System_String__
+  name: GetTranslatedMessage
+  nameWithType: OnixGame.GetTranslatedMessage
+  fullName: OnixRuntime.Api.OnixGame.GetTranslatedMessage
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.OnixGame.AudioEngine*
+  commentId: Overload:OnixRuntime.Api.OnixGame.AudioEngine
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_AudioEngine
+  name: AudioEngine
+  nameWithType: OnixGame.AudioEngine
+  fullName: OnixRuntime.Api.OnixGame.AudioEngine
+- uid: OnixRuntime.Api.Audio.GameAudioEngine
+  commentId: T:OnixRuntime.Api.Audio.GameAudioEngine
+  parent: OnixRuntime.Api.Audio
+  href: OnixRuntime.Api.Audio.GameAudioEngine.html
+  name: GameAudioEngine
+  nameWithType: GameAudioEngine
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine
+- uid: OnixRuntime.Api.Audio
+  commentId: N:OnixRuntime.Api.Audio
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Audio
+  nameWithType: OnixRuntime.Api.Audio
+  fullName: OnixRuntime.Api.Audio
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Audio
+    name: Audio
+    href: OnixRuntime.Api.Audio.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Audio
+    name: Audio
+    href: OnixRuntime.Api.Audio.html
+- uid: OnixRuntime.Api.OnixGame.LanguageCode*
+  commentId: Overload:OnixRuntime.Api.OnixGame.LanguageCode
+  href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_LanguageCode
+  name: LanguageCode
+  nameWithType: OnixGame.LanguageCode
+  fullName: OnixRuntime.Api.OnixGame.LanguageCode

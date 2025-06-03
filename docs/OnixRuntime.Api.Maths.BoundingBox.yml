@@ -1,0 +1,1813 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Maths.BoundingBox
+  commentId: T:OnixRuntime.Api.Maths.BoundingBox
+  id: BoundingBox
+  parent: OnixRuntime.Api.Maths
+  children:
+  - OnixRuntime.Api.Maths.BoundingBox.#ctor(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft
+  - OnixRuntime.Api.Maths.BoundingBox.BackBottomRight
+  - OnixRuntime.Api.Maths.BoundingBox.BackBottomTop
+  - OnixRuntime.Api.Maths.BoundingBox.BackTopLeft
+  - OnixRuntime.Api.Maths.BoundingBox.BackTopRight
+  - OnixRuntime.Api.Maths.BoundingBox.Center
+  - OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.BoundingBox)
+  - OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.BoundingBox.Empty
+  - OnixRuntime.Api.Maths.BoundingBox.Equals(OnixRuntime.Api.Maths.BoundingBox)
+  - OnixRuntime.Api.Maths.BoundingBox.Equals(System.Object)
+  - OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft
+  - OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight
+  - OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft
+  - OnixRuntime.Api.Maths.BoundingBox.FrontTopRight
+  - OnixRuntime.Api.Maths.BoundingBox.GetHashCode
+  - OnixRuntime.Api.Maths.BoundingBox.GrowToInclude(OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.BoundingBox.Inflate(OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.BoundingBox.Inflate(System.Single)
+  - OnixRuntime.Api.Maths.BoundingBox.Intersect(OnixRuntime.Api.Maths.BoundingBox)
+  - OnixRuntime.Api.Maths.BoundingBox.Intersects(OnixRuntime.Api.Maths.BoundingBox)
+  - OnixRuntime.Api.Maths.BoundingBox.Lerp(OnixRuntime.Api.Maths.BoundingBox,System.Single)
+  - OnixRuntime.Api.Maths.BoundingBox.Maximum
+  - OnixRuntime.Api.Maths.BoundingBox.Merge(OnixRuntime.Api.Maths.BoundingBox)
+  - OnixRuntime.Api.Maths.BoundingBox.Minimum
+  - OnixRuntime.Api.Maths.BoundingBox.Normalize(OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.BoundingBox.Offset(OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.BoundingBox.Size
+  - OnixRuntime.Api.Maths.BoundingBox.ToString
+  - OnixRuntime.Api.Maths.BoundingBox.Union(OnixRuntime.Api.Maths.BoundingBox)
+  - OnixRuntime.Api.Maths.BoundingBox.Volume
+  - OnixRuntime.Api.Maths.BoundingBox.op_Equality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  - OnixRuntime.Api.Maths.BoundingBox.op_Inequality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox
+  nameWithType: BoundingBox
+  fullName: OnixRuntime.Api.Maths.BoundingBox
+  type: Struct
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BoundingBox
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 5
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Represents an axis-aligned bounding box (AABB) in 3D space, with utility methods for containment, intersection, and manipulation.
+  example: []
+  syntax:
+    content: 'public struct BoundingBox : IEquatable<BoundingBox>'
+    content.vb: Public Structure BoundingBox Implements IEquatable(Of BoundingBox)
+  implements:
+  - System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OnixRuntime.Api.Maths.BoundingBox.Minimum
+  commentId: F:OnixRuntime.Api.Maths.BoundingBox.Minimum
+  id: Minimum
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Minimum
+  nameWithType: BoundingBox.Minimum
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Minimum
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Minimum
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 9
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: The minimum (corner) point of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 Minimum
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public Minimum As Vec3
+- uid: OnixRuntime.Api.Maths.BoundingBox.Maximum
+  commentId: F:OnixRuntime.Api.Maths.BoundingBox.Maximum
+  id: Maximum
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Maximum
+  nameWithType: BoundingBox.Maximum
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Maximum
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Maximum
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: The maximum (corner) point of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 Maximum
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public Maximum As Vec3
+- uid: OnixRuntime.Api.Maths.BoundingBox.#ctor(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.#ctor(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)
+  id: '#ctor(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)'
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox(Vec3, Vec3)
+  nameWithType: BoundingBox.BoundingBox(Vec3, Vec3)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BoundingBox(OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.Vec3)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 20
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.Maths.BoundingBox" data-throw-if-not-resolved="false"></xref> struct with the specified minimum and maximum points.
+  example: []
+  syntax:
+    content: public BoundingBox(Vec3 min, Vec3 max)
+    parameters:
+    - id: min
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The minimum point.
+    - id: max
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The maximum point.
+    content.vb: Public Sub New(min As Vec3, max As Vec3)
+  overload: OnixRuntime.Api.Maths.BoundingBox.#ctor*
+  nameWithType.vb: BoundingBox.New(Vec3, Vec3)
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.New(OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.Vec3)
+  name.vb: New(Vec3, Vec3)
+- uid: OnixRuntime.Api.Maths.BoundingBox.Size
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.Size
+  id: Size
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: BoundingBox.Size
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Size
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Size
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 28
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the size (width, height, depth) of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 Size { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property Size As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.Size*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Center
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.Center
+  id: Center
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: BoundingBox.Center
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Center
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Center
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 32
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the center point of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 Center { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property Center As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.Center*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Volume
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.Volume
+  id: Volume
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: BoundingBox.Volume
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Volume
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Volume
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 36
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the volume of the bounding box.
+  example: []
+  syntax:
+    content: public float Volume { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Volume As Single
+  overload: OnixRuntime.Api.Maths.BoundingBox.Volume*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Empty
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.Empty
+  id: Empty
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: BoundingBox.Empty
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Empty
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Empty
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 41
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets whether the bounding box is empty (minimum equals maximum).
+  example: []
+  syntax:
+    content: public bool Empty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Empty As Boolean
+  overload: OnixRuntime.Api.Maths.BoundingBox.Empty*
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft
+  id: FrontTopLeft
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: FrontTopLeft
+  nameWithType: BoundingBox.FrontTopLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FrontTopLeft
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 46
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the front top left corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 FrontTopLeft { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property FrontTopLeft As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft*
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontTopRight
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.FrontTopRight
+  id: FrontTopRight
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: FrontTopRight
+  nameWithType: BoundingBox.FrontTopRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontTopRight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FrontTopRight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 50
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the front top right corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 FrontTopRight { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property FrontTopRight As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.FrontTopRight*
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft
+  id: FrontBottomLeft
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: FrontBottomLeft
+  nameWithType: BoundingBox.FrontBottomLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FrontBottomLeft
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 54
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the front bottom left corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 FrontBottomLeft { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property FrontBottomLeft As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft*
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight
+  id: FrontBottomRight
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: FrontBottomRight
+  nameWithType: BoundingBox.FrontBottomRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: FrontBottomRight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 58
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the front bottom right corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 FrontBottomRight { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property FrontBottomRight As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight*
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackTopLeft
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.BackTopLeft
+  id: BackTopLeft
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BackTopLeft
+  nameWithType: BoundingBox.BackTopLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackTopLeft
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BackTopLeft
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 62
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the back top left corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 BackTopLeft { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property BackTopLeft As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.BackTopLeft*
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackTopRight
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.BackTopRight
+  id: BackTopRight
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BackTopRight
+  nameWithType: BoundingBox.BackTopRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackTopRight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BackTopRight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 66
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the back top right corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 BackTopRight { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property BackTopRight As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.BackTopRight*
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft
+  id: BackBottomLeft
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BackBottomLeft
+  nameWithType: BoundingBox.BackBottomLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BackBottomLeft
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 70
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the back bottom left corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 BackBottomLeft { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property BackBottomLeft As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft*
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackBottomRight
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.BackBottomRight
+  id: BackBottomRight
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BackBottomRight
+  nameWithType: BoundingBox.BackBottomRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackBottomRight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BackBottomRight
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 74
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the back bottom right corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 BackBottomRight { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property BackBottomRight As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.BackBottomRight*
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackBottomTop
+  commentId: P:OnixRuntime.Api.Maths.BoundingBox.BackBottomTop
+  id: BackBottomTop
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BackBottomTop
+  nameWithType: BoundingBox.BackBottomTop
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackBottomTop
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BackBottomTop
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 78
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the back bottom top corner of the bounding box.
+  example: []
+  syntax:
+    content: public Vec3 BackBottomTop { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public ReadOnly Property BackBottomTop As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.BackBottomTop*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.Vec3)
+  id: Contains(OnixRuntime.Api.Maths.Vec3)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Contains(Vec3)
+  nameWithType: BoundingBox.Contains(Vec3)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.Vec3)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Contains
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 84
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Determines whether the bounding box contains the specified point.
+  example: []
+  syntax:
+    content: public bool Contains(Vec3 point)
+    parameters:
+    - id: point
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The point to check.
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(point As Vec3) As Boolean
+  overload: OnixRuntime.Api.Maths.BoundingBox.Contains*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.BoundingBox)
+  id: Contains(OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Contains(BoundingBox)
+  nameWithType: BoundingBox.Contains(BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Contains(OnixRuntime.Api.Maths.BoundingBox)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Contains
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 94
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Determines whether the bounding box completely contains another bounding box.
+  example: []
+  syntax:
+    content: public bool Contains(BoundingBox box)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to check.
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(box As BoundingBox) As Boolean
+  overload: OnixRuntime.Api.Maths.BoundingBox.Contains*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Intersects(OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Intersects(OnixRuntime.Api.Maths.BoundingBox)
+  id: Intersects(OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Intersects(BoundingBox)
+  nameWithType: BoundingBox.Intersects(BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Intersects(OnixRuntime.Api.Maths.BoundingBox)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Intersects
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 104
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Determines whether the bounding box intersects with another bounding box.
+  example: []
+  syntax:
+    content: public bool Intersects(BoundingBox box)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to check for intersection.
+    return:
+      type: System.Boolean
+    content.vb: Public Function Intersects(box As BoundingBox) As Boolean
+  overload: OnixRuntime.Api.Maths.BoundingBox.Intersects*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Intersect(OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Intersect(OnixRuntime.Api.Maths.BoundingBox)
+  id: Intersect(OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Intersect(BoundingBox)
+  nameWithType: BoundingBox.Intersect(BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Intersect(OnixRuntime.Api.Maths.BoundingBox)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Intersect
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 114
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns the intersection of this bounding box with another bounding box.
+  example: []
+  syntax:
+    content: public BoundingBox Intersect(BoundingBox box)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to intersect with.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function Intersect(box As BoundingBox) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.Intersect*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Union(OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Union(OnixRuntime.Api.Maths.BoundingBox)
+  id: Union(OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Union(BoundingBox)
+  nameWithType: BoundingBox.Union(BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Union(OnixRuntime.Api.Maths.BoundingBox)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Union
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 133
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns the union of this bounding box with another bounding box.
+  example: []
+  syntax:
+    content: public BoundingBox Union(BoundingBox box)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to union with.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function Union(box As BoundingBox) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.Union*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Normalize(OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Normalize(OnixRuntime.Api.Maths.Vec3)
+  id: Normalize(OnixRuntime.Api.Maths.Vec3)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Normalize(Vec3)
+  nameWithType: BoundingBox.Normalize(Vec3)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Normalize(OnixRuntime.Api.Maths.Vec3)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Normalize
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 152
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Normalizes a point within the bounding box to a [0, 1] range.
+  example: []
+  syntax:
+    content: public Vec3 Normalize(Vec3 point)
+    parameters:
+    - id: point
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The point to normalize.
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public Function Normalize(point As Vec3) As Vec3
+  overload: OnixRuntime.Api.Maths.BoundingBox.Normalize*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Lerp(OnixRuntime.Api.Maths.BoundingBox,System.Single)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Lerp(OnixRuntime.Api.Maths.BoundingBox,System.Single)
+  id: Lerp(OnixRuntime.Api.Maths.BoundingBox,System.Single)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Lerp(BoundingBox, float)
+  nameWithType: BoundingBox.Lerp(BoundingBox, float)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Lerp(OnixRuntime.Api.Maths.BoundingBox, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Lerp
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 165
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Linearly interpolates between this bounding box and another bounding box.
+  example: []
+  syntax:
+    content: public BoundingBox Lerp(BoundingBox other, float t)
+    parameters:
+    - id: other
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The other bounding box.
+    - id: t
+      type: System.Single
+      description: The interpolation factor.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function Lerp(other As BoundingBox, t As Single) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.Lerp*
+  nameWithType.vb: BoundingBox.Lerp(BoundingBox, Single)
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.Lerp(OnixRuntime.Api.Maths.BoundingBox, Single)
+  name.vb: Lerp(BoundingBox, Single)
+- uid: OnixRuntime.Api.Maths.BoundingBox.Offset(OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Offset(OnixRuntime.Api.Maths.Vec3)
+  id: Offset(OnixRuntime.Api.Maths.Vec3)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Offset(Vec3)
+  nameWithType: BoundingBox.Offset(Vec3)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Offset(OnixRuntime.Api.Maths.Vec3)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Offset
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 173
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a new bounding box offset by the specified vector.
+  example: []
+  syntax:
+    content: public BoundingBox Offset(Vec3 offset)
+    parameters:
+    - id: offset
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The offset vector.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function Offset(offset As Vec3) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.Offset*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Inflate(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Inflate(System.Single)
+  id: Inflate(System.Single)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Inflate(float)
+  nameWithType: BoundingBox.Inflate(float)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Inflate(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Inflate
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 181
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a new bounding box inflated by the specified amount in all directions.
+  example: []
+  syntax:
+    content: public BoundingBox Inflate(float amount)
+    parameters:
+    - id: amount
+      type: System.Single
+      description: The amount to inflate.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function Inflate(amount As Single) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.Inflate*
+  nameWithType.vb: BoundingBox.Inflate(Single)
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.Inflate(Single)
+  name.vb: Inflate(Single)
+- uid: OnixRuntime.Api.Maths.BoundingBox.Inflate(OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Inflate(OnixRuntime.Api.Maths.Vec3)
+  id: Inflate(OnixRuntime.Api.Maths.Vec3)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Inflate(Vec3)
+  nameWithType: BoundingBox.Inflate(Vec3)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Inflate(OnixRuntime.Api.Maths.Vec3)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Inflate
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 189
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a new bounding box inflated by the specified vector amount in all directions.
+  example: []
+  syntax:
+    content: public BoundingBox Inflate(Vec3 amount)
+    parameters:
+    - id: amount
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The vector amount to inflate.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function Inflate(amount As Vec3) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.Inflate*
+- uid: OnixRuntime.Api.Maths.BoundingBox.Merge(OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Merge(OnixRuntime.Api.Maths.BoundingBox)
+  id: Merge(OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Merge(BoundingBox)
+  nameWithType: BoundingBox.Merge(BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Merge(OnixRuntime.Api.Maths.BoundingBox)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Merge
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 197
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a new bounding box that merges this bounding box with another.
+  example: []
+  syntax:
+    content: public BoundingBox Merge(BoundingBox other)
+    parameters:
+    - id: other
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The other bounding box.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function Merge(other As BoundingBox) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.Merge*
+- uid: OnixRuntime.Api.Maths.BoundingBox.GrowToInclude(OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.GrowToInclude(OnixRuntime.Api.Maths.Vec3)
+  id: GrowToInclude(OnixRuntime.Api.Maths.Vec3)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: GrowToInclude(Vec3)
+  nameWithType: BoundingBox.GrowToInclude(Vec3)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.GrowToInclude(OnixRuntime.Api.Maths.Vec3)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GrowToInclude
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 205
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a new bounding box that grows to include the specified point.
+  example: []
+  syntax:
+    content: public BoundingBox GrowToInclude(Vec3 point)
+    parameters:
+    - id: point
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The point to include.
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Function GrowToInclude(point As Vec3) As BoundingBox
+  overload: OnixRuntime.Api.Maths.BoundingBox.GrowToInclude*
+- uid: OnixRuntime.Api.Maths.BoundingBox.ToString
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.ToString
+  id: ToString
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: BoundingBox.ToString()
+  fullName: OnixRuntime.Api.Maths.BoundingBox.ToString()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ToString
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 212
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a string representation of the bounding box.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: OnixRuntime.Api.Maths.BoundingBox.ToString*
+- uid: OnixRuntime.Api.Maths.BoundingBox.op_Equality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.op_Equality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  id: op_Equality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: operator ==(BoundingBox, BoundingBox)
+  nameWithType: BoundingBox.operator ==(BoundingBox, BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.operator ==(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Maths.BoundingBox)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: op_Equality
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 219
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Determines whether two bounding boxes are equal.
+  example: []
+  syntax:
+    content: public static bool operator ==(BoundingBox a, BoundingBox b)
+    parameters:
+    - id: a
+      type: OnixRuntime.Api.Maths.BoundingBox
+    - id: b
+      type: OnixRuntime.Api.Maths.BoundingBox
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(a As BoundingBox, b As BoundingBox) As Boolean
+  overload: OnixRuntime.Api.Maths.BoundingBox.op_Equality*
+  nameWithType.vb: BoundingBox.=(BoundingBox, BoundingBox)
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.=(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Maths.BoundingBox)
+  name.vb: =(BoundingBox, BoundingBox)
+- uid: OnixRuntime.Api.Maths.BoundingBox.op_Inequality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.op_Inequality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  id: op_Inequality(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: operator !=(BoundingBox, BoundingBox)
+  nameWithType: BoundingBox.operator !=(BoundingBox, BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.operator !=(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Maths.BoundingBox)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: op_Inequality
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 225
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Determines whether two bounding boxes are not equal.
+  example: []
+  syntax:
+    content: public static bool operator !=(BoundingBox a, BoundingBox b)
+    parameters:
+    - id: a
+      type: OnixRuntime.Api.Maths.BoundingBox
+    - id: b
+      type: OnixRuntime.Api.Maths.BoundingBox
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(a As BoundingBox, b As BoundingBox) As Boolean
+  overload: OnixRuntime.Api.Maths.BoundingBox.op_Inequality*
+  nameWithType.vb: BoundingBox.<>(BoundingBox, BoundingBox)
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.<>(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Maths.BoundingBox)
+  name.vb: <>(BoundingBox, BoundingBox)
+- uid: OnixRuntime.Api.Maths.BoundingBox.Equals(OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Equals(OnixRuntime.Api.Maths.BoundingBox)
+  id: Equals(OnixRuntime.Api.Maths.BoundingBox)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Equals(BoundingBox)
+  nameWithType: BoundingBox.Equals(BoundingBox)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Equals(OnixRuntime.Api.Maths.BoundingBox)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Equals
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 232
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Determines whether this bounding box is equal to another bounding box.
+  example: []
+  syntax:
+    content: public bool Equals(BoundingBox other)
+    parameters:
+    - id: other
+      type: OnixRuntime.Api.Maths.BoundingBox
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As BoundingBox) As Boolean
+  overload: OnixRuntime.Api.Maths.BoundingBox.Equals*
+  implements:
+  - System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}.Equals(OnixRuntime.Api.Maths.BoundingBox)
+- uid: OnixRuntime.Api.Maths.BoundingBox.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: BoundingBox.Equals(object?)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Equals
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 239
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Determines whether this bounding box is equal to another object.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: OnixRuntime.Api.Maths.BoundingBox.Equals*
+  nameWithType.vb: BoundingBox.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.Equals(Object)
+  name.vb: Equals(Object)
+- uid: OnixRuntime.Api.Maths.BoundingBox.GetHashCode
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.GetHashCode
+  id: GetHashCode
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: BoundingBox.GetHashCode()
+  fullName: OnixRuntime.Api.Maths.BoundingBox.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetHashCode
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 249
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns the hash code for this bounding box.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: OnixRuntime.Api.Maths.BoundingBox.GetHashCode*
+references:
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}
+  commentId: T:System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<BoundingBox>
+  nameWithType: IEquatable<BoundingBox>
+  fullName: System.IEquatable<OnixRuntime.Api.Maths.BoundingBox>
+  nameWithType.vb: IEquatable(Of BoundingBox)
+  fullName.vb: System.IEquatable(Of OnixRuntime.Api.Maths.BoundingBox)
+  name.vb: IEquatable(Of BoundingBox)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: OnixRuntime.Api.Maths.BoundingBox
+    name: BoundingBox
+    href: OnixRuntime.Api.Maths.BoundingBox.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BoundingBox
+    name: BoundingBox
+    href: OnixRuntime.Api.Maths.BoundingBox.html
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Maths.Vec3
+  commentId: T:OnixRuntime.Api.Maths.Vec3
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec3.html
+  name: Vec3
+  nameWithType: Vec3
+  fullName: OnixRuntime.Api.Maths.Vec3
+- uid: OnixRuntime.Api.Maths.BoundingBox
+  commentId: T:OnixRuntime.Api.Maths.BoundingBox
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BoundingBox.html
+  name: BoundingBox
+  nameWithType: BoundingBox
+  fullName: OnixRuntime.Api.Maths.BoundingBox
+- uid: OnixRuntime.Api.Maths.BoundingBox.#ctor*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.#ctor
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox__ctor_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_
+  name: BoundingBox
+  nameWithType: BoundingBox.BoundingBox
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BoundingBox
+  nameWithType.vb: BoundingBox.New
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.New
+  name.vb: New
+- uid: OnixRuntime.Api.Maths.BoundingBox.Size*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Size
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Size
+  name: Size
+  nameWithType: BoundingBox.Size
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Size
+- uid: OnixRuntime.Api.Maths.BoundingBox.Center*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Center
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Center
+  name: Center
+  nameWithType: BoundingBox.Center
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Center
+- uid: OnixRuntime.Api.Maths.BoundingBox.Volume*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Volume
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Volume
+  name: Volume
+  nameWithType: BoundingBox.Volume
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Volume
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Maths.BoundingBox.Empty*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Empty
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Empty
+  name: Empty
+  nameWithType: BoundingBox.Empty
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Empty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_FrontTopLeft
+  name: FrontTopLeft
+  nameWithType: BoundingBox.FrontTopLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontTopRight*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.FrontTopRight
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_FrontTopRight
+  name: FrontTopRight
+  nameWithType: BoundingBox.FrontTopRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontTopRight
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_FrontBottomLeft
+  name: FrontBottomLeft
+  nameWithType: BoundingBox.FrontBottomLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontBottomLeft
+- uid: OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_FrontBottomRight
+  name: FrontBottomRight
+  nameWithType: BoundingBox.FrontBottomRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.FrontBottomRight
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackTopLeft*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.BackTopLeft
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_BackTopLeft
+  name: BackTopLeft
+  nameWithType: BoundingBox.BackTopLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackTopLeft
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackTopRight*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.BackTopRight
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_BackTopRight
+  name: BackTopRight
+  nameWithType: BoundingBox.BackTopRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackTopRight
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_BackBottomLeft
+  name: BackBottomLeft
+  nameWithType: BoundingBox.BackBottomLeft
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackBottomRight*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.BackBottomRight
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_BackBottomRight
+  name: BackBottomRight
+  nameWithType: BoundingBox.BackBottomRight
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackBottomRight
+- uid: OnixRuntime.Api.Maths.BoundingBox.BackBottomTop*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.BackBottomTop
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_BackBottomTop
+  name: BackBottomTop
+  nameWithType: BoundingBox.BackBottomTop
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BackBottomTop
+- uid: OnixRuntime.Api.Maths.BoundingBox.Contains*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Contains
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Contains_OnixRuntime_Api_Maths_Vec3_
+  name: Contains
+  nameWithType: BoundingBox.Contains
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Contains
+- uid: OnixRuntime.Api.Maths.BoundingBox.Intersects*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Intersects
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Intersects_OnixRuntime_Api_Maths_BoundingBox_
+  name: Intersects
+  nameWithType: BoundingBox.Intersects
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Intersects
+- uid: OnixRuntime.Api.Maths.BoundingBox.Intersect*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Intersect
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Intersect_OnixRuntime_Api_Maths_BoundingBox_
+  name: Intersect
+  nameWithType: BoundingBox.Intersect
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Intersect
+- uid: OnixRuntime.Api.Maths.BoundingBox.Union*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Union
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Union_OnixRuntime_Api_Maths_BoundingBox_
+  name: Union
+  nameWithType: BoundingBox.Union
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Union
+- uid: OnixRuntime.Api.Maths.BoundingBox.Normalize*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Normalize
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Normalize_OnixRuntime_Api_Maths_Vec3_
+  name: Normalize
+  nameWithType: BoundingBox.Normalize
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Normalize
+- uid: OnixRuntime.Api.Maths.BoundingBox.Lerp*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Lerp
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Lerp_OnixRuntime_Api_Maths_BoundingBox_System_Single_
+  name: Lerp
+  nameWithType: BoundingBox.Lerp
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Lerp
+- uid: OnixRuntime.Api.Maths.BoundingBox.Offset*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Offset
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Offset_OnixRuntime_Api_Maths_Vec3_
+  name: Offset
+  nameWithType: BoundingBox.Offset
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Offset
+- uid: OnixRuntime.Api.Maths.BoundingBox.Inflate*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Inflate
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Inflate_System_Single_
+  name: Inflate
+  nameWithType: BoundingBox.Inflate
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Inflate
+- uid: OnixRuntime.Api.Maths.BoundingBox.Merge*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Merge
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Merge_OnixRuntime_Api_Maths_BoundingBox_
+  name: Merge
+  nameWithType: BoundingBox.Merge
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Merge
+- uid: OnixRuntime.Api.Maths.BoundingBox.GrowToInclude*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.GrowToInclude
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_GrowToInclude_OnixRuntime_Api_Maths_Vec3_
+  name: GrowToInclude
+  nameWithType: BoundingBox.GrowToInclude
+  fullName: OnixRuntime.Api.Maths.BoundingBox.GrowToInclude
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Maths.BoundingBox.ToString*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.ToString
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_ToString
+  name: ToString
+  nameWithType: BoundingBox.ToString
+  fullName: OnixRuntime.Api.Maths.BoundingBox.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: OnixRuntime.Api.Maths.BoundingBox.op_Equality*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.op_Equality
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_op_Equality_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Maths_BoundingBox_
+  name: operator ==
+  nameWithType: BoundingBox.operator ==
+  fullName: OnixRuntime.Api.Maths.BoundingBox.operator ==
+  nameWithType.vb: BoundingBox.=
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BoundingBox.op_Equality*
+    name: ==
+    href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_op_Equality_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Maths_BoundingBox_
+- uid: OnixRuntime.Api.Maths.BoundingBox.op_Inequality*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.op_Inequality
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_op_Inequality_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Maths_BoundingBox_
+  name: operator !=
+  nameWithType: BoundingBox.operator !=
+  fullName: OnixRuntime.Api.Maths.BoundingBox.operator !=
+  nameWithType.vb: BoundingBox.<>
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BoundingBox.op_Inequality*
+    name: '!='
+    href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_op_Inequality_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Maths_BoundingBox_
+- uid: OnixRuntime.Api.Maths.BoundingBox.Equals*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Equals
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Equals_OnixRuntime_Api_Maths_BoundingBox_
+  name: Equals
+  nameWithType: BoundingBox.Equals
+  fullName: OnixRuntime.Api.Maths.BoundingBox.Equals
+- uid: System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}.Equals(OnixRuntime.Api.Maths.BoundingBox)
+  commentId: M:System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}.Equals(OnixRuntime.Api.Maths.BoundingBox)
+  parent: System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(BoundingBox)
+  nameWithType: IEquatable<BoundingBox>.Equals(BoundingBox)
+  fullName: System.IEquatable<OnixRuntime.Api.Maths.BoundingBox>.Equals(OnixRuntime.Api.Maths.BoundingBox)
+  nameWithType.vb: IEquatable(Of BoundingBox).Equals(BoundingBox)
+  fullName.vb: System.IEquatable(Of OnixRuntime.Api.Maths.BoundingBox).Equals(OnixRuntime.Api.Maths.BoundingBox)
+  spec.csharp:
+  - uid: System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}.Equals(OnixRuntime.Api.Maths.BoundingBox)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BoundingBox
+    name: BoundingBox
+    href: OnixRuntime.Api.Maths.BoundingBox.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{OnixRuntime.Api.Maths.BoundingBox}.Equals(OnixRuntime.Api.Maths.BoundingBox)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BoundingBox
+    name: BoundingBox
+    href: OnixRuntime.Api.Maths.BoundingBox.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Maths.BoundingBox.GetHashCode*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.GetHashCode
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_GetHashCode
+  name: GetHashCode
+  nameWithType: BoundingBox.GetHashCode
+  fullName: OnixRuntime.Api.Maths.BoundingBox.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

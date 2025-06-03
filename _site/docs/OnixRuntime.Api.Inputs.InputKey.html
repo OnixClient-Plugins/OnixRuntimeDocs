@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InputKey | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InputKey | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents an input key, including keyboard, mouse, and gamepad keys, and provides utility methods for key type conversion and comparison.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Inputs_InputKey.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Inputs.InputKey%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Inputs.InputKey">
+
+
+
+  <h1 id="OnixRuntime_Api_Inputs_InputKey" data-uid="OnixRuntime.Api.Inputs.InputKey" class="text-break">
+Class InputKey  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Inputs.html">Inputs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an input key, including keyboard, mouse, and gamepad keys, and provides utility methods for key type conversion and comparison.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InputKey</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InputKey</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey__ctor_" data-uid="OnixRuntime.Api.Inputs.InputKey.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey__ctor_OnixRuntime_Api_Inputs_InputKey_GamepadInputType_" data-uid="OnixRuntime.Api.Inputs.InputKey.#ctor(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)">
+  InputKey(GamepadInputType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new InputKey from a gamepad input type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputKey(InputKey.GamepadInputType input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.GamepadInputType.html">GamepadInputType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey__ctor_" data-uid="OnixRuntime.Api.Inputs.InputKey.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey__ctor_OnixRuntime_Api_Inputs_InputKey_Type_" data-uid="OnixRuntime.Api.Inputs.InputKey.#ctor(OnixRuntime.Api.Inputs.InputKey.Type)">
+  InputKey(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new InputKey from a key type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputKey(InputKey.Type input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.Type.html">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_None" data-uid="OnixRuntime.Api.Inputs.InputKey.None">
+  None
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly InputKey None</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_ClickInput_" data-uid="OnixRuntime.Api.Inputs.InputKey.ClickInput*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_ClickInput" data-uid="OnixRuntime.Api.Inputs.InputKey.ClickInput">
+  ClickInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the mouse click type for this key, if applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputKey.ClickType ClickInput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.ClickType.html">ClickType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_GamepadInput_" data-uid="OnixRuntime.Api.Inputs.InputKey.GamepadInput*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_GamepadInput" data-uid="OnixRuntime.Api.Inputs.InputKey.GamepadInput">
+  GamepadInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the gamepad input type for this key, if applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputKey.GamepadInputType GamepadInput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.GamepadInputType.html">GamepadInputType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_IsGamepad_" data-uid="OnixRuntime.Api.Inputs.InputKey.IsGamepad*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_IsGamepad" data-uid="OnixRuntime.Api.Inputs.InputKey.IsGamepad">
+  IsGamepad
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this key is a gamepad button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGamepad { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_IsMouse_" data-uid="OnixRuntime.Api.Inputs.InputKey.IsMouse*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_IsMouse" data-uid="OnixRuntime.Api.Inputs.InputKey.IsMouse">
+  IsMouse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this key is a mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMouse { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_Value_" data-uid="OnixRuntime.Api.Inputs.InputKey.Value*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_Value" data-uid="OnixRuntime.Api.Inputs.InputKey.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the key type value for this input key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputKey.Type Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.Type.html">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_Equals_" data-uid="OnixRuntime.Api.Inputs.InputKey.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_Equals_System_Object_" data-uid="OnixRuntime.Api.Inputs.InputKey.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this InputKey is equal to another object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_GetHashCode_" data-uid="OnixRuntime.Api.Inputs.InputKey.GetHashCode*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_GetHashCode" data-uid="OnixRuntime.Api.Inputs.InputKey.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the hash code for this InputKey.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_ToString_" data-uid="OnixRuntime.Api.Inputs.InputKey.ToString*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_ToString" data-uid="OnixRuntime.Api.Inputs.InputKey.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string representation of this InputKey.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_op_Equality_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_op_Equality_OnixRuntime_Api_Inputs_InputKey_OnixRuntime_Api_Inputs_InputKey_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey)">
+  operator ==(InputKey, InputKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two InputKey instances for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(InputKey lhs, InputKey rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_op_Equality_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_op_Equality_OnixRuntime_Api_Inputs_InputKey_OnixRuntime_Api_Inputs_InputKey_GamepadInputType_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.GamepadInputType)">
+  operator ==(InputKey, GamepadInputType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares an InputKey to a gamepad input type for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(InputKey lhs, InputKey.GamepadInputType rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.GamepadInputType.html">GamepadInputType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_op_Equality_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_op_Equality_OnixRuntime_Api_Inputs_InputKey_OnixRuntime_Api_Inputs_InputKey_Type_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.Type)">
+  operator ==(InputKey, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares an InputKey to a key type for equality, with support for modifier key aliases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(InputKey lhs, InputKey.Type rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.Type.html">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_op_Inequality_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_op_Inequality_OnixRuntime_Api_Inputs_InputKey_OnixRuntime_Api_Inputs_InputKey_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Inequality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey)">
+  operator !=(InputKey, InputKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two InputKey instances for inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(InputKey lhs, InputKey rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_op_Inequality_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_op_Inequality_OnixRuntime_Api_Inputs_InputKey_OnixRuntime_Api_Inputs_InputKey_GamepadInputType_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Inequality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.GamepadInputType)">
+  operator !=(InputKey, GamepadInputType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares an InputKey to a gamepad input type for inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(InputKey lhs, InputKey.GamepadInputType rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.GamepadInputType.html">GamepadInputType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_InputKey_op_Inequality_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_InputKey_op_Inequality_OnixRuntime_Api_Inputs_InputKey_OnixRuntime_Api_Inputs_InputKey_Type_" data-uid="OnixRuntime.Api.Inputs.InputKey.op_Inequality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.Type)">
+  operator !=(InputKey, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares an InputKey to a key type for inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(InputKey lhs, InputKey.Type rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="OnixRuntime.Api.Inputs.InputKey.html">InputKey</a>.<a class="xref" href="OnixRuntime.Api.Inputs.InputKey.Type.html">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/InputKey.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

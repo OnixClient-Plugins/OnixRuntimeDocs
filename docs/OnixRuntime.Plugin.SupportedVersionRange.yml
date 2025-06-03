@@ -1,0 +1,564 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Plugin.SupportedVersionRange
+  commentId: T:OnixRuntime.Plugin.SupportedVersionRange
+  id: SupportedVersionRange
+  parent: OnixRuntime.Plugin
+  children:
+  - OnixRuntime.Plugin.SupportedVersionRange.#ctor(OnixRuntime.Api.Utils.PluginSemVersion)
+  - OnixRuntime.Plugin.SupportedVersionRange.#ctor(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)
+  - OnixRuntime.Plugin.SupportedVersionRange.#ctor(System.String)
+  - OnixRuntime.Plugin.SupportedVersionRange.IsSupported(OnixRuntime.Api.Utils.PluginSemVersion)
+  - OnixRuntime.Plugin.SupportedVersionRange.ToString
+  langs:
+  - csharp
+  - vb
+  name: SupportedVersionRange
+  nameWithType: SupportedVersionRange
+  fullName: OnixRuntime.Plugin.SupportedVersionRange
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SupportedVersionRange
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 15
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Represents a range of supported versions, either a single version or a range of versions.
+  example: []
+  syntax:
+    content: public class SupportedVersionRange
+    content.vb: Public Class SupportedVersionRange
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OnixRuntime.Plugin.SupportedVersionRange.#ctor(OnixRuntime.Api.Utils.PluginSemVersion)
+  commentId: M:OnixRuntime.Plugin.SupportedVersionRange.#ctor(OnixRuntime.Api.Utils.PluginSemVersion)
+  id: '#ctor(OnixRuntime.Api.Utils.PluginSemVersion)'
+  parent: OnixRuntime.Plugin.SupportedVersionRange
+  langs:
+  - csharp
+  - vb
+  name: SupportedVersionRange(PluginSemVersion)
+  nameWithType: SupportedVersionRange.SupportedVersionRange(PluginSemVersion)
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.SupportedVersionRange(OnixRuntime.Api.Utils.PluginSemVersion)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 23
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Creates a new range with only one version being supported.
+  example: []
+  syntax:
+    content: public SupportedVersionRange(PluginSemVersion version)
+    parameters:
+    - id: version
+      type: OnixRuntime.Api.Utils.PluginSemVersion
+      description: The version that is supported.
+    content.vb: Public Sub New(version As PluginSemVersion)
+  overload: OnixRuntime.Plugin.SupportedVersionRange.#ctor*
+  nameWithType.vb: SupportedVersionRange.New(PluginSemVersion)
+  fullName.vb: OnixRuntime.Plugin.SupportedVersionRange.New(OnixRuntime.Api.Utils.PluginSemVersion)
+  name.vb: New(PluginSemVersion)
+- uid: OnixRuntime.Plugin.SupportedVersionRange.#ctor(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)
+  commentId: M:OnixRuntime.Plugin.SupportedVersionRange.#ctor(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)
+  id: '#ctor(OnixRuntime.Api.Utils.PluginSemVersion,OnixRuntime.Api.Utils.PluginSemVersion)'
+  parent: OnixRuntime.Plugin.SupportedVersionRange
+  langs:
+  - csharp
+  - vb
+  name: SupportedVersionRange(PluginSemVersion, PluginSemVersion)
+  nameWithType: SupportedVersionRange.SupportedVersionRange(PluginSemVersion, PluginSemVersion)
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.SupportedVersionRange(OnixRuntime.Api.Utils.PluginSemVersion, OnixRuntime.Api.Utils.PluginSemVersion)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 33
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Creates new supported version range, inclusively.
+  example: []
+  syntax:
+    content: public SupportedVersionRange(PluginSemVersion min, PluginSemVersion max)
+    parameters:
+    - id: min
+      type: OnixRuntime.Api.Utils.PluginSemVersion
+      description: The minimum version.
+    - id: max
+      type: OnixRuntime.Api.Utils.PluginSemVersion
+      description: The maximum version
+    content.vb: Public Sub New(min As PluginSemVersion, max As PluginSemVersion)
+  overload: OnixRuntime.Plugin.SupportedVersionRange.#ctor*
+  nameWithType.vb: SupportedVersionRange.New(PluginSemVersion, PluginSemVersion)
+  fullName.vb: OnixRuntime.Plugin.SupportedVersionRange.New(OnixRuntime.Api.Utils.PluginSemVersion, OnixRuntime.Api.Utils.PluginSemVersion)
+  name.vb: New(PluginSemVersion, PluginSemVersion)
+- uid: OnixRuntime.Plugin.SupportedVersionRange.#ctor(System.String)
+  commentId: M:OnixRuntime.Plugin.SupportedVersionRange.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: OnixRuntime.Plugin.SupportedVersionRange
+  langs:
+  - csharp
+  - vb
+  name: SupportedVersionRange(string)
+  nameWithType: SupportedVersionRange.SupportedVersionRange(string)
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.SupportedVersionRange(string)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 45
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: >-
+    Parses a version range from a string.
+
+    This will throw an exception if the string is not in the correct format.
+
+    You can have a single version or a range.
+
+    Single version: "1.16.40"
+
+    Range: "1.16.40-1.16.221"
+  example: []
+  syntax:
+    content: public SupportedVersionRange(string range)
+    parameters:
+    - id: range
+      type: System.String
+      description: The range string to parse.
+    content.vb: Public Sub New(range As String)
+  overload: OnixRuntime.Plugin.SupportedVersionRange.#ctor*
+  nameWithType.vb: SupportedVersionRange.New(String)
+  fullName.vb: OnixRuntime.Plugin.SupportedVersionRange.New(String)
+  name.vb: New(String)
+- uid: OnixRuntime.Plugin.SupportedVersionRange.IsSupported(OnixRuntime.Api.Utils.PluginSemVersion)
+  commentId: M:OnixRuntime.Plugin.SupportedVersionRange.IsSupported(OnixRuntime.Api.Utils.PluginSemVersion)
+  id: IsSupported(OnixRuntime.Api.Utils.PluginSemVersion)
+  parent: OnixRuntime.Plugin.SupportedVersionRange
+  langs:
+  - csharp
+  - vb
+  name: IsSupported(PluginSemVersion)
+  nameWithType: SupportedVersionRange.IsSupported(PluginSemVersion)
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.IsSupported(OnixRuntime.Api.Utils.PluginSemVersion)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: IsSupported
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 57
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  syntax:
+    content: public bool IsSupported(PluginSemVersion version)
+    parameters:
+    - id: version
+      type: OnixRuntime.Api.Utils.PluginSemVersion
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsSupported(version As PluginSemVersion) As Boolean
+  overload: OnixRuntime.Plugin.SupportedVersionRange.IsSupported*
+- uid: OnixRuntime.Plugin.SupportedVersionRange.ToString
+  commentId: M:OnixRuntime.Plugin.SupportedVersionRange.ToString
+  id: ToString
+  parent: OnixRuntime.Plugin.SupportedVersionRange
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SupportedVersionRange.ToString()
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.ToString()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ToString
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OnixRuntime.Plugin.SupportedVersionRange.ToString*
+references:
+- uid: OnixRuntime.Plugin
+  commentId: N:OnixRuntime.Plugin
+  href: OnixRuntime.html
+  name: OnixRuntime.Plugin
+  nameWithType: OnixRuntime.Plugin
+  fullName: OnixRuntime.Plugin
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Plugin
+    name: Plugin
+    href: OnixRuntime.Plugin.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Plugin
+    name: Plugin
+    href: OnixRuntime.Plugin.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Plugin.SupportedVersionRange.#ctor*
+  commentId: Overload:OnixRuntime.Plugin.SupportedVersionRange.#ctor
+  href: OnixRuntime.Plugin.SupportedVersionRange.html#OnixRuntime_Plugin_SupportedVersionRange__ctor_OnixRuntime_Api_Utils_PluginSemVersion_
+  name: SupportedVersionRange
+  nameWithType: SupportedVersionRange.SupportedVersionRange
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.SupportedVersionRange
+  nameWithType.vb: SupportedVersionRange.New
+  fullName.vb: OnixRuntime.Plugin.SupportedVersionRange.New
+  name.vb: New
+- uid: OnixRuntime.Api.Utils.PluginSemVersion
+  commentId: T:OnixRuntime.Api.Utils.PluginSemVersion
+  parent: OnixRuntime.Api.Utils
+  href: OnixRuntime.Api.Utils.PluginSemVersion.html
+  name: PluginSemVersion
+  nameWithType: PluginSemVersion
+  fullName: OnixRuntime.Api.Utils.PluginSemVersion
+- uid: OnixRuntime.Api.Utils
+  commentId: N:OnixRuntime.Api.Utils
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Utils
+  nameWithType: OnixRuntime.Api.Utils
+  fullName: OnixRuntime.Api.Utils
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils
+    name: Utils
+    href: OnixRuntime.Api.Utils.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils
+    name: Utils
+    href: OnixRuntime.Api.Utils.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Plugin.SupportedVersionRange.IsSupported*
+  commentId: Overload:OnixRuntime.Plugin.SupportedVersionRange.IsSupported
+  href: OnixRuntime.Plugin.SupportedVersionRange.html#OnixRuntime_Plugin_SupportedVersionRange_IsSupported_OnixRuntime_Api_Utils_PluginSemVersion_
+  name: IsSupported
+  nameWithType: SupportedVersionRange.IsSupported
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.IsSupported
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OnixRuntime.Plugin.SupportedVersionRange.ToString*
+  commentId: Overload:OnixRuntime.Plugin.SupportedVersionRange.ToString
+  href: OnixRuntime.Plugin.SupportedVersionRange.html#OnixRuntime_Plugin_SupportedVersionRange_ToString
+  name: ToString
+  nameWithType: SupportedVersionRange.ToString
+  fullName: OnixRuntime.Plugin.SupportedVersionRange.ToString

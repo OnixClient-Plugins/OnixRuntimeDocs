@@ -1,0 +1,1459 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.UI.ContainerScreen
+  commentId: T:OnixRuntime.Api.UI.ContainerScreen
+  id: ContainerScreen
+  parent: OnixRuntime.Api.UI
+  children:
+  - OnixRuntime.Api.UI.ContainerScreen.#ctor(System.IntPtr)
+  - OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.BlockPos
+  - OnixRuntime.Api.UI.ContainerScreen.Close
+  - OnixRuntime.Api.UI.ContainerScreen.DropAll(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.DropOne(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.Entity
+  - OnixRuntime.Api.UI.ContainerScreen.EntityId
+  - OnixRuntime.Api.UI.ContainerScreen.GetItem(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.HoveredContainer
+  - OnixRuntime.Api.UI.ContainerScreen.HoveredSlot
+  - OnixRuntime.Api.UI.ContainerScreen.HoveringItem
+  - OnixRuntime.Api.UI.ContainerScreen.InventoryLayout
+  - OnixRuntime.Api.UI.ContainerScreen.PlaceAll(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.PlaceOne(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(OnixRuntime.Api.Items.ItemStack,System.String,System.Int32,System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(System.String,System.Int32,System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.TakeAll(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.TakeHalf(System.String,System.Int32)
+  - OnixRuntime.Api.UI.ContainerScreen.Type
+  langs:
+  - csharp
+  - vb
+  name: ContainerScreen
+  nameWithType: ContainerScreen
+  fullName: OnixRuntime.Api.UI.ContainerScreen
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: ContainerScreen
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 50
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Represents a UI screen for interacting with containers such as chests or inventories.
+  example: []
+  syntax:
+    content: 'public class ContainerScreen : MemoryAddressContainer'
+    content.vb: Public Class ContainerScreen Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.UI.ContainerScreen.#ctor(System.IntPtr)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.#ctor(System.IntPtr)
+  id: '#ctor(System.IntPtr)'
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: ContainerScreen(nint)
+  nameWithType: ContainerScreen.ContainerScreen(nint)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.ContainerScreen(nint)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: .ctor
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 55
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.UI.ContainerScreen" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public ContainerScreen(nint currentMemoryAddress)
+    parameters:
+    - id: currentMemoryAddress
+      type: System.IntPtr
+      description: The memory address of the container screen.
+    content.vb: Public Sub New(currentMemoryAddress As IntPtr)
+  overload: OnixRuntime.Api.UI.ContainerScreen.#ctor*
+  nameWithType.vb: ContainerScreen.New(IntPtr)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.New(System.IntPtr)
+  name.vb: New(IntPtr)
+- uid: OnixRuntime.Api.UI.ContainerScreen.EntityId
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.EntityId
+  id: EntityId
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: EntityId
+  nameWithType: ContainerScreen.EntityId
+  fullName: OnixRuntime.Api.UI.ContainerScreen.EntityId
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: EntityId
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 60
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Gets the entity ID associated with this container, if any.
+  example: []
+  syntax:
+    content: public ulong EntityId { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property EntityId As ULong
+  overload: OnixRuntime.Api.UI.ContainerScreen.EntityId*
+- uid: OnixRuntime.Api.UI.ContainerScreen.Entity
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.Entity
+  id: Entity
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: ContainerScreen.Entity
+  fullName: OnixRuntime.Api.UI.ContainerScreen.Entity
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Entity
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Gets the entity associated with this container, if any.
+  example: []
+  syntax:
+    content: public Entity? Entity { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.Entity
+    content.vb: Public ReadOnly Property Entity As Entity
+  overload: OnixRuntime.Api.UI.ContainerScreen.Entity*
+- uid: OnixRuntime.Api.UI.ContainerScreen.BlockPos
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.BlockPos
+  id: BlockPos
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: BlockPos
+  nameWithType: ContainerScreen.BlockPos
+  fullName: OnixRuntime.Api.UI.ContainerScreen.BlockPos
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: BlockPos
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 68
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Gets the block position associated with this container, if any.
+  example: []
+  syntax:
+    content: public BlockPos BlockPos { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+    content.vb: Public ReadOnly Property BlockPos As BlockPos
+  overload: OnixRuntime.Api.UI.ContainerScreen.BlockPos*
+- uid: OnixRuntime.Api.UI.ContainerScreen.Type
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.Type
+  id: Type
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: ContainerScreen.Type
+  fullName: OnixRuntime.Api.UI.ContainerScreen.Type
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Type
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 72
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Gets the type of this container screen.
+  example: []
+  syntax:
+    content: public ContainerScreenType Type { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.UI.ContainerScreenType
+    content.vb: Public ReadOnly Property Type As ContainerScreenType
+  overload: OnixRuntime.Api.UI.ContainerScreen.Type*
+- uid: OnixRuntime.Api.UI.ContainerScreen.HoveredContainer
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.HoveredContainer
+  id: HoveredContainer
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: HoveredContainer
+  nameWithType: ContainerScreen.HoveredContainer
+  fullName: OnixRuntime.Api.UI.ContainerScreen.HoveredContainer
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HoveredContainer
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 77
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Gets the name of the currently hovered container.
+  example: []
+  syntax:
+    content: public string HoveredContainer { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property HoveredContainer As String
+  overload: OnixRuntime.Api.UI.ContainerScreen.HoveredContainer*
+- uid: OnixRuntime.Api.UI.ContainerScreen.HoveredSlot
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.HoveredSlot
+  id: HoveredSlot
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: HoveredSlot
+  nameWithType: ContainerScreen.HoveredSlot
+  fullName: OnixRuntime.Api.UI.ContainerScreen.HoveredSlot
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HoveredSlot
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 81
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Gets the slot index currently hovered by the user.
+  example: []
+  syntax:
+    content: public int HoveredSlot { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property HoveredSlot As Integer
+  overload: OnixRuntime.Api.UI.ContainerScreen.HoveredSlot*
+- uid: OnixRuntime.Api.UI.ContainerScreen.HoveringItem
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.HoveringItem
+  id: HoveringItem
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: HoveringItem
+  nameWithType: ContainerScreen.HoveringItem
+  fullName: OnixRuntime.Api.UI.ContainerScreen.HoveringItem
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: HoveringItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 85
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Will be true when the player is hovering over an item, not a slot in the container screen.
+  example: []
+  syntax:
+    content: public bool HoveringItem { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HoveringItem As Boolean
+  overload: OnixRuntime.Api.UI.ContainerScreen.HoveringItem*
+- uid: OnixRuntime.Api.UI.ContainerScreen.InventoryLayout
+  commentId: P:OnixRuntime.Api.UI.ContainerScreen.InventoryLayout
+  id: InventoryLayout
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: InventoryLayout
+  nameWithType: ContainerScreen.InventoryLayout
+  fullName: OnixRuntime.Api.UI.ContainerScreen.InventoryLayout
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: InventoryLayout
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 90
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Which tab of the inventory is selected.
+  example: []
+  syntax:
+    content: public InventoryLayout InventoryLayout { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.UI.InventoryLayout
+    content.vb: Public Property InventoryLayout As InventoryLayout
+  overload: OnixRuntime.Api.UI.ContainerScreen.InventoryLayout*
+- uid: OnixRuntime.Api.UI.ContainerScreen.Close
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.Close
+  id: Close
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: ContainerScreen.Close()
+  fullName: OnixRuntime.Api.UI.ContainerScreen.Close()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: Close
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 98
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Closes the container screen.
+  example: []
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close()
+  overload: OnixRuntime.Api.UI.ContainerScreen.Close*
+- uid: OnixRuntime.Api.UI.ContainerScreen.GetItem(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.GetItem(System.String,System.Int32)
+  id: GetItem(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: GetItem(string, int)
+  nameWithType: ContainerScreen.GetItem(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.GetItem(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GetItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 105
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Gets the item in the specified container and slot.
+  example: []
+  syntax:
+    content: public ItemStack GetItem(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The name of the container.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    return:
+      type: OnixRuntime.Api.Items.ItemStack
+      description: The <xref href="OnixRuntime.Api.Items.ItemStack" data-throw-if-not-resolved="false"></xref> in the specified slot.
+    content.vb: Public Function GetItem(containerName As String, slot As Integer) As ItemStack
+  overload: OnixRuntime.Api.UI.ContainerScreen.GetItem*
+  nameWithType.vb: ContainerScreen.GetItem(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.GetItem(String, Integer)
+  name.vb: GetItem(String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(OnixRuntime.Api.Items.ItemStack,System.String,System.Int32,System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(OnixRuntime.Api.Items.ItemStack,System.String,System.Int32,System.String,System.Int32)
+  id: SendFlyingItem(OnixRuntime.Api.Items.ItemStack,System.String,System.Int32,System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: SendFlyingItem(ItemStack, string, int, string, int)
+  nameWithType: ContainerScreen.SendFlyingItem(ItemStack, string, int, string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(OnixRuntime.Api.Items.ItemStack, string, int, string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SendFlyingItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 115
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Sends a flying item animation from a source to a target container and slot.
+  example: []
+  syntax:
+    content: public void SendFlyingItem(ItemStack stack, string sourceContainerName, int sourceSlot, string targetContainerName, int targetSlot)
+    parameters:
+    - id: stack
+      type: OnixRuntime.Api.Items.ItemStack
+      description: The item stack to animate.
+    - id: sourceContainerName
+      type: System.String
+      description: The source container name.
+    - id: sourceSlot
+      type: System.Int32
+      description: The source slot index.
+    - id: targetContainerName
+      type: System.String
+      description: The target container name.
+    - id: targetSlot
+      type: System.Int32
+      description: The target slot index.
+    content.vb: Public Sub SendFlyingItem(stack As ItemStack, sourceContainerName As String, sourceSlot As Integer, targetContainerName As String, targetSlot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem*
+  nameWithType.vb: ContainerScreen.SendFlyingItem(ItemStack, String, Integer, String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(OnixRuntime.Api.Items.ItemStack, String, Integer, String, Integer)
+  name.vb: SendFlyingItem(ItemStack, String, Integer, String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(System.String,System.Int32,System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(System.String,System.Int32,System.String,System.Int32)
+  id: SendFlyingItem(System.String,System.Int32,System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: SendFlyingItem(string, int, string, int)
+  nameWithType: ContainerScreen.SendFlyingItem(string, int, string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(string, int, string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: SendFlyingItem
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 124
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Sends a flying item animation from a source to a target container and slot, automatically retrieving the item from the source.
+  example: []
+  syntax:
+    content: public void SendFlyingItem(string sourceContainerName, int sourceSlot, string targetContainerName, int targetSlot)
+    parameters:
+    - id: sourceContainerName
+      type: System.String
+      description: The source container name.
+    - id: sourceSlot
+      type: System.Int32
+      description: The source slot index.
+    - id: targetContainerName
+      type: System.String
+      description: The target container name.
+    - id: targetSlot
+      type: System.Int32
+      description: The target slot index.
+    content.vb: Public Sub SendFlyingItem(sourceContainerName As String, sourceSlot As Integer, targetContainerName As String, targetSlot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem*
+  nameWithType.vb: ContainerScreen.SendFlyingItem(String, Integer, String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem(String, Integer, String, Integer)
+  name.vb: SendFlyingItem(String, Integer, String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.TakeAll(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.TakeAll(System.String,System.Int32)
+  id: TakeAll(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: TakeAll(string, int)
+  nameWithType: ContainerScreen.TakeAll(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.TakeAll(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TakeAll
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 138
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Takes all items from the specified slot in the container.
+  example: []
+  syntax:
+    content: public void TakeAll(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    content.vb: Public Sub TakeAll(containerName As String, slot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.TakeAll*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.TakeAll(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.TakeAll(String, Integer)
+  name.vb: TakeAll(String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.TakeHalf(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.TakeHalf(System.String,System.Int32)
+  id: TakeHalf(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: TakeHalf(string, int)
+  nameWithType: ContainerScreen.TakeHalf(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.TakeHalf(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: TakeHalf
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 145
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Takes half of the items from the specified slot in the container.
+  example: []
+  syntax:
+    content: public void TakeHalf(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    content.vb: Public Sub TakeHalf(containerName As String, slot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.TakeHalf*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.TakeHalf(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.TakeHalf(String, Integer)
+  name.vb: TakeHalf(String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.PlaceAll(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.PlaceAll(System.String,System.Int32)
+  id: PlaceAll(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: PlaceAll(string, int)
+  nameWithType: ContainerScreen.PlaceAll(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.PlaceAll(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PlaceAll
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 152
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Places all items into the specified slot in the container.
+  example: []
+  syntax:
+    content: public void PlaceAll(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    content.vb: Public Sub PlaceAll(containerName As String, slot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.PlaceAll*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.PlaceAll(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.PlaceAll(String, Integer)
+  name.vb: PlaceAll(String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.PlaceOne(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.PlaceOne(System.String,System.Int32)
+  id: PlaceOne(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: PlaceOne(string, int)
+  nameWithType: ContainerScreen.PlaceOne(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.PlaceOne(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PlaceOne
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 159
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Places one item into the specified slot in the container.
+  example: []
+  syntax:
+    content: public void PlaceOne(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    content.vb: Public Sub PlaceOne(containerName As String, slot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.PlaceOne*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.PlaceOne(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.PlaceOne(String, Integer)
+  name.vb: PlaceOne(String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.DropAll(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.DropAll(System.String,System.Int32)
+  id: DropAll(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: DropAll(string, int)
+  nameWithType: ContainerScreen.DropAll(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.DropAll(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: DropAll
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 166
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Drops all items from the specified slot in the container.
+  example: []
+  syntax:
+    content: public void DropAll(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    content.vb: Public Sub DropAll(containerName As String, slot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.DropAll*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.DropAll(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.DropAll(String, Integer)
+  name.vb: DropAll(String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.DropOne(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.DropOne(System.String,System.Int32)
+  id: DropOne(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: DropOne(string, int)
+  nameWithType: ContainerScreen.DropOne(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.DropOne(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: DropOne
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 173
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Drops one item from the specified slot in the container.
+  example: []
+  syntax:
+    content: public void DropOne(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    content.vb: Public Sub DropOne(containerName As String, slot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.DropOne*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.DropOne(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.DropOne(String, Integer)
+  name.vb: DropOne(String, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32,System.Int32)
+  id: AutoPlace(System.String,System.Int32,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: AutoPlace(string, int, int)
+  nameWithType: ContainerScreen.AutoPlace(string, int, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.AutoPlace(string, int, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AutoPlace
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 181
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Automatically places a specified quantity of items into the specified slot in the container.
+  example: []
+  syntax:
+    content: public void AutoPlace(string containerName, int slot, int quantity)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    - id: quantity
+      type: System.Int32
+      description: The quantity to place.
+    content.vb: Public Sub AutoPlace(containerName As String, slot As Integer, quantity As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.AutoPlace*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.AutoPlace(String, Integer, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.AutoPlace(String, Integer, Integer)
+  name.vb: AutoPlace(String, Integer, Integer)
+- uid: OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.UI.ContainerScreen.AutoPlace(System.String,System.Int32)
+  id: AutoPlace(System.String,System.Int32)
+  parent: OnixRuntime.Api.UI.ContainerScreen
+  langs:
+  - csharp
+  - vb
+  name: AutoPlace(string, int)
+  nameWithType: ContainerScreen.AutoPlace(string, int)
+  fullName: OnixRuntime.Api.UI.ContainerScreen.AutoPlace(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/UI/ContainerScreen.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: AutoPlace
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/UI/ContainerScreen.cs
+    startLine: 188
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.UI
+  summary: Automatically places as many items as possible into the specified slot in the container.
+  example: []
+  syntax:
+    content: public void AutoPlace(string containerName, int slot)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: The container name.
+    - id: slot
+      type: System.Int32
+      description: The slot index.
+    content.vb: Public Sub AutoPlace(containerName As String, slot As Integer)
+  overload: OnixRuntime.Api.UI.ContainerScreen.AutoPlace*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when the user lacks the trust level necessary for this.
+  nameWithType.vb: ContainerScreen.AutoPlace(String, Integer)
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.AutoPlace(String, Integer)
+  name.vb: AutoPlace(String, Integer)
+references:
+- uid: OnixRuntime.Api.UI
+  commentId: N:OnixRuntime.Api.UI
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.UI
+  nameWithType: OnixRuntime.Api.UI
+  fullName: OnixRuntime.Api.UI
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.UI
+    name: UI
+    href: OnixRuntime.Api.UI.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.UI
+    name: UI
+    href: OnixRuntime.Api.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.UI.ContainerScreen
+  commentId: T:OnixRuntime.Api.UI.ContainerScreen
+  parent: OnixRuntime.Api.UI
+  href: OnixRuntime.Api.UI.ContainerScreen.html
+  name: ContainerScreen
+  nameWithType: ContainerScreen
+  fullName: OnixRuntime.Api.UI.ContainerScreen
+- uid: OnixRuntime.Api.UI.ContainerScreen.#ctor*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.#ctor
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen__ctor_System_IntPtr_
+  name: ContainerScreen
+  nameWithType: ContainerScreen.ContainerScreen
+  fullName: OnixRuntime.Api.UI.ContainerScreen.ContainerScreen
+  nameWithType.vb: ContainerScreen.New
+  fullName.vb: OnixRuntime.Api.UI.ContainerScreen.New
+  name.vb: New
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: OnixRuntime.Api.UI.ContainerScreen.EntityId*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.EntityId
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_EntityId
+  name: EntityId
+  nameWithType: ContainerScreen.EntityId
+  fullName: OnixRuntime.Api.UI.ContainerScreen.EntityId
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: OnixRuntime.Api.UI.ContainerScreen.Entity*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.Entity
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_Entity
+  name: Entity
+  nameWithType: ContainerScreen.Entity
+  fullName: OnixRuntime.Api.UI.ContainerScreen.Entity
+- uid: OnixRuntime.Api.Entities.Entity
+  commentId: T:OnixRuntime.Api.Entities.Entity
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: OnixRuntime.Api.Entities.Entity
+- uid: OnixRuntime.Api.Entities
+  commentId: N:OnixRuntime.Api.Entities
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Entities
+  nameWithType: OnixRuntime.Api.Entities
+  fullName: OnixRuntime.Api.Entities
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+- uid: OnixRuntime.Api.UI.ContainerScreen.BlockPos*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.BlockPos
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_BlockPos
+  name: BlockPos
+  nameWithType: ContainerScreen.BlockPos
+  fullName: OnixRuntime.Api.UI.ContainerScreen.BlockPos
+- uid: OnixRuntime.Api.Maths.BlockPos
+  commentId: T:OnixRuntime.Api.Maths.BlockPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BlockPos.html
+  name: BlockPos
+  nameWithType: BlockPos
+  fullName: OnixRuntime.Api.Maths.BlockPos
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.UI.ContainerScreen.Type*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.Type
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_Type
+  name: Type
+  nameWithType: ContainerScreen.Type
+  fullName: OnixRuntime.Api.UI.ContainerScreen.Type
+- uid: OnixRuntime.Api.UI.ContainerScreenType
+  commentId: T:OnixRuntime.Api.UI.ContainerScreenType
+  parent: OnixRuntime.Api.UI
+  href: OnixRuntime.Api.UI.ContainerScreenType.html
+  name: ContainerScreenType
+  nameWithType: ContainerScreenType
+  fullName: OnixRuntime.Api.UI.ContainerScreenType
+- uid: OnixRuntime.Api.UI.ContainerScreen.HoveredContainer*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.HoveredContainer
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_HoveredContainer
+  name: HoveredContainer
+  nameWithType: ContainerScreen.HoveredContainer
+  fullName: OnixRuntime.Api.UI.ContainerScreen.HoveredContainer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.UI.ContainerScreen.HoveredSlot*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.HoveredSlot
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_HoveredSlot
+  name: HoveredSlot
+  nameWithType: ContainerScreen.HoveredSlot
+  fullName: OnixRuntime.Api.UI.ContainerScreen.HoveredSlot
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.UI.ContainerScreen.HoveringItem*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.HoveringItem
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_HoveringItem
+  name: HoveringItem
+  nameWithType: ContainerScreen.HoveringItem
+  fullName: OnixRuntime.Api.UI.ContainerScreen.HoveringItem
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.UI.ContainerScreen.InventoryLayout*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.InventoryLayout
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_InventoryLayout
+  name: InventoryLayout
+  nameWithType: ContainerScreen.InventoryLayout
+  fullName: OnixRuntime.Api.UI.ContainerScreen.InventoryLayout
+- uid: OnixRuntime.Api.UI.InventoryLayout
+  commentId: T:OnixRuntime.Api.UI.InventoryLayout
+  parent: OnixRuntime.Api.UI
+  href: OnixRuntime.Api.UI.InventoryLayout.html
+  name: InventoryLayout
+  nameWithType: InventoryLayout
+  fullName: OnixRuntime.Api.UI.InventoryLayout
+- uid: OnixRuntime.Api.UI.ContainerScreen.Close*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.Close
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_Close
+  name: Close
+  nameWithType: ContainerScreen.Close
+  fullName: OnixRuntime.Api.UI.ContainerScreen.Close
+- uid: OnixRuntime.Api.Items.ItemStack
+  commentId: T:OnixRuntime.Api.Items.ItemStack
+  parent: OnixRuntime.Api.Items
+  href: OnixRuntime.Api.Items.ItemStack.html
+  name: ItemStack
+  nameWithType: ItemStack
+  fullName: OnixRuntime.Api.Items.ItemStack
+- uid: OnixRuntime.Api.UI.ContainerScreen.GetItem*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.GetItem
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_GetItem_System_String_System_Int32_
+  name: GetItem
+  nameWithType: ContainerScreen.GetItem
+  fullName: OnixRuntime.Api.UI.ContainerScreen.GetItem
+- uid: OnixRuntime.Api.Items
+  commentId: N:OnixRuntime.Api.Items
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Items
+  nameWithType: OnixRuntime.Api.Items
+  fullName: OnixRuntime.Api.Items
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+- uid: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_SendFlyingItem_OnixRuntime_Api_Items_ItemStack_System_String_System_Int32_System_String_System_Int32_
+  name: SendFlyingItem
+  nameWithType: ContainerScreen.SendFlyingItem
+  fullName: OnixRuntime.Api.UI.ContainerScreen.SendFlyingItem
+- uid: OnixRuntime.Api.Errors.InsufficientTrustException
+  commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+  href: OnixRuntime.Api.Errors.InsufficientTrustException.html
+  name: InsufficientTrustException
+  nameWithType: InsufficientTrustException
+  fullName: OnixRuntime.Api.Errors.InsufficientTrustException
+- uid: OnixRuntime.Api.UI.ContainerScreen.TakeAll*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.TakeAll
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_TakeAll_System_String_System_Int32_
+  name: TakeAll
+  nameWithType: ContainerScreen.TakeAll
+  fullName: OnixRuntime.Api.UI.ContainerScreen.TakeAll
+- uid: OnixRuntime.Api.UI.ContainerScreen.TakeHalf*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.TakeHalf
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_TakeHalf_System_String_System_Int32_
+  name: TakeHalf
+  nameWithType: ContainerScreen.TakeHalf
+  fullName: OnixRuntime.Api.UI.ContainerScreen.TakeHalf
+- uid: OnixRuntime.Api.UI.ContainerScreen.PlaceAll*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.PlaceAll
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_PlaceAll_System_String_System_Int32_
+  name: PlaceAll
+  nameWithType: ContainerScreen.PlaceAll
+  fullName: OnixRuntime.Api.UI.ContainerScreen.PlaceAll
+- uid: OnixRuntime.Api.UI.ContainerScreen.PlaceOne*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.PlaceOne
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_PlaceOne_System_String_System_Int32_
+  name: PlaceOne
+  nameWithType: ContainerScreen.PlaceOne
+  fullName: OnixRuntime.Api.UI.ContainerScreen.PlaceOne
+- uid: OnixRuntime.Api.UI.ContainerScreen.DropAll*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.DropAll
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_DropAll_System_String_System_Int32_
+  name: DropAll
+  nameWithType: ContainerScreen.DropAll
+  fullName: OnixRuntime.Api.UI.ContainerScreen.DropAll
+- uid: OnixRuntime.Api.UI.ContainerScreen.DropOne*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.DropOne
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_DropOne_System_String_System_Int32_
+  name: DropOne
+  nameWithType: ContainerScreen.DropOne
+  fullName: OnixRuntime.Api.UI.ContainerScreen.DropOne
+- uid: OnixRuntime.Api.UI.ContainerScreen.AutoPlace*
+  commentId: Overload:OnixRuntime.Api.UI.ContainerScreen.AutoPlace
+  href: OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_AutoPlace_System_String_System_Int32_System_Int32_
+  name: AutoPlace
+  nameWithType: ContainerScreen.AutoPlace
+  fullName: OnixRuntime.Api.UI.ContainerScreen.AutoPlace

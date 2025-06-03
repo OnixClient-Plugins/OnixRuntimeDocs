@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RuntimeWorld | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RuntimeWorld | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a runtime world, providing access to world properties, players, entities, registries, and utility methods.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_World_RuntimeWorld.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.World.RuntimeWorld%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.World.RuntimeWorld">
+
+
+
+  <h1 id="OnixRuntime_Api_World_RuntimeWorld" data-uid="OnixRuntime.Api.World.RuntimeWorld" class="text-break">
+Class RuntimeWorld  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.World.html">World</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a runtime world, providing access to world properties, players, entities, registries, and utility methods.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RuntimeWorld : MemoryAddressContainer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html">MemoryAddressContainer</a></div>
+      <div><span class="xref">RuntimeWorld</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_BlockRegistry_" data-uid="OnixRuntime.Api.World.RuntimeWorld.BlockRegistry*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_BlockRegistry" data-uid="OnixRuntime.Api.World.RuntimeWorld.BlockRegistry">
+  BlockRegistry
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the block registry for the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockRegistry BlockRegistry { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.World.BlockRegistry.html">BlockRegistry</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_CommandsEnabled_" data-uid="OnixRuntime.Api.World.RuntimeWorld.CommandsEnabled*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_CommandsEnabled" data-uid="OnixRuntime.Api.World.RuntimeWorld.CommandsEnabled">
+  CommandsEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether commands are enabled in the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CommandsEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_CurrentTick_" data-uid="OnixRuntime.Api.World.RuntimeWorld.CurrentTick*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_CurrentTick" data-uid="OnixRuntime.Api.World.RuntimeWorld.CurrentTick">
+  CurrentTick
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current tick of the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CurrentTick { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_CurrentTime_" data-uid="OnixRuntime.Api.World.RuntimeWorld.CurrentTime*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_CurrentTime" data-uid="OnixRuntime.Api.World.RuntimeWorld.CurrentTime">
+  CurrentTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current time of the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CurrentTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_DefaultGameMode_" data-uid="OnixRuntime.Api.World.RuntimeWorld.DefaultGameMode*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_DefaultGameMode" data-uid="OnixRuntime.Api.World.RuntimeWorld.DefaultGameMode">
+  DefaultGameMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default game type for the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMode DefaultGameMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.GameMode.html">GameMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_Difficulty_" data-uid="OnixRuntime.Api.World.RuntimeWorld.Difficulty*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_Difficulty" data-uid="OnixRuntime.Api.World.RuntimeWorld.Difficulty">
+  Difficulty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the difficulty of the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Difficulty Difficulty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.World.Difficulty.html">Difficulty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_Entities_" data-uid="OnixRuntime.Api.World.RuntimeWorld.Entities*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_Entities" data-uid="OnixRuntime.Api.World.RuntimeWorld.Entities">
+  Entities
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all entities including players in the world. Requires trust on the client side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity[] Entities { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.Entity.html">Entity</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_EntitiesWithoutPlayers_" data-uid="OnixRuntime.Api.World.RuntimeWorld.EntitiesWithoutPlayers*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_EntitiesWithoutPlayers" data-uid="OnixRuntime.Api.World.RuntimeWorld.EntitiesWithoutPlayers">
+  EntitiesWithoutPlayers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all entities excluding players in the world. Requires trust on the client side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity[] EntitiesWithoutPlayers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.Entity.html">Entity</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_FlatWorldOptions_" data-uid="OnixRuntime.Api.World.RuntimeWorld.FlatWorldOptions*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_FlatWorldOptions" data-uid="OnixRuntime.Api.World.RuntimeWorld.FlatWorldOptions">
+  FlatWorldOptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The json string of the flat world options used to create this world, right now it is not serialized or deserialized, it is just a string with the default
+but if they ever decide to implement it properly then it could be more useful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FlatWorldOptions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_ItemRegistry_" data-uid="OnixRuntime.Api.World.RuntimeWorld.ItemRegistry*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_ItemRegistry" data-uid="OnixRuntime.Api.World.RuntimeWorld.ItemRegistry">
+  ItemRegistry
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the item registry for the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemRegistry ItemRegistry { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Items.ItemRegistry.html">ItemRegistry</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_Name_" data-uid="OnixRuntime.Api.World.RuntimeWorld.Name*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_Name" data-uid="OnixRuntime.Api.World.RuntimeWorld.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_NetherScale_" data-uid="OnixRuntime.Api.World.RuntimeWorld.NetherScale*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_NetherScale" data-uid="OnixRuntime.Api.World.RuntimeWorld.NetherScale">
+  NetherScale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the nether scale value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NetherScale { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_Players_" data-uid="OnixRuntime.Api.World.RuntimeWorld.Players*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_Players" data-uid="OnixRuntime.Api.World.RuntimeWorld.Players">
+  Players
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all the players in the world. Requires trust on the client side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Player[] Players { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.Player.html">Player</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_ProtocolVersion_" data-uid="OnixRuntime.Api.World.RuntimeWorld.ProtocolVersion*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_ProtocolVersion" data-uid="OnixRuntime.Api.World.RuntimeWorld.ProtocolVersion">
+  ProtocolVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the protocol version of the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ProtocolVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_Scoreboard_" data-uid="OnixRuntime.Api.World.RuntimeWorld.Scoreboard*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_Scoreboard" data-uid="OnixRuntime.Api.World.RuntimeWorld.Scoreboard">
+  Scoreboard
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the scoreboard for the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Scoreboard Scoreboard { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.World.Scoreboards.Scoreboard.html">Scoreboard</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_Seed_" data-uid="OnixRuntime.Api.World.RuntimeWorld.Seed*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_Seed" data-uid="OnixRuntime.Api.World.RuntimeWorld.Seed">
+  Seed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the world seed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Seed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_ServerConnectedPlayers_" data-uid="OnixRuntime.Api.World.RuntimeWorld.ServerConnectedPlayers*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_ServerConnectedPlayers" data-uid="OnixRuntime.Api.World.RuntimeWorld.ServerConnectedPlayers">
+  ServerConnectedPlayers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the server connected players in the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ServerConnectedPlayer[] ServerConnectedPlayers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.ServerConnectedPlayer.html">ServerConnectedPlayer</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_ServerPlayers_" data-uid="OnixRuntime.Api.World.RuntimeWorld.ServerPlayers*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_ServerPlayers" data-uid="OnixRuntime.Api.World.RuntimeWorld.ServerPlayers">
+  ServerPlayers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all the server players in the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ServerPlayer[] ServerPlayers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.ServerPlayer.html">ServerPlayer</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_ServerTickRange_" data-uid="OnixRuntime.Api.World.RuntimeWorld.ServerTickRange*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_ServerTickRange" data-uid="OnixRuntime.Api.World.RuntimeWorld.ServerTickRange">
+  ServerTickRange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the server tick range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ServerTickRange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_SpawnPosition_" data-uid="OnixRuntime.Api.World.RuntimeWorld.SpawnPosition*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_SpawnPosition" data-uid="OnixRuntime.Api.World.RuntimeWorld.SpawnPosition">
+  SpawnPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the spawn position of the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockPos SpawnPosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_WorldIdentifier_" data-uid="OnixRuntime.Api.World.RuntimeWorld.WorldIdentifier*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_WorldIdentifier" data-uid="OnixRuntime.Api.World.RuntimeWorld.WorldIdentifier">
+  WorldIdentifier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is not necessarily unique, in vanilla it is the name of the world folder, servers can send anything, on realms it generally just says &quot;world&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string WorldIdentifier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_GetEntityByRuntimeId_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetEntityByRuntimeId*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_GetEntityByRuntimeId_System_UInt64_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetEntityByRuntimeId(System.UInt64)">
+  GetEntityByRuntimeId(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the entity with the specified runtime id. Requires trust on the client side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity? GetEntityByRuntimeId(ulong runtimeId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runtimeId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_GetEntityByUniqueId_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetEntityByUniqueId*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_GetEntityByUniqueId_System_UInt64_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetEntityByUniqueId(System.UInt64)">
+  GetEntityByUniqueId(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the entity with the specified unique id. Requires trust on the client side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity? GetEntityByUniqueId(ulong uniqueId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uniqueId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_GetPlayerByXuid_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetPlayerByXuid*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_GetPlayerByXuid_System_String_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetPlayerByXuid(System.String)">
+  GetPlayerByXuid(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the player with the specified xuid. Requires trust on the client side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Player? GetPlayerByXuid(string xuid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.Player.html">Player</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Errors.InsufficientTrustException.html">InsufficientTrustException</a></dt>
+    <dd><p>Thrown when the user lacks the trust level necessary for this.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_GetServerPlayerByXuid_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetServerPlayerByXuid*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_GetServerPlayerByXuid_System_String_" data-uid="OnixRuntime.Api.World.RuntimeWorld.GetServerPlayerByXuid(System.String)">
+  GetServerPlayerByXuid(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the server player with the specified xuid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ServerPlayer? GetServerPlayerByXuid(string xuid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Entities.ServerPlayer.html">ServerPlayer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_World_RuntimeWorld_IsSlimeChunk_" data-uid="OnixRuntime.Api.World.RuntimeWorld.IsSlimeChunk*"></a>
+
+  <h3 id="OnixRuntime_Api_World_RuntimeWorld_IsSlimeChunk_OnixRuntime_Api_Maths_ChunkPos_" data-uid="OnixRuntime.Api.World.RuntimeWorld.IsSlimeChunk(OnixRuntime.Api.Maths.ChunkPos)">
+  IsSlimeChunk(ChunkPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified chunk position is a slime chunk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSlimeChunk(ChunkPos pos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pos</code> <a class="xref" href="OnixRuntime.Api.Maths.ChunkPos.html">ChunkPos</a></dt>
+    <dd><p>The chunk position to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the chunk is a slime chunk; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/World/RuntimeWorld.cs/#L22" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

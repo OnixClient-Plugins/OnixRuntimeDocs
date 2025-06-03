@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OnixTextbox | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OnixTextbox | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Convenience class to have the basic functionality of a textbox without doing the hard work that comes with it. You&#39;re welcome. Set IsFocused to true to allow the user to start typing in it. don&#39;t forget that the user won&#39;t be able to use their keyboard until IsFocused is false! Use the Render function to render the textbox.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Inputs_OnixTextbox.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Inputs.OnixTextbox%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Inputs.OnixTextbox">
+
+
+
+  <h1 id="OnixRuntime_Api_Inputs_OnixTextbox" data-uid="OnixRuntime.Api.Inputs.OnixTextbox" class="text-break">
+Class OnixTextbox  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Inputs.html">Inputs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Convenience class to have the basic functionality of a textbox without doing the hard work that comes with it.
+You're welcome.
+Set IsFocused to true to allow the user to start typing in it.
+don't forget that the user won't be able to use their keyboard until IsFocused is false!
+Use the Render function to render the textbox.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OnixTextbox : MightOwnMemoryAddressContainer, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html">MightOwnMemoryAddressContainer</a></div>
+      <div><span class="xref">OnixTextbox</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership">MightOwnMemoryAddressContainer.HasMemoryOwnership</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_">MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose">MightOwnMemoryAddressContainer.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox__ctor_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox__ctor_System_Int32_System_String_System_String_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.#ctor(System.Int32,System.String,System.String)">
+  OnixTextbox(int, string?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new OnixTextbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixTextbox(int maxLength = 128, string? text = null, string? placeholder = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>placeholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_AllowDecimal_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AllowDecimal*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_AllowDecimal" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AllowDecimal">
+  AllowDecimal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property to allow or disallow decimal numbers e.g. 6.9</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowDecimal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_AllowHex_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AllowHex*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_AllowHex" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AllowHex">
+  AllowHex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property to make the numeric textbox hexadecimal e.g. DEADBEEF</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowHex { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberDouble_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberDouble*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberDouble" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberDouble">
+  AsNumberDouble
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the text as a double, use this instead of double.Parse() because it takes care of the AllowHex and anything else that might not exist yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double AsNumberDouble { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberFloat_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberFloat*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberFloat" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberFloat">
+  AsNumberFloat
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the text as a float, use this instead of float.Parse() because it takes care of the AllowHex and anything else that might not exist yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AsNumberFloat { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberInt_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberInt*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberInt" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberInt">
+  AsNumberInt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the text as an integer, use this instead of int.Parse() because it takes care of the AllowHex and anything else that might not exist yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AsNumberInt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberLong_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberLong*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_AsNumberLong" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.AsNumberLong">
+  AsNumberLong
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the text as an long, use this instead of long.Parse() because it takes care of the AllowHex and anything else that might not exist yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long AsNumberLong { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_CursorIndex_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.CursorIndex*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_CursorIndex" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.CursorIndex">
+  CursorIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The index of the cursor in the textbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CursorIndex { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_DisplayText_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.DisplayText*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_DisplayText" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.DisplayText">
+  DisplayText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The text that should be displayed, this is mainly used for password mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayText { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_HasConfirmedText_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.HasConfirmedText*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_HasConfirmedText" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.HasConfirmedText">
+  HasConfirmedText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Will return true once after the user has pressed enter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasConfirmedText { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_HasNewText_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.HasNewText*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_HasNewText" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.HasNewText">
+  HasNewText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Will return true if the text is different from the last time this property was checked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasNewText { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_IsEmpty_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsEmpty*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_IsEmpty" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsEmpty">
+  IsEmpty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If the textbox is empty or not.
+Setting this to true will clear the textbox, false does nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmpty { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_IsFocused_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsFocused*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_IsFocused" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsFocused">
+  IsFocused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If the textbox is focused or not. If this is true the user will be able to type in it with no extra setup needed.
+don't FORGET TO SET IT BACK TO FALSE OTHERWISE THE USER WON'T BE ABLE TO USE THEIR KEYBOARD!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFocused { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_IsNumericOnly_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsNumericOnly*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_IsNumericOnly" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsNumericOnly">
+  IsNumericOnly
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property to make the textbox only accept numeric values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNumericOnly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_IsPassword_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsPassword*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_IsPassword" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.IsPassword">
+  IsPassword
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property to make the textbox a password field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPassword { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_MaxLength_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.MaxLength*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_MaxLength" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.MaxLength">
+  MaxLength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property for the maximum amount of characters in the textbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxLength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_PlaceholderText_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.PlaceholderText*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_PlaceholderText" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.PlaceholderText">
+  PlaceholderText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The placeholder text that will show in light gray when the textbox is empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlaceholderText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_Selection_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Selection*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_Selection" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Selection">
+  Selection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The selection of text in the textbox or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixTextbox.TextSelection? Selection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.html">OnixTextbox</a>.<a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.TextSelection.html">TextSelection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_Text_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Text*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_Text" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Text">
+  Text
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The raw text inside the textbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Text { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_Validity_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Validity*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_Validity" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Validity">
+  Validity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The validity of the text inside the textbox.
+Setting it to Valid will make the outline green, setting it to Invalid will make the outline red.
+Having it to None will have the normal outline color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixTextbox.TextValidity Validity { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.html">OnixTextbox</a>.<a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.TextValidity.html">TextValidity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_Clear_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Clear*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_Clear" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the textbox text/selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_Render_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Render*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_Render_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Inputs_OnixTextbox_CursorVisibility_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Render(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Inputs.OnixTextbox.CursorVisibility)">
+  Render(Rect, CursorVisibility)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the textbox in the specified position using the onix theme.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Render(Rect position, OnixTextbox.CursorVisibility cursorVisibility = CursorVisibility.BlinkingWhenFocused)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position of the textbox.</p>
+</dd>
+    <dt><code>cursorVisibility</code> <a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.html">OnixTextbox</a>.<a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.CursorVisibility.html">CursorVisibility</a></dt>
+    <dd><p>The visibility of the cursor.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Inputs_OnixTextbox_Render_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Render*"></a>
+
+  <h3 id="OnixRuntime_Api_Inputs_OnixTextbox_Render_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Inputs_OnixTextbox_CursorVisibility_" data-uid="OnixRuntime.Api.Inputs.OnixTextbox.Render(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Inputs.OnixTextbox.CursorVisibility)">
+  Render(Rect, ColorF, ColorF, ColorF, CursorVisibility)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the textbox in the specified position using your own colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Render(Rect position, ColorF backgroundColor, ColorF textColor, ColorF outlineColor, OnixTextbox.CursorVisibility cursorVisibility)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position of the textbox.</p>
+</dd>
+    <dt><code>backgroundColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the background.</p>
+</dd>
+    <dt><code>textColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the text.</p>
+</dd>
+    <dt><code>outlineColor</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the outline.</p>
+</dd>
+    <dt><code>cursorVisibility</code> <a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.html">OnixTextbox</a>.<a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.CursorVisibility.html">CursorVisibility</a></dt>
+    <dd><p>The visibility of the cursor.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Inputs/OnixTextbox.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

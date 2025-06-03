@@ -1,0 +1,581 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Audio.GameAudioEngine
+  commentId: T:OnixRuntime.Api.Audio.GameAudioEngine
+  id: GameAudioEngine
+  parent: OnixRuntime.Api.Audio
+  children:
+  - OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld(System.String,OnixRuntime.Api.Maths.Vec3,System.Single,System.Single)
+  - OnixRuntime.Api.Audio.GameAudioEngine.PlayUi(System.String,System.Single,System.Single)
+  - OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds
+  - OnixRuntime.Api.Audio.GameAudioEngine.StopSound(System.String)
+  langs:
+  - csharp
+  - vb
+  name: GameAudioEngine
+  nameWithType: GameAudioEngine
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Audio/GameAudioEngine.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: GameAudioEngine
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Audio/GameAudioEngine.cs
+    startLine: 8
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Audio
+  summary: Represents the audio engine of the game, used to play or stop playing game sounds.
+  example: []
+  syntax:
+    content: 'public class GameAudioEngine : MemoryAddressContainer'
+    content.vb: Public Class GameAudioEngine Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld(System.String,OnixRuntime.Api.Maths.Vec3,System.Single,System.Single)
+  commentId: M:OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld(System.String,OnixRuntime.Api.Maths.Vec3,System.Single,System.Single)
+  id: PlayInWorld(System.String,OnixRuntime.Api.Maths.Vec3,System.Single,System.Single)
+  parent: OnixRuntime.Api.Audio.GameAudioEngine
+  langs:
+  - csharp
+  - vb
+  name: PlayInWorld(string, Vec3, float, float)
+  nameWithType: GameAudioEngine.PlayInWorld(string, Vec3, float, float)
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld(string, OnixRuntime.Api.Maths.Vec3, float, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Audio/GameAudioEngine.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PlayInWorld
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Audio/GameAudioEngine.cs
+    startLine: 22
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Audio
+  summary: Plays a sound at a specific position in the game world.
+  example: []
+  syntax:
+    content: public void PlayInWorld(string soundName, Vec3 position, float volume = 1, float pitch = 1)
+    parameters:
+    - id: soundName
+      type: System.String
+      description: The name of the sound to play.
+    - id: position
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The 3D position in the world where the sound should be played.
+    - id: volume
+      type: System.Single
+      description: The volume of the sound (default is 1.0f).
+    - id: pitch
+      type: System.Single
+      description: The pitch of the sound (default is 1.0f).
+    content.vb: Public Sub PlayInWorld(soundName As String, position As Vec3, volume As Single = 1, pitch As Single = 1)
+  overload: OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld*
+  nameWithType.vb: GameAudioEngine.PlayInWorld(String, Vec3, Single, Single)
+  fullName.vb: OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld(String, OnixRuntime.Api.Maths.Vec3, Single, Single)
+  name.vb: PlayInWorld(String, Vec3, Single, Single)
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.PlayUi(System.String,System.Single,System.Single)
+  commentId: M:OnixRuntime.Api.Audio.GameAudioEngine.PlayUi(System.String,System.Single,System.Single)
+  id: PlayUi(System.String,System.Single,System.Single)
+  parent: OnixRuntime.Api.Audio.GameAudioEngine
+  langs:
+  - csharp
+  - vb
+  name: PlayUi(string, float, float)
+  nameWithType: GameAudioEngine.PlayUi(string, float, float)
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.PlayUi(string, float, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Audio/GameAudioEngine.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: PlayUi
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Audio/GameAudioEngine.cs
+    startLine: 31
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Audio
+  summary: Plays a UI sound, typically used for menus or interface feedback.
+  example: []
+  syntax:
+    content: public void PlayUi(string soundName, float volume = 1, float pitch = 1)
+    parameters:
+    - id: soundName
+      type: System.String
+      description: The name of the sound to play.
+    - id: volume
+      type: System.Single
+      description: The volume of the sound (default is 1.0f).
+    - id: pitch
+      type: System.Single
+      description: The pitch of the sound (default is 1.0f).
+    content.vb: Public Sub PlayUi(soundName As String, volume As Single = 1, pitch As Single = 1)
+  overload: OnixRuntime.Api.Audio.GameAudioEngine.PlayUi*
+  nameWithType.vb: GameAudioEngine.PlayUi(String, Single, Single)
+  fullName.vb: OnixRuntime.Api.Audio.GameAudioEngine.PlayUi(String, Single, Single)
+  name.vb: PlayUi(String, Single, Single)
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.StopSound(System.String)
+  commentId: M:OnixRuntime.Api.Audio.GameAudioEngine.StopSound(System.String)
+  id: StopSound(System.String)
+  parent: OnixRuntime.Api.Audio.GameAudioEngine
+  langs:
+  - csharp
+  - vb
+  name: StopSound(string)
+  nameWithType: GameAudioEngine.StopSound(string)
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.StopSound(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Audio/GameAudioEngine.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: StopSound
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Audio/GameAudioEngine.cs
+    startLine: 38
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Audio
+  summary: Stops a specific sound that is currently playing.
+  example: []
+  syntax:
+    content: public void StopSound(string soundName)
+    parameters:
+    - id: soundName
+      type: System.String
+      description: The name of the sound to stop.
+    content.vb: Public Sub StopSound(soundName As String)
+  overload: OnixRuntime.Api.Audio.GameAudioEngine.StopSound*
+  nameWithType.vb: GameAudioEngine.StopSound(String)
+  fullName.vb: OnixRuntime.Api.Audio.GameAudioEngine.StopSound(String)
+  name.vb: StopSound(String)
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds
+  commentId: M:OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds
+  id: StopAllSounds
+  parent: OnixRuntime.Api.Audio.GameAudioEngine
+  langs:
+  - csharp
+  - vb
+  name: StopAllSounds()
+  nameWithType: GameAudioEngine.StopAllSounds()
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Audio/GameAudioEngine.cs
+      branch: master
+      repo: https://github.com/OnixClient/OnixDotnetRuntime
+    id: StopAllSounds
+    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Audio/GameAudioEngine.cs
+    startLine: 44
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Audio
+  summary: Stops all currently playing sounds.
+  example: []
+  syntax:
+    content: public void StopAllSounds()
+    content.vb: Public Sub StopAllSounds()
+  overload: OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds*
+references:
+- uid: OnixRuntime.Api.Audio
+  commentId: N:OnixRuntime.Api.Audio
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Audio
+  nameWithType: OnixRuntime.Api.Audio
+  fullName: OnixRuntime.Api.Audio
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Audio
+    name: Audio
+    href: OnixRuntime.Api.Audio.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Audio
+    name: Audio
+    href: OnixRuntime.Api.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld*
+  commentId: Overload:OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld
+  href: OnixRuntime.Api.Audio.GameAudioEngine.html#OnixRuntime_Api_Audio_GameAudioEngine_PlayInWorld_System_String_OnixRuntime_Api_Maths_Vec3_System_Single_System_Single_
+  name: PlayInWorld
+  nameWithType: GameAudioEngine.PlayInWorld
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.PlayInWorld
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Maths.Vec3
+  commentId: T:OnixRuntime.Api.Maths.Vec3
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec3.html
+  name: Vec3
+  nameWithType: Vec3
+  fullName: OnixRuntime.Api.Maths.Vec3
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.PlayUi*
+  commentId: Overload:OnixRuntime.Api.Audio.GameAudioEngine.PlayUi
+  href: OnixRuntime.Api.Audio.GameAudioEngine.html#OnixRuntime_Api_Audio_GameAudioEngine_PlayUi_System_String_System_Single_System_Single_
+  name: PlayUi
+  nameWithType: GameAudioEngine.PlayUi
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.PlayUi
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.StopSound*
+  commentId: Overload:OnixRuntime.Api.Audio.GameAudioEngine.StopSound
+  href: OnixRuntime.Api.Audio.GameAudioEngine.html#OnixRuntime_Api_Audio_GameAudioEngine_StopSound_System_String_
+  name: StopSound
+  nameWithType: GameAudioEngine.StopSound
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.StopSound
+- uid: OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds*
+  commentId: Overload:OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds
+  href: OnixRuntime.Api.Audio.GameAudioEngine.html#OnixRuntime_Api_Audio_GameAudioEngine_StopAllSounds
+  name: StopAllSounds
+  nameWithType: GameAudioEngine.StopAllSounds
+  fullName: OnixRuntime.Api.Audio.GameAudioEngine.StopAllSounds

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h3 id="-publishing-your-first-plugin">📦 Publishing Your First Plugin</h3>
+<p>Ready to share your plugin with the world? Before you upload your plugin, you'll want to make sure your manifest is properly configured. Here's everything you need to know about preparing your plugin for publication.</p>
+<br>
+<h3 id="-plugin-manifest-setup">📋 Plugin Manifest Setup</h3>
+<p>The plugin manifest (<code>manifest.json</code>) contains all the essential metadata for your plugin. Here's the JSON structure:</p>
+<pre><code class="lang-json">{
+  &quot;uuid&quot;: &quot;9938f109-df76-4cce-aebd-533f39e777f8&quot;,
+  &quot;plugin_name&quot;: &quot;Plugin Name&quot;,
+  &quot;plugin_author&quot;: &quot;Author&quot;,
+  &quot;plugin_description&quot;: &quot;My amazing plugin description that I forgot to change for some reason.&quot;,
+  &quot;plugin_version&quot;: &quot;1.0.0&quot;,
+  &quot;game_version&quot;: &quot;1.21.80&quot;,
+  &quot;supported_game_version_ranges&quot;: [
+    &quot;0.0.0-9.99.9&quot;
+  ],
+  &quot;categories&quot;: [],
+  &quot;runtime_version&quot;: 1,
+  &quot;target_assembly&quot;: &quot;PluginName.dll&quot;
+}
+</code></pre>
+<br>
+<h3 id="-manual-configuration-required">⚙️ Manual Configuration Required</h3>
+<p>The plugin generator will handle most of the manifest setup for you, but there are a few important fields you'll need to configure manually:</p>
+<ul>
+<li><p><strong>supported_game_version_ranges</strong>: This field determines which versions of Minecraft: Bedrock Edition your plugin will work with. If your plugin only uses the safe, official methods provided by the Onix Client Plugin API, you typically don't need to restrict the version range. However, if you're using &quot;unsafe&quot; features like:</p>
+<ul>
+<li>Direct memory reading or writing</li>
+<li>Raw packet manipulation</li>
+<li>Anything that doesn't use the official Onix Client Plugin API methods</li>
+</ul>
+<p>Then you <strong>must</strong> specify the exact game version ranges your plugin supports, as these features can break between game updates, and using them without proper version checks can lead to crashes or unexpected behavior.</p>
+</li>
+<li><p><strong>categories</strong>: (Optional), You can specify the appropriate categories that best describe your plugin's functionality.</p>
+</li>
+</ul>
+<br>
+<h3 id="-available-plugin-categories">🏷️ Available Plugin Categories</h3>
+<p>Choose from the following categories to help users discover your plugin:</p>
+<ul>
+<li><strong>Utility</strong> - General utility tools and helpers</li>
+<li><strong>Library</strong> - Code libraries for other plugins to use</li>
+<li><strong>Client Side</strong> - Features that enhance the client experience</li>
+<li><strong>Server Side</strong> - Server-related functionality and tools</li>
+<li><strong>Social</strong> - Social features and community tools</li>
+</ul>
+<p>Make sure to select the categories that accurately represent your plugin's purpose and functionality. This helps users find plugins that match their needs.</p>
+<br>
+<h3 id="-uploading-your-plugin">📤 Uploading Your Plugin</h3>
+<p>Once your manifest is properly configured, you can upload your plugin to the Onix Client Plugin Repository. Follow these steps:
+and then steps will go here at some point</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

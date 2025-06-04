@@ -12,16 +12,6 @@
 - The game you will be modding so you need to have it installed.<br>
 <br>
 ---
-#### 🟣 .NET 8.0 SDK
-- <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank"><strong>Download .NET 8.0 SDK</strong></a><br>
-    - Download the latest <strong>Windows x64 SDK</strong> in the <strong>Binaries</strong> section.<br>
-    - Extract the downloaded archive, then rename it to `dotnet8` and place the entire `dotnet8` folder (with `dotnet.exe` in its root) into:<br>`%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Plugins\`<br>
-    - Your folder structure should look like:<br><code>OnixClient\Plugins\dotnet8\dotnet.exe</code><br>
-    - <strong>Note:</strong> <code>dotnet.exe</code> is just an example. You must place the entire <code>dotnet8</code> folder (not just the exe) in the Plugins directory.<br>
-<br>
-![Download the Windows x64 SDK in Binaries](../images/dotnet8binary.png)<br>
-<br>
----
 ### 💻 IDE (Integrated Development Environment)
 To develop plugins for Onix Client, you will need an IDE to write and compile your code. I would personally recommend using Visual Studio or JetBrains Rider as they are both good IDEs, but it always comes down to personal preference. If your PC struggles to run either, then feel free to use Visual Studio Code, as it's lightweight and only needs a few extensions to work well with C#.<br>
 - <strong>Note:</strong> Make sure to install the C# extension for Visual Studio Code if you choose to use it.<br>
@@ -42,5 +32,28 @@ To develop plugins for Onix Client, you will need an IDE to write and compile yo
 - A lightweight, cross-platform code editor. Make sure to install the C# extension. I don't personally use it, but it's a good option if you have a low-end PC.<br>
 <br>
 ---
+### 📥 Getting The Runtime Ready
+- Before you start developing or using plugins, you need to get the .NET runtime, the OnixRuntime placed at the right place.
+  - Thankfully, it's very easy to do! Simply run the following command in the chat and wait for it to complete.
+```
+.plugin setup
+```
+This command will download everything you need to run a plugin.
+The correct OnixRuntime version will be automatically downloaded to match the client's desired version so you don't have to worry about it for the future.
+
+- Temporary step, this does not get you the UI for it.
+  - The ui makes it much easier to manage your plugins, even if not strictly necessary for development.
+  - You can always use .plugin enable <UUID> to enable a plugin without the UI.
+  - The UI allows you change settings you create for your plugin.
+```
+.plugin install uuid 50b8338a-1cc4-44ca-81ef-5ecf1062c37c
+```
+```
+.plugin enable 50b8338a-1cc4-44ca-81ef-5ecf1062c37c
+```
+Those command will install and enable the Plugin Manager UI.
+<br>
+---
 ### 🧩 Creating Your First Plugin
 - To get started with your first plugin, head over to the [Creating Your First Plugin](./creating-your-first-plugin.md) page. It will guide you through the process of creating a simple plugin and give you an overview of the Onix Client Plugin API.
+[.gitignore](../.gitignore)

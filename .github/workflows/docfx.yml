@@ -2,7 +2,6 @@ name: Generate Docs
 
 on:
   push:
-    branches: [main]
     paths:
       - 'docs/**'
       - 'guide/**'
@@ -10,49 +9,42 @@ on:
       - 'docfx.json'
       - 'index.md'
       - 'toc.yml'
-  workflow_dispatch:
 
 jobs:
-  build-and-commit:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout public repo (OnixRuntimeDocs)
+      - name: Checkout Docs Repo (public)
         uses: actions/checkout@v3
-
-      - name: Clone private repo (OnixRuntime)
-        env:
-          PAT: ${{ secrets.PERSONAL_TOKEN }}
-        run: |
-          git clone https://$PAT@github.com/OnixClient-Plugins/OnixRuntime.git ../OnixRuntime
-
-      - name: Update docfx.json src path
-        run: |
-          sed -i 's|C:\\\\Users\\\\jqms\\\\source\\\\repos\\\\OnixDotnetRuntime|../OnixRuntime|' docfx.json
-
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x'
+          repository: OnixClient-Plugins/OnixRuntimeDocs
+          path: OnixRuntimeDocs
 
-      - name: Install DocFX
-        run: dotnet tool install -g docfx
+      - name: Checkout Runtime Repo (private)
+        uses: actions/checkout@v3
+        with:
+          repository: OnixClient-Plugins/OnixRuntime
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          path: OnixRuntime
 
-      - name: Add DocFX to PATH
-        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+      - name: Setup DocFX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dotnet-sdk-7.0
+          dotnet tool install -g docfx-cli
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
-      - name: Run DocFX
+      - name: Run DocFX Build
+        working-directory: OnixRuntimeDocs
         run: docfx docfx.json
 
-      - name: Commit and push _site to public repo
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+      - name: Commit and Push _site
+        working-directory: OnixRuntimeDocs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git stash push -m "pre-pull stash"
-          git pull --rebase "https://x-access-token:${PERSONAL_TOKEN}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git" main
-          git stash pop || echo "No stash to pop"
+          git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git
           git add _site
-          git commit -m "Updated _site" || echo "No changes to commit"
-          git push "https://x-access-token:${PERSONAL_TOKEN}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git" HEAD:main
+          git commit -m "auto: update _site from docfx build" || echo "No changes to commit"
+          git push origin main

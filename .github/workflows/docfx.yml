@@ -2,6 +2,7 @@ name: Generate Docs
 
 on:
   push:
+    branches: [main]
     paths:
       - 'docs/**'
       - 'guide/**'
@@ -12,44 +13,44 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-commit:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Docs Repo (public)
+      - name: Checkout public repo (OnixRuntimeDocs)
         uses: actions/checkout@v3
-        with:
-          repository: OnixClient-Plugins/OnixRuntimeDocs
-          path: OnixRuntimeDocs
 
-      - name: Checkout Runtime Repo (private)
-        uses: actions/checkout@v3
-        with:
-          repository: OnixClient-Plugins/OnixRuntime
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          path: OnixRuntime
-
-      - name: Setup .NET SDK and DocFX
+      - name: Clone private repo (OnixRuntime)
+        env:
+          PAT: ${{ secrets.PERSONAL_TOKEN }}
         run: |
-          wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-          sudo dpkg -i packages-microsoft-prod.deb
-          sudo apt-get update
-          sudo apt-get install -y apt-transport-https
-          sudo apt-get update
-          sudo apt-get install -y dotnet-sdk-7.0
-          dotnet tool install -g docfx-cli
-          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+          git clone https://$PAT@github.com/OnixClient-Plugins/OnixRuntime.git ../OnixRuntime
 
-      - name: Run DocFX Build
-        working-directory: OnixRuntimeDocs
+      - name: Update docfx.json src path
+        run: |
+          sed -i 's|C:\\\\Users\\\\jqms\\\\source\\\\repos\\\\OnixDotnetRuntime|../OnixRuntime|' docfx.json
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Add DocFX to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Run DocFX
         run: docfx docfx.json
 
-      - name: Commit and Push _site
-        working-directory: OnixRuntimeDocs
+      - name: Commit and push _site to public repo
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git
+          git pull --rebase "https://x-access-token:${PERSONAL_TOKEN}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git" main
           git add _site
           git commit -m "auto: update _site from docfx build" || echo "No changes to commit"
-          git push origin main
+          git push "https://x-access-token:${PERSONAL_TOKEN}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git" HEAD:main

@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout current repo
+      - name: Checkout public repo (OnixRuntimeDocs)
         uses: actions/checkout@v3
 
-      - name: Clone private repo
+      - name: Clone private repo (OnixRuntime)
         env:
           PAT: ${{ secrets.PERSONAL_TOKEN }}
         run: |
@@ -45,11 +45,12 @@ jobs:
         run: docfx docfx.json
 
       - name: Commit and push _site to public repo
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${PERSONAL_TOKEN}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git
           git add _site
-          git commit -m "auto: update _site from docfx build" || echo "No changes"
+          git commit -m "auto: update _site from docfx build" || echo "No changes to commit"
           git push origin HEAD
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}

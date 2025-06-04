@@ -60,6 +60,7 @@ The console is redirected to the game chat, so you can see the output in-game.
 When your plugin is loaded, it will automatically unload and reload it when you build.
   - On Visual Studio Code, you can type dotnet build in the terminal to build the plugin or use Ctrl+B on Visual Studio Community or Rider.
   - If you get a build error talking about `/langVersion` install [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) and [.NET SDK 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
+  - If you get it on Visual Studio, Update it and make sure to enable .NET desktop development in the Visual Studio Installer.
 
 ### ✏️ Changing the Plugin Details
 If you already used the plugin generator and would like to change the name, description or other details of your plugin to something else, you can edit the `manifest.json` file located in the root of your plugin project.

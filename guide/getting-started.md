@@ -51,7 +51,7 @@ The correct OnixRuntime version will be automatically downloaded to match the cl
 ```
 .plugin enable 50b8338a-1cc4-44ca-81ef-5ecf1062c37c
 ```
-Those command will install and enable the Plugin Manager UI.
+- Those commands will install and enable the Plugin Manager UI.
 <br>
 ---
 ### 🧩 Creating Your First Plugin

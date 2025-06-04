@@ -12,13 +12,18 @@ on:
       - 'toc.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-and-commit:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout public repo (OnixRuntimeDocs)
-        uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Clone private repo (OnixRuntime)
         env:
@@ -44,15 +49,10 @@ jobs:
       - name: Run DocFX
         run: docfx docfx.json
 
-      - name: Commit and push _site to public repo
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git stash push -m "ci: stash before pull" || true
-          git pull --rebase "https://x-access-token:${PERSONAL_TOKEN}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git" main
-          git stash pop || true
-          git add _site
-          git commit -m "auto: update _site from docfx build" || echo "No changes to commit"
-          git push "https://x-access-token:${PERSONAL_TOKEN}@github.com/OnixClient-Plugins/OnixRuntimeDocs.git" HEAD:main
+      - name: Commit and push _site
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'auto: update _site from docfx build'
+          file_pattern: '_site/**'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: '41898282+github-actions[bot]@users.noreply.github.com'

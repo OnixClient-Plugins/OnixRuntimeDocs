@@ -52,7 +52,7 @@ namespace ExamplePlugin {
 }
 ```
 This example plugin simply logs a message to the console when it is loaded and unloaded. You can modify this code to add your own functionality and features.
-The console is redirected to the minecraft chat, so you can see the output in-game.
+The console is redirected to the game chat, so you can see the output in-game.
 
 ### 📥 Importing the Plugin
 - To import the plugin, you simply build it in your IDE.

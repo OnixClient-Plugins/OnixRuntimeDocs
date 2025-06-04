@@ -52,8 +52,17 @@ namespace ExamplePlugin {
 }
 ```
 This example plugin simply logs a message to the console when it is loaded and unloaded. You can modify this code to add your own functionality and features.
+The console is redirected to the minecraft chat, so you can see the output in-game.
+
+### 📥 Importing the Plugin
+- To import the plugin, you simply build it in your IDE.
+- If you used the project generator, it will copy the necessary files over and it will be ready to use.
+When your plugin is loaded, it will automatically unload and reload it when you build.
+  - On Visual Studio Code, you can type dotnet build in the terminal to build the plugin or use Ctrl+B on Visual Studio Community or Rider.
+  - If you get a build error talking about `/langVersion` install [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) and [.NET SDK 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
 
 ### ✏️ Changing the Plugin Details
-If you already used the plugin generator and would like to change the name, description or other details of your plugin to something else, you can edit the `manifest.json` file located in the root of your plugin project. This file contains all the metadata for your plugin, including its name, description, version, author, and more.
+If you already used the plugin generator and would like to change the name, description or other details of your plugin to something else, you can edit the `manifest.json` file located in the root of your plugin project.
+This file contains all the metadata for your plugin, including its name, description, version, author, and more.
 
 - We recommend leaving the `uuid` field, `runtime_version`, and `target_assembly` fields as they are, as they are automatically generated and managed by the Onix Client Plugin API.

@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SvgRenderer | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SvgRenderer | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Helper class to render svg documents at varying sizes.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Rendering_Helpers_SvgRenderer.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Rendering.Helpers.SvgRenderer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer">
+
+
+
+  <h1 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer" class="text-break">
+Class SvgRenderer  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Rendering.html">Rendering</a>.<a class="xref" href="OnixRuntime.Api.Rendering.Helpers.html">Helpers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Helper class to render svg documents at varying sizes.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SvgRenderer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SvgRenderer</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_DisplayTimeBeforeGeneration_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.DisplayTimeBeforeGeneration*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_DisplayTimeBeforeGeneration" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.DisplayTimeBeforeGeneration">
+  DisplayTimeBeforeGeneration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long a size that falls within the regeneration threshold should be shown before we generate a specialized image for it.
+This is used to avoid generating images for sizes that are only shown for a short time while still allowing for images to be generated for sizes that are shown for a longer time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DisplayTimeBeforeGeneration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_Document_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.Document*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_Document" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.Document">
+  Document
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the SVG document that is used for rendering, measuring, whatever.
+This will return null when the document is not yet loaded.
+You can check this periodically if you need to document to be loaded before things happen.
+Please don't use this to avoid rendering when not ready, this is handled for you.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgDocument? Document { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Utils.SvgDocument.html">SvgDocument</a></dt>
+    <dd><p>The loaded SVG document, or null if not yet loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_NoShowThreshold_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.NoShowThreshold*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_NoShowThreshold" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.NoShowThreshold">
+  NoShowThreshold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long in seconds between renders should we assume that the image wasn't shown for a while.
+This will reset how long it's been on screen and delay its generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float NoShowThreshold { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_PathProvider_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.PathProvider*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_PathProvider" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.PathProvider">
+  PathProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This function is used to get a virtual <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a> for the SVG image rendering at a specific size.
+The default implementation constructs a path based on the renderer's base path and file name, appending the size in the format &quot;{width}x{height}.png&quot;.
+If you need a different path structure or want to use a different method to get the texture path, you can override this function.
+It will upload the image for that size under whatever <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a> you return here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;SvgRenderer, Vec2I, TexturePath&gt; PathProvider { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a>, <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RegenerationThreshold_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RegenerationThreshold*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RegenerationThreshold" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RegenerationThreshold">
+  RegenerationThreshold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When rendering in non-static mode, this is the minimum size difference that will trigger a regeneration of the SVG image.
+This is used to avoid regenerating the image too often when the size changes too slightly.
+/// The default value is 64x64 pixels, meaning that the image will only be regenerated if the size changes by at least 64 pixels in either dimension.
+This is useful to avoid unnecessary rendering when the size changes slightly, but you can adjust it to your needs.
+This is to avoid animations generating a ton of images when the size changes slightly.
+When rendering an image at the same size for a while, a new image will only be generated regardless of this treshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I RegenerationThreshold { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderClosestSizeUntilReady_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderClosestSizeUntilReady*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderClosestSizeUntilReady" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderClosestSizeUntilReady">
+  RenderClosestSizeUntilReady
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is used to determine if the SVG renderer should render the closest size available until the texture of the proper size is ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderClosestSizeUntilReady { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_SizeTransformer_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.SizeTransformer*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_SizeTransformer" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.SizeTransformer">
+  SizeTransformer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This function transforms the size given by the user when rendering the image into the size of the actual image data.
+The default implementation multiplies the size by the GUI scale factor, making it the same raw pixel size as the GUI.
+If you want to use the SVG renderer for other purposes, you can override this function to return a different size fitting your needs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;SvgRenderer, Vec2, Vec2I&gt; SizeTransformer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_SvgImageRenderer_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.SvgImageRenderer*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_SvgImageRenderer" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.SvgImageRenderer">
+  SvgImageRenderer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This function is used to render the SVG document into a raw image data.
+The default implementation uses the SvgDocument's Render method to create a RawImageData object.
+This will fill the whole image, stretching it if necessary.
+If you need more control over how it places the SVG into the image, you can override this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;SvgRenderer, Vec2I, SvgDocument, RawImageData&gt; SvgImageRenderer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a>, <a class="xref" href="OnixRuntime.Api.Utils.SvgDocument.html">SvgDocument</a>, <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_VirtualBasePath_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.VirtualBasePath*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_VirtualBasePath" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.VirtualBasePath">
+  VirtualBasePath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is the virtual base path used to identify the SVG image.
+It is used to construct the texture path for the SVG image.
+This allows you to group SVG images under a common path in the texture cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VirtualBasePath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_VirtualFileName_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.VirtualFileName*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_VirtualFileName" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.VirtualFileName">
+  VirtualFileName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is the virtual file name used to identify the SVG image.
+These things need a name, so we can upload them to the texture cache.
+The name should be unique for each SVG image, and it will be used to construct the texture path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VirtualFileName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_Create_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.Create*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_Create_System_String_OnixRuntime_Api_Utils_SvgDocument_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.Create(System.String,OnixRuntime.Api.Utils.SvgDocument)">
+  Create(string, SvgDocument)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new SVG renderer from an already loaded SVG document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SvgRenderer Create(string virtualFileName, SvgDocument document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>virtualFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The virtual file name to use for identifying this SVG in the texture cache.</p>
+</dd>
+    <dt><code>document</code> <a class="xref" href="OnixRuntime.Api.Utils.SvgDocument.html">SvgDocument</a></dt>
+    <dd><p>The loaded SVG document.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>A new SvgRenderer instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_Create_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.Create*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_Create_System_String_System_String_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.Create(System.String,System.String)">
+  Create(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new SVG renderer from the provided SVG document content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SvgRenderer Create(string virtualFileName, string documentContent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>virtualFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The virtual file name to use for identifying this SVG in the texture cache.</p>
+</dd>
+    <dt><code>documentContent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The SVG document content as a string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>A new SvgRenderer instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_CreateFromFile_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.CreateFromFile*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_CreateFromFile_System_String_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.CreateFromFile(System.String)">
+  CreateFromFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new SVG renderer that will load the SVG document from the specified file path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SvgRenderer CreateFromFile(string documentPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file path to the SVG document.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>A new SvgRenderer instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)">
+  RenderDynamic(RendererCommon, Rect, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L558"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in dynamic mode at the specified position with the given color tint.
+Dynamic mode uses intelligent caching and may render approximate sizes until the exact size is ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderDynamic(RendererCommon gfx, Rect position, ColorF tint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color tint to apply.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Rect_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Rect)">
+  RenderDynamic(RendererCommon, Rect, ColorF, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L526"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in dynamic mode at the specified position with the given color tint and UV coordinates.
+Dynamic mode uses intelligent caching and may render approximate sizes until the exact size is ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderDynamic(RendererCommon gfx, Rect position, ColorF tint, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color tint to apply.</p>
+</dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The UV coordinates for texture sampling.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_System_Single_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,System.Single)">
+  RenderDynamic(RendererCommon, Rect, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in dynamic mode at the specified position with the given opacity.
+Dynamic mode uses intelligent caching and may render approximate sizes until the exact size is ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderDynamic(RendererCommon gfx, Rect position, float opacity = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity to render with (0.0 to 1.0).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderDynamic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_System_Single_OnixRuntime_Api_Maths_Rect_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderDynamic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,System.Single,OnixRuntime.Api.Maths.Rect)">
+  RenderDynamic(RendererCommon, Rect, float, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L492"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in dynamic mode at the specified position with the given opacity and UV coordinates.
+Dynamic mode uses intelligent caching and may render approximate sizes until the exact size is ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderDynamic(RendererCommon gfx, Rect position, float opacity, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity to render with (0.0 to 1.0).</p>
+</dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The UV coordinates for texture sampling.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)">
+  RenderStatic(RendererCommon, Rect, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L542"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in static mode at the specified position with the given color tint.
+Static mode always generates the perfect size for the render position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderStatic(RendererCommon gfx, Rect position, ColorF tint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color tint to apply.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_ColorF_OnixRuntime_Api_Maths_Rect_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.Rect)">
+  RenderStatic(RendererCommon, Rect, ColorF, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L475"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in static mode at the specified position with the given color tint and UV coordinates.
+Static mode always generates the perfect size for the render position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderStatic(RendererCommon gfx, Rect position, ColorF tint, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color tint to apply.</p>
+</dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The UV coordinates for texture sampling.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_System_Single_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,System.Single)">
+  RenderStatic(RendererCommon, Rect, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in static mode at the specified position with the given opacity.
+Static mode always generates the perfect size for the render position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderStatic(RendererCommon gfx, Rect position, float opacity = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity to render with (0.0 to 1.0).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_RenderStatic_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_Maths_Rect_System_Single_OnixRuntime_Api_Maths_Rect_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.RenderStatic(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.Maths.Rect,System.Single,OnixRuntime.Api.Maths.Rect)">
+  RenderStatic(RendererCommon, Rect, float, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L509"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the SVG in static mode at the specified position with the given opacity and UV coordinates.
+Static mode always generates the perfect size for the render position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RenderStatic(RendererCommon gfx, Rect position, float opacity, Rect uv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a></dt>
+    <dd><p>The graphics renderer to use.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The position and size to render at.</p>
+</dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The opacity to render with (0.0 to 1.0).</p>
+</dd>
+    <dt><code>uv</code> <a class="xref" href="OnixRuntime.Api.Maths.Rect.html">Rect</a></dt>
+    <dd><p>The UV coordinates for texture sampling.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the SVG was rendered, false if it's not ready yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithBasePath_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithBasePath*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithBasePath_System_String_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithBasePath(System.String)">
+  WithBasePath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the virtual base path used for grouping SVG textures in the texture cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithBasePath(string basePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>basePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The virtual base path to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithDisplayTimeBeforeGeneration_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithDisplayTimeBeforeGeneration*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithDisplayTimeBeforeGeneration_System_Single_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithDisplayTimeBeforeGeneration(System.Single)">
+  WithDisplayTimeBeforeGeneration(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets how long a size should be displayed before generating a specialized image for it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithDisplayTimeBeforeGeneration(float seconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>seconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The time in seconds before generation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithNoShowThreshold_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithNoShowThreshold*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithNoShowThreshold_System_Single_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithNoShowThreshold(System.Single)">
+  WithNoShowThreshold(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the threshold for how long between renders before assuming the image wasn't shown for a while.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithNoShowThreshold(float seconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>seconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The threshold in seconds.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithPathForSize_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithPathForSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithPathForSize_System_Func_OnixRuntime_Api_Rendering_Helpers_SvgRenderer_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Rendering_TexturePath__" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithPathForSize(System.Func{OnixRuntime.Api.Rendering.Helpers.SvgRenderer,OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Rendering.TexturePath})">
+  WithPathForSize(Func&lt;SvgRenderer, Vec2I, TexturePath&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a custom function for generating texture paths based on the renderer and size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithPathForSize(Func&lt;SvgRenderer, Vec2I, TexturePath&gt; pathFunc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a>, <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a>&gt;</dt>
+    <dd><p>A function that takes the renderer and size, and returns the texture path to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRegenerationThreshold_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRegenerationThreshold*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRegenerationThreshold_OnixRuntime_Api_Maths_Vec2I_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRegenerationThreshold(OnixRuntime.Api.Maths.Vec2I)">
+  WithRegenerationThreshold(Vec2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the regeneration threshold for dynamic rendering mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithRegenerationThreshold(Vec2I threshold)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threshold</code> <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd><p>The minimum size difference that will trigger regeneration of the SVG image.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRegenerationThreshold_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRegenerationThreshold*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRegenerationThreshold_System_Int32_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRegenerationThreshold(System.Int32)">
+  WithRegenerationThreshold(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the regeneration threshold for dynamic rendering mode using the same value for width and height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithRegenerationThreshold(int threshold)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum size difference that will trigger regeneration of the SVG image.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRegenerationThreshold_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRegenerationThreshold*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRegenerationThreshold_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRegenerationThreshold(System.Int32,System.Int32)">
+  WithRegenerationThreshold(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the regeneration threshold for dynamic rendering mode with separate width and height values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithRegenerationThreshold(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum width difference that will trigger regeneration.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum height difference that will trigger regeneration.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRenderClosestSizeUntilReady_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRenderClosestSizeUntilReady*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRenderClosestSizeUntilReady_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRenderClosestSizeUntilReady(System.Boolean)">
+  WithRenderClosestSizeUntilReady(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets whether to render the closest available size until the proper size is ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithRenderClosestSizeUntilReady(bool renderClosest)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderClosest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to render the closest size available, false to wait for the exact size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRenderFunc_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRenderFunc*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithRenderFunc_System_Func_OnixRuntime_Api_Rendering_Helpers_SvgRenderer_OnixRuntime_Api_Maths_Vec2I_OnixRuntime_Api_Utils_SvgDocument_OnixRuntime_Api_Utils_RawImageData__" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithRenderFunc(System.Func{OnixRuntime.Api.Rendering.Helpers.SvgRenderer,OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Utils.SvgDocument,OnixRuntime.Api.Utils.RawImageData})">
+  WithRenderFunc(Func&lt;SvgRenderer, Vec2I, SvgDocument, RawImageData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a custom function for rendering the SVG document into raw image data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithRenderFunc(Func&lt;SvgRenderer, Vec2I, SvgDocument, RawImageData&gt; renderFunc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a>, <a class="xref" href="OnixRuntime.Api.Utils.SvgDocument.html">SvgDocument</a>, <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a>&gt;</dt>
+    <dd><p>A function that takes the renderer, size, and SVG document, and returns the rendered image data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithTransformFunc_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithTransformFunc*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithTransformFunc_System_Func_OnixRuntime_Api_Rendering_Helpers_SvgRenderer_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2I__" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithTransformFunc(System.Func{OnixRuntime.Api.Rendering.Helpers.SvgRenderer,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2I})">
+  WithTransformFunc(Func&lt;SvgRenderer, Vec2, Vec2I&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a custom function for transforming the raw size into the actual image size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithTransformFunc(Func&lt;SvgRenderer, Vec2, Vec2I&gt; transformFunc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>transformFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2.html">Vec2</a>, <a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a>&gt;</dt>
+    <dd><p>A function that takes the renderer and raw size, and returns the transformed size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithVirtualFile_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithVirtualFile*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_Helpers_SvgRenderer_WithVirtualFile_System_String_" data-uid="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.WithVirtualFile(System.String)">
+  WithVirtualFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the virtual file name used for identifying this SVG in the texture cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SvgRenderer WithVirtualFile(string virtualFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>virtualFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The virtual file name to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.Helpers.SvgRenderer.html">SvgRenderer</a></dt>
+    <dd><p>This SvgRenderer instance for method chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/Helpers/SvgRenderer.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

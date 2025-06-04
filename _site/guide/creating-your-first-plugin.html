@@ -135,9 +135,23 @@ namespace ExamplePlugin {
     }
 }
 </code></pre>
-<p>This example plugin simply logs a message to the console when it is loaded and unloaded. You can modify this code to add your own functionality and features.</p>
+<p>This example plugin simply logs a message to the console when it is loaded and unloaded. You can modify this code to add your own functionality and features.
+The console is redirected to the game chat, so you can see the output in-game.</p>
+<h3 id="-importing-the-plugin">📥 Importing the Plugin</h3>
+<ul>
+<li>To import the plugin, you simply build it in your IDE.</li>
+<li>If you used the project generator, it will copy the necessary files over and it will be ready to use.
+When your plugin is loaded, it will automatically unload and reload it when you build.
+<ul>
+<li>On Visual Studio Code, you can type dotnet build in the terminal to build the plugin or use Ctrl+B on Visual Studio Community or Rider.</li>
+<li>If you get a build error talking about <code>/langVersion</code> install <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET SDK 8.0</a> and <a href="https://dotnet.microsoft.com/en-us/download/dotnet/9.0">.NET SDK 9.0</a>.</li>
+<li>If you get it on Visual Studio, Update it and make sure to enable .NET desktop development in the Visual Studio Installer.</li>
+</ul>
+</li>
+</ul>
 <h3 id="-changing-the-plugin-details">✏️ Changing the Plugin Details</h3>
-<p>If you already used the plugin generator and would like to change the name, description or other details of your plugin to something else, you can edit the <code>manifest.json</code> file located in the root of your plugin project. This file contains all the metadata for your plugin, including its name, description, version, author, and more.</p>
+<p>If you already used the plugin generator and would like to change the name, description or other details of your plugin to something else, you can edit the <code>manifest.json</code> file located in the root of your plugin project.
+This file contains all the metadata for your plugin, including its name, description, version, author, and more.</p>
 <ul>
 <li>We recommend leaving the <code>uuid</code> field, <code>runtime_version</code>, and <code>target_assembly</code> fields as they are, as they are automatically generated and managed by the Onix Client Plugin API.</li>
 </ul>

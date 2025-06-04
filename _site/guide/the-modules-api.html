@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/guide/the-modules-api.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h3 id="the-modules-api">The modules API</h3>
+<p>The modules API is similar to the one found in the Lua API, but it has some extra features.</p>
+<h3 id="the-basics">The Basics</h3>
+<p>Just like in the Lua API, you start by getting a list of all modules. This one is located in <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_Modules">Onix.Client.Modules</a>.</p>
+<pre><code class="lang-cs">var mods = Onix.Client.Modules;
+</code></pre>
+<p>You can iterate over the modules with a simple <code>foreach</code> loop:</p>
+<pre><code class="lang-cs">foreach (OnixModule mod in Onix.Client.Modules) {
+    Console.WriteLine($&quot;Module: {mod.Name}, Enabled: {mod.Enabled}&quot;);      
+}
+</code></pre>
+<p>That's about where the similarities end, this being C#, you can use LINQ to filter, sort and manipulate the modules list in various ways. For example, to get all enabled modules:</p>
+<pre><code class="lang-cs">foreach (OnixModule mod in Onix.Client.Modules.Where(m =&gt; m.Enabled)) {
+    Console.WriteLine($&quot;Enabled Module: {mod.Name}&quot;);
+}
+</code></pre>
+<p>We've also added <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleList.GetModule">GetModule</a> which allows you to get a module by its save name:</p>
+<pre><code class="lang-cs">var globalSettings = Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;);
+if (globalSettings is not null) {
+    Console.WriteLine($&quot;Global settings module found: {globalSettings.Name}&quot;);
+}
+</code></pre>
+<p>Or if you want to be a fancypants.
+<br>(Note: this uses C#'s pattern matching feature, the {} means that the returned value is not null and if you put a variable name after it, it will create and assign a variable for you.)</p>
+<pre><code class="lang-cs">if (Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;) is {} globalSettings) {
+    Console.WriteLine($&quot;Global settings module found: {globalSettings.Name}&quot;);
+}
+</code></pre>
+<p>When you have an <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a>, things should vaguely look like the Lua API, but you may notice some things missing.
+That's because now the different types of modules are more separated, we have classes for each type of module, so you can use the specific properties and methods for that type in a safe way.</p>
+<h3 id="types-of-modules">Types of Modules</h3>
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a> The most basic type of module, it has the most common properties and methods that all modules have.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleVisual.html">OnixModuleVisual</a> The base type for mods that can be moved around the HUD Editor. It has things like position &amp; size.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleTextual.html">OnixModuleTextual</a> A visual module that only specifies text, you can get its text that way.</li>
+</ul>
+<p>Example for OnixModuleVisual. This gets the <code>Reach Display</code> module as a visual module, checks if its center position is within the top left corner of the screen and either judges the user or compliments them based on that.</p>
+<pre><code class="lang-cs">if (mods.GetModule(&quot;module.reach_display.name&quot;) is OnixModuleVisual reachDisplayModule) {
+    if (reachDisplayModule.Position + reachDisplayModule.Size / 2 &lt; Onix.Gui.ScreenSize / 2) {
+        Console.WriteLine($&quot;Wow really? You put {reachDisplayModule.Name} in the top left corner? That's so... original!&quot;);
+    }
+    else {
+        Console.WriteLine($&quot;Wow that placement for {reachDisplayModule.Name} is awesome! I love it!&quot;);
+    }
+}
+</code></pre>
+<p>Example for OnixModuleTextual. This gets the <code>Reach Display</code> module as a textual module, then prints its text in chat.</p>
+<pre><code class="lang-cs">if (mods.GetModule(&quot;module.reach_display.name&quot;) is OnixModuleTextual reachDisplayModule) {
+    Console.WriteLine($&quot;Current reach display text: {reachDisplayModule.Text}&quot;);
+}
+// Note that if you do want the reach of the last hit, you can do this instead of abusing the Reach Display module.
+// You would put this event listener in the OnLoaded method.
+// If you have more complex logic, you can make your IDE create a class method for you aswell.
+Onix.Events.Player.Attack += (player, entity) =&gt; {
+    Console.WriteLine($&quot;Player attacked with a reach of {player.Raycast.Origin.Distance(player.Raycast.HitPosition)}&quot;);
+    return false;
+};
+</code></pre>
+<p>Of course, you can do all those in your foreach loop as well, if you decide to act on all modules.</p>
+<h3 id="settings">Settings</h3>
+<p>Just like before, you access a mod's settings with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Settings">OnixModule.Settings</a>.
+The setting has two GetSetting methods, one with a template and one without.
+<a href="OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting">The one without template</a> returns the base <a href="OnixRuntime.Api.OnixClient.OnixSetting">OnixSetting</a>.
+<a href="OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting%5BT%5D">The one with template</a> lets you specify a specific OnixSetting type for convenience.
+<br>
+Now you may notice that unlike scripting, settings don't have a Value property, since C# is strongly typed, the settings all have their own types.</p>
+<h3 id="types-of-settings">Types of Settings</h3>
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a> The base type for all settings, it has the most common properties and methods that all settings have.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingBool.html">OnixSettingBool</a> A boolean setting, it has a Value property that returns a bool.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingAir.html">OnixSettingAir</a> an air setting, it does nothing, it has an Air property and will move down the settings below it in the settings list.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingButton.html">OnixSettingButton</a> A button in the UI, it has a Click method and a ButtonText method.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.html">OnixSettingCategory</a> A category setting, it has a IncludedCount property that returns the number of settings in the category, as well as a IncludesEverythingUntilNextCategory
+property.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html">OnixSettingColor</a> A color setting, it has a Value property that returns a <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html">Color</a> object.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.html">OnixSettingCustom</a> A custom setting, doesn't really contain much since it's per setting type which are not known in advance.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingEnum.html">OnixSettingEnum</a> An enum setting, containing a value as integer or as a type for convenience and an Options property with the possible values.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingFloat.html">OnixSettingFloat</a> A float setting, it has a Value property that returns a float, as well as a min/max property.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingGamepadKeybind.html">OnixSettingGamepadKeybind</a> A collection of keys from a Gamepad that must all be pressed to trigger.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingInfo.html">OnixSettingInfo</a> Basically just some text in the settings list.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingInt.html">OnixSettingInt</a> An integer setting, it has a Value property that returns an int, as well as a min/max property.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingKeybind.html">OnixSettingKeybind</a> A single keybind setting, it has a value property of <a href="OnixRuntime.Api.Inputs.InputKey">InputKey</a> which can be any button from the mouse, keyboard or
+gamepad.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingLocalizedInfo.html">OnixSettingLocalizedInfo</a> Basically just some text in the settings list, this is more important from the client where everything can be localized but for you it's the
+same.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingModuleHeader.html">OnixSettingModuleHeader</a> A setting used to display a module's name, enable &amp; favorite button at the top of the settings list.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingTextbox.html">OnixSettingTextbox</a> A <a class="xref" href="../docs/OnixRuntime.Api.Inputs.OnixTextbox.html">Textbox</a> to let the user enter text, you can also provide validity feedback to it, highlighting it red or green.</li>
+</ul>
+<p>This example shows getting <code>Global Settings</code>, then getting the <code>Use New Renderer</code> setting from it and judging the user whether it's enabled or not.</p>
+<pre><code class="lang-cs">if (Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;) is {} globalSettings) {
+    if (globalSettings.Settings.GetSetting(&quot;module.global_settings.setting.use_new_renderer.name&quot;) is OnixSettingBool useNewRendererSetting) {
+        if (!useNewRendererSetting.Value) {
+            Console.WriteLine(&quot;You're cringe for not using the new renderer!&quot;);
+        }
+    }
+}
+</code></pre>
+<br>
+<p>Generally exploring the API in the IDE pressing . on things is not a bad idea, it shows you the options and their types, you can always print all settings and their types when you are unsure.
+The following example shows how to print all settings and their types for a module:</p>
+<pre><code class="lang-cs">if (Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;) is {} globalSettings) {
+    foreach (OnixSetting setting in globalSettings.Settings) {
+        Console.WriteLine($&quot;Setting: {setting.Name}, SaveName: {setting.SaveName} Type: {setting.Type}&quot;);
+    }
+}
+</code></pre>
+<h3 id="new-features">New Features</h3>
+<h4 id="there-are-of-course-new-features-and-things-you-can-do-that-the-lua-api-does-not-have-those-include">There are of course, new features and things you can do that the Lua API does not have. Those include.</h4>
+<ul>
+<li>Gamepad Keybinds: You can now create and edit keybinds that require multiple gamepad buttons to be pressed at the same time.</li>
+<li>Creating Settings that aren't part of a Module.</li>
+<li>Change Callbacks: Get notified when the value of your setting changes.</li>
+<li>Save Names: Have a different save name than display name, allowing you to painlessly rename settings or modules.</li>
+<li>Creating Modules: You can additionally to your plugin, create new modules that show up in the client's UI.</li>
+<li>Inserting Settings in ANY Modules: You can now extend any Module you can get your hands on by inserting settings in them.</li>
+<li>Custom Settings Types: You can create your own settings types containing their own data and UI.
+<ul>
+<li>Technically, you could also do that before, it just wasn't too clear or really documented how you would do that.</li>
+<li>You also needed to handle saving all on your own, externally</li>
+<li>And the data of the settings was not actually contained in the setting.</li>
+<li>Custom settings have <a href="creating-custom-setting-types.html">their own guide</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="moduleless-settings">Moduleless Settings</h3>
+<p>You can now create any setting types, passing null for the parent module.
+This isn't too useful on its own but it allows you to insert it into other modules.<br>
+That's also a great way to render a setting without having to implement everything yourself.
+You would use <a href="xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSetting">RendererDirect2D.RenderSetting</a> or <a href="xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSubSetting">RendererDirect2D.RenderSubSetting</a> if inside a custom
+setting.<br>
+Please note that your plugin is still the real owner of the setting and that's even when you add it to a module, if you keep no references to it, it will get garbage collected and removed.</p>
+<pre><code class="lang-cs">// You would store that in your class or a class, a List, whatever you want really, you wouldn't let it just die unless you didn't need it after that function.
+var myNewBool = new OnixSettingBool(null, &quot;My Real Bool setting!&quot;, &quot;my_real_bool_setting&quot;, false, &quot;This is just my setting, nothing crazy here :D&quot;);
+</code></pre>
+<h3 id="setting-change-callbacks">Setting Change Callbacks</h3>
+<p>You can now be notified whenever the value of your setting changes, this is useful when you don't poll the value all the time.<br>
+<a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate.html">The callback documentation can be found here.</a><br>
+It gives you the current parent Module, the Setting that has changed containing its new value and a bool defining if the change is from loading the saved configuration or the user changing it.<br>
+It's generally the last value of the constructor of any setting and for <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingButton.html">OnixSettingButton</a> it gets called when the user clicks the button.
+You have to assume this can and will be called from any thread, so you should keep it thread-safe in there.
+For default settings, setting the value will trigger call it. If you need to call it with an isInit value of true, most of them have a ValueInit property.
+When making a UI you should always use Value so the new value is saved.
+<br></p>
+<p>In this example, we create a new bool setting and give it a setting change callback.
+I'm casting it to an OnixSettingBool as we get it as a generic OnixSetting.
+This will throw an exception if the setting is not a bool but since I only added it to a bool setting, it will not be an issue.
+I then print the new value of the setting to the console whenever it changes.</p>
+<pre><code class="lang-cs">// You would put the setting in a module or keep it somewhere safe.
+ var myNewBool = new OnixSettingBool(null, &quot;My Real Bool setting!&quot;, &quot;my_real_bool_setting&quot;, false, &quot;This is just my setting, nothing crazy here :D&quot;,
+    (mod, setting, init) =&gt; {
+        Console.WriteLine($&quot;Setting changed: {setting.Name} to {((OnixSettingBool)setting).Value}&quot;);
+    });
+</code></pre>
+<p>For custom settings, you are responsible for calling
+it. <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.CallValueChangedCallback">We provide a function called CallValueChangedCallbackfor you to do that in the OnixCustomSetting class.</a><br>
+<a href="creating-custom-setting-types.html">More on that in the custom settings guide.</a></p>
+<hr>
+<h3 id="save-names">Save Names</h3>
+<p>Though you could do that in the Lua API, it was a lot more annoying to work with, hence why nameless settings were introduced.
+You would often end up with sync issues and other problems. <br>
+This is useful in case you want to rename or localize a setting or module without breaking existing user data.
+You could also do the opposite, rename the save name without changing the display name, putting the user's value back to the default value.
+Taking advantage of it is quite simple, most settings optionally take a save name right after their name parameter in their constructor.
+If you want to publish your plugin on the Onix Client Plugin Repository you should always use save names for your settings.</p>
+<pre><code class="lang-cs">// You would put the setting in a module or keep it somewhere safe. Right below this text is the save name,
+ var myNewBool = new OnixSettingBool(null, &quot;My Real Bool setting!&quot;, &quot;my_real_bool_setting&quot;, false, &quot;This is just my setting, nothing crazy here :D&quot;);
+</code></pre>
+<h3 id="creating-modules">Creating Modules</h3>
+<p>You can now create additional onix modules that show up in the client's UI.
+This is not often required as you have the plugin manager to change the settings of your plugin.
+This is useful when you want to create a visual or textual module that can be moved around the screen by the user.</p>
+<h2 id="i-hate-this-this-will-be-redone-in-runtime-version-2-dont-do-this-">I hate this. This will be redone in runtime version 2. Don't do this 😭.</h2>
+<pre><code class="lang-cs">
+        public OnixModuleTextual? OtherTextHudElement = null; 
+        public OnixModuleVisual? HudElement = null; 
+        protected override void OnEnabled() {
+            // Only add the visual modules when the plugin is enabled.
+            // Doing it on loaded would force the user to unload your plugin to not have the useless visual modules.
+            // We have to register them (the true parameter at the very end) so they are recognized by the client.
+            HudElement = new OnixModuleVisual($&quot;{CurrentPluginManifest.Name}'s Hud Element&quot;, &quot;hud_element&quot;, 
+                Vec2.Zero, OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 20),
+                $&quot;This is the hud element part of {CurrentPluginManifest.Name}&quot;, true);
+            
+            OtherTextHudElement = new OnixModuleTextual($&quot;{CurrentPluginManifest.Name}'s Text Hud Element&quot;, &quot;text_hud_element&quot;, 
+                new Vec2(20, 0), OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 12),
+                $&quot;This is the text hud element part of {CurrentPluginManifest.Name}&quot;, true);
+            
+            // We hide this one because there isn't much you can really do as a user with an empty visual module.
+            // We don't touch the textual module since the whole point is to display text according to user preferences.
+            // Hiding it only hides it in the Onix Client UI and NOT from the hud.
+            // Note: you could leave them and let the user decide to turn them on or off that way.
+            HudElement.IsHidden = true;
+            
+        }
+
+        protected override void OnDisabled() {
+            // Remove the mods when we get disabled, this is not necessary if you have your plugin unload when disabled.
+            // The ! tells the compiler that the variables will not be null here, suppressing the nullability warning.
+            // This function is only called if OnEnabled was called before, so the variables will not be null.
+            HudElement!.Dispose();
+            HudElement = null;
+            OtherTextHudElement!.Dispose();
+            OtherTextHudElement = null;
+        }
+        
+        private void OnHudRender(RendererGame gfx, float delta) {
+            // This function only gets called when we are enabled and OnLoaded &amp; OnEnabled were called.
+            
+            // We assume the user wants both of them since they enabled the plugin.
+            OtherTextHudElement!.Enabled = true;
+            HudElement!.Enabled = true;
+            
+            // Set the text of our text hud element.
+            OtherTextHudElement!.Text = $&quot;{Onix.LocalPlayer!.AliveDuration:g}&quot;;
+            
+            // Render a nice red square where the hud element is.
+            gfx.FillRectangle(Rect.FromSize(HudElement!.Position, HudElement.Size), ColorF.Red);
+            
+        }
+
+        protected override void OnUnloaded() {
+            // Ensure every task or thread is stopped when this function returns.
+            // You can give them base.PluginEjectionCancellationToken which will be cancelled when this function returns. 
+            Console.WriteLine($&quot;Plugin {CurrentPluginManifest.Name} unloaded!&quot;);
+            Onix.Events.Common.Tick -= OnTick;
+            Onix.Events.Common.HudRender -= OnHudRender;
+        }
+</code></pre>
+<hr>
+<h3 id="inserting-settings-in-other-modules">Inserting Settings in Other Modules</h3>
+<p>You're now able to insert settings into any module you can get your hands on.
+This is useful when you want to extend a module with your own settings, for example, adding a setting to the <code>Global Settings</code> module.
+(You should <em>probably</em> not do that specifically unless you're sure it makes sense to have it there as it wont necessarily be obvious for the user.)<br>
+There are two ways you can insert a setting.</p>
+<ul>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting">With the index.</a></li>
+<li><a href="">After another setting.</a></li>
+</ul>
+<p>With the index, you insert it wherever you want, make sure to set the origin where you want it.<br>
+With a setting, you place it at an offset from that setting, wherever it may be.</p>
+<pre><code class="lang-cs">if (Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;) is {} globalSettings) {
+    if (globalSettings.Settings.GetSetting(&quot;module.global_settings.setting.use_new_renderer.name&quot;) is OnixSettingBool useNewRendererSetting) {
+        // You need to store that in a variable that will stay alive somewhere, otherwise it will be garbage collected and removed.
+        var myNewBool = new OnixSettingBool(null, &quot;My Real Bool setting!&quot;, &quot;my_real_bool_setting&quot;, false, &quot;This is just my setting, nothing crazy here :D&quot;);
+        // Insert the setting right after the useNewRendererSetting.
+        globalSettings.InsertSetting(myNewBool, useNewRendererSetting, OnixModule.SettingInsertionPosition.After);
+    }
+}
+</code></pre>
+<hr>
+<h2 id="thats-great-but-how-do-i-save">That's Great! But How do I Save?</h2>
+<p>When you create additional modules or settings that aren't part of a module you made that gets saved, they will not be saved automatically.
+If you want your module to be saved, you need to call <a href="OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule">SaveManager.TrackModule</a> with your module.<br>
+This will also load and save any settings you have in it at this time.<br></p>
+<pre><code class="lang-cs">HudElement = new OnixModuleVisual($&quot;{CurrentPluginManifest.Name}'s Hud Element&quot;, &quot;hud_element&quot;, 
+    Vec2.Zero, OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 20),
+    $&quot;This is the hud element part of {CurrentPluginManifest.Name}&quot;, true);
+SaveManager.TrackModule(HudElement);
+</code></pre>
+<p>This will load and save your module whenever your plugin is saved and loaded.<br>
+You can also do it on settings, in the example below, I add a setting to the global settings.
+See how I started tracking the setting after I inserted it into the global settings module.
+That's because it will use the global settings module's name to uniquify the setting's save name.</p>
+<pre><code class="lang-cs">if (Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;) is {} globalSettings) {
+    if (globalSettings.Settings.GetSetting(&quot;module.global_settings.setting.use_new_renderer.name&quot;) is OnixSettingBool useNewRendererSetting) {
+        // You need to store that in a variable that will stay alive somewhere, otherwise it will be garbage collected and removed.
+        var myNewBool = new OnixSettingBool(null, &quot;My Real Bool setting!&quot;, &quot;my_real_bool_setting&quot;, false, &quot;This is just my setting, nothing crazy here :D&quot;);
+        // Insert the setting right after the useNewRendererSetting.
+        globalSettings.InsertSetting(myNewBool, useNewRendererSetting, OnixModule.SettingInsertionPosition.After);
+        SaveManager.TrackSetting(myNewBool);
+    }
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/guide/the-modules-api.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

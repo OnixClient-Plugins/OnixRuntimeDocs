@@ -56,4 +56,3 @@ Those command will install and enable the Plugin Manager UI.
 ---
 ### 🧩 Creating Your First Plugin
 - To get started with your first plugin, head over to the [Creating Your First Plugin](./creating-your-first-plugin.md) page. It will guide you through the process of creating a simple plugin and give you an overview of the Onix Client Plugin API.
-[.gitignore](../.gitignore)

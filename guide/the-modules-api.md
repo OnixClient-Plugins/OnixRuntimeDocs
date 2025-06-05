@@ -96,7 +96,7 @@ Now you may notice that unlike scripting, settings don't have a Value property, 
 
 - [OnixSetting](xref:OnixRuntime.Api.OnixClient.OnixSetting) The base type for all settings, it has the most common properties and methods that all settings have.
 - [OnixSettingBool](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingBool) A boolean setting, it has a Value property that returns a bool.
-- [OnixSettingAir](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingAir) an air setting, it does nothing, it has an Air property and will move down the settings below it in the settings list.
+- [OnixSettingAir](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingAir) An air setting, it does nothing, it has an Air property and will move down the settings below it in the settings list.
 - [OnixSettingButton](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingButton) A button in the UI, it has a Click method and a ButtonText method.
 - [OnixSettingCategory](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory) A category setting, it has a IncludedCount property that returns the number of settings in the category, as well as a IncludesEverythingUntilNextCategory
   property.

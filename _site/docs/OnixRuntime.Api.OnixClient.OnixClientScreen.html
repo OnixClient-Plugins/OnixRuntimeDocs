@@ -510,7 +510,7 @@ Fullscreen mode hides the screen below it and the hud elements like fps counter.
   <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixClientScreen.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Force the use of Direct2D for rendering <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererTwoDimentional_">OnRender(RendererTwoDimentional)</a> and <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_">OnRenderClosing(RendererTwoDimentional)</a>.</p>
+  <div class="markdown level1 summary"><p>Force the use of Direct2D for rendering <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_">OnRender(RendererCommon2D)</a> and <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_">OnRenderClosing(RendererCommon2D)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -543,7 +543,7 @@ Fullscreen mode hides the screen below it and the hud elements like fps counter.
   </h3>
 
   <div class="markdown level1 summary"><p>How long in seconds is this screen's close animation.
-Will switch to <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_">OnRenderClosing(RendererTwoDimentional)</a> and <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderGameClosing_OnixRuntime_Api_Rendering_RendererGame_">OnRenderGameClosing(RendererGame)</a> and then call <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnCloseFinished">OnCloseFinished()</a> when the time is over.</p>
+Will switch to <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_">OnRenderClosing(RendererCommon2D)</a> and <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderGameClosing_OnixRuntime_Api_Rendering_RendererGame_">OnRenderGameClosing(RendererGame)</a> and then call <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnCloseFinished">OnCloseFinished()</a> when the time is over.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -764,8 +764,8 @@ Returning true will prevent the screens and game below from receiving it.</p>
 
   <a id="OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_" data-uid="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender*"></a>
 
-  <h3 id="OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererTwoDimentional_" data-uid="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)">
-  OnRender(RendererTwoDimentional)
+  <h3 id="OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_" data-uid="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)">
+  OnRender(RendererCommon2D)
   <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixClientScreen.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -775,12 +775,12 @@ This could be RednererDirect2D or RendererGame, depending on user preference or 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnRender(RendererTwoDimentional gfx)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnRender(RendererCommon2D gfx)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererTwoDimentional.html">RendererTwoDimentional</a></dt>
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon2D.html">RendererCommon2D</a></dt>
     <dd></dd>
   </dl>
 
@@ -797,8 +797,8 @@ This could be RednererDirect2D or RendererGame, depending on user preference or 
 
   <a id="OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_" data-uid="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing*"></a>
 
-  <h3 id="OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_" data-uid="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)">
-  OnRenderClosing(RendererTwoDimentional)
+  <h3 id="OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_" data-uid="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)">
+  OnRenderClosing(RendererCommon2D)
   <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixClientScreen.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -808,12 +808,12 @@ This could be RednererDirect2D or RendererGame, depending on user preference or 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnRenderClosing(RendererTwoDimentional gfx)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnRenderClosing(RendererCommon2D gfx)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererTwoDimentional.html">RendererTwoDimentional</a></dt>
+    <dt><code>gfx</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon2D.html">RendererCommon2D</a></dt>
     <dd></dd>
   </dl>
 
@@ -835,8 +835,8 @@ This could be RednererDirect2D or RendererGame, depending on user preference or 
   <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixClientScreen.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when the game is being rendered and your screen is closing. This is useful for getting data from the game since <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererTwoDimentional_">OnRender(RendererTwoDimentional)</a> may be Direct2D.
-You should use <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_">OnRenderClosing(RendererTwoDimentional)</a> to actually render the content.</p>
+  <div class="markdown level1 summary"><p>Called when the game is being rendered and your screen is closing. This is useful for getting data from the game since <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_">OnRender(RendererCommon2D)</a> may be Direct2D.
+You should use <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_">OnRenderClosing(RendererCommon2D)</a> to actually render the content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -868,8 +868,8 @@ You should use <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen
   <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixClientScreen.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when the game is being rendered. This is useful for getting data from the game since <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_">OnRenderClosing(RendererTwoDimentional)</a> may be Direct2D.
-You should use <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_">OnRenderClosing(RendererTwoDimentional)</a> to actually render the content.</p>
+  <div class="markdown level1 summary"><p>Called when the game is being rendered. This is useful for getting data from the game since <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_">OnRenderClosing(RendererCommon2D)</a> may be Direct2D.
+You should use <a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_">OnRenderClosing(RendererCommon2D)</a> to actually render the content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

@@ -623,7 +623,7 @@ Class RendererWorld  <a class="header-action link-secondary" title="View source"
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_EnableLights_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.EnableLights(System.Boolean)">
   EnableLights(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L876"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L894"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Enables or disables lighting for the renderer.</p>
@@ -1087,7 +1087,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_PopTransformation" data-uid="OnixRuntime.Api.Rendering.RendererWorld.PopTransformation">
   PopTransformation()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L820"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L838"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Pops the transformation from the stack and flushes the mesh.</p>
@@ -1114,7 +1114,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_PushTransformation_OnixRuntime_Api_Maths_TransformationMatrix_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)">
   PushTransformation(TransformationMatrix, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L810"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L828"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Pushes a transformation matrix onto the stack and flushes the mesh.</p>
@@ -1377,6 +1377,81 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
 
 
+  <a id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxNormal_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)">
+  RenderBoundingBoxNormal(BoundingBox, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified color and normals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderBoundingBoxNormal(BoundingBox box, ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box to render.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the texture tint.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxNormal_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxNormal_OnixRuntime_Api_Maths_BoundingBox_PerBlockFaceFaceData_System_Boolean__OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)">
+  RenderBoundingBoxNormal(BoundingBox, PerBlockFaceFaceData&lt;bool&gt;, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L660"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified color and normals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RenderBoundingBoxNormal(BoundingBox box, PerBlockFaceFaceData&lt;bool&gt; shouldRenderFace, ColorF color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box to render.</p>
+</dd>
+    <dt><code>shouldRenderFace</code> <a class="xref" href="PerBlockFaceFaceData-1.html">PerBlockFaceFaceData</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>6 booleans to know which faces should be rendered.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The color of the texture tint.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxOutline_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxOutline*"></a>
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxOutline_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxOutline(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)">
@@ -1417,7 +1492,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTextured_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath)">
   RenderBoundingBoxTextured(BoundingBox, TexturePath)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L687"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L705"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders all faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint.</p>
@@ -1453,7 +1528,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTextured_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)">
   RenderBoundingBoxTextured(BoundingBox, TexturePath, ColorF)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L715"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L733"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders all faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint.</p>
@@ -1492,7 +1567,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTextured_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean})">
   RenderBoundingBoxTextured(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L680"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L698"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint.</p>
@@ -1531,7 +1606,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTextured_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)">
   RenderBoundingBoxTextured(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, ColorF)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L707"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L725"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint.</p>
@@ -1573,7 +1648,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTextured_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_BlockFaceUvRotation__" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation})">
   RenderBoundingBoxTextured(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L672"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L690"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and rotations without a tint.</p>
@@ -1614,7 +1689,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTextured_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_BlockFaceUvRotation__OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)">
   RenderBoundingBoxTextured(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;, ColorF)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L698"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L716"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and rotations without a tint.</p>
@@ -1658,7 +1733,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTextured_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_OnixRuntime_Api_Maths_Rect__PerBlockFaceFaceData_BlockFaceUvRotation__" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})">
   RenderBoundingBoxTextured(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;Rect&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L662"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L680"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, uv coordinates and rotations without a tint.</p>
@@ -1749,7 +1824,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath)">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L767"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L785"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders all faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -1785,7 +1860,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, ColorF)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L795"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L813"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders all faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -1824,7 +1899,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean})">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L778"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -1863,7 +1938,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, ColorF)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L805"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and <a class="xref" href="BlockFaceUvRotation.html#BlockFaceUvRotation_NoRotation">NoRotation</a> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -1905,7 +1980,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_BlockFaceUvRotation__" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation})">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L752"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L770"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and rotations without a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -1946,7 +2021,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_BlockFaceUvRotation__OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;, ColorF)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L778"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L796"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, <a class="xref" href="OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV">FullUV</a> for its uv coordinates and rotations without a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -1990,7 +2065,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_OnixRuntime_Api_Maths_Rect__PerBlockFaceFaceData_BlockFaceUvRotation__" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;Rect&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L742"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L760"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, uv coordinates and rotations without a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -2034,7 +2109,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_OnixRuntime_Api_Maths_Rect__PerBlockFaceFaceData_BlockFaceUvRotation__OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)">
   RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData&lt;bool&gt;, PerBlockFaceFaceData&lt;Rect&gt;, PerBlockFaceFaceData&lt;BlockFaceUvRotation&gt;, ColorF)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L728"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L746"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the faces of a bounding box with the specified texture, uv coordinates and rotations with a tint. This will also add normals, which may not work depending on material choice/graphics settings.</p>
@@ -2081,7 +2156,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderItem_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Items_ItemStack_System_Boolean_System_Single_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderItem(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)">
   RenderItem(Vec2, ItemStack, bool, float, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L851"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L869"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders an item at the specified position.</p>
@@ -2129,7 +2204,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_RenderItem_System_Single_System_Single_OnixRuntime_Api_Items_ItemStack_System_Boolean_System_Single_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.RenderItem(System.Single,System.Single,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)">
   RenderItem(float, float, ItemStack, bool, float, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L837"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L855"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders an item at the specified position.</p>
@@ -2561,7 +2636,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_SetDefaultState_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.SetDefaultState(System.Boolean)">
   SetDefaultState(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L885"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L903"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the default state of the renderer, optionally as the final state, and resets world render settings and lighting.</p>
@@ -2594,7 +2669,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_SetupLights_OnixRuntime_Api_Entities_Entity_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.SetupLights(OnixRuntime.Api.Entities.Entity,System.Int32)">
   SetupLights(Entity, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L858"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L876"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets up lighting for the specified entity.</p>
@@ -2630,7 +2705,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_SetupLights_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Maths_Vec3_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.SetupLights(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.Vec3,System.Int32)">
   SetupLights(BoundingBox, Vec3, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L865"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L883"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets up lighting for the specified bounding box and center.</p>
@@ -2669,7 +2744,7 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_SetupLights_OnixRuntime_Api_Maths_BoundingBox_System_Int32_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.SetupLights(OnixRuntime.Api.Maths.BoundingBox,System.Int32)">
   SetupLights(BoundingBox, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L871"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L889"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets up lighting for the specified bounding box.</p>

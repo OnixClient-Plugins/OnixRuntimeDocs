@@ -218,71 +218,78 @@ You can now create additional onix modules that show up in the client's UI.
 This is not often required as you have the plugin manager to change the settings of your plugin.
 This is useful when you want to create a visual or textual module that can be moved around the screen by the user.
 
+This example creates two simple hud elements.
+The user is able to move them, turn them on or off and change their settings in the client's UI with a working preview.
+They are loaded and saved automatically by the SaveManager.
+The example's code lives inside the main plugin class, the one inheriting from OnixPluginBase.
 
-## I hate this. This will be redone in runtime version 2. Don't do this 😭.
 ```cs
+// The ! tells the compiler that the variables will not be null here, suppressing the nullability warning.
+// The OnEnable function is called before any events, so the variables will not be null when we get to use them.
+public OnixModuleVisual HudElementModule = null!;
+public OnixModuleTextual StatusLabelModule = null!;
+protected override void OnLoaded() {
+    Config = new TestPlugin3Config(PluginDisplayModule);
+   
+    Onix.Events.Common.HudRenderGame += OnHudRenderGame;
+}
 
-        public OnixModuleTextual? OtherTextHudElement = null; 
-        public OnixModuleVisual? HudElement = null; 
-        protected override void OnEnabled() {
-            // Only add the visual modules when the plugin is enabled.
-            // Doing it on loaded would force the user to unload your plugin to not have the useless visual modules.
-            // We have to register them (the true parameter at the very end) so they are recognized by the client.
-            HudElement = new OnixModuleVisual($"{CurrentPluginManifest.Name}'s Hud Element", "hud_element", 
-                Vec2.Zero, OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 20),
-                $"This is the hud element part of {CurrentPluginManifest.Name}", true);
-            
-            OtherTextHudElement = new OnixModuleTextual($"{CurrentPluginManifest.Name}'s Text Hud Element", "text_hud_element", 
-                new Vec2(20, 0), OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 12),
-                $"This is the text hud element part of {CurrentPluginManifest.Name}", true);
-            
-            // We hide this one because there isn't much you can really do as a user with an empty visual module.
-            // We don't touch the textual module since the whole point is to display text according to user preferences.
-            // Hiding it only hides it in the Onix Client UI and NOT from the hud.
-            // Note: you could leave them and let the user decide to turn them on or off that way.
-            HudElement.IsHidden = true;
-            
-        }
 
-        protected override void OnDisabled() {
-            // Remove the mods when we get disabled, this is not necessary if you have your plugin unload when disabled.
-            // The ! tells the compiler that the variables will not be null here, suppressing the nullability warning.
-            // This function is only called if OnEnabled was called before, so the variables will not be null.
-            HudElement!.Dispose();
-            HudElement = null;
-            OtherTextHudElement!.Dispose();
-            OtherTextHudElement = null;
-        }
-        
-        private void OnHudRender(RendererGame gfx, float delta) {
-            // This function only gets called when we are enabled and OnLoaded & OnEnabled were called.
-            
-            // We assume the user wants both of them since they enabled the plugin.
-            OtherTextHudElement!.Enabled = true;
-            HudElement!.Enabled = true;
-            
-            // Set the text of our text hud element.
-            OtherTextHudElement!.Text = $"{Onix.LocalPlayer!.AliveDuration:g}";
-            
-            // Render a nice red square where the hud element is.
-            gfx.FillRectangle(Rect.FromSize(HudElement!.Position, HudElement.Size), ColorF.Red);
-            
-        }
+protected override void OnEnabled() {
+    // Create and register the modules we will utilize in the plugin.
+    HudElementModule = new OnixModuleVisual(CurrentPluginManifest.Name + ".HudElement", CurrentPluginManifest.Name + "'s HUD Element Module.", 
+        new Vec2(0, 0), OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(30, 30), //top left corner with an offset of 0, 0 and a size of 30x30.
+        "hud_element", true); // register: true means it will be registered as an Onix Module in the client.
+    StatusLabelModule = new OnixModuleTextual(CurrentPluginManifest.Name + ".StatusLabel", CurrentPluginManifest.Name + "'s Status Label Module.",
+        new Vec2(30, 0), OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(100, 20), //top left corner with an offset of 0, 0 and a size of 100x20.
+        "status_label", true); // register: true means it will be registered as an Onix Module in the client.
+    
+    // Set the default text for the status label.
+    StatusLabelModule.Text = "Loading...";
+    
+    // Register the module's render event so it can be rendered in the HUD and anywhere else it's requested.
+    HudElementModule.Render += HudElementModuleOnRender;
 
-        protected override void OnUnloaded() {
-            // Ensure every task or thread is stopped when this function returns.
-            // You can give them base.PluginEjectionCancellationToken which will be cancelled when this function returns. 
-            Console.WriteLine($"Plugin {CurrentPluginManifest.Name} unloaded!");
-            Onix.Events.Common.Tick -= OnTick;
-            Onix.Events.Common.HudRender -= OnHudRender;
-        }
+    // Since the user enabled the plugin, we can assume they want to see the HUD element and status label as well.
+    HudElementModule.Enabled = true;
+    StatusLabelModule.Enabled = true;
+    
+    // Now we will track those modules in our save manager to ensure they are saved and loaded correctly.
+    // You need the module to be fully set up with all its settings, otherwise not everything will be saved/loaded correctly.
+    // Note: We enable the modules before tracking them so they are on by default but it lets the user turn them off.
+    SaveManager.TrackModule(HudElementModule);
+    SaveManager.TrackModule(StatusLabelModule);
+}
+
+private void HudElementModuleOnRender(OnixModuleVisual mod, RendererCommon2D gfx, float delta) {
+    // Render a red square where our module is located.
+    // Note: This is not a logic callback, so we cannot access the player entity or other game state.
+    // Use other events like OnHudRenderGame to extract game state.
+    gfx.FillRoundedRectangle(mod.Area, ColorF.Red, 4f);
+}
+
+protected override void OnDisabled() {
+    // Remove the mods when we get disabled, this is not necessary if you have your plugin unload when disabled.
+    HudElementModule.Dispose();
+    StatusLabelModule.Dispose();
+}
+private void OnHudRenderGame(RendererGame gfx, float delta) {
+    // We use OnHudRenderGame because it is a logic callback meaning it can access the player entity and other game state.
+    var player = Onix.LocalPlayer!;
+    // Update the status label text with the player's current health or 20 if it cannot be found.
+    StatusLabelModule.Text = $"Health: {(player.GetAttribute(EntityAttributeId.Health)?.Value ?? 20f):0}";
+}
+
+protected override void OnUnloaded() {
+    Onix.Events.Common.HudRenderGame -= OnHudRenderGame; //optional, but good practice to unsubscribe from events.
+}
 ```
 
 ---
 ### Inserting Settings in Other Modules
 You're now able to insert settings into any module you can get your hands on.
 This is useful when you want to extend a module with your own settings, for example, adding a setting to the `Global Settings` module.
-(You should *probably* not do that specifically unless you're sure it makes sense to have it there as it wont necessarily be obvious for the user.)<br>
+(You should *probably* not do that specifically unless you're sure it makes sense to have it there as it won't necessarily be obvious for the user.)<br>
 There are two ways you can insert a setting.
 - [With the index.](xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting)
 - [After another setting.]()

@@ -56,7 +56,17 @@ Make sure to select the categories that accurately represent your plugin's purpo
 
 <br>
 
+## 🎨 Personalizing Your Plugin
+### 🖼️ Icon and Banner
+- You should include an icon for your plugin at path `Assets/PluginIcon.png`. We recommend 512x512 pixels for the icon.
+- You can also include a banner image at path `Assets/PluginBanner.png`. We recommend 1890x400 pixels for the banner.
+
+### 📚 Your README.md
+- You can include a `README.md` in the **root** directory of your plugin, it will be transferred into the `Assets` directory when you build the plugin, so that the client can see it.
+<br>
+
 ### 📤 Uploading Your Plugin
 
-Once your manifest is properly configured, you can upload your plugin to the Onix Client Plugin Repository. Follow these steps:
-and then steps will go here at some point
+Once your manifest is properly configured, you can create a GitHub repository for your plugin.<br>
+Then you will need to ask us on Discord to add or update your plugin in the public repository.<br>
+For security reasons, we will review any new plugins before they are added or updated in the public repository.<br>

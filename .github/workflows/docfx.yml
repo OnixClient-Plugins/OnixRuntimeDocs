@@ -56,3 +56,10 @@ jobs:
           file_pattern: '_site/**'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Notify Plugin API
+        run: |
+          curl -X 'GET' \
+            'https://plugin.onixclient.com/docs/please-update-the-documentation-now-because-i-have-new-changes-i-made?version=latest' \
+            -H 'accept: */*' \
+            -H "Balls-Api-Key: ${{ secrets.PLUGIN_API_KEY }}"

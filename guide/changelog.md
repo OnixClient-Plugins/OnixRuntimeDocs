@@ -6,6 +6,8 @@ This changelog documents what changed in the second update of the Plugins API.<b
 Since this is very early-access and the API is still being developed, there will a lot of changes and breaking changes.<br>
 There will be a clear changelog for each update, so you can easily see what changed and what you need to do to adapt your plugin.<br>
 This update is pretty much the whole package, you need to update the client first, that should take care of the new runtime.<br>
+With the entry point from the version 1 runtime, you will have an error telling you there is a version mismatch with two identical versions.<br>
+Simply eject and re-inject or re-open the game and it should work after.
 Update the UI from the chat AFTER the client and runtime since if you update it before updating the client you will likely crash as there was a bug with unloaded plugins.
 ```
 .plugin install uuid 50b8338a-1cc4-44ca-81ef-5ecf1062c37c
@@ -50,7 +52,7 @@ That will install the latest version of the Plugin Manager UI.<br>
 - Added BoundingBox rendering functions that take a normal but no UVs.
 - The [OnixSetting.SettingChanged](xref:OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate) callbacks no longer hard crash the runtime when invoked.
 - The [OnixModules](xref:OnixRuntime.Api.OnixClient.OnixModule) that have been created by a plugin now have an `Open in Plugin Manager` button.
-
+- Fixed an issue where it would change the runtime version but still report failure, requiring a restart to fix.
 
 ## Client Changes
 - Now expects runtime version 2.

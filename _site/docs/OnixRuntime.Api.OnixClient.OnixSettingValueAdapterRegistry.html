@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OnixSettingValueAdapterRegistry | Onix Plugin Documentation ">
       
-      <meta name="description" content="Registry for managing OnixSettingValueAdapter instances. Provides functionality to register, retrieve, and manage adapters for different value types.">
+      
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry" class="text-break">
-Class OnixSettingValueAdapterRegistry  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L251"><i class="bi bi-code-slash"></i></a>
+Class OnixSettingValueAdapterRegistry  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,9 +97,7 @@ Class OnixSettingValueAdapterRegistry  <a class="header-action link-secondary" t
   <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Registry for managing OnixSettingValueAdapter instances.
-Provides functionality to register, retrieve, and manage adapters for different value types.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -158,7 +156,7 @@ Provides functionality to register, retrieve, and manage adapters for different 
 
   <h3 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter_System_Type_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type)">
   GetAdapter(Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L242"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the adapter for a specific type.</p>
@@ -179,7 +177,7 @@ Provides functionality to register, retrieve, and manage adapters for different 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html">OnixSettingValueAdapter</a></dt>
-    <dd><p>The setting adapter for the specified type.</p>
+    <dd><p>The setting adapter or throws.</p>
 </dd>
   </dl>
 
@@ -193,7 +191,7 @@ Provides functionality to register, retrieve, and manage adapters for different 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
-    <dd><p>Thrown when there is no value adapter for the specified type.</p>
+    <dd><p>When there is not value adapter for a value type.</p>
 </dd>
   </dl>
 
@@ -203,7 +201,7 @@ Provides functionality to register, retrieve, and manage adapters for different 
 
   <h3 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter__1" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1">
   GetAdapter&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the adapter for a specific type.</p>
@@ -218,14 +216,14 @@ Provides functionality to register, retrieve, and manage adapters for different 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html">OnixSettingValueAdapter</a></dt>
-    <dd><p>The setting adapter for the specified type.</p>
+    <dd><p>The setting adapter or throws.</p>
 </dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type to get an adapter for.</p>
+    <dd><p>he type to get an adapter for.</p>
 </dd>
   </dl>
 
@@ -238,7 +236,7 @@ Provides functionality to register, retrieve, and manage adapters for different 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
-    <dd><p>Thrown when there is no value adapter for the specified type.</p>
+    <dd><p>When there is not value adapter for a value type.</p>
 </dd>
   </dl>
 
@@ -248,7 +246,7 @@ Provides functionality to register, retrieve, and manage adapters for different 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L251" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L213" class="edit-link">Edit this page</a>
         </div>
 
 

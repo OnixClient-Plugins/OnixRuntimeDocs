@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Update 2 | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Update 2 | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/changelogs/changelog.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="update-2">Update 2</h1>
+
+<p><a href="https://plugin.onixclient.com/docs/1/guide/changelog.html">No Previous Changelog</a>.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This changelog documents what changed in the second update of the Plugins API.<br>
+Since this is very early-access and the API is still being developed, there will a lot of changes and breaking changes.<br>
+There will be a clear changelog for each update, so you can easily see what changed and what you need to do to adapt your plugin.<br>
+This update is pretty much the whole package, you need to update the client first, that should take care of the new runtime.<br>
+With the entry point from the version 1 runtime, you will have an error telling you there is a version mismatch with two identical versions.<br>
+Simply eject and re-inject or restart the game and it should work afterwards.
+Update the UI from the chat AFTER the client and runtime, since if you update it before updating the client you will likely crash as there was a bug with unloaded plugins.</p>
+<pre><code>.plugin install uuid 50b8338a-1cc4-44ca-81ef-5ecf1062c37c
+</code></pre>
+<p>That will install the latest version of the Plugin Manager UI.<br></p>
+<hr>
+<h2 id="breaking-changes">Breaking Changes</h2>
+<h3 id="event-system-changes">Event System Changes</h3>
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEvents.html#OnixRuntime_Api_Events_OnixEvents_Common">Onix.Events.Common</a>
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventCommon.html#OnixRuntime_Api_Events_OnixEventCommon_HudRender">HudRender</a> was renamed into <a href="xref:OnixRuntime.Api.Events.OnixEventCommon.HudRenderGame">HudRenderGame</a></li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventCommon.html#OnixRuntime_Api_Events_OnixEventCommon_HudRender">HudRender</a> is now called with a <a href="xref:OnixRuntime.Api.Rendering.RendererCommon2D">RendererCommon2D</a> which will use the user's preferred renderer.</li>
+</ul>
+</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEvents.html#OnixRuntime_Api_Events_OnixEvents_Rendering">Onix.Events.Rendering</a>
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_HudRender">HudRender</a> was renamed into <a href="xref:OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame">HudRenderGame</a></li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_HudRender">HudRender</a> is now called with a <a href="xref:OnixRuntime.Api.Rendering.RendererCommon2D">RendererCommon2D</a> which will use the user's preferred renderer.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_RenderScreen">RenderScreen</a> was renamed into <a href="xref:OnixRuntime.Api.Events.OnixEventRendering.RenderScreenGame">RenderScreenGame</a></li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_RenderScreen">RenderScreen</a> is now called with a <a href="xref:OnixRuntime.Api.Rendering.RendererCommon2D">RendererCommon2D</a> which will use the user's preferred renderer.</li>
+<li><code>PreRenderScreen</code> was renamed into <a href="xref:OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenGame">PreRenderScreenGame</a></li>
+<li>There is no longer a <code>PreRenderScreen</code> event, since it means different things depending on which renderer is used.</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="settings-api-changes">Settings API Changes</h3>
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.html">OnixSettingCategory</a>'s <code>IncludesEverytingUntilNextCategory</code> typo has been fixed <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory">IncludesEverythingUntilNextCategory</a></li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate.html">SettingChangedDelegate</a> now gives the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a> as nullable since not every setting has a parent module.</li>
+</ul>
+<br>
+<h3 id="module-api-changes">Module API Changes</h3>
+<ul>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.op_Equality">operator==</a> on <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a> is now more extensive checks related to nullability. This shouldn't break much but since it could, it's on this list.</li>
+</ul>
+<br>
+<h3 id="rendering-api-changes">Rendering API Changes</h3>
+<ul>
+<li><code>RendererTwoDimentional</code> was renamed to <a href="xref:OnixRuntime.Api.Rendering.RendererCommon2D">RendererCommon2D</a> to better reflect its purpose and be consistent with <a href="xref:OnixRuntime.Api.Rendering.RendererCommon2D">RendererCommon</a>.</li>
+</ul>
+<br>
+<h3 id="client-api-changes">Client API Changes</h3>
+<ul>
+<li>The <code>Onix.Client.SetTooltipText</code> taking a <code>Vec2</code> has been removed as it would not work unless you matched the client's mouse position, which is not possible in plugins.
+<ul>
+<li>It has been replaced with a <a href="xref:OnixRuntime.Api.OnixClientThings.SetTooltipText">SetTooltipText(Rect)</a> overload.</li>
+<li>That convenience overload checks if the mouse is inside the rectangle before the tooltip is set.</li>
+</ul>
+</li>
+</ul>
+<h2 id="runtime-changes">Runtime Changes</h2>
+<h3 id="renderer-system">Renderer System</h3>
+<ul>
+<li>The runtime now has <a href="xref:OnixRuntime.Api.Rendering.OnixRendererType">OnixRendererType</a> to determine which renderer the user chose to use.
+<ul>
+<li>That's in <a href="xref:OnixRuntime.Api.Rendering.RenderContexes.MainRenderer">Onix.Render.MainRenderer</a> and it's not too useful to you, but we use it to determine which renderer to use for the new generic render events.</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="module-visual-system">Module Visual System</h3>
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleVisual.html">OnixModuleVisual</a> now has a <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleVisual.Render">Render</a> event you can subscribe to.
+<ul>
+<li>This is useful when rendering HUD elements as just rendering where the module is located was very bug-prone and was bound to have edge-cases.</li>
+<li>This even works with the preview in the client's UI.</li>
+</ul>
+</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleVisual.html">OnixModuleVisual</a> now has a <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleVisual.Area">Area</a> property that returns a <a class="xref" href="../docs/OnixRuntime.Api.Maths.Rect.html">Rect</a> representing the module's position and size.
+<ul>
+<li>Because dealing with a rectangle is so much more convenient than dealing with a position and size separately.</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li>All the <a href="xref:OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch">VertexBatch</a> variants taking a <code>List&lt;VertexType&gt;</code> no longer causes an exception.</li>
+<li>Fixed a freeze that occurred when loading an incompatible plugin.</li>
+<li>Fixed all the bounding box rendering functions the incorrect front/back faces.</li>
+<li>The <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate.html">OnixSetting.SettingChanged</a> callbacks no longer hard crash the runtime when invoked.</li>
+<li>Fixed an issue where it would change the runtime version but still report failure, requiring a restart to fix.</li>
+</ul>
+<br>
+<h3 id="new-features">New Features</h3>
+<ul>
+<li>The <code>.plugin</code> command now has a <code>ui</code> subcommand to open the Plugin Manager UI.
+<ul>
+<li>You can also specify a plugin UUID to open a specific plugin's settings.</li>
+<li><code>.plugin ui [uuid]</code></li>
+</ul>
+</li>
+<li>Added <code>BoundingBox</code> rendering functions that take a normal but no UVs.</li>
+<li>The <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModules</a> that have been created by a plugin now have an <code>Open in Plugin Manager</code> button.</li>
+</ul>
+<h2 id="client-changes">Client Changes</h2>
+<h3 id="version-updates">Version Updates</h3>
+<ul>
+<li>Now expects runtime version 2.</li>
+</ul>
+<br>
+<h3 id="bug-fixes-1">Bug Fixes</h3>
+<ul>
+<li>Fixed a freeze when too many notifications were sent from another thread than the main thread.</li>
+<li>Modules opened from the HUD editor now re-open correctly when they disappear for a brief moment.</li>
+</ul>
+<br>
+<h3 id="developer-features">Developer Features</h3>
+<ul>
+<li>Added a <code>Never Trusted</code> option in <code>Developer Settings</code>, which is enabled by default.
+<ul>
+<li>This will help you remember to check for trust when you create plugins, so you don't forget to do it later.</li>
+<li>Since most testing happens in singleplayer where you are trusted, you might never realize you need to check for trust on some functions.</li>
+<li>I would recommend having this on and testing with on before you release your plugin.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="plugin-manager-changes">Plugin Manager Changes</h2>
+<h3 id="bug-fixes-2">Bug Fixes</h3>
+<ul>
+<li>Uninstalling a local plugin no longer causes multiple exceptions.</li>
+</ul>
+<br>
+<h3 id="new-features-1">New Features</h3>
+<ul>
+<li>Implemented the ability to open a plugin by its UUID.</li>
+<li>Incompatible plugins will now have a warning displayed on their card.
+<ul>
+<li>Details view still has nothing as it is unfinished at this time.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="plugin-api-changes">Plugin API Changes</h2>
+<h3 id="performance-improvements">Performance Improvements</h3>
+<ul>
+<li>Hopefully fixed the infinite update task.</li>
+<li>Allowed the browser to cache some docs content.
+<ul>
+<li>That fixes the light mode blinding you for a split second on every single page load.</li>
+<li>It also speeds up the loading of the docs for the next 30 minutes after visiting that page.</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="new-features-2">New Features</h3>
+<ul>
+<li>Added an endpoint to update the documentation from the <a href="https://github.com/OnixClient-Plugins/OnixRuntimeDocs">Documentation Website Repository</a></li>
+</ul>
+<hr>
+<h2 id="plugin-generator-changes">Plugin Generator Changes</h2>
+<h3 id="bug-fixes-3">Bug Fixes</h3>
+<ul>
+<li>Fixed the <code>OnHudInput</code> event not returning false.</li>
+<li>Fixed the <code>OnChatMessage</code> event not returning false.</li>
+<li>Fixed the <code>OnChatMessage</code> not importing the OnixRuntime.Api.UI namespace.</li>
+<li>Ignored the return value of the asset copy step in the plugin generator.
+<ul>
+<li>This is to prevent the build from failing when the asset copy fails, which is not critical for the plugin to work.</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="event-system-updates">Event System Updates</h3>
+<ul>
+<li>Renamed the <code>HudRender</code> event to <code>HudRenderGame</code> to better reflect its purpose and make it consistent with <code>HudRenderDirect2D</code>.</li>
+<li>Added the updated <code>HudRender</code> event to the plugin generator.
+<ul>
+<li>This one is a generic event that uses the user's preferred renderer.</li>
+<li>You should prefer this for rendering unless you have a good reason to specialize.</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="project-configuration">Project Configuration</h3>
+<ul>
+<li>Added the <code>.editorconfig</code> file to the generated project.</li>
+<li>Added an OS check for the <code>rm</code>/<code>del</code> commands to get rid of two warnings when building.</li>
+<li>Added a <code>README.md</code> file to the generated project.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/changelogs/changelog.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

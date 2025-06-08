@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/OnixClient/OnixDotnetRuntime/new/master/apiSpec/new?filename=OnixRuntime_Api_Events_OnixEventCommon.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.OnixEventCommon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Events_OnixEventCommon.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.OnixEventCommon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Events_OnixEventCommon" data-uid="OnixRuntime.Api.Events.OnixEventCommon" class="text-break">
-Class OnixEventCommon  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class OnixEventCommon  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,7 +156,7 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="OnixRuntime_Api_Events_OnixEventCommon_ChatMessage" data-uid="OnixRuntime.Api.Events.OnixEventCommon.ChatMessage">
   ChatMessage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Occurs when a chat message is received.</p>
@@ -187,7 +187,7 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="OnixRuntime_Api_Events_OnixEventCommon_HudInput" data-uid="OnixRuntime.Api.Events.OnixEventCommon.HudInput">
   HudInput
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Occurs when HUD input is received.</p>
@@ -218,15 +218,16 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="OnixRuntime_Api_Events_OnixEventCommon_HudRender" data-uid="OnixRuntime.Api.Events.OnixEventCommon.HudRender">
   HudRender
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Occurs when the HUD is rendered.</p>
+  <div class="markdown level1 summary"><p>Occurs when the HUD is rendered on the user's preferred renderer.
+This may or may not be a logic callback so don't access game state, entities, etc.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event OnixEventRendering.OnHudRenderDelegate? HudRender</code></pre>
+    <pre><code class="lang-csharp hljs">public event OnixEventRendering.OnHudRender2DDelegate? HudRender</code></pre>
   </div>
 
 
@@ -236,7 +237,7 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html">OnixEventRendering</a>.<a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate.html">OnHudRenderDelegate</a></dt>
+    <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html">OnixEventRendering</a>.<a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html">OnHudRender2DDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -249,7 +250,7 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="OnixRuntime_Api_Events_OnixEventCommon_HudRenderDirect2D" data-uid="OnixRuntime.Api.Events.OnixEventCommon.HudRenderDirect2D">
   HudRenderDirect2D
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Occurs when the HUD is rendered using Direct2D.</p>
@@ -278,9 +279,41 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 
 
 
+  <h3 id="OnixRuntime_Api_Events_OnixEventCommon_HudRenderGame" data-uid="OnixRuntime.Api.Events.OnixEventCommon.HudRenderGame">
+  HudRenderGame
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when the HUD is rendered by the game.
+This will be a logic callback so you can access game state, entities, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventRendering.OnHudRenderDelegate? HudRenderGame</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html">OnixEventRendering</a>.<a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate.html">OnHudRenderDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h3 id="OnixRuntime_Api_Events_OnixEventCommon_Tick" data-uid="OnixRuntime.Api.Events.OnixEventCommon.Tick">
   Tick
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Occurs every game tick.</p>
@@ -311,7 +344,7 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="OnixRuntime_Api_Events_OnixEventCommon_WorldRender" data-uid="OnixRuntime.Api.Events.OnixEventCommon.WorldRender">
   WorldRender
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Occurs when the world is rendered.</p>
@@ -343,7 +376,7 @@ Class OnixEventCommon  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient/OnixDotnetRuntime/blob/master/OnixRuntime/Api/Events/OnixEventCommon.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventCommon.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 

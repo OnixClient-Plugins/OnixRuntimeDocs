@@ -101,7 +101,7 @@ Class OnixClientScreen  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OnixClientScreen : MightOwnMemoryAddressContainer, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class OnixClientScreen : SharedMemoryAddressContainer, IDisposable</code></pre>
   </div>
 
 
@@ -111,7 +111,7 @@ Class OnixClientScreen  <a class="header-action link-secondary" title="View sour
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html">MightOwnMemoryAddressContainer</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html">SharedMemoryAddressContainer</a></div>
       <div><span class="xref">OnixClientScreen</span></div>
     </dd>
   </dl>
@@ -128,19 +128,25 @@ Class OnixClientScreen  <a class="header-action link-secondary" title="View sour
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership">MightOwnMemoryAddressContainer.HasMemoryOwnership</a>
+      <a class="xref" href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_MemoryAddressSharedContainer">SharedMemoryAddressContainer.MemoryAddressSharedContainer</a>
     </div>
     <div>
-      <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_">MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)</a>
+      <a class="xref" href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_HasMemoryOwnership">SharedMemoryAddressContainer.HasMemoryOwnership</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      <a class="xref" href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_System_IntPtr_">SharedMemoryAddressContainer.SetMemoryAddressValues(nint, nint, nint)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_System_IntPtr_">SharedMemoryAddressContainer.SetMemoryAddressValues(SharedMemoryAddressContainer.PointerContainer, nint)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_">SharedMemoryAddressContainer.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode">SharedMemoryAddressContainer.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>

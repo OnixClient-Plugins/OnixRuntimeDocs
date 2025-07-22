@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer" class="text-break">
-Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -129,9 +129,6 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
       <div><a class="xref" href="OnixRuntime.Api.Entities.PlayerSkin.html">PlayerSkin</a></div>
       <div><a class="xref" href="OnixRuntime.Api.Inputs.OnixTextbox.html">OnixTextbox</a></div>
       <div><a class="xref" href="OnixRuntime.Api.Items.ItemStack.html">ItemStack</a></div>
-      <div><a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html">OnixClientScreen</a></div>
-      <div><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a></div>
-      <div><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a></div>
       <div><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html">OnixSettingListRenderer</a></div>
       <div><a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html">GameMesh</a></div>
       <div><a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html">TexturePath</a></div>
@@ -144,13 +141,7 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -179,7 +170,7 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
 
   <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer__ctor_System_IntPtr_System_IntPtr_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.#ctor(System.IntPtr,System.IntPtr)">
   MightOwnMemoryAddressContainer(nint, nint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -216,7 +207,7 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
 
   <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership">
   HasMemoryOwnership
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -251,7 +242,7 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
 
   <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Dispose" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -274,11 +265,50 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
 
 
 
+  <a id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Equals_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Equals_System_Object_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Finalize_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Finalize*"></a>
 
   <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_Finalize" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.Finalize">
   ~MightOwnMemoryAddressContainer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -300,11 +330,44 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
 
 
 
+  <a id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_GetHashCode_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.GetHashCode*"></a>
+
+  <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_GetHashCode" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues*"></a>
 
   <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)">
   SetMemoryAddressValues(nint, nint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -333,11 +396,91 @@ Class MightOwnMemoryAddressContainer  <a class="header-action link-secondary" ti
 
 
 
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_op_Equality_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_op_Equality_OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.op_Equality(OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer,OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer)">
+  operator ==(MightOwnMemoryAddressContainer?, MightOwnMemoryAddressContainer?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(MightOwnMemoryAddressContainer? left, MightOwnMemoryAddressContainer? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html">MightOwnMemoryAddressContainer</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html">MightOwnMemoryAddressContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_op_Inequality_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_op_Inequality_OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_" data-uid="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.op_Inequality(OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer,OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer)">
+  operator !=(MightOwnMemoryAddressContainer?, MightOwnMemoryAddressContainer?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(MightOwnMemoryAddressContainer? left, MightOwnMemoryAddressContainer? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html">MightOwnMemoryAddressContainer</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html">MightOwnMemoryAddressContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Internal/MemoryAddressContainer.cs/#L35" class="edit-link">Edit this page</a>
         </div>
 
 

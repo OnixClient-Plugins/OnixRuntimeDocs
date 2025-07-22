@@ -329,7 +329,7 @@ This is useful when you want to extend a module with your own settings, for exam
 There are two ways you can insert a setting.</p>
 <ul>
 <li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting">With the index.</a></li>
-<li><a href="">After another setting.</a></li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting">After another setting.</a></li>
 </ul>
 <p>With the index, you insert it wherever you want, make sure to set the origin where you want it.<br>
 With a setting, you place it at an offset from that setting, wherever it may be.</p>
@@ -345,7 +345,7 @@ With a setting, you place it at an offset from that setting, wherever it may be.
 <hr>
 <h2 id="thats-great-but-how-do-i-save">That's Great! But How do I Save?</h2>
 <p>When you create additional modules or settings that aren't part of a module you made that gets saved, they will not be saved automatically.
-If you want your module to be saved, you need to call <a href="OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule">SaveManager.TrackModule</a> with your module.<br>
+If you want your module to be saved, you need to call <a href="xref:OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule">SaveManager.TrackModule</a> with your module.<br>
 This will also load and save any settings you have in it at this time.<br></p>
 <pre><code class="lang-cs">HudElement = new OnixModuleVisual($&quot;{CurrentPluginManifest.Name}'s Hud Element&quot;, &quot;hud_element&quot;, 
     Vec2.Zero, OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 20),

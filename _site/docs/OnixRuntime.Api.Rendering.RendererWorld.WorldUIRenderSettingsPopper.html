@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper" data-uid="OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper" class="text-break">
-Struct RendererWorld.WorldUIRenderSettingsPopper  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L60"><i class="bi bi-code-slash"></i></a>
+Struct RendererWorld.WorldUIRenderSettingsPopper  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -151,9 +151,9 @@ Struct RendererWorld.WorldUIRenderSettingsPopper  <a class="header-action link-s
 
   <a id="OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper__ctor_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor*"></a>
 
-  <h3 id="OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper__ctor_OnixRuntime_Api_Rendering_RendererWorld_WorldRenderSettingsPopper_OnixRuntime_Api_Rendering_RendererCommon_TransformationPopper_OnixRuntime_Api_Rendering_RendererWorld_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper,OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld)">
-  WorldUIRenderSettingsPopper(WorldRenderSettingsPopper, TransformationPopper, RendererWorld)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <h3 id="OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper__ctor_OnixRuntime_Api_Rendering_RendererCommon_TransformationPopper_OnixRuntime_Api_Rendering_RendererWorld_System_Boolean_OnixRuntime_Api_Rendering_GameMaterialParameters_" data-uid="OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld,System.Boolean,OnixRuntime.Api.Rendering.GameMaterialParameters)">
+  WorldUIRenderSettingsPopper(TransformationPopper, RendererWorld, bool, GameMaterialParameters)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Helper struct for managing world UI render settings and transformation stack with automatic pop on dispose.</p>
@@ -161,16 +161,18 @@ Struct RendererWorld.WorldUIRenderSettingsPopper  <a class="header-action link-s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WorldUIRenderSettingsPopper(RendererWorld.WorldRenderSettingsPopper worldSettingsPopperCtor, RendererCommon.TransformationPopper transformationPopperCtor, RendererWorld renderer)</code></pre>
+    <pre><code class="lang-csharp hljs">public WorldUIRenderSettingsPopper(RendererCommon.TransformationPopper transformationPopperCtor, RendererWorld renderer, bool wasRenderingUi, GameMaterialParameters materialParameters)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>worldSettingsPopperCtor</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererWorld.html">RendererWorld</a>.<a class="xref" href="OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper.html">WorldRenderSettingsPopper</a></dt>
-    <dd></dd>
     <dt><code>transformationPopperCtor</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html">RendererCommon</a>.<a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper.html">TransformationPopper</a></dt>
     <dd></dd>
     <dt><code>renderer</code> <a class="xref" href="OnixRuntime.Api.Rendering.RendererWorld.html">RendererWorld</a></dt>
+    <dd></dd>
+    <dt><code>wasRenderingUi</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>materialParameters</code> <a class="xref" href="OnixRuntime.Api.Rendering.GameMaterialParameters.html">GameMaterialParameters</a></dt>
     <dd></dd>
   </dl>
 
@@ -193,7 +195,7 @@ Struct RendererWorld.WorldUIRenderSettingsPopper  <a class="header-action link-s
 
   <h3 id="OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper_Dispose" data-uid="OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Pops the world UI render settings and transformation when disposed.</p>
@@ -220,7 +222,7 @@ Struct RendererWorld.WorldUIRenderSettingsPopper  <a class="header-action link-s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L60" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/RendererWorld.cs/#L20" class="edit-link">Edit this page</a>
         </div>
 
 

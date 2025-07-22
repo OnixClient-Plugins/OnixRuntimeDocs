@@ -428,9 +428,9 @@ Class PluginSettings  <a class="header-action link-secondary" title="View source
 
   <a id="OnixRuntime_Plugin_PluginSettings_SaveSettings_" data-uid="OnixRuntime.Plugin.PluginSettings.SaveSettings*"></a>
 
-  <h3 id="OnixRuntime_Plugin_PluginSettings_SaveSettings" data-uid="OnixRuntime.Plugin.PluginSettings.SaveSettings">
-  SaveSettings()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/PluginManifest.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  <h3 id="OnixRuntime_Plugin_PluginSettings_SaveSettings_System_Boolean_" data-uid="OnixRuntime.Plugin.PluginSettings.SaveSettings(System.Boolean)">
+  SaveSettings(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/PluginManifest.cs/#L356"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serializes the plugin settings to a JSON string.</p>
@@ -438,9 +438,15 @@ Class PluginSettings  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SaveSettings()</code></pre>
+    <pre><code class="lang-csharp hljs">public string SaveSettings(bool includePluginSpecificSettings)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includePluginSpecificSettings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Should it also save plugin specific settings or just generic ones.</p>
+</dd>
+  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
@@ -461,9 +467,9 @@ Class PluginSettings  <a class="header-action link-secondary" title="View source
 
   <a id="OnixRuntime_Plugin_PluginSettings_SaveSettings_" data-uid="OnixRuntime.Plugin.PluginSettings.SaveSettings*"></a>
 
-  <h3 id="OnixRuntime_Plugin_PluginSettings_SaveSettings_System_IO_Stream_" data-uid="OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream)">
-  SaveSettings(Stream)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/PluginManifest.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  <h3 id="OnixRuntime_Plugin_PluginSettings_SaveSettings_System_IO_Stream_System_Boolean_" data-uid="OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream,System.Boolean)">
+  SaveSettings(Stream, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/PluginManifest.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serializes the plugin settings and writes them to a stream.</p>
@@ -471,13 +477,16 @@ Class PluginSettings  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SaveSettings(Stream stream)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SaveSettings(Stream stream, bool includePluginSpecificSettings)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
     <dd><p>The stream to write the settings to.</p>
+</dd>
+    <dt><code>includePluginSpecificSettings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Should it also save plugin specific settings or just generic ones.</p>
 </dd>
   </dl>
 

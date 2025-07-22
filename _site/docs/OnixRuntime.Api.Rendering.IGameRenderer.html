@@ -157,6 +157,81 @@ Interface IGameRenderer  <a class="header-action link-secondary" title="View sou
 </h2>
 
 
+  <a id="OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameter_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)">
+  GetMaterialParameter(GameMaterialParameterType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/IGameRenderer.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the value of a specific material parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool GetMaterialParameter(GameMaterialParameterType parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameter</code> <a class="xref" href="OnixRuntime.Api.Rendering.GameMaterialParameterType.html">GameMaterialParameterType</a></dt>
+    <dd><p>The parameter to get the value of</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The current value of that material parameter</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Note that <a class="xref" href="OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_">SetMaterialParameter(GameMaterialParameterType, bool)</a> sets and gives you the previous value if that's why you're using this function.</p>
+</div>
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameters_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameters" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters">
+  GetMaterialParameters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/IGameRenderer.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current material parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GameMaterialParameters GetMaterialParameters()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMaterialParameters.html">GameMaterialParameters</a></dt>
+    <dd><p>The current material parameters</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Api_Rendering_IGameRenderer_NewMeshBuilderSession_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession*"></a>
 
   <h3 id="OnixRuntime_Api_Rendering_IGameRenderer_NewMeshBuilderSession_OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_System_Nullable_OnixRuntime_Api_Maths_ColorF__OnixRuntime_Api_Rendering_TexturePath_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath)">
@@ -592,6 +667,122 @@ Remember to use <a class="xref" href="OnixRuntime.Api.Maths.TransformationMatrix
 
 
 
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)">
+  SetMaterialCustom(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/IGameRenderer.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the material to a custom material specified by name.
+this is for using game materials or ones in texture packs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetMaterialCustom(string materialName, bool useSwitchableGroup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>materialName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the custom material to set. Cannot be null or empty.</p>
+</dd>
+    <dt><code>useSwitchableGroup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to use the switchable group for the material instead of common.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)">
+  SetMaterialParameter(GameMaterialParameterType, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/IGameRenderer.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the specified material parameter to the given value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SetMaterialParameter(GameMaterialParameterType parameter, bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameter</code> <a class="xref" href="OnixRuntime.Api.Rendering.GameMaterialParameterType.html">GameMaterialParameterType</a></dt>
+    <dd><p>The type of material parameter to set.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The boolean value to assign to the material parameter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The previous material parameter before setting your new value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameters_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameters_OnixRuntime_Api_Rendering_GameMaterialParameters_" data-uid="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)">
+  SetMaterialParameters(GameMaterialParameters)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/IGameRenderer.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the parameters for the game material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetMaterialParameters(GameMaterialParameters parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameters</code> <a class="xref" href="OnixRuntime.Api.Rendering.GameMaterialParameters.html">GameMaterialParameters</a></dt>
+    <dd><p>The <a class="xref" href="OnixRuntime.Api.Rendering.GameMaterialParameters.html">GameMaterialParameters</a> object containing the material properties to be applied.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameters_OnixRuntime_Api_Rendering_GameMaterialParameters__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method updates the material properties used in the game. Ensure that the
+<code class="paramref">parameters</code> object is properly initialized before calling this method.</p>
+</div>
 
 
 

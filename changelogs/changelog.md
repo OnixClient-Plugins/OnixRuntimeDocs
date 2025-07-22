@@ -1,14 +1,11 @@
-﻿# Update 2
-[No Previous Changelog](https://plugin.onixclient.com/docs/1/guide/changelog.html).
+﻿# Update 3
+[Previous Changelog](https://plugin.onixclient.com/docs/2/guide/changelog.html)
 
 ## Introduction
-This changelog documents what changed in the second update of the Plugins API.<br>
+This changelog documents what changed in the third update of the Plugins API.<br>
 Since this is very early-access and the API is still being developed, there will a lot of changes and breaking changes.<br>
 There will be a clear changelog for each update, so you can easily see what changed and what you need to do to adapt your plugin.<br>
 This update is pretty much the whole package, you need to update the client first, that should take care of the new runtime.<br>
-With the entry point from the version 1 runtime, you will have an error telling you there is a version mismatch with two identical versions.<br>
-Simply eject and re-inject or restart the game and it should work afterwards.
-Update the UI from the chat AFTER the client and runtime, since if you update it before updating the client you will likely crash as there was a bug with unloaded plugins.
 ```
 .plugin install uuid 50b8338a-1cc4-44ca-81ef-5ecf1062c37c
 ```
@@ -18,144 +15,82 @@ That will install the latest version of the Plugin Manager UI.<br>
 
 ## Breaking Changes
 
-### Event System Changes
-- [Onix.Events.Common](xref:OnixRuntime.Api.Events.OnixEvents.Common)
-  - [HudRender](xref:OnixRuntime.Api.Events.OnixEventCommon.HudRender) was renamed into [HudRenderGame](xref:OnixRuntime.Api.Events.OnixEventCommon.HudRenderGame)
-  - [HudRender](xref:OnixRuntime.Api.Events.OnixEventCommon.HudRender) is now called with a [RendererCommon2D](xref:OnixRuntime.Api.Rendering.RendererCommon2D) which will use the user's preferred renderer.
-- [Onix.Events.Rendering](xref:OnixRuntime.Api.Events.OnixEvents.Rendering)
-  - [HudRender](xref:OnixRuntime.Api.Events.OnixEventRendering.HudRender) was renamed into [HudRenderGame](xref:OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame)
-  - [HudRender](xref:OnixRuntime.Api.Events.OnixEventRendering.HudRender) is now called with a [RendererCommon2D](xref:OnixRuntime.Api.Rendering.RendererCommon2D) which will use the user's preferred renderer.
-  - [RenderScreen](xref:OnixRuntime.Api.Events.OnixEventRendering.RenderScreen) was renamed into [RenderScreenGame](xref:OnixRuntime.Api.Events.OnixEventRendering.RenderScreenGame)
-  - [RenderScreen](xref:OnixRuntime.Api.Events.OnixEventRendering.RenderScreen) is now called with a [RendererCommon2D](xref:OnixRuntime.Api.Rendering.RendererCommon2D) which will use the user's preferred renderer.
-  - `PreRenderScreen` was renamed into [PreRenderScreenGame](xref:OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenGame)
-  - There is no longer a `PreRenderScreen` event, since it means different things depending on which renderer is used.
+### Rendering Changes
+- `RendererWorld.EnableLights` has been removed.
+  - You should now use [IGameRenderer.SetMaterialParameters](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters) with a material that has the [Light](xref:OnixRuntime.Api.Rendering.GameMaterialParameters.Light) property set to true.
+  - You can also toggle just that with [IGameRenderer.SetMaterialParameter](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter) using [Light](xref:OnixRuntime.Api.Rendering.GameMaterialParameterType.Light) and true.
+- `RendererWorld.PushWorldRenderSettings` has been removed.
+  - You should now use [IGameRenderer.SetMaterialParameters](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters) with a [Material](xref:OnixRuntime.Api.Rendering.GameMaterialParameters) containing the settings you're looking for.
+  - You can also toggle a specific setting with [IGameRenderer.SetMaterialParameter](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter) specifying which [parameter](xref:OnixRuntime.Api.Rendering.GameMaterialParameterType) to change.
+  - UI simulation mode can be changed using [RendererWorld.IsSimulatingUi](xref:OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi) but as before, you shouldn't touch that yourself.
 
 <br>
 
-### Settings API Changes
-- [OnixSettingCategory](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory)'s `IncludesEverytingUntilNextCategory` typo has been fixed [IncludesEverythingUntilNextCategory](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory)
-- [SettingChangedDelegate](xref:OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate) now gives the [OnixModule](xref:OnixRuntime.Api.OnixClient.OnixModule) as nullable since not every setting has a parent module.
+### Settings Changes
+- The gfx in [OnixSettingRenderer](xref:OnixRuntime.Api.OnixClient.OnixSettingRenderer)'s [Render](xref:OnixRuntime.Api.OnixClient.OnixSettingRenderer.Render) function will have its Width/Height/Size match the size parameter.
 
 <br>
 
-### Module API Changes
-- [operator==](xref:OnixRuntime.Api.OnixClient.OnixModule.op_Equality) on [OnixModule](xref:OnixRuntime.Api.OnixClient.OnixModule) is now more extensive checks related to nullability. This shouldn't break much but since it could, it's on this list.
-
-<br>
-
-### Rendering API Changes
-- `RendererTwoDimentional` was renamed to [RendererCommon2D](xref:OnixRuntime.Api.Rendering.RendererCommon2D) to better reflect its purpose and be consistent with [RendererCommon](xref:OnixRuntime.Api.Rendering.RendererCommon2D).
-
-<br>
-
-### Client API Changes
-- The `Onix.Client.SetTooltipText` taking a `Vec2` has been removed as it would not work unless you matched the client's mouse position, which is not possible in plugins. 
-  - It has been replaced with a [SetTooltipText(Rect)](xref:OnixRuntime.Api.OnixClientThings.SetTooltipText) overload.
-  - That convenience overload checks if the mouse is inside the rectangle before the tooltip is set.
+### Block Changes
+- `Block.States` has been renamed to [Block.RawStates](xref:OnixRuntime.Api.World.Block.RawStates).
+  - You should likely avoid using that in 99.99% of cases as the information isn't necessarily accurate on all versions.
+  - I would trust nothing but the [Name](xref:OnixRuntime.Api.World.BlockState.Name) and the [StateId](xref:OnixRuntime.Api.World.BlockState.StateId).
+- `Block.GetState` has been renamed to [Block.GetStateValue](xref:OnixRuntime.Api.World.Block.GetStateValue).
+  - It has the same behavior as before, you give it a name or id and it returns the value for that state.
 
 ## Runtime Changes
 
-### Renderer System
-- The runtime now has [OnixRendererType](xref:OnixRuntime.Api.Rendering.OnixRendererType) to determine which renderer the user chose to use.
-  - That's in [Onix.Render.MainRenderer](xref:OnixRuntime.Api.Rendering.RenderContexes.MainRenderer) and it's not too useful to you, but we use it to determine which renderer to use for the new generic render events.
-
-<br>
-
-### Module Visual System
-- [OnixModuleVisual](xref:OnixRuntime.Api.OnixClient.OnixModuleVisual) now has a [Render](xref:OnixRuntime.Api.OnixClient.OnixModuleVisual.Render) event you can subscribe to.
-  - This is useful when rendering HUD elements as just rendering where the module is located was very bug-prone and was bound to have edge-cases.
-  - This even works with the preview in the client's UI.
-- [OnixModuleVisual](xref:OnixRuntime.Api.OnixClient.OnixModuleVisual) now has a [Area](xref:OnixRuntime.Api.OnixClient.OnixModuleVisual.Area) property that returns a [Rect](xref:OnixRuntime.Api.Maths.Rect) representing the module's position and size.
-  - Because dealing with a rectangle is so much more convenient than dealing with a position and size separately.
-
-<br>
-
-### Bug Fixes
-- All the [VertexBatch](xref:OnixRuntime.Api.Rendering.GameMeshBuilder.VertexBatch) variants taking a `List<VertexType>` no longer causes an exception.
-- Fixed a freeze that occurred when loading an incompatible plugin.
-- Fixed all the bounding box rendering functions the incorrect front/back faces.
-- The [OnixSetting.SettingChanged](xref:OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate) callbacks no longer hard crash the runtime when invoked.
-- Fixed an issue where it would change the runtime version but still report failure, requiring a restart to fix.
+### Material System
+- [Materials](xref:OnixRuntime.Api.Rendering.GameMaterialParameters) have been introduced.
+  - This lets you set specific parameters for rendering, such as light, inputs like gradient or uv, if textures are linear, culling modes.
+  - Those are fine-tuned materials that should respect most of the combinations of parameters.
+  - Some parameters kill or break some behavior, but if you wish to suggest a fix by all means send us the material's JSON.
+  - You can set individual parameters using [IGameRenderer.SetMaterialParameter](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter) or set a whole material using [IGameRenderer.SetMaterialParameters](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters).
+  - There are getter functions for the parameters, such as [IGameRenderer.GetMaterialParameter](xref:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter) and [IGameRenderer.GetMaterialParameters](xref:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters).
+  - Note that the individual parameter setter returns the previous value, so you can restore it if you're doing a one off.
+  - You can also set any material from the game or a pack using [IGameRenderer.SetMaterialCustom](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom) specifying its name and if it is in the common.json or fancy/sad.json.
+  - [RendererCommon.SetDefaultState](xref:OnixRuntime.Api.Rendering.RendererCommon.SetDefaultState) will bind the default material as well as all default settings if you ever need it.
+  - The material system is available in [IGameRenderer](xref:OnixRuntime.Api.Rendering.IGameRenderer) so you get the advantages of materials for UI too.
+    - Note that for UI, some parameters are not supported like light, and some should always be enabled.
+    - You can use [IGameRenderer.GetMaterialParameters](xref:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters) to see the default parameters.
 
 <br>
 
 ### New Features
-- The `.plugin` command now has a `ui` subcommand to open the Plugin Manager UI.
-  - You can also specify a plugin UUID to open a specific plugin's settings.
-  - `.plugin ui [uuid]`
-- Added `BoundingBox` rendering functions that take a normal but no UVs.
-- The [OnixModules](xref:OnixRuntime.Api.OnixClient.OnixModule) that have been created by a plugin now have an `Open in Plugin Manager` button.
+- [BlockGraphics](xref:OnixRuntime.Api.Rendering.BlockGraphics) has been added, giving you information like block shape and texture.
+  - You can access it using the [Block.Graphics](xref:OnixRuntime.Api.World.Block.Graphics) property.
+- Added `With` methods for most math types.
+  - [Vec3.WithX](xref:OnixRuntime.Api.Maths.Vec3.WithX) - [Vec3.WithY](xref:OnixRuntime.Api.Maths.Vec3.WithY) - [Vec3.WithZ](xref:OnixRuntime.Api.Maths.Vec3.WithZ)
+  - [Vec2.WithX](xref:OnixRuntime.Api.Maths.Vec2.WithX) - [Vec2.WithY](xref:OnixRuntime.Api.Maths.Vec2.WithY)
+  - [BlockPos.WithX](xref:OnixRuntime.Api.World.BlockPos.WithX) - [BlockPos.WithY](xref:OnixRuntime.Api.World.BlockPos.WithY) - [BlockPos.WithZ](xref:OnixRuntime.Api.World.BlockPos.WithZ)
+  - [Vec2i.WithX](xref:OnixRuntime.Api.Maths.Vec2i.WithX) - [Vec2i.WithY](xref:OnixRuntime.Api.Maths.Vec2i.WithY)
+  - [Rect.WithX](xref:OnixRuntime.Api.Maths.Rect.WithX) - [Rect.WithY](xref:OnixRuntime.Api.Maths.Rect.WithY) - [Rect.WithZ](xref:OnixRuntime.Api.Maths.Rect.WithZ) - [Rect.WithW](xref:OnixRuntime.Api.Maths.Rect.WithW)
+  - [Rect.WithWidth](xref:OnixRuntime.Api.Maths.Rect.WithWidth) - [Rect.WithHeight](xref:OnixRuntime.Api.Maths.Rect.WithHeight) - [Rect.WithSize](xref:OnixRuntime.Api.Maths.Rect.WithSize)
+- [MightOwnMemoryAddressContainer](xref:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer) and [MemoryAddressContainer](xref:OnixRuntime.Api.Internal.MemoryAddressContainer) now have an `operator==` and a `GetHashCode()`.
+- [ItemStack](xref:OnixRuntime.Api.Items.ItemStack) now has an [HasEnchantOverlay](xref:OnixRuntime.Api.Items.ItemStack.HasEnchantOverlay) property.
+
+<br>
+
+### Bug Fixes
+- Fixed [WorldChunk](OnixRuntime.Api.World.WorldChunk)'s [LoadState](xref:OnixRuntime.Api.World.WorldChunk.LoadState) property always being [Unloaded](xref:OnixRuntime.Api.World.WorldChunk.ChunkState.Unloaded).
+- Fixed [Onix.Game.InvokeUri](xref:OnixRuntime.Api.OnixGame.InvokeUri) forcing you to be in a world and throwing an exception.
+- Fixed [Dimension](xref:OnixRuntime.Api.World.Dimension)'s [Id](xref:OnixRuntime.Api.World.Dimension.Id) property always being [Overworld](xref:OnixRuntime.Api.World.DimensionType.Overworld).
+- Fixed [WorldChunk.GetBlock](xref:OnixRuntime.Api.World.WorldChunk.GetBlock) always returning null.
+- Fixed [WorldChunk.GetRainHeightAt](xref:OnixRuntime.Api.World.WorldChunk.GetRainHeightAt) always returning 0.
+- Fixed [WorldChunk.GetHeightAt](xref:OnixRuntime.Api.World.WorldChunk.GetHeightAt) always returning 0.
+- Fixed [BlockRegistry.GetBlock](xref:OnixRuntime.Api.World.BlockRegistry.GetBlock) never finding blocks on 1.12.
+- Fixed [InsufficientTrustException](xref:OnixRuntime.Api.Errors.InsufficientTrustException) not being thrown/reported and silently failing.
+- Fixed [SettingChangedDelegate](xref:OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate) getting garbage collected and crashing the dotnet runtime when invoked.
+- Fixed [MemoryHelpers.ScanSignature](xref:OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature) now returns the correct address of the signature it finds.
 
 ## Client Changes
 
 ### Version Updates
-- Now expects runtime version 2.
+- Now expects runtime version 3.
 
 <br>
 
 ### Bug Fixes
-- Fixed a freeze when too many notifications were sent from another thread than the main thread.
-- Modules opened from the HUD editor now re-open correctly when they disappear for a brief moment.
-
-<br>
-
-### Developer Features
-- Added a `Never Trusted` option in `Developer Settings`, which is enabled by default.
-  - This will help you remember to check for trust when you create plugins, so you don't forget to do it later.
-  - Since most testing happens in singleplayer where you are trusted, you might never realize you need to check for trust on some functions.
-  - I would recommend having this on and testing with on before you release your plugin.
-
----
-
-## Plugin Manager Changes
-
-### Bug Fixes
-- Uninstalling a local plugin no longer causes multiple exceptions.
-
-<br>
-
-### New Features
-- Implemented the ability to open a plugin by its UUID.
-- Incompatible plugins will now have a warning displayed on their card.
-  - Details view still has nothing as it is unfinished at this time.
-
----
-
-## Plugin API Changes
-
-### Performance Improvements
-- Hopefully fixed the infinite update task.
-- Allowed the browser to cache some docs content.
-  - That fixes the light mode blinding you for a split second on every single page load.
-  - It also speeds up the loading of the docs for the next 30 minutes after visiting that page.
-
-<br>
-
-### New Features
-- Added an endpoint to update the documentation from the [Documentation Website Repository](https://github.com/OnixClient-Plugins/OnixRuntimeDocs)
-
----
-
-## Plugin Generator Changes
-
-### Bug Fixes
-- Fixed the `OnHudInput` event not returning false.
-- Fixed the `OnChatMessage` event not returning false.
-- Fixed the `OnChatMessage` not importing the OnixRuntime.Api.UI namespace.
-- Ignored the return value of the asset copy step in the plugin generator.
-  - This is to prevent the build from failing when the asset copy fails, which is not critical for the plugin to work.
-
-<br>
-
-### Event System Updates
-- Renamed the `HudRender` event to `HudRenderGame` to better reflect its purpose and make it consistent with `HudRenderDirect2D`.
-- Added the updated `HudRender` event to the plugin generator.
-  - This one is a generic event that uses the user's preferred renderer.
-  - You should prefer this for rendering unless you have a good reason to specialize.
-
-<br>
-
-### Project Configuration
-- Added the `.editorconfig` file to the generated project.
-- Added an OS check for the `rm`/`del` commands to get rid of two warnings when building.
-- Added a `README.md` file to the generated project.
+- Notifications happening in weird orders should no longer freeze the game.
+- Input events are no longer duplicated.
+- Fixed changing skins from the client on 1.21.20 to 1.21.60.

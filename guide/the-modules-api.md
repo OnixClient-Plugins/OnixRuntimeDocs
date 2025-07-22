@@ -292,7 +292,7 @@ This is useful when you want to extend a module with your own settings, for exam
 (You should *probably* not do that specifically unless you're sure it makes sense to have it there as it won't necessarily be obvious for the user.)<br>
 There are two ways you can insert a setting.
 - [With the index.](xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting)
-- [After another setting.]()
+- [After another setting.](xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting)
 
 With the index, you insert it wherever you want, make sure to set the origin where you want it.<br>
 With a setting, you place it at an offset from that setting, wherever it may be.
@@ -310,7 +310,7 @@ if (Onix.Client.Modules.GetModule("module.global_settings.name") is {} globalSet
 ---
 ## That's Great! But How do I Save?
 When you create additional modules or settings that aren't part of a module you made that gets saved, they will not be saved automatically.
-If you want your module to be saved, you need to call [SaveManager.TrackModule](OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule) with your module.<br>
+If you want your module to be saved, you need to call [SaveManager.TrackModule](xref:OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule) with your module.<br>
 This will also load and save any settings you have in it at this time.<br>
 ```cs
 HudElement = new OnixModuleVisual($"{CurrentPluginManifest.Name}'s Hud Element", "hud_element", 

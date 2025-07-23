@@ -17,7 +17,7 @@ That will install the latest version of the Plugin Manager UI.<br>
 
 ### Rendering Changes
 - `RendererWorld.EnableLights` has been removed.
-  - You should now use [IGameRenderer.SetMaterialParameters](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters) with a material that has the [Light](xref:OnixRuntime.Api.Rendering.GameMaterialParameters.Light) property set to true.
+  - You should now use [IGameRenderer.SetMaterialParameters](xref:M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters) with a material that has the [Light](xref:OnixRuntime.Api.Rendering.GameMaterialParameters.Light) property set to true.
   - You can also toggle just that with [IGameRenderer.SetMaterialParameter](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter) using [Light](xref:OnixRuntime.Api.Rendering.GameMaterialParameterType.Light) and true.
 - `RendererWorld.PushWorldRenderSettings` has been removed.
   - You should now use [IGameRenderer.SetMaterialParameters](xref:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters) with a [Material](xref:OnixRuntime.Api.Rendering.GameMaterialParameters) containing the settings you're looking for.

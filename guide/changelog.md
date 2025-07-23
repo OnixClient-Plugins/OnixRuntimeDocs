@@ -1,4 +1,4 @@
-﻿# Update 3
+﻿# Changelog 3
 [Previous Changelog](https://plugin.onixclient.com/docs/2/guide/changelog.html)
 
 ## Introduction

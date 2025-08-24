@@ -83,26 +83,26 @@ With this update, the PluginManager UI should update automatically, so you can j
 <hr>
 <h2 id="breaking-changes">Breaking Changes</h2>
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a>'s <a class="xref" href="../docs/OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_GetItem_">GetItem</a> method will now return a null item stack on failure instead of a disposed one.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a>'s HoveringItem property was renamed to <a class="xref" href="../docs/OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_IsHoveringItem">IsHoveringItem</a> for clarity.</li>
-<li>The event Onix.Events.Input.OnPlayerInputTick was renamed to <a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventInputs.html#OnixRuntime_Api_Events_OnixEventInputs_PlayerInputTick">Onix.Events.Input.PlayerInputTick</a> for the IDE to not generate OnOnPLayerInputTick.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Inputs.GameInputHandler.html">GameInputHandler</a>'s IsAAllDown was renamed to <a class="xref" href="../docs/OnixRuntime.Api.Inputs.GameInputHandler.html#OnixRuntime_Api_Inputs_GameInputHandler_IsAllDown_">IsAllDown</a> as it clearly contained a typo.</li>
-<li>The constructor of <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a> taking an <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a> now also takes a bool.
+<li><a href="xref:OnixRuntime.Api.UI.ContainerScreen">ContainerScreen</a>'s <a href="xref:OnixRuntime.Api.UI.ContainerScreen.GetItem*">GetItem</a> method will now return a null item stack on failure instead of a disposed one.</li>
+<li><a href="xref:OnixRuntime.Api.UI.ContainerScreen">ContainerScreen</a>'s HoveringItem property was renamed to <a href="xref:OnixRuntime.Api.UI.ContainerScreen.IsHoveringItem">IsHoveringItem</a> for clarity.</li>
+<li>The event Onix.Events.Input.OnPlayerInputTick was renamed to <a href="xref:OnixRuntime.Api.Events.OnixEventInputs.PlayerInputTick">Onix.Events.Input.PlayerInputTick</a> for the IDE to not generate OnOnPLayerInputTick.</li>
+<li><a href="xref:OnixRuntime.Api.Inputs.GameInputHandler">GameInputHandler</a>'s IsAAllDown was renamed to <a href="xref:OnixRuntime.Api.Inputs.GameInputHandler.IsAllDown*">IsAllDown</a> as it clearly contained a typo.</li>
+<li>The constructor of <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a> taking an <a href="xref:OnixRuntime.Api.OnixClient.OnixModule">OnixModule</a> now also takes a bool.
 <ul>
 <li>This breaks every single plugin with a config.</li>
-<li>To fix it, simply add <code>, true</code> in your <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginBase.html#OnixRuntime_Plugin_OnixPluginBase_OnLoaded">OnLoaded</a> method where you create your <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a>.</li>
+<li>To fix it, simply add <code>, true</code> in your <a href="xref:OnixRuntime.Plugin.OnixPluginBase.OnLoaded">OnLoaded</a> method where you create your <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a>.</li>
 <li>It should look something like this: <code>Config = new(PluginDisplayModule, true);</code></li>
 <li>The bool is for whether you want missing settings to be added to your module automatically.</li>
 <li>This is important because if you start wrapping Onix Client modules in a class like that, you don't want a deleted setting to be re-added automatically linking to nothing.</li>
 </ul>
 </li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a> fields are now public. (And for the sillyheads that were using reflection, the field 11 now exists.)</li>
-<li>The <a class="xref" href="../docs/OnixRuntime.Api.Logger.html">Logger</a> constructor no longer takes a <a class="xref" href="../docs/OnixRuntime.Api.Logger.Level.html">Logger.Level</a>. It is now entirely decided by the <code>runtime/config.json</code>.
+<li><a href="xref:OnixRuntime.Api.Maths.TransformationMatrix">TransformationMatrix</a> fields are now public. (And for the sillyheads that were using reflection, the field 11 now exists.)</li>
+<li>The <a href="xref:OnixRuntime.Api.Logger">Logger</a> constructor no longer takes a <a href="xref:OnixRuntime.Api.Logger.Level">Logger.Level</a>. It is now entirely decided by the <code>runtime/config.json</code>.
 <ul>
 <li>We still have a <code>.plugin loglevel</code> to change the chat and log file levels.</li>
 </ul>
 </li>
-<li>OnixModuleList was renamed to <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModulesList.html">OnixModulesList</a> for consistency.</li>
+<li>OnixModuleList was renamed to <a href="xref:OnixRuntime.Api.OnixClient.OnixModulesList">OnixModulesList</a> for consistency.</li>
 </ul>
 <h2 id="runtime-changes">Runtime Changes</h2>
 <ul>
@@ -112,7 +112,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 <ul>
 <li>The default one is always there but you can add more.</li>
 <li>This can be useful for early access plugins or private plugins (still have the user provide any API secrets as someone can just leak or stumble upon that repo url).</li>
-<li>For now you can change them in the <code>runtime/config.json</code> or from C# using <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_RemoteSourceUrls">RemoteSourceUrls</a> and <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls">SaveRemoteSourceUrls()</a> from the <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.</li>
+<li>For now you can change them in the <code>runtime/config.json</code> or from C# using <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls">RemoteSourceUrls</a> and <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls">SaveRemoteSourceUrls()</a> from the <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller">OnixPluginInstaller</a>.</li>
 </ul>
 </li>
 <li>You can now select a different plugin manager UI from the <code>runtime/config.json</code>. The default one is still the Onix Client one.
@@ -130,31 +130,31 @@ With this update, the PluginManager UI should update automatically, so you can j
 <br>
 <h3 id="new-features">New Features</h3>
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Items.Item.html">Item</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.Items.Item.html#OnixRuntime_Api_Items_Item_DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's jsons and lang files.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.Block.html">Block</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's jsons and lang files.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a> now has <a class="xref" href="../docs/OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_GetVisualItem_">GetVisualItem</a> method which returns some items that <a class="xref" href="../docs/OnixRuntime.Api.UI.ContainerScreen.html#OnixRuntime_Api_UI_ContainerScreen_GetItem_">GetItem</a> does not.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Items.ItemStack.html">ItemStack</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_">GetHoverText</a> method which returns the hover text of that item, before or after client modifications.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Items.EnchantType.html">EnchantType</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.Items.EnchantmentTypesExtensions.html#OnixRuntime_Api_Items_EnchantmentTypesExtensions_DisplayName_">DisplayName</a> extension which returns the translated name or name and level for that enchantment type.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Inputs.InputMappingLayout.html">InputMappingLayout</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetKeys_">SetKeys</a> method.
+<li><a href="xref:OnixRuntime.Api.Items.Item">Item</a> now has a <a href="xref:OnixRuntime.Api.Items.Item.DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's jsons and lang files.</li>
+<li><a href="xref:OnixRuntime.Api.World.Block">Block</a> now has a <a href="xref:OnixRuntime.Api.World.Block.DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's jsons and lang files.</li>
+<li><a href="xref:OnixRuntime.Api.UI.ContainerScreen">ContainerScreen</a> now has <a href="xref:OnixRuntime.Api.UI.ContainerScreen.GetVisualItem*">GetVisualItem</a> method which returns some items that <a href="xref:OnixRuntime.Api.UI.ContainerScreen.GetItem*">GetItem</a> does not.</li>
+<li><a href="xref:OnixRuntime.Api.Items.ItemStack">ItemStack</a> now has a <a href="xref:OnixRuntime.Api.Items.ItemStack.GetHoverText*">GetHoverText</a> method which returns the hover text of that item, before or after client modifications.</li>
+<li><a href="xref:OnixRuntime.Api.Items.EnchantType">EnchantType</a> now has a <a href="xref:OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName*">DisplayName</a> extension which returns the translated name or name and level for that enchantment type.</li>
+<li><a href="xref:OnixRuntime.Api.Inputs.InputMappingLayout">InputMappingLayout</a> now has a <a href="xref:OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys*">SetKeys</a> method.
 <ul>
 <li>The properties that wrap the keys also now all have setters. The default keys are still read-only.</li>
 </ul>
 </li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_Options">GameOptions</a>! No need to parse options.txt anymore guys please. Here are a few useful links.
+<li>Added <a href="xref:OnixRuntime.Api.OnixGame.Options">GameOptions</a>! No need to parse options.txt anymore guys please. Here are a few useful links.
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionInputBool.html">GameOptionInputBool</a> - Boolean game option for various <a class="xref" href="../docs/OnixRuntime.Api.Inputs.InputMode.html">InputMode</a>.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionFloat.html">GameOptionFloat</a> - Float game option.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionInputFloat.html">GameOptionInputFloat</a> - Float game option for various <a class="xref" href="../docs/OnixRuntime.Api.Inputs.InputMode.html">InputMode</a>.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionInt.html">GameOptionInt</a> - Integer game option.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionString.html">GameOptionString</a> - String/Textbox game option.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionEnum.html">GameOptionEnum</a> - Enum game option.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionStringList.html">GameOptionStringList</a> - List of string game option.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionVec3.html">GameOptionVec3</a> - Unused in the game's options.txt but I presume it may be used in things like the structure block internally?</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionInt64.html">GameOptionInt64</a> - Unused in the game's options.txt, not sure where or what they use it for.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Options.GameOptionUInt64.html">GameOptionUInt64</a> - Unused in the game's options.txt, not sure where or what they use it for.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionInputBool">GameOptionInputBool</a> - Boolean game option for various <a href="xref:OnixRuntime.Api.Inputs.InputMode">InputMode</a>.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionFloat">GameOptionFloat</a> - Float game option.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionInputFloat">GameOptionInputFloat</a> - Float game option for various <a href="xref:OnixRuntime.Api.Inputs.InputMode">InputMode</a>.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionInt">GameOptionInt</a> - Integer game option.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionString">GameOptionString</a> - String/Textbox game option.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionEnum">GameOptionEnum</a> - Enum game option.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionStringList">GameOptionStringList</a> - List of string game option.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionVec3">GameOptionVec3</a> - Unused in the game's options.txt but I presume it may be used in things like the structure block internally?</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionInt64">GameOptionInt64</a> - Unused in the game's options.txt, not sure where or what they use it for.</li>
+<li><a href="xref:OnixRuntime.Api.Options.GameOptionUInt64">GameOptionUInt64</a> - Unused in the game's options.txt, not sure where or what they use it for.</li>
 </ul>
 </li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.RuntimeWorld.html">RuntimeWorld</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.World.RuntimeWorld.html#OnixRuntime_Api_World_RuntimeWorld_IsHardcore">IsHardcore</a> which you can get AND set :D.
+<li><a href="xref:OnixRuntime.Api.World.RuntimeWorld">RuntimeWorld</a> now has a <a href="xref:OnixRuntime.Api.World.RuntimeWorld.IsHardcore">IsHardcore</a> which you can get AND set :D.
 <ul>
 <li>Setting it on the client will require trust and probably not do much other than change the client-side UI.</li>
 <li>Setting it on the server won't immediately do anything but after a relog it should apply.</li>
@@ -165,92 +165,92 @@ With this update, the PluginManager UI should update automatically, so you can j
 <li>This mostly helps in the debugger to see what you're working with at a glance.</li>
 </ul>
 </li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_FromString_">FromString</a> static method to parse a block position from a string.
+<li><a href="xref:OnixRuntime.Api.Maths.BlockPos">BlockPos</a> now has a <a href="xref:OnixRuntime.Api.Maths.BlockPos.FromString*">FromString</a> static method to parse a block position from a string.
 <ul>
 <li>I got annoyed when testing having to add , so I added this. <code>var pos = BlockPos.FromString(&quot;451 74 17&quot;);</code> is now a thing.</li>
 </ul>
 </li>
-<li>A few of <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a> now have an AfterSetting bool you can set to have them take effect after the setting.
+<li>A few of <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a> now have an AfterSetting bool you can set to have them take effect after the setting.
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.html">CategoryAttribute</a> has is.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.html">CategoryStopAttribute</a> has is.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.GapAttribute.html">GapAttribute</a> has is.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AirAttribute.html">AirAttribute</a> has is.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute">CategoryAttribute</a> has is.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute">CategoryStopAttribute</a> has is.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.GapAttribute">GapAttribute</a> has is.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AirAttribute">AirAttribute</a> has is.</li>
 </ul>
 </li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_IsBlockedEnabled">IsBlockedEnabled</a> to reflect recent changes in the blocking system.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunks.html">WorldChunks</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunks.html#OnixRuntime_Api_World_WorldChunks_LoadedChunks">LoadedChunks</a> property and an <a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunks.html#OnixRuntime_Api_World_WorldChunks_AllChunks">AllChunks</a> property. <a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunks.html#OnixRuntime_Api_World_WorldChunks_LoadedChunks">LoadedChunks</a> does the same as iterating over the <a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunks.html">WorldChunks</a> instance but is more explicit.</li>
-<li>NEW <a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEvents.html#OnixRuntime_Api_Events_OnixEvents_World">World</a> EVENTS!
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule">OnixModule</a> now has a <a href="xref:OnixRuntime.Api.OnixClient.OnixModule.IsBlockedEnabled">IsBlockedEnabled</a> to reflect recent changes in the blocking system.</li>
+<li><a href="xref:OnixRuntime.Api.World.WorldChunks">WorldChunks</a> now has a <a href="xref:OnixRuntime.Api.World.WorldChunks.LoadedChunks">LoadedChunks</a> property and an <a href="xref:OnixRuntime.Api.World.WorldChunks.AllChunks">AllChunks</a> property. <a href="xref:OnixRuntime.Api.World.WorldChunks.LoadedChunks">LoadedChunks</a> does the same as iterating over the <a href="xref:OnixRuntime.Api.World.WorldChunks">WorldChunks</a> instance but is more explicit.</li>
+<li>NEW <a href="xref:OnixRuntime.Api.Events.OnixEvents.World">World</a> EVENTS!
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventWorld.html#OnixRuntime_Api_Events_OnixEventWorld_BlockChanged">BlockChanged</a> for when a block changes, you don't need to enable it like in the legacy lua scripting.
+<li><a href="xref:OnixRuntime.Api.Events.OnixEventWorld.BlockChanged">BlockChanged</a> for when a block changes, you don't need to enable it like in the legacy lua scripting.
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate.html">Here is a link to the BlockChanged Delegate.</a> You can see what you receive in the event here.</li>
+<li><a href="xref:OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate">Here is a link to the BlockChanged Delegate.</a> You can see what you receive in the event here.</li>
 </ul>
 </li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventWorld.html#OnixRuntime_Api_Events_OnixEventWorld_AreaChanged">AreaChanged</a> for when an area of blocks changes.
+<li><a href="xref:OnixRuntime.Api.Events.OnixEventWorld.AreaChanged">AreaChanged</a> for when an area of blocks changes.
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate.html">Here is a link to the AreaChanged Delegate.</a> You can see what you receive in the event here.</li>
+<li><a href="xref:OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate">Here is a link to the AreaChanged Delegate.</a> You can see what you receive in the event here.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>You can now create your own <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html">WorldBlocks</a> instances!
+<li>You can now create your own <a href="xref:OnixRuntime.Api.World.WorldBlocks">WorldBlocks</a> instances!
 <ul>
 <li>You should create it on the thread it will be used on. This lets you use it on other threads. (Aka async <a href="">GetBlock</a>)</li>
 <li>I can't guarantee the absolute stability if not used exactly how the game wants you to.</li>
 <li>Here are the different 'constructors'.
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateForClient_">WorldBlocks.CreateForClient</a> (Recommended for most use cases)</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateForServer_">WorldBlocks.CreateForServer</a> (Recommended for server-side cases)</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateFromDimension_">WorldBlocks.CreateFromDimension</a> (Not recommended unless you know what you're doing, since you can't get those instances from another thread.)</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateFromOther_">WorldBlocks.CreateFromOther</a> (Not recommended unless you know what you're doing, since you can't get those instances from another thread.)</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateFromWorldChunks_">WorldBlocks.CreateFromWorldChunks</a> (Not recommended unless you know what you're doing, since you can't get those instances from another thread.)</li>
+<li><a href="xref:OnixRuntime.Api.World.WorldBlocks.CreateForClient*">WorldBlocks.CreateForClient</a> (Recommended for most use cases)</li>
+<li><a href="xref:OnixRuntime.Api.World.WorldBlocks.CreateForServer*">WorldBlocks.CreateForServer</a> (Recommended for server-side cases)</li>
+<li><a href="xref:OnixRuntime.Api.World.WorldBlocks.CreateFromDimension*">WorldBlocks.CreateFromDimension</a> (Not recommended unless you know what you're doing, since you can't get those instances from another thread.)</li>
+<li><a href="xref:OnixRuntime.Api.World.WorldBlocks.CreateFromOther*">WorldBlocks.CreateFromOther</a> (Not recommended unless you know what you're doing, since you can't get those instances from another thread.)</li>
+<li><a href="xref:OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks*">WorldBlocks.CreateFromWorldChunks</a> (Not recommended unless you know what you're doing, since you can't get those instances from another thread.)</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a> which is an integer version of an axis-aligned <a class="xref" href="../docs/OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a>.
+<li>Added <a href="xref:OnixRuntime.Api.Maths.BoundingBoxI">BoundingBoxI</a> which is an integer version of an axis-aligned <a href="xref:OnixRuntime.Api.Maths.BoundingBox">BoundingBox</a>.
 <ul>
-<li>It is inclusive by default, meaning the <a class="xref" href="../docs/OnixRuntime.Api.Maths.BoundingBoxI.html#OnixRuntime_Api_Maths_BoundingBoxI_Maximum">Maximum</a> values are included in the box.</li>
-<li>You can do a for loop over it to iterate all the <a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a> in the box.</li>
-<li>You also get a <a class="xref" href="../docs/OnixRuntime.Api.Maths.BoundingBoxI.html#OnixRuntime_Api_Maths_BoundingBoxI_ToFloat_">ToFloat()</a> which will produce a <a class="xref" href="../docs/OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a> from it.
+<li>It is inclusive by default, meaning the <a href="xref:OnixRuntime.Api.Maths.BoundingBoxI.Maximum">Maximum</a> values are included in the box.</li>
+<li>You can do a for loop over it to iterate all the <a href="xref:OnixRuntime.Api.Maths.BlockPos">BlockPos</a> in the box.</li>
+<li>You also get a <a href="xref:OnixRuntime.Api.Maths.BoundingBoxI.ToFloat*">ToFloat()</a> which will produce a <a href="xref:OnixRuntime.Api.Maths.BoundingBox">BoundingBox</a> from it.
 <ul>
 <li>That bounding box will be a visually correct outline of the integer box (e,g. when you render it).</li>
-<li>A <a class="xref" href="../docs/OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_ToInteger_">ToInteger()</a> was also added to <a class="xref" href="../docs/OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a> to get the integer version of it.</li>
+<li>A <a href="xref:OnixRuntime.Api.Maths.BoundingBox.ToInteger*">ToInteger()</a> was also added to <a href="xref:OnixRuntime.Api.Maths.BoundingBox">BoundingBox</a> to get the integer version of it.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>Onix.Client.</code> <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_Notify_">Notify</a>, <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_NotifyBanner_">NotifyBanner</a> and <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_NotifyTray_">NotifyTray</a> now all take an onClick parameter.</li>
-<li>The <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a> now has a few more functions to help with the multiple sources.
+<li><code>Onix.Client.</code> <a href="xref:OnixRuntime.Api.OnixClientThings.Notify*">Notify</a>, <a href="xref:OnixRuntime.Api.OnixClientThings.NotifyBanner*">NotifyBanner</a> and <a href="xref:OnixRuntime.Api.OnixClientThings.NotifyTray*">NotifyTray</a> now all take an onClick parameter.</li>
+<li>The <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller">OnixPluginInstaller</a> now has a few more functions to help with the multiple sources.
 <ul>
-<li>The static <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_OfficialRepositoryUrl">OnixPluginInstaller.OfficialRepositoryUrl</a> property lets you get the official repository url.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls">GetCuratedRemoteSourceUrls()</a> gets a list of urls for the sources. (Fixes formatting and makes sure the official one is always there and first in the list. It never has a trailing /.)</li>
-<li><a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls">SaveRemoteSourceUrls()</a> for when you change the <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_RemoteSourceUrls">RemoteSourceUrls</a> property.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginFromSources_">GetRemotePluginFromSources()</a> gets all versions of a plugin from all sources. Note that there is a bool to get only the compatible ones. The list it returns is sorted from best to worst.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginsFromSources_">GetRemotePluginsFromSources()</a> Gets all plugins from all sources regardless of compatibility or duplicates. The list is unsorted.</li>
+<li>The static <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl">OnixPluginInstaller.OfficialRepositoryUrl</a> property lets you get the official repository url.</li>
+<li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls">GetCuratedRemoteSourceUrls()</a> gets a list of urls for the sources. (Fixes formatting and makes sure the official one is always there and first in the list. It never has a trailing /.)</li>
+<li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls">SaveRemoteSourceUrls()</a> for when you change the <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls">RemoteSourceUrls</a> property.</li>
+<li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources*">GetRemotePluginFromSources()</a> gets all versions of a plugin from all sources. Note that there is a bool to get only the compatible ones. The list it returns is sorted from best to worst.</li>
+<li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources*">GetRemotePluginsFromSources()</a> Gets all plugins from all sources regardless of compatibility or duplicates. The list is unsorted.</li>
 </ul>
 </li>
 <li>More types now have an <code>IsClientSide</code> property to help with generic code.
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_IsClientSide">WorldBlocks.IsClientSide</a></li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.RuntimeWorld.html#OnixRuntime_Api_World_RuntimeWorld_IsClientSide">RuntimeWorld.IsClientSide</a></li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_IsClientSide">WorldChunk.IsClientSide</a></li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunks.html#OnixRuntime_Api_World_WorldChunks_IsClientSide">WorldChunks.IsClientSide</a>
+<li><a href="xref:OnixRuntime.Api.World.WorldBlocks.IsClientSide">WorldBlocks.IsClientSide</a></li>
+<li><a href="xref:OnixRuntime.Api.World.RuntimeWorld.IsClientSide">RuntimeWorld.IsClientSide</a></li>
+<li><a href="xref:OnixRuntime.Api.World.WorldChunk.IsClientSide">WorldChunk.IsClientSide</a></li>
+<li><a href="xref:OnixRuntime.Api.World.WorldChunks.IsClientSide">WorldChunks.IsClientSide</a>
 <br></li>
 </ul>
 </li>
 </ul>
 <h3 id="bug-fixes">Bug Fixes</h3>
 <ul>
-<li>Fixed <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingFloat.html">OnixSettingFloat</a>'s <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingFloat.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingFloat_Value">Value</a> property giving strange results.</li>
-<li>Fixed buttons not linking to the function in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a>.
+<li>Fixed <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingFloat">OnixSettingFloat</a>'s <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingFloat.Value">Value</a> property giving strange results.</li>
+<li>Fixed buttons not linking to the function in the <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a>.
 <ul>
 <li>On another note, I really need to write a guide for this since other than the few easy cases, it gets difficult if you don't know what you're doing.</li>
 </ul>
 </li>
 <li>Settings you add in your plugins using the default saving system now load and save correctly.</li>
-<li>Fixed <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a>'s <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_ConvertModuleToRedirectorClass_">ConvertModuleToRedirectorClass</a> method not producing valid code with + and &amp;.</li>
+<li>Fixed <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a>'s <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.ConvertModuleToRedirectorClass*">ConvertModuleToRedirectorClass</a> method not producing valid code with + and &amp;.</li>
 <li>Enum setting overlays will now correctly use the preferred UI font.</li>
 <li>The Modules API now uses shared memory address containers for all modules, fixing a lot of issues with the previous runtime.
 <ul>

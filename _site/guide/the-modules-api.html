@@ -89,7 +89,7 @@
 <h3 id="the-modules-api">The modules API</h3>
 <p>The modules API is similar to the one found in the Lua API, but it has some extra features.</p>
 <h3 id="the-basics">The Basics</h3>
-<p>Just like in the Lua API, you start by getting a list of all modules. This one is located in <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_Modules">Onix.Client.Modules</a>.</p>
+<p>Just like in the Lua API, you start by getting a list of all modules. This one is located in <a href="xref:OnixRuntime.Api.OnixClientThings.Modules">Onix.Client.Modules</a>.</p>
 <pre><code class="lang-cs">var mods = Onix.Client.Modules;
 </code></pre>
 <p>You can iterate over the modules with a simple <code>foreach</code> loop:</p>
@@ -102,7 +102,7 @@
     Console.WriteLine($&quot;Enabled Module: {mod.Name}&quot;);
 }
 </code></pre>
-<p>We've also added <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModulesList.html#OnixRuntime_Api_OnixClient_OnixModulesList_GetModule_System_String_">GetModule</a> which allows you to get a module by its save name:</p>
+<p>We've also added <a href="xref:OnixRuntime.Api.OnixClient.OnixModulesList.GetModule(System.String)">GetModule</a> which allows you to get a module by its save name:</p>
 <pre><code class="lang-cs">var globalSettings = Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;);
 if (globalSettings is not null) {
     Console.WriteLine($&quot;Global settings module found: {globalSettings.Name}&quot;);
@@ -114,13 +114,13 @@ if (globalSettings is not null) {
     Console.WriteLine($&quot;Global settings module found: {globalSettings.Name}&quot;);
 }
 </code></pre>
-<p>When you have an <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a>, things should vaguely look like the Lua API, but you may notice some things missing.
+<p>When you have an <a href="xref:OnixRuntime.Api.OnixClient.OnixModule">OnixModule</a>, things should vaguely look like the Lua API, but you may notice some things missing.
 That's because now the different types of modules are more separated, we have classes for each type of module, so you can use the specific properties and methods for that type in a safe way.</p>
 <h3 id="types-of-modules">Types of Modules</h3>
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a> The most basic type of module, it has the most common properties and methods that all modules have.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleVisual.html">OnixModuleVisual</a> The base type for mods that can be moved around the HUD Editor. It has things like position &amp; size.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModuleTextual.html">OnixModuleTextual</a> A visual module that only specifies text, you can get its text that way.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule">OnixModule</a> The most basic type of module, it has the most common properties and methods that all modules have.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleVisual">OnixModuleVisual</a> The base type for mods that can be moved around the HUD Editor. It has things like position &amp; size.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleTextual">OnixModuleTextual</a> A visual module that only specifies text, you can get its text that way.</li>
 </ul>
 <p>Example for OnixModuleVisual. This gets the <code>Reach Display</code> module as a visual module, checks if its center position is within the top left corner of the screen and either judges the user or compliments them based on that.</p>
 <pre><code class="lang-cs">if (mods.GetModule(&quot;module.reach_display.name&quot;) is OnixModuleVisual reachDisplayModule) {
@@ -146,33 +146,33 @@ Onix.Events.Player.Attack += (player, entity) =&gt; {
 </code></pre>
 <p>Of course, you can do all those in your foreach loop as well, if you decide to act on all modules.</p>
 <h3 id="settings">Settings</h3>
-<p>Just like before, you access a mod's settings with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Settings">OnixModule.Settings</a>.
+<p>Just like before, you access a mod's settings with <a href="xref:OnixRuntime.Api.OnixClient.OnixModule.Settings">OnixModule.Settings</a>.
 The setting has two GetSetting methods, one with a template and one without.
-<a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSettingsList.html#OnixRuntime_Api_OnixClient_OnixSettingsList_GetSetting_System_String_">The one without template</a> returns the base <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a>.
-<a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSettingsList.html#OnixRuntime_Api_OnixClient_OnixSettingsList_GetSetting__1_System_String_">The one with template</a> lets you specify a specific OnixSetting type for convenience.
+<a href="xref:OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting(System.String)">The one without template</a> returns the base <a href="xref:OnixRuntime.Api.OnixClient.OnixSetting">OnixSetting</a>.
+<a href="xref:OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting%60%601(System.String)">The one with template</a> lets you specify a specific OnixSetting type for convenience.
 <br>
 Now you may notice that unlike scripting, settings don't have a Value property, since C# is strongly typed, the settings all have their own types.</p>
 <h3 id="types-of-settings">Types of Settings</h3>
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a> The base type for all settings, it has the most common properties and methods that all settings have.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingBool.html">OnixSettingBool</a> A boolean setting, it has a Value property that returns a bool.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingAir.html">OnixSettingAir</a> An air setting, it does nothing, it has an Air property and will move down the settings below it in the settings list.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingButton.html">OnixSettingButton</a> A button in the UI, it has a Click method and a ButtonText method.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.html">OnixSettingCategory</a> A category setting, it has a IncludedCount property that returns the number of settings in the category, as well as a IncludesEverythingUntilNextCategory
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixSetting">OnixSetting</a> The base type for all settings, it has the most common properties and methods that all settings have.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingBool">OnixSettingBool</a> A boolean setting, it has a Value property that returns a bool.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingAir">OnixSettingAir</a> An air setting, it does nothing, it has an Air property and will move down the settings below it in the settings list.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingButton">OnixSettingButton</a> A button in the UI, it has a Click method and a ButtonText method.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory">OnixSettingCategory</a> A category setting, it has a IncludedCount property that returns the number of settings in the category, as well as a IncludesEverythingUntilNextCategory
 property.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.html">OnixSettingColor</a> A color setting, it has a Value property that returns a <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html">Color</a> object.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.html">OnixSettingCustom</a> A custom setting, doesn't really contain much since it's per setting type which are not known in advance.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingEnum.html">OnixSettingEnum</a> An enum setting, containing a value as integer or as a type for convenience and an Options property with the possible values.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingFloat.html">OnixSettingFloat</a> A float setting, it has a Value property that returns a float, as well as a min/max property.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingGamepadKeybind.html">OnixSettingGamepadKeybind</a> A collection of keys from a Gamepad that must all be pressed to trigger.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingInfo.html">OnixSettingInfo</a> Basically just some text in the settings list.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingInt.html">OnixSettingInt</a> An integer setting, it has a Value property that returns an int, as well as a min/max property.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingKeybind.html">OnixSettingKeybind</a> A single keybind setting, it has a value property of <a class="xref" href="../docs/OnixRuntime.Api.Inputs.InputKey.html">InputKey</a> which can be any button from the mouse, keyboard or
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor">OnixSettingColor</a> A color setting, it has a Value property that returns a <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType">Color</a> object.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom">OnixSettingCustom</a> A custom setting, doesn't really contain much since it's per setting type which are not known in advance.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingEnum">OnixSettingEnum</a> An enum setting, containing a value as integer or as a type for convenience and an Options property with the possible values.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingFloat">OnixSettingFloat</a> A float setting, it has a Value property that returns a float, as well as a min/max property.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingGamepadKeybind">OnixSettingGamepadKeybind</a> A collection of keys from a Gamepad that must all be pressed to trigger.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingInfo">OnixSettingInfo</a> Basically just some text in the settings list.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingInt">OnixSettingInt</a> An integer setting, it has a Value property that returns an int, as well as a min/max property.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingKeybind">OnixSettingKeybind</a> A single keybind setting, it has a value property of <a href="xref:OnixRuntime.Api.Inputs.InputKey">InputKey</a> which can be any button from the mouse, keyboard or
 gamepad.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingLocalizedInfo.html">OnixSettingLocalizedInfo</a> Basically just some text in the settings list, this is more important from the client where everything can be localized but for you it's the
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingLocalizedInfo">OnixSettingLocalizedInfo</a> Basically just some text in the settings list, this is more important from the client where everything can be localized but for you it's the
 same.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingModuleHeader.html">OnixSettingModuleHeader</a> A setting used to display a module's name, enable &amp; favorite button at the top of the settings list.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingTextbox.html">OnixSettingTextbox</a> A <a class="xref" href="../docs/OnixRuntime.Api.Inputs.OnixTextbox.html">Textbox</a> to let the user enter text, you can also provide validity feedback to it, highlighting it red or green.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingModuleHeader">OnixSettingModuleHeader</a> A setting used to display a module's name, enable &amp; favorite button at the top of the settings list.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingTextbox">OnixSettingTextbox</a> A <a href="xref:OnixRuntime.Api.Inputs.OnixTextbox">Textbox</a> to let the user enter text, you can also provide validity feedback to it, highlighting it red or green.</li>
 </ul>
 <p>This example shows getting <code>Global Settings</code>, then getting the <code>Use New Renderer</code> setting from it and judging the user whether it's enabled or not.</p>
 <pre><code class="lang-cs">if (Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;) is {} globalSettings) {
@@ -214,7 +214,7 @@ The following example shows how to print all settings and their types for a modu
 <p>You can now create any setting types, passing null for the parent module.
 This isn't too useful on its own but it allows you to insert it into other modules.<br>
 That's also a great way to render a setting without having to implement everything yourself.
-You would use <a class="xref" href="../docs/OnixRuntime.Api.Rendering.RendererDirect2D.html#OnixRuntime_Api_Rendering_RendererDirect2D_RenderSetting_">RendererDirect2D.RenderSetting</a> or <a class="xref" href="../docs/OnixRuntime.Api.Rendering.RendererDirect2D.html#OnixRuntime_Api_Rendering_RendererDirect2D_RenderSubSetting_">RendererDirect2D.RenderSubSetting</a> if inside a custom
+You would use <a href="xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSetting*">RendererDirect2D.RenderSetting</a> or <a href="xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSubSetting*">RendererDirect2D.RenderSubSetting</a> if inside a custom
 setting.<br>
 Please note that your plugin is still the real owner of the setting and that's even when you add it to a module, if you keep no references to it, it will get garbage collected and removed.</p>
 <pre><code class="lang-cs">// You would store that in your class or a class, a List, whatever you want really, you wouldn't let it just die unless you didn't need it after that function.
@@ -222,9 +222,9 @@ var myNewBool = new OnixSettingBool(null, &quot;My Real Bool setting!&quot;, &qu
 </code></pre>
 <h3 id="setting-change-callbacks">Setting Change Callbacks</h3>
 <p>You can now be notified whenever the value of your setting changes, this is useful when you don't poll the value all the time.<br>
-<a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate.html">The callback documentation can be found here.</a><br>
+<a href="xref:OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate">The callback documentation can be found here.</a><br>
 It gives you the current parent Module, the Setting that has changed containing its new value and a bool defining if the change is from loading the saved configuration or the user changing it.<br>
-It's generally the last value of the constructor of any setting and for <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingButton.html">OnixSettingButton</a> it gets called when the user clicks the button.
+It's generally the last value of the constructor of any setting and for <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingButton">OnixSettingButton</a> it gets called when the user clicks the button.
 You have to assume this can and will be called from any thread, so you should keep it thread-safe in there.
 For default settings, setting the value will trigger call it. If you need to call it with an isInit value of true, most of them have a ValueInit property.
 When making a UI you should always use Value so the new value is saved.
@@ -240,7 +240,7 @@ I then print the new value of the setting to the console whenever it changes.</p
     });
 </code></pre>
 <p>For custom settings, you are responsible for calling
-it. <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingCustom_CallValueChangedCallback_">We provide a function called CallValueChangedCallbackfor you to do that in the OnixCustomSetting class.</a><br>
+it. <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.CallValueChangedCallback*">We provide a function called CallValueChangedCallbackfor you to do that in the OnixCustomSetting class.</a><br>
 <a href="creating-custom-setting-types.html">More on that in the custom settings guide.</a></p>
 <hr>
 <h3 id="save-names">Save Names</h3>
@@ -328,8 +328,8 @@ This is useful when you want to extend a module with your own settings, for exam
 (You should <em>probably</em> not do that specifically unless you're sure it makes sense to have it there as it won't necessarily be obvious for the user.)<br>
 There are two ways you can insert a setting.</p>
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_">With the index.</a></li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_">After another setting.</a></li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*">With the index.</a></li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*">After another setting.</a></li>
 </ul>
 <p>With the index, you insert it wherever you want, make sure to set the origin where you want it.<br>
 With a setting, you place it at an offset from that setting, wherever it may be.</p>
@@ -345,7 +345,7 @@ With a setting, you place it at an offset from that setting, wherever it may be.
 <hr>
 <h2 id="thats-great-but-how-do-i-save">That's Great! But How do I Save?</h2>
 <p>When you create additional modules or settings that aren't part of a module you made that gets saved, they will not be saved automatically.
-If you want your module to be saved, you need to call <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginSaveManager.html#OnixRuntime_Plugin_OnixPluginSaveManager_TrackModule_">SaveManager.TrackModule</a> with your module.<br>
+If you want your module to be saved, you need to call <a href="xref:OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule*">SaveManager.TrackModule</a> with your module.<br>
 This will also load and save any settings you have in it at this time.<br></p>
 <pre><code class="lang-cs">HudElement = new OnixModuleVisual($&quot;{CurrentPluginManifest.Name}'s Hud Element&quot;, &quot;hud_element&quot;, 
     Vec2.Zero, OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 20),

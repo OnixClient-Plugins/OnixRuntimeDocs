@@ -5,6 +5,8 @@ items:
   id: EnchantmentTypesExtensions
   parent: OnixRuntime.Api.Items
   children:
+  - OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType)
+  - OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType,System.Int32)
   - OnixRuntime.Api.Items.EnchantmentTypesExtensions.ToNameIdentifier(OnixRuntime.Api.Items.EnchantType)
   - OnixRuntime.Api.Items.EnchantmentTypesExtensions.ToNameTranslationKey(OnixRuntime.Api.Items.EnchantType)
   langs:
@@ -17,11 +19,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Items/EnchantType.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: EnchantmentTypesExtensions
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/EnchantType.cs
-    startLine: 51
+    path: ../OnixRuntime/OnixRuntime/Api/Items/EnchantType.cs
+    startLine: 53
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Items
@@ -55,11 +57,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Items/EnchantType.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToNameIdentifier
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/EnchantType.cs
-    startLine: 55
+    path: ../OnixRuntime/OnixRuntime/Api/Items/EnchantType.cs
+    startLine: 57
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Items
@@ -89,11 +91,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Items/EnchantType.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToNameTranslationKey
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Items/EnchantType.cs
-    startLine: 105
+    path: ../OnixRuntime/OnixRuntime/Api/Items/EnchantType.cs
+    startLine: 107
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Items
@@ -108,6 +110,82 @@ items:
       type: System.String
     content.vb: Public Shared Function ToNameTranslationKey(ench As EnchantType) As String
   overload: OnixRuntime.Api.Items.EnchantmentTypesExtensions.ToNameTranslationKey*
+- uid: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType)
+  commentId: M:OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType)
+  id: DisplayName(OnixRuntime.Api.Items.EnchantType)
+  isExtensionMethod: true
+  parent: OnixRuntime.Api.Items.EnchantmentTypesExtensions
+  langs:
+  - csharp
+  - vb
+  name: DisplayName(EnchantType)
+  nameWithType: EnchantmentTypesExtensions.DisplayName(EnchantType)
+  fullName: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/EnchantType.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: DisplayName
+    path: ../OnixRuntime/OnixRuntime/Api/Items/EnchantType.cs
+    startLine: 157
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Gets the display name for the specified enchantment type. e.g. "Protection" or "Frost Walker".
+  example: []
+  syntax:
+    content: public static string DisplayName(this EnchantType ench)
+    parameters:
+    - id: ench
+      type: OnixRuntime.Api.Items.EnchantType
+    return:
+      type: System.String
+    content.vb: Public Shared Function DisplayName(ench As EnchantType) As String
+  overload: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName*
+- uid: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType,System.Int32)
+  commentId: M:OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType,System.Int32)
+  id: DisplayName(OnixRuntime.Api.Items.EnchantType,System.Int32)
+  isExtensionMethod: true
+  parent: OnixRuntime.Api.Items.EnchantmentTypesExtensions
+  langs:
+  - csharp
+  - vb
+  name: DisplayName(EnchantType, int)
+  nameWithType: EnchantmentTypesExtensions.DisplayName(EnchantType, int)
+  fullName: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Items/EnchantType.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: DisplayName
+    path: ../OnixRuntime/OnixRuntime/Api/Items/EnchantType.cs
+    startLine: 166
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Items
+  summary: Gets the display name for the specified enchantment type with a level. e.g. "Protection IV" or "Frost Walker II".
+  example: []
+  syntax:
+    content: public static string DisplayName(this EnchantType ench, int level)
+    parameters:
+    - id: ench
+      type: OnixRuntime.Api.Items.EnchantType
+      description: The enchant type.
+    - id: level
+      type: System.Int32
+      description: The level of the enchantment.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function DisplayName(ench As EnchantType, level As Integer) As String
+  overload: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName*
+  nameWithType.vb: EnchantmentTypesExtensions.DisplayName(EnchantType, Integer)
+  fullName.vb: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName(OnixRuntime.Api.Items.EnchantType, Integer)
+  name.vb: DisplayName(EnchantType, Integer)
 references:
 - uid: OnixRuntime.Api.Items
   commentId: N:OnixRuntime.Api.Items
@@ -406,3 +484,20 @@ references:
   name: ToNameTranslationKey
   nameWithType: EnchantmentTypesExtensions.ToNameTranslationKey
   fullName: OnixRuntime.Api.Items.EnchantmentTypesExtensions.ToNameTranslationKey
+- uid: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName*
+  commentId: Overload:OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName
+  href: OnixRuntime.Api.Items.EnchantmentTypesExtensions.html#OnixRuntime_Api_Items_EnchantmentTypesExtensions_DisplayName_OnixRuntime_Api_Items_EnchantType_
+  name: DisplayName
+  nameWithType: EnchantmentTypesExtensions.DisplayName
+  fullName: OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

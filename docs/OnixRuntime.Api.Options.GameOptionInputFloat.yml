@@ -1,0 +1,841 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat
+  commentId: T:OnixRuntime.Api.Options.GameOptionInputFloat
+  id: GameOptionInputFloat
+  parent: OnixRuntime.Api.Options
+  children:
+  - OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue
+  - OnixRuntime.Api.Options.GameOptionInputFloat.Max
+  - OnixRuntime.Api.Options.GameOptionInputFloat.Min
+  - OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  - OnixRuntime.Api.Options.GameOptionInputFloat.SetValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  - OnixRuntime.Api.Options.GameOptionInputFloat.Value
+  langs:
+  - csharp
+  - vb
+  name: GameOptionInputFloat
+  nameWithType: GameOptionInputFloat
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptionFloat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GameOptionInputFloat
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptionFloat.cs
+    startLine: 44
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Represents a float game option that can be adjusted for different input modes.
+  example: []
+  syntax:
+    content: 'public class GameOptionInputFloat : GameOption'
+    content.vb: Public Class GameOptionInputFloat Inherits GameOption
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  - OnixRuntime.Api.Options.GameOption
+  inheritedMembers:
+  - OnixRuntime.Api.Options.GameOption.SaveName
+  - OnixRuntime.Api.Options.GameOption.TelemetryPropertyName
+  - OnixRuntime.Api.Options.GameOption.DisplayNameTranslationKey
+  - OnixRuntime.Api.Options.GameOption.DisplayName
+  - OnixRuntime.Api.Options.GameOption.Type
+  - OnixRuntime.Api.Options.GameOption.OwnerType
+  - OnixRuntime.Api.Options.GameOption.Id
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.Value
+  commentId: P:OnixRuntime.Api.Options.GameOptionInputFloat.Value
+  id: Value
+  parent: OnixRuntime.Api.Options.GameOptionInputFloat
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: GameOptionInputFloat.Value
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.Value
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptionFloat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Value
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptionFloat.cs
+    startLine: 49
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: The current value of this option for each input mode.
+  example: []
+  syntax:
+    content: public ImmutableDictionary<InputMode, float> Value { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Immutable.ImmutableDictionary{OnixRuntime.Api.Inputs.InputMode,System.Single}
+    content.vb: Public Property Value As ImmutableDictionary(Of InputMode, Single)
+  overload: OnixRuntime.Api.Options.GameOptionInputFloat.Value*
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue
+  commentId: P:OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue
+  id: DefaultValue
+  parent: OnixRuntime.Api.Options.GameOptionInputFloat
+  langs:
+  - csharp
+  - vb
+  name: DefaultValue
+  nameWithType: GameOptionInputFloat.DefaultValue
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptionFloat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: DefaultValue
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptionFloat.cs
+    startLine: 60
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: The default value of this option for each input mode.
+  example: []
+  syntax:
+    content: public ImmutableDictionary<InputMode, float> DefaultValue { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Immutable.ImmutableDictionary{OnixRuntime.Api.Inputs.InputMode,System.Single}
+    content.vb: Public Property DefaultValue As ImmutableDictionary(Of InputMode, Single)
+  overload: OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue*
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.Min
+  commentId: P:OnixRuntime.Api.Options.GameOptionInputFloat.Min
+  id: Min
+  parent: OnixRuntime.Api.Options.GameOptionInputFloat
+  langs:
+  - csharp
+  - vb
+  name: Min
+  nameWithType: GameOptionInputFloat.Min
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.Min
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptionFloat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Min
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptionFloat.cs
+    startLine: 71
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: The minimum value this float can be.
+  example: []
+  syntax:
+    content: public float Min { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Min As Single
+  overload: OnixRuntime.Api.Options.GameOptionInputFloat.Min*
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.Max
+  commentId: P:OnixRuntime.Api.Options.GameOptionInputFloat.Max
+  id: Max
+  parent: OnixRuntime.Api.Options.GameOptionInputFloat
+  langs:
+  - csharp
+  - vb
+  name: Max
+  nameWithType: GameOptionInputFloat.Max
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.Max
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptionFloat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Max
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptionFloat.cs
+    startLine: 78
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: The maximum value this float can be,
+  example: []
+  syntax:
+    content: public float Max { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Max As Single
+  overload: OnixRuntime.Api.Options.GameOptionInputFloat.Max*
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.SetValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  commentId: M:OnixRuntime.Api.Options.GameOptionInputFloat.SetValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  id: SetValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  parent: OnixRuntime.Api.Options.GameOptionInputFloat
+  langs:
+  - csharp
+  - vb
+  name: SetValue(InputMode, float)
+  nameWithType: GameOptionInputFloat.SetValue(InputMode, float)
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.SetValue(OnixRuntime.Api.Inputs.InputMode, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptionFloat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetValue
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptionFloat.cs
+    startLine: 88
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Sets the value for a specific input mode.
+  example: []
+  syntax:
+    content: public void SetValue(InputMode mode, float value)
+    parameters:
+    - id: mode
+      type: OnixRuntime.Api.Inputs.InputMode
+      description: The input mode for which the value needs to be set.
+    - id: value
+      type: System.Single
+      description: The new value for that input mode.
+    content.vb: Public Sub SetValue(mode As InputMode, value As Single)
+  overload: OnixRuntime.Api.Options.GameOptionInputFloat.SetValue*
+  nameWithType.vb: GameOptionInputFloat.SetValue(InputMode, Single)
+  fullName.vb: OnixRuntime.Api.Options.GameOptionInputFloat.SetValue(OnixRuntime.Api.Inputs.InputMode, Single)
+  name.vb: SetValue(InputMode, Single)
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  commentId: M:OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  id: SetDefaultValue(OnixRuntime.Api.Inputs.InputMode,System.Single)
+  parent: OnixRuntime.Api.Options.GameOptionInputFloat
+  langs:
+  - csharp
+  - vb
+  name: SetDefaultValue(InputMode, float)
+  nameWithType: GameOptionInputFloat.SetDefaultValue(InputMode, float)
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue(OnixRuntime.Api.Inputs.InputMode, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptionFloat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetDefaultValue
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptionFloat.cs
+    startLine: 94
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Sets the default value for a specific input mode.
+  example: []
+  syntax:
+    content: public void SetDefaultValue(InputMode mode, float value)
+    parameters:
+    - id: mode
+      type: OnixRuntime.Api.Inputs.InputMode
+      description: The input mode for which the default value needs to be set.
+    - id: value
+      type: System.Single
+      description: The new default value for that input mode.
+    content.vb: Public Sub SetDefaultValue(mode As InputMode, value As Single)
+  overload: OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue*
+  nameWithType.vb: GameOptionInputFloat.SetDefaultValue(InputMode, Single)
+  fullName.vb: OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue(OnixRuntime.Api.Inputs.InputMode, Single)
+  name.vb: SetDefaultValue(InputMode, Single)
+references:
+- uid: OnixRuntime.Api.Options
+  commentId: N:OnixRuntime.Api.Options
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Options
+  nameWithType: OnixRuntime.Api.Options
+  fullName: OnixRuntime.Api.Options
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Options
+    name: Options
+    href: OnixRuntime.Api.Options.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Options
+    name: Options
+    href: OnixRuntime.Api.Options.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: OnixRuntime.Api.Options.GameOption
+  commentId: T:OnixRuntime.Api.Options.GameOption
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.GameOption.html
+  name: GameOption
+  nameWithType: GameOption
+  fullName: OnixRuntime.Api.Options.GameOption
+- uid: OnixRuntime.Api.Options.GameOption.SaveName
+  commentId: P:OnixRuntime.Api.Options.GameOption.SaveName
+  parent: OnixRuntime.Api.Options.GameOption
+  href: OnixRuntime.Api.Options.GameOption.html#OnixRuntime_Api_Options_GameOption_SaveName
+  name: SaveName
+  nameWithType: GameOption.SaveName
+  fullName: OnixRuntime.Api.Options.GameOption.SaveName
+- uid: OnixRuntime.Api.Options.GameOption.TelemetryPropertyName
+  commentId: P:OnixRuntime.Api.Options.GameOption.TelemetryPropertyName
+  parent: OnixRuntime.Api.Options.GameOption
+  href: OnixRuntime.Api.Options.GameOption.html#OnixRuntime_Api_Options_GameOption_TelemetryPropertyName
+  name: TelemetryPropertyName
+  nameWithType: GameOption.TelemetryPropertyName
+  fullName: OnixRuntime.Api.Options.GameOption.TelemetryPropertyName
+- uid: OnixRuntime.Api.Options.GameOption.DisplayNameTranslationKey
+  commentId: P:OnixRuntime.Api.Options.GameOption.DisplayNameTranslationKey
+  parent: OnixRuntime.Api.Options.GameOption
+  href: OnixRuntime.Api.Options.GameOption.html#OnixRuntime_Api_Options_GameOption_DisplayNameTranslationKey
+  name: DisplayNameTranslationKey
+  nameWithType: GameOption.DisplayNameTranslationKey
+  fullName: OnixRuntime.Api.Options.GameOption.DisplayNameTranslationKey
+- uid: OnixRuntime.Api.Options.GameOption.DisplayName
+  commentId: P:OnixRuntime.Api.Options.GameOption.DisplayName
+  parent: OnixRuntime.Api.Options.GameOption
+  href: OnixRuntime.Api.Options.GameOption.html#OnixRuntime_Api_Options_GameOption_DisplayName
+  name: DisplayName
+  nameWithType: GameOption.DisplayName
+  fullName: OnixRuntime.Api.Options.GameOption.DisplayName
+- uid: OnixRuntime.Api.Options.GameOption.Type
+  commentId: P:OnixRuntime.Api.Options.GameOption.Type
+  parent: OnixRuntime.Api.Options.GameOption
+  href: OnixRuntime.Api.Options.GameOption.html#OnixRuntime_Api_Options_GameOption_Type
+  name: Type
+  nameWithType: GameOption.Type
+  fullName: OnixRuntime.Api.Options.GameOption.Type
+- uid: OnixRuntime.Api.Options.GameOption.OwnerType
+  commentId: P:OnixRuntime.Api.Options.GameOption.OwnerType
+  parent: OnixRuntime.Api.Options.GameOption
+  href: OnixRuntime.Api.Options.GameOption.html#OnixRuntime_Api_Options_GameOption_OwnerType
+  name: OwnerType
+  nameWithType: GameOption.OwnerType
+  fullName: OnixRuntime.Api.Options.GameOption.OwnerType
+- uid: OnixRuntime.Api.Options.GameOption.Id
+  commentId: P:OnixRuntime.Api.Options.GameOption.Id
+  parent: OnixRuntime.Api.Options.GameOption
+  href: OnixRuntime.Api.Options.GameOption.html#OnixRuntime_Api_Options_GameOption_Id
+  name: Id
+  nameWithType: GameOption.Id
+  fullName: OnixRuntime.Api.Options.GameOption.Id
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.Value*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptionInputFloat.Value
+  href: OnixRuntime.Api.Options.GameOptionInputFloat.html#OnixRuntime_Api_Options_GameOptionInputFloat_Value
+  name: Value
+  nameWithType: GameOptionInputFloat.Value
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.Value
+- uid: System.Collections.Immutable.ImmutableDictionary{OnixRuntime.Api.Inputs.InputMode,System.Single}
+  commentId: T:System.Collections.Immutable.ImmutableDictionary{OnixRuntime.Api.Inputs.InputMode,System.Single}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  name: ImmutableDictionary<InputMode, float>
+  nameWithType: ImmutableDictionary<InputMode, float>
+  fullName: System.Collections.Immutable.ImmutableDictionary<OnixRuntime.Api.Inputs.InputMode, float>
+  nameWithType.vb: ImmutableDictionary(Of InputMode, Single)
+  fullName.vb: System.Collections.Immutable.ImmutableDictionary(Of OnixRuntime.Api.Inputs.InputMode, Single)
+  name.vb: ImmutableDictionary(Of InputMode, Single)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableDictionary`2
+    name: ImmutableDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  - name: <
+  - uid: OnixRuntime.Api.Inputs.InputMode
+    name: InputMode
+    href: OnixRuntime.Api.Inputs.InputMode.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableDictionary`2
+    name: ImmutableDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Inputs.InputMode
+    name: InputMode
+    href: OnixRuntime.Api.Inputs.InputMode.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Collections.Immutable.ImmutableDictionary`2
+  commentId: T:System.Collections.Immutable.ImmutableDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  name: ImmutableDictionary<TKey, TValue>
+  nameWithType: ImmutableDictionary<TKey, TValue>
+  fullName: System.Collections.Immutable.ImmutableDictionary<TKey, TValue>
+  nameWithType.vb: ImmutableDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Immutable.ImmutableDictionary(Of TKey, TValue)
+  name.vb: ImmutableDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableDictionary`2
+    name: ImmutableDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableDictionary`2
+    name: ImmutableDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue
+  href: OnixRuntime.Api.Options.GameOptionInputFloat.html#OnixRuntime_Api_Options_GameOptionInputFloat_DefaultValue
+  name: DefaultValue
+  nameWithType: GameOptionInputFloat.DefaultValue
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.DefaultValue
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.Min*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptionInputFloat.Min
+  href: OnixRuntime.Api.Options.GameOptionInputFloat.html#OnixRuntime_Api_Options_GameOptionInputFloat_Min
+  name: Min
+  nameWithType: GameOptionInputFloat.Min
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.Min
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.Max*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptionInputFloat.Max
+  href: OnixRuntime.Api.Options.GameOptionInputFloat.html#OnixRuntime_Api_Options_GameOptionInputFloat_Max
+  name: Max
+  nameWithType: GameOptionInputFloat.Max
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.Max
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.SetValue*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptionInputFloat.SetValue
+  href: OnixRuntime.Api.Options.GameOptionInputFloat.html#OnixRuntime_Api_Options_GameOptionInputFloat_SetValue_OnixRuntime_Api_Inputs_InputMode_System_Single_
+  name: SetValue
+  nameWithType: GameOptionInputFloat.SetValue
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.SetValue
+- uid: OnixRuntime.Api.Inputs.InputMode
+  commentId: T:OnixRuntime.Api.Inputs.InputMode
+  parent: OnixRuntime.Api.Inputs
+  href: OnixRuntime.Api.Inputs.InputMode.html
+  name: InputMode
+  nameWithType: InputMode
+  fullName: OnixRuntime.Api.Inputs.InputMode
+- uid: OnixRuntime.Api.Inputs
+  commentId: N:OnixRuntime.Api.Inputs
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Inputs
+  nameWithType: OnixRuntime.Api.Inputs
+  fullName: OnixRuntime.Api.Inputs
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+- uid: OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue
+  href: OnixRuntime.Api.Options.GameOptionInputFloat.html#OnixRuntime_Api_Options_GameOptionInputFloat_SetDefaultValue_OnixRuntime_Api_Inputs_InputMode_System_Single_
+  name: SetDefaultValue
+  nameWithType: GameOptionInputFloat.SetDefaultValue
+  fullName: OnixRuntime.Api.Options.GameOptionInputFloat.SetDefaultValue

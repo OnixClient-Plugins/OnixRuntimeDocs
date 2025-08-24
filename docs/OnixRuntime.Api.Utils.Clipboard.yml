@@ -6,6 +6,8 @@ items:
   parent: OnixRuntime.Api.Utils
   children:
   - OnixRuntime.Api.Utils.Clipboard.GetText
+  - OnixRuntime.Api.Utils.Clipboard.InitializeOle
+  - OnixRuntime.Api.Utils.Clipboard.SetFile(System.String)
   - OnixRuntime.Api.Utils.Clipboard.SetText(System.String)
   langs:
   - csharp
@@ -17,11 +19,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/Clipboard.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clipboard
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/Clipboard.cs
-    startLine: 6
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/Clipboard.cs
+    startLine: 9
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -40,6 +42,34 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: OnixRuntime.Api.Utils.Clipboard.InitializeOle
+  commentId: M:OnixRuntime.Api.Utils.Clipboard.InitializeOle
+  id: InitializeOle
+  parent: OnixRuntime.Api.Utils.Clipboard
+  langs:
+  - csharp
+  - vb
+  name: InitializeOle()
+  nameWithType: Clipboard.InitializeOle()
+  fullName: OnixRuntime.Api.Utils.Clipboard.InitializeOle()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/Clipboard.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InitializeOle
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/Clipboard.cs
+    startLine: 69
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: Initializes OLE for the current thread. Call this before using clipboard functions if needed.
+  example: []
+  syntax:
+    content: public static void InitializeOle()
+    content.vb: Public Shared Sub InitializeOle()
+  overload: OnixRuntime.Api.Utils.Clipboard.InitializeOle*
 - uid: OnixRuntime.Api.Utils.Clipboard.SetText(System.String)
   commentId: M:OnixRuntime.Api.Utils.Clipboard.SetText(System.String)
   id: SetText(System.String)
@@ -54,11 +84,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/Clipboard.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetText
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/Clipboard.cs
-    startLine: 41
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/Clipboard.cs
+    startLine: 78
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -89,11 +119,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/Clipboard.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetText
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/Clipboard.cs
-    startLine: 56
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/Clipboard.cs
+    startLine: 94
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -106,6 +136,41 @@ items:
       description: The text currently stored on the clipboard, or an empty string if unavailable.
     content.vb: Public Shared Function GetText() As String
   overload: OnixRuntime.Api.Utils.Clipboard.GetText*
+- uid: OnixRuntime.Api.Utils.Clipboard.SetFile(System.String)
+  commentId: M:OnixRuntime.Api.Utils.Clipboard.SetFile(System.String)
+  id: SetFile(System.String)
+  parent: OnixRuntime.Api.Utils.Clipboard
+  langs:
+  - csharp
+  - vb
+  name: SetFile(string)
+  nameWithType: Clipboard.SetFile(string)
+  fullName: OnixRuntime.Api.Utils.Clipboard.SetFile(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/Clipboard.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetFile
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/Clipboard.cs
+    startLine: 116
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: Sets the specified file path to the system clipboard.
+  example: []
+  syntax:
+    content: public static void SetFile(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The file path to set on the clipboard.
+    content.vb: Public Shared Sub SetFile(path As String)
+  overload: OnixRuntime.Api.Utils.Clipboard.SetFile*
+  nameWithType.vb: Clipboard.SetFile(String)
+  fullName.vb: OnixRuntime.Api.Utils.Clipboard.SetFile(String)
+  name.vb: SetFile(String)
 references:
 - uid: OnixRuntime.Api.Utils
   commentId: N:OnixRuntime.Api.Utils
@@ -374,6 +439,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: OnixRuntime.Api.Utils.Clipboard.InitializeOle*
+  commentId: Overload:OnixRuntime.Api.Utils.Clipboard.InitializeOle
+  href: OnixRuntime.Api.Utils.Clipboard.html#OnixRuntime_Api_Utils_Clipboard_InitializeOle
+  name: InitializeOle
+  nameWithType: Clipboard.InitializeOle
+  fullName: OnixRuntime.Api.Utils.Clipboard.InitializeOle
 - uid: OnixRuntime.Api.Utils.Clipboard.SetText*
   commentId: Overload:OnixRuntime.Api.Utils.Clipboard.SetText
   href: OnixRuntime.Api.Utils.Clipboard.html#OnixRuntime_Api_Utils_Clipboard_SetText_System_String_
@@ -397,3 +468,9 @@ references:
   name: GetText
   nameWithType: Clipboard.GetText
   fullName: OnixRuntime.Api.Utils.Clipboard.GetText
+- uid: OnixRuntime.Api.Utils.Clipboard.SetFile*
+  commentId: Overload:OnixRuntime.Api.Utils.Clipboard.SetFile
+  href: OnixRuntime.Api.Utils.Clipboard.html#OnixRuntime_Api_Utils_Clipboard_SetFile_System_String_
+  name: SetFile
+  nameWithType: Clipboard.SetFile
+  fullName: OnixRuntime.Api.Utils.Clipboard.SetFile

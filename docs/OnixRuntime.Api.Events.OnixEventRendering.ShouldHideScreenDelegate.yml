@@ -15,21 +15,30 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShouldHideScreenDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 199
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 399
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This is only for game screens, returning true will prevent that screen from rendering.
+
+    Delegate used to determine whether a given game screen should be hidden.
+
+    Return true to prevent rendering of that screen.
+  example: []
   syntax:
     content: public delegate bool OnixEventRendering.ShouldHideScreenDelegate(string screenName)
     parameters:
     - id: screenName
       type: System.String
+      description: The name of the screen that just want to render itself.
     return:
       type: System.Boolean
+      description: True if the screen should be hidden, false otherwise.
     content.vb: Public Delegate Function OnixEventRendering.ShouldHideScreenDelegate(screenName As String) As Boolean
 references:
 - uid: OnixRuntime.Api.Events

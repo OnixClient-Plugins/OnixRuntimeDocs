@@ -5,11 +5,9 @@ items:
   id: Logger
   parent: OnixRuntime.Api
   children:
-  - OnixRuntime.Api.Logger.#ctor(System.String,OnixRuntime.Api.Logger.Level,OnixRuntime.Api.Logger.Level)
-  - OnixRuntime.Api.Logger.ChatLevel
+  - OnixRuntime.Api.Logger.#ctor(System.String)
   - OnixRuntime.Api.Logger.Debug(System.String)
   - OnixRuntime.Api.Logger.Error(System.String)
-  - OnixRuntime.Api.Logger.FileLevel
   - OnixRuntime.Api.Logger.Info(System.String)
   - OnixRuntime.Api.Logger.Log(OnixRuntime.Api.Logger.Level,System.String)
   - OnixRuntime.Api.Logger.Name
@@ -25,14 +23,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Logger
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 29
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 34
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
+  summary: Logs to a file or chat according to a log level.
+  example: []
   syntax:
     content: public class Logger
     content.vb: Public Class Logger
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Name
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 60
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 68
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -77,87 +77,25 @@ items:
       type: System.String
     content.vb: Public Property Name As String
   overload: OnixRuntime.Api.Logger.Name*
-- uid: OnixRuntime.Api.Logger.FileLevel
-  commentId: P:OnixRuntime.Api.Logger.FileLevel
-  id: FileLevel
+- uid: OnixRuntime.Api.Logger.#ctor(System.String)
+  commentId: M:OnixRuntime.Api.Logger.#ctor(System.String)
+  id: '#ctor(System.String)'
   parent: OnixRuntime.Api.Logger
   langs:
   - csharp
   - vb
-  name: FileLevel
-  nameWithType: Logger.FileLevel
-  fullName: OnixRuntime.Api.Logger.FileLevel
-  type: Property
-  source:
-    remote:
-      path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: FileLevel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 64
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api
-  summary: The minimum level required to log to chat.
-  example: []
-  syntax:
-    content: public Logger.Level FileLevel { get; set; }
-    parameters: []
-    return:
-      type: OnixRuntime.Api.Logger.Level
-    content.vb: Public Property FileLevel As Logger.Level
-  overload: OnixRuntime.Api.Logger.FileLevel*
-- uid: OnixRuntime.Api.Logger.ChatLevel
-  commentId: P:OnixRuntime.Api.Logger.ChatLevel
-  id: ChatLevel
-  parent: OnixRuntime.Api.Logger
-  langs:
-  - csharp
-  - vb
-  name: ChatLevel
-  nameWithType: Logger.ChatLevel
-  fullName: OnixRuntime.Api.Logger.ChatLevel
-  type: Property
-  source:
-    remote:
-      path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: ChatLevel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 68
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api
-  summary: The minimum level required to log to the log file.
-  example: []
-  syntax:
-    content: public Logger.Level ChatLevel { get; set; }
-    parameters: []
-    return:
-      type: OnixRuntime.Api.Logger.Level
-    content.vb: Public Property ChatLevel As Logger.Level
-  overload: OnixRuntime.Api.Logger.ChatLevel*
-- uid: OnixRuntime.Api.Logger.#ctor(System.String,OnixRuntime.Api.Logger.Level,OnixRuntime.Api.Logger.Level)
-  commentId: M:OnixRuntime.Api.Logger.#ctor(System.String,OnixRuntime.Api.Logger.Level,OnixRuntime.Api.Logger.Level)
-  id: '#ctor(System.String,OnixRuntime.Api.Logger.Level,OnixRuntime.Api.Logger.Level)'
-  parent: OnixRuntime.Api.Logger
-  langs:
-  - csharp
-  - vb
-  name: Logger(string, Level, Level)
-  nameWithType: Logger.Logger(string, Logger.Level, Logger.Level)
-  fullName: OnixRuntime.Api.Logger.Logger(string, OnixRuntime.Api.Logger.Level, OnixRuntime.Api.Logger.Level)
+  name: Logger(string)
+  nameWithType: Logger.Logger(string)
+  fullName: OnixRuntime.Api.Logger.Logger(string)
   type: Constructor
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 78
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 76
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -167,22 +105,16 @@ items:
     Put the name as your mod's name if possible.
   example: []
   syntax:
-    content: public Logger(string name, Logger.Level chatLevel = Level.Warning, Logger.Level fileLevel = Level.Debug)
+    content: public Logger(string name)
     parameters:
     - id: name
       type: System.String
       description: The name of the logger to know where the logs come from.
-    - id: chatLevel
-      type: OnixRuntime.Api.Logger.Level
-      description: The minimum level required to log to chat.
-    - id: fileLevel
-      type: OnixRuntime.Api.Logger.Level
-      description: The minimum level required to log to the log file.
-    content.vb: Public Sub New(name As String, chatLevel As Logger.Level = Level.Warning, fileLevel As Logger.Level = Level.Debug)
+    content.vb: Public Sub New(name As String)
   overload: OnixRuntime.Api.Logger.#ctor*
-  nameWithType.vb: Logger.New(String, Logger.Level, Logger.Level)
-  fullName.vb: OnixRuntime.Api.Logger.New(String, OnixRuntime.Api.Logger.Level, OnixRuntime.Api.Logger.Level)
-  name.vb: New(String, Level, Level)
+  nameWithType.vb: Logger.New(String)
+  fullName.vb: OnixRuntime.Api.Logger.New(String)
+  name.vb: New(String)
 - uid: OnixRuntime.Api.Logger.Log(OnixRuntime.Api.Logger.Level,System.String)
   commentId: M:OnixRuntime.Api.Logger.Log(OnixRuntime.Api.Logger.Level,System.String)
   id: Log(OnixRuntime.Api.Logger.Level,System.String)
@@ -197,11 +129,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Log
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 100
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 96
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -235,11 +167,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Trace
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 117
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 111
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -270,11 +202,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Debug
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 125
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 119
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -305,11 +237,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Info
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 133
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 127
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -340,11 +272,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Warning
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 141
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 135
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -375,11 +307,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Logger.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Error
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 149
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 143
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -673,12 +605,21 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: OnixRuntime.Api.Logger.FileLevel*
-  commentId: Overload:OnixRuntime.Api.Logger.FileLevel
-  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_FileLevel
-  name: FileLevel
-  nameWithType: Logger.FileLevel
-  fullName: OnixRuntime.Api.Logger.FileLevel
+- uid: OnixRuntime.Api.Logger.#ctor*
+  commentId: Overload:OnixRuntime.Api.Logger.#ctor
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger__ctor_System_String_
+  name: Logger
+  nameWithType: Logger.Logger
+  fullName: OnixRuntime.Api.Logger.Logger
+  nameWithType.vb: Logger.New
+  fullName.vb: OnixRuntime.Api.Logger.New
+  name.vb: New
+- uid: OnixRuntime.Api.Logger.Log*
+  commentId: Overload:OnixRuntime.Api.Logger.Log
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_Log_OnixRuntime_Api_Logger_Level_System_String_
+  name: Log
+  nameWithType: Logger.Log
+  fullName: OnixRuntime.Api.Logger.Log
 - uid: OnixRuntime.Api.Logger.Level
   commentId: T:OnixRuntime.Api.Logger.Level
   parent: OnixRuntime.Api
@@ -702,27 +643,6 @@ references:
   - uid: OnixRuntime.Api.Logger.Level
     name: Level
     href: OnixRuntime.Api.Logger.Level.html
-- uid: OnixRuntime.Api.Logger.ChatLevel*
-  commentId: Overload:OnixRuntime.Api.Logger.ChatLevel
-  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_ChatLevel
-  name: ChatLevel
-  nameWithType: Logger.ChatLevel
-  fullName: OnixRuntime.Api.Logger.ChatLevel
-- uid: OnixRuntime.Api.Logger.#ctor*
-  commentId: Overload:OnixRuntime.Api.Logger.#ctor
-  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger__ctor_System_String_OnixRuntime_Api_Logger_Level_OnixRuntime_Api_Logger_Level_
-  name: Logger
-  nameWithType: Logger.Logger
-  fullName: OnixRuntime.Api.Logger.Logger
-  nameWithType.vb: Logger.New
-  fullName.vb: OnixRuntime.Api.Logger.New
-  name.vb: New
-- uid: OnixRuntime.Api.Logger.Log*
-  commentId: Overload:OnixRuntime.Api.Logger.Log
-  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_Log_OnixRuntime_Api_Logger_Level_System_String_
-  name: Log
-  nameWithType: Logger.Log
-  fullName: OnixRuntime.Api.Logger.Log
 - uid: OnixRuntime.Api.Logger.Trace*
   commentId: Overload:OnixRuntime.Api.Logger.Trace
   href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_Trace_System_String_

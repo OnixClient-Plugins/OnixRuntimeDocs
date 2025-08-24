@@ -1,0 +1,814 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  id: SharedMemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  children:
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer@)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Finalize
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Equality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Inequality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  langs:
+  - csharp
+  - vb
+  name: SharedMemoryAddressContainer
+  nameWithType: SharedMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SharedMemoryAddressContainer
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 158
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Contains a shared memory address pointer for passing and owning shared memory with an unmanaged context.
+  example: []
+  syntax:
+    content: 'public class SharedMemoryAddressContainer : IDisposable'
+    content.vb: Public Class SharedMemoryAddressContainer Implements IDisposable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OnixRuntime.Api.OnixClient.OnixClientScreen
+  - OnixRuntime.Api.OnixClient.OnixModule
+  - OnixRuntime.Api.OnixClient.OnixSetting
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  id: SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: SetMemoryAddressValues(PointerContainer)
+  nameWithType: SharedMemoryAddressContainer.SetMemoryAddressValues(SharedMemoryAddressContainer.PointerContainer)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetMemoryAddressValues
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 248
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: >-
+    Replaces the current memory address values with the values from the provided pointer container.
+
+    This will not dispose the old one, if that's something you need to happen, call <xref href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose" data-throw-if-not-resolved="false"></xref> first.
+  example: []
+  syntax:
+    content: protected void SetMemoryAddressValues(SharedMemoryAddressContainer.PointerContainer ptr)
+    parameters:
+    - id: ptr
+      type: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+      description: ''
+    content.vb: Protected Sub SetMemoryAddressValues(ptr As SharedMemoryAddressContainer.PointerContainer)
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues*
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  id: '#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)'
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: SharedMemoryAddressContainer(PointerContainer)
+  nameWithType: SharedMemoryAddressContainer.SharedMemoryAddressContainer(SharedMemoryAddressContainer.PointerContainer)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SharedMemoryAddressContainer(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 255
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer" data-throw-if-not-resolved="false"></xref> class with a pointer.
+  example: []
+  syntax:
+    content: protected SharedMemoryAddressContainer(SharedMemoryAddressContainer.PointerContainer ptr)
+    parameters:
+    - id: ptr
+      type: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+      description: The pointer container to assign.
+    content.vb: Protected Sub New(ptr As SharedMemoryAddressContainer.PointerContainer)
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor*
+  nameWithType.vb: SharedMemoryAddressContainer.New(SharedMemoryAddressContainer.PointerContainer)
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.New(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  name.vb: New(PointerContainer)
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer@)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer@)
+  id: '#ctor(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer@)'
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: SharedMemoryAddressContainer(ref PointerContainer)
+  nameWithType: SharedMemoryAddressContainer.SharedMemoryAddressContainer(ref SharedMemoryAddressContainer.PointerContainer)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SharedMemoryAddressContainer(ref OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 262
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer" data-throw-if-not-resolved="false"></xref> class with a pointer.
+  example: []
+  syntax:
+    content: protected SharedMemoryAddressContainer(ref SharedMemoryAddressContainer.PointerContainer ptr)
+    parameters:
+    - id: ptr
+      type: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+      description: The pointer container to assign.
+    content.vb: Protected Sub New(ptr As SharedMemoryAddressContainer.PointerContainer)
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor*
+  nameWithType.vb: SharedMemoryAddressContainer.New(SharedMemoryAddressContainer.PointerContainer)
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.New(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  name.vb: New(PointerContainer)
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Finalize
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Finalize
+  id: Finalize
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: ~SharedMemoryAddressContainer()
+  nameWithType: SharedMemoryAddressContainer.~SharedMemoryAddressContainer()
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.~SharedMemoryAddressContainer()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Finalize
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 283
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Finalizer for the <xref href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: protected ~SharedMemoryAddressContainer()
+    content.vb: 'Protected '
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+  id: Dispose
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: SharedMemoryAddressContainer.Dispose()
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Dispose
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 290
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Equality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Equality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  id: op_Equality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: operator ==(SharedMemoryAddressContainer?, SharedMemoryAddressContainer?)
+  nameWithType: SharedMemoryAddressContainer.operator ==(SharedMemoryAddressContainer?, SharedMemoryAddressContainer?)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.operator ==(OnixRuntime.Api.Internal.SharedMemoryAddressContainer?, OnixRuntime.Api.Internal.SharedMemoryAddressContainer?)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Equality
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 300
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Compares two instances of the <xref href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer" data-throw-if-not-resolved="false"></xref> class for equality.
+  example: []
+  syntax:
+    content: public static bool operator ==(SharedMemoryAddressContainer? left, SharedMemoryAddressContainer? right)
+    parameters:
+    - id: left
+      type: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+      description: The left instance to compare.
+    - id: right
+      type: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+      description: The right instance to compare.
+    return:
+      type: System.Boolean
+      description: True if the instances are equal; otherwise, false.
+    content.vb: Public Shared Operator =(left As SharedMemoryAddressContainer, right As SharedMemoryAddressContainer) As Boolean
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Equality*
+  nameWithType.vb: SharedMemoryAddressContainer.=(SharedMemoryAddressContainer, SharedMemoryAddressContainer)
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.=(OnixRuntime.Api.Internal.SharedMemoryAddressContainer, OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  name.vb: =(SharedMemoryAddressContainer, SharedMemoryAddressContainer)
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Inequality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Inequality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  id: op_Inequality(OnixRuntime.Api.Internal.SharedMemoryAddressContainer,OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: operator !=(SharedMemoryAddressContainer?, SharedMemoryAddressContainer?)
+  nameWithType: SharedMemoryAddressContainer.operator !=(SharedMemoryAddressContainer?, SharedMemoryAddressContainer?)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.operator !=(OnixRuntime.Api.Internal.SharedMemoryAddressContainer?, OnixRuntime.Api.Internal.SharedMemoryAddressContainer?)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Inequality
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 311
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Compares two instances of the <xref href="OnixRuntime.Api.Internal.SharedMemoryAddressContainer" data-throw-if-not-resolved="false"></xref> class for inequality.
+  example: []
+  syntax:
+    content: public static bool operator !=(SharedMemoryAddressContainer? left, SharedMemoryAddressContainer? right)
+    parameters:
+    - id: left
+      type: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+      description: The left instance to compare.
+    - id: right
+      type: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+      description: The right instance to compare.
+    return:
+      type: System.Boolean
+      description: True if the instances are not equal; otherwise, false.
+    content.vb: Public Shared Operator <>(left As SharedMemoryAddressContainer, right As SharedMemoryAddressContainer) As Boolean
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Inequality*
+  nameWithType.vb: SharedMemoryAddressContainer.<>(SharedMemoryAddressContainer, SharedMemoryAddressContainer)
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.<>(OnixRuntime.Api.Internal.SharedMemoryAddressContainer, OnixRuntime.Api.Internal.SharedMemoryAddressContainer)
+  name.vb: <>(SharedMemoryAddressContainer, SharedMemoryAddressContainer)
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: SharedMemoryAddressContainer.Equals(object?)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Equals
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 315
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Determines whether the specified object is equal to the current object.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals*
+  nameWithType.vb: SharedMemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(Object)
+  name.vb: Equals(Object)
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  id: GetHashCode
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: SharedMemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetHashCode
+    path: ../OnixRuntime/OnixRuntime/Api/Internal/MemoryAddressContainer.cs
+    startLine: 324
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Internal
+  summary: Serves as the default hash function.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for the current object.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode*
+references:
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Dispose
+  name: Dispose()
+  nameWithType: SharedMemoryAddressContainer.Dispose()
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Dispose
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
+  name: SetMemoryAddressValues
+  nameWithType: SharedMemoryAddressContainer.SetMemoryAddressValues
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+  commentId: T:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html
+  name: SharedMemoryAddressContainer.PointerContainer
+  nameWithType: SharedMemoryAddressContainer.PointerContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+    name: SharedMemoryAddressContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+    name: PointerContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+    name: SharedMemoryAddressContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+    name: PointerContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer.html
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html
+  name: SharedMemoryAddressContainer
+  nameWithType: SharedMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.#ctor
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer__ctor_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
+  name: SharedMemoryAddressContainer
+  nameWithType: SharedMemoryAddressContainer.SharedMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SharedMemoryAddressContainer
+  nameWithType.vb: SharedMemoryAddressContainer.New
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.New
+  name.vb: New
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Finalize*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Finalize
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Finalize
+  name: ~SharedMemoryAddressContainer
+  nameWithType: SharedMemoryAddressContainer.~SharedMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.~SharedMemoryAddressContainer
+  spec.csharp:
+  - name: "~"
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Finalize*
+    name: SharedMemoryAddressContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Finalize
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Dispose
+  name: Dispose
+  nameWithType: SharedMemoryAddressContainer.Dispose
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Equality*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Equality
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_op_Equality_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_
+  name: operator ==
+  nameWithType: SharedMemoryAddressContainer.operator ==
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.operator ==
+  nameWithType.vb: SharedMemoryAddressContainer.=
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Equality*
+    name: ==
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_op_Equality_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Inequality*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Inequality
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_op_Inequality_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_
+  name: operator !=
+  nameWithType: SharedMemoryAddressContainer.operator !=
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.operator !=
+  nameWithType.vb: SharedMemoryAddressContainer.<>
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.op_Inequality*
+    name: '!='
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_op_Inequality_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_
+  name: Equals
+  nameWithType: SharedMemoryAddressContainer.Equals
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode*
+  commentId: Overload:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode
+  name: GetHashCode
+  nameWithType: SharedMemoryAddressContainer.GetHashCode
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

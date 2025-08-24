@@ -1,0 +1,1062 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Rendering.BlockGraphics
+  commentId: T:OnixRuntime.Api.Rendering.BlockGraphics
+  id: BlockGraphics
+  parent: OnixRuntime.Api.Rendering
+  children:
+  - OnixRuntime.Api.Rendering.BlockGraphics.AllowSame
+  - OnixRuntime.Api.Rendering.BlockGraphics.Block
+  - OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma
+  - OnixRuntime.Api.Rendering.BlockGraphics.Fancy
+  - OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  - OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations(System.UInt32,System.Int32)
+  - OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  - OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(System.UInt32,System.Int32)
+  - OnixRuntime.Api.Rendering.BlockGraphics.Shape
+  - OnixRuntime.Api.Rendering.BlockGraphics.TextureItems
+  - OnixRuntime.Api.Rendering.BlockGraphics.VisualShape
+  langs:
+  - csharp
+  - vb
+  name: BlockGraphics
+  nameWithType: BlockGraphics
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BlockGraphics
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Represents various information about a block's graphics.
+
+    Notably it's texture and shape.
+  example: []
+  syntax:
+    content: 'public class BlockGraphics : MemoryAddressContainer'
+    content.vb: Public Class BlockGraphics Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.Block
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.Block
+  id: Block
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: Block
+  nameWithType: BlockGraphics.Block
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.Block
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Block
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 211
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: The block this is for.
+  example: []
+  syntax:
+    content: public Block Block { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.Block
+    content.vb: Public ReadOnly Property Block As Block
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.Block*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.Shape
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.Shape
+  id: Shape
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: Shape
+  nameWithType: BlockGraphics.Shape
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.Shape
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Shape
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 215
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the shape of the block.
+  example: []
+  syntax:
+    content: public BlockGraphics.BlockShapes Shape { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+    content.vb: Public ReadOnly Property Shape As BlockGraphics.BlockShapes
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.Shape*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma
+  id: BrightnessGamma
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: BrightnessGamma
+  nameWithType: BlockGraphics.BrightnessGamma
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BrightnessGamma
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 220
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    No idea, it's here if you need it and know what it is.
+
+    If you do know please contribute the documentation comment.
+  example: []
+  syntax:
+    content: public float BrightnessGamma { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property BrightnessGamma As Single
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.Fancy
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.Fancy
+  id: Fancy
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: Fancy
+  nameWithType: BlockGraphics.Fancy
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.Fancy
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Fancy
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 224
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: If this is the fancy version of the block graphics.
+  example: []
+  syntax:
+    content: public bool Fancy { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Fancy As Boolean
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.Fancy*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.AllowSame
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.AllowSame
+  id: AllowSame
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: AllowSame
+  nameWithType: BlockGraphics.AllowSame
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.AllowSame
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AllowSame
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 228
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: If the same block can have multiple graphics (?)
+  example: []
+  syntax:
+    content: public bool AllowSame { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property AllowSame As Boolean
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.AllowSame*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.VisualShape
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.VisualShape
+  id: VisualShape
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: VisualShape
+  nameWithType: BlockGraphics.VisualShape
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.VisualShape
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: VisualShape
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 232
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: May be unused/unpopulated.
+  example: []
+  syntax:
+    content: public BoundingBox VisualShape { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public ReadOnly Property VisualShape As BoundingBox
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.VisualShape*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItems
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.TextureItems
+  id: TextureItems
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: TextureItems
+  nameWithType: BlockGraphics.TextureItems
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.TextureItems
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: TextureItems
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 237
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    The textures used by this block.
+
+    In most cases, you get 6 of those for each side of the block. <xref href="OnixRuntime.Api.World.BlockFace" data-throw-if-not-resolved="false"></xref> has the indexes for each side.
+  example: []
+  syntax:
+    content: public BlockGraphics.TextureItem[] TextureItems { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem[]
+    content.vb: Public ReadOnly Property TextureItems As BlockGraphics.TextureItem()
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.TextureItems*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(System.UInt32,System.Int32)
+  commentId: M:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(System.UInt32,System.Int32)
+  id: GetTextureDefaultVariations(System.UInt32,System.Int32)
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: GetTextureDefaultVariations(uint, int)
+  nameWithType: BlockGraphics.GetTextureDefaultVariations(uint, int)
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(uint, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetTextureDefaultVariations
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 246
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Retrieves the default texture variations for a specified block face and block variant.
+  example: []
+  syntax:
+    content: public TextureUVCoordinates[] GetTextureDefaultVariations(uint mappedBlockFace, int blockVariant)
+    parameters:
+    - id: mappedBlockFace
+      type: System.UInt32
+      description: Generally, the face of the block for which the texture is being retrieved, mapped as you need to rotate blocks yourself.
+    - id: blockVariant
+      type: System.Int32
+      description: The variant of the block, used to determine the specific texture to retrieve, like wood types. This may not always be just Data.
+    return:
+      type: OnixRuntime.Api.Rendering.TextureUVCoordinates[]
+      description: >-
+        An array of <xref href="OnixRuntime.Api.Rendering.TextureUVCoordinates" data-throw-if-not-resolved="false"></xref> representing the default texture variations for the specified
+            block face and variant.
+    content.vb: Public Function GetTextureDefaultVariations(mappedBlockFace As UInteger, blockVariant As Integer) As TextureUVCoordinates()
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations*
+  nameWithType.vb: BlockGraphics.GetTextureDefaultVariations(UInteger, Integer)
+  fullName.vb: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(UInteger, Integer)
+  name.vb: GetTextureDefaultVariations(UInteger, Integer)
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  commentId: M:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  id: GetTextureDefaultVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: GetTextureDefaultVariation(BlockPos, uint, int)
+  nameWithType: BlockGraphics.GetTextureDefaultVariation(BlockPos, uint, int)
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation(OnixRuntime.Api.Maths.BlockPos, uint, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetTextureDefaultVariation
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 255
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Retrieves the texture UV coordinates for a specific block face and variant at the given world position.
+  example: []
+  syntax:
+    content: public TextureUVCoordinates GetTextureDefaultVariation(BlockPos worldPosition, uint mappedBlockFace, int blockVariant)
+    parameters:
+    - id: worldPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The position of the block in the world.
+    - id: mappedBlockFace
+      type: System.UInt32
+      description: Generally, the face of the block for which the texture is being retrieved, mapped as you need to rotate blocks yourself.
+    - id: blockVariant
+      type: System.Int32
+      description: The variant of the block, used to determine the specific texture to retrieve, like wood types. This may not always be just Data.
+    return:
+      type: OnixRuntime.Api.Rendering.TextureUVCoordinates
+      description: >-
+        The <xref href="OnixRuntime.Api.Rendering.TextureUVCoordinates" data-throw-if-not-resolved="false"></xref> representing the UV coordinates of the texture for the specified
+            block face and variant.
+    content.vb: Public Function GetTextureDefaultVariation(worldPosition As BlockPos, mappedBlockFace As UInteger, blockVariant As Integer) As TextureUVCoordinates
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation*
+  nameWithType.vb: BlockGraphics.GetTextureDefaultVariation(BlockPos, UInteger, Integer)
+  fullName.vb: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation(OnixRuntime.Api.Maths.BlockPos, UInteger, Integer)
+  name.vb: GetTextureDefaultVariation(BlockPos, UInteger, Integer)
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations(System.UInt32,System.Int32)
+  commentId: M:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations(System.UInt32,System.Int32)
+  id: GetTextureCarriedVariations(System.UInt32,System.Int32)
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: GetTextureCarriedVariations(uint, int)
+  nameWithType: BlockGraphics.GetTextureCarriedVariations(uint, int)
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations(uint, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetTextureCarriedVariations
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 265
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Retrieves the default texture variations for a specified block face and block variant.
+
+    Carried is generally used in the UI, the carried grass texture is hardcoded green while the default one is grayscale.
+  example: []
+  syntax:
+    content: public TextureUVCoordinates[] GetTextureCarriedVariations(uint mappedBlockFace, int blockVariant)
+    parameters:
+    - id: mappedBlockFace
+      type: System.UInt32
+      description: Generally, the face of the block for which the texture is being retrieved, mapped as you need to rotate blocks yourself.
+    - id: blockVariant
+      type: System.Int32
+      description: The variant of the block, used to determine the specific texture to retrieve, like wood types. This may not always be just Data.
+    return:
+      type: OnixRuntime.Api.Rendering.TextureUVCoordinates[]
+      description: >-
+        An array of <xref href="OnixRuntime.Api.Rendering.TextureUVCoordinates" data-throw-if-not-resolved="false"></xref> representing the default texture variations for the specified
+            block face and variant.
+    content.vb: Public Function GetTextureCarriedVariations(mappedBlockFace As UInteger, blockVariant As Integer) As TextureUVCoordinates()
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations*
+  nameWithType.vb: BlockGraphics.GetTextureCarriedVariations(UInteger, Integer)
+  fullName.vb: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations(UInteger, Integer)
+  name.vb: GetTextureCarriedVariations(UInteger, Integer)
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  commentId: M:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  id: GetTextureCarriedVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: GetTextureCarriedVariation(BlockPos, uint, int)
+  nameWithType: BlockGraphics.GetTextureCarriedVariation(BlockPos, uint, int)
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation(OnixRuntime.Api.Maths.BlockPos, uint, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetTextureCarriedVariation
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 275
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Retrieves the texture UV coordinates for a specific block face and variant at the given world position.
+
+    Carried is generally used in the UI, the carried grass texture is hardcoded green while the default one is grayscale.
+  example: []
+  syntax:
+    content: public TextureUVCoordinates GetTextureCarriedVariation(BlockPos worldPosition, uint mappedBlockFace, int blockVariant)
+    parameters:
+    - id: worldPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The position of the block in the world.
+    - id: mappedBlockFace
+      type: System.UInt32
+      description: Generally, the face of the block for which the texture is being retrieved, mapped as you need to rotate blocks yourself.
+    - id: blockVariant
+      type: System.Int32
+      description: The variant of the block, used to determine the specific texture to retrieve, like wood types. This may not always be just Data.
+    return:
+      type: OnixRuntime.Api.Rendering.TextureUVCoordinates
+      description: >-
+        The <xref href="OnixRuntime.Api.Rendering.TextureUVCoordinates" data-throw-if-not-resolved="false"></xref> representing the UV coordinates of the texture for the specified
+            block face and variant.
+    content.vb: Public Function GetTextureCarriedVariation(worldPosition As BlockPos, mappedBlockFace As UInteger, blockVariant As Integer) As TextureUVCoordinates
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation*
+  nameWithType.vb: BlockGraphics.GetTextureCarriedVariation(BlockPos, UInteger, Integer)
+  fullName.vb: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation(OnixRuntime.Api.Maths.BlockPos, UInteger, Integer)
+  name.vb: GetTextureCarriedVariation(BlockPos, UInteger, Integer)
+references:
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.Block*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.Block
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_Block
+  name: Block
+  nameWithType: BlockGraphics.Block
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.Block
+- uid: OnixRuntime.Api.World.Block
+  commentId: T:OnixRuntime.Api.World.Block
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: OnixRuntime.Api.World.Block
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.Shape*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.Shape
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_Shape
+  name: Shape
+  nameWithType: BlockGraphics.Shape
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.Shape
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+  commentId: T:OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  name: BlockGraphics.BlockShapes
+  nameWithType: BlockGraphics.BlockShapes
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics
+    name: BlockGraphics
+    href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+    name: BlockShapes
+    href: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics
+    name: BlockGraphics
+    href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+    name: BlockShapes
+    href: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes.html
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_BrightnessGamma
+  name: BrightnessGamma
+  nameWithType: BlockGraphics.BrightnessGamma
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.BrightnessGamma
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.Fancy*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.Fancy
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_Fancy
+  name: Fancy
+  nameWithType: BlockGraphics.Fancy
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.Fancy
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.AllowSame*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.AllowSame
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_AllowSame
+  name: AllowSame
+  nameWithType: BlockGraphics.AllowSame
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.AllowSame
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.VisualShape*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.VisualShape
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_VisualShape
+  name: VisualShape
+  nameWithType: BlockGraphics.VisualShape
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.VisualShape
+- uid: OnixRuntime.Api.Maths.BoundingBox
+  commentId: T:OnixRuntime.Api.Maths.BoundingBox
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BoundingBox.html
+  name: BoundingBox
+  nameWithType: BoundingBox
+  fullName: OnixRuntime.Api.Maths.BoundingBox
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.World.BlockFace
+  commentId: T:OnixRuntime.Api.World.BlockFace
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.BlockFace.html
+  name: BlockFace
+  nameWithType: BlockFace
+  fullName: OnixRuntime.Api.World.BlockFace
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItems*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.TextureItems
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_TextureItems
+  name: TextureItems
+  nameWithType: BlockGraphics.TextureItems
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.TextureItems
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem[]
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem.html
+  name: TextureItem[]
+  nameWithType: BlockGraphics.TextureItem[]
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem[]
+  nameWithType.vb: BlockGraphics.TextureItem()
+  fullName.vb: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem()
+  name.vb: TextureItem()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+    name: TextureItem
+    href: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+    name: TextureItem
+    href: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem.html
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Rendering.TextureUVCoordinates
+  commentId: T:OnixRuntime.Api.Rendering.TextureUVCoordinates
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.TextureUVCoordinates.html
+  name: TextureUVCoordinates
+  nameWithType: TextureUVCoordinates
+  fullName: OnixRuntime.Api.Rendering.TextureUVCoordinates
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_GetTextureDefaultVariations_System_UInt32_System_Int32_
+  name: GetTextureDefaultVariations
+  nameWithType: BlockGraphics.GetTextureDefaultVariations
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Rendering.TextureUVCoordinates[]
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.TextureUVCoordinates.html
+  name: TextureUVCoordinates[]
+  nameWithType: TextureUVCoordinates[]
+  fullName: OnixRuntime.Api.Rendering.TextureUVCoordinates[]
+  nameWithType.vb: TextureUVCoordinates()
+  fullName.vb: OnixRuntime.Api.Rendering.TextureUVCoordinates()
+  name.vb: TextureUVCoordinates()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.TextureUVCoordinates
+    name: TextureUVCoordinates
+    href: OnixRuntime.Api.Rendering.TextureUVCoordinates.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.TextureUVCoordinates
+    name: TextureUVCoordinates
+    href: OnixRuntime.Api.Rendering.TextureUVCoordinates.html
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_GetTextureDefaultVariation_OnixRuntime_Api_Maths_BlockPos_System_UInt32_System_Int32_
+  name: GetTextureDefaultVariation
+  nameWithType: BlockGraphics.GetTextureDefaultVariation
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation
+- uid: OnixRuntime.Api.Maths.BlockPos
+  commentId: T:OnixRuntime.Api.Maths.BlockPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BlockPos.html
+  name: BlockPos
+  nameWithType: BlockPos
+  fullName: OnixRuntime.Api.Maths.BlockPos
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_GetTextureCarriedVariations_System_UInt32_System_Int32_
+  name: GetTextureCarriedVariations
+  nameWithType: BlockGraphics.GetTextureCarriedVariations
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_GetTextureCarriedVariation_OnixRuntime_Api_Maths_BlockPos_System_UInt32_System_Int32_
+  name: GetTextureCarriedVariation
+  nameWithType: BlockGraphics.GetTextureCarriedVariation
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariation

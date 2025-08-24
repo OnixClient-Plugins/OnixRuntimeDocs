@@ -16,14 +16,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModule.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SettingAlreadyHasAParentException
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 170
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 178
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Exception thrown when attempting to add a setting that already has a parent.
+  example: []
   syntax:
     content: 'public class SettingAlreadyHasAParentException : OnixRuntimeException, ISerializable'
     content.vb: Public Class SettingAlreadyHasAParentException Inherits OnixRuntimeException Implements ISerializable
@@ -65,19 +67,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModule.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 170
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 183
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException" data-throw-if-not-resolved="false"></xref> class with a specified error message.
+  example: []
   syntax:
     content: public SettingAlreadyHasAParentException(string message)
     parameters:
     - id: message
       type: System.String
+      description: The message that describes the error.
     content.vb: Public Sub New(message As String)
   overload: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.#ctor*
   nameWithType.vb: SettingAlreadyHasAParentException.New(String)
@@ -531,6 +536,12 @@ references:
     name: Serialization
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+- uid: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+  commentId: T:OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
+  href: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.html
+  name: SettingAlreadyHasAParentException
+  nameWithType: SettingAlreadyHasAParentException
+  fullName: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
 - uid: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.#ctor*
   commentId: Overload:OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.#ctor
   href: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.html#OnixRuntime_Api_OnixClient_SettingAlreadyHasAParentException__ctor_System_String_

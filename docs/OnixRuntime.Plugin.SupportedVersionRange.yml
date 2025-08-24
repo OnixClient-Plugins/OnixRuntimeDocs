@@ -20,10 +20,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SupportedVersionRange
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
     startLine: 15
   assemblies:
   - OnixRuntime
@@ -56,10 +56,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
     startLine: 23
   assemblies:
   - OnixRuntime
@@ -91,10 +91,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
     startLine: 33
   assemblies:
   - OnixRuntime
@@ -129,10 +129,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
     startLine: 45
   assemblies:
   - OnixRuntime
@@ -173,21 +173,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsSupported
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 57
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 62
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: Checks if a specific version is supported by this range.
+  example: []
   syntax:
     content: public bool IsSupported(PluginSemVersion version)
     parameters:
     - id: version
       type: OnixRuntime.Api.Utils.PluginSemVersion
+      description: The version to check.
     return:
       type: System.Boolean
+      description: true if the version is supported; otherwise, false.
     content.vb: Public Function IsSupported(version As PluginSemVersion) As Boolean
   overload: OnixRuntime.Plugin.SupportedVersionRange.IsSupported*
 - uid: OnixRuntime.Plugin.SupportedVersionRange.ToString
@@ -204,11 +208,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 64
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 70
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin

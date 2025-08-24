@@ -16,14 +16,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginStateExtensions
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 21
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 52
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: Extensions to add some convenience methods to the <xref href="OnixRuntime.Plugin.PluginState" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public static class PluginStateExtensions
     content.vb: Public Module PluginStateExtensions
@@ -52,11 +54,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsBetweenStates
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 26
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 57
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -73,6 +75,13 @@ items:
     content.vb: Public Shared Function IsBetweenStates(state As PluginState) As Boolean
   overload: OnixRuntime.Plugin.PluginStateExtensions.IsBetweenStates*
 references:
+- uid: OnixRuntime.Plugin.PluginState
+  commentId: T:OnixRuntime.Plugin.PluginState
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.PluginState.html
+  name: PluginState
+  nameWithType: PluginState
+  fullName: OnixRuntime.Plugin.PluginState
 - uid: OnixRuntime.Plugin
   commentId: N:OnixRuntime.Plugin
   href: OnixRuntime.html
@@ -338,13 +347,6 @@ references:
   name: IsBetweenStates
   nameWithType: PluginStateExtensions.IsBetweenStates
   fullName: OnixRuntime.Plugin.PluginStateExtensions.IsBetweenStates
-- uid: OnixRuntime.Plugin.PluginState
-  commentId: T:OnixRuntime.Plugin.PluginState
-  parent: OnixRuntime.Plugin
-  href: OnixRuntime.Plugin.PluginState.html
-  name: PluginState
-  nameWithType: PluginState
-  fullName: OnixRuntime.Plugin.PluginState
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

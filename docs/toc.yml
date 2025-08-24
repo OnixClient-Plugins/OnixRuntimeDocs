@@ -19,6 +19,9 @@ items:
   - uid: OnixRuntime.Api.OnixClientThings
     name: OnixClientThings
     type: Class
+  - uid: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+    name: OnixClientThings.OnNotificationClickedDelegate
+    type: Delegate
   - uid: OnixRuntime.Api.OnixGame
     name: OnixGame
     type: Class
@@ -198,6 +201,15 @@ items:
   - uid: OnixRuntime.Api.Events.OnixEventCommon
     name: OnixEventCommon
     type: Class
+  - uid: OnixRuntime.Api.Events.OnixEventGame
+    name: OnixEventGame
+    type: Class
+  - uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate
+    name: OnixEventGame.OnUriInvokedDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate
+    name: OnixEventGame.OnUriInvokedRawDelegate
+    type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventGui
     name: OnixEventGui
     type: Class
@@ -209,6 +221,9 @@ items:
     type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTickDelegate
     name: OnixEventGui.OnChatScreenTickDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+    name: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
     type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenTickDelegate
     name: OnixEventGui.OnContainerScreenTickDelegate
@@ -234,41 +249,14 @@ items:
   - uid: OnixRuntime.Api.Events.OnixEventInputs.OnTextCharDelegate
     name: OnixEventInputs.OnTextCharDelegate
     type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer
-    name: OnixEventLocalServer
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld
+    name: OnixEventLocalServerWorld
     type: Class
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat
-    name: OnixEventLocalServer.OnPlayerChat
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate
+    name: OnixEventLocalServerWorld.OnAreaChangedDelegate
     type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate
-    name: OnixEventLocalServer.OnTickDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    type: Class
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-    type: Delegate
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-    name: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate
+    name: OnixEventLocalServerWorld.OnBlockChangedDelegate
     type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventPlayer
     name: OnixEventPlayer
@@ -300,6 +288,9 @@ items:
   - uid: OnixRuntime.Api.Events.OnixEventRendering
     name: OnixEventRendering
     type: Class
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    name: OnixEventRendering.OnHudRender2DDelegate
+    type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
     name: OnixEventRendering.OnHudRenderDelegate
     type: Delegate
@@ -312,6 +303,9 @@ items:
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderHudDirect2DDelegate
     name: OnixEventRendering.OnRenderHudDirect2DDelegate
     type: Delegate
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+    name: OnixEventRendering.OnRenderScreen2DDelegate
+    type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
     name: OnixEventRendering.OnRenderScreenDelegate
     type: Delegate
@@ -323,6 +317,15 @@ items:
     type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventRendering.ShouldHideScreenDelegate
     name: OnixEventRendering.ShouldHideScreenDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.OnixEventWorld
+    name: OnixEventWorld
+    type: Class
+  - uid: OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate
+    name: OnixEventWorld.OnAreaChangedDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate
+    name: OnixEventWorld.OnBlockChangedDelegate
     type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEvents
     name: OnixEvents
@@ -341,6 +344,46 @@ items:
     type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventsSession.OnTickDelegate
     name: OnixEventsSession.OnTickDelegate
+    type: Delegate
+- uid: OnixRuntime.Api.Events.LocalServer
+  name: OnixRuntime.Api.Events.LocalServer
+  type: Namespace
+  items:
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer
+    name: OnixEventLocalServer
+    type: Class
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer.OnPlayerChat
+    name: OnixEventLocalServer.OnPlayerChat
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer.OnTickDelegate
+    name: OnixEventLocalServer.OnTickDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer
+    name: OnixEventLocalServerPlayer
+    type: Class
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
+    name: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
     type: Delegate
 - uid: OnixRuntime.Api.Events.Session
   name: OnixRuntime.Api.Events.Session
@@ -434,6 +477,9 @@ items:
   - uid: OnixRuntime.Api.Inputs.InputMappingLayout
     name: InputMappingLayout
     type: Class
+  - uid: OnixRuntime.Api.Inputs.InputMode
+    name: InputMode
+    type: Enum
   - uid: OnixRuntime.Api.Inputs.KeyboardMappingLayout
     name: KeyboardMappingLayout
     type: Class
@@ -459,6 +505,15 @@ items:
   - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
     name: MightOwnMemoryAddressContainer
     type: Class
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+    name: SharedMemoryAddressContainer
+    type: Class
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+    name: SharedMemoryAddressContainer.PointerContainer
+    type: Struct
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerType
+    name: SharedMemoryAddressContainer.PointerType
+    type: Enum
 - uid: OnixRuntime.Api.Items
   name: OnixRuntime.Api.Items
   type: Namespace
@@ -499,6 +554,9 @@ items:
     type: Struct
   - uid: OnixRuntime.Api.Maths.BoundingBox
     name: BoundingBox
+    type: Struct
+  - uid: OnixRuntime.Api.Maths.BoundingBoxI
+    name: BoundingBoxI
     type: Struct
   - uid: OnixRuntime.Api.Maths.ChunkPos
     name: ChunkPos
@@ -589,9 +647,6 @@ items:
   - uid: OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition
     name: OnixModule.SettingInsertionPosition
     type: Enum
-  - uid: OnixRuntime.Api.OnixClient.OnixModuleList
-    name: OnixModuleList
-    type: Class
   - uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
     name: OnixModuleSettingRedirector
     type: Class
@@ -652,9 +707,15 @@ items:
   - uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.ModuleExpandDirection
     name: OnixModuleVisual.ModuleExpandDirection
     type: Enum
+  - uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.RenderDelegate
+    name: OnixModuleVisual.RenderDelegate
+    type: Delegate
   - uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.VisualAnchor
     name: OnixModuleVisual.VisualAnchor
     type: Enum
+  - uid: OnixRuntime.Api.OnixClient.OnixModulesList
+    name: OnixModulesList
+    type: Class
   - uid: OnixRuntime.Api.OnixClient.OnixSetting
     name: OnixSetting
     type: Class
@@ -734,9 +795,6 @@ items:
   - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeConverter
     name: OnixSettingColor_ValueTypeConverter
     type: Class
-  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeMutableConverter
-    name: OnixSettingColor_ValueTypeMutableConverter
-    type: Class
   - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom
     name: OnixSettingCustom
     type: Class
@@ -776,22 +834,98 @@ items:
   - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingTextbox
     name: OnixSettingTextbox
     type: Class
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterColorF
+    name: OnixSettingValueAdapterColorF
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterColorValue
+    name: OnixSettingValueAdapterColorValue
+    type: Class
   - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterEnum
     name: OnixSettingValueAdapterEnum
     type: Class
   - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingVec2
     name: OnixSettingVec2
     type: Class
+- uid: OnixRuntime.Api.Options
+  name: OnixRuntime.Api.Options
+  type: Namespace
+  items:
+  - uid: OnixRuntime.Api.Options.GameOption
+    name: GameOption
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionBool
+    name: GameOptionBool
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionEnum
+    name: GameOptionEnum
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionFloat
+    name: GameOptionFloat
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionInputBool
+    name: GameOptionInputBool
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionInputFloat
+    name: GameOptionInputFloat
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionInt
+    name: GameOptionInt
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionInt64
+    name: GameOptionInt64
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionOwnerType
+    name: GameOptionOwnerType
+    type: Enum
+  - uid: OnixRuntime.Api.Options.GameOptionString
+    name: GameOptionString
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionStringList
+    name: GameOptionStringList
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionType
+    name: GameOptionType
+    type: Enum
+  - uid: OnixRuntime.Api.Options.GameOptionUInt64
+    name: GameOptionUInt64
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptionVec3
+    name: GameOptionVec3
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameOptions
+    name: GameOptions
+    type: Class
+  - uid: OnixRuntime.Api.Options.GameUiProfileOption
+    name: GameUiProfileOption
+    type: Enum
+  - uid: OnixRuntime.Api.Options.PlayerPerspective
+    name: PlayerPerspective
+    type: Enum
 - uid: OnixRuntime.Api.Rendering
   name: OnixRuntime.Api.Rendering
   type: Namespace
   items:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics
+    name: BlockGraphics
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+    name: BlockGraphics.BlockShapes
+    type: Enum
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+    name: BlockGraphics.TextureItem
+    type: Class
   - uid: OnixRuntime.Api.Rendering.FontType
     name: FontType
     type: Enum
   - uid: OnixRuntime.Api.Rendering.FontUsage
     name: FontUsage
     type: Enum
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    name: GameMaterialParameterType
+    type: Enum
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameters
+    name: GameMaterialParameters
+    type: Struct
   - uid: OnixRuntime.Api.Rendering.GameMesh
     name: GameMesh
     type: Class
@@ -831,6 +965,9 @@ items:
   - uid: OnixRuntime.Api.Rendering.MeshBuilderVertexUvNormal
     name: MeshBuilderVertexUvNormal
     type: Struct
+  - uid: OnixRuntime.Api.Rendering.OnixRendererType
+    name: OnixRendererType
+    type: Enum
   - uid: OnixRuntime.Api.Rendering.RenderContexes
     name: RenderContexes
     type: Class
@@ -843,6 +980,12 @@ items:
   - uid: OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
     name: RendererCommon.TransformationPopper
     type: Struct
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper
+    name: RendererCommon2D.ClippingRectanglePopper
+    type: Struct
   - uid: OnixRuntime.Api.Rendering.RendererDirect2D
     name: RendererDirect2D
     type: Class
@@ -852,30 +995,52 @@ items:
   - uid: OnixRuntime.Api.Rendering.RendererTextureStatus
     name: RendererTextureStatus
     type: Enum
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    name: RendererTwoDimentional
-    type: Class
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper
-    name: RendererTwoDimentional.ClippingRectanglePopper
-    type: Struct
   - uid: OnixRuntime.Api.Rendering.RendererWorld
     name: RendererWorld
     type: Class
-  - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    name: RendererWorld.WorldRenderSettingsPopper
-    type: Struct
   - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper
     name: RendererWorld.WorldUIRenderSettingsPopper
     type: Struct
   - uid: OnixRuntime.Api.Rendering.TextAlignment
     name: TextAlignment
     type: Enum
+  - uid: OnixRuntime.Api.Rendering.TextureAtlasItem
+    name: TextureAtlasItem
+    type: Class
   - uid: OnixRuntime.Api.Rendering.TexturePath
     name: TexturePath
     type: Class
   - uid: OnixRuntime.Api.Rendering.TexturePathBase
     name: TexturePathBase
     type: Enum
+  - uid: OnixRuntime.Api.Rendering.TextureUVCoordinates
+    name: TextureUVCoordinates
+    type: Class
+- uid: OnixRuntime.Api.Rendering.Helpers
+  name: OnixRuntime.Api.Rendering.Helpers
+  type: Namespace
+  items:
+  - uid: OnixRuntime.Api.Rendering.Helpers.EasingAnimations
+    name: EasingAnimations
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.Helpers.EasingAnimations.Type
+    name: EasingAnimations.Type
+    type: Enum
+  - uid: OnixRuntime.Api.Rendering.Helpers.LinearAnimation
+    name: LinearAnimation
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.Helpers.LinearAnimationTracker
+    name: LinearAnimationTracker
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.Helpers.LinearAnimationTracker`1
+    name: LinearAnimationTracker<T>
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+    name: ScrollbarPanelLogic
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.Helpers.SvgRenderer
+    name: SvgRenderer
+    type: Class
 - uid: OnixRuntime.Api.ResourcePacks
   name: OnixRuntime.Api.ResourcePacks
   type: Namespace
@@ -987,6 +1152,9 @@ items:
   - uid: OnixRuntime.Api.Utils.RawImageData.ResizeFilter
     name: RawImageData.ResizeFilter
     type: Enum
+  - uid: OnixRuntime.Api.Utils.SvgDocument
+    name: SvgDocument
+    type: Class
 - uid: OnixRuntime.Api.Utils.ClientTranslationLayers
   name: OnixRuntime.Api.Utils.ClientTranslationLayers
   type: Namespace
@@ -1064,6 +1232,9 @@ items:
   - uid: OnixRuntime.Api.World.RuntimeWorld
     name: RuntimeWorld
     type: Class
+  - uid: OnixRuntime.Api.World.VanillaBlockStateType
+    name: VanillaBlockStateType
+    type: Enum
   - uid: OnixRuntime.Api.World.WorldBlocks
     name: WorldBlocks
     type: Class
@@ -1143,6 +1314,12 @@ items:
   - uid: OnixRuntime.Plugin.OnixPluginInitInfo
     name: OnixPluginInitInfo
     type: Class
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller
+    name: OnixPluginInstaller
+    type: Class
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    name: OnixPluginInstaller.TaskProgressReport
+    type: Class
   - uid: OnixRuntime.Plugin.OnixPluginSaveManager
     name: OnixPluginSaveManager
     type: Class
@@ -1152,8 +1329,14 @@ items:
   - uid: OnixRuntime.Plugin.OnixPluginSaveManager.OnConfigSaveDelegate
     name: OnixPluginSaveManager.OnConfigSaveDelegate
     type: Delegate
+  - uid: OnixRuntime.Plugin.PluginLoadMode
+    name: PluginLoadMode
+    type: Enum
   - uid: OnixRuntime.Plugin.PluginManifest
     name: PluginManifest
+    type: Class
+  - uid: OnixRuntime.Plugin.PluginManifestJson
+    name: PluginManifestJson
     type: Class
   - uid: OnixRuntime.Plugin.PluginSettings
     name: PluginSettings
@@ -1166,6 +1349,9 @@ items:
     type: Class
   - uid: OnixRuntime.Plugin.PublicPluginManager
     name: PublicPluginManager
+    type: Class
+  - uid: OnixRuntime.Plugin.RemotePluginManifest
+    name: RemotePluginManifest
     type: Class
   - uid: OnixRuntime.Plugin.RuntimeManifest
     name: RuntimeManifest

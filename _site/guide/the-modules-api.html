@@ -102,7 +102,7 @@
     Console.WriteLine($&quot;Enabled Module: {mod.Name}&quot;);
 }
 </code></pre>
-<p>We've also added <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleList.GetModule">GetModule</a> which allows you to get a module by its save name:</p>
+<p>We've also added <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModulesList.html#OnixRuntime_Api_OnixClient_OnixModulesList_GetModule_System_String_">GetModule</a> which allows you to get a module by its save name:</p>
 <pre><code class="lang-cs">var globalSettings = Onix.Client.Modules.GetModule(&quot;module.global_settings.name&quot;);
 if (globalSettings is not null) {
     Console.WriteLine($&quot;Global settings module found: {globalSettings.Name}&quot;);
@@ -148,8 +148,8 @@ Onix.Events.Player.Attack += (player, entity) =&gt; {
 <h3 id="settings">Settings</h3>
 <p>Just like before, you access a mod's settings with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Settings">OnixModule.Settings</a>.
 The setting has two GetSetting methods, one with a template and one without.
-<a href="OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting">The one without template</a> returns the base <a href="OnixRuntime.Api.OnixClient.OnixSetting">OnixSetting</a>.
-<a href="OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting%5BT%5D">The one with template</a> lets you specify a specific OnixSetting type for convenience.
+<a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSettingsList.html#OnixRuntime_Api_OnixClient_OnixSettingsList_GetSetting_System_String_">The one without template</a> returns the base <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a>.
+<a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixSettingsList.html#OnixRuntime_Api_OnixClient_OnixSettingsList_GetSetting__1_System_String_">The one with template</a> lets you specify a specific OnixSetting type for convenience.
 <br>
 Now you may notice that unlike scripting, settings don't have a Value property, since C# is strongly typed, the settings all have their own types.</p>
 <h3 id="types-of-settings">Types of Settings</h3>
@@ -167,7 +167,7 @@ property.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingGamepadKeybind.html">OnixSettingGamepadKeybind</a> A collection of keys from a Gamepad that must all be pressed to trigger.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingInfo.html">OnixSettingInfo</a> Basically just some text in the settings list.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingInt.html">OnixSettingInt</a> An integer setting, it has a Value property that returns an int, as well as a min/max property.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingKeybind.html">OnixSettingKeybind</a> A single keybind setting, it has a value property of <a href="OnixRuntime.Api.Inputs.InputKey">InputKey</a> which can be any button from the mouse, keyboard or
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingKeybind.html">OnixSettingKeybind</a> A single keybind setting, it has a value property of <a class="xref" href="../docs/OnixRuntime.Api.Inputs.InputKey.html">InputKey</a> which can be any button from the mouse, keyboard or
 gamepad.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingLocalizedInfo.html">OnixSettingLocalizedInfo</a> Basically just some text in the settings list, this is more important from the client where everything can be localized but for you it's the
 same.</li>
@@ -214,7 +214,7 @@ The following example shows how to print all settings and their types for a modu
 <p>You can now create any setting types, passing null for the parent module.
 This isn't too useful on its own but it allows you to insert it into other modules.<br>
 That's also a great way to render a setting without having to implement everything yourself.
-You would use <a href="xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSetting">RendererDirect2D.RenderSetting</a> or <a href="xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSubSetting">RendererDirect2D.RenderSubSetting</a> if inside a custom
+You would use <a class="xref" href="../docs/OnixRuntime.Api.Rendering.RendererDirect2D.html#OnixRuntime_Api_Rendering_RendererDirect2D_RenderSetting_">RendererDirect2D.RenderSetting</a> or <a class="xref" href="../docs/OnixRuntime.Api.Rendering.RendererDirect2D.html#OnixRuntime_Api_Rendering_RendererDirect2D_RenderSubSetting_">RendererDirect2D.RenderSubSetting</a> if inside a custom
 setting.<br>
 Please note that your plugin is still the real owner of the setting and that's even when you add it to a module, if you keep no references to it, it will get garbage collected and removed.</p>
 <pre><code class="lang-cs">// You would store that in your class or a class, a List, whatever you want really, you wouldn't let it just die unless you didn't need it after that function.
@@ -240,7 +240,7 @@ I then print the new value of the setting to the console whenever it changes.</p
     });
 </code></pre>
 <p>For custom settings, you are responsible for calling
-it. <a href="xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.CallValueChangedCallback">We provide a function called CallValueChangedCallbackfor you to do that in the OnixCustomSetting class.</a><br>
+it. <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingCustom_CallValueChangedCallback_">We provide a function called CallValueChangedCallbackfor you to do that in the OnixCustomSetting class.</a><br>
 <a href="creating-custom-setting-types.html">More on that in the custom settings guide.</a></p>
 <hr>
 <h3 id="save-names">Save Names</h3>
@@ -328,8 +328,8 @@ This is useful when you want to extend a module with your own settings, for exam
 (You should <em>probably</em> not do that specifically unless you're sure it makes sense to have it there as it won't necessarily be obvious for the user.)<br>
 There are two ways you can insert a setting.</p>
 <ul>
-<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting">With the index.</a></li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting">After another setting.</a></li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_">With the index.</a></li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_InsertSetting_">After another setting.</a></li>
 </ul>
 <p>With the index, you insert it wherever you want, make sure to set the origin where you want it.<br>
 With a setting, you place it at an offset from that setting, wherever it may be.</p>
@@ -345,7 +345,7 @@ With a setting, you place it at an offset from that setting, wherever it may be.
 <hr>
 <h2 id="thats-great-but-how-do-i-save">That's Great! But How do I Save?</h2>
 <p>When you create additional modules or settings that aren't part of a module you made that gets saved, they will not be saved automatically.
-If you want your module to be saved, you need to call <a href="xref:OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule">SaveManager.TrackModule</a> with your module.<br>
+If you want your module to be saved, you need to call <a class="xref" href="../docs/OnixRuntime.Plugin.OnixPluginSaveManager.html#OnixRuntime_Plugin_OnixPluginSaveManager_TrackModule_">SaveManager.TrackModule</a> with your module.<br>
 This will also load and save any settings you have in it at this time.<br></p>
 <pre><code class="lang-cs">HudElement = new OnixModuleVisual($&quot;{CurrentPluginManifest.Name}'s Hud Element&quot;, &quot;hud_element&quot;, 
     Vec2.Zero, OnixModuleVisual.VisualAnchor.TopLeft, new Vec2(20, 20),

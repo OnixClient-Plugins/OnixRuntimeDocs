@@ -6,7 +6,6 @@ items:
   parent: OnixRuntime.Api.OnixClient
   children:
   - OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting(OnixRuntime.Api.OnixClient.OnixSetting)
-  - OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting(System.IntPtr)
   - OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCustomSettingType(System.String)
   - OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetSettingId(System.String)
   - OnixRuntime.Api.OnixClient.OnixSettingRegistry.IsValidCustomSetting(System.String)
@@ -27,11 +26,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixSettingRegistry
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 11
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 12
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -64,57 +63,30 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetCSharpSetting
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 142
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 148
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Gets the C# representation of the specified Onix setting.
+
+    Otherwise setting is returned.
+  example: []
   syntax:
     content: public OnixSetting GetCSharpSetting(OnixSetting setting)
     parameters:
     - id: setting
       type: OnixRuntime.Api.OnixClient.OnixSetting
+      description: The Onix setting to convert.
     return:
       type: OnixRuntime.Api.OnixClient.OnixSetting
+      description: The C# representation of the setting.
     content.vb: Public Function GetCSharpSetting(setting As OnixSetting) As OnixSetting
   overload: OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting*
-- uid: OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting(System.IntPtr)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting(System.IntPtr)
-  id: GetCSharpSetting(System.IntPtr)
-  parent: OnixRuntime.Api.OnixClient.OnixSettingRegistry
-  langs:
-  - csharp
-  - vb
-  name: GetCSharpSetting(nint)
-  nameWithType: OnixSettingRegistry.GetCSharpSetting(nint)
-  fullName: OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting(nint)
-  type: Method
-  source:
-    remote:
-      path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: GetCSharpSetting
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 147
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api.OnixClient
-  syntax:
-    content: public OnixSetting GetCSharpSetting(nint setting)
-    parameters:
-    - id: setting
-      type: System.IntPtr
-    return:
-      type: OnixRuntime.Api.OnixClient.OnixSetting
-    content.vb: Public Function GetCSharpSetting(setting As IntPtr) As OnixSetting
-  overload: OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting*
-  nameWithType.vb: OnixSettingRegistry.GetCSharpSetting(IntPtr)
-  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingRegistry.GetCSharpSetting(System.IntPtr)
-  name.vb: GetCSharpSetting(IntPtr)
 - uid: OnixRuntime.Api.OnixClient.OnixSettingRegistry.RegisterSettingType``1(System.String)
   commentId: M:OnixRuntime.Api.OnixClient.OnixSettingRegistry.RegisterSettingType``1(System.String)
   id: RegisterSettingType``1(System.String)
@@ -129,11 +101,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RegisterSettingType
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 172
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 180
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -170,11 +142,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RegisterSettingRendererForType
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 196
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 204
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -208,11 +180,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RegisterSettingRendererForType
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 210
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 218
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -246,11 +218,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RegisterSettingRendererForType
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 219
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 227
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -284,11 +256,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RegisterSettingRendererForName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 235
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 243
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -322,11 +294,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetSettingId
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 250
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 258
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -364,11 +336,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetCustomSettingType
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 261
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 269
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -402,11 +374,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsValidCustomSetting
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 273
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 281
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -440,11 +412,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnSettingMenuClosed
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 300
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 308
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -469,11 +441,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SettingsMenuClosed
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
-    startLine: 310
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSettingRegistry.cs
+    startLine: 318
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -764,17 +736,6 @@ references:
   name: OnixSetting
   nameWithType: OnixSetting
   fullName: OnixRuntime.Api.OnixClient.OnixSetting
-- uid: System.IntPtr
-  commentId: T:System.IntPtr
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.intptr
-  name: nint
-  nameWithType: nint
-  fullName: nint
-  nameWithType.vb: IntPtr
-  fullName.vb: System.IntPtr
-  name.vb: IntPtr
 - uid: OnixRuntime.Api.OnixClient.OnixSettingRegistry.RegisterSettingType*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingRegistry.RegisterSettingType
   href: OnixRuntime.Api.OnixClient.OnixSettingRegistry.html#OnixRuntime_Api_OnixClient_OnixSettingRegistry_RegisterSettingType__1_System_String_

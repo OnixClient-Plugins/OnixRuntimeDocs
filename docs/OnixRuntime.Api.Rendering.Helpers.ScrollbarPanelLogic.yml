@@ -1,0 +1,1530 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  commentId: T:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  id: ScrollbarPanelLogic
+  parent: OnixRuntime.Api.Rendering.Helpers
+  children:
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentSize
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromBottom
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromLeft
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromRight
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromTop
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MinThumbSize
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.PanelRect
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent(OnixRuntime.Api.Rendering.RendererCommon2D,System.Action{OnixRuntime.Api.Maths.Rect})
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollWheelJump
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollbarThickness
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.SmoothScrollSpeed
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update(OnixRuntime.Api.Inputs.InputKey.ClickType,OnixRuntime.Api.Maths.Vec2,System.Int32,System.Single)
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth
+  - OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth
+  langs:
+  - csharp
+  - vb
+  name: ScrollbarPanelLogic
+  nameWithType: ScrollbarPanelLogic
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ScrollbarPanelLogic
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 12
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: >-
+    Provides the logic for a scrollable panel with scrollbars.
+
+    Provides some rendering, but mainly the working scrollbar logic.
+
+    You give it the view area and the size of your content and it gives you the ContentRect
+
+    You can change various padding options to customize the layout.
+  example: []
+  syntax:
+    content: public class ScrollbarPanelLogic
+    content.vb: Public Class ScrollbarPanelLogic
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.PanelRect
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.PanelRect
+  id: PanelRect
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: PanelRect
+  nameWithType: ScrollbarPanelLogic.PanelRect
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.PanelRect
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PanelRect
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 29
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: The visible area (panel bounds).
+  example: []
+  syntax:
+    content: public Rect PanelRect
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+    content.vb: Public PanelRect As Rect
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentSize
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentSize
+  id: ContentSize
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: ContentSize
+  nameWithType: ScrollbarPanelLogic.ContentSize
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentSize
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ContentSize
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 34
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Total content size.
+  example: []
+  syntax:
+    content: public Vec2 ContentSize
+    return:
+      type: OnixRuntime.Api.Maths.Vec2
+    content.vb: Public ContentSize As Vec2
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollbarThickness
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollbarThickness
+  id: ScrollbarThickness
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: ScrollbarThickness
+  nameWithType: ScrollbarPanelLogic.ScrollbarThickness
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollbarThickness
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ScrollbarThickness
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 39
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Thickness of the scrollbars.
+  example: []
+  syntax:
+    content: public float ScrollbarThickness
+    return:
+      type: System.Single
+    content.vb: Public ScrollbarThickness As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MinThumbSize
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MinThumbSize
+  id: MinThumbSize
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: MinThumbSize
+  nameWithType: ScrollbarPanelLogic.MinThumbSize
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MinThumbSize
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: MinThumbSize
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 44
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Minimum size of the scrollbar thumb.
+  example: []
+  syntax:
+    content: public float MinThumbSize
+    return:
+      type: System.Single
+    content.vb: Public MinThumbSize As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromRight
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromRight
+  id: MarginFromRight
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: MarginFromRight
+  nameWithType: ScrollbarPanelLogic.MarginFromRight
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromRight
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: MarginFromRight
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 49
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Margin from the right edge for the vertical scrollbar.
+  example: []
+  syntax:
+    content: public float MarginFromRight
+    return:
+      type: System.Single
+    content.vb: Public MarginFromRight As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromTop
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromTop
+  id: MarginFromTop
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: MarginFromTop
+  nameWithType: ScrollbarPanelLogic.MarginFromTop
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromTop
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: MarginFromTop
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 54
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Margin from the top edge for the scrollbars.
+  example: []
+  syntax:
+    content: public float MarginFromTop
+    return:
+      type: System.Single
+    content.vb: Public MarginFromTop As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromBottom
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromBottom
+  id: MarginFromBottom
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: MarginFromBottom
+  nameWithType: ScrollbarPanelLogic.MarginFromBottom
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromBottom
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: MarginFromBottom
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 59
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Margin from the bottom edge for the scrollbars.
+  example: []
+  syntax:
+    content: public float MarginFromBottom
+    return:
+      type: System.Single
+    content.vb: Public MarginFromBottom As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromLeft
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromLeft
+  id: MarginFromLeft
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: MarginFromLeft
+  nameWithType: ScrollbarPanelLogic.MarginFromLeft
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.MarginFromLeft
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: MarginFromLeft
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Margin from the left edge for the horizontal scrollbar.
+  example: []
+  syntax:
+    content: public float MarginFromLeft
+    return:
+      type: System.Single
+    content.vb: Public MarginFromLeft As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.SmoothScrollSpeed
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.SmoothScrollSpeed
+  id: SmoothScrollSpeed
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: SmoothScrollSpeed
+  nameWithType: ScrollbarPanelLogic.SmoothScrollSpeed
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.SmoothScrollSpeed
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SmoothScrollSpeed
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 69
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Speed of smooth scrolling (0-1).
+  example: []
+  syntax:
+    content: public float SmoothScrollSpeed
+    return:
+      type: System.Single
+    content.vb: Public SmoothScrollSpeed As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollWheelJump
+  commentId: F:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollWheelJump
+  id: ScrollWheelJump
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: ScrollWheelJump
+  nameWithType: ScrollbarPanelLogic.ScrollWheelJump
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ScrollWheelJump
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ScrollWheelJump
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 74
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Amount to scroll per mouse wheel tick.
+  example: []
+  syntax:
+    content: public float ScrollWheelJump
+    return:
+      type: System.Single
+    content.vb: Public ScrollWheelJump As Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight
+  commentId: P:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight
+  id: HScrollbarMaxHeight
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: HScrollbarMaxHeight
+  nameWithType: ScrollbarPanelLogic.HScrollbarMaxHeight
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: HScrollbarMaxHeight
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 79
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the maximum height of the horizontal scrollbar, including margins.
+  example: []
+  syntax:
+    content: public virtual float HScrollbarMaxHeight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable ReadOnly Property HScrollbarMaxHeight As Single
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth
+  commentId: P:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth
+  id: VScrollbarMaxWidth
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: VScrollbarMaxWidth
+  nameWithType: ScrollbarPanelLogic.VScrollbarMaxWidth
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: VScrollbarMaxWidth
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 84
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the maximum width of the vertical scrollbar, including margins.
+  example: []
+  syntax:
+    content: public virtual float VScrollbarMaxWidth { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable ReadOnly Property VScrollbarMaxWidth As Single
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight
+  commentId: P:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight
+  id: HScrollbarHeight
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: HScrollbarHeight
+  nameWithType: ScrollbarPanelLogic.HScrollbarHeight
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: HScrollbarHeight
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 89
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the height of the horizontal scrollbar if visible, otherwise 0.
+  example: []
+  syntax:
+    content: public virtual float HScrollbarHeight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable ReadOnly Property HScrollbarHeight As Single
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth
+  commentId: P:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth
+  id: VScrollbarWidth
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: VScrollbarWidth
+  nameWithType: ScrollbarPanelLogic.VScrollbarWidth
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: VScrollbarWidth
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 94
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the width of the vertical scrollbar if visible, otherwise 0.
+  example: []
+  syntax:
+    content: public virtual float VScrollbarWidth { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable ReadOnly Property VScrollbarWidth As Single
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect
+  commentId: P:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect
+  id: ContentRect
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: ContentRect
+  nameWithType: ScrollbarPanelLogic.ContentRect
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ContentRect
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 99
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the content rectangle in screen coordinates, excluding scrollbars.
+  example: []
+  syntax:
+    content: public virtual Rect ContentRect { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+    content.vb: Public Overridable ReadOnly Property ContentRect As Rect
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset
+  id: GetScrollOffset
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: GetScrollOffset()
+  nameWithType: ScrollbarPanelLogic.GetScrollOffset()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetScrollOffset
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 105
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the current scroll offset (top-left of visible content).
+  example: []
+  syntax:
+    content: public virtual Vec2 GetScrollOffset()
+    return:
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current scroll offset as a <xref href="OnixRuntime.Api.Maths.Vec2" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overridable Function GetScrollOffset() As Vec2
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar
+  id: HasVerticalScrollbar
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: HasVerticalScrollbar()
+  nameWithType: ScrollbarPanelLogic.HasVerticalScrollbar()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: HasVerticalScrollbar
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 111
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Returns true if the vertical scrollbar is visible.
+  example: []
+  syntax:
+    content: public virtual bool HasVerticalScrollbar()
+    return:
+      type: System.Boolean
+      description: True if vertical scrollbar is visible, otherwise false.
+    content.vb: Public Overridable Function HasVerticalScrollbar() As Boolean
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar
+  id: HasHorizontalScrollbar
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: HasHorizontalScrollbar()
+  nameWithType: ScrollbarPanelLogic.HasHorizontalScrollbar()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: HasHorizontalScrollbar
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 117
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Returns true if the horizontal scrollbar is visible.
+  example: []
+  syntax:
+    content: public virtual bool HasHorizontalScrollbar()
+    return:
+      type: System.Boolean
+      description: True if horizontal scrollbar is visible, otherwise false.
+    content.vb: Public Overridable Function HasHorizontalScrollbar() As Boolean
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update(OnixRuntime.Api.Inputs.InputKey.ClickType,OnixRuntime.Api.Maths.Vec2,System.Int32,System.Single)
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update(OnixRuntime.Api.Inputs.InputKey.ClickType,OnixRuntime.Api.Maths.Vec2,System.Int32,System.Single)
+  id: Update(OnixRuntime.Api.Inputs.InputKey.ClickType,OnixRuntime.Api.Maths.Vec2,System.Int32,System.Single)
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: Update(ClickType, Vec2, int, float)
+  nameWithType: ScrollbarPanelLogic.Update(InputKey.ClickType, Vec2, int, float)
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update(OnixRuntime.Api.Inputs.InputKey.ClickType, OnixRuntime.Api.Maths.Vec2, int, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Update
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 126
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Updates the scrollbar panel logic. Should be called every frame with the latest mouse input.
+  example: []
+  syntax:
+    content: public void Update(InputKey.ClickType click, Vec2 mousePosition, int scrollCount, float deltaTime)
+    parameters:
+    - id: click
+      type: OnixRuntime.Api.Inputs.InputKey.ClickType
+      description: The mouse click type.
+    - id: mousePosition
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The current mouse position.
+    - id: scrollCount
+      type: System.Int32
+      description: The scroll wheel delta.
+    - id: deltaTime
+      type: System.Single
+      description: The time since the last update, in seconds.
+    content.vb: Public Sub Update(click As InputKey.ClickType, mousePosition As Vec2, scrollCount As Integer, deltaTime As Single)
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update*
+  nameWithType.vb: ScrollbarPanelLogic.Update(InputKey.ClickType, Vec2, Integer, Single)
+  fullName.vb: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update(OnixRuntime.Api.Inputs.InputKey.ClickType, OnixRuntime.Api.Maths.Vec2, Integer, Single)
+  name.vb: Update(ClickType, Vec2, Integer, Single)
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion
+  id: GetContentRegion
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: GetContentRegion()
+  nameWithType: ScrollbarPanelLogic.GetContentRegion()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetContentRegion
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 220
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the visible content region in content coordinates.
+  example: []
+  syntax:
+    content: public virtual Rect GetContentRegion()
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> representing the visible content region.
+    content.vb: Public Overridable Function GetContentRegion() As Rect
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect
+  id: GetVerticalScrollbarRect
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: GetVerticalScrollbarRect()
+  nameWithType: ScrollbarPanelLogic.GetVerticalScrollbarRect()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetVerticalScrollbarRect
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 228
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the vertical scrollbar rectangle in screen coordinates.
+  example: []
+  syntax:
+    content: public virtual Rect GetVerticalScrollbarRect()
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> representing the vertical scrollbar area.
+    content.vb: Public Overridable Function GetVerticalScrollbarRect() As Rect
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect
+  id: GetVerticalThumbRect
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: GetVerticalThumbRect()
+  nameWithType: ScrollbarPanelLogic.GetVerticalThumbRect()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetVerticalThumbRect
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 236
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the vertical scrollbar thumb rectangle in screen coordinates.
+  example: []
+  syntax:
+    content: public Rect GetVerticalThumbRect()
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> representing the vertical scrollbar thumb.
+    content.vb: Public Function GetVerticalThumbRect() As Rect
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect
+  id: GetHorizontalScrollbarRect
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: GetHorizontalScrollbarRect()
+  nameWithType: ScrollbarPanelLogic.GetHorizontalScrollbarRect()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetHorizontalScrollbarRect
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 250
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the horizontal scrollbar rectangle in screen coordinates.
+  example: []
+  syntax:
+    content: public virtual Rect GetHorizontalScrollbarRect()
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> representing the horizontal scrollbar area.
+    content.vb: Public Overridable Function GetHorizontalScrollbarRect() As Rect
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect
+  id: GetHorizontalThumbRect
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: GetHorizontalThumbRect()
+  nameWithType: ScrollbarPanelLogic.GetHorizontalThumbRect()
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetHorizontalThumbRect
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 262
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Gets the horizontal scrollbar thumb rectangle in screen coordinates.
+  example: []
+  syntax:
+    content: public virtual Rect GetHorizontalThumbRect()
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> representing the horizontal scrollbar thumb.
+    content.vb: Public Overridable Function GetHorizontalThumbRect() As Rect
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect*
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  id: RenderScrollbarsV3Themed(OnixRuntime.Api.Rendering.RendererCommon,OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: RenderScrollbarsV3Themed(RendererCommon, OnixClientThemeV3?)
+  nameWithType: ScrollbarPanelLogic.RenderScrollbarsV3Themed(RendererCommon, OnixClientThemeV3?)
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed(OnixRuntime.Api.Rendering.RendererCommon, OnixRuntime.Api.OnixClient.OnixClientThemeV3?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderScrollbarsV3Themed
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 277
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Renders the scrollbars using the V3 theme.
+  example: []
+  syntax:
+    content: public void RenderScrollbarsV3Themed(RendererCommon gfx, OnixClientThemeV3? theme = null)
+    parameters:
+    - id: gfx
+      type: OnixRuntime.Api.Rendering.RendererCommon
+      description: The renderer to use.
+    - id: theme
+      type: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+      description: The theme to use. If null, uses the default client theme.
+    content.vb: Public Sub RenderScrollbarsV3Themed(gfx As RendererCommon, theme As OnixClientThemeV3 = Nothing)
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed*
+  nameWithType.vb: ScrollbarPanelLogic.RenderScrollbarsV3Themed(RendererCommon, OnixClientThemeV3)
+  fullName.vb: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed(OnixRuntime.Api.Rendering.RendererCommon, OnixRuntime.Api.OnixClient.OnixClientThemeV3)
+  name.vb: RenderScrollbarsV3Themed(RendererCommon, OnixClientThemeV3)
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent(OnixRuntime.Api.Rendering.RendererCommon2D,System.Action{OnixRuntime.Api.Maths.Rect})
+  commentId: M:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent(OnixRuntime.Api.Rendering.RendererCommon2D,System.Action{OnixRuntime.Api.Maths.Rect})
+  id: RenderContent(OnixRuntime.Api.Rendering.RendererCommon2D,System.Action{OnixRuntime.Api.Maths.Rect})
+  parent: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic
+  langs:
+  - csharp
+  - vb
+  name: RenderContent(RendererCommon2D, Action<Rect>)
+  nameWithType: ScrollbarPanelLogic.RenderContent(RendererCommon2D, Action<Rect>)
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent(OnixRuntime.Api.Rendering.RendererCommon2D, System.Action<OnixRuntime.Api.Maths.Rect>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderContent
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/Helpers/ScrollbarPanelLogic.cs
+    startLine: 302
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering.Helpers
+  summary: Renders the content within the panel, applying clipping and drawing scrollbars.
+  example: []
+  syntax:
+    content: public void RenderContent(RendererCommon2D gfx, Action<Rect> renderContentCallback)
+    parameters:
+    - id: gfx
+      type: OnixRuntime.Api.Rendering.RendererCommon2D
+      description: The 2D renderer to use.
+    - id: renderContentCallback
+      type: System.Action{OnixRuntime.Api.Maths.Rect}
+      description: A callback to render the content. Receives the content rectangle as a parameter.
+    content.vb: Public Sub RenderContent(gfx As RendererCommon2D, renderContentCallback As Action(Of Rect))
+  overload: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent*
+  nameWithType.vb: ScrollbarPanelLogic.RenderContent(RendererCommon2D, Action(Of Rect))
+  fullName.vb: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent(OnixRuntime.Api.Rendering.RendererCommon2D, System.Action(Of OnixRuntime.Api.Maths.Rect))
+  name.vb: RenderContent(RendererCommon2D, Action(Of Rect))
+references:
+- uid: OnixRuntime.Api.Rendering.Helpers
+  commentId: N:OnixRuntime.Api.Rendering.Helpers
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering.Helpers
+  nameWithType: OnixRuntime.Api.Rendering.Helpers
+  fullName: OnixRuntime.Api.Rendering.Helpers
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.Helpers
+    name: Helpers
+    href: OnixRuntime.Api.Rendering.Helpers.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.Helpers
+    name: Helpers
+    href: OnixRuntime.Api.Rendering.Helpers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Maths.Rect
+  commentId: T:OnixRuntime.Api.Maths.Rect
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: OnixRuntime.Api.Maths.Rect
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.Maths.Vec2
+  commentId: T:OnixRuntime.Api.Maths.Vec2
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: OnixRuntime.Api.Maths.Vec2
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_HScrollbarMaxHeight
+  name: HScrollbarMaxHeight
+  nameWithType: ScrollbarPanelLogic.HScrollbarMaxHeight
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarMaxHeight
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_VScrollbarMaxWidth
+  name: VScrollbarMaxWidth
+  nameWithType: ScrollbarPanelLogic.VScrollbarMaxWidth
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarMaxWidth
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_HScrollbarHeight
+  name: HScrollbarHeight
+  nameWithType: ScrollbarPanelLogic.HScrollbarHeight
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HScrollbarHeight
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_VScrollbarWidth
+  name: VScrollbarWidth
+  nameWithType: ScrollbarPanelLogic.VScrollbarWidth
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.VScrollbarWidth
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_ContentRect
+  name: ContentRect
+  nameWithType: ScrollbarPanelLogic.ContentRect
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.ContentRect
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_GetScrollOffset
+  name: GetScrollOffset
+  nameWithType: ScrollbarPanelLogic.GetScrollOffset
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetScrollOffset
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_HasVerticalScrollbar
+  name: HasVerticalScrollbar
+  nameWithType: ScrollbarPanelLogic.HasVerticalScrollbar
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasVerticalScrollbar
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_HasHorizontalScrollbar
+  name: HasHorizontalScrollbar
+  nameWithType: ScrollbarPanelLogic.HasHorizontalScrollbar
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.HasHorizontalScrollbar
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_Update_OnixRuntime_Api_Inputs_InputKey_ClickType_OnixRuntime_Api_Maths_Vec2_System_Int32_System_Single_
+  name: Update
+  nameWithType: ScrollbarPanelLogic.Update
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.Update
+- uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+  commentId: T:OnixRuntime.Api.Inputs.InputKey.ClickType
+  parent: OnixRuntime.Api.Inputs
+  href: OnixRuntime.Api.Inputs.InputKey.html
+  name: InputKey.ClickType
+  nameWithType: InputKey.ClickType
+  fullName: OnixRuntime.Api.Inputs.InputKey.ClickType
+  spec.csharp:
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+    name: ClickType
+    href: OnixRuntime.Api.Inputs.InputKey.ClickType.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs.InputKey.ClickType
+    name: ClickType
+    href: OnixRuntime.Api.Inputs.InputKey.ClickType.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Inputs
+  commentId: N:OnixRuntime.Api.Inputs
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Inputs
+  nameWithType: OnixRuntime.Api.Inputs
+  fullName: OnixRuntime.Api.Inputs
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Inputs
+    name: Inputs
+    href: OnixRuntime.Api.Inputs.html
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_GetContentRegion
+  name: GetContentRegion
+  nameWithType: ScrollbarPanelLogic.GetContentRegion
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetContentRegion
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_GetVerticalScrollbarRect
+  name: GetVerticalScrollbarRect
+  nameWithType: ScrollbarPanelLogic.GetVerticalScrollbarRect
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalScrollbarRect
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_GetVerticalThumbRect
+  name: GetVerticalThumbRect
+  nameWithType: ScrollbarPanelLogic.GetVerticalThumbRect
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetVerticalThumbRect
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_GetHorizontalScrollbarRect
+  name: GetHorizontalScrollbarRect
+  nameWithType: ScrollbarPanelLogic.GetHorizontalScrollbarRect
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalScrollbarRect
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_GetHorizontalThumbRect
+  name: GetHorizontalThumbRect
+  nameWithType: ScrollbarPanelLogic.GetHorizontalThumbRect
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.GetHorizontalThumbRect
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_RenderScrollbarsV3Themed_OnixRuntime_Api_Rendering_RendererCommon_OnixRuntime_Api_OnixClient_OnixClientThemeV3_
+  name: RenderScrollbarsV3Themed
+  nameWithType: ScrollbarPanelLogic.RenderScrollbarsV3Themed
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderScrollbarsV3Themed
+- uid: OnixRuntime.Api.Rendering.RendererCommon
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererCommon.html
+  name: RendererCommon
+  nameWithType: RendererCommon
+  fullName: OnixRuntime.Api.Rendering.RendererCommon
+- uid: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+  commentId: T:OnixRuntime.Api.OnixClient.OnixClientThemeV3
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixClientThemeV3.html
+  name: OnixClientThemeV3
+  nameWithType: OnixClientThemeV3
+  fullName: OnixRuntime.Api.OnixClient.OnixClientThemeV3
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: OnixRuntime.Api.OnixClient
+  commentId: N:OnixRuntime.Api.OnixClient
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient
+  nameWithType: OnixRuntime.Api.OnixClient
+  fullName: OnixRuntime.Api.OnixClient
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+- uid: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent*
+  commentId: Overload:OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent
+  href: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.html#OnixRuntime_Api_Rendering_Helpers_ScrollbarPanelLogic_RenderContent_OnixRuntime_Api_Rendering_RendererCommon2D_System_Action_OnixRuntime_Api_Maths_Rect__
+  name: RenderContent
+  nameWithType: ScrollbarPanelLogic.RenderContent
+  fullName: OnixRuntime.Api.Rendering.Helpers.ScrollbarPanelLogic.RenderContent
+- uid: OnixRuntime.Api.Rendering.RendererCommon2D
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon2D
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  name: RendererCommon2D
+  nameWithType: RendererCommon2D
+  fullName: OnixRuntime.Api.Rendering.RendererCommon2D
+- uid: System.Action{OnixRuntime.Api.Maths.Rect}
+  commentId: T:System.Action{OnixRuntime.Api.Maths.Rect}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Rect>
+  nameWithType: Action<Rect>
+  fullName: System.Action<OnixRuntime.Api.Maths.Rect>
+  nameWithType.vb: Action(Of Rect)
+  fullName.vb: System.Action(Of OnixRuntime.Api.Maths.Rect)
+  name.vb: Action(Of Rect)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: OnixRuntime.Api.Maths.Rect
+    name: Rect
+    href: OnixRuntime.Api.Maths.Rect.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Rect
+    name: Rect
+    href: OnixRuntime.Api.Maths.Rect.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

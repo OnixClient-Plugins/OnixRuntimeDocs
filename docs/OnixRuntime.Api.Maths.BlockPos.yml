@@ -20,6 +20,8 @@ items:
   - OnixRuntime.Api.Maths.BlockPos.East
   - OnixRuntime.Api.Maths.BlockPos.Equals(OnixRuntime.Api.Maths.BlockPos)
   - OnixRuntime.Api.Maths.BlockPos.Equals(System.Object)
+  - OnixRuntime.Api.Maths.BlockPos.FromString(System.ReadOnlySpan{System.Char},System.Boolean)
+  - OnixRuntime.Api.Maths.BlockPos.FromString(System.String,System.Boolean)
   - OnixRuntime.Api.Maths.BlockPos.GetHashCode
   - OnixRuntime.Api.Maths.BlockPos.Length
   - OnixRuntime.Api.Maths.BlockPos.Lerp(OnixRuntime.Api.Maths.BlockPos,System.Single)
@@ -77,10 +79,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BlockPos
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
     startLine: 8
   assemblies:
   - OnixRuntime
@@ -110,10 +112,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: X
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
     startLine: 12
   assemblies:
   - OnixRuntime
@@ -139,10 +141,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Y
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
     startLine: 16
   assemblies:
   - OnixRuntime
@@ -168,10 +170,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Z
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
     startLine: 20
   assemblies:
   - OnixRuntime
@@ -197,10 +199,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
     startLine: 28
   assemblies:
   - OnixRuntime
@@ -238,10 +240,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
     startLine: 38
   assemblies:
   - OnixRuntime
@@ -259,6 +261,96 @@ items:
   nameWithType.vb: BlockPos.New(Vec3)
   fullName.vb: OnixRuntime.Api.Maths.BlockPos.New(OnixRuntime.Api.Maths.Vec3)
   name.vb: New(Vec3)
+- uid: OnixRuntime.Api.Maths.BlockPos.FromString(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.Maths.BlockPos.FromString(System.String,System.Boolean)
+  id: FromString(System.String,System.Boolean)
+  parent: OnixRuntime.Api.Maths.BlockPos
+  langs:
+  - csharp
+  - vb
+  name: FromString(string, bool)
+  nameWithType: BlockPos.FromString(string, bool)
+  fullName: OnixRuntime.Api.Maths.BlockPos.FromString(string, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BlockPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FromString
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 49
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Parses a space- or comma-separated string into a <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static BlockPos FromString(string spacesSeparatedString, bool throwOnFailure = true)
+    parameters:
+    - id: spacesSeparatedString
+      type: System.String
+      description: 'The input string containing three integer coordinates (X, Y, Z), separated by spaces and/or commas. Example: "10 64 -5" or "10,64,-5".'
+    - id: throwOnFailure
+      type: System.Boolean
+      description: If true, the method throws an <xref href="System.ArgumentException" data-throw-if-not-resolved="false"></xref> when parsing fails. If false, invalid or missing values are treated as zero.
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: A <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> parsed from the provided string. If parsing fails and <code class="paramref">throwOnFailure</code> is false, returns <xref href="OnixRuntime.Api.Maths.BlockPos.Zero" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function FromString(spacesSeparatedString As String, throwOnFailure As Boolean = True) As BlockPos
+  overload: OnixRuntime.Api.Maths.BlockPos.FromString*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the input string is invalid and <code class="paramref">throwOnFailure</code> is true.
+  nameWithType.vb: BlockPos.FromString(String, Boolean)
+  fullName.vb: OnixRuntime.Api.Maths.BlockPos.FromString(String, Boolean)
+  name.vb: FromString(String, Boolean)
+- uid: OnixRuntime.Api.Maths.BlockPos.FromString(System.ReadOnlySpan{System.Char},System.Boolean)
+  commentId: M:OnixRuntime.Api.Maths.BlockPos.FromString(System.ReadOnlySpan{System.Char},System.Boolean)
+  id: FromString(System.ReadOnlySpan{System.Char},System.Boolean)
+  parent: OnixRuntime.Api.Maths.BlockPos
+  langs:
+  - csharp
+  - vb
+  name: FromString(ReadOnlySpan<char>, bool)
+  nameWithType: BlockPos.FromString(ReadOnlySpan<char>, bool)
+  fullName: OnixRuntime.Api.Maths.BlockPos.FromString(System.ReadOnlySpan<char>, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BlockPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FromString
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 56
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Parses a space- or comma-separated character span into a <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static BlockPos FromString(ReadOnlySpan<char> spacesSeparatedString, bool throwOnFailure = true)
+    parameters:
+    - id: spacesSeparatedString
+      type: System.ReadOnlySpan{System.Char}
+      description: 'The input character span containing three integer coordinates (X, Y, Z), separated by spaces and/or commas. Example: "10 64 -5" or "10,64,-5".'
+    - id: throwOnFailure
+      type: System.Boolean
+      description: If true, the method throws an <xref href="System.ArgumentException" data-throw-if-not-resolved="false"></xref> when parsing fails. If false, invalid or missing values are treated as zero.
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: A <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> parsed from the provided character span. If parsing fails and <code class="paramref">throwOnFailure</code> is false, returns <xref href="OnixRuntime.Api.Maths.BlockPos.Zero" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function FromString(spacesSeparatedString As ReadOnlySpan(Of Char), throwOnFailure As Boolean = True) As BlockPos
+  overload: OnixRuntime.Api.Maths.BlockPos.FromString*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the input span is invalid and <code class="paramref">throwOnFailure</code> is true.
+  nameWithType.vb: BlockPos.FromString(ReadOnlySpan(Of Char), Boolean)
+  fullName.vb: OnixRuntime.Api.Maths.BlockPos.FromString(System.ReadOnlySpan(Of Char), Boolean)
+  name.vb: FromString(ReadOnlySpan(Of Char), Boolean)
 - uid: OnixRuntime.Api.Maths.BlockPos.Add(System.Int32,System.Int32,System.Int32)
   commentId: M:OnixRuntime.Api.Maths.BlockPos.Add(System.Int32,System.Int32,System.Int32)
   id: Add(System.Int32,System.Int32,System.Int32)
@@ -273,11 +365,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Add
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 51
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 126
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -317,11 +409,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Add
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 60
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 135
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -352,11 +444,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Addition
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 70
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 145
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -393,11 +485,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Sub
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 81
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 156
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -437,11 +529,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Sub
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 90
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 165
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -472,11 +564,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Subtraction
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 100
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 175
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -513,11 +605,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Mul
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 111
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 186
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -557,11 +649,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Mul
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 120
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 195
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -592,11 +684,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 130
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 205
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -633,11 +725,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Div
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 141
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 216
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -677,11 +769,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Div
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 150
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 225
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -712,11 +804,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 160
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 235
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -753,11 +845,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Mod
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 171
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 246
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -797,11 +889,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Mod
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 180
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 255
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -832,11 +924,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Modulus
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 190
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 265
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -873,11 +965,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 200
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 275
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -914,11 +1006,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 210
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 285
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -955,11 +1047,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_GreaterThan
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 220
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 295
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -996,11 +1088,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_LessThan
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 230
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 305
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1037,11 +1129,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_GreaterThanOrEqual
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 240
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 315
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1078,11 +1170,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_LessThanOrEqual
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 250
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 325
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1119,11 +1211,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_UnaryNegation
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 259
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 334
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1157,11 +1249,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_UnaryPlus
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 268
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 343
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1195,11 +1287,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Increment
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 277
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 352
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1233,11 +1325,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Decrement
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 286
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 361
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1271,11 +1363,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 296
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 371
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1312,11 +1404,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 306
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 381
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1353,11 +1445,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 316
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 391
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1394,11 +1486,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 326
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 401
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1435,11 +1527,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Modulus
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 336
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 411
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1476,11 +1568,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Modulus
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 346
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 421
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1517,11 +1609,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Zero
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 353
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 428
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1548,11 +1640,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: One
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 357
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 432
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1579,11 +1671,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Up
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 362
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 437
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1610,11 +1702,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Down
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 366
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 441
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1641,11 +1733,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: North
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 370
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 445
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1672,11 +1764,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: South
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 374
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 449
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1703,11 +1795,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: East
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 378
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 453
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1734,11 +1826,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: West
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 382
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 457
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1765,11 +1857,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBox
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 386
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 461
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1796,11 +1888,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Next
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 393
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 468
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1837,11 +1929,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Length
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 406
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 481
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1868,11 +1960,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Normalized
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 410
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 485
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1899,11 +1991,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Center
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 414
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 489
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1930,11 +2022,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Distance
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 421
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 496
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1965,11 +2057,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Lerp
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 431
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 506
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2006,11 +2098,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Min
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 440
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 515
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2041,11 +2133,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Max
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 449
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 524
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2076,11 +2168,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clamp
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 459
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 534
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2114,11 +2206,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Min
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 468
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 543
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2152,11 +2244,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Max
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 477
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 552
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2190,11 +2282,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clamp
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 487
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 562
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2231,11 +2323,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 495
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 570
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2263,11 +2355,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 505
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 580
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2301,11 +2393,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 514
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 589
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2338,11 +2430,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 523
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 598
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2377,11 +2469,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BlockPos.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BlockPos.cs
-    startLine: 534
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 609
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2653,6 +2745,110 @@ references:
   name: Vec3
   nameWithType: Vec3
   fullName: OnixRuntime.Api.Maths.Vec3
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OnixRuntime.Api.Maths.BlockPos.Zero
+  commentId: P:OnixRuntime.Api.Maths.BlockPos.Zero
+  href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_Zero
+  name: Zero
+  nameWithType: BlockPos.Zero
+  fullName: OnixRuntime.Api.Maths.BlockPos.Zero
+- uid: OnixRuntime.Api.Maths.BlockPos.FromString*
+  commentId: Overload:OnixRuntime.Api.Maths.BlockPos.FromString
+  href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_FromString_System_String_System_Boolean_
+  name: FromString
+  nameWithType: BlockPos.FromString
+  fullName: OnixRuntime.Api.Maths.BlockPos.FromString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: OnixRuntime.Api.Maths.BlockPos.Add*
   commentId: Overload:OnixRuntime.Api.Maths.BlockPos.Add
   href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_Add_System_Int32_System_Int32_System_Int32_
@@ -2773,17 +2969,6 @@ references:
   - uid: OnixRuntime.Api.Maths.BlockPos.op_Equality*
     name: ==
     href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_op_Equality_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_Maths_BlockPos_
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: OnixRuntime.Api.Maths.BlockPos.op_Inequality*
   commentId: Overload:OnixRuntime.Api.Maths.BlockPos.op_Inequality
   href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_op_Inequality_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_Maths_BlockPos_
@@ -3110,17 +3295,6 @@ references:
   name: ToString
   nameWithType: BlockPos.ToString
   fullName: OnixRuntime.Api.Maths.BlockPos.ToString
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: System.ValueType
   commentId: T:System.ValueType
   parent: System

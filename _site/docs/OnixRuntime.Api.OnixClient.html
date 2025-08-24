@@ -96,20 +96,19 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientScreen.html">OnixClientScreen</a></dt>
-      <dd></dd>
+      <dd><p>Represents an in client screen that you can implement.
+This lets you do proper in-client ui without having to worry about the mods showing up on top.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixClientThemeV3.html">OnixClientThemeV3</a></dt>
-      <dd></dd>
+      <dd><p>Represents the theme colors used by the Onix client (version 3).</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a></dt>
       <dd><p>A module in the onix client.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleList.html">OnixModuleList</a></dt>
-      <dd></dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a></dt>
@@ -119,7 +118,8 @@ Provides a declarative way to define module settings using properties and attrib
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AirAttribute.html">OnixModuleSettingRedirector.AirAttribute</a></dt>
-      <dd><p>Attribute to add vertical spacing (air) in the settings UI.</p>
+      <dd><p>Attribute to add vertical spacing (air) in the settings UI.
+Identical to <a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.GapAttribute.html">OnixModuleSettingRedirector.GapAttribute</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -144,7 +144,8 @@ Provides a declarative way to define module settings using properties and attrib
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.GapAttribute.html">OnixModuleSettingRedirector.GapAttribute</a></dt>
-      <dd><p>Attribute to add vertical spacing (gap) in the settings UI.</p>
+      <dd><p>Attribute to add vertical spacing (gap) in the settings UI.
+Identical to <a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AirAttribute.html">OnixModuleSettingRedirector.AirAttribute</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -204,6 +205,11 @@ Supports various value types including primitives, vectors, colors, and input ke
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModulesList.html">OnixModulesList</a></dt>
+      <dd><p>Represents a list of Onix modules with various wrappers and helper functions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.html">OnixSetting</a></dt>
       <dd><p>Represents a base setting for an Onix module.</p>
 </dd>
@@ -226,7 +232,8 @@ You must create a class that inherits from this and implement the Render and Get
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingTypeExtensions.html">OnixSettingTypeExtensions</a></dt>
-      <dd></dd>
+      <dd><p>Provides extension methods for the OnixSettingType enumeration.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html">OnixSettingValueAdapter</a></dt>
@@ -236,7 +243,8 @@ Provides common functionality for converting between property values and setting
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SettingNameInfo.html">OnixSettingValueAdapter.SettingNameInfo</a></dt>
-      <dd></dd>
+      <dd><p>Contains information about a setting's name and description.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.html">OnixSettingValueAdapterRegistry</a></dt>
@@ -246,7 +254,8 @@ Provides functionality to register, retrieve, and manage adapters for different 
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSettingsList.html">OnixSettingsList</a></dt>
-      <dd></dd>
+      <dd><p>Represents a list of Onix settings with various wrappers and helper functions.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixWaypoint.html">OnixWaypoint</a></dt>
@@ -255,15 +264,20 @@ Provides functionality to register, retrieve, and manage adapters for different 
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixWaypointManager.html">OnixWaypointManager</a></dt>
-      <dd></dd>
+      <dd><p>Manages waypoints for the Onix client.
+Make sure you check for <a class="xref" href="OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Enabled">Enabled</a> before using any waypoints.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.html">SettingAlreadyHasAParentException</a></dt>
-      <dd></dd>
+      <dd><p>Exception thrown when attempting to add a setting that already has a parent.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.WaypointsNotEnabledException.html">WaypointsNotEnabledException</a></dt>
-      <dd></dd>
+      <dd><p>Thrown when the waypoints are not enabled.
+The waypoints are per world and not active unless the mod is enabled.</p>
+</dd>
     </dl>
     <h3 id="enums">
 Enums
@@ -298,7 +312,8 @@ Delegates
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleVisual.RenderDelegate.html">OnixModuleVisual.RenderDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Represents a render delegate for the visual module.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate.html">OnixSetting.SettingChangedDelegate</a></dt>

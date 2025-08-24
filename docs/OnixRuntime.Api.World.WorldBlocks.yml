@@ -5,7 +5,14 @@ items:
   id: WorldBlocks
   parent: OnixRuntime.Api.World
   children:
+  - OnixRuntime.Api.World.WorldBlocks.CreateForClient(System.Boolean,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.World.WorldBlocks.CreateForServer(System.Boolean,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.World.WorldBlocks.CreateFromDimension(OnixRuntime.Api.World.Dimension,System.Boolean,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.World.WorldBlocks.CreateFromOther(OnixRuntime.Api.World.WorldBlocks,System.Boolean,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks(OnixRuntime.Api.World.WorldChunks,System.Boolean,System.Boolean,System.Boolean)
   - OnixRuntime.Api.World.WorldBlocks.Dimension
+  - OnixRuntime.Api.World.WorldBlocks.Dispose
+  - OnixRuntime.Api.World.WorldBlocks.Finalize
   - OnixRuntime.Api.World.WorldBlocks.GetBiome(OnixRuntime.Api.Maths.BlockPos)
   - OnixRuntime.Api.World.WorldBlocks.GetBiomeTintedColors(OnixRuntime.Api.Maths.BlockPos)
   - OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)
@@ -17,6 +24,7 @@ items:
   - OnixRuntime.Api.World.WorldBlocks.GetCollisions(OnixRuntime.Api.Maths.BlockPos,System.Boolean)
   - OnixRuntime.Api.World.WorldBlocks.GetCollisions(OnixRuntime.Api.Maths.BoundingBox,System.Boolean)
   - OnixRuntime.Api.World.WorldBlocks.GetMapColor(OnixRuntime.Api.Maths.BlockPos)
+  - OnixRuntime.Api.World.WorldBlocks.IsClientSide
   - OnixRuntime.Api.World.WorldBlocks.MaxHeight
   - OnixRuntime.Api.World.WorldBlocks.MinHeight
   - OnixRuntime.Api.World.WorldBlocks.Raycast(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)
@@ -33,26 +41,32 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WorldBlocks
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 37
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 38
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
-  summary: Provides access to world blocks, including block retrieval, setting, biome, lighting, collisions, and raycasting.
+  summary: >-
+    Provides access to world blocks, including block retrieval, setting, biome, lighting, collisions, and raycasting.
+
+    You only need to dispose of this when you create your own. Note that you should probably create it on the thread you plan on using it on.
   example: []
   syntax:
-    content: 'public class WorldBlocks : MemoryAddressContainer'
-    content.vb: Public Class WorldBlocks Inherits MemoryAddressContainer
+    content: 'public class WorldBlocks : MemoryAddressContainer, IDisposable'
+    content.vb: Public Class WorldBlocks Inherits MemoryAddressContainer Implements IDisposable
   inheritance:
   - System.Object
   - OnixRuntime.Api.Internal.MemoryAddressContainer
+  implements:
+  - System.IDisposable
   inheritedMembers:
-  - System.Object.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
@@ -71,11 +85,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dimension
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 62
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 66
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -102,11 +116,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: World
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 66
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 70
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -133,11 +147,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MinHeight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 71
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 75
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -164,11 +178,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MaxHeight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 75
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 79
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -181,6 +195,37 @@ items:
       type: System.Int32
     content.vb: Public ReadOnly Property MaxHeight As Integer
   overload: OnixRuntime.Api.World.WorldBlocks.MaxHeight*
+- uid: OnixRuntime.Api.World.WorldBlocks.IsClientSide
+  commentId: P:OnixRuntime.Api.World.WorldBlocks.IsClientSide
+  id: IsClientSide
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: IsClientSide
+  nameWithType: WorldBlocks.IsClientSide
+  fullName: OnixRuntime.Api.World.WorldBlocks.IsClientSide
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsClientSide
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 83
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Tells you if this instance is for the client side.
+  example: []
+  syntax:
+    content: public bool IsClientSide { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsClientSide As Boolean
+  overload: OnixRuntime.Api.World.WorldBlocks.IsClientSide*
 - uid: OnixRuntime.Api.World.WorldBlocks.WorldChunks
   commentId: P:OnixRuntime.Api.World.WorldBlocks.WorldChunks
   id: WorldChunks
@@ -195,11 +240,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WorldChunks
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 79
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 87
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -226,11 +271,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 92
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 100
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -261,11 +306,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 100
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 108
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -305,11 +350,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetBlockEntity
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 106
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 114
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -340,11 +385,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetBlockEntity
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 114
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 122
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -384,11 +429,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 122
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 130
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -422,11 +467,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetBiome
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 130
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 138
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -457,11 +502,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetChunk
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 139
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 147
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -498,11 +543,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetBrightness
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 147
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 155
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -533,11 +578,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetBiomeTintedColors
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 156
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 164
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -568,11 +613,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetMapColor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 165
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 173
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -603,11 +648,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Raycast
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 180
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 188
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -659,11 +704,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetCollisions
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 191
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 199
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -703,11 +748,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldBlocks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetCollisions
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldBlocks.cs
-    startLine: 201
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 209
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -733,6 +778,347 @@ items:
   nameWithType.vb: WorldBlocks.GetCollisions(BlockPos, Boolean)
   fullName.vb: OnixRuntime.Api.World.WorldBlocks.GetCollisions(OnixRuntime.Api.Maths.BlockPos, Boolean)
   name.vb: GetCollisions(BlockPos, Boolean)
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateFromDimension(OnixRuntime.Api.World.Dimension,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.CreateFromDimension(OnixRuntime.Api.World.Dimension,System.Boolean,System.Boolean,System.Boolean)
+  id: CreateFromDimension(OnixRuntime.Api.World.Dimension,System.Boolean,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: CreateFromDimension(Dimension, bool, bool, bool)
+  nameWithType: WorldBlocks.CreateFromDimension(Dimension, bool, bool, bool)
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateFromDimension(OnixRuntime.Api.World.Dimension, bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CreateFromDimension
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 230
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    Creates a new instance of world <xref href="OnixRuntime.Api.World.WorldBlocks" data-throw-if-not-resolved="false"></xref>.
+
+    You should call this on the thread you plan on using it on.
+
+    Which might make this method difficult to utilize since you can't access a lot of those objects if not in the main thread.
+
+    Anything regarding this method or using its result might be unstable if you don't use it exactly how the game approves.
+
+    You should keep the default parameters for most cases, don't forget to <xref href="OnixRuntime.Api.World.WorldBlocks.Dispose" data-throw-if-not-resolved="false"></xref> it when you are done using it.
+
+    MAKE SURE TO PUT try-catches around your code if you do this in a new threads, uncaught exceptions will crash the whole game.
+  example: []
+  syntax:
+    content: public static WorldBlocks CreateFromDimension(Dimension dimension, bool isPublic = false, bool allowUnpopulatedChunks = false, bool allowClientTickingChanges = false)
+    parameters:
+    - id: dimension
+      type: OnixRuntime.Api.World.Dimension
+      description: The dimension to gather the information about.
+    - id: isPublic
+      type: System.Boolean
+      description: If this source should announce itself for other event listeners.
+    - id: allowUnpopulatedChunks
+      type: System.Boolean
+      description: If chunks that aren't populated allowed.
+    - id: allowClientTickingChanges
+      type: System.Boolean
+      description: If changes made by the client, maybe as a prediction are accepted. Or maybe you cant make changes on client ticks, not sure.
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+      description: The new world blocks, or null if it failed to make one.
+    content.vb: Public Shared Function CreateFromDimension(dimension As Dimension, isPublic As Boolean = False, allowUnpopulatedChunks As Boolean = False, allowClientTickingChanges As Boolean = False) As WorldBlocks
+  overload: OnixRuntime.Api.World.WorldBlocks.CreateFromDimension*
+  nameWithType.vb: WorldBlocks.CreateFromDimension(Dimension, Boolean, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.World.WorldBlocks.CreateFromDimension(OnixRuntime.Api.World.Dimension, Boolean, Boolean, Boolean)
+  name.vb: CreateFromDimension(Dimension, Boolean, Boolean, Boolean)
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks(OnixRuntime.Api.World.WorldChunks,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks(OnixRuntime.Api.World.WorldChunks,System.Boolean,System.Boolean,System.Boolean)
+  id: CreateFromWorldChunks(OnixRuntime.Api.World.WorldChunks,System.Boolean,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: CreateFromWorldChunks(WorldChunks, bool, bool, bool)
+  nameWithType: WorldBlocks.CreateFromWorldChunks(WorldChunks, bool, bool, bool)
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks(OnixRuntime.Api.World.WorldChunks, bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CreateFromWorldChunks
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 247
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    Creates a new instance of world <xref href="OnixRuntime.Api.World.WorldBlocks" data-throw-if-not-resolved="false"></xref>.
+
+    You should call this on the thread you plan on using it on.
+
+    Which might make this method difficult to utilize since you can't access a lot of those objects if not in the main thread.
+
+    Anything regarding this method or using its result might be unstable if you don't use it exactly how the game approves.
+
+    You should keep the default parameters for most cases, don't forget to <xref href="OnixRuntime.Api.World.WorldBlocks.Dispose" data-throw-if-not-resolved="false"></xref> it when you are done using it.
+
+    MAKE SURE TO PUT try-catches around your code if you do this in a new threads, uncaught exceptions will crash the whole game.
+  example: []
+  syntax:
+    content: public static WorldBlocks CreateFromWorldChunks(WorldChunks chunks, bool isPublic = false, bool allowUnpopulatedChunks = false, bool allowClientTickingChanges = false)
+    parameters:
+    - id: chunks
+      type: OnixRuntime.Api.World.WorldChunks
+      description: The world chunks to gather the information about.
+    - id: isPublic
+      type: System.Boolean
+      description: If this source should announce itself for other event listeners.
+    - id: allowUnpopulatedChunks
+      type: System.Boolean
+      description: If chunks that aren't populated allowed.
+    - id: allowClientTickingChanges
+      type: System.Boolean
+      description: If changes made by the client, maybe as a prediction are accepted. Or maybe you cant make changes on client ticks, not sure.
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+      description: The new world blocks, or null if it failed to make one.
+    content.vb: Public Shared Function CreateFromWorldChunks(chunks As WorldChunks, isPublic As Boolean = False, allowUnpopulatedChunks As Boolean = False, allowClientTickingChanges As Boolean = False) As WorldBlocks
+  overload: OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks*
+  nameWithType.vb: WorldBlocks.CreateFromWorldChunks(WorldChunks, Boolean, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks(OnixRuntime.Api.World.WorldChunks, Boolean, Boolean, Boolean)
+  name.vb: CreateFromWorldChunks(WorldChunks, Boolean, Boolean, Boolean)
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateFromOther(OnixRuntime.Api.World.WorldBlocks,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.CreateFromOther(OnixRuntime.Api.World.WorldBlocks,System.Boolean,System.Boolean,System.Boolean)
+  id: CreateFromOther(OnixRuntime.Api.World.WorldBlocks,System.Boolean,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: CreateFromOther(WorldBlocks, bool, bool, bool)
+  nameWithType: WorldBlocks.CreateFromOther(WorldBlocks, bool, bool, bool)
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateFromOther(OnixRuntime.Api.World.WorldBlocks, bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CreateFromOther
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 264
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    Creates a new instance of world <xref href="OnixRuntime.Api.World.WorldBlocks" data-throw-if-not-resolved="false"></xref>.
+
+    You should call this on the thread you plan on using it on.
+
+    Which might make this method difficult to utilize since you can't access a lot of those objects if not in the main thread.
+
+    Anything regarding this method or using its result might be unstable if you don't use it exactly how the game approves.
+
+    You should keep the default parameters for most cases, don't forget to <xref href="OnixRuntime.Api.World.WorldBlocks.Dispose" data-throw-if-not-resolved="false"></xref> it when you are done using it.
+
+    MAKE SURE TO PUT try-catches around your code if you do this in a new threads, uncaught exceptions will crash the whole game.
+  example: []
+  syntax:
+    content: public static WorldBlocks CreateFromOther(WorldBlocks region, bool isPublic = false, bool allowUnpopulatedChunks = false, bool allowClientTickingChanges = false)
+    parameters:
+    - id: region
+      type: OnixRuntime.Api.World.WorldBlocks
+      description: The other <xref href="OnixRuntime.Api.World.WorldBlocks" data-throw-if-not-resolved="false"></xref> to gather the information about.
+    - id: isPublic
+      type: System.Boolean
+      description: If this source should announce itself for other event listeners.
+    - id: allowUnpopulatedChunks
+      type: System.Boolean
+      description: If chunks that aren't populated allowed.
+    - id: allowClientTickingChanges
+      type: System.Boolean
+      description: If changes made by the client, maybe as a prediction are accepted. Or maybe you cant make changes on client ticks, not sure.
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+      description: The new world blocks, or null if it failed to make one.
+    content.vb: Public Shared Function CreateFromOther(region As WorldBlocks, isPublic As Boolean = False, allowUnpopulatedChunks As Boolean = False, allowClientTickingChanges As Boolean = False) As WorldBlocks
+  overload: OnixRuntime.Api.World.WorldBlocks.CreateFromOther*
+  nameWithType.vb: WorldBlocks.CreateFromOther(WorldBlocks, Boolean, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.World.WorldBlocks.CreateFromOther(OnixRuntime.Api.World.WorldBlocks, Boolean, Boolean, Boolean)
+  name.vb: CreateFromOther(WorldBlocks, Boolean, Boolean, Boolean)
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateForClient(System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.CreateForClient(System.Boolean,System.Boolean,System.Boolean)
+  id: CreateForClient(System.Boolean,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: CreateForClient(bool, bool, bool)
+  nameWithType: WorldBlocks.CreateForClient(bool, bool, bool)
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateForClient(bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CreateForClient
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 279
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    Creates a new instance of world <xref href="OnixRuntime.Api.World.WorldBlocks" data-throw-if-not-resolved="false"></xref> for the client.
+
+    You should call this on the thread you plan on using it on.
+
+    Anything regarding this method or using its result might be unstable if you don't use it exactly how the game approves.
+
+    You should keep the default parameters for most cases, don't forget to <xref href="OnixRuntime.Api.World.WorldBlocks.Dispose" data-throw-if-not-resolved="false"></xref> it when you are done using it.
+
+    MAKE SURE TO PUT try-catches around your code if you do this in a new threads, uncaught exceptions will crash the whole game.
+  example: []
+  syntax:
+    content: public static WorldBlocks CreateForClient(bool isPublic = false, bool allowUnpopulatedChunks = false, bool allowClientTickingChanges = false)
+    parameters:
+    - id: isPublic
+      type: System.Boolean
+      description: If this source should announce itself for other event listeners.
+    - id: allowUnpopulatedChunks
+      type: System.Boolean
+      description: If chunks that aren't populated allowed.
+    - id: allowClientTickingChanges
+      type: System.Boolean
+      description: If changes made by the client, maybe as a prediction are accepted. Or maybe you cant make changes on client ticks, not sure.
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+      description: The new world blocks, or null if it failed to make one.
+    content.vb: Public Shared Function CreateForClient(isPublic As Boolean = False, allowUnpopulatedChunks As Boolean = False, allowClientTickingChanges As Boolean = False) As WorldBlocks
+  overload: OnixRuntime.Api.World.WorldBlocks.CreateForClient*
+  nameWithType.vb: WorldBlocks.CreateForClient(Boolean, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.World.WorldBlocks.CreateForClient(Boolean, Boolean, Boolean)
+  name.vb: CreateForClient(Boolean, Boolean, Boolean)
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateForServer(System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.CreateForServer(System.Boolean,System.Boolean,System.Boolean)
+  id: CreateForServer(System.Boolean,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: CreateForServer(bool, bool, bool)
+  nameWithType: WorldBlocks.CreateForServer(bool, bool, bool)
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateForServer(bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CreateForServer
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 294
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    Creates a new instance of world <xref href="OnixRuntime.Api.World.WorldBlocks" data-throw-if-not-resolved="false"></xref> for the server.
+
+    You should call this on the thread you plan on using it on.
+
+    Anything regarding this method or using its result might be unstable if you don't use it exactly how the game approves.
+
+    You should keep the default parameters for most cases, don't forget to <xref href="OnixRuntime.Api.World.WorldBlocks.Dispose" data-throw-if-not-resolved="false"></xref> it when you are done using it.
+
+    MAKE SURE TO PUT try-catches around your code if you do this in a new threads, uncaught exceptions will crash the whole game.
+  example: []
+  syntax:
+    content: public static WorldBlocks CreateForServer(bool isPublic = false, bool allowUnpopulatedChunks = false, bool allowClientTickingChanges = false)
+    parameters:
+    - id: isPublic
+      type: System.Boolean
+      description: If this source should announce itself for other event listeners.
+    - id: allowUnpopulatedChunks
+      type: System.Boolean
+      description: If chunks that aren't populated allowed.
+    - id: allowClientTickingChanges
+      type: System.Boolean
+      description: If changes made by the client, maybe as a prediction are accepted. Or maybe you cant make changes on client ticks, not sure.
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+      description: The new world blocks, or null if it failed to make one.
+    content.vb: Public Shared Function CreateForServer(isPublic As Boolean = False, allowUnpopulatedChunks As Boolean = False, allowClientTickingChanges As Boolean = False) As WorldBlocks
+  overload: OnixRuntime.Api.World.WorldBlocks.CreateForServer*
+  nameWithType.vb: WorldBlocks.CreateForServer(Boolean, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.World.WorldBlocks.CreateForServer(Boolean, Boolean, Boolean)
+  name.vb: CreateForServer(Boolean, Boolean, Boolean)
+- uid: OnixRuntime.Api.World.WorldBlocks.Finalize
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.Finalize
+  id: Finalize
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: ~WorldBlocks()
+  nameWithType: WorldBlocks.~WorldBlocks()
+  fullName: OnixRuntime.Api.World.WorldBlocks.~WorldBlocks()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Finalize
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 302
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Disposes the Worldblocks instance if it has been made by the user.
+  example: []
+  syntax:
+    content: protected ~WorldBlocks()
+    content.vb: 'Protected '
+  overload: OnixRuntime.Api.World.WorldBlocks.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: OnixRuntime.Api.World.WorldBlocks.Dispose
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.Dispose
+  id: Dispose
+  parent: OnixRuntime.Api.World.WorldBlocks
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: WorldBlocks.Dispose()
+  fullName: OnixRuntime.Api.World.WorldBlocks.Dispose()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/WorldBlocks.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Dispose
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldBlocks.cs
+    startLine: 308
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: Disposes of the instance, releasing any unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OnixRuntime.Api.World.WorldBlocks.Dispose*
+  implements:
+  - System.IDisposable.Dispose
 references:
 - uid: OnixRuntime.Api.World
   commentId: N:OnixRuntime.Api.World
@@ -782,22 +1168,60 @@ references:
   name: MemoryAddressContainer
   nameWithType: MemoryAddressContainer
   fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
   name.vb: Equals(Object)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -805,15 +1229,33 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
@@ -859,30 +1301,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
@@ -1087,6 +1505,23 @@ references:
   name: MaxHeight
   nameWithType: WorldBlocks.MaxHeight
   fullName: OnixRuntime.Api.World.WorldBlocks.MaxHeight
+- uid: OnixRuntime.Api.World.WorldBlocks.IsClientSide*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.IsClientSide
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_IsClientSide
+  name: IsClientSide
+  nameWithType: WorldBlocks.IsClientSide
+  fullName: OnixRuntime.Api.World.WorldBlocks.IsClientSide
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: OnixRuntime.Api.World.WorldBlocks.WorldChunks*
   commentId: Overload:OnixRuntime.Api.World.WorldBlocks.WorldChunks
   href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_WorldChunks
@@ -1225,17 +1660,6 @@ references:
   name: ChunkPos
   nameWithType: ChunkPos
   fullName: OnixRuntime.Api.Maths.ChunkPos
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: OnixRuntime.Api.World.BrightnessLevels
   commentId: T:OnixRuntime.Api.World.BrightnessLevels
   parent: OnixRuntime.Api.World
@@ -1327,5 +1751,99 @@ references:
   - uid: OnixRuntime.Api.Maths.BoundingBox
     name: BoundingBox
     href: OnixRuntime.Api.Maths.BoundingBox.html
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.World.WorldBlocks
+  commentId: T:OnixRuntime.Api.World.WorldBlocks
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.WorldBlocks.html
+  name: WorldBlocks
+  nameWithType: WorldBlocks
+  fullName: OnixRuntime.Api.World.WorldBlocks
+- uid: OnixRuntime.Api.World.WorldBlocks.Dispose
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.Dispose
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Dispose
+  name: Dispose()
+  nameWithType: WorldBlocks.Dispose()
+  fullName: OnixRuntime.Api.World.WorldBlocks.Dispose()
+  spec.csharp:
+  - uid: OnixRuntime.Api.World.WorldBlocks.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.World.WorldBlocks.Dispose
+    name: Dispose
+    href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Dispose
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateFromDimension*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.CreateFromDimension
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateFromDimension_OnixRuntime_Api_World_Dimension_System_Boolean_System_Boolean_System_Boolean_
+  name: CreateFromDimension
+  nameWithType: WorldBlocks.CreateFromDimension
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateFromDimension
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateFromWorldChunks_OnixRuntime_Api_World_WorldChunks_System_Boolean_System_Boolean_System_Boolean_
+  name: CreateFromWorldChunks
+  nameWithType: WorldBlocks.CreateFromWorldChunks
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateFromWorldChunks
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateFromOther*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.CreateFromOther
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateFromOther_OnixRuntime_Api_World_WorldBlocks_System_Boolean_System_Boolean_System_Boolean_
+  name: CreateFromOther
+  nameWithType: WorldBlocks.CreateFromOther
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateFromOther
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateForClient*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.CreateForClient
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateForClient_System_Boolean_System_Boolean_System_Boolean_
+  name: CreateForClient
+  nameWithType: WorldBlocks.CreateForClient
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateForClient
+- uid: OnixRuntime.Api.World.WorldBlocks.CreateForServer*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.CreateForServer
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_CreateForServer_System_Boolean_System_Boolean_System_Boolean_
+  name: CreateForServer
+  nameWithType: WorldBlocks.CreateForServer
+  fullName: OnixRuntime.Api.World.WorldBlocks.CreateForServer
+- uid: OnixRuntime.Api.World.WorldBlocks.Finalize*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.Finalize
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Finalize
+  name: ~WorldBlocks
+  nameWithType: WorldBlocks.~WorldBlocks
+  fullName: OnixRuntime.Api.World.WorldBlocks.~WorldBlocks
+  spec.csharp:
+  - name: "~"
+  - uid: OnixRuntime.Api.World.WorldBlocks.Finalize*
+    name: WorldBlocks
+    href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Finalize
+- uid: OnixRuntime.Api.World.WorldBlocks.Dispose*
+  commentId: Overload:OnixRuntime.Api.World.WorldBlocks.Dispose
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Dispose
+  name: Dispose
+  nameWithType: WorldBlocks.Dispose
+  fullName: OnixRuntime.Api.World.WorldBlocks.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
   - name: (
   - name: )

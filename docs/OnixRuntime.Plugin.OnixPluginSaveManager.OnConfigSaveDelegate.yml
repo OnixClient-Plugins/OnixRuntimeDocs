@@ -15,20 +15,32 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnConfigSaveDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 127
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 142
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: >-
+    Delegate for handling configuration save events.
+
+    Return a JSON representation of what you need to save, it will be given back in <xref href="OnixRuntime.Plugin.OnixPluginSaveManager.ConfigLoaded" data-throw-if-not-resolved="false"></xref>
+  example: []
   syntax:
     content: public delegate JsonNode? OnixPluginSaveManager.OnConfigSaveDelegate()
     return:
       type: System.Text.Json.Nodes.JsonNode
+      description: The configuration data to save.
     content.vb: Public Delegate Function OnixPluginSaveManager.OnConfigSaveDelegate() As JsonNode
 references:
+- uid: OnixRuntime.Plugin.OnixPluginSaveManager.ConfigLoaded
+  commentId: E:OnixRuntime.Plugin.OnixPluginSaveManager.ConfigLoaded
+  href: OnixRuntime.Plugin.OnixPluginSaveManager.html#OnixRuntime_Plugin_OnixPluginSaveManager_ConfigLoaded
+  name: ConfigLoaded
+  nameWithType: OnixPluginSaveManager.ConfigLoaded
+  fullName: OnixRuntime.Plugin.OnixPluginSaveManager.ConfigLoaded
 - uid: OnixRuntime.Plugin
   commentId: N:OnixRuntime.Plugin
   href: OnixRuntime.html

@@ -19,14 +19,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NameAttribute
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 311
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 465
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to specify the name, description, and save name for a setting.
+  example: []
   syntax:
     content: 'public class OnixModuleSettingRedirector.NameAttribute : Attribute'
     content.vb: Public Class OnixModuleSettingRedirector.NameAttribute Inherits Attribute
@@ -90,23 +92,28 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 311
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 465
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to specify the name, description, and save name for a setting.
+  example: []
   syntax:
     content: public NameAttribute(string name, string description, string? saveName = null)
     parameters:
     - id: name
       type: System.String
+      description: The display name of the setting.
     - id: description
       type: System.String
+      description: The description of the setting.
     - id: saveName
       type: System.String
+      description: The name used when saving the setting. If null, uses snake_case conversion of property name.
     content.vb: Public Sub New(name As String, description As String, saveName As String = Nothing)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.NameAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.NameAttribute.New(String, String, String)
@@ -126,14 +133,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Name
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 312
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 469
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the display name of the setting.
+  example: []
   syntax:
     content: public string Name { get; }
     parameters: []
@@ -155,14 +164,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Description
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 313
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 474
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the description of the setting.
+  example: []
   syntax:
     content: public string Description { get; }
     parameters: []
@@ -184,14 +195,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 314
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 479
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the save name of the setting.
+  example: []
   syntax:
     content: public string? SaveName { get; }
     parameters: []

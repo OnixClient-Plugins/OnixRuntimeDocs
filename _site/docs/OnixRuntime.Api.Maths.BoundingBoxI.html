@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct BoundingBoxI | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct BoundingBoxI | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents an axis-aligned bounding box (AABB) in 3D space using integer coordinates, with utility methods for containment, intersection, and manipulation. This implementation is inclusive so Maximum will be included.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/dev/apiSpec/new?filename=OnixRuntime_Api_Maths_BoundingBoxI.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Maths.BoundingBoxI%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Maths.BoundingBoxI">
+
+
+
+  <h1 id="OnixRuntime_Api_Maths_BoundingBoxI" data-uid="OnixRuntime.Api.Maths.BoundingBoxI" class="text-break">
+Struct BoundingBoxI  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Maths.html">Maths</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an axis-aligned bounding box (AABB) in 3D space using integer coordinates, with utility methods for containment, intersection, and manipulation.
+This implementation is inclusive so Maximum will be included.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct BoundingBoxI : IEquatable&lt;BoundingBoxI&gt;, IEnumerable&lt;BlockPos&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI__ctor_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI__ctor_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.#ctor(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.Maths.BlockPos)">
+  BoundingBoxI(BlockPos, BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a> struct with the specified minimum and maximum points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI(BlockPos min, BlockPos max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>min</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The minimum point.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The maximum point.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI__ctor_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI__ctor_OnixRuntime_Api_Maths_BoundingBox_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.#ctor(OnixRuntime.Api.Maths.BoundingBox)">
+  BoundingBoxI(BoundingBox)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a> struct from a <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI(BoundingBox box)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The bounding box to convert.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Maximum" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Maximum">
+  Maximum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum (corner) point of the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockPos Maximum</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Minimum" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Minimum">
+  Minimum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The minimum (corner) point of the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockPos Minimum</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Center_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Center*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Center" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Center">
+  Center
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the center point of the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockPos Center { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Empty_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Empty*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Empty" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Empty">
+  Empty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the bounding box is empty (minimum equals maximum).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Empty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Size_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Size*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Size" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the size (width, height, depth) of the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockPos Size { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Volume_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Volume*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Volume" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Volume">
+  Volume
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the volume of the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Volume { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_VolumeI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.VolumeI*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_VolumeI" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.VolumeI">
+  VolumeI
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the volume of the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long VolumeI { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Contains_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Contains*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Contains_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Contains(OnixRuntime.Api.Maths.BlockPos)">
+  Contains(BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the bounding box contains the specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(BlockPos point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The point to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Contains_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Contains*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Contains_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Contains(OnixRuntime.Api.Maths.BoundingBoxI)">
+  Contains(BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the bounding box completely contains another bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(BoundingBoxI box)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd><p>The bounding box to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Equals_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Equals_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Equals(OnixRuntime.Api.Maths.BoundingBoxI)">
+  Equals(BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this bounding box is equal to another bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(BoundingBoxI other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Equals_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Equals*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Equals_System_Object_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this bounding box is equal to another object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_ForEach_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.ForEach*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_ForEach_System_Action_OnixRuntime_Api_Maths_BlockPos__" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.ForEach(System.Action{OnixRuntime.Api.Maths.BlockPos})">
+  ForEach(Action&lt;BlockPos&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes the specified action for each position in the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ForEach(Action&lt;BlockPos&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a>&gt;</dt>
+    <dd><p>The action to execute.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_FromInclusive_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.FromInclusive*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_FromInclusive_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.FromInclusive(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.Maths.BlockPos)">
+  FromInclusive(BlockPos, BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a bounding box adjusted so its maximum is decreased by 1 on each axis.
+This converts an inclusive max representation to an exclusive-style max (useful for iterating ranges).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingBoxI FromInclusive(BlockPos min, BlockPos max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>min</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+    <dt><code>max</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_FromInclusive_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.FromInclusive*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_FromInclusive_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.FromInclusive(OnixRuntime.Api.Maths.BoundingBoxI)">
+  FromInclusive(BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overload that accepts an existing BoundingBoxI and returns an adjusted copy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingBoxI FromInclusive(BoundingBoxI box)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_GetEnumerator_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.GetEnumerator*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_GetEnumerator" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.GetEnumerator">
+  GetEnumerator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an enumerator that iterates through all positions in the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;BlockPos&gt; GetEnumerator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a>&gt;</dt>
+    <dd><p>An enumerator for the bounding box.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_GetHashCode_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.GetHashCode*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_GetHashCode" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_GrowToInclude_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.GrowToInclude*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_GrowToInclude_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.GrowToInclude(OnixRuntime.Api.Maths.BlockPos)">
+  GrowToInclude(BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new bounding box that grows to include the specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI GrowToInclude(BlockPos point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The point to include.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Inflate_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Inflate*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Inflate_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Inflate(OnixRuntime.Api.Maths.BlockPos)">
+  Inflate(BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new bounding box inflated by the specified vector amount in all directions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI Inflate(BlockPos amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The vector amount to inflate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Inflate_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Inflate*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Inflate_System_Int32_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Inflate(System.Int32)">
+  Inflate(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new bounding box inflated by the specified amount in all directions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI Inflate(int amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The amount to inflate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Intersect_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Intersect*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Intersect_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Intersect(OnixRuntime.Api.Maths.BoundingBoxI)">
+  Intersect(BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the intersection of this bounding box with another bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI Intersect(BoundingBoxI box)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd><p>The bounding box to intersect with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Intersects_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Intersects*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Intersects_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Intersects(OnixRuntime.Api.Maths.BoundingBoxI)">
+  Intersects(BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the bounding box intersects with another bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(BoundingBoxI box)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd><p>The bounding box to check for intersection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Merge_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Merge*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Merge_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Merge(OnixRuntime.Api.Maths.BoundingBoxI)">
+  Merge(BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new bounding box that merges this bounding box with another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI Merge(BoundingBoxI other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd><p>The other bounding box.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Offset_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Offset*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Offset_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Offset(OnixRuntime.Api.Maths.BlockPos)">
+  Offset(BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new bounding box offset by the specified vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI Offset(BlockPos offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The offset vector.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_ToFloat_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.ToFloat*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_ToFloat_System_Boolean_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.ToFloat(System.Boolean)">
+  ToFloat(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts this integer bounding box to a floating-point bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBox ToFloat(bool display = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>display</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If you plan on rendering the region of the integer box using this, set this to true.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_ToString_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.ToString*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_ToString" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string representation of the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_Union_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Union*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_Union_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.Union(OnixRuntime.Api.Maths.BoundingBoxI)">
+  Union(BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the union of this bounding box with another bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBoxI Union(BoundingBoxI box)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd><p>The bounding box to union with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_op_Equality_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.op_Equality*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_op_Equality_OnixRuntime_Api_Maths_BoundingBoxI_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.op_Equality(OnixRuntime.Api.Maths.BoundingBoxI,OnixRuntime.Api.Maths.BoundingBoxI)">
+  operator ==(BoundingBoxI, BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two bounding boxes are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(BoundingBoxI a, BoundingBoxI b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Maths_BoundingBoxI_op_Inequality_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.op_Inequality*"></a>
+
+  <h3 id="OnixRuntime_Api_Maths_BoundingBoxI_op_Inequality_OnixRuntime_Api_Maths_BoundingBoxI_OnixRuntime_Api_Maths_BoundingBoxI_" data-uid="OnixRuntime.Api.Maths.BoundingBoxI.op_Inequality(OnixRuntime.Api.Maths.BoundingBoxI,OnixRuntime.Api.Maths.BoundingBoxI)">
+  operator !=(BoundingBoxI, BoundingBoxI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two bounding boxes are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(BoundingBoxI a, BoundingBoxI b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="OnixRuntime.Api.Maths.BoundingBoxI.html">BoundingBoxI</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Maths/BoundingBoxI.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

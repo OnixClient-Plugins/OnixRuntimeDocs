@@ -12,8 +12,8 @@ items:
   - OnixRuntime.Plugin.PluginSettings.LoadSettings(System.String)
   - OnixRuntime.Plugin.PluginSettings.RawConfigurationData
   - OnixRuntime.Plugin.PluginSettings.SaveManager
-  - OnixRuntime.Plugin.PluginSettings.SaveSettings
-  - OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream)
+  - OnixRuntime.Plugin.PluginSettings.SaveSettings(System.Boolean)
+  - OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream,System.Boolean)
   - OnixRuntime.Plugin.PluginSettings.SetConfigurationDataJson(System.String)
   - OnixRuntime.Plugin.PluginSettings.ShouldLoad
   - OnixRuntime.Plugin.PluginSettings.TryCreateSaveManager
@@ -27,11 +27,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 252
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 317
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Enabled
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 256
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 321
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -95,11 +95,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShouldLoad
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 260
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 325
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -126,11 +126,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RawConfigurationData
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 270
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 335
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -157,11 +157,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveManager
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 275
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 340
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -188,11 +188,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetConfigurationDataJson
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 282
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 347
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -219,11 +219,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetConfigurationDataJson
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 297
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 369
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -254,14 +254,19 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 305
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 381
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: >-
+    Initializes a new instance of the <xref href="OnixRuntime.Plugin.PluginSettings" data-throw-if-not-resolved="false"></xref> class.
+
+    You should probably not do that though.
+  example: []
   syntax:
     content: public PluginSettings()
     content.vb: Public Sub New()
@@ -283,11 +288,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LoadSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 321
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 397
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -321,14 +326,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TryCreateSaveManager
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 328
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 407
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: Tries to create the save manager for the plugin's settings, which will also load the plugin's settings file.
+  example: []
   syntax:
     content: public void TryCreateSaveManager()
     content.vb: Public Sub TryCreateSaveManager()
@@ -347,11 +354,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LoadSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 339
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 418
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -368,69 +375,82 @@ items:
       description: The loaded <xref href="OnixRuntime.Plugin.PluginSettings" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Shared Function LoadSettings(stream As Stream) As PluginSettings
   overload: OnixRuntime.Plugin.PluginSettings.LoadSettings*
-- uid: OnixRuntime.Plugin.PluginSettings.SaveSettings
-  commentId: M:OnixRuntime.Plugin.PluginSettings.SaveSettings
-  id: SaveSettings
+- uid: OnixRuntime.Plugin.PluginSettings.SaveSettings(System.Boolean)
+  commentId: M:OnixRuntime.Plugin.PluginSettings.SaveSettings(System.Boolean)
+  id: SaveSettings(System.Boolean)
   parent: OnixRuntime.Plugin.PluginSettings
   langs:
   - csharp
   - vb
-  name: SaveSettings()
-  nameWithType: PluginSettings.SaveSettings()
-  fullName: OnixRuntime.Plugin.PluginSettings.SaveSettings()
+  name: SaveSettings(bool)
+  nameWithType: PluginSettings.SaveSettings(bool)
+  fullName: OnixRuntime.Plugin.PluginSettings.SaveSettings(bool)
   type: Method
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 349
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 429
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
   summary: Serializes the plugin settings to a JSON string.
   example: []
   syntax:
-    content: public string SaveSettings()
+    content: public string SaveSettings(bool includePluginSpecificSettings)
+    parameters:
+    - id: includePluginSpecificSettings
+      type: System.Boolean
+      description: Should it also save plugin specific settings or just generic ones.
     return:
       type: System.String
       description: The JSON string representing the settings.
-    content.vb: Public Function SaveSettings() As String
+    content.vb: Public Function SaveSettings(includePluginSpecificSettings As Boolean) As String
   overload: OnixRuntime.Plugin.PluginSettings.SaveSettings*
-- uid: OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream)
-  commentId: M:OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream)
-  id: SaveSettings(System.IO.Stream)
+  nameWithType.vb: PluginSettings.SaveSettings(Boolean)
+  fullName.vb: OnixRuntime.Plugin.PluginSettings.SaveSettings(Boolean)
+  name.vb: SaveSettings(Boolean)
+- uid: OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream,System.Boolean)
+  commentId: M:OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream,System.Boolean)
+  id: SaveSettings(System.IO.Stream,System.Boolean)
   parent: OnixRuntime.Plugin.PluginSettings
   langs:
   - csharp
   - vb
-  name: SaveSettings(Stream)
-  nameWithType: PluginSettings.SaveSettings(Stream)
-  fullName: OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream)
+  name: SaveSettings(Stream, bool)
+  nameWithType: PluginSettings.SaveSettings(Stream, bool)
+  fullName: OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream, bool)
   type: Method
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 365
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 446
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
   summary: Serializes the plugin settings and writes them to a stream.
   example: []
   syntax:
-    content: public void SaveSettings(Stream stream)
+    content: public void SaveSettings(Stream stream, bool includePluginSpecificSettings)
     parameters:
     - id: stream
       type: System.IO.Stream
       description: The stream to write the settings to.
-    content.vb: Public Sub SaveSettings(stream As Stream)
+    - id: includePluginSpecificSettings
+      type: System.Boolean
+      description: Should it also save plugin specific settings or just generic ones.
+    content.vb: Public Sub SaveSettings(stream As Stream, includePluginSpecificSettings As Boolean)
   overload: OnixRuntime.Plugin.PluginSettings.SaveSettings*
+  nameWithType.vb: PluginSettings.SaveSettings(Stream, Boolean)
+  fullName.vb: OnixRuntime.Plugin.PluginSettings.SaveSettings(System.IO.Stream, Boolean)
+  name.vb: SaveSettings(Stream, Boolean)
 references:
 - uid: OnixRuntime.Plugin
   commentId: N:OnixRuntime.Plugin
@@ -869,7 +889,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.io
 - uid: OnixRuntime.Plugin.PluginSettings.SaveSettings*
   commentId: Overload:OnixRuntime.Plugin.PluginSettings.SaveSettings
-  href: OnixRuntime.Plugin.PluginSettings.html#OnixRuntime_Plugin_PluginSettings_SaveSettings
+  href: OnixRuntime.Plugin.PluginSettings.html#OnixRuntime_Plugin_PluginSettings_SaveSettings_System_Boolean_
   name: SaveSettings
   nameWithType: PluginSettings.SaveSettings
   fullName: OnixRuntime.Plugin.PluginSettings.SaveSettings

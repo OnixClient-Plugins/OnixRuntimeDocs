@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixSettingValueAdapterEnum
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-    startLine: 340
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
+    startLine: 354
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -40,7 +40,7 @@ items:
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetName(System.Reflection.PropertyInfo)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue``1(System.Reflection.PropertyInfo)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandleAirAndProperties(OnixRuntime.Api.OnixClient.OnixModule,System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SettingNameInfo@)
-  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
+  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetChangeCallback(System.Reflection.PropertyInfo)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMinMax``1(System.Reflection.PropertyInfo)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMin``1(System.Reflection.PropertyInfo)
@@ -66,14 +66,15 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ValueType
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-    startLine: 341
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
+    startLine: 355
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
+  summary: Gets the type of value this adapter handles.
   example: []
   syntax:
     content: public override Type ValueType { get; }
@@ -97,11 +98,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultEnumValue
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-    startLine: 342
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
+    startLine: 356
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -124,22 +125,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Initialize
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-    startLine: 344
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
+    startLine: 358
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
+  summary: Initializes the adapter with the specified module and property.
   example: []
   syntax:
     content: public override void Initialize(OnixModule mod, PropertyInfo property)
     parameters:
     - id: mod
       type: OnixRuntime.Api.OnixClient.OnixModule
+      description: The OnixModule to initialize with.
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The PropertyInfo for the property being adapted.
     content.vb: Public Overrides Sub Initialize([mod] As OnixModule, [property] As PropertyInfo)
   overridden: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.Initialize(OnixRuntime.Api.OnixClient.OnixModule,System.Reflection.PropertyInfo)
   overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterEnum.Initialize*
@@ -157,19 +161,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetValue
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-    startLine: 360
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
+    startLine: 374
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
+  summary: Gets the current value of the setting.
   example: []
   syntax:
     content: public override object? GetValue()
     return:
       type: System.Object
+      description: The current setting value.
     content.vb: Public Overrides Function GetValue() As Object
   overridden: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue
   overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterEnum.GetValue*
@@ -187,20 +193,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetValue
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
-    startLine: 364
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingEnum.cs
+    startLine: 378
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
+  summary: Sets the value of the setting.
   example: []
   syntax:
     content: public override void SetValue(object? value)
     parameters:
     - id: value
       type: System.Object
+      description: The value to set.
     content.vb: Public Overrides Sub SetValue(value As Object)
   overridden: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SetValue(System.Object)
   overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterEnum.SetValue*
@@ -398,33 +406,43 @@ references:
     name: SettingNameInfo
     href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SettingNameInfo.html
   - name: )
-- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
   parent: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
   isExternal: true
-  href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_
-  name: HandlePostProcessing(PropertyInfo)
-  nameWithType: OnixSettingValueAdapter.HandlePostProcessing(PropertyInfo)
-  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
+  href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_OnixRuntime_Api_OnixClient_OnixModule_
+  name: HandlePostProcessing(PropertyInfo, OnixModule)
+  nameWithType: OnixSettingValueAdapter.HandlePostProcessing(PropertyInfo, OnixModule)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo, OnixRuntime.Api.OnixClient.OnixModule)
   spec.csharp:
-  - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
+  - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
     name: HandlePostProcessing
-    href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_
+    href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_OnixRuntime_Api_OnixClient_OnixModule_
   - name: (
   - uid: System.Reflection.PropertyInfo
     name: PropertyInfo
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixModule
+    name: OnixModule
+    href: OnixRuntime.Api.OnixClient.OnixModule.html
   - name: )
   spec.vb:
-  - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
+  - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
     name: HandlePostProcessing
-    href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_
+    href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_OnixRuntime_Api_OnixClient_OnixModule_
   - name: (
   - uid: System.Reflection.PropertyInfo
     name: PropertyInfo
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.reflection.propertyinfo
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.OnixModule
+    name: OnixModule
+    href: OnixRuntime.Api.OnixClient.OnixModule.html
   - name: )
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetChangeCallback(System.Reflection.PropertyInfo)
   commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetChangeCallback(System.Reflection.PropertyInfo)

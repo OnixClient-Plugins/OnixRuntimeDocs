@@ -5,7 +5,8 @@ items:
   id: OnixModuleSettingRedirector.CategoryAttribute
   parent: OnixRuntime.Api.OnixClient
   children:
-  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor(System.String)
+  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor(System.String,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting
   - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.Category
   langs:
   - csharp
@@ -17,14 +18,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CategoryAttribute
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 474
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 852
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to specify the category for grouping settings.
+  example: []
   syntax:
     content: 'public class OnixModuleSettingRedirector.CategoryAttribute : Attribute'
     content.vb: Public Class OnixModuleSettingRedirector.CategoryAttribute Inherits Attribute
@@ -74,38 +77,44 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor(System.String)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor(System.String)
-  id: '#ctor(System.String)'
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
   parent: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute
   langs:
   - csharp
   - vb
-  name: CategoryAttribute(string)
-  nameWithType: OnixModuleSettingRedirector.CategoryAttribute.CategoryAttribute(string)
-  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.CategoryAttribute(string)
+  name: CategoryAttribute(string, bool)
+  nameWithType: OnixModuleSettingRedirector.CategoryAttribute.CategoryAttribute(string, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.CategoryAttribute(string, bool)
   type: Constructor
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 474
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 852
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to specify the category for grouping settings.
+  example: []
   syntax:
-    content: public CategoryAttribute(string category)
+    content: public CategoryAttribute(string category, bool afterSetting = false)
     parameters:
     - id: category
       type: System.String
-    content.vb: Public Sub New(category As String)
+      description: The name of the category.
+    - id: afterSetting
+      type: System.Boolean
+      description: If this gap should be added after the setting, defaults to before.
+    content.vb: Public Sub New(category As String, afterSetting As Boolean = False)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor*
-  nameWithType.vb: OnixModuleSettingRedirector.CategoryAttribute.New(String)
-  fullName.vb: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.New(String)
-  name.vb: New(String)
+  nameWithType.vb: OnixModuleSettingRedirector.CategoryAttribute.New(String, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.New(String, Boolean)
+  name.vb: New(String, Boolean)
 - uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.Category
   commentId: P:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.Category
   id: Category
@@ -120,14 +129,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Category
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 475
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 856
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the name of the category.
+  example: []
   syntax:
     content: public string Category { get; }
     parameters: []
@@ -135,6 +146,37 @@ items:
       type: System.String
     content.vb: Public ReadOnly Property Category As String
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.Category*
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting
+  id: AfterSetting
+  parent: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute
+  langs:
+  - csharp
+  - vb
+  name: AfterSetting
+  nameWithType: OnixModuleSettingRedirector.CategoryAttribute.AfterSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AfterSetting
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 861
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Whether the air should be after or before the setting.
+  example: []
+  syntax:
+    content: public bool AfterSetting { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property AfterSetting As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting*
 references:
 - uid: OnixRuntime.Api.OnixClient
   commentId: N:OnixRuntime.Api.OnixClient
@@ -1962,7 +2004,7 @@ references:
   fullName: System
 - uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.#ctor
-  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_CategoryAttribute__ctor_System_String_
+  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_CategoryAttribute__ctor_System_String_System_Boolean_
   name: CategoryAttribute
   nameWithType: OnixModuleSettingRedirector.CategoryAttribute.CategoryAttribute
   fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.CategoryAttribute
@@ -1980,9 +2022,26 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.Category*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.Category
   href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_CategoryAttribute_Category
   name: Category
   nameWithType: OnixModuleSettingRedirector.CategoryAttribute.Category
   fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.Category
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting
+  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_CategoryAttribute_AfterSetting
+  name: AfterSetting
+  nameWithType: OnixModuleSettingRedirector.CategoryAttribute.AfterSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute.AfterSetting

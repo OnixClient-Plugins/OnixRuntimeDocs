@@ -1,0 +1,181 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Plugin.PluginLoadMode
+  commentId: T:OnixRuntime.Plugin.PluginLoadMode
+  id: PluginLoadMode
+  parent: OnixRuntime.Plugin
+  children:
+  - OnixRuntime.Plugin.PluginLoadMode.ForceLoad
+  - OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndDisable
+  - OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndEnable
+  - OnixRuntime.Plugin.PluginLoadMode.LeaveAsIs
+  langs:
+  - csharp
+  - vb
+  name: PluginLoadMode
+  nameWithType: PluginLoadMode
+  fullName: OnixRuntime.Plugin.PluginLoadMode
+  type: Enum
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PublicPluginManager.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PluginLoadMode
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 8
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Specifies the various modes for loading plugins.
+  example: []
+  syntax:
+    content: public enum PluginLoadMode
+    content.vb: Public Enum PluginLoadMode
+- uid: OnixRuntime.Plugin.PluginLoadMode.LeaveAsIs
+  commentId: F:OnixRuntime.Plugin.PluginLoadMode.LeaveAsIs
+  id: LeaveAsIs
+  parent: OnixRuntime.Plugin.PluginLoadMode
+  langs:
+  - csharp
+  - vb
+  name: LeaveAsIs
+  nameWithType: PluginLoadMode.LeaveAsIs
+  fullName: OnixRuntime.Plugin.PluginLoadMode.LeaveAsIs
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PublicPluginManager.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: LeaveAsIs
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 14
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: >-
+    Leaves the plugin as it is, without loading / unloading it. 
+
+    Meaning it will do the action but not save it to its settings.
+
+    If you load a plugin with this mode, the next time it will not load.
+  example: []
+  syntax:
+    content: LeaveAsIs = 0
+    return:
+      type: OnixRuntime.Plugin.PluginLoadMode
+- uid: OnixRuntime.Plugin.PluginLoadMode.ForceLoad
+  commentId: F:OnixRuntime.Plugin.PluginLoadMode.ForceLoad
+  id: ForceLoad
+  parent: OnixRuntime.Plugin.PluginLoadMode
+  langs:
+  - csharp
+  - vb
+  name: ForceLoad
+  nameWithType: PluginLoadMode.ForceLoad
+  fullName: OnixRuntime.Plugin.PluginLoadMode.ForceLoad
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PublicPluginManager.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ForceLoad
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 18
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Forces the plugin to load.
+  example: []
+  syntax:
+    content: ForceLoad = 1
+    return:
+      type: OnixRuntime.Plugin.PluginLoadMode
+- uid: OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndEnable
+  commentId: F:OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndEnable
+  id: ForceLoadAndEnable
+  parent: OnixRuntime.Plugin.PluginLoadMode
+  langs:
+  - csharp
+  - vb
+  name: ForceLoadAndEnable
+  nameWithType: PluginLoadMode.ForceLoadAndEnable
+  fullName: OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndEnable
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PublicPluginManager.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ForceLoadAndEnable
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 22
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Forces the plugin to load and enables it.
+  example: []
+  syntax:
+    content: ForceLoadAndEnable = 2
+    return:
+      type: OnixRuntime.Plugin.PluginLoadMode
+- uid: OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndDisable
+  commentId: F:OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndDisable
+  id: ForceLoadAndDisable
+  parent: OnixRuntime.Plugin.PluginLoadMode
+  langs:
+  - csharp
+  - vb
+  name: ForceLoadAndDisable
+  nameWithType: PluginLoadMode.ForceLoadAndDisable
+  fullName: OnixRuntime.Plugin.PluginLoadMode.ForceLoadAndDisable
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PublicPluginManager.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ForceLoadAndDisable
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 26
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Forces the plugin to load and have it be disabled.
+  example: []
+  syntax:
+    content: ForceLoadAndDisable = 3
+    return:
+      type: OnixRuntime.Plugin.PluginLoadMode
+references:
+- uid: OnixRuntime.Plugin
+  commentId: N:OnixRuntime.Plugin
+  href: OnixRuntime.html
+  name: OnixRuntime.Plugin
+  nameWithType: OnixRuntime.Plugin
+  fullName: OnixRuntime.Plugin
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Plugin
+    name: Plugin
+    href: OnixRuntime.Plugin.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Plugin
+    name: Plugin
+    href: OnixRuntime.Plugin.html
+- uid: OnixRuntime.Plugin.PluginLoadMode
+  commentId: T:OnixRuntime.Plugin.PluginLoadMode
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.PluginLoadMode.html
+  name: PluginLoadMode
+  nameWithType: PluginLoadMode
+  fullName: OnixRuntime.Plugin.PluginLoadMode

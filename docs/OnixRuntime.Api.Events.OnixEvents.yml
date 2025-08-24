@@ -7,12 +7,14 @@ items:
   children:
   - OnixRuntime.Api.Events.OnixEvents.Audio
   - OnixRuntime.Api.Events.OnixEvents.Common
+  - OnixRuntime.Api.Events.OnixEvents.Game
   - OnixRuntime.Api.Events.OnixEvents.Gui
   - OnixRuntime.Api.Events.OnixEvents.Input
   - OnixRuntime.Api.Events.OnixEvents.LocalServer
   - OnixRuntime.Api.Events.OnixEvents.Player
   - OnixRuntime.Api.Events.OnixEvents.Rendering
   - OnixRuntime.Api.Events.OnixEvents.Session
+  - OnixRuntime.Api.Events.OnixEvents.World
   langs:
   - csharp
   - vb
@@ -23,14 +25,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixEvents
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 3
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 8
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    Root container for all Onix event groups. Provides typed access to
+
+    each domain of events (session, rendering, input, GUI, game, etc.).
+
+    Instantiate once and subscribe to the specific event group(s) you need.
+  example: []
   syntax:
     content: public class OnixEvents
     content.vb: Public Class OnixEvents
@@ -58,14 +67,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Session
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 4
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 12
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Events related to the current session, like joining, leaving and many more.
+  example: []
   syntax:
     content: public OnixEventsSession Session { get; }
     parameters: []
@@ -87,19 +98,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LocalServer
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 5
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 17
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Similar to this for events originating from the local server.
+  example: []
   syntax:
     content: public OnixEventLocalServer LocalServer { get; }
     parameters: []
     return:
-      type: OnixRuntime.Api.Events.OnixEventLocalServer
+      type: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer
     content.vb: Public ReadOnly Property LocalServer As OnixEventLocalServer
   overload: OnixRuntime.Api.Events.OnixEvents.LocalServer*
 - uid: OnixRuntime.Api.Events.OnixEvents.Rendering
@@ -116,14 +129,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Rendering
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 6
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 22
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Rendering related events.
+  example: []
   syntax:
     content: public OnixEventRendering Rendering { get; }
     parameters: []
@@ -145,14 +160,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Input
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 7
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 27
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Input events (keyboard, mouse, controller, moving around)
+  example: []
   syntax:
     content: public OnixEventInputs Input { get; }
     parameters: []
@@ -174,14 +191,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Gui
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 8
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 32
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: GUI related events.
+  example: []
   syntax:
     content: public OnixEventGui Gui { get; }
     parameters: []
@@ -189,6 +208,37 @@ items:
       type: OnixRuntime.Api.Events.OnixEventGui
     content.vb: Public ReadOnly Property Gui As OnixEventGui
   overload: OnixRuntime.Api.Events.OnixEvents.Gui*
+- uid: OnixRuntime.Api.Events.OnixEvents.Game
+  commentId: P:OnixRuntime.Api.Events.OnixEvents.Game
+  id: Game
+  parent: OnixRuntime.Api.Events.OnixEvents
+  langs:
+  - csharp
+  - vb
+  name: Game
+  nameWithType: OnixEvents.Game
+  fullName: OnixRuntime.Api.Events.OnixEvents.Game
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEvents.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Game
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 37
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: Generic game related events.
+  example: []
+  syntax:
+    content: public OnixEventGame Game { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Events.OnixEventGame
+    content.vb: Public ReadOnly Property Game As OnixEventGame
+  overload: OnixRuntime.Api.Events.OnixEvents.Game*
 - uid: OnixRuntime.Api.Events.OnixEvents.Audio
   commentId: P:OnixRuntime.Api.Events.OnixEvents.Audio
   id: Audio
@@ -203,14 +253,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Audio
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 9
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 42
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Audio events, like sounds being played.
+  example: []
   syntax:
     content: public OnixEventAudio Audio { get; }
     parameters: []
@@ -232,14 +284,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Common
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 10
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 47
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Commonly used events.
+  example: []
   syntax:
     content: public OnixEventCommon Common { get; }
     parameters: []
@@ -261,14 +315,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEvents.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Player
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEvents.cs
-    startLine: 11
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 52
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Player-specific events, specifically the local player.
+  example: []
   syntax:
     content: public OnixEventPlayer Player { get; }
     parameters: []
@@ -276,6 +332,37 @@ items:
       type: OnixRuntime.Api.Events.OnixEventPlayer
     content.vb: Public ReadOnly Property Player As OnixEventPlayer
   overload: OnixRuntime.Api.Events.OnixEvents.Player*
+- uid: OnixRuntime.Api.Events.OnixEvents.World
+  commentId: P:OnixRuntime.Api.Events.OnixEvents.World
+  id: World
+  parent: OnixRuntime.Api.Events.OnixEvents
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: OnixEvents.World
+  fullName: OnixRuntime.Api.Events.OnixEvents.World
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEvents.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: World
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEvents.cs
+    startLine: 57
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: World and environment events.
+  example: []
+  syntax:
+    content: public OnixEventWorld World { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Events.OnixEventWorld
+    content.vb: Public ReadOnly Property World As OnixEventWorld
+  overload: OnixRuntime.Api.Events.OnixEvents.World*
 references:
 - uid: OnixRuntime.Api.Events
   commentId: N:OnixRuntime.Api.Events
@@ -563,13 +650,51 @@ references:
   name: LocalServer
   nameWithType: OnixEvents.LocalServer
   fullName: OnixRuntime.Api.Events.OnixEvents.LocalServer
-- uid: OnixRuntime.Api.Events.OnixEventLocalServer
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServer
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServer.html
+- uid: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer
+  commentId: T:OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer
+  parent: OnixRuntime.Api.Events.LocalServer
+  href: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer.html
   name: OnixEventLocalServer
   nameWithType: OnixEventLocalServer
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServer
+  fullName: OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer
+- uid: OnixRuntime.Api.Events.LocalServer
+  commentId: N:OnixRuntime.Api.Events.LocalServer
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Events.LocalServer
+  nameWithType: OnixRuntime.Api.Events.LocalServer
+  fullName: OnixRuntime.Api.Events.LocalServer
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Events
+    name: Events
+    href: OnixRuntime.Api.Events.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.LocalServer
+    name: LocalServer
+    href: OnixRuntime.Api.Events.LocalServer.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Events
+    name: Events
+    href: OnixRuntime.Api.Events.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.LocalServer
+    name: LocalServer
+    href: OnixRuntime.Api.Events.LocalServer.html
 - uid: OnixRuntime.Api.Events.OnixEvents.Rendering*
   commentId: Overload:OnixRuntime.Api.Events.OnixEvents.Rendering
   href: OnixRuntime.Api.Events.OnixEvents.html#OnixRuntime_Api_Events_OnixEvents_Rendering
@@ -609,6 +734,19 @@ references:
   name: OnixEventGui
   nameWithType: OnixEventGui
   fullName: OnixRuntime.Api.Events.OnixEventGui
+- uid: OnixRuntime.Api.Events.OnixEvents.Game*
+  commentId: Overload:OnixRuntime.Api.Events.OnixEvents.Game
+  href: OnixRuntime.Api.Events.OnixEvents.html#OnixRuntime_Api_Events_OnixEvents_Game
+  name: Game
+  nameWithType: OnixEvents.Game
+  fullName: OnixRuntime.Api.Events.OnixEvents.Game
+- uid: OnixRuntime.Api.Events.OnixEventGame
+  commentId: T:OnixRuntime.Api.Events.OnixEventGame
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventGame.html
+  name: OnixEventGame
+  nameWithType: OnixEventGame
+  fullName: OnixRuntime.Api.Events.OnixEventGame
 - uid: OnixRuntime.Api.Events.OnixEvents.Audio*
   commentId: Overload:OnixRuntime.Api.Events.OnixEvents.Audio
   href: OnixRuntime.Api.Events.OnixEvents.html#OnixRuntime_Api_Events_OnixEvents_Audio
@@ -648,3 +786,16 @@ references:
   name: OnixEventPlayer
   nameWithType: OnixEventPlayer
   fullName: OnixRuntime.Api.Events.OnixEventPlayer
+- uid: OnixRuntime.Api.Events.OnixEvents.World*
+  commentId: Overload:OnixRuntime.Api.Events.OnixEvents.World
+  href: OnixRuntime.Api.Events.OnixEvents.html#OnixRuntime_Api_Events_OnixEvents_World
+  name: World
+  nameWithType: OnixEvents.World
+  fullName: OnixRuntime.Api.Events.OnixEvents.World
+- uid: OnixRuntime.Api.Events.OnixEventWorld
+  commentId: T:OnixRuntime.Api.Events.OnixEventWorld
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventWorld.html
+  name: OnixEventWorld
+  nameWithType: OnixEventWorld
+  fullName: OnixRuntime.Api.Events.OnixEventWorld

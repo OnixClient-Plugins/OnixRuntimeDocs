@@ -4,7 +4,9 @@ items:
   commentId: T:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute
   id: OnixModuleSettingRedirector.CategoryStopAttribute
   parent: OnixRuntime.Api.OnixClient
-  children: []
+  children:
+  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.#ctor(System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting
   langs:
   - csharp
   - vb
@@ -15,14 +17,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CategoryStopAttribute
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 480
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 873
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to stop the current category grouping.
+  example: []
   syntax:
     content: 'public class OnixModuleSettingRedirector.CategoryStopAttribute : Attribute'
     content.vb: Public Class OnixModuleSettingRedirector.CategoryStopAttribute Inherits Attribute
@@ -72,6 +76,72 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.#ctor(System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute
+  langs:
+  - csharp
+  - vb
+  name: CategoryStopAttribute(bool)
+  nameWithType: OnixModuleSettingRedirector.CategoryStopAttribute.CategoryStopAttribute(bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.CategoryStopAttribute(bool)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 873
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to stop the current category grouping.
+  example: []
+  syntax:
+    content: public CategoryStopAttribute(bool afterSetting = false)
+    parameters:
+    - id: afterSetting
+      type: System.Boolean
+      description: If this gap should be added after the setting, defaults to before.
+    content.vb: Public Sub New(afterSetting As Boolean = False)
+  overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.#ctor*
+  nameWithType.vb: OnixModuleSettingRedirector.CategoryStopAttribute.New(Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.New(Boolean)
+  name.vb: New(Boolean)
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting
+  id: AfterSetting
+  parent: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute
+  langs:
+  - csharp
+  - vb
+  name: AfterSetting
+  nameWithType: OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AfterSetting
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 878
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Whether the air should be after or before the setting.
+  example: []
+  syntax:
+    content: public bool AfterSetting { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property AfterSetting As Boolean
+  overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting*
 references:
 - uid: OnixRuntime.Api.OnixClient
   commentId: N:OnixRuntime.Api.OnixClient
@@ -1897,3 +1967,29 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.#ctor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.#ctor
+  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_CategoryStopAttribute__ctor_System_Boolean_
+  name: CategoryStopAttribute
+  nameWithType: OnixModuleSettingRedirector.CategoryStopAttribute.CategoryStopAttribute
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.CategoryStopAttribute
+  nameWithType.vb: OnixModuleSettingRedirector.CategoryStopAttribute.New
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting
+  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_CategoryStopAttribute_AfterSetting
+  name: AfterSetting
+  nameWithType: OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute.AfterSetting

@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldChunks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WorldChunksIterator
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunks.cs
-    startLine: 77
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldChunks.cs
+    startLine: 93
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -61,21 +61,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldChunks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunks.cs
-    startLine: 84
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldChunks.cs
+    startLine: 105
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.World.WorldChunksIterator" data-throw-if-not-resolved="false"></xref> class.
+  example: []
   syntax:
     content: public WorldChunksIterator(WorldChunks chunks, bool requireLoaded = true)
     parameters:
     - id: chunks
       type: OnixRuntime.Api.World.WorldChunks
+      description: The world chunks collection.
     - id: requireLoaded
       type: System.Boolean
+      description: Whether to require the chunk to be loaded.
     content.vb: Public Sub New(chunks As WorldChunks, requireLoaded As Boolean = True)
   overload: OnixRuntime.Api.World.WorldChunksIterator.#ctor*
   nameWithType.vb: WorldChunksIterator.New(WorldChunks, Boolean)
@@ -95,27 +99,23 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldChunks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveNext
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunks.cs
-    startLine: 91
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldChunks.cs
+    startLine: 115
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
-  summary: Advances the enumerator to the next element of the collection.
+  summary: Moves to the next chunk in the enumeration.
   example: []
   syntax:
     content: public bool MoveNext()
     return:
       type: System.Boolean
-      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the enumerator was successfully advanced to the next element; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the enumerator has passed the end of the collection.
+      description: True if the enumerator was successfully advanced to the next chunk; otherwise, false.
     content.vb: Public Function MoveNext() As Boolean
   overload: OnixRuntime.Api.World.WorldChunksIterator.MoveNext*
-  exceptions:
-  - type: System.InvalidOperationException
-    commentId: T:System.InvalidOperationException
-    description: The collection was modified after the enumerator was created.
   implements:
   - System.Collections.IEnumerator.MoveNext
 - uid: OnixRuntime.Api.World.WorldChunksIterator.Reset
@@ -132,27 +132,20 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldChunks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Reset
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunks.cs
-    startLine: 105
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldChunks.cs
+    startLine: 131
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
-  summary: Sets the enumerator to its initial position, which is before the first element in the collection.
+  summary: Resets the enumerator to its initial position.
   example: []
   syntax:
     content: public void Reset()
     content.vb: Public Sub Reset()
   overload: OnixRuntime.Api.World.WorldChunksIterator.Reset*
-  exceptions:
-  - type: System.InvalidOperationException
-    commentId: T:System.InvalidOperationException
-    description: The collection was modified after the enumerator was created.
-  - type: System.NotSupportedException
-    commentId: T:System.NotSupportedException
-    description: The enumerator does not support being reset.
   implements:
   - System.Collections.IEnumerator.Reset
 - uid: OnixRuntime.Api.World.WorldChunksIterator.Current
@@ -169,22 +162,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldChunks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Current
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunks.cs
-    startLine: 109
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldChunks.cs
+    startLine: 137
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
-  summary: Gets the element in the collection at the current position of the enumerator.
+  summary: Gets the current chunk being enumerated.
   example: []
   syntax:
     content: public WorldChunk Current { get; }
     parameters: []
     return:
       type: OnixRuntime.Api.World.WorldChunk
-      description: The element in the collection at the current position of the enumerator.
     content.vb: Public ReadOnly Property Current As WorldChunk
   overload: OnixRuntime.Api.World.WorldChunksIterator.Current*
   implements:
@@ -203,11 +195,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/World/WorldChunks.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dispose
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/World/WorldChunks.cs
-    startLine: 119
+    path: ../OnixRuntime/OnixRuntime/Api/World/WorldChunks.cs
+    startLine: 148
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -635,6 +627,12 @@ references:
     name: Collections
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: OnixRuntime.Api.World.WorldChunksIterator
+  commentId: T:OnixRuntime.Api.World.WorldChunksIterator
+  href: OnixRuntime.Api.World.WorldChunksIterator.html
+  name: WorldChunksIterator
+  nameWithType: WorldChunksIterator
+  fullName: OnixRuntime.Api.World.WorldChunksIterator
 - uid: OnixRuntime.Api.World.WorldChunksIterator.#ctor*
   commentId: Overload:OnixRuntime.Api.World.WorldChunksIterator.#ctor
   href: OnixRuntime.Api.World.WorldChunksIterator.html#OnixRuntime_Api_World_WorldChunksIterator__ctor_OnixRuntime_Api_World_WorldChunks_System_Boolean_
@@ -655,13 +653,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: System.InvalidOperationException
-  commentId: T:System.InvalidOperationException
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
-  name: InvalidOperationException
-  nameWithType: InvalidOperationException
-  fullName: System.InvalidOperationException
 - uid: OnixRuntime.Api.World.WorldChunksIterator.MoveNext*
   commentId: Overload:OnixRuntime.Api.World.WorldChunksIterator.MoveNext
   href: OnixRuntime.Api.World.WorldChunksIterator.html#OnixRuntime_Api_World_WorldChunksIterator_MoveNext
@@ -690,13 +681,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator.movenext
   - name: (
   - name: )
-- uid: System.NotSupportedException
-  commentId: T:System.NotSupportedException
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.notsupportedexception
-  name: NotSupportedException
-  nameWithType: NotSupportedException
-  fullName: System.NotSupportedException
 - uid: OnixRuntime.Api.World.WorldChunksIterator.Reset*
   commentId: Overload:OnixRuntime.Api.World.WorldChunksIterator.Reset
   href: OnixRuntime.Api.World.WorldChunksIterator.html#OnixRuntime_Api_World_WorldChunksIterator_Reset

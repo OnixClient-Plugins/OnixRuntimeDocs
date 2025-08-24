@@ -18,6 +18,9 @@ items:
   - OnixRuntime.Api.Maths.Rect.Center
   - OnixRuntime.Api.Maths.Rect.CenterInside(OnixRuntime.Api.Maths.Rect)
   - OnixRuntime.Api.Maths.Rect.CenterInside(OnixRuntime.Api.Maths.Vec2)
+  - OnixRuntime.Api.Maths.Rect.CenterX
+  - OnixRuntime.Api.Maths.Rect.CenterY
+  - OnixRuntime.Api.Maths.Rect.ClampedWithin(OnixRuntime.Api.Maths.Rect)
   - OnixRuntime.Api.Maths.Rect.Contains(OnixRuntime.Api.Maths.Vec2)
   - OnixRuntime.Api.Maths.Rect.Contains(System.Single,System.Single)
   - OnixRuntime.Api.Maths.Rect.Equals(OnixRuntime.Api.Maths.Rect)
@@ -62,15 +65,26 @@ items:
   - OnixRuntime.Api.Maths.Rect.United(OnixRuntime.Api.Maths.Rect)
   - OnixRuntime.Api.Maths.Rect.W
   - OnixRuntime.Api.Maths.Rect.Width
+  - OnixRuntime.Api.Maths.Rect.WithHeight(System.Single)
+  - OnixRuntime.Api.Maths.Rect.WithSize(OnixRuntime.Api.Maths.Vec2)
+  - OnixRuntime.Api.Maths.Rect.WithSize(System.Single,System.Single)
+  - OnixRuntime.Api.Maths.Rect.WithW(System.Single)
+  - OnixRuntime.Api.Maths.Rect.WithWidth(System.Single)
+  - OnixRuntime.Api.Maths.Rect.WithX(System.Single)
+  - OnixRuntime.Api.Maths.Rect.WithY(System.Single)
+  - OnixRuntime.Api.Maths.Rect.WithZ(System.Single)
   - OnixRuntime.Api.Maths.Rect.X
   - OnixRuntime.Api.Maths.Rect.Y
   - OnixRuntime.Api.Maths.Rect.Z
+  - OnixRuntime.Api.Maths.Rect.Zero
+  - OnixRuntime.Api.Maths.Rect.op_Addition(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
   - OnixRuntime.Api.Maths.Rect.op_Equality(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Rect)
   - OnixRuntime.Api.Maths.Rect.op_Implicit(OnixRuntime.Api.Maths.Rect)~System.Drawing.Rectangle
   - OnixRuntime.Api.Maths.Rect.op_Implicit(OnixRuntime.Api.Maths.Rect)~System.Drawing.RectangleF
   - OnixRuntime.Api.Maths.Rect.op_Implicit(System.Drawing.Rectangle)~OnixRuntime.Api.Maths.Rect
   - OnixRuntime.Api.Maths.Rect.op_Implicit(System.Drawing.RectangleF)~OnixRuntime.Api.Maths.Rect
   - OnixRuntime.Api.Maths.Rect.op_Inequality(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Rect)
+  - OnixRuntime.Api.Maths.Rect.op_Subtraction(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
   langs:
   - csharp
   - vb
@@ -81,10 +95,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Rect
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
     startLine: 8
   assemblies:
   - OnixRuntime
@@ -114,10 +128,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: X
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
     startLine: 12
   assemblies:
   - OnixRuntime
@@ -143,10 +157,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Y
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
     startLine: 16
   assemblies:
   - OnixRuntime
@@ -172,10 +186,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Z
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
     startLine: 20
   assemblies:
   - OnixRuntime
@@ -201,10 +215,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: W
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
     startLine: 24
   assemblies:
   - OnixRuntime
@@ -230,10 +244,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Width
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
     startLine: 29
   assemblies:
   - OnixRuntime
@@ -241,11 +255,11 @@ items:
   summary: Gets the width of the rectangle.
   example: []
   syntax:
-    content: public float Width { get; }
+    content: public float Width { get; set; }
     parameters: []
     return:
       type: System.Single
-    content.vb: Public ReadOnly Property Width As Single
+    content.vb: Public Property Width As Single
   overload: OnixRuntime.Api.Maths.Rect.Width*
 - uid: OnixRuntime.Api.Maths.Rect.Height
   commentId: P:OnixRuntime.Api.Maths.Rect.Height
@@ -261,22 +275,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Height
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 33
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 37
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
   summary: Gets the height of the rectangle.
   example: []
   syntax:
-    content: public float Height { get; }
+    content: public float Height { get; set; }
     parameters: []
     return:
       type: System.Single
-    content.vb: Public ReadOnly Property Height As Single
+    content.vb: Public Property Height As Single
   overload: OnixRuntime.Api.Maths.Rect.Height*
 - uid: OnixRuntime.Api.Maths.Rect.Size
   commentId: P:OnixRuntime.Api.Maths.Rect.Size
@@ -292,11 +306,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Size
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 37
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 45
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -323,11 +337,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Center
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 41
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 49
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -340,6 +354,68 @@ items:
       type: OnixRuntime.Api.Maths.Vec2
     content.vb: Public ReadOnly Property Center As Vec2
   overload: OnixRuntime.Api.Maths.Rect.Center*
+- uid: OnixRuntime.Api.Maths.Rect.CenterX
+  commentId: P:OnixRuntime.Api.Maths.Rect.CenterX
+  id: CenterX
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: CenterX
+  nameWithType: Rect.CenterX
+  fullName: OnixRuntime.Api.Maths.Rect.CenterX
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CenterX
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 53
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the center X coordinate of the rectangle.
+  example: []
+  syntax:
+    content: public float CenterX { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property CenterX As Single
+  overload: OnixRuntime.Api.Maths.Rect.CenterX*
+- uid: OnixRuntime.Api.Maths.Rect.CenterY
+  commentId: P:OnixRuntime.Api.Maths.Rect.CenterY
+  id: CenterY
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: CenterY
+  nameWithType: Rect.CenterY
+  fullName: OnixRuntime.Api.Maths.Rect.CenterY
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CenterY
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 57
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets the center Y coordinate of the rectangle.
+  example: []
+  syntax:
+    content: public float CenterY { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property CenterY As Single
+  overload: OnixRuntime.Api.Maths.Rect.CenterY*
 - uid: OnixRuntime.Api.Maths.Rect.TopLeft
   commentId: P:OnixRuntime.Api.Maths.Rect.TopLeft
   id: TopLeft
@@ -354,11 +430,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TopLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 45
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 61
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -385,11 +461,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TopRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 49
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 65
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -416,11 +492,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BottomLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 53
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 69
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -447,11 +523,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BottomRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 57
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 73
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -478,11 +554,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AspectRatio
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 61
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 77
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -509,11 +585,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsEmpty
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 65
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 81
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -540,11 +616,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FullUV
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 69
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 85
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -557,6 +633,37 @@ items:
       type: OnixRuntime.Api.Maths.Rect
     content.vb: Public Shared ReadOnly Property FullUV As Rect
   overload: OnixRuntime.Api.Maths.Rect.FullUV*
+- uid: OnixRuntime.Api.Maths.Rect.Zero
+  commentId: P:OnixRuntime.Api.Maths.Rect.Zero
+  id: Zero
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: Rect.Zero
+  fullName: OnixRuntime.Api.Maths.Rect.Zero
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Zero
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 89
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: A rectangle representing the zero area (0,0 to 0,0).
+  example: []
+  syntax:
+    content: public static Rect Zero { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+    content.vb: Public Shared ReadOnly Property Zero As Rect
+  overload: OnixRuntime.Api.Maths.Rect.Zero*
 - uid: OnixRuntime.Api.Maths.Rect.#ctor
   commentId: M:OnixRuntime.Api.Maths.Rect.#ctor
   id: '#ctor'
@@ -571,11 +678,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 74
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 94
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -602,11 +709,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 81
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 101
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -642,11 +749,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 91
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 111
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -678,11 +785,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 100
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 120
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -716,11 +823,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 109
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 129
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -754,11 +861,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromSize
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 119
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 139
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -789,11 +896,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromSize
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 130
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 150
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -829,11 +936,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromSize
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 141
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 161
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -869,11 +976,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromSize
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 152
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 172
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -911,11 +1018,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromCenter
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 164
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 184
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -946,11 +1053,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromCenter
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 175
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 195
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -986,11 +1093,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromCenter
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 186
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 206
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1026,11 +1133,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FromCenter
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 197
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 217
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1054,6 +1161,310 @@ items:
   nameWithType.vb: Rect.FromCenter(Single, Single, Single, Single)
   fullName.vb: OnixRuntime.Api.Maths.Rect.FromCenter(Single, Single, Single, Single)
   name.vb: FromCenter(Single, Single, Single, Single)
+- uid: OnixRuntime.Api.Maths.Rect.WithX(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithX(System.Single)
+  id: WithX(System.Single)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithX(float)
+  nameWithType: Rect.WithX(float)
+  fullName: OnixRuntime.Api.Maths.Rect.WithX(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithX
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 231
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the X coordinate replaced by the specified value.
+  example: []
+  syntax:
+    content: public Rect WithX(float x)
+    parameters:
+    - id: x
+      type: System.Single
+      description: The new X coordinate for the top-left corner.
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified X value and the other coordinates unchanged.
+    content.vb: Public Function WithX(x As Single) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithX*
+  nameWithType.vb: Rect.WithX(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.WithX(Single)
+  name.vb: WithX(Single)
+- uid: OnixRuntime.Api.Maths.Rect.WithY(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithY(System.Single)
+  id: WithY(System.Single)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithY(float)
+  nameWithType: Rect.WithY(float)
+  fullName: OnixRuntime.Api.Maths.Rect.WithY(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithY
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 238
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the Y coordinate replaced by the specified value.
+  example: []
+  syntax:
+    content: public Rect WithY(float y)
+    parameters:
+    - id: y
+      type: System.Single
+      description: The new Y coordinate for the top-left corner.
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified Y value and the other coordinates unchanged.
+    content.vb: Public Function WithY(y As Single) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithY*
+  nameWithType.vb: Rect.WithY(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.WithY(Single)
+  name.vb: WithY(Single)
+- uid: OnixRuntime.Api.Maths.Rect.WithZ(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithZ(System.Single)
+  id: WithZ(System.Single)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithZ(float)
+  nameWithType: Rect.WithZ(float)
+  fullName: OnixRuntime.Api.Maths.Rect.WithZ(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithZ
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 245
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the Z coordinate replaced by the specified value.
+  example: []
+  syntax:
+    content: public Rect WithZ(float z)
+    parameters:
+    - id: z
+      type: System.Single
+      description: The new Z coordinate for the bottom-right corner (X value).
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified Z value and the other coordinates unchanged.
+    content.vb: Public Function WithZ(z As Single) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithZ*
+  nameWithType.vb: Rect.WithZ(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.WithZ(Single)
+  name.vb: WithZ(Single)
+- uid: OnixRuntime.Api.Maths.Rect.WithW(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithW(System.Single)
+  id: WithW(System.Single)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithW(float)
+  nameWithType: Rect.WithW(float)
+  fullName: OnixRuntime.Api.Maths.Rect.WithW(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithW
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 252
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the W coordinate replaced by the specified value.
+  example: []
+  syntax:
+    content: public Rect WithW(float w)
+    parameters:
+    - id: w
+      type: System.Single
+      description: The new W coordinate for the bottom-right corner (Y value).
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified W value and the other coordinates unchanged.
+    content.vb: Public Function WithW(w As Single) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithW*
+  nameWithType.vb: Rect.WithW(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.WithW(Single)
+  name.vb: WithW(Single)
+- uid: OnixRuntime.Api.Maths.Rect.WithSize(OnixRuntime.Api.Maths.Vec2)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithSize(OnixRuntime.Api.Maths.Vec2)
+  id: WithSize(OnixRuntime.Api.Maths.Vec2)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithSize(Vec2)
+  nameWithType: Rect.WithSize(Vec2)
+  fullName: OnixRuntime.Api.Maths.Rect.WithSize(OnixRuntime.Api.Maths.Vec2)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithSize
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 259
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the specified size, keeping the top-left corner unchanged.
+  example: []
+  syntax:
+    content: public Rect WithSize(Vec2 size)
+    parameters:
+    - id: size
+      type: OnixRuntime.Api.Maths.Vec2
+      description: The new size as a <xref href="OnixRuntime.Api.Maths.Vec2" data-throw-if-not-resolved="false"></xref> (width, height).
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified size and the same top-left corner.
+    content.vb: Public Function WithSize(size As Vec2) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithSize*
+- uid: OnixRuntime.Api.Maths.Rect.WithSize(System.Single,System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithSize(System.Single,System.Single)
+  id: WithSize(System.Single,System.Single)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithSize(float, float)
+  nameWithType: Rect.WithSize(float, float)
+  fullName: OnixRuntime.Api.Maths.Rect.WithSize(float, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithSize
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 267
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the specified width and height, keeping the top-left corner unchanged.
+  example: []
+  syntax:
+    content: public Rect WithSize(float width, float height)
+    parameters:
+    - id: width
+      type: System.Single
+      description: The new width.
+    - id: height
+      type: System.Single
+      description: The new height.
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified width and height and the same top-left corner.
+    content.vb: Public Function WithSize(width As Single, height As Single) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithSize*
+  nameWithType.vb: Rect.WithSize(Single, Single)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.WithSize(Single, Single)
+  name.vb: WithSize(Single, Single)
+- uid: OnixRuntime.Api.Maths.Rect.WithWidth(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithWidth(System.Single)
+  id: WithWidth(System.Single)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithWidth(float)
+  nameWithType: Rect.WithWidth(float)
+  fullName: OnixRuntime.Api.Maths.Rect.WithWidth(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithWidth
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 274
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the specified width, keeping the top-left corner and height unchanged.
+  example: []
+  syntax:
+    content: public Rect WithWidth(float width)
+    parameters:
+    - id: width
+      type: System.Single
+      description: The new width.
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified width and the same top-left corner and height.
+    content.vb: Public Function WithWidth(width As Single) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithWidth*
+  nameWithType.vb: Rect.WithWidth(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.WithWidth(Single)
+  name.vb: WithWidth(Single)
+- uid: OnixRuntime.Api.Maths.Rect.WithHeight(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Rect.WithHeight(System.Single)
+  id: WithHeight(System.Single)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: WithHeight(float)
+  nameWithType: Rect.WithHeight(float)
+  fullName: OnixRuntime.Api.Maths.Rect.WithHeight(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithHeight
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 281
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a copy of this rectangle with the specified height, keeping the top-left corner and width unchanged.
+  example: []
+  syntax:
+    content: public Rect WithHeight(float height)
+    parameters:
+    - id: height
+      type: System.Single
+      description: The new height.
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: A new <xref href="OnixRuntime.Api.Maths.Rect" data-throw-if-not-resolved="false"></xref> with the specified height and the same top-left corner and width.
+    content.vb: Public Function WithHeight(height As Single) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.WithHeight*
+  nameWithType.vb: Rect.WithHeight(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.WithHeight(Single)
+  name.vb: WithHeight(Single)
 - uid: OnixRuntime.Api.Maths.Rect.Contains(OnixRuntime.Api.Maths.Vec2)
   commentId: M:OnixRuntime.Api.Maths.Rect.Contains(OnixRuntime.Api.Maths.Vec2)
   id: Contains(OnixRuntime.Api.Maths.Vec2)
@@ -1068,11 +1479,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Contains
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 209
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 286
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1101,11 +1512,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Contains
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 214
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 291
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1139,11 +1550,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CenterInside
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 219
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 296
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1172,11 +1583,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CenterInside
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 225
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 302
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1205,11 +1616,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NormalizeWith
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 234
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 311
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1240,11 +1651,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NormalizeWith
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 241
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 318
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1278,11 +1689,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NormalizeWith
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 249
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 326
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1319,11 +1730,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Overlaps
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 254
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 331
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1352,11 +1763,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Intersection
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 261
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 338
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1385,11 +1796,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: United
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 272
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 349
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1404,6 +1815,41 @@ items:
       type: OnixRuntime.Api.Maths.Rect
     content.vb: Public Function United(rect As Rect) As Rect
   overload: OnixRuntime.Api.Maths.Rect.United*
+- uid: OnixRuntime.Api.Maths.Rect.ClampedWithin(OnixRuntime.Api.Maths.Rect)
+  commentId: M:OnixRuntime.Api.Maths.Rect.ClampedWithin(OnixRuntime.Api.Maths.Rect)
+  id: ClampedWithin(OnixRuntime.Api.Maths.Rect)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: ClampedWithin(Rect)
+  nameWithType: Rect.ClampedWithin(Rect)
+  fullName: OnixRuntime.Api.Maths.Rect.ClampedWithin(OnixRuntime.Api.Maths.Rect)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ClampedWithin
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 362
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a rectangle clamped within the bounds of another rectangle.
+  example: []
+  syntax:
+    content: public Rect ClampedWithin(Rect toClamp)
+    parameters:
+    - id: toClamp
+      type: OnixRuntime.Api.Maths.Rect
+      description: The rectangle to get its size restricted
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: The rectangle that will not go past this one.
+    content.vb: Public Function ClampedWithin(toClamp As Rect) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.ClampedWithin*
 - uid: OnixRuntime.Api.Maths.Rect.Expand(OnixRuntime.Api.Maths.Vec2)
   commentId: M:OnixRuntime.Api.Maths.Rect.Expand(OnixRuntime.Api.Maths.Vec2)
   id: Expand(OnixRuntime.Api.Maths.Vec2)
@@ -1418,11 +1864,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Expand
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 283
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 374
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1451,11 +1897,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Expand
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 290
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 381
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1487,11 +1933,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Expand
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 297
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 388
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1525,11 +1971,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Shrink
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 303
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 394
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1561,11 +2007,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Shrink
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 310
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 401
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1599,11 +2045,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Shrink
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 317
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 408
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1632,11 +2078,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Relative
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 324
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 415
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1665,11 +2111,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Relative
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 331
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 422
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1703,11 +2149,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Absolute
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 338
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 429
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1736,11 +2182,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Absolute
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 345
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 436
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1774,11 +2220,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveBy
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 352
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 443
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1807,11 +2253,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveBy
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 358
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 449
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1845,11 +2291,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 364
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 455
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1881,11 +2327,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 370
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 461
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1917,11 +2363,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveUp
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 376
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 467
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1953,11 +2399,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveDown
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 382
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 473
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1989,11 +2435,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MoveTo
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 388
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 479
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2022,11 +2468,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ResizeKeepingAspectRatio
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 395
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 486
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2055,11 +2501,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Implicit
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 412
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 503
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2091,11 +2537,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Implicit
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 418
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 509
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2127,11 +2573,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Implicit
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 424
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 515
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2163,11 +2609,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Implicit
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 430
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 521
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2199,11 +2645,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 437
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 528
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2237,11 +2683,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 443
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 534
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2261,6 +2707,84 @@ items:
   nameWithType.vb: Rect.<>(Rect, Rect)
   fullName.vb: OnixRuntime.Api.Maths.Rect.<>(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Rect)
   name.vb: <>(Rect, Rect)
+- uid: OnixRuntime.Api.Maths.Rect.op_Addition(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  commentId: M:OnixRuntime.Api.Maths.Rect.op_Addition(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  id: op_Addition(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: operator +(Rect, Vec2)
+  nameWithType: Rect.operator +(Rect, Vec2)
+  fullName: OnixRuntime.Api.Maths.Rect.operator +(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Addition
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 541
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Adds a vector to the rectangle, effectively moving it by that vector.
+  example: []
+  syntax:
+    content: public static Rect operator +(Rect rect, Vec2 vec)
+    parameters:
+    - id: rect
+      type: OnixRuntime.Api.Maths.Rect
+    - id: vec
+      type: OnixRuntime.Api.Maths.Vec2
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: ''
+    content.vb: Public Shared Operator +(rect As Rect, vec As Vec2) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.op_Addition*
+  nameWithType.vb: Rect.+(Rect, Vec2)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.+(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2)
+  name.vb: +(Rect, Vec2)
+- uid: OnixRuntime.Api.Maths.Rect.op_Subtraction(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  commentId: M:OnixRuntime.Api.Maths.Rect.op_Subtraction(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  id: op_Subtraction(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.Vec2)
+  parent: OnixRuntime.Api.Maths.Rect
+  langs:
+  - csharp
+  - vb
+  name: operator -(Rect, Vec2)
+  nameWithType: Rect.operator -(Rect, Vec2)
+  fullName: OnixRuntime.Api.Maths.Rect.operator -(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Rect.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Subtraction
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 548
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Removes a vector from the rectangle, effectively moving it in the opposite direction.
+  example: []
+  syntax:
+    content: public static Rect operator -(Rect rect, Vec2 vec)
+    parameters:
+    - id: rect
+      type: OnixRuntime.Api.Maths.Rect
+    - id: vec
+      type: OnixRuntime.Api.Maths.Vec2
+    return:
+      type: OnixRuntime.Api.Maths.Rect
+      description: ''
+    content.vb: Public Shared Operator -(rect As Rect, vec As Vec2) As Rect
+  overload: OnixRuntime.Api.Maths.Rect.op_Subtraction*
+  nameWithType.vb: Rect.-(Rect, Vec2)
+  fullName.vb: OnixRuntime.Api.Maths.Rect.-(OnixRuntime.Api.Maths.Rect, OnixRuntime.Api.Maths.Vec2)
+  name.vb: -(Rect, Vec2)
 - uid: OnixRuntime.Api.Maths.Rect.Equals(OnixRuntime.Api.Maths.Rect)
   commentId: M:OnixRuntime.Api.Maths.Rect.Equals(OnixRuntime.Api.Maths.Rect)
   id: Equals(OnixRuntime.Api.Maths.Rect)
@@ -2275,11 +2799,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 450
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 556
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2310,11 +2834,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 457
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 563
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2347,11 +2871,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 467
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 573
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2378,11 +2902,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/Rect.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/Rect.cs
-    startLine: 473
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Rect.cs
+    startLine: 579
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2661,6 +3185,18 @@ references:
   name: Center
   nameWithType: Rect.Center
   fullName: OnixRuntime.Api.Maths.Rect.Center
+- uid: OnixRuntime.Api.Maths.Rect.CenterX*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.CenterX
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_CenterX
+  name: CenterX
+  nameWithType: Rect.CenterX
+  fullName: OnixRuntime.Api.Maths.Rect.CenterX
+- uid: OnixRuntime.Api.Maths.Rect.CenterY*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.CenterY
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_CenterY
+  name: CenterY
+  nameWithType: Rect.CenterY
+  fullName: OnixRuntime.Api.Maths.Rect.CenterY
 - uid: OnixRuntime.Api.Maths.Rect.TopLeft*
   commentId: Overload:OnixRuntime.Api.Maths.Rect.TopLeft
   href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_TopLeft
@@ -2721,6 +3257,12 @@ references:
   name: Rect
   nameWithType: Rect
   fullName: OnixRuntime.Api.Maths.Rect
+- uid: OnixRuntime.Api.Maths.Rect.Zero*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.Zero
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_Zero
+  name: Zero
+  nameWithType: Rect.Zero
+  fullName: OnixRuntime.Api.Maths.Rect.Zero
 - uid: OnixRuntime.Api.Maths.Rect.#ctor*
   commentId: Overload:OnixRuntime.Api.Maths.Rect.#ctor
   href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect__ctor
@@ -2742,6 +3284,48 @@ references:
   name: FromCenter
   nameWithType: Rect.FromCenter
   fullName: OnixRuntime.Api.Maths.Rect.FromCenter
+- uid: OnixRuntime.Api.Maths.Rect.WithX*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.WithX
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_WithX_System_Single_
+  name: WithX
+  nameWithType: Rect.WithX
+  fullName: OnixRuntime.Api.Maths.Rect.WithX
+- uid: OnixRuntime.Api.Maths.Rect.WithY*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.WithY
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_WithY_System_Single_
+  name: WithY
+  nameWithType: Rect.WithY
+  fullName: OnixRuntime.Api.Maths.Rect.WithY
+- uid: OnixRuntime.Api.Maths.Rect.WithZ*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.WithZ
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_WithZ_System_Single_
+  name: WithZ
+  nameWithType: Rect.WithZ
+  fullName: OnixRuntime.Api.Maths.Rect.WithZ
+- uid: OnixRuntime.Api.Maths.Rect.WithW*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.WithW
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_WithW_System_Single_
+  name: WithW
+  nameWithType: Rect.WithW
+  fullName: OnixRuntime.Api.Maths.Rect.WithW
+- uid: OnixRuntime.Api.Maths.Rect.WithSize*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.WithSize
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_WithSize_OnixRuntime_Api_Maths_Vec2_
+  name: WithSize
+  nameWithType: Rect.WithSize
+  fullName: OnixRuntime.Api.Maths.Rect.WithSize
+- uid: OnixRuntime.Api.Maths.Rect.WithWidth*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.WithWidth
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_WithWidth_System_Single_
+  name: WithWidth
+  nameWithType: Rect.WithWidth
+  fullName: OnixRuntime.Api.Maths.Rect.WithWidth
+- uid: OnixRuntime.Api.Maths.Rect.WithHeight*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.WithHeight
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_WithHeight_System_Single_
+  name: WithHeight
+  nameWithType: Rect.WithHeight
+  fullName: OnixRuntime.Api.Maths.Rect.WithHeight
 - uid: OnixRuntime.Api.Maths.Rect.Contains*
   commentId: Overload:OnixRuntime.Api.Maths.Rect.Contains
   href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_Contains_OnixRuntime_Api_Maths_Vec2_
@@ -2778,6 +3362,12 @@ references:
   name: United
   nameWithType: Rect.United
   fullName: OnixRuntime.Api.Maths.Rect.United
+- uid: OnixRuntime.Api.Maths.Rect.ClampedWithin*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.ClampedWithin
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_ClampedWithin_OnixRuntime_Api_Maths_Rect_
+  name: ClampedWithin
+  nameWithType: Rect.ClampedWithin
+  fullName: OnixRuntime.Api.Maths.Rect.ClampedWithin
 - uid: OnixRuntime.Api.Maths.Rect.Expand*
   commentId: Overload:OnixRuntime.Api.Maths.Rect.Expand
   href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_Expand_OnixRuntime_Api_Maths_Vec2_
@@ -2929,6 +3519,36 @@ references:
   - uid: OnixRuntime.Api.Maths.Rect.op_Inequality*
     name: '!='
     href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_op_Inequality_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Rect_
+- uid: OnixRuntime.Api.Maths.Rect.op_Addition*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.op_Addition
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_op_Addition_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_
+  name: operator +
+  nameWithType: Rect.operator +
+  fullName: OnixRuntime.Api.Maths.Rect.operator +
+  nameWithType.vb: Rect.+
+  fullName.vb: OnixRuntime.Api.Maths.Rect.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Rect.op_Addition*
+    name: +
+    href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_op_Addition_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_
+- uid: OnixRuntime.Api.Maths.Rect.op_Subtraction*
+  commentId: Overload:OnixRuntime.Api.Maths.Rect.op_Subtraction
+  href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_op_Subtraction_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_
+  name: operator -
+  nameWithType: Rect.operator -
+  fullName: OnixRuntime.Api.Maths.Rect.operator -
+  nameWithType.vb: Rect.-
+  fullName.vb: OnixRuntime.Api.Maths.Rect.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Rect.op_Subtraction*
+    name: '-'
+    href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_op_Subtraction_OnixRuntime_Api_Maths_Rect_OnixRuntime_Api_Maths_Vec2_
 - uid: OnixRuntime.Api.Maths.Rect.Equals*
   commentId: Overload:OnixRuntime.Api.Maths.Rect.Equals
   href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_Equals_OnixRuntime_Api_Maths_Rect_

@@ -15,21 +15,30 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRenderHudDirect2DDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 143
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 286
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called when on hud, hide hud is false and there is no client UI screen opened.
+
+    This will be called from the user's preferred 2D renderer.
+
+    This will never be a logic callback so don't access game state, entities, etc.
+  example: []
   syntax:
     content: public delegate void OnixEventRendering.OnRenderHudDirect2DDelegate(RendererDirect2D gfx, float delta)
     parameters:
     - id: gfx
       type: OnixRuntime.Api.Rendering.RendererDirect2D
+      description: The Direct2D renderer instance.
     - id: delta
       type: System.Single
+      description: The time delta since the last frame.
     content.vb: Public Delegate Sub OnixEventRendering.OnRenderHudDirect2DDelegate(gfx As RendererDirect2D, delta As Single)
 references:
 - uid: OnixRuntime.Api.Events

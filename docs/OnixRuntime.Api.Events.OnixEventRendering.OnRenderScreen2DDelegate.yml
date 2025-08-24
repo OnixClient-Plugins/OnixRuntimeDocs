@@ -1,0 +1,177 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  id: OnixEventRendering.OnRenderScreen2DDelegate
+  parent: OnixRuntime.Api.Events
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: OnixEventRendering.OnRenderScreen2DDelegate
+  nameWithType: OnixEventRendering.OnRenderScreen2DDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  type: Delegate
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEventRendering.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OnRenderScreen2DDelegate
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 185
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time.
+
+    You should avoid this if <xref href="OnixRuntime.Api.Events.OnixEventRendering.HudRender" data-throw-if-not-resolved="false"></xref> gives you what you need.
+
+    This will be called from the user's preferred 2D renderer.
+
+    This may or may not be a logic callback so don't access game state, entities, etc.
+
+    There is no PreRenderScreen2D event, because depending on the renderer, pre means different things.
+
+    You can handle this case manually by checking the different pre events and <xref href="OnixRuntime.Api.Rendering.RenderContexes.MainRenderer" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public delegate void OnixEventRendering.OnRenderScreen2DDelegate(RendererCommon2D gfx, float delta, string screenName, bool isHudHidden, bool isClientUI)
+    parameters:
+    - id: gfx
+      type: OnixRuntime.Api.Rendering.RendererCommon2D
+      description: The 2D renderer instance.
+    - id: delta
+      type: System.Single
+      description: The time delta since the last frame.
+    - id: screenName
+      type: System.String
+      description: The name of the screen being rendered.
+    - id: isHudHidden
+      type: System.Boolean
+      description: Whether the HUD is hidden.
+    - id: isClientUI
+      type: System.Boolean
+      description: Whether the UI is for the client.
+    content.vb: Public Delegate Sub OnixEventRendering.OnRenderScreen2DDelegate(gfx As RendererCommon2D, delta As Single, screenName As String, isHudHidden As Boolean, isClientUI As Boolean)
+references:
+- uid: OnixRuntime.Api.Events.OnixEventRendering.HudRender
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.HudRender
+  href: OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_HudRender
+  name: HudRender
+  nameWithType: OnixEventRendering.HudRender
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.HudRender
+- uid: OnixRuntime.Api.Rendering.RenderContexes.MainRenderer
+  commentId: P:OnixRuntime.Api.Rendering.RenderContexes.MainRenderer
+  href: OnixRuntime.Api.Rendering.RenderContexes.html#OnixRuntime_Api_Rendering_RenderContexes_MainRenderer
+  name: MainRenderer
+  nameWithType: RenderContexes.MainRenderer
+  fullName: OnixRuntime.Api.Rendering.RenderContexes.MainRenderer
+- uid: OnixRuntime.Api.Events
+  commentId: N:OnixRuntime.Api.Events
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Events
+  nameWithType: OnixRuntime.Api.Events
+  fullName: OnixRuntime.Api.Events
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Events
+    name: Events
+    href: OnixRuntime.Api.Events.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Events
+    name: Events
+    href: OnixRuntime.Api.Events.html
+- uid: OnixRuntime.Api.Rendering.RendererCommon2D
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon2D
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  name: RendererCommon2D
+  nameWithType: RendererCommon2D
+  fullName: OnixRuntime.Api.Rendering.RendererCommon2D
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

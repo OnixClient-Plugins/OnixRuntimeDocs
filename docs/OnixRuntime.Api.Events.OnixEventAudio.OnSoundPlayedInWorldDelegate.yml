@@ -15,27 +15,34 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventAudio.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnSoundPlayedInWorldDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventAudio.cs
-    startLine: 38
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventAudio.cs
+    startLine: 46
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Called when a sound is played in the world.
+  example: []
   syntax:
     content: public delegate bool OnixEventAudio.OnSoundPlayedInWorldDelegate(string sound, Vec3 position, float volume, float pitch)
     parameters:
     - id: sound
       type: System.String
+      description: The name of the sound that was played.
     - id: position
       type: OnixRuntime.Api.Maths.Vec3
+      description: The position in the world where the sound was played.
     - id: volume
       type: System.Single
+      description: The volume of the sound.
     - id: pitch
       type: System.Single
+      description: The pitch of the sound.
     return:
       type: System.Boolean
+      description: True when you want the sound to be canceled.
     content.vb: Public Delegate Function OnixEventAudio.OnSoundPlayedInWorldDelegate(sound As String, position As Vec3, volume As Single, pitch As Single) As Boolean
 references:
 - uid: OnixRuntime.Api.Events

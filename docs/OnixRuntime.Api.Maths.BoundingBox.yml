@@ -5,6 +5,7 @@ items:
   id: BoundingBox
   parent: OnixRuntime.Api.Maths
   children:
+  - OnixRuntime.Api.Maths.BoundingBox.#ctor(OnixRuntime.Api.Maths.BoundingBoxI,System.Boolean)
   - OnixRuntime.Api.Maths.BoundingBox.#ctor(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.BoundingBox.BackBottomLeft
   - OnixRuntime.Api.Maths.BoundingBox.BackBottomRight
@@ -34,6 +35,7 @@ items:
   - OnixRuntime.Api.Maths.BoundingBox.Normalize(OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.BoundingBox.Offset(OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.BoundingBox.Size
+  - OnixRuntime.Api.Maths.BoundingBox.ToInteger
   - OnixRuntime.Api.Maths.BoundingBox.ToString
   - OnixRuntime.Api.Maths.BoundingBox.Union(OnixRuntime.Api.Maths.BoundingBox)
   - OnixRuntime.Api.Maths.BoundingBox.Volume
@@ -49,10 +51,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBox
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
     startLine: 5
   assemblies:
   - OnixRuntime
@@ -82,10 +84,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Minimum
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
     startLine: 9
   assemblies:
   - OnixRuntime
@@ -111,10 +113,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Maximum
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
     startLine: 13
   assemblies:
   - OnixRuntime
@@ -140,10 +142,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
     startLine: 20
   assemblies:
   - OnixRuntime
@@ -164,6 +166,44 @@ items:
   nameWithType.vb: BoundingBox.New(Vec3, Vec3)
   fullName.vb: OnixRuntime.Api.Maths.BoundingBox.New(OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.Vec3)
   name.vb: New(Vec3, Vec3)
+- uid: OnixRuntime.Api.Maths.BoundingBox.#ctor(OnixRuntime.Api.Maths.BoundingBoxI,System.Boolean)
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.#ctor(OnixRuntime.Api.Maths.BoundingBoxI,System.Boolean)
+  id: '#ctor(OnixRuntime.Api.Maths.BoundingBoxI,System.Boolean)'
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox(BoundingBoxI, bool)
+  nameWithType: BoundingBox.BoundingBox(BoundingBoxI, bool)
+  fullName: OnixRuntime.Api.Maths.BoundingBox.BoundingBox(OnixRuntime.Api.Maths.BoundingBoxI, bool)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 30
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Creates a floating-point bounding box from an integer bounding box.
+  example: []
+  syntax:
+    content: public BoundingBox(BoundingBoxI bbox, bool display = true)
+    parameters:
+    - id: bbox
+      type: OnixRuntime.Api.Maths.BoundingBoxI
+      description: The integer bounding box to convert.
+    - id: display
+      type: System.Boolean
+      description: If you plan on rendering the region of the integer box using this, set this to true.
+    content.vb: Public Sub New(bbox As BoundingBoxI, display As Boolean = True)
+  overload: OnixRuntime.Api.Maths.BoundingBox.#ctor*
+  nameWithType.vb: BoundingBox.New(BoundingBoxI, Boolean)
+  fullName.vb: OnixRuntime.Api.Maths.BoundingBox.New(OnixRuntime.Api.Maths.BoundingBoxI, Boolean)
+  name.vb: New(BoundingBoxI, Boolean)
 - uid: OnixRuntime.Api.Maths.BoundingBox.Size
   commentId: P:OnixRuntime.Api.Maths.BoundingBox.Size
   id: Size
@@ -178,11 +218,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Size
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 28
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 41
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -209,11 +249,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Center
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 32
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 45
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -240,11 +280,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Volume
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 36
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 49
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -271,11 +311,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Empty
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 41
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 54
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -302,11 +342,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FrontTopLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 46
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 59
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -333,11 +373,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FrontTopRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 50
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 63
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -364,11 +404,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FrontBottomLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 54
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 67
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -395,11 +435,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FrontBottomRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 58
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 71
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -426,11 +466,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BackTopLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 62
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 75
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -457,11 +497,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BackTopRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 66
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 79
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -488,11 +528,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BackBottomLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 70
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 83
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -519,11 +559,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BackBottomRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 74
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 87
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -550,11 +590,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BackBottomTop
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 78
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 91
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -581,11 +621,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Contains
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 84
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 97
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -615,11 +655,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Contains
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 94
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 107
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -649,11 +689,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Intersects
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 104
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 117
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -683,11 +723,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Intersect
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 114
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 127
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -717,11 +757,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Union
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 133
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 146
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -751,11 +791,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Normalize
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 152
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 165
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -785,11 +825,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Lerp
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 165
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 178
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -825,11 +865,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Offset
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 173
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 186
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -859,11 +899,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Inflate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 181
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 194
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -896,11 +936,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Inflate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 189
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 202
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -930,11 +970,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Merge
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 197
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 210
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -964,11 +1004,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GrowToInclude
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 205
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 218
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -998,11 +1038,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 212
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 225
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1029,11 +1069,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 219
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 232
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1067,11 +1107,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 225
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 238
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1105,11 +1145,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 232
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 245
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1140,11 +1180,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 239
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 252
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1177,11 +1217,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Maths/BoundingBox.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
-    startLine: 249
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 262
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1194,6 +1234,36 @@ items:
     content.vb: Public Overrides Function GetHashCode() As Integer
   overridden: System.ValueType.GetHashCode
   overload: OnixRuntime.Api.Maths.BoundingBox.GetHashCode*
+- uid: OnixRuntime.Api.Maths.BoundingBox.ToInteger
+  commentId: M:OnixRuntime.Api.Maths.BoundingBox.ToInteger
+  id: ToInteger
+  parent: OnixRuntime.Api.Maths.BoundingBox
+  langs:
+  - csharp
+  - vb
+  name: ToInteger()
+  nameWithType: BoundingBox.ToInteger()
+  fullName: OnixRuntime.Api.Maths.BoundingBox.ToInteger()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BoundingBox.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ToInteger
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BoundingBox.cs
+    startLine: 269
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Converts this floating-point bounding box to an integer bounding box using floor for minimum and ceiling for maximum.
+  example: []
+  syntax:
+    content: public BoundingBoxI ToInteger()
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBoxI
+    content.vb: Public Function ToInteger() As BoundingBoxI
+  overload: OnixRuntime.Api.Maths.BoundingBox.ToInteger*
 references:
 - uid: OnixRuntime.Api.Maths
   commentId: N:OnixRuntime.Api.Maths
@@ -1441,6 +1511,24 @@ references:
   nameWithType.vb: BoundingBox.New
   fullName.vb: OnixRuntime.Api.Maths.BoundingBox.New
   name.vb: New
+- uid: OnixRuntime.Api.Maths.BoundingBoxI
+  commentId: T:OnixRuntime.Api.Maths.BoundingBoxI
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BoundingBoxI.html
+  name: BoundingBoxI
+  nameWithType: BoundingBoxI
+  fullName: OnixRuntime.Api.Maths.BoundingBoxI
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: OnixRuntime.Api.Maths.BoundingBox.Size*
   commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.Size
   href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_Size
@@ -1476,17 +1564,6 @@ references:
   name: Empty
   nameWithType: BoundingBox.Empty
   fullName: OnixRuntime.Api.Maths.BoundingBox.Empty
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft*
   commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.FrontTopLeft
   href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_FrontTopLeft
@@ -1811,3 +1888,9 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: OnixRuntime.Api.Maths.BoundingBox.ToInteger*
+  commentId: Overload:OnixRuntime.Api.Maths.BoundingBox.ToInteger
+  href: OnixRuntime.Api.Maths.BoundingBox.html#OnixRuntime_Api_Maths_BoundingBox_ToInteger
+  name: ToInteger
+  nameWithType: BoundingBox.ToInteger
+  fullName: OnixRuntime.Api.Maths.BoundingBox.ToInteger

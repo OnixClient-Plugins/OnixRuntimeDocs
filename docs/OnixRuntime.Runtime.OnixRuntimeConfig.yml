@@ -9,6 +9,7 @@ items:
   - OnixRuntime.Runtime.OnixRuntimeConfig.FileLogLevel
   - OnixRuntime.Runtime.OnixRuntimeConfig.Instance
   - OnixRuntime.Runtime.OnixRuntimeConfig.Load
+  - OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid
   - OnixRuntime.Runtime.OnixRuntimeConfig.Save
   langs:
   - csharp
@@ -20,10 +21,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Runtime/RuntimeConfig.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixRuntimeConfig
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
+    path: ../OnixRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
     startLine: 9
   assemblies:
   - OnixRuntime
@@ -57,10 +58,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Runtime/RuntimeConfig.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatLogLevel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
+    path: ../OnixRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
     startLine: 13
   assemblies:
   - OnixRuntime
@@ -100,11 +101,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Runtime/RuntimeConfig.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FileLogLevel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
-    startLine: 22
+    path: ../OnixRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
+    startLine: 19
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Runtime
@@ -129,6 +130,49 @@ items:
     arguments:
     - type: System.String
       value: file_log_level
+- uid: OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid
+  commentId: P:OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid
+  id: PluginManagerUuid
+  parent: OnixRuntime.Runtime.OnixRuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: PluginManagerUuid
+  nameWithType: OnixRuntimeConfig.PluginManagerUuid
+  fullName: OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Runtime/RuntimeConfig.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PluginManagerUuid
+    path: ../OnixRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
+    startLine: 25
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Runtime
+  summary: The UUID of the current plugin manager UI plugin.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("plugin_manager_uuid")]
+
+      public string PluginManagerUuid { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("plugin_manager_uuid")>
+
+      Public Property PluginManagerUuid As String
+  overload: OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: plugin_manager_uuid
 - uid: OnixRuntime.Runtime.OnixRuntimeConfig.Load
   commentId: M:OnixRuntime.Runtime.OnixRuntimeConfig.Load
   id: Load
@@ -143,11 +187,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Runtime/RuntimeConfig.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Load
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
-    startLine: 33
+    path: ../OnixRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
+    startLine: 40
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Runtime
@@ -171,11 +215,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Runtime/RuntimeConfig.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Save
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
-    startLine: 55
+    path: ../OnixRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
+    startLine: 66
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Runtime
@@ -199,23 +243,33 @@ items:
   source:
     remote:
       path: OnixRuntime/Runtime/RuntimeConfig.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Instance
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
-    startLine: 71
+    path: ../OnixRuntime/OnixRuntime/Runtime/RuntimeConfig.cs
+    startLine: 82
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Runtime
   summary: Gets the current instance of the runtime configuration, loading it if necessary.
   example: []
   syntax:
-    content: public static OnixRuntimeConfig Instance { get; }
+    content: >-
+      [JsonIgnore]
+
+      public static OnixRuntimeConfig Instance { get; }
     parameters: []
     return:
       type: OnixRuntime.Runtime.OnixRuntimeConfig
-    content.vb: Public Shared ReadOnly Property Instance As OnixRuntimeConfig
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Shared ReadOnly Property Instance As OnixRuntimeConfig
   overload: OnixRuntime.Runtime.OnixRuntimeConfig.Instance*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
 references:
 - uid: OnixRuntime.Runtime
   commentId: N:OnixRuntime.Runtime
@@ -533,6 +587,23 @@ references:
   name: FileLogLevel
   nameWithType: OnixRuntimeConfig.FileLogLevel
   fullName: OnixRuntime.Runtime.OnixRuntimeConfig.FileLogLevel
+- uid: OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid*
+  commentId: Overload:OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid
+  href: OnixRuntime.Runtime.OnixRuntimeConfig.html#OnixRuntime_Runtime_OnixRuntimeConfig_PluginManagerUuid
+  name: PluginManagerUuid
+  nameWithType: OnixRuntimeConfig.PluginManagerUuid
+  fullName: OnixRuntime.Runtime.OnixRuntimeConfig.PluginManagerUuid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: OnixRuntime.Runtime.OnixRuntimeConfig.Load*
   commentId: Overload:OnixRuntime.Runtime.OnixRuntimeConfig.Load
   href: OnixRuntime.Runtime.OnixRuntimeConfig.html#OnixRuntime_Runtime_OnixRuntimeConfig_Load

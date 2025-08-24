@@ -11,14 +11,14 @@ items:
   - OnixRuntime.Api.Rendering.RendererWorld.DrawLine(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.DrawRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single)
   - OnixRuntime.Api.Rendering.RendererWorld.DrawRoundedRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Int32)
-  - OnixRuntime.Api.Rendering.RendererWorld.EnableLights(System.Boolean)
   - OnixRuntime.Api.Rendering.RendererWorld.FillEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Int32)
   - OnixRuntime.Api.Rendering.RendererWorld.FillRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.FillRoundedRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF,System.Single,System.Int32)
   - OnixRuntime.Api.Rendering.RendererWorld.FlushMesh
-  - OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings
+  - OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  - OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters
   - OnixRuntime.Api.Rendering.RendererWorld.Height
-  - OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi
   - OnixRuntime.Api.Rendering.RendererWorld.MeshBuilder
   - OnixRuntime.Api.Rendering.RendererWorld.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath)
   - OnixRuntime.Api.Rendering.RendererWorld.NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF})
@@ -26,11 +26,12 @@ items:
   - OnixRuntime.Api.Rendering.RendererWorld.NewMeshBuilderSession(System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
   - OnixRuntime.Api.Rendering.RendererWorld.PopTransformation
   - OnixRuntime.Api.Rendering.RendererWorld.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
-  - OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   - OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
   - OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxFill(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxFill(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF,PerBlockFaceFaceData{System.Boolean})
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxOutline(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)
@@ -40,6 +41,14 @@ items:
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
   - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath)
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean})
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation})
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
+  - OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderItem(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderItem(System.Single,System.Single,OnixRuntime.Api.Items.ItemStack,System.Boolean,System.Single,System.Boolean)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
@@ -52,6 +61,9 @@ items:
   - OnixRuntime.Api.Rendering.RendererWorld.RenderTexture(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Rendering.TexturePath,System.Single)
   - OnixRuntime.Api.Rendering.RendererWorld.RenderTexture(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Rendering.TexturePath,System.Single,OnixRuntime.Api.Maths.Rect)
   - OnixRuntime.Api.Rendering.RendererWorld.SetDefaultState(System.Boolean)
+  - OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom(System.String,System.Boolean)
+  - OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  - OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
   - OnixRuntime.Api.Rendering.RendererWorld.SetupLights(OnixRuntime.Api.Entities.Entity,System.Int32)
   - OnixRuntime.Api.Rendering.RendererWorld.SetupLights(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.Vec3,System.Int32)
   - OnixRuntime.Api.Rendering.RendererWorld.SetupLights(OnixRuntime.Api.Maths.BoundingBox,System.Int32)
@@ -67,10 +79,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RendererWorld
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
     startLine: 11
   assemblies:
   - OnixRuntime
@@ -132,11 +144,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Width
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 83
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 46
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -164,11 +176,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Height
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 87
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 50
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -196,11 +208,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Size
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 91
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 54
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -214,121 +226,42 @@ items:
     content.vb: Public Overrides ReadOnly Property Size As Vec2
   overridden: OnixRuntime.Api.Rendering.RendererCommon.Size
   overload: OnixRuntime.Api.Rendering.RendererWorld.Size*
-- uid: OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings
-  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings
-  id: GetWorldRenderSettings
+- uid: OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi
+  commentId: P:OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi
+  id: IsSimulatingUi
   parent: OnixRuntime.Api.Rendering.RendererWorld
   langs:
   - csharp
   - vb
-  name: GetWorldRenderSettings()
-  nameWithType: RendererWorld.GetWorldRenderSettings()
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings()
-  type: Method
+  name: IsSimulatingUi
+  nameWithType: RendererWorld.IsSimulatingUi
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: GetWorldRenderSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 98
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsSimulatingUi
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 63
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
-  summary: Gets the current world render settings.
+  summary: >-
+    Gets whether the UI simulation mode is active.
+
+    You should probably NOT set this unless you know what you're doing.
+
+    <xref href="OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.BlockFace%2cOnixRuntime.Api.Maths.Vec2%2cOnixRuntime.Api.Maths.Vec2%2cSystem.Single)" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
-    content: public RendererWorld.WorldRenderSettingsPopper GetWorldRenderSettings()
+    content: public bool IsSimulatingUi { get; set; }
+    parameters: []
     return:
-      type: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    content.vb: Public Function GetWorldRenderSettings() As RendererWorld.WorldRenderSettingsPopper
-  overload: OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings*
-- uid: OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  id: InternalPushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  parent: OnixRuntime.Api.Rendering.RendererWorld
-  langs:
-  - csharp
-  - vb
-  name: InternalPushWorldRenderSettings(bool, bool, bool, bool)
-  nameWithType: RendererWorld.InternalPushWorldRenderSettings(bool, bool, bool, bool)
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings(bool, bool, bool, bool)
-  type: Method
-  source:
-    remote:
-      path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: InternalPushWorldRenderSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 100
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api.Rendering
-  syntax:
-    content: protected void InternalPushWorldRenderSettings(bool depthTest = true, bool renderBackface = false, bool simulateUI = false, bool renderFrontFace = true)
-    parameters:
-    - id: depthTest
       type: System.Boolean
-    - id: renderBackface
-      type: System.Boolean
-    - id: simulateUI
-      type: System.Boolean
-    - id: renderFrontFace
-      type: System.Boolean
-    content.vb: Protected Sub InternalPushWorldRenderSettings(depthTest As Boolean = True, renderBackface As Boolean = False, simulateUI As Boolean = False, renderFrontFace As Boolean = True)
-  overload: OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings*
-  nameWithType.vb: RendererWorld.InternalPushWorldRenderSettings(Boolean, Boolean, Boolean, Boolean)
-  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings(Boolean, Boolean, Boolean, Boolean)
-  name.vb: InternalPushWorldRenderSettings(Boolean, Boolean, Boolean, Boolean)
-- uid: OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  id: PushWorldRenderSettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  parent: OnixRuntime.Api.Rendering.RendererWorld
-  langs:
-  - csharp
-  - vb
-  name: PushWorldRenderSettings(bool, bool, bool, bool)
-  nameWithType: RendererWorld.PushWorldRenderSettings(bool, bool, bool, bool)
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings(bool, bool, bool, bool)
-  type: Method
-  source:
-    remote:
-      path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: PushWorldRenderSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 114
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api.Rendering
-  summary: Pushes new world render settings and returns the previous settings for restoration.
-  example: []
-  syntax:
-    content: public RendererWorld.WorldRenderSettingsPopper PushWorldRenderSettings(bool depthTest = true, bool renderBackface = false, bool simulateUI = false, bool renderFrontFace = true)
-    parameters:
-    - id: depthTest
-      type: System.Boolean
-      description: Enable depth testing.
-    - id: renderBackface
-      type: System.Boolean
-      description: Enable back face rendering.
-    - id: simulateUI
-      type: System.Boolean
-      description: Enable UI simulation.
-    - id: renderFrontFace
-      type: System.Boolean
-      description: Enable front face rendering.
-    return:
-      type: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-      description: The previous world render settings.
-    content.vb: Public Function PushWorldRenderSettings(depthTest As Boolean = True, renderBackface As Boolean = False, simulateUI As Boolean = False, renderFrontFace As Boolean = True) As RendererWorld.WorldRenderSettingsPopper
-  overload: OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings*
-  nameWithType.vb: RendererWorld.PushWorldRenderSettings(Boolean, Boolean, Boolean, Boolean)
-  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings(Boolean, Boolean, Boolean, Boolean)
-  name.vb: PushWorldRenderSettings(Boolean, Boolean, Boolean, Boolean)
+    content.vb: Public Property IsSimulatingUi As Boolean
+  overload: OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi*
 - uid: OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
   commentId: M:OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
   id: PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
@@ -343,11 +276,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PushWorldUIRenderSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 129
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 77
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -393,11 +326,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PushWorldUIRenderSettings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 139
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 87
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -443,11 +376,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MeshBuilder
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 188
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 146
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -476,11 +409,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FlushMesh
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 200
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 158
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -504,11 +437,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 260
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 217
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -562,11 +495,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 281
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 238
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -620,11 +553,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 301
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 258
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -678,11 +611,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 321
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 278
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -722,6 +655,198 @@ items:
   nameWithType.vb: RendererWorld.NewMeshBuilderSession(ColorF?, TexturePath, MeshBuilderPrimitiveType)
   fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.NewMeshBuilderSession(OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.TexturePath, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
   name.vb: NewMeshBuilderSession(ColorF?, TexturePath, MeshBuilderPrimitiveType)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  id: SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: SetMaterialParameters(GameMaterialParameters)
+  nameWithType: RendererWorld.SetMaterialParameters(GameMaterialParameters)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetMaterialParameters
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 282
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Sets the parameters for the game material.
+  remarks: >-
+    This method updates the material properties used in the game. Ensure that the
+        <code class="paramref">parameters</code> object is properly initialized before calling this method.
+  example: []
+  syntax:
+    content: public void SetMaterialParameters(GameMaterialParameters parameters)
+    parameters:
+    - id: parameters
+      type: OnixRuntime.Api.Rendering.GameMaterialParameters
+      description: The <xref href="OnixRuntime.Api.Rendering.GameMaterialParameters" data-throw-if-not-resolved="false"></xref> object containing the material properties to be applied.
+    content.vb: Public Sub SetMaterialParameters(parameters As GameMaterialParameters)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters*
+  implements:
+  - OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom(System.String,System.Boolean)
+  id: SetMaterialCustom(System.String,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: SetMaterialCustom(string, bool)
+  nameWithType: RendererWorld.SetMaterialCustom(string, bool)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom(string, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetMaterialCustom
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 288
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Sets the material to a custom material specified by name.
+
+    this is for using game materials or ones in texture packs.
+  example: []
+  syntax:
+    content: public void SetMaterialCustom(string materialName, bool useSwitchableGroup)
+    parameters:
+    - id: materialName
+      type: System.String
+      description: The name of the custom material to set. Cannot be null or empty.
+    - id: useSwitchableGroup
+      type: System.Boolean
+      description: Whether to use the switchable group for the material instead of common.
+    content.vb: Public Sub SetMaterialCustom(materialName As String, useSwitchableGroup As Boolean)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom*
+  implements:
+  - OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  nameWithType.vb: RendererWorld.SetMaterialCustom(String, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom(String, Boolean)
+  name.vb: SetMaterialCustom(String, Boolean)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters
+  id: GetMaterialParameters
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: GetMaterialParameters()
+  nameWithType: RendererWorld.GetMaterialParameters()
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetMaterialParameters
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 294
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the current material parameters.
+  example: []
+  syntax:
+    content: public GameMaterialParameters GetMaterialParameters()
+    return:
+      type: OnixRuntime.Api.Rendering.GameMaterialParameters
+      description: The current material parameters
+    content.vb: Public Function GetMaterialParameters() As GameMaterialParameters
+  overload: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters*
+  implements:
+  - OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+- uid: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  id: GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: GetMaterialParameter(GameMaterialParameterType)
+  nameWithType: RendererWorld.GetMaterialParameter(GameMaterialParameterType)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetMaterialParameter
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 297
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the value of a specific material parameter.
+  remarks: Note that <xref href="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> sets and gives you the previous value if that's why you're using this function.
+  example: []
+  syntax:
+    content: public bool GetMaterialParameter(GameMaterialParameterType materialParameterType)
+    parameters:
+    - id: materialParameterType
+      type: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    return:
+      type: System.Boolean
+      description: The current value of that material parameter
+    content.vb: Public Function GetMaterialParameter(materialParameterType As GameMaterialParameterType) As Boolean
+  overload: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter*
+  implements:
+  - OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  id: SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: SetMaterialParameter(GameMaterialParameterType, bool)
+  nameWithType: RendererWorld.SetMaterialParameter(GameMaterialParameterType, bool)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetMaterialParameter
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 300
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Sets the specified material parameter to the given value.
+  example: []
+  syntax:
+    content: public bool SetMaterialParameter(GameMaterialParameterType materialParameterType, bool value)
+    parameters:
+    - id: materialParameterType
+      type: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    - id: value
+      type: System.Boolean
+      description: The boolean value to assign to the material parameter.
+    return:
+      type: System.Boolean
+      description: The previous material parameter before setting your new value.
+    content.vb: Public Function SetMaterialParameter(materialParameterType As GameMaterialParameterType, value As Boolean) As Boolean
+  overload: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter*
+  implements:
+  - OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  nameWithType.vb: RendererWorld.SetMaterialParameter(GameMaterialParameterType, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, Boolean)
+  name.vb: SetMaterialParameter(GameMaterialParameterType, Boolean)
 - uid: OnixRuntime.Api.Rendering.RendererWorld.FillRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)
   commentId: M:OnixRuntime.Api.Rendering.RendererWorld.FillRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)
   id: FillRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)
@@ -736,11 +861,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FillRectangle
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 330
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 310
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -772,11 +897,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawRectangle
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 374
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 336
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -814,11 +939,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FillRoundedRectangle
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 389
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 351
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -859,11 +984,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawRoundedRectangle
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 403
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 365
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -907,11 +1032,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawEllipse
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 418
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 380
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -958,11 +1083,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FillEllipse
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 432
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 394
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1006,11 +1131,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderText
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 445
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 407
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1051,11 +1176,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderText
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 459
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 421
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1102,11 +1227,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 470
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 432
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1144,11 +1269,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 478
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 440
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1183,11 +1308,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 487
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 449
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1228,11 +1353,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 496
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 458
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1270,11 +1395,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 545
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 489
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1319,11 +1444,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 553
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 497
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1365,11 +1490,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 561
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 505
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1411,11 +1536,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawLine
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 573
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 517
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1449,11 +1574,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawLine
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 585
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 529
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1487,11 +1612,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawLine
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 598
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 542
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1528,11 +1653,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxOutline
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 611
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 555
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1563,11 +1688,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxFill
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 621
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 565
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1598,11 +1723,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxFill
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 632
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 576
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1639,11 +1764,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 647
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 591
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1675,6 +1800,82 @@ items:
   nameWithType.vb: RendererWorld.RenderBoundingBoxTextured(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation), ColorF)
   fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of OnixRuntime.Api.Maths.Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation), OnixRuntime.Api.Maths.ColorF)
   name.vb: RenderBoundingBoxTextured(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation), ColorF)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
+  id: RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxNormal(BoundingBox, PerBlockFaceFaceData<bool>, ColorF)
+  nameWithType: RendererWorld.RenderBoundingBoxNormal(BoundingBox, PerBlockFaceFaceData<bool>, ColorF)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox, PerBlockFaceFaceData<bool>, OnixRuntime.Api.Maths.ColorF)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 603
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified color and normals.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxNormal(BoundingBox box, PerBlockFaceFaceData<bool> shouldRenderFace, ColorF color)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: shouldRenderFace
+      type: PerBlockFaceFaceData{System.Boolean}
+      description: 6 booleans to know which faces should be rendered.
+    - id: color
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color of the texture tint.
+    content.vb: Public Overridable Sub RenderBoundingBoxNormal(box As BoundingBox, shouldRenderFace As PerBlockFaceFaceData(Of Boolean), color As ColorF)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal*
+  nameWithType.vb: RendererWorld.RenderBoundingBoxNormal(BoundingBox, PerBlockFaceFaceData(Of Boolean), ColorF)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox, PerBlockFaceFaceData(Of Boolean), OnixRuntime.Api.Maths.ColorF)
+  name.vb: RenderBoundingBoxNormal(BoundingBox, PerBlockFaceFaceData(Of Boolean), ColorF)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)
+  id: RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Maths.ColorF)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxNormal(BoundingBox, ColorF)
+  nameWithType: RendererWorld.RenderBoundingBoxNormal(BoundingBox, ColorF)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Maths.ColorF)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 613
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified color and normals.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxNormal(BoundingBox box, ColorF color)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: color
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color of the texture tint.
+    content.vb: Public Overridable Sub RenderBoundingBoxNormal(box As BoundingBox, color As ColorF)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal*
 - uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
   commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
   id: RenderBoundingBoxTextured(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
@@ -1689,11 +1890,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 661
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 623
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1736,11 +1937,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 671
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 633
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1780,11 +1981,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 679
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 641
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1821,11 +2022,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 686
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 648
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1856,11 +2057,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 697
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 659
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1903,11 +2104,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 706
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 668
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1947,11 +2148,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 714
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 676
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1971,6 +2172,352 @@ items:
       description: The color of the texture tint.
     content.vb: Public Overridable Sub RenderBoundingBoxTextured(box As BoundingBox, texture As TexturePath, tint As ColorF)
   overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTextured*
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<Rect>, PerBlockFaceFaceData<BlockFaceUvRotation>, ColorF)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<Rect>, PerBlockFaceFaceData<BlockFaceUvRotation>, ColorF)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<OnixRuntime.Api.Maths.Rect>, PerBlockFaceFaceData<BlockFaceUvRotation>, OnixRuntime.Api.Maths.ColorF)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 689
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified texture, uv coordinates and rotations with a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture, PerBlockFaceFaceData<bool> shouldRenderFace, PerBlockFaceFaceData<Rect> perFaceUv, PerBlockFaceFaceData<BlockFaceUvRotation> uvRotation, ColorF tint)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    - id: shouldRenderFace
+      type: PerBlockFaceFaceData{System.Boolean}
+      description: 6 booleans to know which faces should be rendered.
+    - id: perFaceUv
+      type: PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect}
+      description: The UV coordinates of each face.
+    - id: uvRotation
+      type: PerBlockFaceFaceData{BlockFaceUvRotation}
+      description: ''
+    - id: tint
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color of the texture tint.
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath, shouldRenderFace As PerBlockFaceFaceData(Of Boolean), perFaceUv As PerBlockFaceFaceData(Of Rect), uvRotation As PerBlockFaceFaceData(Of BlockFaceUvRotation), tint As ColorF)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+  nameWithType.vb: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation), ColorF)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of OnixRuntime.Api.Maths.Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation), OnixRuntime.Api.Maths.ColorF)
+  name.vb: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation), ColorF)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect},PerBlockFaceFaceData{BlockFaceUvRotation})
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<Rect>, PerBlockFaceFaceData<BlockFaceUvRotation>)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<Rect>, PerBlockFaceFaceData<BlockFaceUvRotation>)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<OnixRuntime.Api.Maths.Rect>, PerBlockFaceFaceData<BlockFaceUvRotation>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 703
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified texture, uv coordinates and rotations without a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture, PerBlockFaceFaceData<bool> shouldRenderFace, PerBlockFaceFaceData<Rect> perFaceUv, PerBlockFaceFaceData<BlockFaceUvRotation> uvRotation)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    - id: shouldRenderFace
+      type: PerBlockFaceFaceData{System.Boolean}
+      description: 6 booleans to know which faces should be rendered.
+    - id: perFaceUv
+      type: PerBlockFaceFaceData{OnixRuntime.Api.Maths.Rect}
+      description: The UV coordinates of each face.
+    - id: uvRotation
+      type: PerBlockFaceFaceData{BlockFaceUvRotation}
+      description: ''
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath, shouldRenderFace As PerBlockFaceFaceData(Of Boolean), perFaceUv As PerBlockFaceFaceData(Of Rect), uvRotation As PerBlockFaceFaceData(Of BlockFaceUvRotation))
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+  nameWithType.vb: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation))
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of OnixRuntime.Api.Maths.Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation))
+  name.vb: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of Rect), PerBlockFaceFaceData(Of BlockFaceUvRotation))
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation})
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation})
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation})
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<BlockFaceUvRotation>)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<BlockFaceUvRotation>)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<BlockFaceUvRotation>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 713
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified texture, <xref href="OnixRuntime.Api.Maths.Rect.FullUV" data-throw-if-not-resolved="false"></xref> for its uv coordinates and rotations without a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture, PerBlockFaceFaceData<bool> shouldRenderFace, PerBlockFaceFaceData<BlockFaceUvRotation> uvRotation)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    - id: shouldRenderFace
+      type: PerBlockFaceFaceData{System.Boolean}
+      description: 6 booleans to know which faces should be rendered.
+    - id: uvRotation
+      type: PerBlockFaceFaceData{BlockFaceUvRotation}
+      description: ''
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath, shouldRenderFace As PerBlockFaceFaceData(Of Boolean), uvRotation As PerBlockFaceFaceData(Of BlockFaceUvRotation))
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+  nameWithType.vb: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of BlockFaceUvRotation))
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of BlockFaceUvRotation))
+  name.vb: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of BlockFaceUvRotation))
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean})
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean})
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean})
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData<bool>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 721
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified texture, <xref href="OnixRuntime.Api.Maths.Rect.FullUV" data-throw-if-not-resolved="false"></xref> for its uv coordinates and <xref href="BlockFaceUvRotation.NoRotation" data-throw-if-not-resolved="false"></xref> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture, PerBlockFaceFaceData<bool> shouldRenderFace)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    - id: shouldRenderFace
+      type: PerBlockFaceFaceData{System.Boolean}
+      description: 6 booleans to know which faces should be rendered.
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath, shouldRenderFace As PerBlockFaceFaceData(Of Boolean))
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+  nameWithType.vb: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean))
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData(Of Boolean))
+  name.vb: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean))
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath)
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 728
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders all faces of a bounding box with the specified texture, <xref href="OnixRuntime.Api.Maths.Rect.FullUV" data-throw-if-not-resolved="false"></xref> for its uv coordinates and <xref href="BlockFaceUvRotation.NoRotation" data-throw-if-not-resolved="false"></xref> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},PerBlockFaceFaceData{BlockFaceUvRotation},OnixRuntime.Api.Maths.ColorF)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<BlockFaceUvRotation>, ColorF)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<BlockFaceUvRotation>, ColorF)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData<bool>, PerBlockFaceFaceData<BlockFaceUvRotation>, OnixRuntime.Api.Maths.ColorF)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 739
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified texture, <xref href="OnixRuntime.Api.Maths.Rect.FullUV" data-throw-if-not-resolved="false"></xref> for its uv coordinates and rotations without a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture, PerBlockFaceFaceData<bool> shouldRenderFace, PerBlockFaceFaceData<BlockFaceUvRotation> uvRotation, ColorF tint)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    - id: shouldRenderFace
+      type: PerBlockFaceFaceData{System.Boolean}
+      description: 6 booleans to know which faces should be rendered.
+    - id: uvRotation
+      type: PerBlockFaceFaceData{BlockFaceUvRotation}
+      description: ''
+    - id: tint
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color of the texture tint.
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath, shouldRenderFace As PerBlockFaceFaceData(Of Boolean), uvRotation As PerBlockFaceFaceData(Of BlockFaceUvRotation), tint As ColorF)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+  nameWithType.vb: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of BlockFaceUvRotation), ColorF)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of BlockFaceUvRotation), OnixRuntime.Api.Maths.ColorF)
+  name.vb: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), PerBlockFaceFaceData(Of BlockFaceUvRotation), ColorF)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,PerBlockFaceFaceData{System.Boolean},OnixRuntime.Api.Maths.ColorF)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, ColorF)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData<bool>, ColorF)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData<bool>, OnixRuntime.Api.Maths.ColorF)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 748
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders the faces of a bounding box with the specified texture, <xref href="OnixRuntime.Api.Maths.Rect.FullUV" data-throw-if-not-resolved="false"></xref> for its uv coordinates and <xref href="BlockFaceUvRotation.NoRotation" data-throw-if-not-resolved="false"></xref> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture, PerBlockFaceFaceData<bool> shouldRenderFace, ColorF tint)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    - id: shouldRenderFace
+      type: PerBlockFaceFaceData{System.Boolean}
+      description: 6 booleans to know which faces should be rendered.
+    - id: tint
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color of the texture tint.
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath, shouldRenderFace As PerBlockFaceFaceData(Of Boolean), tint As ColorF)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+  nameWithType.vb: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), ColorF)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, PerBlockFaceFaceData(Of Boolean), OnixRuntime.Api.Maths.ColorF)
+  name.vb: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, PerBlockFaceFaceData(Of Boolean), ColorF)
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)
+  id: RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox,OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Maths.ColorF)
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, ColorF)
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal(BoundingBox, TexturePath, ColorF)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal(OnixRuntime.Api.Maths.BoundingBox, OnixRuntime.Api.Rendering.TexturePath, OnixRuntime.Api.Maths.ColorF)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBoundingBoxTexturedNormal
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 756
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Renders all faces of a bounding box with the specified texture, <xref href="OnixRuntime.Api.Maths.Rect.FullUV" data-throw-if-not-resolved="false"></xref> for its uv coordinates and <xref href="BlockFaceUvRotation.NoRotation" data-throw-if-not-resolved="false"></xref> without a tint. This will also add normals, which may not work depending on material choice/graphics settings.
+  example: []
+  syntax:
+    content: public virtual void RenderBoundingBoxTexturedNormal(BoundingBox box, TexturePath texture, ColorF tint)
+    parameters:
+    - id: box
+      type: OnixRuntime.Api.Maths.BoundingBox
+      description: The bounding box to render.
+    - id: texture
+      type: OnixRuntime.Api.Rendering.TexturePath
+      description: The texture to render the bounding box with.
+    - id: tint
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The color of the texture tint.
+    content.vb: Public Overridable Sub RenderBoundingBoxTexturedNormal(box As BoundingBox, texture As TexturePath, tint As ColorF)
+  overload: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
 - uid: OnixRuntime.Api.Rendering.RendererWorld.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
   commentId: M:OnixRuntime.Api.Rendering.RendererWorld.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
   id: PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
@@ -1985,11 +2532,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PushTransformation
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 729
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 771
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2027,11 +2574,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PopTransformation
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 739
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 781
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2056,11 +2603,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderItem
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 756
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 798
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2109,11 +2656,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderItem
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 770
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 812
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2159,15 +2706,20 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetupLights
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 777
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 821
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
-  summary: Sets up lighting for the specified entity.
+  summary: >-
+    Sets up lighting for the specified entity.
+
+    Make sure you have a <xref href="OnixRuntime.Api.Rendering.GameMaterialParameters" data-throw-if-not-resolved="false"></xref> that has lighting enabled or enabling it with a <xref href="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref>.
+
+    Make sure FullBright isn't enabled in the client if you're trying to see that working.
   example: []
   syntax:
     content: public virtual void SetupLights(Entity entity, int lightEmission = 0)
@@ -2197,15 +2749,20 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetupLights
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 784
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 830
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
-  summary: Sets up lighting for the specified bounding box and center.
+  summary: >-
+    Sets up lighting for the specified bounding box and center.
+
+    Make sure you have a <xref href="OnixRuntime.Api.Rendering.GameMaterialParameters" data-throw-if-not-resolved="false"></xref> that has lighting enabled or enabling it with a <xref href="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref>.
+
+    Make sure FullBright isn't enabled in the client if you're trying to see that working.
   example: []
   syntax:
     content: public virtual void SetupLights(BoundingBox boundingBox, Vec3 center, int lightEmission = 0)
@@ -2238,15 +2795,20 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetupLights
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 790
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 838
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
-  summary: Sets up lighting for the specified bounding box.
+  summary: >-
+    Sets up lighting for the specified bounding box.
+
+    Make sure you have a <xref href="OnixRuntime.Api.Rendering.GameMaterialParameters" data-throw-if-not-resolved="false"></xref> that has lighting enabled or enabling it with a <xref href="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref>.
+
+    Make sure FullBright isn't enabled in the client if you're trying to see that working.
   example: []
   syntax:
     content: public virtual void SetupLights(BoundingBox boundingBox, int lightEmission = 0)
@@ -2262,41 +2824,6 @@ items:
   nameWithType.vb: RendererWorld.SetupLights(BoundingBox, Integer)
   fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.SetupLights(OnixRuntime.Api.Maths.BoundingBox, Integer)
   name.vb: SetupLights(BoundingBox, Integer)
-- uid: OnixRuntime.Api.Rendering.RendererWorld.EnableLights(System.Boolean)
-  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.EnableLights(System.Boolean)
-  id: EnableLights(System.Boolean)
-  parent: OnixRuntime.Api.Rendering.RendererWorld
-  langs:
-  - csharp
-  - vb
-  name: EnableLights(bool)
-  nameWithType: RendererWorld.EnableLights(bool)
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.EnableLights(bool)
-  type: Method
-  source:
-    remote:
-      path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: EnableLights
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 795
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api.Rendering
-  summary: Enables or disables lighting for the renderer.
-  example: []
-  syntax:
-    content: public virtual void EnableLights(bool enabled)
-    parameters:
-    - id: enabled
-      type: System.Boolean
-      description: True to enable lighting; false to disable.
-    content.vb: Public Overridable Sub EnableLights(enabled As Boolean)
-  overload: OnixRuntime.Api.Rendering.RendererWorld.EnableLights*
-  nameWithType.vb: RendererWorld.EnableLights(Boolean)
-  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.EnableLights(Boolean)
-  name.vb: EnableLights(Boolean)
 - uid: OnixRuntime.Api.Rendering.RendererWorld.SetDefaultState(System.Boolean)
   commentId: M:OnixRuntime.Api.Rendering.RendererWorld.SetDefaultState(System.Boolean)
   id: SetDefaultState(System.Boolean)
@@ -2311,11 +2838,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetDefaultState
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 804
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 845
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3947,41 +4474,82 @@ references:
   - uid: OnixRuntime.Api.Maths
     name: Maths
     href: OnixRuntime.Api.Maths.html
-- uid: OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings*
-  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings
-  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_GetWorldRenderSettings
-  name: GetWorldRenderSettings
-  nameWithType: RendererWorld.GetWorldRenderSettings
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.GetWorldRenderSettings
-- uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  commentId: T:OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  parent: OnixRuntime.Api.Rendering
-  href: OnixRuntime.Api.Rendering.RendererWorld.html
-  name: RendererWorld.WorldRenderSettingsPopper
-  nameWithType: RendererWorld.WorldRenderSettingsPopper
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
+- uid: OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_PushWorldUIRenderSettings_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_BlockFace_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Single_
+  name: PushWorldUIRenderSettings(BlockPos, BlockFace, Vec2, Vec2, float)
+  nameWithType: RendererWorld.PushWorldUIRenderSettings(BlockPos, BlockFace, Vec2, Vec2, float)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.BlockFace, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, float)
+  nameWithType.vb: RendererWorld.PushWorldUIRenderSettings(BlockPos, BlockFace, Vec2, Vec2, Single)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.BlockFace, OnixRuntime.Api.Maths.Vec2, OnixRuntime.Api.Maths.Vec2, Single)
+  name.vb: PushWorldUIRenderSettings(BlockPos, BlockFace, Vec2, Vec2, Single)
   spec.csharp:
-  - uid: OnixRuntime.Api.Rendering.RendererWorld
-    name: RendererWorld
-    href: OnixRuntime.Api.Rendering.RendererWorld.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    name: WorldRenderSettingsPopper
-    href: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper.html
+  - uid: OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
+    name: PushWorldUIRenderSettings
+    href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_PushWorldUIRenderSettings_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_BlockFace_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Single_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.BlockFace
+    name: BlockFace
+    href: OnixRuntime.Api.World.BlockFace.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Vec2
+    name: Vec2
+    href: OnixRuntime.Api.Maths.Vec2.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Vec2
+    name: Vec2
+    href: OnixRuntime.Api.Maths.Vec2.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
   spec.vb:
-  - uid: OnixRuntime.Api.Rendering.RendererWorld
-    name: RendererWorld
-    href: OnixRuntime.Api.Rendering.RendererWorld.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    name: WorldRenderSettingsPopper
-    href: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper.html
-- uid: OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings*
-  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings
-  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_InternalPushWorldRenderSettings_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
-  name: InternalPushWorldRenderSettings
-  nameWithType: RendererWorld.InternalPushWorldRenderSettings
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.InternalPushWorldRenderSettings
+  - uid: OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.BlockFace,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,System.Single)
+    name: PushWorldUIRenderSettings
+    href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_PushWorldUIRenderSettings_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_BlockFace_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Single_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.BlockFace
+    name: BlockFace
+    href: OnixRuntime.Api.World.BlockFace.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Vec2
+    name: Vec2
+    href: OnixRuntime.Api.Maths.Vec2.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.Vec2
+    name: Vec2
+    href: OnixRuntime.Api.Maths.Vec2.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_IsSimulatingUi
+  name: IsSimulatingUi
+  nameWithType: RendererWorld.IsSimulatingUi
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.IsSimulatingUi
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -3993,12 +4561,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings*
-  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings
-  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_PushWorldRenderSettings_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
-  name: PushWorldRenderSettings
-  nameWithType: RendererWorld.PushWorldRenderSettings
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.PushWorldRenderSettings
 - uid: OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings*
   commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.PushWorldUIRenderSettings
   href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_PushWorldUIRenderSettings_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_BlockFace_OnixRuntime_Api_Maths_Vec2_OnixRuntime_Api_Maths_Vec2_System_Single_
@@ -4413,6 +4975,214 @@ references:
     name: MeshBuilderPrimitiveType
     href: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html
   - name: )
+- uid: OnixRuntime.Api.Rendering.GameMaterialParameters
+  commentId: T:OnixRuntime.Api.Rendering.GameMaterialParameters
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMaterialParameters.html
+  name: GameMaterialParameters
+  nameWithType: GameMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.GameMaterialParameters
+- uid: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_SetMaterialParameters_OnixRuntime_Api_Rendering_GameMaterialParameters_
+  name: SetMaterialParameters
+  nameWithType: RendererWorld.SetMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameters
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameters_OnixRuntime_Api_Rendering_GameMaterialParameters_
+  name: SetMaterialParameters(GameMaterialParameters)
+  nameWithType: IGameRenderer.SetMaterialParameters(GameMaterialParameters)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+    name: SetMaterialParameters
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameters_OnixRuntime_Api_Rendering_GameMaterialParameters_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameters
+    name: GameMaterialParameters
+    href: OnixRuntime.Api.Rendering.GameMaterialParameters.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+    name: SetMaterialParameters
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameters_OnixRuntime_Api_Rendering_GameMaterialParameters_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameters
+    name: GameMaterialParameters
+    href: OnixRuntime.Api.Rendering.GameMaterialParameters.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_SetMaterialCustom_System_String_System_Boolean_
+  name: SetMaterialCustom
+  nameWithType: RendererWorld.SetMaterialCustom
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialCustom
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_
+  name: SetMaterialCustom(string, bool)
+  nameWithType: IGameRenderer.SetMaterialCustom(string, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(string, bool)
+  nameWithType.vb: IGameRenderer.SetMaterialCustom(String, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(String, Boolean)
+  name.vb: SetMaterialCustom(String, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+    name: SetMaterialCustom
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+    name: SetMaterialCustom
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_GetMaterialParameters
+  name: GetMaterialParameters
+  nameWithType: RendererWorld.GetMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameters
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameters
+  name: GetMaterialParameters()
+  nameWithType: IGameRenderer.GetMaterialParameters()
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+    name: GetMaterialParameters
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameters
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+    name: GetMaterialParameters
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameters
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  name: SetMaterialParameter(GameMaterialParameterType, bool)
+  nameWithType: IGameRenderer.SetMaterialParameter(GameMaterialParameterType, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, bool)
+  nameWithType.vb: IGameRenderer.SetMaterialParameter(GameMaterialParameterType, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, Boolean)
+  name.vb: SetMaterialParameter(GameMaterialParameterType, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+    name: SetMaterialParameter
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    name: GameMaterialParameterType
+    href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+    name: SetMaterialParameter
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    name: GameMaterialParameterType
+    href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_GetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_
+  name: GetMaterialParameter
+  nameWithType: RendererWorld.GetMaterialParameter
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.GetMaterialParameter
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_
+  name: GetMaterialParameter(GameMaterialParameterType)
+  nameWithType: IGameRenderer.GetMaterialParameter(GameMaterialParameterType)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+    name: GetMaterialParameter
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    name: GameMaterialParameterType
+    href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+    name: GetMaterialParameter
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    name: GameMaterialParameterType
+    href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+  commentId: T:OnixRuntime.Api.Rendering.GameMaterialParameterType
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  name: GameMaterialParameterType
+  nameWithType: GameMaterialParameterType
+  fullName: OnixRuntime.Api.Rendering.GameMaterialParameterType
+- uid: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  name: SetMaterialParameter
+  nameWithType: RendererWorld.SetMaterialParameter
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.SetMaterialParameter
 - uid: OnixRuntime.Api.Rendering.RendererCommon.FillRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)
   commentId: M:OnixRuntime.Api.Rendering.RendererCommon.FillRectangle(OnixRuntime.Api.Maths.Rect,OnixRuntime.Api.Maths.ColorF)
   parent: OnixRuntime.Api.Rendering.RendererCommon
@@ -4929,17 +5699,6 @@ references:
   name: RenderText
   nameWithType: RendererWorld.RenderText
   fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderText
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: OnixRuntime.Api.Rendering.RendererCommon.RenderText(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.String,OnixRuntime.Api.Rendering.TextAlignment,OnixRuntime.Api.Rendering.TextAlignment,System.Single)
   commentId: M:OnixRuntime.Api.Rendering.RendererCommon.RenderText(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.String,OnixRuntime.Api.Rendering.TextAlignment,OnixRuntime.Api.Rendering.TextAlignment,System.Single)
   parent: OnixRuntime.Api.Rendering.RendererCommon
@@ -5619,6 +6378,12 @@ references:
     name: BlockFaceUvRotation
     href: BlockFaceUvRotation.html
   - name: )
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxNormal_OnixRuntime_Api_Maths_BoundingBox_PerBlockFaceFaceData_System_Boolean__OnixRuntime_Api_Maths_ColorF_
+  name: RenderBoundingBoxNormal
+  nameWithType: RendererWorld.RenderBoundingBoxNormal
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxNormal
 - uid: OnixRuntime.Api.Maths.Rect.FullUV
   commentId: P:OnixRuntime.Api.Maths.Rect.FullUV
   href: OnixRuntime.Api.Maths.Rect.html#OnixRuntime_Api_Maths_Rect_FullUV
@@ -5631,6 +6396,12 @@ references:
   name: NoRotation
   nameWithType: BlockFaceUvRotation.NoRotation
   fullName: BlockFaceUvRotation.NoRotation
+- uid: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_RenderBoundingBoxTexturedNormal_OnixRuntime_Api_Maths_BoundingBox_OnixRuntime_Api_Rendering_TexturePath_PerBlockFaceFaceData_System_Boolean__PerBlockFaceFaceData_OnixRuntime_Api_Maths_Rect__PerBlockFaceFaceData_BlockFaceUvRotation__OnixRuntime_Api_Maths_ColorF_
+  name: RenderBoundingBoxTexturedNormal
+  nameWithType: RendererWorld.RenderBoundingBoxTexturedNormal
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.RenderBoundingBoxTexturedNormal
 - uid: OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
   commentId: T:OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
   parent: OnixRuntime.Api.Rendering
@@ -5982,12 +6753,6 @@ references:
   - uid: OnixRuntime.Api.Entities
     name: Entities
     href: OnixRuntime.Api.Entities.html
-- uid: OnixRuntime.Api.Rendering.RendererWorld.EnableLights*
-  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.EnableLights
-  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_EnableLights_System_Boolean_
-  name: EnableLights
-  nameWithType: RendererWorld.EnableLights
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.EnableLights
 - uid: OnixRuntime.Api.Rendering.RendererCommon.SetDefaultState(System.Boolean)
   commentId: M:OnixRuntime.Api.Rendering.RendererCommon.SetDefaultState(System.Boolean)
   parent: OnixRuntime.Api.Rendering.RendererCommon

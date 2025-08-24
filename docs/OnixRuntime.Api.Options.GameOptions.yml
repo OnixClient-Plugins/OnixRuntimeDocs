@@ -1,0 +1,1597 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Options.GameOptions
+  commentId: T:OnixRuntime.Api.Options.GameOptions
+  id: GameOptions
+  parent: OnixRuntime.Api.Options
+  children:
+  - OnixRuntime.Api.Options.GameOptions.FancySkies
+  - OnixRuntime.Api.Options.GameOptions.Find(System.Func{OnixRuntime.Api.Options.GameOption,System.Boolean})
+  - OnixRuntime.Api.Options.GameOptions.FindById(System.Int32)
+  - OnixRuntime.Api.Options.GameOptions.FindBySaveName(System.String)
+  - OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName(System.String)
+  - OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName(System.String)
+  - OnixRuntime.Api.Options.GameOptions.Fov
+  - OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay
+  - OnixRuntime.Api.Options.GameOptions.Gamma
+  - OnixRuntime.Api.Options.GameOptions.GetEnumerator
+  - OnixRuntime.Api.Options.GameOptions.GuiScaleOffset
+  - OnixRuntime.Api.Options.GameOptions.HasOptions
+  - OnixRuntime.Api.Options.GameOptions.InGamePlayerNames
+  - OnixRuntime.Api.Options.GameOptions.OptionCount
+  - OnixRuntime.Api.Options.GameOptions.Options
+  - OnixRuntime.Api.Options.GameOptions.Perspective
+  - OnixRuntime.Api.Options.GameOptions.PerspectiveOption
+  - OnixRuntime.Api.Options.GameOptions.TransparentLeaves
+  - OnixRuntime.Api.Options.GameOptions.UiProfile
+  - OnixRuntime.Api.Options.GameOptions.UiProfileOption
+  langs:
+  - csharp
+  - vb
+  name: GameOptions
+  nameWithType: GameOptions
+  fullName: OnixRuntime.Api.Options.GameOptions
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GameOptions
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 33
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: >-
+    Represents the collection of all game options available in the current context.
+
+    Provides methods to enumerate, search, and access individual game options.
+  example: []
+  syntax:
+    content: 'public class GameOptions : MemoryAddressContainer, IEnumerable<GameOption>, IEnumerable'
+    content.vb: Public Class GameOptions Inherits MemoryAddressContainer Implements IEnumerable(Of GameOption), IEnumerable
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Options.GameOptions.HasOptions
+  commentId: P:OnixRuntime.Api.Options.GameOptions.HasOptions
+  id: HasOptions
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: HasOptions
+  nameWithType: GameOptions.HasOptions
+  fullName: OnixRuntime.Api.Options.GameOptions.HasOptions
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: HasOptions
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 58
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets a value indicating whether any game options are available.
+  example: []
+  syntax:
+    content: public bool HasOptions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasOptions As Boolean
+  overload: OnixRuntime.Api.Options.GameOptions.HasOptions*
+- uid: OnixRuntime.Api.Options.GameOptions.OptionCount
+  commentId: P:OnixRuntime.Api.Options.GameOptions.OptionCount
+  id: OptionCount
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: OptionCount
+  nameWithType: GameOptions.OptionCount
+  fullName: OnixRuntime.Api.Options.GameOptions.OptionCount
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OptionCount
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 63
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: >-
+    Gets the total number of game options.
+
+    Note that some options are not ever created and therefore the amount of options you count when iterating through the list will differ.
+  example: []
+  syntax:
+    content: public int OptionCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property OptionCount As Integer
+  overload: OnixRuntime.Api.Options.GameOptions.OptionCount*
+- uid: OnixRuntime.Api.Options.GameOptions.Options
+  commentId: P:OnixRuntime.Api.Options.GameOptions.Options
+  id: Options
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: Options
+  nameWithType: GameOptions.Options
+  fullName: OnixRuntime.Api.Options.GameOptions.Options
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Options
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 67
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets an enumerable collection of all game options.
+  example: []
+  syntax:
+    content: public IEnumerable<GameOption> Options { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}
+    content.vb: Public ReadOnly Property Options As IEnumerable(Of GameOption)
+  overload: OnixRuntime.Api.Options.GameOptions.Options*
+- uid: OnixRuntime.Api.Options.GameOptions.GetEnumerator
+  commentId: M:OnixRuntime.Api.Options.GameOptions.GetEnumerator
+  id: GetEnumerator
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: GameOptions.GetEnumerator()
+  fullName: OnixRuntime.Api.Options.GameOptions.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetEnumerator
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 95
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Returns an enumerator that iterates through all game options.
+  example: []
+  syntax:
+    content: public IEnumerator<GameOption> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{OnixRuntime.Api.Options.GameOption}
+      description: An enumerator of <xref href="OnixRuntime.Api.Options.GameOption" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function GetEnumerator() As IEnumerator(Of GameOption)
+  overload: OnixRuntime.Api.Options.GameOptions.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}.GetEnumerator
+- uid: OnixRuntime.Api.Options.GameOptions.FindById(System.Int32)
+  commentId: M:OnixRuntime.Api.Options.GameOptions.FindById(System.Int32)
+  id: FindById(System.Int32)
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: FindById(int)
+  nameWithType: GameOptions.FindById(int)
+  fullName: OnixRuntime.Api.Options.GameOptions.FindById(int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FindById
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 116
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: >-
+    Attempts to find a game option by its unique identifier.
+
+    Note: You should NEVER hardcode an ID, always assume that the ID will change between each restart.
+  example: []
+  syntax:
+    content: public GameOption? FindById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The ID of the option to find.
+    return:
+      type: OnixRuntime.Api.Options.GameOption
+      description: The matching <xref href="OnixRuntime.Api.Options.GameOption" data-throw-if-not-resolved="false"></xref> if found; otherwise, null.
+    content.vb: Public Function FindById(id As Integer) As GameOption
+  overload: OnixRuntime.Api.Options.GameOptions.FindById*
+  nameWithType.vb: GameOptions.FindById(Integer)
+  fullName.vb: OnixRuntime.Api.Options.GameOptions.FindById(Integer)
+  name.vb: FindById(Integer)
+- uid: OnixRuntime.Api.Options.GameOptions.Find(System.Func{OnixRuntime.Api.Options.GameOption,System.Boolean})
+  commentId: M:OnixRuntime.Api.Options.GameOptions.Find(System.Func{OnixRuntime.Api.Options.GameOption,System.Boolean})
+  id: Find(System.Func{OnixRuntime.Api.Options.GameOption,System.Boolean})
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: Find(Func<GameOption, bool>)
+  nameWithType: GameOptions.Find(Func<GameOption, bool>)
+  fullName: OnixRuntime.Api.Options.GameOptions.Find(System.Func<OnixRuntime.Api.Options.GameOption, bool>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Find
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 130
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Finds the first game option that matches the specified predicate and gives it to you.
+  example: []
+  syntax:
+    content: public GameOption? Find(Func<GameOption, bool> predicate)
+    parameters:
+    - id: predicate
+      type: System.Func{OnixRuntime.Api.Options.GameOption,System.Boolean}
+      description: A function to test each option for a condition.
+    return:
+      type: OnixRuntime.Api.Options.GameOption
+      description: The first matching <xref href="OnixRuntime.Api.Options.GameOption" data-throw-if-not-resolved="false"></xref>, or null if none match.
+    content.vb: Public Function Find(predicate As Func(Of GameOption, Boolean)) As GameOption
+  overload: OnixRuntime.Api.Options.GameOptions.Find*
+  nameWithType.vb: GameOptions.Find(Func(Of GameOption, Boolean))
+  fullName.vb: OnixRuntime.Api.Options.GameOptions.Find(System.Func(Of OnixRuntime.Api.Options.GameOption, Boolean))
+  name.vb: Find(Func(Of GameOption, Boolean))
+- uid: OnixRuntime.Api.Options.GameOptions.FindBySaveName(System.String)
+  commentId: M:OnixRuntime.Api.Options.GameOptions.FindBySaveName(System.String)
+  id: FindBySaveName(System.String)
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: FindBySaveName(string)
+  nameWithType: GameOptions.FindBySaveName(string)
+  fullName: OnixRuntime.Api.Options.GameOptions.FindBySaveName(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FindBySaveName
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 177
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Finds a game option by its save name, the one you'd see in your options.txt file. e.g. "gfx_field_of_view".
+  example: []
+  syntax:
+    content: public GameOption? FindBySaveName(string saveName)
+    parameters:
+    - id: saveName
+      type: System.String
+      description: The save name of the option.
+    return:
+      type: OnixRuntime.Api.Options.GameOption
+      description: The matching <xref href="OnixRuntime.Api.Options.GameOption" data-throw-if-not-resolved="false"></xref> if found; otherwise, null.
+    content.vb: Public Function FindBySaveName(saveName As String) As GameOption
+  overload: OnixRuntime.Api.Options.GameOptions.FindBySaveName*
+  nameWithType.vb: GameOptions.FindBySaveName(String)
+  fullName.vb: OnixRuntime.Api.Options.GameOptions.FindBySaveName(String)
+  name.vb: FindBySaveName(String)
+- uid: OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName(System.String)
+  commentId: M:OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName(System.String)
+  id: FindByTranslationKeyName(System.String)
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: FindByTranslationKeyName(string)
+  nameWithType: GameOptions.FindByTranslationKeyName(string)
+  fullName: OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FindByTranslationKeyName
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 195
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: >-
+    Finds a game option by its display name translation key.
+
+    This is what you'll find as the key in the .lang file. e.g. "options.fov".
+  example: []
+  syntax:
+    content: public GameOption? FindByTranslationKeyName(string translationKey)
+    parameters:
+    - id: translationKey
+      type: System.String
+      description: The translation key of the option.
+    return:
+      type: OnixRuntime.Api.Options.GameOption
+      description: The matching <xref href="OnixRuntime.Api.Options.GameOption" data-throw-if-not-resolved="false"></xref> if found; otherwise, null.
+    content.vb: Public Function FindByTranslationKeyName(translationKey As String) As GameOption
+  overload: OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName*
+  nameWithType.vb: GameOptions.FindByTranslationKeyName(String)
+  fullName.vb: OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName(String)
+  name.vb: FindByTranslationKeyName(String)
+- uid: OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName(System.String)
+  commentId: M:OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName(System.String)
+  id: FindByTelemetryPropertyName(System.String)
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: FindByTelemetryPropertyName(string)
+  nameWithType: GameOptions.FindByTelemetryPropertyName(string)
+  fullName: OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FindByTelemetryPropertyName
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 211
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Finds a game option by its telemetry property name.
+  example: []
+  syntax:
+    content: public GameOption? FindByTelemetryPropertyName(string translationKey)
+    parameters:
+    - id: translationKey
+      type: System.String
+      description: The telemetry property name of the option.
+    return:
+      type: OnixRuntime.Api.Options.GameOption
+      description: The matching <xref href="OnixRuntime.Api.Options.GameOption" data-throw-if-not-resolved="false"></xref> if found; otherwise, null.
+    content.vb: Public Function FindByTelemetryPropertyName(translationKey As String) As GameOption
+  overload: OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName*
+  nameWithType.vb: GameOptions.FindByTelemetryPropertyName(String)
+  fullName.vb: OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName(String)
+  name.vb: FindByTelemetryPropertyName(String)
+- uid: OnixRuntime.Api.Options.GameOptions.InGamePlayerNames
+  commentId: P:OnixRuntime.Api.Options.GameOptions.InGamePlayerNames
+  id: InGamePlayerNames
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: InGamePlayerNames
+  nameWithType: GameOptions.InGamePlayerNames
+  fullName: OnixRuntime.Api.Options.GameOptions.InGamePlayerNames
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InGamePlayerNames
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 235
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets whether in-game player names are displayed.
+  example: []
+  syntax:
+    content: public GameOptionBool? InGamePlayerNames { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionBool
+    content.vb: Public ReadOnly Property InGamePlayerNames As GameOptionBool
+  overload: OnixRuntime.Api.Options.GameOptions.InGamePlayerNames*
+- uid: OnixRuntime.Api.Options.GameOptions.FancySkies
+  commentId: P:OnixRuntime.Api.Options.GameOptions.FancySkies
+  id: FancySkies
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: FancySkies
+  nameWithType: GameOptions.FancySkies
+  fullName: OnixRuntime.Api.Options.GameOptions.FancySkies
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FancySkies
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 240
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets whether fancy skies are enabled in the game.
+  example: []
+  syntax:
+    content: public GameOptionBool? FancySkies { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionBool
+    content.vb: Public ReadOnly Property FancySkies As GameOptionBool
+  overload: OnixRuntime.Api.Options.GameOptions.FancySkies*
+- uid: OnixRuntime.Api.Options.GameOptions.TransparentLeaves
+  commentId: P:OnixRuntime.Api.Options.GameOptions.TransparentLeaves
+  id: TransparentLeaves
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: TransparentLeaves
+  nameWithType: GameOptions.TransparentLeaves
+  fullName: OnixRuntime.Api.Options.GameOptions.TransparentLeaves
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: TransparentLeaves
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 245
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets whether leaves are rendered transparently.
+  example: []
+  syntax:
+    content: public GameOptionBool? TransparentLeaves { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionBool
+    content.vb: Public ReadOnly Property TransparentLeaves As GameOptionBool
+  overload: OnixRuntime.Api.Options.GameOptions.TransparentLeaves*
+- uid: OnixRuntime.Api.Options.GameOptions.PerspectiveOption
+  commentId: P:OnixRuntime.Api.Options.GameOptions.PerspectiveOption
+  id: PerspectiveOption
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: PerspectiveOption
+  nameWithType: GameOptions.PerspectiveOption
+  fullName: OnixRuntime.Api.Options.GameOptions.PerspectiveOption
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PerspectiveOption
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 250
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets the current perspective option (e.g., first-person or third-person).
+  example: []
+  syntax:
+    content: public GameOptionEnum? PerspectiveOption { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionEnum
+    content.vb: Public ReadOnly Property PerspectiveOption As GameOptionEnum
+  overload: OnixRuntime.Api.Options.GameOptions.PerspectiveOption*
+- uid: OnixRuntime.Api.Options.GameOptions.UiProfileOption
+  commentId: P:OnixRuntime.Api.Options.GameOptions.UiProfileOption
+  id: UiProfileOption
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: UiProfileOption
+  nameWithType: GameOptions.UiProfileOption
+  fullName: OnixRuntime.Api.Options.GameOptions.UiProfileOption
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: UiProfileOption
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 255
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets the current UI profile option.
+  example: []
+  syntax:
+    content: public GameOptionEnum? UiProfileOption { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionEnum
+    content.vb: Public ReadOnly Property UiProfileOption As GameOptionEnum
+  overload: OnixRuntime.Api.Options.GameOptions.UiProfileOption*
+- uid: OnixRuntime.Api.Options.GameOptions.UiProfile
+  commentId: P:OnixRuntime.Api.Options.GameOptions.UiProfile
+  id: UiProfile
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: UiProfile
+  nameWithType: GameOptions.UiProfile
+  fullName: OnixRuntime.Api.Options.GameOptions.UiProfile
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: UiProfile
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 260
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets the current UI profile, falling back to <xref href="OnixRuntime.Api.Options.GameUiProfileOption.Classic" data-throw-if-not-resolved="false"></xref> if unset.
+  example: []
+  syntax:
+    content: public GameUiProfileOption UiProfile { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameUiProfileOption
+    content.vb: Public Property UiProfile As GameUiProfileOption
+  overload: OnixRuntime.Api.Options.GameOptions.UiProfile*
+- uid: OnixRuntime.Api.Options.GameOptions.Perspective
+  commentId: P:OnixRuntime.Api.Options.GameOptions.Perspective
+  id: Perspective
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: Perspective
+  nameWithType: GameOptions.Perspective
+  fullName: OnixRuntime.Api.Options.GameOptions.Perspective
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Perspective
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 272
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets the current player perspective, falling back to <xref href="OnixRuntime.Api.Options.PlayerPerspective.FirstPerson" data-throw-if-not-resolved="false"></xref> if unset.
+  example: []
+  syntax:
+    content: public PlayerPerspective Perspective { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.PlayerPerspective
+    content.vb: Public Property Perspective As PlayerPerspective
+  overload: OnixRuntime.Api.Options.GameOptions.Perspective*
+- uid: OnixRuntime.Api.Options.GameOptions.Fov
+  commentId: P:OnixRuntime.Api.Options.GameOptions.Fov
+  id: Fov
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: Fov
+  nameWithType: GameOptions.Fov
+  fullName: OnixRuntime.Api.Options.GameOptions.Fov
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Fov
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 284
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets the current field of view.
+  example: []
+  syntax:
+    content: public GameOptionFloat? Fov { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionFloat
+    content.vb: Public ReadOnly Property Fov As GameOptionFloat
+  overload: OnixRuntime.Api.Options.GameOptions.Fov*
+- uid: OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay
+  commentId: P:OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay
+  id: FovAlteredByGameplay
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: FovAlteredByGameplay
+  nameWithType: GameOptions.FovAlteredByGameplay
+  fullName: OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FovAlteredByGameplay
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 289
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets whether the field of view is altered by gameplay mechanics.
+  example: []
+  syntax:
+    content: public GameOptionBool? FovAlteredByGameplay { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionBool
+    content.vb: Public ReadOnly Property FovAlteredByGameplay As GameOptionBool
+  overload: OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay*
+- uid: OnixRuntime.Api.Options.GameOptions.Gamma
+  commentId: P:OnixRuntime.Api.Options.GameOptions.Gamma
+  id: Gamma
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: Gamma
+  nameWithType: GameOptions.Gamma
+  fullName: OnixRuntime.Api.Options.GameOptions.Gamma
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Gamma
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 294
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets the gamma setting for the game.
+  example: []
+  syntax:
+    content: public GameOptionFloat? Gamma { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionFloat
+    content.vb: Public ReadOnly Property Gamma As GameOptionFloat
+  overload: OnixRuntime.Api.Options.GameOptions.Gamma*
+- uid: OnixRuntime.Api.Options.GameOptions.GuiScaleOffset
+  commentId: P:OnixRuntime.Api.Options.GameOptions.GuiScaleOffset
+  id: GuiScaleOffset
+  parent: OnixRuntime.Api.Options.GameOptions
+  langs:
+  - csharp
+  - vb
+  name: GuiScaleOffset
+  nameWithType: GameOptions.GuiScaleOffset
+  fullName: OnixRuntime.Api.Options.GameOptions.GuiScaleOffset
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Options/GameOptions.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GuiScaleOffset
+    path: ../OnixRuntime/OnixRuntime/Api/Options/GameOptions.cs
+    startLine: 299
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Options
+  summary: Gets or sets the GUI scale offset.
+  example: []
+  syntax:
+    content: public GameOptionInt? GuiScaleOffset { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Options.GameOptionInt
+    content.vb: Public ReadOnly Property GuiScaleOffset As GameOptionInt
+  overload: OnixRuntime.Api.Options.GameOptions.GuiScaleOffset*
+references:
+- uid: OnixRuntime.Api.Options
+  commentId: N:OnixRuntime.Api.Options
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Options
+  nameWithType: OnixRuntime.Api.Options
+  fullName: OnixRuntime.Api.Options
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Options
+    name: Options
+    href: OnixRuntime.Api.Options.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Options
+    name: Options
+    href: OnixRuntime.Api.Options.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}
+  commentId: T:System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GameOption>
+  nameWithType: IEnumerable<GameOption>
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.Options.GameOption>
+  nameWithType.vb: IEnumerable(Of GameOption)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.Options.GameOption)
+  name.vb: IEnumerable(Of GameOption)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: OnixRuntime.Api.Options.GameOption
+    name: GameOption
+    href: OnixRuntime.Api.Options.GameOption.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Options.GameOption
+    name: GameOption
+    href: OnixRuntime.Api.Options.GameOption.html
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: OnixRuntime.Api.Options.GameOptions.HasOptions*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.HasOptions
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_HasOptions
+  name: HasOptions
+  nameWithType: GameOptions.HasOptions
+  fullName: OnixRuntime.Api.Options.GameOptions.HasOptions
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Options.GameOptions.OptionCount*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.OptionCount
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_OptionCount
+  name: OptionCount
+  nameWithType: GameOptions.OptionCount
+  fullName: OnixRuntime.Api.Options.GameOptions.OptionCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Options.GameOptions.Options*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.Options
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_Options
+  name: Options
+  nameWithType: GameOptions.Options
+  fullName: OnixRuntime.Api.Options.GameOptions.Options
+- uid: OnixRuntime.Api.Options.GameOption
+  commentId: T:OnixRuntime.Api.Options.GameOption
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.GameOption.html
+  name: GameOption
+  nameWithType: GameOption
+  fullName: OnixRuntime.Api.Options.GameOption
+- uid: OnixRuntime.Api.Options.GameOptions.GetEnumerator*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.GetEnumerator
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_GetEnumerator
+  name: GetEnumerator
+  nameWithType: GameOptions.GetEnumerator
+  fullName: OnixRuntime.Api.Options.GameOptions.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<GameOption>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.Options.GameOption>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of GameOption).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.Options.GameOption).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.Options.GameOption}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator{OnixRuntime.Api.Options.GameOption}
+  commentId: T:System.Collections.Generic.IEnumerator{OnixRuntime.Api.Options.GameOption}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<GameOption>
+  nameWithType: IEnumerator<GameOption>
+  fullName: System.Collections.Generic.IEnumerator<OnixRuntime.Api.Options.GameOption>
+  nameWithType.vb: IEnumerator(Of GameOption)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of OnixRuntime.Api.Options.GameOption)
+  name.vb: IEnumerator(Of GameOption)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - uid: OnixRuntime.Api.Options.GameOption
+    name: GameOption
+    href: OnixRuntime.Api.Options.GameOption.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Options.GameOption
+    name: GameOption
+    href: OnixRuntime.Api.Options.GameOption.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.Options.GameOptions.FindById*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.FindById
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_FindById_System_Int32_
+  name: FindById
+  nameWithType: GameOptions.FindById
+  fullName: OnixRuntime.Api.Options.GameOptions.FindById
+- uid: OnixRuntime.Api.Options.GameOptions.Find*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.Find
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_Find_System_Func_OnixRuntime_Api_Options_GameOption_System_Boolean__
+  name: Find
+  nameWithType: GameOptions.Find
+  fullName: OnixRuntime.Api.Options.GameOptions.Find
+- uid: System.Func{OnixRuntime.Api.Options.GameOption,System.Boolean}
+  commentId: T:System.Func{OnixRuntime.Api.Options.GameOption,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<GameOption, bool>
+  nameWithType: Func<GameOption, bool>
+  fullName: System.Func<OnixRuntime.Api.Options.GameOption, bool>
+  nameWithType.vb: Func(Of GameOption, Boolean)
+  fullName.vb: System.Func(Of OnixRuntime.Api.Options.GameOption, Boolean)
+  name.vb: Func(Of GameOption, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: OnixRuntime.Api.Options.GameOption
+    name: GameOption
+    href: OnixRuntime.Api.Options.GameOption.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.Options.GameOption
+    name: GameOption
+    href: OnixRuntime.Api.Options.GameOption.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: OnixRuntime.Api.Options.GameOptions.FindBySaveName*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.FindBySaveName
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_FindBySaveName_System_String_
+  name: FindBySaveName
+  nameWithType: GameOptions.FindBySaveName
+  fullName: OnixRuntime.Api.Options.GameOptions.FindBySaveName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_FindByTranslationKeyName_System_String_
+  name: FindByTranslationKeyName
+  nameWithType: GameOptions.FindByTranslationKeyName
+  fullName: OnixRuntime.Api.Options.GameOptions.FindByTranslationKeyName
+- uid: OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_FindByTelemetryPropertyName_System_String_
+  name: FindByTelemetryPropertyName
+  nameWithType: GameOptions.FindByTelemetryPropertyName
+  fullName: OnixRuntime.Api.Options.GameOptions.FindByTelemetryPropertyName
+- uid: OnixRuntime.Api.Options.GameOptions.InGamePlayerNames*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.InGamePlayerNames
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_InGamePlayerNames
+  name: InGamePlayerNames
+  nameWithType: GameOptions.InGamePlayerNames
+  fullName: OnixRuntime.Api.Options.GameOptions.InGamePlayerNames
+- uid: OnixRuntime.Api.Options.GameOptionBool
+  commentId: T:OnixRuntime.Api.Options.GameOptionBool
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.GameOptionBool.html
+  name: GameOptionBool
+  nameWithType: GameOptionBool
+  fullName: OnixRuntime.Api.Options.GameOptionBool
+- uid: OnixRuntime.Api.Options.GameOptions.FancySkies*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.FancySkies
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_FancySkies
+  name: FancySkies
+  nameWithType: GameOptions.FancySkies
+  fullName: OnixRuntime.Api.Options.GameOptions.FancySkies
+- uid: OnixRuntime.Api.Options.GameOptions.TransparentLeaves*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.TransparentLeaves
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_TransparentLeaves
+  name: TransparentLeaves
+  nameWithType: GameOptions.TransparentLeaves
+  fullName: OnixRuntime.Api.Options.GameOptions.TransparentLeaves
+- uid: OnixRuntime.Api.Options.GameOptions.PerspectiveOption*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.PerspectiveOption
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_PerspectiveOption
+  name: PerspectiveOption
+  nameWithType: GameOptions.PerspectiveOption
+  fullName: OnixRuntime.Api.Options.GameOptions.PerspectiveOption
+- uid: OnixRuntime.Api.Options.GameOptionEnum
+  commentId: T:OnixRuntime.Api.Options.GameOptionEnum
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.GameOptionEnum.html
+  name: GameOptionEnum
+  nameWithType: GameOptionEnum
+  fullName: OnixRuntime.Api.Options.GameOptionEnum
+- uid: OnixRuntime.Api.Options.GameOptions.UiProfileOption*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.UiProfileOption
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_UiProfileOption
+  name: UiProfileOption
+  nameWithType: GameOptions.UiProfileOption
+  fullName: OnixRuntime.Api.Options.GameOptions.UiProfileOption
+- uid: OnixRuntime.Api.Options.GameUiProfileOption.Classic
+  commentId: F:OnixRuntime.Api.Options.GameUiProfileOption.Classic
+  href: OnixRuntime.Api.Options.GameUiProfileOption.html#OnixRuntime_Api_Options_GameUiProfileOption_Classic
+  name: Classic
+  nameWithType: GameUiProfileOption.Classic
+  fullName: OnixRuntime.Api.Options.GameUiProfileOption.Classic
+- uid: OnixRuntime.Api.Options.GameOptions.UiProfile*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.UiProfile
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_UiProfile
+  name: UiProfile
+  nameWithType: GameOptions.UiProfile
+  fullName: OnixRuntime.Api.Options.GameOptions.UiProfile
+- uid: OnixRuntime.Api.Options.GameUiProfileOption
+  commentId: T:OnixRuntime.Api.Options.GameUiProfileOption
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.GameUiProfileOption.html
+  name: GameUiProfileOption
+  nameWithType: GameUiProfileOption
+  fullName: OnixRuntime.Api.Options.GameUiProfileOption
+- uid: OnixRuntime.Api.Options.PlayerPerspective.FirstPerson
+  commentId: F:OnixRuntime.Api.Options.PlayerPerspective.FirstPerson
+  href: OnixRuntime.Api.Options.PlayerPerspective.html#OnixRuntime_Api_Options_PlayerPerspective_FirstPerson
+  name: FirstPerson
+  nameWithType: PlayerPerspective.FirstPerson
+  fullName: OnixRuntime.Api.Options.PlayerPerspective.FirstPerson
+- uid: OnixRuntime.Api.Options.GameOptions.Perspective*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.Perspective
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_Perspective
+  name: Perspective
+  nameWithType: GameOptions.Perspective
+  fullName: OnixRuntime.Api.Options.GameOptions.Perspective
+- uid: OnixRuntime.Api.Options.PlayerPerspective
+  commentId: T:OnixRuntime.Api.Options.PlayerPerspective
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.PlayerPerspective.html
+  name: PlayerPerspective
+  nameWithType: PlayerPerspective
+  fullName: OnixRuntime.Api.Options.PlayerPerspective
+- uid: OnixRuntime.Api.Options.GameOptions.Fov*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.Fov
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_Fov
+  name: Fov
+  nameWithType: GameOptions.Fov
+  fullName: OnixRuntime.Api.Options.GameOptions.Fov
+- uid: OnixRuntime.Api.Options.GameOptionFloat
+  commentId: T:OnixRuntime.Api.Options.GameOptionFloat
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.GameOptionFloat.html
+  name: GameOptionFloat
+  nameWithType: GameOptionFloat
+  fullName: OnixRuntime.Api.Options.GameOptionFloat
+- uid: OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_FovAlteredByGameplay
+  name: FovAlteredByGameplay
+  nameWithType: GameOptions.FovAlteredByGameplay
+  fullName: OnixRuntime.Api.Options.GameOptions.FovAlteredByGameplay
+- uid: OnixRuntime.Api.Options.GameOptions.Gamma*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.Gamma
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_Gamma
+  name: Gamma
+  nameWithType: GameOptions.Gamma
+  fullName: OnixRuntime.Api.Options.GameOptions.Gamma
+- uid: OnixRuntime.Api.Options.GameOptions.GuiScaleOffset*
+  commentId: Overload:OnixRuntime.Api.Options.GameOptions.GuiScaleOffset
+  href: OnixRuntime.Api.Options.GameOptions.html#OnixRuntime_Api_Options_GameOptions_GuiScaleOffset
+  name: GuiScaleOffset
+  nameWithType: GameOptions.GuiScaleOffset
+  fullName: OnixRuntime.Api.Options.GameOptions.GuiScaleOffset
+- uid: OnixRuntime.Api.Options.GameOptionInt
+  commentId: T:OnixRuntime.Api.Options.GameOptionInt
+  parent: OnixRuntime.Api.Options
+  href: OnixRuntime.Api.Options.GameOptionInt.html
+  name: GameOptionInt
+  nameWithType: GameOptionInt
+  fullName: OnixRuntime.Api.Options.GameOptionInt

@@ -15,18 +15,18 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixSetting.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SettingChangedDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 186
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
+    startLine: 206
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
   summary: Delegate for handling setting change events.
   example: []
   syntax:
-    content: public delegate void OnixSetting.SettingChangedDelegate(OnixModule mod, OnixSetting setting, bool isInit)
+    content: public delegate void OnixSetting.SettingChangedDelegate(OnixModule? mod, OnixSetting setting, bool isInit)
     parameters:
     - id: mod
       type: OnixRuntime.Api.OnixClient.OnixModule

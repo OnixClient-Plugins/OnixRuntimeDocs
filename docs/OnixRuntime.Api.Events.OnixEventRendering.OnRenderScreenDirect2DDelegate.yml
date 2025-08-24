@@ -15,29 +15,47 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRenderScreenDirect2DDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 161
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 322
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time.
+
+    You should avoid this if <xref href="OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D" data-throw-if-not-resolved="false"></xref> gives you what you need.
+
+    This will never be a logic callback so don't access game state, entities, etc.
+  example: []
   syntax:
     content: public delegate void OnixEventRendering.OnRenderScreenDirect2DDelegate(RendererDirect2D gfx, float delta, string screenName, bool isHudHidden, bool isClientUI)
     parameters:
     - id: gfx
       type: OnixRuntime.Api.Rendering.RendererDirect2D
+      description: The Direct2D renderer instance.
     - id: delta
       type: System.Single
+      description: The time delta since the last frame.
     - id: screenName
       type: System.String
+      description: The name of the screen being rendered.
     - id: isHudHidden
       type: System.Boolean
+      description: Whether the HUD is hidden.
     - id: isClientUI
       type: System.Boolean
+      description: Whether the UI is for the client.
     content.vb: Public Delegate Sub OnixEventRendering.OnRenderScreenDirect2DDelegate(gfx As RendererDirect2D, delta As Single, screenName As String, isHudHidden As Boolean, isClientUI As Boolean)
 references:
+- uid: OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
+  href: OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_RenderHudDirect2D
+  name: RenderHudDirect2D
+  nameWithType: OnixEventRendering.RenderHudDirect2D
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
 - uid: OnixRuntime.Api.Events
   commentId: N:OnixRuntime.Api.Events
   href: OnixRuntime.html

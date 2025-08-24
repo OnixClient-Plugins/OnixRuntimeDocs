@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/dev/apiSpec/new?filename=OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry" class="text-break">
-Class OnixSettingValueAdapterRegistry  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L251"><i class="bi bi-code-slash"></i></a>
+Class OnixSettingValueAdapterRegistry  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,9 +156,9 @@ Provides functionality to register, retrieve, and manage adapters for different 
 
   <a id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter*"></a>
 
-  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter_System_Type_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type)">
-  GetAdapter(Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter_System_Type_OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type,OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)">
+  GetAdapter(Type, OnixModuleSettingRedirector?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the adapter for a specific type.</p>
@@ -166,13 +166,16 @@ Provides functionality to register, retrieve, and manage adapters for different 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OnixSettingValueAdapter GetAdapter(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OnixSettingValueAdapter GetAdapter(Type type, OnixModuleSettingRedirector? redirector = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
     <dd><p>The type to get an adapter for.</p>
+</dd>
+    <dt><code>redirector</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a></dt>
+    <dd><p>The setting redirector instance or null.</p>
 </dd>
   </dl>
 
@@ -201,9 +204,9 @@ Provides functionality to register, retrieve, and manage adapters for different 
 
   <a id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter*"></a>
 
-  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter__1" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1">
-  GetAdapter&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  <h3 id="OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter__1_OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_" data-uid="OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1(OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)">
+  GetAdapter&lt;T&gt;(OnixModuleSettingRedirector?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L389"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the adapter for a specific type.</p>
@@ -211,9 +214,15 @@ Provides functionality to register, retrieve, and manage adapters for different 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OnixSettingValueAdapter GetAdapter&lt;T&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static OnixSettingValueAdapter GetAdapter&lt;T&gt;(OnixModuleSettingRedirector? redirector = null)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>redirector</code> <a class="xref" href="OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html">OnixModuleSettingRedirector</a></dt>
+    <dd><p>The setting redirector instance or null.</p>
+</dd>
+  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
@@ -248,7 +257,7 @@ Provides functionality to register, retrieve, and manage adapters for different 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L251" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs/#L328" class="edit-link">Edit this page</a>
         </div>
 
 

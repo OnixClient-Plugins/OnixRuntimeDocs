@@ -6,11 +6,13 @@ items:
   parent: OnixRuntime.Api.Events
   children:
   - OnixRuntime.Api.Events.OnixEventRendering.HudRender
-  - OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreen
+  - OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame
   - OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenDirect2D
+  - OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenGame
   - OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
   - OnixRuntime.Api.Events.OnixEventRendering.RenderScreen
   - OnixRuntime.Api.Events.OnixEventRendering.RenderScreenDirect2D
+  - OnixRuntime.Api.Events.OnixEventRendering.RenderScreenGame
   - OnixRuntime.Api.Events.OnixEventRendering.ShouldHideScreen
   - OnixRuntime.Api.Events.OnixEventRendering.WorldRender
   langs:
@@ -23,14 +25,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixEventRendering
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 62
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 67
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    Provides rendering-related events (world, HUD, screen rendering, 2D/Direct2D hooks).
+
+    Subscribe to the events to receive renderer objects and timing deltas.
+
+    Handlers are invoked with an appropriate renderer instance depending on the current rendering backend.
+  example: []
   syntax:
     content: public class OnixEventRendering
     content.vb: Public Class OnixEventRendering
@@ -58,19 +67,50 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WorldRender
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 66
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 78
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: Occurs when the world (3D) should be rendered. Handlers receive a RendererWorld and the frame delta.
+  example: []
   syntax:
     content: public event OnixEventRendering.OnWorldRenderDelegate? WorldRender
     return:
       type: OnixRuntime.Api.Events.OnixEventRendering.OnWorldRenderDelegate
     content.vb: Public Event WorldRender As OnixEventRendering.OnWorldRenderDelegate
+- uid: OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame
+  id: HudRenderGame
+  parent: OnixRuntime.Api.Events.OnixEventRendering
+  langs:
+  - csharp
+  - vb
+  name: HudRenderGame
+  nameWithType: OnixEventRendering.HudRenderGame
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame
+  type: Event
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEventRendering.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: HudRenderGame
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 117
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: "Called when HUD should be rendered via the game's renderer. Logic-safe: game state and entities are available."
+  example: []
+  syntax:
+    content: public event OnixEventRendering.OnHudRenderDelegate? HudRenderGame
+    return:
+      type: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
+    content.vb: Public Event HudRenderGame As OnixEventRendering.OnHudRenderDelegate
 - uid: OnixRuntime.Api.Events.OnixEventRendering.HudRender
   commentId: E:OnixRuntime.Api.Events.OnixEventRendering.HudRender
   id: HudRender
@@ -85,19 +125,58 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HudRender
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 84
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 124
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called when on hud, hide hud is false and there is no client UI screen opened.
+
+    This will be called from the user's preferred 2D renderer.
+
+    This may or may not be a logic callback so don't access game state, entities, etc.
+  example: []
   syntax:
-    content: public event OnixEventRendering.OnHudRenderDelegate? HudRender
+    content: public event OnixEventRendering.OnHudRender2DDelegate? HudRender
     return:
-      type: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
-    content.vb: Public Event HudRender As OnixEventRendering.OnHudRenderDelegate
+      type: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    content.vb: Public Event HudRender As OnixEventRendering.OnHudRender2DDelegate
+- uid: OnixRuntime.Api.Events.OnixEventRendering.RenderScreenGame
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.RenderScreenGame
+  id: RenderScreenGame
+  parent: OnixRuntime.Api.Events.OnixEventRendering
+  langs:
+  - csharp
+  - vb
+  name: RenderScreenGame
+  nameWithType: OnixEventRendering.RenderScreenGame
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.RenderScreenGame
+  type: Event
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEventRendering.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderScreenGame
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 191
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time. (always logic-safe)
+
+    This is a logic callback so you can access game state, entities, etc.
+  example: []
+  syntax:
+    content: public event OnixEventRendering.OnRenderScreenDelegate? RenderScreenGame
+    return:
+      type: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
+    content.vb: Public Event RenderScreenGame As OnixEventRendering.OnRenderScreenDelegate
 - uid: OnixRuntime.Api.Events.OnixEventRendering.RenderScreen
   commentId: E:OnixRuntime.Api.Events.OnixEventRendering.RenderScreen
   id: RenderScreen
@@ -112,46 +191,68 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderScreen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 102
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 201
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time.
+
+    You should avoid this if <xref href="OnixRuntime.Api.Events.OnixEventRendering.HudRender" data-throw-if-not-resolved="false"></xref> gives you what you need.
+
+    This will be called from the user's preferred 2D renderer.
+
+    This may or may not be a logic callback so don't access game state, entities, etc.
+
+    There is no PreRenderScreen2D event, because depending on the renderer, pre means different things.
+
+    You can handle this case manually by checking the different pre events and <xref href="OnixRuntime.Api.Rendering.RenderContexes.MainRenderer" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
-    content: public event OnixEventRendering.OnRenderScreenDelegate? RenderScreen
+    content: public event OnixEventRendering.OnRenderScreen2DDelegate? RenderScreen
     return:
-      type: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
-    content.vb: Public Event RenderScreen As OnixEventRendering.OnRenderScreenDelegate
-- uid: OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreen
-  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreen
-  id: PreRenderScreen
+      type: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+    content.vb: Public Event RenderScreen As OnixEventRendering.OnRenderScreen2DDelegate
+- uid: OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenGame
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenGame
+  id: PreRenderScreenGame
   parent: OnixRuntime.Api.Events.OnixEventRendering
   langs:
   - csharp
   - vb
-  name: PreRenderScreen
-  nameWithType: OnixEventRendering.PreRenderScreen
-  fullName: OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreen
+  name: PreRenderScreenGame
+  nameWithType: OnixEventRendering.PreRenderScreenGame
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenGame
   type: Event
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: PreRenderScreen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 125
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PreRenderScreenGame
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 258
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time. The Pre is before the client AND game's screens are rendered.
+
+    You should avoid this if <xref href="OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame" data-throw-if-not-resolved="false"></xref> gives you what you need.
+
+    debug_screen should always be there if you want to pick that one, otherwise you can ignore debug_screen and toast_screen to have just the main screen.
+
+    This is a logic callback so you can access game state, entities, etc.
+  example: []
   syntax:
-    content: public event OnixEventRendering.OnPreRenderScreenDelegate? PreRenderScreen
+    content: public event OnixEventRendering.OnPreRenderScreenDelegate? PreRenderScreenGame
     return:
       type: OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDelegate
-    content.vb: Public Event PreRenderScreen As OnixEventRendering.OnPreRenderScreenDelegate
+    content.vb: Public Event PreRenderScreenGame As OnixEventRendering.OnPreRenderScreenDelegate
 - uid: OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
   commentId: E:OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
   id: RenderHudDirect2D
@@ -166,14 +267,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderHudDirect2D
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 144
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 292
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called when on hud, hide hud is false and there is no client UI screen opened.
+
+    This will be called from the user's preferred 2D renderer.
+
+    This will never be a logic callback so don't access game state, entities, etc.
+  example: []
   syntax:
     content: public event OnixEventRendering.OnRenderHudDirect2DDelegate? RenderHudDirect2D
     return:
@@ -193,14 +301,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderScreenDirect2D
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 162
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 328
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time.
+
+    You should avoid this if <xref href="OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D" data-throw-if-not-resolved="false"></xref> gives you what you need.
+
+    This will never be a logic callback so don't access game state, entities, etc.
+  example: []
   syntax:
     content: public event OnixEventRendering.OnRenderScreenDirect2DDelegate? RenderScreenDirect2D
     return:
@@ -220,14 +335,23 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PreRenderScreenDirect2D
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 184
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 372
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time. The Pre is before the client's screens are rendered, not the game's.
+
+    You should avoid this if <xref href="OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D" data-throw-if-not-resolved="false"></xref> gives you what you need.
+
+    debug_screen should always be there if you want to pick that one, otherwise you can ignore debug_screen and toast_screen to have just the main screen.
+
+    This will never be a logic callback so don't access game state, entities, etc.
+  example: []
   syntax:
     content: public event OnixEventRendering.OnPreRenderScreenDirect2DDelegate? PreRenderScreenDirect2D
     return:
@@ -247,14 +371,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShouldHideScreen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 200
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 403
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: This is only for game screens, returning true will prevent that screen from rendering.
+  example: []
   syntax:
     content: public event OnixEventRendering.ShouldHideScreenDelegate? ShouldHideScreen
     return:
@@ -574,6 +700,29 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
     name: OnHudRenderDelegate
     href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventRendering.html
+  name: OnixEventRendering.OnHudRender2DDelegate
+  nameWithType: OnixEventRendering.OnHudRender2DDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    name: OnHudRender2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    name: OnHudRender2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
   commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
   parent: OnixRuntime.Api.Events
@@ -597,6 +746,47 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
     name: OnRenderScreenDelegate
     href: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventRendering.HudRender
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.HudRender
+  href: OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_HudRender
+  name: HudRender
+  nameWithType: OnixEventRendering.HudRender
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.HudRender
+- uid: OnixRuntime.Api.Rendering.RenderContexes.MainRenderer
+  commentId: P:OnixRuntime.Api.Rendering.RenderContexes.MainRenderer
+  href: OnixRuntime.Api.Rendering.RenderContexes.html#OnixRuntime_Api_Rendering_RenderContexes_MainRenderer
+  name: MainRenderer
+  nameWithType: RenderContexes.MainRenderer
+  fullName: OnixRuntime.Api.Rendering.RenderContexes.MainRenderer
+- uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventRendering.html
+  name: OnixEventRendering.OnRenderScreen2DDelegate
+  nameWithType: OnixEventRendering.OnRenderScreen2DDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+    name: OnRenderScreen2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+    name: OnRenderScreen2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame
+  href: OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_HudRenderGame
+  name: HudRenderGame
+  nameWithType: OnixEventRendering.HudRenderGame
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame
 - uid: OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDelegate
   commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDelegate
   parent: OnixRuntime.Api.Events
@@ -643,6 +833,12 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderHudDirect2DDelegate
     name: OnRenderHudDirect2DDelegate
     href: OnixRuntime.Api.Events.OnixEventRendering.OnRenderHudDirect2DDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
+  commentId: E:OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
+  href: OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_RenderHudDirect2D
+  name: RenderHudDirect2D
+  nameWithType: OnixEventRendering.RenderHudDirect2D
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D
 - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDirect2DDelegate
   commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDirect2DDelegate
   parent: OnixRuntime.Api.Events

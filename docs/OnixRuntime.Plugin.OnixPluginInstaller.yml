@@ -1,0 +1,1753 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Plugin.OnixPluginInstaller
+  commentId: T:OnixRuntime.Plugin.OnixPluginInstaller
+  id: OnixPluginInstaller
+  parent: OnixRuntime.Plugin
+  children:
+  - OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+  - OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(System.String,System.Boolean,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources(System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes(System.Byte[],System.String,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile(System.String,System.String,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub(System.String,System.String,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(System.String,System.String,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  - OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl
+  - OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(System.String,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder
+  - OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls
+  - OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+  - OnixRuntime.Plugin.OnixPluginInstaller.TaskList
+  - OnixRuntime.Plugin.OnixPluginInstaller.Tasks
+  - OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin(System.String,System.Boolean,System.Threading.CancellationToken)
+  - OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin(System.String,System.String,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: OnixPluginInstaller
+  nameWithType: OnixPluginInstaller
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OnixPluginInstaller
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 22
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: >-
+    Handles installing, uninstalling, packaging and managing plugins asynchronously.
+
+    Provides methods to start operations and track progress via TaskProgressReport.
+  example: []
+  syntax:
+    content: public class OnixPluginInstaller
+    content.vb: Public Class OnixPluginInstaller
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl
+  commentId: P:OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl
+  id: OfficialRepositoryUrl
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: OfficialRepositoryUrl
+  nameWithType: OnixPluginInstaller.OfficialRepositoryUrl
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OfficialRepositoryUrl
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 26
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: The endpoint url for the official plugin repository.
+  example: []
+  syntax:
+    content: public static string OfficialRepositoryUrl { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property OfficialRepositoryUrl As String
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls
+  commentId: P:OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls
+  id: RemoteSourceUrls
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: RemoteSourceUrls
+  nameWithType: OnixPluginInstaller.RemoteSourceUrls
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RemoteSourceUrls
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 35
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: >-
+    A list of URLs representing remote sources for retrieving data or resources.
+
+    <xref href="OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls" data-throw-if-not-resolved="false"></xref> is the preferred way to get the list of urls to use. this will be for editing only.
+
+    Remember to call <xref href="OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls" data-throw-if-not-resolved="false"></xref> when you modify this list.
+  remarks: >-
+    This list is initialized with the official repository URL by default. Additional URLs
+        can be added to specify alternative or supplementary remote sources.
+  example: []
+  syntax:
+    content: public List<string> RemoteSourceUrls { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property RemoteSourceUrls As List(Of String)
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+  id: GetCuratedRemoteSourceUrls
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: GetCuratedRemoteSourceUrls()
+  nameWithType: OnixPluginInstaller.GetCuratedRemoteSourceUrls()
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetCuratedRemoteSourceUrls
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 45
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: >-
+    Gets a curated list of remote source URLs, ensuring the official repository URL is first and making sure the format is consistent.
+
+    This gives you url without a / so you can do $"{url}/plugins/uuid" without worrying about double //.
+  example: []
+  syntax:
+    content: public List<string> GetCuratedRemoteSourceUrls()
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: The list of endpoint urls.
+    content.vb: Public Function GetCuratedRemoteSourceUrls() As List(Of String)
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+  id: SaveRemoteSourceUrls
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: SaveRemoteSourceUrls()
+  nameWithType: OnixPluginInstaller.SaveRemoteSourceUrls()
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SaveRemoteSourceUrls
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 57
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Saves the runtime config which saves the list of source urls.
+  example: []
+  syntax:
+    content: public void SaveRemoteSourceUrls()
+    content.vb: Public Sub SaveRemoteSourceUrls()
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.Tasks
+  commentId: P:OnixRuntime.Plugin.OnixPluginInstaller.Tasks
+  id: Tasks
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: Tasks
+  nameWithType: OnixPluginInstaller.Tasks
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.Tasks
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Tasks
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 137
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Active tasks keyed by an identifier.
+  example: []
+  syntax:
+    content: public ConcurrentDictionary<string, OnixPluginInstaller.TaskProgressReport> Tasks { get; }
+    parameters: []
+    return:
+      type: System.Collections.Concurrent.ConcurrentDictionary{System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport}
+    content.vb: Public ReadOnly Property Tasks As ConcurrentDictionary(Of String, OnixPluginInstaller.TaskProgressReport)
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.Tasks*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskList
+  commentId: P:OnixRuntime.Plugin.OnixPluginInstaller.TaskList
+  id: TaskList
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: TaskList
+  nameWithType: OnixPluginInstaller.TaskList
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.TaskList
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: TaskList
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 141
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Snapshot list of current task reports.
+  example: []
+  syntax:
+    content: public List<OnixPluginInstaller.TaskProgressReport> TaskList { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport}
+    content.vb: Public ReadOnly Property TaskList As List(Of OnixPluginInstaller.TaskProgressReport)
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.TaskList*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder
+  commentId: P:OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder
+  id: PluginsFolder
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: PluginsFolder
+  nameWithType: OnixPluginInstaller.PluginsFolder
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PluginsFolder
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 145
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Root folder where plugins and related data are stored.
+  example: []
+  syntax:
+    content: public string PluginsFolder { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PluginsFolder As String
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin(System.String,System.String,System.Threading.CancellationToken)
+  id: UnloadPlugin(System.String,System.String,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: UnloadPlugin(string, string?, CancellationToken)
+  nameWithType: OnixPluginInstaller.UnloadPlugin(string, string?, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin(string, string?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: UnloadPlugin
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 214
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Start unloading the plugin identified by <code class="paramref">pluginUuid</code> and return a TaskProgressReport to track the operation.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport UnloadPlugin(string pluginUuid, string? uuid = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pluginUuid
+      type: System.String
+      description: UUID of the plugin to unload.
+    - id: uuid
+      type: System.String
+      description: Optional id used to track this task in the Tasks dictionary.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the unload operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport that contains progress and the underlying Task.
+    content.vb: Public Function UnloadPlugin(pluginUuid As String, uuid As String = Nothing, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin*
+  nameWithType.vb: OnixPluginInstaller.UnloadPlugin(String, String, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin(String, String, System.Threading.CancellationToken)
+  name.vb: UnloadPlugin(String, String, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin(System.String,System.Boolean,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin(System.String,System.Boolean,System.Threading.CancellationToken)
+  id: UninstallPlugin(System.String,System.Boolean,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: UninstallPlugin(string, bool, CancellationToken)
+  nameWithType: OnixPluginInstaller.UninstallPlugin(string, bool, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin(string, bool, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: UninstallPlugin
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 250
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Start uninstalling the plugin and optionally keep user data.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport UninstallPlugin(string pluginUuid, bool keepData, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pluginUuid
+      type: System.String
+      description: UUID of the plugin to uninstall.
+    - id: keepData
+      type: System.Boolean
+      description: True to preserve plugin user data/configs; false to remove them.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the uninstall operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport to monitor the uninstall process.
+    content.vb: Public Function UninstallPlugin(pluginUuid As String, keepData As Boolean, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin*
+  nameWithType.vb: OnixPluginInstaller.UninstallPlugin(String, Boolean, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin(String, Boolean, System.Threading.CancellationToken)
+  name.vb: UninstallPlugin(String, Boolean, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub(System.String,System.String,System.Threading.CancellationToken)
+  id: InstallPluginFromGithub(System.String,System.String,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromGithub(string, string?, CancellationToken)
+  nameWithType: OnixPluginInstaller.InstallPluginFromGithub(string, string?, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub(string, string?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromGithub
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 322
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Start installing the latest release from a GitHub repository URL. The report can be used to follow progress.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport InstallPluginFromGithub(string repositoryUrl, string? uuid = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: repositoryUrl
+      type: System.String
+      description: Public GitHub repository URL (e.g. https://github.com/owner/repo).
+    - id: uuid
+      type: System.String
+      description: Optional id used to track this task in the Tasks dictionary.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the installation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport tracking the download and install steps.
+    content.vb: Public Function InstallPluginFromGithub(repositoryUrl As String, uuid As String = Nothing, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub*
+  nameWithType.vb: OnixPluginInstaller.InstallPluginFromGithub(String, String, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub(String, String, System.Threading.CancellationToken)
+  name.vb: InstallPluginFromGithub(String, String, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(System.String,System.String,System.Threading.CancellationToken)
+  id: InstallPluginFromUrl(System.String,System.String,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromUrl(string, string?, CancellationToken)
+  nameWithType: OnixPluginInstaller.InstallPluginFromUrl(string, string?, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(string, string?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromUrl
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 351
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: >-
+    Start downloading and installing a plugin from a direct URL.
+
+    This url must point directly to a .onixplugin or .zip file.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport InstallPluginFromUrl(string url, string? uuid = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: url
+      type: System.String
+      description: Direct download URL of the plugin (.onixplugin or .zip).
+    - id: uuid
+      type: System.String
+      description: Optional id used to track this task in the Tasks dictionary.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport for monitoring download and install.
+    content.vb: Public Function InstallPluginFromUrl(url As String, uuid As String = Nothing, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl*
+  nameWithType.vb: OnixPluginInstaller.InstallPluginFromUrl(String, String, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(String, String, System.Threading.CancellationToken)
+  name.vb: InstallPluginFromUrl(String, String, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  id: InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromUuidInternal(string, TaskProgressReport)
+  nameWithType: OnixPluginInstaller.InstallPluginFromUuidInternal(string, OnixPluginInstaller.TaskProgressReport)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(string, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromUuidInternal
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 367
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  syntax:
+    content: public Task InstallPluginFromUuidInternal(string uuid, OnixPluginInstaller.TaskProgressReport report)
+    parameters:
+    - id: uuid
+      type: System.String
+    - id: report
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function InstallPluginFromUuidInternal(uuid As String, report As OnixPluginInstaller.TaskProgressReport) As Task
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal*
+  nameWithType.vb: OnixPluginInstaller.InstallPluginFromUuidInternal(String, OnixPluginInstaller.TaskProgressReport)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(String, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  name.vb: InstallPluginFromUuidInternal(String, TaskProgressReport)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
+  id: InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromUuid(string, CancellationToken)
+  nameWithType: OnixPluginInstaller.InstallPluginFromUuid(string, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromUuid
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 413
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Install a plugin by its known UUID from the source URLs.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport InstallPluginFromUuid(string uuid, CancellationToken cancellationToken = default)
+    parameters:
+    - id: uuid
+      type: System.String
+      description: UUID of the plugin to install.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport to track installation progress.
+    content.vb: Public Function InstallPluginFromUuid(uuid As String, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid*
+  nameWithType.vb: OnixPluginInstaller.InstallPluginFromUuid(String, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(String, System.Threading.CancellationToken)
+  name.vb: InstallPluginFromUuid(String, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest,System.Threading.CancellationToken)
+  id: InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromRemoteManifest(RemotePluginManifest, CancellationToken)
+  nameWithType: OnixPluginInstaller.InstallPluginFromRemoteManifest(RemotePluginManifest, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromRemoteManifest
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 424
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Install a plugin by its remote manifest from the source URLs.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport InstallPluginFromRemoteManifest(RemotePluginManifest manifest, CancellationToken cancellationToken = default)
+    parameters:
+    - id: manifest
+      type: OnixRuntime.Plugin.RemotePluginManifest
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport to track installation progress.
+    content.vb: Public Function InstallPluginFromRemoteManifest(manifest As RemotePluginManifest, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  id: InstallPluginFromFileInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromFileInternal(string, TaskProgressReport)
+  nameWithType: OnixPluginInstaller.InstallPluginFromFileInternal(string, OnixPluginInstaller.TaskProgressReport)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal(string, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromFileInternal
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 437
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Install a plugin from a local file.
+  example: []
+  syntax:
+    content: public Task InstallPluginFromFileInternal(string filePath, OnixPluginInstaller.TaskProgressReport report)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: Path to the plugin file.
+    - id: report
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: Progress report for the installation.
+    return:
+      type: System.Threading.Tasks.Task
+      description: Task representing the asynchronous operation.
+    content.vb: Public Function InstallPluginFromFileInternal(filePath As String, report As OnixPluginInstaller.TaskProgressReport) As Task
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal*
+  exceptions:
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: When the file for the plugin wasn't found.
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: When the plugin file is empty or invalid.
+  nameWithType.vb: OnixPluginInstaller.InstallPluginFromFileInternal(String, OnixPluginInstaller.TaskProgressReport)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal(String, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  name.vb: InstallPluginFromFileInternal(String, TaskProgressReport)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile(System.String,System.String,System.Threading.CancellationToken)
+  id: InstallPluginFromFile(System.String,System.String,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromFile(string, string?, CancellationToken)
+  nameWithType: OnixPluginInstaller.InstallPluginFromFile(string, string?, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile(string, string?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromFile
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 459
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Install a plugin from a local file.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport InstallPluginFromFile(string filePath, string? uuid = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: Path to the plugin file.
+    - id: uuid
+      type: System.String
+      description: Optional id used to track this task in the Tasks dictionary.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport to monitor file read and installation.
+    content.vb: Public Function InstallPluginFromFile(filePath As String, uuid As String = Nothing, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile*
+  nameWithType.vb: OnixPluginInstaller.InstallPluginFromFile(String, String, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile(String, String, System.Threading.CancellationToken)
+  name.vb: InstallPluginFromFile(String, String, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes(System.Byte[],System.String,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes(System.Byte[],System.String,System.Threading.CancellationToken)
+  id: InstallPluginFromBytes(System.Byte[],System.String,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallPluginFromBytes(byte[], string?, CancellationToken)
+  nameWithType: OnixPluginInstaller.InstallPluginFromBytes(byte[], string?, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes(byte[], string?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InstallPluginFromBytes
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 530
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Start installing a plugin from raw bytes.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport InstallPluginFromBytes(byte[] pluginData, string? uuid = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pluginData
+      type: System.Byte[]
+      description: Byte array containing the plugin archive.
+    - id: uuid
+      type: System.String
+      description: Optional id used to track this task in the Tasks dictionary.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport to monitor the installation.
+    content.vb: Public Function InstallPluginFromBytes(pluginData As Byte(), uuid As String = Nothing, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes*
+  nameWithType.vb: OnixPluginInstaller.InstallPluginFromBytes(Byte(), String, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes(Byte(), String, System.Threading.CancellationToken)
+  name.vb: InstallPluginFromBytes(Byte(), String, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(System.String,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(System.String,System.Threading.CancellationToken)
+  id: PackagePlugin(System.String,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: PackagePlugin(string, CancellationToken)
+  nameWithType: OnixPluginInstaller.PackagePlugin(string, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PackagePlugin
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 574
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Package a plugin folder into a zip and return a TaskProgressReport to monitor the packaging process.
+  example: []
+  syntax:
+    content: public OnixPluginInstaller.TaskProgressReport PackagePlugin(string pluginUuid, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pluginUuid
+      type: System.String
+      description: UUID of the plugin to package.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the packaging operation.
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+      description: TaskProgressReport exposing progress and the resulting package Task.
+    content.vb: Public Function PackagePlugin(pluginUuid As String, cancellationToken As CancellationToken = Nothing) As OnixPluginInstaller.TaskProgressReport
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin*
+  nameWithType.vb: OnixPluginInstaller.PackagePlugin(String, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(String, System.Threading.CancellationToken)
+  name.vb: PackagePlugin(String, CancellationToken)
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources(System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources(System.Threading.CancellationToken)
+  id: GetRemotePluginsFromSources(System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: GetRemotePluginsFromSources(CancellationToken)
+  nameWithType: OnixPluginInstaller.GetRemotePluginsFromSources(CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetRemotePluginsFromSources
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 581
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  syntax:
+    content: public Task<List<RemotePluginManifest>> GetRemotePluginsFromSources(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{OnixRuntime.Plugin.RemotePluginManifest}}
+    content.vb: Public Function GetRemotePluginsFromSources(cancellationToken As CancellationToken = Nothing) As Task(Of List(Of RemotePluginManifest))
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources*
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(System.String,System.Boolean,System.Threading.CancellationToken)
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(System.String,System.Boolean,System.Threading.CancellationToken)
+  id: GetRemotePluginFromSources(System.String,System.Boolean,System.Threading.CancellationToken)
+  parent: OnixRuntime.Plugin.OnixPluginInstaller
+  langs:
+  - csharp
+  - vb
+  name: GetRemotePluginFromSources(string, bool, CancellationToken)
+  nameWithType: OnixPluginInstaller.GetRemotePluginFromSources(string, bool, CancellationToken)
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(string, bool, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetRemotePluginFromSources
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
+    startLine: 600
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  syntax:
+    content: public Task<List<RemotePluginManifest>> GetRemotePluginFromSources(string uuid, bool compatibleOnly = true, CancellationToken cancellationToken = default)
+    parameters:
+    - id: uuid
+      type: System.String
+    - id: compatibleOnly
+      type: System.Boolean
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{OnixRuntime.Plugin.RemotePluginManifest}}
+    content.vb: Public Function GetRemotePluginFromSources(uuid As String, compatibleOnly As Boolean = True, cancellationToken As CancellationToken = Nothing) As Task(Of List(Of RemotePluginManifest))
+  overload: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources*
+  nameWithType.vb: OnixPluginInstaller.GetRemotePluginFromSources(String, Boolean, CancellationToken)
+  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(String, Boolean, System.Threading.CancellationToken)
+  name.vb: GetRemotePluginFromSources(String, Boolean, CancellationToken)
+references:
+- uid: OnixRuntime.Plugin
+  commentId: N:OnixRuntime.Plugin
+  href: OnixRuntime.html
+  name: OnixRuntime.Plugin
+  nameWithType: OnixRuntime.Plugin
+  fullName: OnixRuntime.Plugin
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Plugin
+    name: Plugin
+    href: OnixRuntime.Plugin.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Plugin
+    name: Plugin
+    href: OnixRuntime.Plugin.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_OfficialRepositoryUrl
+  name: OfficialRepositoryUrl
+  nameWithType: OnixPluginInstaller.OfficialRepositoryUrl
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls
+  name: GetCuratedRemoteSourceUrls()
+  nameWithType: OnixPluginInstaller.GetCuratedRemoteSourceUrls()
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls()
+  spec.csharp:
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+    name: GetCuratedRemoteSourceUrls
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+    name: GetCuratedRemoteSourceUrls
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls
+  - name: (
+  - name: )
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls
+  name: SaveRemoteSourceUrls()
+  nameWithType: OnixPluginInstaller.SaveRemoteSourceUrls()
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls()
+  spec.csharp:
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+    name: SaveRemoteSourceUrls
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+    name: SaveRemoteSourceUrls
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls
+  - name: (
+  - name: )
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_RemoteSourceUrls
+  name: RemoteSourceUrls
+  nameWithType: OnixPluginInstaller.RemoteSourceUrls
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls
+  name: GetCuratedRemoteSourceUrls
+  nameWithType: OnixPluginInstaller.GetCuratedRemoteSourceUrls
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls
+  name: SaveRemoteSourceUrls
+  nameWithType: OnixPluginInstaller.SaveRemoteSourceUrls
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.Tasks*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.Tasks
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_Tasks
+  name: Tasks
+  nameWithType: OnixPluginInstaller.Tasks
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.Tasks
+- uid: System.Collections.Concurrent.ConcurrentDictionary{System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport}
+  commentId: T:System.Collections.Concurrent.ConcurrentDictionary{System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport}
+  parent: System.Collections.Concurrent
+  definition: System.Collections.Concurrent.ConcurrentDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2
+  name: ConcurrentDictionary<string, OnixPluginInstaller.TaskProgressReport>
+  nameWithType: ConcurrentDictionary<string, OnixPluginInstaller.TaskProgressReport>
+  fullName: System.Collections.Concurrent.ConcurrentDictionary<string, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport>
+  nameWithType.vb: ConcurrentDictionary(Of String, OnixPluginInstaller.TaskProgressReport)
+  fullName.vb: System.Collections.Concurrent.ConcurrentDictionary(Of String, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  name.vb: ConcurrentDictionary(Of String, OnixPluginInstaller.TaskProgressReport)
+  spec.csharp:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller
+    name: OnixPluginInstaller
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  - name: .
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    name: TaskProgressReport
+    href: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller
+    name: OnixPluginInstaller
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  - name: .
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    name: TaskProgressReport
+    href: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html
+  - name: )
+- uid: System.Collections.Concurrent.ConcurrentDictionary`2
+  commentId: T:System.Collections.Concurrent.ConcurrentDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2
+  name: ConcurrentDictionary<TKey, TValue>
+  nameWithType: ConcurrentDictionary<TKey, TValue>
+  fullName: System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>
+  nameWithType.vb: ConcurrentDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue)
+  name.vb: ConcurrentDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Concurrent
+  commentId: N:System.Collections.Concurrent
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Concurrent
+  nameWithType: System.Collections.Concurrent
+  fullName: System.Collections.Concurrent
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Concurrent
+    name: Concurrent
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Concurrent
+    name: Concurrent
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.concurrent
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskList*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.TaskList
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_TaskList
+  name: TaskList
+  nameWithType: OnixPluginInstaller.TaskList
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.TaskList
+- uid: System.Collections.Generic.List{OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport}
+  commentId: T:System.Collections.Generic.List{OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<OnixPluginInstaller.TaskProgressReport>
+  nameWithType: List<OnixPluginInstaller.TaskProgressReport>
+  fullName: System.Collections.Generic.List<OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport>
+  nameWithType.vb: List(Of OnixPluginInstaller.TaskProgressReport)
+  fullName.vb: System.Collections.Generic.List(Of OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
+  name.vb: List(Of OnixPluginInstaller.TaskProgressReport)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller
+    name: OnixPluginInstaller
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  - name: .
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    name: TaskProgressReport
+    href: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller
+    name: OnixPluginInstaller
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  - name: .
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    name: TaskProgressReport
+    href: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html
+  - name: )
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_PluginsFolder
+  name: PluginsFolder
+  nameWithType: OnixPluginInstaller.PluginsFolder
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_UnloadPlugin_System_String_System_String_System_Threading_CancellationToken_
+  name: UnloadPlugin
+  nameWithType: OnixPluginInstaller.UnloadPlugin
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+  commentId: T:OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  name: OnixPluginInstaller.TaskProgressReport
+  nameWithType: OnixPluginInstaller.TaskProgressReport
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+  spec.csharp:
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller
+    name: OnixPluginInstaller
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  - name: .
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    name: TaskProgressReport
+    href: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html
+  spec.vb:
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller
+    name: OnixPluginInstaller
+    href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  - name: .
+  - uid: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
+    name: TaskProgressReport
+    href: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_UninstallPlugin_System_String_System_Boolean_System_Threading_CancellationToken_
+  name: UninstallPlugin
+  nameWithType: OnixPluginInstaller.UninstallPlugin
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromGithub_System_String_System_String_System_Threading_CancellationToken_
+  name: InstallPluginFromGithub
+  nameWithType: OnixPluginInstaller.InstallPluginFromGithub
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUrl_System_String_System_String_System_Threading_CancellationToken_
+  name: InstallPluginFromUrl
+  nameWithType: OnixPluginInstaller.InstallPluginFromUrl
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuidInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_
+  name: InstallPluginFromUuidInternal
+  nameWithType: OnixPluginInstaller.InstallPluginFromUuidInternal
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_System_String_System_Threading_CancellationToken_
+  name: InstallPluginFromUuid
+  nameWithType: OnixPluginInstaller.InstallPluginFromUuid
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromRemoteManifest_OnixRuntime_Plugin_RemotePluginManifest_System_Threading_CancellationToken_
+  name: InstallPluginFromRemoteManifest
+  nameWithType: OnixPluginInstaller.InstallPluginFromRemoteManifest
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest
+- uid: OnixRuntime.Plugin.RemotePluginManifest
+  commentId: T:OnixRuntime.Plugin.RemotePluginManifest
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.RemotePluginManifest.html
+  name: RemotePluginManifest
+  nameWithType: RemotePluginManifest
+  fullName: OnixRuntime.Plugin.RemotePluginManifest
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
+  name: FileNotFoundException
+  nameWithType: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFileInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_
+  name: InstallPluginFromFileInternal
+  nameWithType: OnixPluginInstaller.InstallPluginFromFileInternal
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFile_System_String_System_String_System_Threading_CancellationToken_
+  name: InstallPluginFromFile
+  nameWithType: OnixPluginInstaller.InstallPluginFromFile
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromBytes_System_Byte___System_String_System_Threading_CancellationToken_
+  name: InstallPluginFromBytes
+  nameWithType: OnixPluginInstaller.InstallPluginFromBytes
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_PackagePlugin_System_String_System_Threading_CancellationToken_
+  name: PackagePlugin
+  nameWithType: OnixPluginInstaller.PackagePlugin
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginsFromSources_System_Threading_CancellationToken_
+  name: GetRemotePluginsFromSources
+  nameWithType: OnixPluginInstaller.GetRemotePluginsFromSources
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{OnixRuntime.Plugin.RemotePluginManifest}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{OnixRuntime.Plugin.RemotePluginManifest}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<RemotePluginManifest>>
+  nameWithType: Task<List<RemotePluginManifest>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<OnixRuntime.Plugin.RemotePluginManifest>>
+  nameWithType.vb: Task(Of List(Of RemotePluginManifest))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of OnixRuntime.Plugin.RemotePluginManifest))
+  name.vb: Task(Of List(Of RemotePluginManifest))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OnixRuntime.Plugin.RemotePluginManifest
+    name: RemotePluginManifest
+    href: OnixRuntime.Plugin.RemotePluginManifest.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Plugin.RemotePluginManifest
+    name: RemotePluginManifest
+    href: OnixRuntime.Plugin.RemotePluginManifest.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginFromSources_System_String_System_Boolean_System_Threading_CancellationToken_
+  name: GetRemotePluginFromSources
+  nameWithType: OnixPluginInstaller.GetRemotePluginFromSources
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources

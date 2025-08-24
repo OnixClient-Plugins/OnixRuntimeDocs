@@ -23,14 +23,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MinMaxAttribute
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 374
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 611
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to specify minimum and maximum values for a setting.
+  example: []
   syntax:
     content: 'public class OnixModuleSettingRedirector.MinMaxAttribute : Attribute'
     content.vb: Public Class OnixModuleSettingRedirector.MinMaxAttribute Inherits Attribute
@@ -94,14 +96,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Min
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 375
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 615
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the minimum value.
+  example: []
   syntax:
     content: public object Min { get; }
     parameters: []
@@ -123,14 +127,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Max
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 376
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 620
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the maximum value.
+  example: []
   syntax:
     content: public object Max { get; }
     parameters: []
@@ -152,21 +158,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 378
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 627
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance with object min/max values.
+  example: []
   syntax:
     content: public MinMaxAttribute(object min, object max)
     parameters:
     - id: min
       type: System.Object
+      description: The minimum value.
     - id: max
       type: System.Object
+      description: The maximum value.
     content.vb: Public Sub New(min As Object, max As Object)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.MinMaxAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.MinMaxAttribute.New(Object, Object)
@@ -186,21 +196,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 383
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 637
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance with integer min/max values.
+  example: []
   syntax:
     content: public MinMaxAttribute(int min, int max)
     parameters:
     - id: min
       type: System.Int32
+      description: The minimum value.
     - id: max
       type: System.Int32
+      description: The maximum value.
     content.vb: Public Sub New(min As Integer, max As Integer)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.MinMaxAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.MinMaxAttribute.New(Integer, Integer)
@@ -220,21 +234,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 388
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 647
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance with float min/max values.
+  example: []
   syntax:
     content: public MinMaxAttribute(float min, float max)
     parameters:
     - id: min
       type: System.Single
+      description: The minimum value.
     - id: max
       type: System.Single
+      description: The maximum value.
     content.vb: Public Sub New(min As Single, max As Single)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.MinMaxAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.MinMaxAttribute.New(Single, Single)
@@ -254,25 +272,31 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 393
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 659
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance with Vec2 min/max values.
+  example: []
   syntax:
     content: public MinMaxAttribute(float minX, float minY, float maxX, float maxY)
     parameters:
     - id: minX
       type: System.Single
+      description: The minimum X value.
     - id: minY
       type: System.Single
+      description: The minimum Y value.
     - id: maxX
       type: System.Single
+      description: The maximum X value.
     - id: maxY
       type: System.Single
+      description: The maximum Y value.
     content.vb: Public Sub New(minX As Single, minY As Single, maxX As Single, maxY As Single)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.MinMaxAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.MinMaxAttribute.New(Single, Single, Single, Single)
@@ -292,29 +316,37 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 398
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 673
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance with Vec3 min/max values.
+  example: []
   syntax:
     content: public MinMaxAttribute(float minX, float minY, float minZ, float maxX, float maxY, float maxZ)
     parameters:
     - id: minX
       type: System.Single
+      description: The minimum X value.
     - id: minY
       type: System.Single
+      description: The minimum Y value.
     - id: minZ
       type: System.Single
+      description: The minimum Z value.
     - id: maxX
       type: System.Single
+      description: The maximum X value.
     - id: maxY
       type: System.Single
+      description: The maximum Y value.
     - id: maxZ
       type: System.Single
+      description: The maximum Z value.
     content.vb: Public Sub New(minX As Single, minY As Single, minZ As Single, maxX As Single, maxY As Single, maxZ As Single)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.MinMaxAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.MinMaxAttribute.New(Single, Single, Single, Single, Single, Single)
@@ -334,29 +366,37 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 403
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 687
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance with BlockPos min/max values.
+  example: []
   syntax:
     content: public MinMaxAttribute(int minX, int minY, int minZ, int maxX, int maxY, int maxZ)
     parameters:
     - id: minX
       type: System.Int32
+      description: The minimum X coordinate.
     - id: minY
       type: System.Int32
+      description: The minimum Y coordinate.
     - id: minZ
       type: System.Int32
+      description: The minimum Z coordinate.
     - id: maxX
       type: System.Int32
+      description: The maximum X coordinate.
     - id: maxY
       type: System.Int32
+      description: The maximum Y coordinate.
     - id: maxZ
       type: System.Int32
+      description: The maximum Z coordinate.
     content.vb: Public Sub New(minX As Integer, minY As Integer, minZ As Integer, maxX As Integer, maxY As Integer, maxZ As Integer)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.MinMaxAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.MinMaxAttribute.New(Integer, Integer, Integer, Integer, Integer, Integer)

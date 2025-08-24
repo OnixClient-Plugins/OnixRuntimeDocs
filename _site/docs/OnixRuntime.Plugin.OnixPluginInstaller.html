@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OnixPluginInstaller | Onix Plugin Documentation ">
       
-      
+      <meta name="description" content="Handles installing, uninstalling, packaging and managing plugins asynchronously. Provides methods to start operations and track progress via TaskProgressReport.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Plugin_OnixPluginInstaller.md&amp;value=---%0Auid%3A%20OnixRuntime.Plugin.OnixPluginInstaller%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/dev/apiSpec/new?filename=OnixRuntime_Plugin_OnixPluginInstaller.md&amp;value=---%0Auid%3A%20OnixRuntime.Plugin.OnixPluginInstaller%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Plugin_OnixPluginInstaller" data-uid="OnixRuntime.Plugin.OnixPluginInstaller" class="text-break">
-Class OnixPluginInstaller  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class OnixPluginInstaller  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,9 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Handles installing, uninstalling, packaging and managing plugins asynchronously.
+Provides methods to start operations and track progress via TaskProgressReport.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -152,14 +154,47 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 </h2>
 
 
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_OfficialRepositoryUrl_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_OfficialRepositoryUrl" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl">
+  OfficialRepositoryUrl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The endpoint url for the official plugin repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string OfficialRepositoryUrl { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Plugin_OnixPluginInstaller_PluginsFolder_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder*"></a>
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_PluginsFolder" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder">
   PluginsFolder
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Root folder where plugins and related data are stored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -183,14 +218,53 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 
 
 
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_RemoteSourceUrls_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_RemoteSourceUrls" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls">
+  RemoteSourceUrls
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of URLs representing remote sources for retrieving data or resources.
+<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls">GetCuratedRemoteSourceUrls()</a> is the preferred way to get the list of urls to use. this will be for editing only.
+Remember to call <a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls">SaveRemoteSourceUrls()</a> when you modify this list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; RemoteSourceUrls { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Plugin_OnixPluginInstaller_RemoteSourceUrls_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This list is initialized with the official repository URL by default. Additional URLs
+can be added to specify alternative or supplementary remote sources.</p>
+</div>
+
+
+
+
   <a id="OnixRuntime_Plugin_OnixPluginInstaller_TaskList_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.TaskList*"></a>
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_TaskList" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.TaskList">
   TaskList
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Snapshot list of current task reports.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -218,10 +292,11 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_Tasks" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.Tasks">
   Tasks
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Active tasks keyed by an identifier.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -249,14 +324,125 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 </h2>
 
 
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_GetCuratedRemoteSourceUrls" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls">
+  GetCuratedRemoteSourceUrls()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a curated list of remote source URLs, ensuring the official repository URL is first and making sure the format is consistent.
+This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; without worrying about double //.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; GetCuratedRemoteSourceUrls()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The list of endpoint urls.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginFromSources_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginFromSources_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(System.String,System.Boolean,System.Threading.CancellationToken)">
+  GetRemotePluginFromSources(string, bool, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;RemotePluginManifest&gt;&gt; GetRemotePluginFromSources(string uuid, bool compatibleOnly = true, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>compatibleOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginsFromSources_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginsFromSources_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources(System.Threading.CancellationToken)">
+  GetRemotePluginsFromSources(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L582"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;RemotePluginManifest&gt;&gt; GetRemotePluginsFromSources(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromBytes_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes*"></a>
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromBytes_System_Byte___System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes(System.Byte[],System.String,System.Threading.CancellationToken)">
   InstallPluginFromBytes(byte[], string?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L531"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Start installing a plugin from raw bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -266,17 +452,21 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pluginData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd></dd>
+    <dd><p>Byte array containing the plugin archive.</p>
+</dd>
     <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Optional id used to track this task in the Tasks dictionary.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
+    <dd><p>TaskProgressReport to monitor the installation.</p>
+</dd>
   </dl>
 
 
@@ -293,10 +483,11 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFile_System_String_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile(System.String,System.String,System.Threading.CancellationToken)">
   InstallPluginFromFile(string, string?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Install a plugin from a local file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -306,17 +497,21 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Path to the plugin file.</p>
+</dd>
     <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Optional id used to track this task in the Tasks dictionary.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
+    <dd><p>TaskProgressReport to monitor file read and installation.</p>
+</dd>
   </dl>
 
 
@@ -333,10 +528,11 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFileInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)">
   InstallPluginFromFileInternal(string, TaskProgressReport)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L438"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Install a plugin from a local file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -346,6 +542,230 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path to the plugin file.</p>
+</dd>
+    <dt><code>report</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
+    <dd><p>Progress report for the installation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>Task representing the asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
+    <dd><p>When the file for the plugin wasn't found.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>When the plugin file is empty or invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromGithub_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromGithub_System_String_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub(System.String,System.String,System.Threading.CancellationToken)">
+  InstallPluginFromGithub(string, string?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start installing the latest release from a GitHub repository URL. The report can be used to follow progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixPluginInstaller.TaskProgressReport InstallPluginFromGithub(string repositoryUrl, string? uuid = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Public GitHub repository URL (e.g. <a href="https://github.com/owner/repo">https://github.com/owner/repo</a>).</p>
+</dd>
+    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional id used to track this task in the Tasks dictionary.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token to cancel the installation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
+    <dd><p>TaskProgressReport tracking the download and install steps.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromRemoteManifest_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromRemoteManifest_OnixRuntime_Plugin_RemotePluginManifest_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest,System.Threading.CancellationToken)">
+  InstallPluginFromRemoteManifest(RemotePluginManifest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Install a plugin by its remote manifest from the source URLs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixPluginInstaller.TaskProgressReport InstallPluginFromRemoteManifest(RemotePluginManifest manifest, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manifest</code> <a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
+    <dd><p>TaskProgressReport to track installation progress.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUrl_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUrl_System_String_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(System.String,System.String,System.Threading.CancellationToken)">
+  InstallPluginFromUrl(string, string?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start downloading and installing a plugin from a direct URL.
+This url must point directly to a .onixplugin or .zip file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixPluginInstaller.TaskProgressReport InstallPluginFromUrl(string url, string? uuid = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Direct download URL of the plugin (.onixplugin or .zip).</p>
+</dd>
+    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional id used to track this task in the Tasks dictionary.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
+    <dd><p>TaskProgressReport for monitoring download and install.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)">
+  InstallPluginFromUuid(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Install a plugin by its known UUID from the source URLs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixPluginInstaller.TaskProgressReport InstallPluginFromUuid(string uuid, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>UUID of the plugin to install.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
+    <dd><p>TaskProgressReport to track installation progress.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuidInternal_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuidInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)">
+  InstallPluginFromUuidInternal(string, TaskProgressReport)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task InstallPluginFromUuidInternal(string uuid, OnixPluginInstaller.TaskProgressReport report)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>report</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
     <dd></dd>
@@ -367,132 +787,15 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 
 
 
-  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromGithub_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub*"></a>
-
-  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromGithub_System_String_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromGithub(System.String,System.String,System.Threading.CancellationToken)">
-  InstallPluginFromGithub(string, string?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L201"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OnixPluginInstaller.TaskProgressReport InstallPluginFromGithub(string repositoryUrl, string? uuid = null, CancellationToken cancellationToken = default)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>repositoryUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUrl_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl*"></a>
-
-  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUrl_System_String_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(System.String,System.String,System.Threading.CancellationToken)">
-  InstallPluginFromUrl(string, string?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L222"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OnixPluginInstaller.TaskProgressReport InstallPluginFromUrl(string url, string? uuid = null, CancellationToken cancellationToken = default)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid*"></a>
-
-  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)">
-  InstallPluginFromUuid(string, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L229"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OnixPluginInstaller.TaskProgressReport InstallPluginFromUuid(string uuid, CancellationToken cancellationToken = default)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="OnixRuntime_Plugin_OnixPluginInstaller_PackagePlugin_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin*"></a>
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_PackagePlugin_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(System.String,System.Threading.CancellationToken)">
   PackagePlugin(string, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L575"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Package a plugin folder into a zip and return a TaskProgressReport to monitor the packaging process.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -502,16 +805,46 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pluginUuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>UUID of the plugin to package.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token to cancel the packaging operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
+    <dd><p>TaskProgressReport exposing progress and the resulting package Task.</p>
+</dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls*"></a>
+
+  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_SaveRemoteSourceUrls" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls">
+  SaveRemoteSourceUrls()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Saves the runtime config which saves the list of source urls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveRemoteSourceUrls()</code></pre>
+  </div>
+
+
 
 
 
@@ -527,10 +860,11 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_UninstallPlugin_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.UninstallPlugin(System.String,System.Boolean,System.Threading.CancellationToken)">
   UninstallPlugin(string, bool, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Start uninstalling the plugin and optionally keep user data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -540,17 +874,21 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pluginUuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>UUID of the plugin to uninstall.</p>
+</dd>
     <dt><code>keepData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>True to preserve plugin user data/configs; false to remove them.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token to cancel the uninstall operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
+    <dd><p>TaskProgressReport to monitor the uninstall process.</p>
+</dd>
   </dl>
 
 
@@ -567,10 +905,11 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_UnloadPlugin_System_String_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.UnloadPlugin(System.String,System.String,System.Threading.CancellationToken)">
   UnloadPlugin(string, string?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Start unloading the plugin identified by <code class="paramref">pluginUuid</code> and return a TaskProgressReport to track the operation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -580,17 +919,21 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pluginUuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>UUID of the plugin to unload.</p>
+</dd>
     <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Optional id used to track this task in the Tasks dictionary.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token to cancel the unload operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
+    <dd><p>TaskProgressReport that contains progress and the underlying Task.</p>
+</dd>
   </dl>
 
 
@@ -607,7 +950,7 @@ Class OnixPluginInstaller  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L23" class="edit-link">Edit this page</a>
         </div>
 
 

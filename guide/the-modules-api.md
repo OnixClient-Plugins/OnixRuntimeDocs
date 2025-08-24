@@ -26,7 +26,7 @@ foreach (OnixModule mod in Onix.Client.Modules.Where(m => m.Enabled)) {
 }
 ```
 
-We've also added [GetModule](xref:OnixRuntime.Api.OnixClient.OnixModuleList.GetModule) which allows you to get a module by its save name:
+We've also added [GetModule](xref:OnixRuntime.Api.OnixClient.OnixModulesList.GetModule(System.String)) which allows you to get a module by its save name:
 
 ```cs
 var globalSettings = Onix.Client.Modules.GetModule("module.global_settings.name");
@@ -87,8 +87,8 @@ Of course, you can do all those in your foreach loop as well, if you decide to a
 
 Just like before, you access a mod's settings with [OnixModule.Settings](xref:OnixRuntime.Api.OnixClient.OnixModule.Settings).
 The setting has two GetSetting methods, one with a template and one without.
-[The one without template](OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting) returns the base [OnixSetting](OnixRuntime.Api.OnixClient.OnixSetting).
-[The one with template](OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting[T]) lets you specify a specific OnixSetting type for convenience.
+[The one without template](xref:OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting(System.String)) returns the base [OnixSetting](xref:OnixRuntime.Api.OnixClient.OnixSetting).
+[The one with template](xref:OnixRuntime.Api.OnixClient.OnixSettingsList.GetSetting``1(System.String)) lets you specify a specific OnixSetting type for convenience.
 <br>
 Now you may notice that unlike scripting, settings don't have a Value property, since C# is strongly typed, the settings all have their own types.
 
@@ -107,7 +107,7 @@ Now you may notice that unlike scripting, settings don't have a Value property, 
 - [OnixSettingGamepadKeybind](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingGamepadKeybind) A collection of keys from a Gamepad that must all be pressed to trigger.
 - [OnixSettingInfo](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingInfo) Basically just some text in the settings list.
 - [OnixSettingInt](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingInt) An integer setting, it has a Value property that returns an int, as well as a min/max property.
-- [OnixSettingKeybind](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingKeybind) A single keybind setting, it has a value property of [InputKey](OnixRuntime.Api.Inputs.InputKey) which can be any button from the mouse, keyboard or
+- [OnixSettingKeybind](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingKeybind) A single keybind setting, it has a value property of [InputKey](xref:OnixRuntime.Api.Inputs.InputKey) which can be any button from the mouse, keyboard or
   gamepad.
 - [OnixSettingLocalizedInfo](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingLocalizedInfo) Basically just some text in the settings list, this is more important from the client where everything can be localized but for you it's the
   same.
@@ -161,7 +161,7 @@ if (Onix.Client.Modules.GetModule("module.global_settings.name") is {} globalSet
 You can now create any setting types, passing null for the parent module.
 This isn't too useful on its own but it allows you to insert it into other modules.<br>
 That's also a great way to render a setting without having to implement everything yourself.
-You would use [RendererDirect2D.RenderSetting](xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSetting) or [RendererDirect2D.RenderSubSetting](xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSubSetting) if inside a custom
+You would use [RendererDirect2D.RenderSetting](xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSetting*) or [RendererDirect2D.RenderSubSetting](xref:OnixRuntime.Api.Rendering.RendererDirect2D.RenderSubSetting*) if inside a custom
 setting.<br>
 Please note that your plugin is still the real owner of the setting and that's even when you add it to a module, if you keep no references to it, it will get garbage collected and removed.
 
@@ -196,7 +196,7 @@ I then print the new value of the setting to the console whenever it changes.
 ```
 
 For custom settings, you are responsible for calling
-it. [We provide a function called CallValueChangedCallbackfor you to do that in the OnixCustomSetting class.](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.CallValueChangedCallback)<br>
+it. [We provide a function called CallValueChangedCallbackfor you to do that in the OnixCustomSetting class.](xref:OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom.CallValueChangedCallback*)<br>
 [More on that in the custom settings guide.](./creating-custom-setting-types.md)
 
 ---
@@ -291,8 +291,8 @@ You're now able to insert settings into any module you can get your hands on.
 This is useful when you want to extend a module with your own settings, for example, adding a setting to the `Global Settings` module.
 (You should *probably* not do that specifically unless you're sure it makes sense to have it there as it won't necessarily be obvious for the user.)<br>
 There are two ways you can insert a setting.
-- [With the index.](xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting)
-- [After another setting.](xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting)
+- [With the index.](xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*)
+- [After another setting.](xref:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting*)
 
 With the index, you insert it wherever you want, make sure to set the origin where you want it.<br>
 With a setting, you place it at an offset from that setting, wherever it may be.
@@ -310,7 +310,7 @@ if (Onix.Client.Modules.GetModule("module.global_settings.name") is {} globalSet
 ---
 ## That's Great! But How do I Save?
 When you create additional modules or settings that aren't part of a module you made that gets saved, they will not be saved automatically.
-If you want your module to be saved, you need to call [SaveManager.TrackModule](xref:OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule) with your module.<br>
+If you want your module to be saved, you need to call [SaveManager.TrackModule](xref:OnixRuntime.Plugin.OnixPluginSaveManager.TrackModule*) with your module.<br>
 This will also load and save any settings you have in it at this time.<br>
 ```cs
 HudElement = new OnixModuleVisual($"{CurrentPluginManifest.Name}'s Hud Element", "hud_element", 

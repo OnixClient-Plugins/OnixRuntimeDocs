@@ -5,11 +5,14 @@ items:
   id: PluginManifest
   parent: OnixRuntime.Plugin
   children:
+  - OnixRuntime.Plugin.PluginManifest.#ctor(OnixRuntime.Plugin.PluginManifestJson)
   - OnixRuntime.Plugin.PluginManifest.Author
+  - OnixRuntime.Plugin.PluginManifest.Categories
   - OnixRuntime.Plugin.PluginManifest.CheckUUID(System.String)
   - OnixRuntime.Plugin.PluginManifest.Description
   - OnixRuntime.Plugin.PluginManifest.GameVersion
   - OnixRuntime.Plugin.PluginManifest.HasToggleKey
+  - OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi
   - OnixRuntime.Plugin.PluginManifest.LoadManifest(System.IO.Stream)
   - OnixRuntime.Plugin.PluginManifest.LoadManifest(System.String)
   - OnixRuntime.Plugin.PluginManifest.LoadManifestFromFile(System.String)
@@ -41,6 +44,8 @@ items:
     content.vb: Public Class PluginManifest
   inheritance:
   - System.Object
+  derivedClasses:
+  - OnixRuntime.Plugin.RemotePluginManifest
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -63,11 +68,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Uuid
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 79
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 85
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -94,11 +99,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Name
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 83
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 89
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -125,11 +130,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Author
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 87
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 93
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -156,11 +161,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Description
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 91
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 97
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -187,11 +192,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginVersion
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 95
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 101
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -218,11 +223,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GameVersion
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 99
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 105
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -249,11 +254,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RuntimeVersion
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 103
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 109
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -280,11 +285,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TargetAssemblyName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 107
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 113
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -311,11 +316,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HasToggleKey
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 111
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 117
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -328,6 +333,40 @@ items:
       type: System.Boolean
     content.vb: Public Property HasToggleKey As Boolean
   overload: OnixRuntime.Plugin.PluginManifest.HasToggleKey*
+- uid: OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi
+  commentId: P:OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi
+  id: IsPluginManagerUi
+  parent: OnixRuntime.Plugin.PluginManifest
+  langs:
+  - csharp
+  - vb
+  name: IsPluginManagerUi
+  nameWithType: PluginManifest.IsPluginManagerUi
+  fullName: OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsPluginManagerUi
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 122
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: >-
+    Whether this plugin is a plugin manager UI plugin or not.
+
+    This is used to find a suitable UI and enable/update it automatically.
+  example: []
+  syntax:
+    content: public bool IsPluginManagerUi { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPluginManagerUi As Boolean
+  overload: OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi*
 - uid: OnixRuntime.Plugin.PluginManifest.SupportedGameVersionRanges
   commentId: P:OnixRuntime.Plugin.PluginManifest.SupportedGameVersionRanges
   id: SupportedGameVersionRanges
@@ -342,11 +381,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SupportedGameVersionRanges
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 115
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 126
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -359,6 +398,37 @@ items:
       type: System.Collections.Generic.List{OnixRuntime.Plugin.SupportedVersionRange}
     content.vb: Public Property SupportedGameVersionRanges As List(Of SupportedVersionRange)
   overload: OnixRuntime.Plugin.PluginManifest.SupportedGameVersionRanges*
+- uid: OnixRuntime.Plugin.PluginManifest.Categories
+  commentId: P:OnixRuntime.Plugin.PluginManifest.Categories
+  id: Categories
+  parent: OnixRuntime.Plugin.PluginManifest
+  langs:
+  - csharp
+  - vb
+  name: Categories
+  nameWithType: PluginManifest.Categories
+  fullName: OnixRuntime.Plugin.PluginManifest.Categories
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Categories
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 130
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Categories this plugin falls into.
+  example: []
+  syntax:
+    content: public List<string> Categories { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property Categories As List(Of String)
+  overload: OnixRuntime.Plugin.PluginManifest.Categories*
 - uid: OnixRuntime.Plugin.PluginManifest.LoadManifest(System.IO.Stream)
   commentId: M:OnixRuntime.Plugin.PluginManifest.LoadManifest(System.IO.Stream)
   id: LoadManifest(System.IO.Stream)
@@ -373,11 +443,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LoadManifest
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 123
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 138
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -408,11 +478,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LoadManifest
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 134
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 149
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -446,11 +516,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LoadManifestFromFile
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 145
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 160
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -470,6 +540,41 @@ items:
   nameWithType.vb: PluginManifest.LoadManifestFromFile(String)
   fullName.vb: OnixRuntime.Plugin.PluginManifest.LoadManifestFromFile(String)
   name.vb: LoadManifestFromFile(String)
+- uid: OnixRuntime.Plugin.PluginManifest.#ctor(OnixRuntime.Plugin.PluginManifestJson)
+  commentId: M:OnixRuntime.Plugin.PluginManifest.#ctor(OnixRuntime.Plugin.PluginManifestJson)
+  id: '#ctor(OnixRuntime.Plugin.PluginManifestJson)'
+  parent: OnixRuntime.Plugin.PluginManifest
+  langs:
+  - csharp
+  - vb
+  name: PluginManifest(PluginManifestJson)
+  nameWithType: PluginManifest.PluginManifest(PluginManifestJson)
+  fullName: OnixRuntime.Plugin.PluginManifest.PluginManifest(OnixRuntime.Plugin.PluginManifestJson)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PluginManifest.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 169
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Plugin.PluginManifest" data-throw-if-not-resolved="false"></xref> class from a manifest JSON object.
+  example: []
+  syntax:
+    content: public PluginManifest(PluginManifestJson manifest)
+    parameters:
+    - id: manifest
+      type: OnixRuntime.Plugin.PluginManifestJson
+      description: The manifest JSON object.
+    content.vb: Public Sub New(manifest As PluginManifestJson)
+  overload: OnixRuntime.Plugin.PluginManifest.#ctor*
+  nameWithType.vb: PluginManifest.New(PluginManifestJson)
+  fullName.vb: OnixRuntime.Plugin.PluginManifest.New(OnixRuntime.Plugin.PluginManifestJson)
+  name.vb: New(PluginManifestJson)
 - uid: OnixRuntime.Plugin.PluginManifest.SupportsGameVersion(OnixRuntime.Api.Utils.PluginSemVersion)
   commentId: M:OnixRuntime.Plugin.PluginManifest.SupportsGameVersion(OnixRuntime.Api.Utils.PluginSemVersion)
   id: SupportsGameVersion(OnixRuntime.Api.Utils.PluginSemVersion)
@@ -484,11 +589,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SupportsGameVersion
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 202
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 219
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -519,11 +624,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PluginManifest.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CheckUUID
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PluginManifest.cs
-    startLine: 212
+    path: ../OnixRuntime/OnixRuntime/Plugin/PluginManifest.cs
+    startLine: 229
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -927,6 +1032,12 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi*
+  commentId: Overload:OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi
+  href: OnixRuntime.Plugin.PluginManifest.html#OnixRuntime_Plugin_PluginManifest_IsPluginManagerUi
+  name: IsPluginManagerUi
+  nameWithType: PluginManifest.IsPluginManagerUi
+  fullName: OnixRuntime.Plugin.PluginManifest.IsPluginManagerUi
 - uid: OnixRuntime.Plugin.PluginManifest.SupportedGameVersionRanges*
   commentId: Overload:OnixRuntime.Plugin.PluginManifest.SupportedGameVersionRanges
   href: OnixRuntime.Plugin.PluginManifest.html#OnixRuntime_Plugin_PluginManifest_SupportedGameVersionRanges
@@ -1031,6 +1142,47 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OnixRuntime.Plugin.PluginManifest.Categories*
+  commentId: Overload:OnixRuntime.Plugin.PluginManifest.Categories
+  href: OnixRuntime.Plugin.PluginManifest.html#OnixRuntime_Plugin_PluginManifest_Categories
+  name: Categories
+  nameWithType: PluginManifest.Categories
+  fullName: OnixRuntime.Plugin.PluginManifest.Categories
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: OnixRuntime.Plugin.PluginManifest
   commentId: T:OnixRuntime.Plugin.PluginManifest
   parent: OnixRuntime.Plugin
@@ -1085,6 +1237,22 @@ references:
   name: LoadManifestFromFile
   nameWithType: PluginManifest.LoadManifestFromFile
   fullName: OnixRuntime.Plugin.PluginManifest.LoadManifestFromFile
+- uid: OnixRuntime.Plugin.PluginManifest.#ctor*
+  commentId: Overload:OnixRuntime.Plugin.PluginManifest.#ctor
+  href: OnixRuntime.Plugin.PluginManifest.html#OnixRuntime_Plugin_PluginManifest__ctor_OnixRuntime_Plugin_PluginManifestJson_
+  name: PluginManifest
+  nameWithType: PluginManifest.PluginManifest
+  fullName: OnixRuntime.Plugin.PluginManifest.PluginManifest
+  nameWithType.vb: PluginManifest.New
+  fullName.vb: OnixRuntime.Plugin.PluginManifest.New
+  name.vb: New
+- uid: OnixRuntime.Plugin.PluginManifestJson
+  commentId: T:OnixRuntime.Plugin.PluginManifestJson
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.PluginManifestJson.html
+  name: PluginManifestJson
+  nameWithType: PluginManifestJson
+  fullName: OnixRuntime.Plugin.PluginManifestJson
 - uid: OnixRuntime.Plugin.PluginManifest.SupportsGameVersion*
   commentId: Overload:OnixRuntime.Plugin.PluginManifest.SupportsGameVersion
   href: OnixRuntime.Plugin.PluginManifest.html#OnixRuntime_Plugin_PluginManifest_SupportsGameVersion_OnixRuntime_Api_Utils_PluginSemVersion_

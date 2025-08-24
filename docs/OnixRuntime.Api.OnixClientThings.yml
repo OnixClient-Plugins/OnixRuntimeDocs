@@ -8,14 +8,14 @@ items:
   - OnixRuntime.Api.OnixClientThings.CommandPrefix
   - OnixRuntime.Api.OnixClientThings.ExecuteCommand(System.String,System.Boolean)
   - OnixRuntime.Api.OnixClientThings.Modules
-  - OnixRuntime.Api.OnixClientThings.Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean)
-  - OnixRuntime.Api.OnixClientThings.NotifyBanner(System.String,System.String,System.Single,System.Boolean)
-  - OnixRuntime.Api.OnixClientThings.NotifyTray(System.String,System.String,System.Single,System.Boolean)
+  - OnixRuntime.Api.OnixClientThings.Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  - OnixRuntime.Api.OnixClientThings.NotifyBanner(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  - OnixRuntime.Api.OnixClientThings.NotifyTray(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
   - OnixRuntime.Api.OnixClientThings.OpenDirectory(System.String)
   - OnixRuntime.Api.OnixClientThings.OpenFile(System.String)
   - OnixRuntime.Api.OnixClientThings.OpenUrl(System.String)
   - OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String)
-  - OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String,OnixRuntime.Api.Maths.Vec2)
+  - OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String,OnixRuntime.Api.Maths.Rect)
   - OnixRuntime.Api.OnixClientThings.SettingRegistry
   - OnixRuntime.Api.OnixClientThings.ShowColorPicker(OnixRuntime.Api.OnixClient.OnixSetting,OnixRuntime.Api.Maths.Vec2,System.Single)
   - OnixRuntime.Api.OnixClientThings.ShowKeyPicker(OnixRuntime.Api.OnixClient.OnixSetting)
@@ -31,11 +31,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixClientThings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 16
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 22
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -54,32 +54,35 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: OnixRuntime.Api.OnixClientThings.Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean)
-  commentId: M:OnixRuntime.Api.OnixClientThings.Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean)
-  id: Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean)
+- uid: OnixRuntime.Api.OnixClientThings.Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  commentId: M:OnixRuntime.Api.OnixClientThings.Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  id: Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
   parent: OnixRuntime.Api.OnixClientThings
   langs:
   - csharp
   - vb
-  name: Notify(string, string, float, ClientNotificationType, bool)
-  nameWithType: OnixClientThings.Notify(string, string, float, ClientNotificationType, bool)
-  fullName: OnixRuntime.Api.OnixClientThings.Notify(string, string, float, OnixRuntime.Api.ClientNotificationType, bool)
+  name: Notify(string, string, float, ClientNotificationType, bool, OnNotificationClickedDelegate?)
+  nameWithType: OnixClientThings.Notify(string, string, float, ClientNotificationType, bool, OnixClientThings.OnNotificationClickedDelegate?)
+  fullName: OnixRuntime.Api.OnixClientThings.Notify(string, string, float, OnixRuntime.Api.ClientNotificationType, bool, OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate?)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Notify
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 25
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 39
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
-  summary: Shows a notification to the user.
+  summary: >-
+    Shows a notification to the user.
+
+    Note: For the <code class="paramref">onClick</code>, returning true will dismiss the notification, returning false will keep it open.
   example: []
   syntax:
-    content: public void Notify(string title, string message = "", float duration = 5, ClientNotificationType type = ClientNotificationType.Banner, bool mute = false)
+    content: public void Notify(string title, string message = "", float duration = 5, ClientNotificationType type = ClientNotificationType.Banner, bool mute = false, OnixClientThings.OnNotificationClickedDelegate? onClick = null)
     parameters:
     - id: title
       type: System.String
@@ -96,146 +99,114 @@ items:
     - id: mute
       type: System.Boolean
       description: Whether to mute the notification sound.
-    content.vb: Public Sub Notify(title As String, message As String = "", duration As Single = 5, type As ClientNotificationType = ClientNotificationType.Banner, mute As Boolean = False)
+    - id: onClick
+      type: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+      description: An optional delegate to invoke when the notification is clicked. Return true to dismiss the notification, false to keep it open.
+    content.vb: Public Sub Notify(title As String, message As String = "", duration As Single = 5, type As ClientNotificationType = ClientNotificationType.Banner, mute As Boolean = False, onClick As OnixClientThings.OnNotificationClickedDelegate = Nothing)
   overload: OnixRuntime.Api.OnixClientThings.Notify*
-  nameWithType.vb: OnixClientThings.Notify(String, String, Single, ClientNotificationType, Boolean)
-  fullName.vb: OnixRuntime.Api.OnixClientThings.Notify(String, String, Single, OnixRuntime.Api.ClientNotificationType, Boolean)
-  name.vb: Notify(String, String, Single, ClientNotificationType, Boolean)
-- uid: OnixRuntime.Api.OnixClientThings.NotifyBanner(System.String,System.String,System.Single,System.Boolean)
-  commentId: M:OnixRuntime.Api.OnixClientThings.NotifyBanner(System.String,System.String,System.Single,System.Boolean)
-  id: NotifyBanner(System.String,System.String,System.Single,System.Boolean)
+  nameWithType.vb: OnixClientThings.Notify(String, String, Single, ClientNotificationType, Boolean, OnixClientThings.OnNotificationClickedDelegate)
+  fullName.vb: OnixRuntime.Api.OnixClientThings.Notify(String, String, Single, OnixRuntime.Api.ClientNotificationType, Boolean, OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  name.vb: Notify(String, String, Single, ClientNotificationType, Boolean, OnNotificationClickedDelegate)
+- uid: OnixRuntime.Api.OnixClientThings.NotifyBanner(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  commentId: M:OnixRuntime.Api.OnixClientThings.NotifyBanner(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  id: NotifyBanner(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
   parent: OnixRuntime.Api.OnixClientThings
   langs:
   - csharp
   - vb
-  name: NotifyBanner(string, string, float, bool)
-  nameWithType: OnixClientThings.NotifyBanner(string, string, float, bool)
-  fullName: OnixRuntime.Api.OnixClientThings.NotifyBanner(string, string, float, bool)
+  name: NotifyBanner(string, string, float, bool, OnNotificationClickedDelegate?)
+  nameWithType: OnixClientThings.NotifyBanner(string, string, float, bool, OnixClientThings.OnNotificationClickedDelegate?)
+  fullName: OnixRuntime.Api.OnixClientThings.NotifyBanner(string, string, float, bool, OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate?)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NotifyBanner
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 33
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api
-  summary: Shows a banner notification to the user.
-  example: []
-  syntax:
-    content: public void NotifyBanner(string title, string message = "", float duration = 5, bool mute = false)
-    parameters:
-    - id: title
-      type: System.String
-      description: The title of the notification.
-    - id: message
-      type: System.String
-      description: The message of the notification.
-    - id: duration
-      type: System.Single
-      description: The duration in seconds for the notification.
-    - id: mute
-      type: System.Boolean
-      description: Whether to mute the notification sound.
-    content.vb: Public Sub NotifyBanner(title As String, message As String = "", duration As Single = 5, mute As Boolean = False)
-  overload: OnixRuntime.Api.OnixClientThings.NotifyBanner*
-  nameWithType.vb: OnixClientThings.NotifyBanner(String, String, Single, Boolean)
-  fullName.vb: OnixRuntime.Api.OnixClientThings.NotifyBanner(String, String, Single, Boolean)
-  name.vb: NotifyBanner(String, String, Single, Boolean)
-- uid: OnixRuntime.Api.OnixClientThings.NotifyTray(System.String,System.String,System.Single,System.Boolean)
-  commentId: M:OnixRuntime.Api.OnixClientThings.NotifyTray(System.String,System.String,System.Single,System.Boolean)
-  id: NotifyTray(System.String,System.String,System.Single,System.Boolean)
-  parent: OnixRuntime.Api.OnixClientThings
-  langs:
-  - csharp
-  - vb
-  name: NotifyTray(string, string, float, bool)
-  nameWithType: OnixClientThings.NotifyTray(string, string, float, bool)
-  fullName: OnixRuntime.Api.OnixClientThings.NotifyTray(string, string, float, bool)
-  type: Method
-  source:
-    remote:
-      path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: NotifyTray
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 41
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api
-  summary: Shows a tray notification to the user.
-  example: []
-  syntax:
-    content: public void NotifyTray(string title, string message = "", float duration = 5, bool mute = false)
-    parameters:
-    - id: title
-      type: System.String
-      description: The title of the notification.
-    - id: message
-      type: System.String
-      description: The message of the notification.
-    - id: duration
-      type: System.Single
-      description: The duration in seconds for the notification.
-    - id: mute
-      type: System.Boolean
-      description: Whether to mute the notification sound.
-    content.vb: Public Sub NotifyTray(title As String, message As String = "", duration As Single = 5, mute As Boolean = False)
-  overload: OnixRuntime.Api.OnixClientThings.NotifyTray*
-  nameWithType.vb: OnixClientThings.NotifyTray(String, String, Single, Boolean)
-  fullName.vb: OnixRuntime.Api.OnixClientThings.NotifyTray(String, String, Single, Boolean)
-  name.vb: NotifyTray(String, String, Single, Boolean)
-- uid: OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String,OnixRuntime.Api.Maths.Vec2)
-  commentId: M:OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String,OnixRuntime.Api.Maths.Vec2)
-  id: SetTooltipText(System.String,OnixRuntime.Api.Maths.Vec2)
-  parent: OnixRuntime.Api.OnixClientThings
-  langs:
-  - csharp
-  - vb
-  name: SetTooltipText(string, Vec2)
-  nameWithType: OnixClientThings.SetTooltipText(string, Vec2)
-  fullName: OnixRuntime.Api.OnixClientThings.SetTooltipText(string, OnixRuntime.Api.Maths.Vec2)
-  type: Method
-  source:
-    remote:
-      path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: SetTooltipText
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 52
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 49
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
   summary: >-
-    Sets the tooltip text at the given point.
+    Shows a banner notification to the user.
 
-    The point should probably be the mouse position.
-
-    You should only call this if the user's mouse is within the desired area of the tooltip.
-
-    The tooltip will be displayed by the client based on the user's preferences.
-
-    This has text wrapping support so you don't need to \n your text.
+    Note: For the <code class="paramref">onClick</code>, returning true will dismiss the notification, returning false will keep it open.
   example: []
   syntax:
-    content: public void SetTooltipText(string text, Vec2 openPoint)
+    content: public void NotifyBanner(string title, string message = "", float duration = 5, bool mute = false, OnixClientThings.OnNotificationClickedDelegate? onClick = null)
     parameters:
-    - id: text
+    - id: title
       type: System.String
-      description: The text in the tooltip.
-    - id: openPoint
-      type: OnixRuntime.Api.Maths.Vec2
-      description: The point on which the user is hovering.
-    content.vb: Public Sub SetTooltipText(text As String, openPoint As Vec2)
-  overload: OnixRuntime.Api.OnixClientThings.SetTooltipText*
-  nameWithType.vb: OnixClientThings.SetTooltipText(String, Vec2)
-  fullName.vb: OnixRuntime.Api.OnixClientThings.SetTooltipText(String, OnixRuntime.Api.Maths.Vec2)
-  name.vb: SetTooltipText(String, Vec2)
+      description: The title of the notification.
+    - id: message
+      type: System.String
+      description: The message of the notification.
+    - id: duration
+      type: System.Single
+      description: The duration in seconds for the notification.
+    - id: mute
+      type: System.Boolean
+      description: Whether to mute the notification sound.
+    - id: onClick
+      type: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+      description: An optional delegate to invoke when the notification is clicked. Return true to dismiss the notification, false to keep it open.
+    content.vb: Public Sub NotifyBanner(title As String, message As String = "", duration As Single = 5, mute As Boolean = False, onClick As OnixClientThings.OnNotificationClickedDelegate = Nothing)
+  overload: OnixRuntime.Api.OnixClientThings.NotifyBanner*
+  nameWithType.vb: OnixClientThings.NotifyBanner(String, String, Single, Boolean, OnixClientThings.OnNotificationClickedDelegate)
+  fullName.vb: OnixRuntime.Api.OnixClientThings.NotifyBanner(String, String, Single, Boolean, OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  name.vb: NotifyBanner(String, String, Single, Boolean, OnNotificationClickedDelegate)
+- uid: OnixRuntime.Api.OnixClientThings.NotifyTray(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  commentId: M:OnixRuntime.Api.OnixClientThings.NotifyTray(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  id: NotifyTray(System.String,System.String,System.Single,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  parent: OnixRuntime.Api.OnixClientThings
+  langs:
+  - csharp
+  - vb
+  name: NotifyTray(string, string, float, bool, OnNotificationClickedDelegate?)
+  nameWithType: OnixClientThings.NotifyTray(string, string, float, bool, OnixClientThings.OnNotificationClickedDelegate?)
+  fullName: OnixRuntime.Api.OnixClientThings.NotifyTray(string, string, float, bool, OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClientThings.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: NotifyTray
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 59
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: >-
+    Shows a tray notification to the user.
+
+    Note: For the <code class="paramref">onClick</code>, returning true will dismiss the notification, returning false will keep it open.
+  example: []
+  syntax:
+    content: public void NotifyTray(string title, string message = "", float duration = 5, bool mute = false, OnixClientThings.OnNotificationClickedDelegate? onClick = null)
+    parameters:
+    - id: title
+      type: System.String
+      description: The title of the notification.
+    - id: message
+      type: System.String
+      description: The message of the notification.
+    - id: duration
+      type: System.Single
+      description: The duration in seconds for the notification.
+    - id: mute
+      type: System.Boolean
+      description: Whether to mute the notification sound.
+    - id: onClick
+      type: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+      description: An optional delegate to invoke when the notification is clicked. Return true to dismiss the notification, false to keep it open.
+    content.vb: Public Sub NotifyTray(title As String, message As String = "", duration As Single = 5, mute As Boolean = False, onClick As OnixClientThings.OnNotificationClickedDelegate = Nothing)
+  overload: OnixRuntime.Api.OnixClientThings.NotifyTray*
+  nameWithType.vb: OnixClientThings.NotifyTray(String, String, Single, Boolean, OnixClientThings.OnNotificationClickedDelegate)
+  fullName.vb: OnixRuntime.Api.OnixClientThings.NotifyTray(String, String, Single, Boolean, OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
+  name.vb: NotifyTray(String, String, Single, Boolean, OnNotificationClickedDelegate)
 - uid: OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String)
   commentId: M:OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String)
   id: SetTooltipText(System.String)
@@ -250,18 +221,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetTooltipText
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 61
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 68
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
   summary: >-
     Sets the tooltip text at the given point.
-
-    The open point will be the mouse's position.
 
     You should only call this if the user's mouse is within the desired area of the tooltip.
 
@@ -280,6 +249,49 @@ items:
   nameWithType.vb: OnixClientThings.SetTooltipText(String)
   fullName.vb: OnixRuntime.Api.OnixClientThings.SetTooltipText(String)
   name.vb: SetTooltipText(String)
+- uid: OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String,OnixRuntime.Api.Maths.Rect)
+  commentId: M:OnixRuntime.Api.OnixClientThings.SetTooltipText(System.String,OnixRuntime.Api.Maths.Rect)
+  id: SetTooltipText(System.String,OnixRuntime.Api.Maths.Rect)
+  parent: OnixRuntime.Api.OnixClientThings
+  langs:
+  - csharp
+  - vb
+  name: SetTooltipText(string, Rect)
+  nameWithType: OnixClientThings.SetTooltipText(string, Rect)
+  fullName: OnixRuntime.Api.OnixClientThings.SetTooltipText(string, OnixRuntime.Api.Maths.Rect)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClientThings.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetTooltipText
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 76
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: >-
+    Sets the tooltip text at the given point.
+
+    The tooltip will be displayed by the client based on the user's preferences.
+
+    This has text wrapping support so you don't need to \n your text.
+  example: []
+  syntax:
+    content: public void SetTooltipText(string text, Rect tooltipArea)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text in the tooltip.
+    - id: tooltipArea
+      type: OnixRuntime.Api.Maths.Rect
+      description: The area in which the tooltip should be shown if the mouse is inside it.
+    content.vb: Public Sub SetTooltipText(text As String, tooltipArea As Rect)
+  overload: OnixRuntime.Api.OnixClientThings.SetTooltipText*
+  nameWithType.vb: OnixClientThings.SetTooltipText(String, Rect)
+  fullName.vb: OnixRuntime.Api.OnixClientThings.SetTooltipText(String, OnixRuntime.Api.Maths.Rect)
+  name.vb: SetTooltipText(String, Rect)
 - uid: OnixRuntime.Api.OnixClientThings.OpenUrl(System.String)
   commentId: M:OnixRuntime.Api.OnixClientThings.OpenUrl(System.String)
   id: OpenUrl(System.String)
@@ -294,11 +306,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OpenUrl
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 67
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 85
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -329,11 +341,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OpenDirectory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 72
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 90
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -364,11 +376,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OpenFile
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 77
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 95
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -399,22 +411,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Modules
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 82
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 100
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
   summary: Gets the list of Onix modules.
   example: []
   syntax:
-    content: public OnixModuleList Modules { get; }
+    content: public OnixModulesList Modules { get; }
     parameters: []
     return:
-      type: OnixRuntime.Api.OnixClient.OnixModuleList
-    content.vb: Public ReadOnly Property Modules As OnixModuleList
+      type: OnixRuntime.Api.OnixClient.OnixModulesList
+    content.vb: Public ReadOnly Property Modules As OnixModulesList
   overload: OnixRuntime.Api.OnixClientThings.Modules*
 - uid: OnixRuntime.Api.OnixClientThings.SettingRegistry
   commentId: P:OnixRuntime.Api.OnixClientThings.SettingRegistry
@@ -430,11 +442,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SettingRegistry
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 86
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 104
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -461,11 +473,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CommandPrefix
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 90
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 108
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -492,11 +504,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Waypoints
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 96
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 114
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -526,11 +538,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ExecuteCommand
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 102
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 120
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -564,11 +576,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShowColorPicker
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 111
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 129
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -608,11 +620,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShowKeyPicker
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 119
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 137
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -640,14 +652,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClientThings.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ThemeV3
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 128
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 146
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
+  summary: >-
+    Gets the onix client v3 user's theme.
+
+    You can use this to design your plugin to match the user's theme and the rest of the client.
+
+    You should cache this value if you use it more than once in the same function.
+  example: []
   syntax:
     content: public OnixClientThemeV3 ThemeV3 { get; }
     parameters: []
@@ -917,7 +936,7 @@ references:
   fullName: System
 - uid: OnixRuntime.Api.OnixClientThings.Notify*
   commentId: Overload:OnixRuntime.Api.OnixClientThings.Notify
-  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_Notify_System_String_System_String_System_Single_OnixRuntime_Api_ClientNotificationType_System_Boolean_
+  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_Notify_System_String_System_String_System_Single_OnixRuntime_Api_ClientNotificationType_System_Boolean_OnixRuntime_Api_OnixClientThings_OnNotificationClickedDelegate_
   name: Notify
   nameWithType: OnixClientThings.Notify
   fullName: OnixRuntime.Api.OnixClientThings.Notify
@@ -961,31 +980,54 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+  commentId: T:OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+  parent: OnixRuntime.Api
+  href: OnixRuntime.Api.OnixClientThings.html
+  name: OnixClientThings.OnNotificationClickedDelegate
+  nameWithType: OnixClientThings.OnNotificationClickedDelegate
+  fullName: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClientThings
+    name: OnixClientThings
+    href: OnixRuntime.Api.OnixClientThings.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+    name: OnNotificationClickedDelegate
+    href: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClientThings
+    name: OnixClientThings
+    href: OnixRuntime.Api.OnixClientThings.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate
+    name: OnNotificationClickedDelegate
+    href: OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate.html
 - uid: OnixRuntime.Api.OnixClientThings.NotifyBanner*
   commentId: Overload:OnixRuntime.Api.OnixClientThings.NotifyBanner
-  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_NotifyBanner_System_String_System_String_System_Single_System_Boolean_
+  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_NotifyBanner_System_String_System_String_System_Single_System_Boolean_OnixRuntime_Api_OnixClientThings_OnNotificationClickedDelegate_
   name: NotifyBanner
   nameWithType: OnixClientThings.NotifyBanner
   fullName: OnixRuntime.Api.OnixClientThings.NotifyBanner
 - uid: OnixRuntime.Api.OnixClientThings.NotifyTray*
   commentId: Overload:OnixRuntime.Api.OnixClientThings.NotifyTray
-  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_NotifyTray_System_String_System_String_System_Single_System_Boolean_
+  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_NotifyTray_System_String_System_String_System_Single_System_Boolean_OnixRuntime_Api_OnixClientThings_OnNotificationClickedDelegate_
   name: NotifyTray
   nameWithType: OnixClientThings.NotifyTray
   fullName: OnixRuntime.Api.OnixClientThings.NotifyTray
 - uid: OnixRuntime.Api.OnixClientThings.SetTooltipText*
   commentId: Overload:OnixRuntime.Api.OnixClientThings.SetTooltipText
-  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_SetTooltipText_System_String_OnixRuntime_Api_Maths_Vec2_
+  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_SetTooltipText_System_String_
   name: SetTooltipText
   nameWithType: OnixClientThings.SetTooltipText
   fullName: OnixRuntime.Api.OnixClientThings.SetTooltipText
-- uid: OnixRuntime.Api.Maths.Vec2
-  commentId: T:OnixRuntime.Api.Maths.Vec2
+- uid: OnixRuntime.Api.Maths.Rect
+  commentId: T:OnixRuntime.Api.Maths.Rect
   parent: OnixRuntime.Api.Maths
-  href: OnixRuntime.Api.Maths.Vec2.html
-  name: Vec2
-  nameWithType: Vec2
-  fullName: OnixRuntime.Api.Maths.Vec2
+  href: OnixRuntime.Api.Maths.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: OnixRuntime.Api.Maths.Rect
 - uid: OnixRuntime.Api.Maths
   commentId: N:OnixRuntime.Api.Maths
   href: OnixRuntime.html
@@ -1040,13 +1082,13 @@ references:
   name: Modules
   nameWithType: OnixClientThings.Modules
   fullName: OnixRuntime.Api.OnixClientThings.Modules
-- uid: OnixRuntime.Api.OnixClient.OnixModuleList
-  commentId: T:OnixRuntime.Api.OnixClient.OnixModuleList
+- uid: OnixRuntime.Api.OnixClient.OnixModulesList
+  commentId: T:OnixRuntime.Api.OnixClient.OnixModulesList
   parent: OnixRuntime.Api.OnixClient
-  href: OnixRuntime.Api.OnixClient.OnixModuleList.html
-  name: OnixModuleList
-  nameWithType: OnixModuleList
-  fullName: OnixRuntime.Api.OnixClient.OnixModuleList
+  href: OnixRuntime.Api.OnixClient.OnixModulesList.html
+  name: OnixModulesList
+  nameWithType: OnixModulesList
+  fullName: OnixRuntime.Api.OnixClient.OnixModulesList
 - uid: OnixRuntime.Api.OnixClient
   commentId: N:OnixRuntime.Api.OnixClient
   href: OnixRuntime.html
@@ -1134,6 +1176,13 @@ references:
   name: OnixSetting
   nameWithType: OnixSetting
   fullName: OnixRuntime.Api.OnixClient.OnixSetting
+- uid: OnixRuntime.Api.Maths.Vec2
+  commentId: T:OnixRuntime.Api.Maths.Vec2
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec2.html
+  name: Vec2
+  nameWithType: Vec2
+  fullName: OnixRuntime.Api.Maths.Vec2
 - uid: OnixRuntime.Api.OnixClientThings.ShowKeyPicker*
   commentId: Overload:OnixRuntime.Api.OnixClientThings.ShowKeyPicker
   href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_ShowKeyPicker_OnixRuntime_Api_OnixClient_OnixSetting_

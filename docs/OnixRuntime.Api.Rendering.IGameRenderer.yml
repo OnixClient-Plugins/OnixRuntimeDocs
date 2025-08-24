@@ -5,6 +5,8 @@ items:
   id: IGameRenderer
   parent: OnixRuntime.Api.Rendering
   children:
+  - OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  - OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
   - OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
   - OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF},OnixRuntime.Api.Rendering.TexturePath)
   - OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Rendering.TexturePath,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Nullable{OnixRuntime.Api.Maths.ColorF})
@@ -15,6 +17,9 @@ items:
   - OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
   - OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Maths.ColorF,System.UInt32,System.UInt32)
   - OnixRuntime.Api.Rendering.IGameRenderer.RenderMesh(OnixRuntime.Api.Rendering.GameMesh,OnixRuntime.Api.Rendering.TexturePath,System.UInt32,System.UInt32)
+  - OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  - OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  - OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
   langs:
   - csharp
   - vb
@@ -25,10 +30,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IGameRenderer
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 7
   assemblies:
   - OnixRuntime
@@ -52,10 +57,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MeshBuilder
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 11
   assemblies:
   - OnixRuntime
@@ -83,10 +88,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderItem
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 23
   assemblies:
   - OnixRuntime
@@ -134,10 +139,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderItem
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 33
   assemblies:
   - OnixRuntime
@@ -182,10 +187,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 43
   assemblies:
   - OnixRuntime
@@ -230,10 +235,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 51
   assemblies:
   - OnixRuntime
@@ -274,10 +279,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 59
   assemblies:
   - OnixRuntime
@@ -318,10 +323,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 79
   assemblies:
   - OnixRuntime
@@ -374,10 +379,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 99
   assemblies:
   - OnixRuntime
@@ -430,10 +435,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 119
   assemblies:
   - OnixRuntime
@@ -486,10 +491,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/IGameRenderer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
     startLine: 139
   assemblies:
   - OnixRuntime
@@ -528,6 +533,190 @@ items:
   nameWithType.vb: IGameRenderer.NewMeshBuilderSession(ColorF?, TexturePath, MeshBuilderPrimitiveType)
   fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.NewMeshBuilderSession(OnixRuntime.Api.Maths.ColorF?, OnixRuntime.Api.Rendering.TexturePath, OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType)
   name.vb: NewMeshBuilderSession(ColorF?, TexturePath, MeshBuilderPrimitiveType)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  id: SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetMaterialParameters(GameMaterialParameters)
+  nameWithType: IGameRenderer.SetMaterialParameters(GameMaterialParameters)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters(OnixRuntime.Api.Rendering.GameMaterialParameters)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetMaterialParameters
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 147
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Sets the parameters for the game material.
+  remarks: >-
+    This method updates the material properties used in the game. Ensure that the
+        <code class="paramref">parameters</code> object is properly initialized before calling this method.
+  example: []
+  syntax:
+    content: void SetMaterialParameters(GameMaterialParameters parameters)
+    parameters:
+    - id: parameters
+      type: OnixRuntime.Api.Rendering.GameMaterialParameters
+      description: The <xref href="OnixRuntime.Api.Rendering.GameMaterialParameters" data-throw-if-not-resolved="false"></xref> object containing the material properties to be applied.
+    content.vb: Sub SetMaterialParameters(parameters As GameMaterialParameters)
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters*
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  id: SetMaterialCustom(System.String,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetMaterialCustom(string, bool)
+  nameWithType: IGameRenderer.SetMaterialCustom(string, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(string, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetMaterialCustom
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 155
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Sets the material to a custom material specified by name.
+
+    this is for using game materials or ones in texture packs.
+  example: []
+  syntax:
+    content: void SetMaterialCustom(string materialName, bool useSwitchableGroup)
+    parameters:
+    - id: materialName
+      type: System.String
+      description: The name of the custom material to set. Cannot be null or empty.
+    - id: useSwitchableGroup
+      type: System.Boolean
+      description: Whether to use the switchable group for the material instead of common.
+    content.vb: Sub SetMaterialCustom(materialName As String, useSwitchableGroup As Boolean)
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom*
+  nameWithType.vb: IGameRenderer.SetMaterialCustom(String, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(String, Boolean)
+  name.vb: SetMaterialCustom(String, Boolean)
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+  id: GetMaterialParameters
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetMaterialParameters()
+  nameWithType: IGameRenderer.GetMaterialParameters()
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetMaterialParameters
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 161
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the current material parameters.
+  example: []
+  syntax:
+    content: GameMaterialParameters GetMaterialParameters()
+    return:
+      type: OnixRuntime.Api.Rendering.GameMaterialParameters
+      description: The current material parameters
+    content.vb: Function GetMaterialParameters() As GameMaterialParameters
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters*
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  id: GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetMaterialParameter(GameMaterialParameterType)
+  nameWithType: IGameRenderer.GetMaterialParameter(GameMaterialParameterType)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetMaterialParameter
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 169
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the value of a specific material parameter.
+  remarks: Note that <xref href="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> sets and gives you the previous value if that's why you're using this function.
+  example: []
+  syntax:
+    content: bool GetMaterialParameter(GameMaterialParameterType parameter)
+    parameters:
+    - id: parameter
+      type: OnixRuntime.Api.Rendering.GameMaterialParameterType
+      description: The parameter to get the value of
+    return:
+      type: System.Boolean
+      description: The current value of that material parameter
+    content.vb: Function GetMaterialParameter(parameter As GameMaterialParameterType) As Boolean
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter*
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  id: SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetMaterialParameter(GameMaterialParameterType, bool)
+  nameWithType: IGameRenderer.SetMaterialParameter(GameMaterialParameterType, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/IGameRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetMaterialParameter
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/IGameRenderer.cs
+    startLine: 177
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Sets the specified material parameter to the given value.
+  example: []
+  syntax:
+    content: bool SetMaterialParameter(GameMaterialParameterType parameter, bool value)
+    parameters:
+    - id: parameter
+      type: OnixRuntime.Api.Rendering.GameMaterialParameterType
+      description: The type of material parameter to set.
+    - id: value
+      type: System.Boolean
+      description: The boolean value to assign to the material parameter.
+    return:
+      type: System.Boolean
+      description: The previous material parameter before setting your new value.
+    content.vb: Function SetMaterialParameter(parameter As GameMaterialParameterType, value As Boolean) As Boolean
+  overload: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter*
+  nameWithType.vb: IGameRenderer.SetMaterialParameter(GameMaterialParameterType, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, Boolean)
+  name.vb: SetMaterialParameter(GameMaterialParameterType, Boolean)
 references:
 - uid: OnixRuntime.Api.Rendering
   commentId: N:OnixRuntime.Api.Rendering
@@ -838,3 +1027,106 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: OnixRuntime.Api.Rendering.GameMaterialParameters
+  commentId: T:OnixRuntime.Api.Rendering.GameMaterialParameters
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMaterialParameters.html
+  name: GameMaterialParameters
+  nameWithType: GameMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.GameMaterialParameters
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameters_OnixRuntime_Api_Rendering_GameMaterialParameters_
+  name: SetMaterialParameters
+  nameWithType: IGameRenderer.SetMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameters
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_
+  name: SetMaterialCustom
+  nameWithType: IGameRenderer.SetMaterialCustom
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameters
+  name: GetMaterialParameters
+  nameWithType: IGameRenderer.GetMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameters
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  name: SetMaterialParameter(GameMaterialParameterType, bool)
+  nameWithType: IGameRenderer.SetMaterialParameter(GameMaterialParameterType, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, bool)
+  nameWithType.vb: IGameRenderer.SetMaterialParameter(GameMaterialParameterType, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType, Boolean)
+  name.vb: SetMaterialParameter(GameMaterialParameterType, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+    name: SetMaterialParameter
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    name: GameMaterialParameterType
+    href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter(OnixRuntime.Api.Rendering.GameMaterialParameterType,System.Boolean)
+    name: SetMaterialParameter
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+    name: GameMaterialParameterType
+    href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_GetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_
+  name: GetMaterialParameter
+  nameWithType: IGameRenderer.GetMaterialParameter
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.GetMaterialParameter
+- uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+  commentId: T:OnixRuntime.Api.Rendering.GameMaterialParameterType
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  name: GameMaterialParameterType
+  nameWithType: GameMaterialParameterType
+  fullName: OnixRuntime.Api.Rendering.GameMaterialParameterType
+- uid: OnixRuntime.Api.Rendering.IGameRenderer
+  commentId: T:OnixRuntime.Api.Rendering.IGameRenderer
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html
+  name: IGameRenderer
+  nameWithType: IGameRenderer
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter*
+  commentId: Overload:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialParameter_OnixRuntime_Api_Rendering_GameMaterialParameterType_System_Boolean_
+  name: SetMaterialParameter
+  nameWithType: IGameRenderer.SetMaterialParameter
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialParameter

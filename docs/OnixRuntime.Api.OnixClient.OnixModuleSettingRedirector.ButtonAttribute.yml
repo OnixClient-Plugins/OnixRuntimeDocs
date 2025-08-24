@@ -18,14 +18,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ButtonAttribute
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 465
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 824
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to specify that a property represents a button with a callback function.
+  example: []
   syntax:
     content: 'public class OnixModuleSettingRedirector.ButtonAttribute : Attribute'
     content.vb: Public Class OnixModuleSettingRedirector.ButtonAttribute Inherits Attribute
@@ -89,21 +91,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 465
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 824
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Attribute to specify that a property represents a button with a callback function.
+  example: []
   syntax:
     content: public ButtonAttribute(string functionNameInClass, string buttonName)
     parameters:
     - id: functionNameInClass
       type: System.String
+      description: The name of the method to call when the button is pressed.
     - id: buttonName
       type: System.String
+      description: The display name of the button.
     content.vb: Public Sub New(functionNameInClass As String, buttonName As String)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.ButtonAttribute.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.ButtonAttribute.New(String, String)
@@ -123,14 +129,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FunctionName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 466
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 828
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the name of the function to call when the button is pressed.
+  example: []
   syntax:
     content: public string FunctionName { get; }
     parameters: []
@@ -152,14 +160,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ButtonName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 467
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 833
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the display name of the button.
+  example: []
   syntax:
     content: public string ButtonName { get; }
     parameters: []

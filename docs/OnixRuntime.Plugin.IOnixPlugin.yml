@@ -5,6 +5,7 @@ items:
   id: IOnixPlugin
   parent: OnixRuntime.Plugin
   children:
+  - OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory
   - OnixRuntime.Plugin.IOnixPlugin.CompatibleWithGameVersion
   - OnixRuntime.Plugin.IOnixPlugin.CompatibleWithRuntime
   - OnixRuntime.Plugin.IOnixPlugin.DisablePlugin
@@ -19,8 +20,8 @@ items:
   - OnixRuntime.Plugin.IOnixPlugin.PluginSettingsDirectory
   - OnixRuntime.Plugin.IOnixPlugin.PluginState
   - OnixRuntime.Plugin.IOnixPlugin.Settings
-  - OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin
-  - OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin
+  - OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin(OnixRuntime.Plugin.PluginLoadMode)
+  - OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin(System.Boolean)
   - OnixRuntime.Plugin.IOnixPlugin.Uuid
   langs:
   - csharp
@@ -32,14 +33,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IOnixPlugin
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 31
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 65
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: A basic onix plugin interface to interact with other plugins.
+  example: []
   syntax:
     content: public interface IOnixPlugin
     content.vb: Public Interface IOnixPlugin
@@ -57,11 +60,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginFolder
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 36
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 70
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -91,11 +94,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginFolderName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 40
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 74
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -122,11 +125,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginSettingsDirectory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 44
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 78
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -153,11 +156,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginPersistentDataDirectory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 48
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 82
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -170,6 +173,37 @@ items:
       type: System.String
     content.vb: ReadOnly Property PluginPersistentDataDirectory As String
   overload: OnixRuntime.Plugin.IOnixPlugin.PluginPersistentDataDirectory*
+- uid: OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory
+  commentId: P:OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory
+  id: AssetsDirectory
+  parent: OnixRuntime.Plugin.IOnixPlugin
+  langs:
+  - csharp
+  - vb
+  name: AssetsDirectory
+  nameWithType: IOnixPlugin.AssetsDirectory
+  fullName: OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/OnixPluginInstance.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AssetsDirectory
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 86
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: The path to the plugin's assets folder, which is OnixClient/Plugins/plugins/uuid_of_plugin/assets.
+  example: []
+  syntax:
+    content: string AssetsDirectory { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property AssetsDirectory As String
+  overload: OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory*
 - uid: OnixRuntime.Plugin.IOnixPlugin.Manifest
   commentId: P:OnixRuntime.Plugin.IOnixPlugin.Manifest
   id: Manifest
@@ -184,11 +218,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Manifest
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 52
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 90
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -215,11 +249,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Settings
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 56
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 94
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -246,11 +280,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CompatibleWithRuntime
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 60
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 98
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -277,11 +311,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CompatibleWithGameVersion
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 64
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 102
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -308,11 +342,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DisplayModule
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 69
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 107
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -342,11 +376,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsBusy
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 73
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 111
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -373,11 +407,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsLoaded
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 77
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 115
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -404,11 +438,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Uuid
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 82
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 120
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -435,11 +469,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginState
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 87
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 125
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -466,11 +500,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: EnablePlugin
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 93
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 131
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -497,11 +531,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DisablePlugin
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 98
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 136
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -514,64 +548,79 @@ items:
       description: True when the plugin will be enabled.
     content.vb: Function DisablePlugin() As Boolean
   overload: OnixRuntime.Plugin.IOnixPlugin.DisablePlugin*
-- uid: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin
-  commentId: M:OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin
-  id: StartUnloadPlugin
+- uid: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin(System.Boolean)
+  commentId: M:OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin(System.Boolean)
+  id: StartUnloadPlugin(System.Boolean)
   parent: OnixRuntime.Plugin.IOnixPlugin
   langs:
   - csharp
   - vb
-  name: StartUnloadPlugin()
-  nameWithType: IOnixPlugin.StartUnloadPlugin()
-  fullName: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin()
+  name: StartUnloadPlugin(bool)
+  nameWithType: IOnixPlugin.StartUnloadPlugin(bool)
+  fullName: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin(bool)
   type: Method
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StartUnloadPlugin
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 102
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 142
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
   summary: >-
     Will unload the plugin. <xref href="OnixRuntime.Plugin.IOnixPlugin.IsLoaded" data-throw-if-not-resolved="false"></xref>
 
-    ///
+    When it's a one-off, the plugin will still load the next time.
+
+    If it's not then it will set the plugin to not load next time.
   example: []
   syntax:
-    content: void StartUnloadPlugin()
-    content.vb: Sub StartUnloadPlugin()
+    content: void StartUnloadPlugin(bool oneOff = false)
+    parameters:
+    - id: oneOff
+      type: System.Boolean
+    content.vb: Sub StartUnloadPlugin(oneOff As Boolean = False)
   overload: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin*
-- uid: OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin
-  commentId: M:OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin
-  id: StartLoadPlugin
+  nameWithType.vb: IOnixPlugin.StartUnloadPlugin(Boolean)
+  fullName.vb: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin(Boolean)
+  name.vb: StartUnloadPlugin(Boolean)
+- uid: OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin(OnixRuntime.Plugin.PluginLoadMode)
+  commentId: M:OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin(OnixRuntime.Plugin.PluginLoadMode)
+  id: StartLoadPlugin(OnixRuntime.Plugin.PluginLoadMode)
   parent: OnixRuntime.Plugin.IOnixPlugin
   langs:
   - csharp
   - vb
-  name: StartLoadPlugin()
-  nameWithType: IOnixPlugin.StartLoadPlugin()
-  fullName: OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin()
+  name: StartLoadPlugin(PluginLoadMode)
+  nameWithType: IOnixPlugin.StartLoadPlugin(PluginLoadMode)
+  fullName: OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin(OnixRuntime.Plugin.PluginLoadMode)
   type: Method
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginInstance.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StartLoadPlugin
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
-    startLine: 107
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstance.cs
+    startLine: 149
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
-  summary: Will load the plugin. <xref href="OnixRuntime.Plugin.IOnixPlugin.IsLoaded" data-throw-if-not-resolved="false"></xref>
+  summary: >-
+    Will try to load the plugin. <xref href="OnixRuntime.Plugin.IOnixPlugin.IsLoaded" data-throw-if-not-resolved="false"></xref>
+
+    If you don't force it, it will use the user setting to know if it should be loaded or not.
   example: []
   syntax:
-    content: void StartLoadPlugin()
-    content.vb: Sub StartLoadPlugin()
+    content: void StartLoadPlugin(PluginLoadMode mode = PluginLoadMode.ForceLoad)
+    parameters:
+    - id: mode
+      type: OnixRuntime.Plugin.PluginLoadMode
+      description: The mode to load the plugin in, defaults to <xref href="OnixRuntime.Plugin.PluginLoadMode.ForceLoad" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Sub StartLoadPlugin(mode As PluginLoadMode = PluginLoadMode.ForceLoad)
   overload: OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin*
 references:
 - uid: OnixRuntime.Plugin
@@ -628,6 +677,7 @@ references:
   fullName: OnixRuntime.Plugin.IOnixPlugin.Manifest
 - uid: OnixRuntime.Plugin.PluginManifest.Uuid
   commentId: P:OnixRuntime.Plugin.PluginManifest.Uuid
+  parent: OnixRuntime.Plugin.PluginManifest
   href: OnixRuntime.Plugin.PluginManifest.html#OnixRuntime_Plugin_PluginManifest_Uuid
   name: Uuid
   nameWithType: PluginManifest.Uuid
@@ -638,6 +688,13 @@ references:
   name: PluginFolderName
   nameWithType: IOnixPlugin.PluginFolderName
   fullName: OnixRuntime.Plugin.IOnixPlugin.PluginFolderName
+- uid: OnixRuntime.Plugin.PluginManifest
+  commentId: T:OnixRuntime.Plugin.PluginManifest
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.PluginManifest.html
+  name: PluginManifest
+  nameWithType: PluginManifest
+  fullName: OnixRuntime.Plugin.PluginManifest
 - uid: OnixRuntime.Plugin.IOnixPlugin.PluginSettingsDirectory*
   commentId: Overload:OnixRuntime.Plugin.IOnixPlugin.PluginSettingsDirectory
   href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_PluginSettingsDirectory
@@ -650,19 +707,18 @@ references:
   name: PluginPersistentDataDirectory
   nameWithType: IOnixPlugin.PluginPersistentDataDirectory
   fullName: OnixRuntime.Plugin.IOnixPlugin.PluginPersistentDataDirectory
+- uid: OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory*
+  commentId: Overload:OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory
+  href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_AssetsDirectory
+  name: AssetsDirectory
+  nameWithType: IOnixPlugin.AssetsDirectory
+  fullName: OnixRuntime.Plugin.IOnixPlugin.AssetsDirectory
 - uid: OnixRuntime.Plugin.IOnixPlugin.Manifest*
   commentId: Overload:OnixRuntime.Plugin.IOnixPlugin.Manifest
   href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_Manifest
   name: Manifest
   nameWithType: IOnixPlugin.Manifest
   fullName: OnixRuntime.Plugin.IOnixPlugin.Manifest
-- uid: OnixRuntime.Plugin.PluginManifest
-  commentId: T:OnixRuntime.Plugin.PluginManifest
-  parent: OnixRuntime.Plugin
-  href: OnixRuntime.Plugin.PluginManifest.html
-  name: PluginManifest
-  nameWithType: PluginManifest
-  fullName: OnixRuntime.Plugin.PluginManifest
 - uid: OnixRuntime.Plugin.IOnixPlugin.Settings*
   commentId: Overload:OnixRuntime.Plugin.IOnixPlugin.Settings
   href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_Settings
@@ -799,13 +855,26 @@ references:
   fullName: OnixRuntime.Plugin.IOnixPlugin.DisablePlugin
 - uid: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin*
   commentId: Overload:OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin
-  href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_StartUnloadPlugin
+  href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_StartUnloadPlugin_System_Boolean_
   name: StartUnloadPlugin
   nameWithType: IOnixPlugin.StartUnloadPlugin
   fullName: OnixRuntime.Plugin.IOnixPlugin.StartUnloadPlugin
+- uid: OnixRuntime.Plugin.PluginLoadMode.ForceLoad
+  commentId: F:OnixRuntime.Plugin.PluginLoadMode.ForceLoad
+  href: OnixRuntime.Plugin.PluginLoadMode.html#OnixRuntime_Plugin_PluginLoadMode_ForceLoad
+  name: ForceLoad
+  nameWithType: PluginLoadMode.ForceLoad
+  fullName: OnixRuntime.Plugin.PluginLoadMode.ForceLoad
 - uid: OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin*
   commentId: Overload:OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin
-  href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_StartLoadPlugin
+  href: OnixRuntime.Plugin.IOnixPlugin.html#OnixRuntime_Plugin_IOnixPlugin_StartLoadPlugin_OnixRuntime_Plugin_PluginLoadMode_
   name: StartLoadPlugin
   nameWithType: IOnixPlugin.StartLoadPlugin
   fullName: OnixRuntime.Plugin.IOnixPlugin.StartLoadPlugin
+- uid: OnixRuntime.Plugin.PluginLoadMode
+  commentId: T:OnixRuntime.Plugin.PluginLoadMode
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.PluginLoadMode.html
+  name: PluginLoadMode
+  nameWithType: PluginLoadMode
+  fullName: OnixRuntime.Plugin.PluginLoadMode

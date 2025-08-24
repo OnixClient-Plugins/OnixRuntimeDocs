@@ -84,6 +84,8 @@ items:
   - OnixRuntime.Api.Inputs.InputMappingLayout.PickBlock
   - OnixRuntime.Api.Inputs.InputMappingLayout.Right
   - OnixRuntime.Api.Inputs.InputMappingLayout.Screenshot
+  - OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+  - OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
   - OnixRuntime.Api.Inputs.InputMappingLayout.Sneak
   - OnixRuntime.Api.Inputs.InputMappingLayout.Sprint
   - OnixRuntime.Api.Inputs.InputMappingLayout.TogglePerspective
@@ -98,10 +100,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InputMappingLayout
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
     startLine: 7
   assemblies:
   - OnixRuntime
@@ -118,9 +120,10 @@ items:
   - OnixRuntime.Api.Inputs.ControllerMappingLayout
   - OnixRuntime.Api.Inputs.KeyboardMappingLayout
   inheritedMembers:
-  - System.Object.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
@@ -139,10 +142,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Current
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
     startLine: 11
   assemblies:
   - OnixRuntime
@@ -170,10 +173,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Default
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
     startLine: 15
   assemblies:
   - OnixRuntime
@@ -201,14 +204,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsController
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 19
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 22
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
+  summary: Indicates whether this layout is for controller input since in some cases, they have to be handled differently.
+  example: []
   syntax:
     content: protected virtual bool IsController { get; }
     parameters: []
@@ -230,11 +235,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetKeys
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 24
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 27
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -252,6 +257,47 @@ items:
   nameWithType.vb: InputMappingLayout.GetKeys(String)
   fullName.vb: OnixRuntime.Api.Inputs.InputMappingLayout.GetKeys(String)
   name.vb: GetKeys(String)
+- uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
+  commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
+  id: SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
+  parent: OnixRuntime.Api.Inputs.InputMappingLayout
+  langs:
+  - csharp
+  - vb
+  name: SetKeys(string, InputKey[])
+  nameWithType: InputMappingLayout.SetKeys(string, InputKey[])
+  fullName: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(string, OnixRuntime.Api.Inputs.InputKey[])
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetKeys
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 41
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Sets the key bindings for a specific input action.
+  example: []
+  syntax:
+    content: public bool SetKeys(string action, InputKey[] keys)
+    parameters:
+    - id: action
+      type: System.String
+      description: The name of the input action to rebind (e.g., "jump", "move_forward").
+    - id: keys
+      type: OnixRuntime.Api.Inputs.InputKey[]
+      description: The keys to assign to the action. Multiple keys can be provided.
+    return:
+      type: System.Boolean
+      description: If it found the action and replaced the keys. It would only return false if action doesn't exist.
+    content.vb: Public Function SetKeys(action As String, keys As InputKey()) As Boolean
+  overload: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys*
+  nameWithType.vb: InputMappingLayout.SetKeys(String, InputKey())
+  fullName.vb: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(String, OnixRuntime.Api.Inputs.InputKey())
+  name.vb: SetKeys(String, InputKey())
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultKeys(System.String)
   commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultKeys(System.String)
   id: GetDefaultKeys(System.String)
@@ -266,11 +312,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetDefaultKeys
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 35
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 48
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -302,11 +348,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HasKey
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 46
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 59
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -340,11 +386,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HasDefaultKey
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 53
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 66
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -378,11 +424,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsKeyAssigned
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 60
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 73
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -411,11 +457,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsDefaultKeyAssigned
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 67
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 80
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -444,22 +490,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Forward
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 74
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 87
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the forward action.
   example: []
   syntax:
-    content: public InputKey[] Forward { get; }
+    content: public InputKey[] Forward { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Forward As InputKey()
+    content.vb: Public Property Forward As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Forward*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Back
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Back
@@ -475,22 +521,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Back
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 78
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 95
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the back action.
   example: []
   syntax:
-    content: public InputKey[] Back { get; }
+    content: public InputKey[] Back { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Back As InputKey()
+    content.vb: Public Property Back As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Back*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Left
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Left
@@ -506,22 +552,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Left
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 82
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 103
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the left action.
   example: []
   syntax:
-    content: public InputKey[] Left { get; }
+    content: public InputKey[] Left { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Left As InputKey()
+    content.vb: Public Property Left As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Left*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Right
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Right
@@ -537,22 +583,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Right
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 86
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 111
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the right action.
   example: []
   syntax:
-    content: public InputKey[] Right { get; }
+    content: public InputKey[] Right { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Right As InputKey()
+    content.vb: Public Property Right As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Right*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Jump
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Jump
@@ -568,22 +614,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Jump
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 90
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 119
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the jump action.
   example: []
   syntax:
-    content: public InputKey[] Jump { get; }
+    content: public InputKey[] Jump { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Jump As InputKey()
+    content.vb: Public Property Jump As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Jump*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Sneak
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Sneak
@@ -599,22 +645,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Sneak
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 94
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 127
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the sneak action.
   example: []
   syntax:
-    content: public InputKey[] Sneak { get; }
+    content: public InputKey[] Sneak { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Sneak As InputKey()
+    content.vb: Public Property Sneak As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Sneak*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Sprint
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Sprint
@@ -630,22 +676,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Sprint
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 98
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 135
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the sprint action.
   example: []
   syntax:
-    content: public InputKey[] Sprint { get; }
+    content: public InputKey[] Sprint { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Sprint As InputKey()
+    content.vb: Public Property Sprint As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Sprint*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Inventory
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Inventory
@@ -661,22 +707,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Inventory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 102
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 143
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the inventory action.
   example: []
   syntax:
-    content: public InputKey[] Inventory { get; }
+    content: public InputKey[] Inventory { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Inventory As InputKey()
+    content.vb: Public Property Inventory As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Inventory*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Drop
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Drop
@@ -692,22 +738,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Drop
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 106
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 151
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the drop action.
   example: []
   syntax:
-    content: public InputKey[] Drop { get; }
+    content: public InputKey[] Drop { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Drop As InputKey()
+    content.vb: Public Property Drop As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Drop*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Use
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Use
@@ -723,22 +769,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Use
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 110
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 159
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the use action.
   example: []
   syntax:
-    content: public InputKey[] Use { get; }
+    content: public InputKey[] Use { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Use As InputKey()
+    content.vb: Public Property Use As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Use*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Attack
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Attack
@@ -754,22 +800,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Attack
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 114
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 167
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the attack action.
   example: []
   syntax:
-    content: public InputKey[] Attack { get; }
+    content: public InputKey[] Attack { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Attack As InputKey()
+    content.vb: Public Property Attack As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Attack*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.PickBlock
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.PickBlock
@@ -785,22 +831,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PickBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 118
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 175
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the pick block action.
   example: []
   syntax:
-    content: public InputKey[] PickBlock { get; }
+    content: public InputKey[] PickBlock { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property PickBlock As InputKey()
+    content.vb: Public Property PickBlock As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.PickBlock*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Chat
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Chat
@@ -816,22 +862,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Chat
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 122
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 183
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the chat action.
   example: []
   syntax:
-    content: public InputKey[] Chat { get; }
+    content: public InputKey[] Chat { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Chat As InputKey()
+    content.vb: Public Property Chat As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Chat*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar1
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar1
@@ -847,22 +893,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar1
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 126
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 191
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the first hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar1 { get; }
+    content: public InputKey[] Hotbar1 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar1 As InputKey()
+    content.vb: Public Property Hotbar1 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar1*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar2
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar2
@@ -878,22 +924,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar2
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 130
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 198
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the second hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar2 { get; }
+    content: public InputKey[] Hotbar2 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar2 As InputKey()
+    content.vb: Public Property Hotbar2 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar2*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar3
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar3
@@ -909,22 +955,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar3
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 134
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 205
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the third hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar3 { get; }
+    content: public InputKey[] Hotbar3 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar3 As InputKey()
+    content.vb: Public Property Hotbar3 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar3*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar4
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar4
@@ -940,22 +986,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar4
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 138
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 212
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the fourth hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar4 { get; }
+    content: public InputKey[] Hotbar4 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar4 As InputKey()
+    content.vb: Public Property Hotbar4 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar4*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar5
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar5
@@ -971,22 +1017,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar5
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 142
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 219
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the fifth hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar5 { get; }
+    content: public InputKey[] Hotbar5 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar5 As InputKey()
+    content.vb: Public Property Hotbar5 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar5*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar6
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar6
@@ -1002,22 +1048,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar6
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 146
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 226
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the sixth hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar6 { get; }
+    content: public InputKey[] Hotbar6 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar6 As InputKey()
+    content.vb: Public Property Hotbar6 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar6*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar7
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar7
@@ -1033,22 +1079,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar7
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 150
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 233
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the seventh hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar7 { get; }
+    content: public InputKey[] Hotbar7 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar7 As InputKey()
+    content.vb: Public Property Hotbar7 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar7*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar8
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar8
@@ -1064,22 +1110,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar8
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 154
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 240
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the eighth hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar8 { get; }
+    content: public InputKey[] Hotbar8 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar8 As InputKey()
+    content.vb: Public Property Hotbar8 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar8*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar9
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar9
@@ -1095,22 +1141,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar9
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 158
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 247
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the ninth hotbar slot.
   example: []
   syntax:
-    content: public InputKey[] Hotbar9 { get; }
+    content: public InputKey[] Hotbar9 { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Hotbar9 As InputKey()
+    content.vb: Public Property Hotbar9 As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar9*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar
@@ -1126,23 +1172,27 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Hotbar
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 162
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 255
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for all hotbar slots.
   example: []
   syntax:
-    content: public InputKey[][] Hotbar { get; }
+    content: public InputKey[][] Hotbar { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[][]
-    content.vb: Public ReadOnly Property Hotbar As InputKey()()
+    content.vb: Public Property Hotbar As InputKey()()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.GetHotbar(System.Int32)
   commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.GetHotbar(System.Int32)
   id: GetHotbar(System.Int32)
@@ -1157,11 +1207,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHotbar
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 166
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 265
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1179,6 +1229,42 @@ items:
   nameWithType.vb: InputMappingLayout.GetHotbar(Integer)
   fullName.vb: OnixRuntime.Api.Inputs.InputMappingLayout.GetHotbar(Integer)
   name.vb: GetHotbar(Integer)
+- uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+  commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+  id: SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+  parent: OnixRuntime.Api.Inputs.InputMappingLayout
+  langs:
+  - csharp
+  - vb
+  name: SetHotbar(int, InputKey[])
+  nameWithType: InputMappingLayout.SetHotbar(int, InputKey[])
+  fullName: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(int, OnixRuntime.Api.Inputs.InputKey[])
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetHotbar
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 270
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Gets the input keys for the specified hotbar slot.
+  example: []
+  syntax:
+    content: public void SetHotbar(int slot, InputKey[] keys)
+    parameters:
+    - id: slot
+      type: System.Int32
+    - id: keys
+      type: OnixRuntime.Api.Inputs.InputKey[]
+    content.vb: Public Sub SetHotbar(slot As Integer, keys As InputKey())
+  overload: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar*
+  nameWithType.vb: InputMappingLayout.SetHotbar(Integer, InputKey())
+  fullName.vb: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(Integer, OnixRuntime.Api.Inputs.InputKey())
+  name.vb: SetHotbar(Integer, InputKey())
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultHotbar(System.Int32)
   commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultHotbar(System.Int32)
   id: GetDefaultHotbar(System.Int32)
@@ -1193,11 +1279,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetDefaultHotbar
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 170
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 274
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1229,22 +1315,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TogglePerspective
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 174
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 278
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for toggling perspective.
   example: []
   syntax:
-    content: public InputKey[] TogglePerspective { get; }
+    content: public InputKey[] TogglePerspective { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property TogglePerspective As InputKey()
+    content.vb: Public Property TogglePerspective As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.TogglePerspective*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.MobEffects
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.MobEffects
@@ -1260,22 +1346,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MobEffects
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 178
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 286
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for mob effects.
   example: []
   syntax:
-    content: public InputKey[] MobEffects { get; }
+    content: public InputKey[] MobEffects { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property MobEffects As InputKey()
+    content.vb: Public Property MobEffects As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.MobEffects*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Command
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Command
@@ -1291,22 +1377,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Command
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 182
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 294
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the command action.
   example: []
   syntax:
-    content: public InputKey[] Command { get; }
+    content: public InputKey[] Command { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Command As InputKey()
+    content.vb: Public Property Command As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Command*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.CopyCoordinates
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.CopyCoordinates
@@ -1322,22 +1408,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CopyCoordinates
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 186
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 302
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for copying coordinates.
   example: []
   syntax:
-    content: public InputKey[] CopyCoordinates { get; }
+    content: public InputKey[] CopyCoordinates { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property CopyCoordinates As InputKey()
+    content.vb: Public Property CopyCoordinates As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.CopyCoordinates*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.CopyFacingCoordinates
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.CopyFacingCoordinates
@@ -1353,22 +1439,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CopyFacingCoordinates
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 190
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 310
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for copying facing coordinates.
   example: []
   syntax:
-    content: public InputKey[] CopyFacingCoordinates { get; }
+    content: public InputKey[] CopyFacingCoordinates { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property CopyFacingCoordinates As InputKey()
+    content.vb: Public Property CopyFacingCoordinates As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.CopyFacingCoordinates*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Emote
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Emote
@@ -1384,22 +1470,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Emote
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 194
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 318
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for the emote action.
   example: []
   syntax:
-    content: public InputKey[] Emote { get; }
+    content: public InputKey[] Emote { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Emote As InputKey()
+    content.vb: Public Property Emote As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Emote*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Screenshot
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Screenshot
@@ -1415,22 +1501,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Screenshot
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 198
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 326
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for taking a screenshot.
   example: []
   syntax:
-    content: public InputKey[] Screenshot { get; }
+    content: public InputKey[] Screenshot { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Screenshot As InputKey()
+    content.vb: Public Property Screenshot As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Screenshot*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.MenuTabLeft
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.MenuTabLeft
@@ -1446,22 +1532,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MenuTabLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 202
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 334
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for moving the menu tab left.
   example: []
   syntax:
-    content: public InputKey[] MenuTabLeft { get; }
+    content: public InputKey[] MenuTabLeft { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property MenuTabLeft As InputKey()
+    content.vb: Public Property MenuTabLeft As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.MenuTabLeft*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.MenuTabRight
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.MenuTabRight
@@ -1477,22 +1563,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MenuTabRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 206
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 342
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for moving the menu tab right.
   example: []
   syntax:
-    content: public InputKey[] MenuTabRight { get; }
+    content: public InputKey[] MenuTabRight { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property MenuTabRight As InputKey()
+    content.vb: Public Property MenuTabRight As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.MenuTabRight*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.MenuCancel
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.MenuCancel
@@ -1508,22 +1594,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MenuCancel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 210
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 350
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for cancelling the menu.
   example: []
   syntax:
-    content: public InputKey[] MenuCancel { get; }
+    content: public InputKey[] MenuCancel { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property MenuCancel As InputKey()
+    content.vb: Public Property MenuCancel As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.MenuCancel*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Pause
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.Pause
@@ -1539,22 +1625,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Pause
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 214
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 358
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Gets the input keys for pausing the game.
   example: []
   syntax:
-    content: public InputKey[] Pause { get; }
+    content: public InputKey[] Pause { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property Pause As InputKey()
+    content.vb: Public Property Pause As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.Pause*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.CycleItemLeft
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.CycleItemLeft
@@ -1570,22 +1656,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CycleItemLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 219
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 366
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Controller only
   example: []
   syntax:
-    content: public InputKey[] CycleItemLeft { get; }
+    content: public InputKey[] CycleItemLeft { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property CycleItemLeft As InputKey()
+    content.vb: Public Property CycleItemLeft As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.CycleItemLeft*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.CycleItemRight
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.CycleItemRight
@@ -1601,22 +1687,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CycleItemRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 224
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 374
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
   summary: Controller only
   example: []
   syntax:
-    content: public InputKey[] CycleItemRight { get; }
+    content: public InputKey[] CycleItemRight { get; set; }
     parameters: []
     return:
       type: OnixRuntime.Api.Inputs.InputKey[]
-    content.vb: Public ReadOnly Property CycleItemRight As InputKey()
+    content.vb: Public Property CycleItemRight As InputKey()
   overload: OnixRuntime.Api.Inputs.InputMappingLayout.CycleItemRight*
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.DefaultForward
   commentId: P:OnixRuntime.Api.Inputs.InputMappingLayout.DefaultForward
@@ -1632,11 +1718,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultForward
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 229
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 382
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1663,11 +1749,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultBack
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 233
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 386
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1694,11 +1780,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 237
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 390
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1725,11 +1811,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 241
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 394
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1756,11 +1842,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultJump
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 245
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 398
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1787,11 +1873,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultSneak
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 249
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 402
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1818,11 +1904,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultSprint
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 253
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 406
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1849,11 +1935,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultInventory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 257
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 410
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1880,11 +1966,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultDrop
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 261
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 414
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1911,11 +1997,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultUse
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 265
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 418
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1942,11 +2028,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultAttack
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 269
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 422
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -1973,11 +2059,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultPickBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 273
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 426
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2004,11 +2090,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultChat
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 277
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 430
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2035,11 +2121,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar1
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 281
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 434
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2066,11 +2152,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar2
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 285
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 438
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2097,11 +2183,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar3
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 289
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 442
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2128,11 +2214,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar4
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 293
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 446
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2159,11 +2245,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar5
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 297
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 450
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2190,11 +2276,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar6
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 301
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 454
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2221,11 +2307,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar7
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 305
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 458
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2252,11 +2338,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar8
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 309
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 462
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2283,11 +2369,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar9
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 313
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 466
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2314,11 +2400,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultHotbar
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 317
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 470
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2345,11 +2431,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultTogglePerspective
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 321
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 474
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2376,11 +2462,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultMobEffects
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 325
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 478
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2407,11 +2493,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultCommand
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 329
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 482
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2438,11 +2524,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultCopyCoordinates
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 333
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 486
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2469,11 +2555,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultCopyFacingCoordinates
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 337
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 490
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2500,11 +2586,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultEmote
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 341
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 494
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2531,11 +2617,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultScreenshot
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 345
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 498
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2562,11 +2648,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultMenuTabLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 349
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 502
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2593,11 +2679,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultMenuTabRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 353
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 506
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2624,11 +2710,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultMenuCancel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 357
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 510
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2655,11 +2741,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultPause
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 361
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 514
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2686,11 +2772,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultCycleItemLeft
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 366
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 519
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2717,11 +2803,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultCycleItemRight
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 371
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 524
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -2783,22 +2869,52 @@ references:
   name: MemoryAddressContainer
   nameWithType: MemoryAddressContainer
   fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
   name.vb: Equals(Object)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -2806,15 +2922,33 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
@@ -2860,30 +2994,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
@@ -3226,6 +3336,12 @@ references:
     href: OnixRuntime.Api.Inputs.InputKey.html
   - name: (
   - name: )
+- uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys*
+  commentId: Overload:OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys
+  href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetKeys_System_String_OnixRuntime_Api_Inputs_InputKey___
+  name: SetKeys
+  nameWithType: InputMappingLayout.SetKeys
+  fullName: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultKeys*
   commentId: Overload:OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultKeys
   href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_GetDefaultKeys_System_String_
@@ -3395,6 +3511,13 @@ references:
   name: Hotbar9
   nameWithType: InputMappingLayout.Hotbar9
   fullName: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar9
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar*
   commentId: Overload:OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar
   href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_Hotbar
@@ -3443,6 +3566,12 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar*
+  commentId: Overload:OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar
+  href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetHotbar_System_Int32_OnixRuntime_Api_Inputs_InputKey___
+  name: SetHotbar
+  nameWithType: InputMappingLayout.SetHotbar
+  fullName: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultHotbar*
   commentId: Overload:OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultHotbar
   href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_GetDefaultHotbar_System_Int32_

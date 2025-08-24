@@ -11,7 +11,7 @@ items:
   - OnixRuntime.Api.Utils.RawImageData.#ctor(System.String)
   - OnixRuntime.Api.Utils.RawImageData.Create(System.Int32,System.Int32)
   - OnixRuntime.Api.Utils.RawImageData.CreateFourWayGradient(System.Int32,System.Int32,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF)
-  - OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(System.Int32,System.Int32)
+  - OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(System.Int32,System.Int32,System.Random)
   - OnixRuntime.Api.Utils.RawImageData.Data
   - OnixRuntime.Api.Utils.RawImageData.Empty
   - OnixRuntime.Api.Utils.RawImageData.GetPixel(System.Int32,System.Int32)
@@ -25,6 +25,7 @@ items:
   - OnixRuntime.Api.Utils.RawImageData.Load(System.Byte[])
   - OnixRuntime.Api.Utils.RawImageData.Load(System.IO.Stream)
   - OnixRuntime.Api.Utils.RawImageData.Load(System.String)
+  - OnixRuntime.Api.Utils.RawImageData.Resized(System.Int32,System.Int32,OnixRuntime.Api.Utils.RawImageData.ResizeFilter)
   - OnixRuntime.Api.Utils.RawImageData.RoundImageCorner(System.Single,OnixRuntime.Api.Utils.RawImageData.ImageCorner)
   - OnixRuntime.Api.Utils.RawImageData.RoundImageCorners(System.Single)
   - OnixRuntime.Api.Utils.RawImageData.Sample(OnixRuntime.Api.Maths.Vec2I,OnixRuntime.Api.Maths.Vec2I,System.Action{OnixRuntime.Api.Utils.RawImageData,OnixRuntime.Api.Maths.Vec2I})
@@ -51,11 +52,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RawImageData
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 12
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 13
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -88,11 +89,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Data
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 41
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 63
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -119,11 +120,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Width
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 45
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 67
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -150,11 +151,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Height
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 49
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 71
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -181,11 +182,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsEmpty
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 54
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 76
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -212,11 +213,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Empty
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 58
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 80
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -243,11 +244,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 65
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 87
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -281,11 +282,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 78
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 100
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -322,11 +323,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 89
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 111
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -361,11 +362,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 106
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 128
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -412,11 +413,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetRawPixel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 122
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 144
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -460,11 +461,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetRawPixelOpacity
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 142
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 164
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -508,11 +509,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetRawPixel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 163
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 185
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -556,11 +557,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetRawPixelOpacity
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 187
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 209
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -604,11 +605,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetPixel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 205
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 227
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -645,11 +646,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetPixel
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 213
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 235
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -686,11 +687,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetSaveBytes
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 222
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 244
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -730,11 +731,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Save
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 231
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 253
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -774,11 +775,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Save
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 241
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 263
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -818,11 +819,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetSaveBytesPng
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 249
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 271
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -853,11 +854,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SavePng
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 255
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 277
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -891,11 +892,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SavePng
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 261
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 283
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -929,11 +930,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetSaveBytesJpg
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 267
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 289
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -964,11 +965,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveJpg
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 273
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 295
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1002,11 +1003,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveJpg
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 279
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 301
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1040,11 +1041,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Load
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 291
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 313
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1094,11 +1095,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Load
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 298
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 320
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1136,11 +1137,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Load
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 306
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 328
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1175,11 +1176,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Sample
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 323
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 345
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1216,11 +1217,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Sample
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 337
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 359
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1251,11 +1252,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SampleAsync
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 348
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 370
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1295,11 +1296,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SampleAsync
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 357
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 379
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1319,6 +1320,53 @@ items:
   nameWithType.vb: RawImageData.SampleAsync(Action(Of RawImageData, Vec2I))
   fullName.vb: OnixRuntime.Api.Utils.RawImageData.SampleAsync(System.Action(Of OnixRuntime.Api.Utils.RawImageData, OnixRuntime.Api.Maths.Vec2I))
   name.vb: SampleAsync(Action(Of RawImageData, Vec2I))
+- uid: OnixRuntime.Api.Utils.RawImageData.Resized(System.Int32,System.Int32,OnixRuntime.Api.Utils.RawImageData.ResizeFilter)
+  commentId: M:OnixRuntime.Api.Utils.RawImageData.Resized(System.Int32,System.Int32,OnixRuntime.Api.Utils.RawImageData.ResizeFilter)
+  id: Resized(System.Int32,System.Int32,OnixRuntime.Api.Utils.RawImageData.ResizeFilter)
+  parent: OnixRuntime.Api.Utils.RawImageData
+  langs:
+  - csharp
+  - vb
+  name: Resized(int, int, ResizeFilter)
+  nameWithType: RawImageData.Resized(int, int, RawImageData.ResizeFilter)
+  fullName: OnixRuntime.Api.Utils.RawImageData.Resized(int, int, OnixRuntime.Api.Utils.RawImageData.ResizeFilter)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/RawImageData.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Resized
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 391
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: >-
+    Creates a new <xref href="OnixRuntime.Api.Utils.RawImageData" data-throw-if-not-resolved="false"></xref> with the specified width and height, resizing the content.
+
+    Default filter is Cubic for upsample and mitchell for downsample.
+  example: []
+  syntax:
+    content: public RawImageData Resized(int width, int height, RawImageData.ResizeFilter filter = ResizeFilter.Default)
+    parameters:
+    - id: width
+      type: System.Int32
+      description: The new width to resize to.
+    - id: height
+      type: System.Int32
+      description: The new height to resize to.
+    - id: filter
+      type: OnixRuntime.Api.Utils.RawImageData.ResizeFilter
+      description: How it should be resized.
+    return:
+      type: OnixRuntime.Api.Utils.RawImageData
+      description: The new image.
+    content.vb: Public Function Resized(width As Integer, height As Integer, filter As RawImageData.ResizeFilter = ResizeFilter.Default) As RawImageData
+  overload: OnixRuntime.Api.Utils.RawImageData.Resized*
+  nameWithType.vb: RawImageData.Resized(Integer, Integer, RawImageData.ResizeFilter)
+  fullName.vb: OnixRuntime.Api.Utils.RawImageData.Resized(Integer, Integer, OnixRuntime.Api.Utils.RawImageData.ResizeFilter)
+  name.vb: Resized(Integer, Integer, ResizeFilter)
 - uid: OnixRuntime.Api.Utils.RawImageData.Create(System.Int32,System.Int32)
   commentId: M:OnixRuntime.Api.Utils.RawImageData.Create(System.Int32,System.Int32)
   id: Create(System.Int32,System.Int32)
@@ -1333,11 +1381,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Create
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 379
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 401
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1360,32 +1408,32 @@ items:
   nameWithType.vb: RawImageData.Create(Integer, Integer)
   fullName.vb: OnixRuntime.Api.Utils.RawImageData.Create(Integer, Integer)
   name.vb: Create(Integer, Integer)
-- uid: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(System.Int32,System.Int32)
-  commentId: M:OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(System.Int32,System.Int32)
-  id: CreateRandomGradient(System.Int32,System.Int32)
+- uid: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(System.Int32,System.Int32,System.Random)
+  commentId: M:OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(System.Int32,System.Int32,System.Random)
+  id: CreateRandomGradient(System.Int32,System.Int32,System.Random)
   parent: OnixRuntime.Api.Utils.RawImageData
   langs:
   - csharp
   - vb
-  name: CreateRandomGradient(int, int)
-  nameWithType: RawImageData.CreateRandomGradient(int, int)
-  fullName: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(int, int)
+  name: CreateRandomGradient(int, int, Random?)
+  nameWithType: RawImageData.CreateRandomGradient(int, int, Random?)
+  fullName: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(int, int, System.Random?)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CreateRandomGradient
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 391
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 414
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
   summary: Creates a new <xref href="OnixRuntime.Api.Utils.RawImageData" data-throw-if-not-resolved="false"></xref> with a random four-way color gradient.
   example: []
   syntax:
-    content: public static RawImageData CreateRandomGradient(int width, int height)
+    content: public static RawImageData CreateRandomGradient(int width, int height, Random? rand = null)
     parameters:
     - id: width
       type: System.Int32
@@ -1393,14 +1441,17 @@ items:
     - id: height
       type: System.Int32
       description: The height of the image.
+    - id: rand
+      type: System.Random
+      description: An optional <xref href="System.Random" data-throw-if-not-resolved="false"></xref> instance for generating random colors. If null, a new instance will be created.
     return:
       type: OnixRuntime.Api.Utils.RawImageData
       description: A <xref href="OnixRuntime.Api.Utils.RawImageData" data-throw-if-not-resolved="false"></xref> instance filled with a smooth gradient between four randomly chosen corner colors.
-    content.vb: Public Shared Function CreateRandomGradient(width As Integer, height As Integer) As RawImageData
+    content.vb: Public Shared Function CreateRandomGradient(width As Integer, height As Integer, rand As Random = Nothing) As RawImageData
   overload: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient*
-  nameWithType.vb: RawImageData.CreateRandomGradient(Integer, Integer)
-  fullName.vb: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(Integer, Integer)
-  name.vb: CreateRandomGradient(Integer, Integer)
+  nameWithType.vb: RawImageData.CreateRandomGradient(Integer, Integer, Random)
+  fullName.vb: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient(Integer, Integer, System.Random)
+  name.vb: CreateRandomGradient(Integer, Integer, Random)
 - uid: OnixRuntime.Api.Utils.RawImageData.CreateFourWayGradient(System.Int32,System.Int32,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF)
   commentId: M:OnixRuntime.Api.Utils.RawImageData.CreateFourWayGradient(System.Int32,System.Int32,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF)
   id: CreateFourWayGradient(System.Int32,System.Int32,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Maths.ColorF)
@@ -1415,11 +1466,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CreateFourWayGradient
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 414
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 437
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1468,11 +1519,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RoundImageCorner
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 443
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 481
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1506,11 +1557,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Utils/RawImageData.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RoundImageCorners
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Utils/RawImageData.cs
-    startLine: 508
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/RawImageData.cs
+    startLine: 546
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2282,15 +2333,52 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OnixRuntime.Api.Utils.RawImageData.Resized*
+  commentId: Overload:OnixRuntime.Api.Utils.RawImageData.Resized
+  href: OnixRuntime.Api.Utils.RawImageData.html#OnixRuntime_Api_Utils_RawImageData_Resized_System_Int32_System_Int32_OnixRuntime_Api_Utils_RawImageData_ResizeFilter_
+  name: Resized
+  nameWithType: RawImageData.Resized
+  fullName: OnixRuntime.Api.Utils.RawImageData.Resized
+- uid: OnixRuntime.Api.Utils.RawImageData.ResizeFilter
+  commentId: T:OnixRuntime.Api.Utils.RawImageData.ResizeFilter
+  parent: OnixRuntime.Api.Utils
+  href: OnixRuntime.Api.Utils.RawImageData.html
+  name: RawImageData.ResizeFilter
+  nameWithType: RawImageData.ResizeFilter
+  fullName: OnixRuntime.Api.Utils.RawImageData.ResizeFilter
+  spec.csharp:
+  - uid: OnixRuntime.Api.Utils.RawImageData
+    name: RawImageData
+    href: OnixRuntime.Api.Utils.RawImageData.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils.RawImageData.ResizeFilter
+    name: ResizeFilter
+    href: OnixRuntime.Api.Utils.RawImageData.ResizeFilter.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Utils.RawImageData
+    name: RawImageData
+    href: OnixRuntime.Api.Utils.RawImageData.html
+  - name: .
+  - uid: OnixRuntime.Api.Utils.RawImageData.ResizeFilter
+    name: ResizeFilter
+    href: OnixRuntime.Api.Utils.RawImageData.ResizeFilter.html
 - uid: OnixRuntime.Api.Utils.RawImageData.Create*
   commentId: Overload:OnixRuntime.Api.Utils.RawImageData.Create
   href: OnixRuntime.Api.Utils.RawImageData.html#OnixRuntime_Api_Utils_RawImageData_Create_System_Int32_System_Int32_
   name: Create
   nameWithType: RawImageData.Create
   fullName: OnixRuntime.Api.Utils.RawImageData.Create
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.random
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
 - uid: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient*
   commentId: Overload:OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient
-  href: OnixRuntime.Api.Utils.RawImageData.html#OnixRuntime_Api_Utils_RawImageData_CreateRandomGradient_System_Int32_System_Int32_
+  href: OnixRuntime.Api.Utils.RawImageData.html#OnixRuntime_Api_Utils_RawImageData_CreateRandomGradient_System_Int32_System_Int32_System_Random_
   name: CreateRandomGradient
   nameWithType: RawImageData.CreateRandomGradient
   fullName: OnixRuntime.Api.Utils.RawImageData.CreateRandomGradient

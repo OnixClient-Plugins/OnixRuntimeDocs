@@ -1,0 +1,227 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  id: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  parent: OnixRuntime.Api.Events
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  nameWithType: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  type: Delegate
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEventGui.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OnContainerScreenHoverTextRequestedDelegate
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
+    startLine: 181
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: >-
+    Represents a method that is called to retrieve the hover text for a container screen when an item is hovered
+
+    over. You can change or replace the text however you want, return the text that will be shown to the user.
+
+    If you have no changes to make, you should return <code class="paramref">text</code>
+
+    DO NOT USE <xref href="OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld%2cSystem.Boolean%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> or <xref href="OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> unless you set vanilla to true. Otherwise, you will get infinite recursion.
+  example: []
+  syntax:
+    content: public delegate string OnixEventGui.OnContainerScreenHoverTextRequestedDelegate(ItemStack item, string text)
+    parameters:
+    - id: item
+      type: OnixRuntime.Api.Items.ItemStack
+      description: The <xref href="OnixRuntime.Api.Items.ItemStack" data-throw-if-not-resolved="false"></xref> representing the item being hovered over. This parameter cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    - id: text
+      type: System.String
+      description: The current text of the item, changed by the ones who got it before you.
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that will be put as is in the hover text. If you don't wish to modify the text, return <code class="paramref">text</code>
+    content.vb: Public Delegate Function OnixEventGui.OnContainerScreenHoverTextRequestedDelegate(item As ItemStack, text As String) As String
+references:
+- uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+  isExternal: true
+  href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_OnixRuntime_Api_World_RuntimeWorld_System_Boolean_System_Boolean_
+  name: GetHoverText(RuntimeWorld, bool, bool)
+  nameWithType: ItemStack.GetHoverText(RuntimeWorld, bool, bool)
+  fullName: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld, bool, bool)
+  nameWithType.vb: ItemStack.GetHoverText(RuntimeWorld, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld, Boolean, Boolean)
+  name.vb: GetHoverText(RuntimeWorld, Boolean, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_OnixRuntime_Api_World_RuntimeWorld_System_Boolean_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.World.RuntimeWorld
+    name: RuntimeWorld
+    href: OnixRuntime.Api.World.RuntimeWorld.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_OnixRuntime_Api_World_RuntimeWorld_System_Boolean_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.World.RuntimeWorld
+    name: RuntimeWorld
+    href: OnixRuntime.Api.World.RuntimeWorld.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+  isExternal: true
+  href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_System_Boolean_System_Boolean_
+  name: GetHoverText(bool, bool)
+  nameWithType: ItemStack.GetHoverText(bool, bool)
+  fullName: OnixRuntime.Api.Items.ItemStack.GetHoverText(bool, bool)
+  nameWithType.vb: ItemStack.GetHoverText(Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.Items.ItemStack.GetHoverText(Boolean, Boolean)
+  name.vb: GetHoverText(Boolean, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Items.ItemStack
+  commentId: T:OnixRuntime.Api.Items.ItemStack
+  parent: OnixRuntime.Api.Items
+  href: OnixRuntime.Api.Items.ItemStack.html
+  name: ItemStack
+  nameWithType: ItemStack
+  fullName: OnixRuntime.Api.Items.ItemStack
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.Events
+  commentId: N:OnixRuntime.Api.Events
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Events
+  nameWithType: OnixRuntime.Api.Events
+  fullName: OnixRuntime.Api.Events
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Events
+    name: Events
+    href: OnixRuntime.Api.Events.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Events
+    name: Events
+    href: OnixRuntime.Api.Events.html
+- uid: OnixRuntime.Api.Items
+  commentId: N:OnixRuntime.Api.Items
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Items
+  nameWithType: OnixRuntime.Api.Items
+  fullName: OnixRuntime.Api.Items
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Items
+    name: Items
+    href: OnixRuntime.Api.Items.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

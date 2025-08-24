@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OnixEventRendering | Onix Plugin Documentation ">
       
-      
+      <meta name="description" content="Provides rendering-related events (world, HUD, screen rendering, 2D/Direct2D hooks). Subscribe to the events to receive renderer objects and timing deltas. Handlers are invoked with an appropriate renderer instance depending on the current rendering backend.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Events_OnixEventRendering.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.OnixEventRendering%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/dev/apiSpec/new?filename=OnixRuntime_Api_Events_OnixEventRendering.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.OnixEventRendering%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Events_OnixEventRendering" data-uid="OnixRuntime.Api.Events.OnixEventRendering" class="text-break">
-Class OnixEventRendering  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L63"><i class="bi bi-code-slash"></i></a>
+Class OnixEventRendering  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,10 @@ Class OnixEventRendering  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Provides rendering-related events (world, HUD, screen rendering, 2D/Direct2D hooks).
+Subscribe to the events to receive renderer objects and timing deltas.
+Handlers are invoked with an appropriate renderer instance depending on the current rendering backend.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -155,7 +158,7 @@ Class OnixEventRendering  <a class="header-action link-secondary" title="View so
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_HudRender" data-uid="OnixRuntime.Api.Events.OnixEventRendering.HudRender">
   HudRender
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This event is called when on hud, hide hud is false and there is no client UI screen opened.
@@ -188,11 +191,10 @@ This may or may not be a logic callback so don't access game state, entities, et
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_HudRenderGame" data-uid="OnixRuntime.Api.Events.OnixEventRendering.HudRenderGame">
   HudRenderGame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>This event is called when on hud, hide hud is false and there is no client UI screen opened.
-This is a logic callback so you can access game state, entities, etc.</p>
+  <div class="markdown level1 summary"><p>Called when HUD should be rendered via the game's renderer. Logic-safe: game state and entities are available.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -220,7 +222,7 @@ This is a logic callback so you can access game state, entities, etc.</p>
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_PreRenderScreenDirect2D" data-uid="OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenDirect2D">
   PreRenderScreenDirect2D
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This event is called all the time. The Pre is before the client's screens are rendered, not the game's.
@@ -254,7 +256,7 @@ This will never be a logic callback so don't access game state, entities, etc.</
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_PreRenderScreenGame" data-uid="OnixRuntime.Api.Events.OnixEventRendering.PreRenderScreenGame">
   PreRenderScreenGame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This event is called all the time. The Pre is before the client AND game's screens are rendered.
@@ -288,7 +290,7 @@ This is a logic callback so you can access game state, entities, etc.</p>
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_RenderHudDirect2D" data-uid="OnixRuntime.Api.Events.OnixEventRendering.RenderHudDirect2D">
   RenderHudDirect2D
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This event is called when on hud, hide hud is false and there is no client UI screen opened.
@@ -321,7 +323,7 @@ This will never be a logic callback so don't access game state, entities, etc.</
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_RenderScreen" data-uid="OnixRuntime.Api.Events.OnixEventRendering.RenderScreen">
   RenderScreen
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This event is called all the time.
@@ -357,7 +359,7 @@ You can handle this case manually by checking the different pre events and <a cl
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_RenderScreenDirect2D" data-uid="OnixRuntime.Api.Events.OnixEventRendering.RenderScreenDirect2D">
   RenderScreenDirect2D
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L329"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This event is called all the time.
@@ -390,11 +392,10 @@ This will never be a logic callback so don't access game state, entities, etc.</
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_RenderScreenGame" data-uid="OnixRuntime.Api.Events.OnixEventRendering.RenderScreenGame">
   RenderScreenGame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>This event is called all the time.
-You should avoid this if <a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_HudRenderGame">HudRenderGame</a> gives you what you need.
+  <div class="markdown level1 summary"><p>This event is called all the time. (always logic-safe)
 This is a logic callback so you can access game state, entities, etc.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -423,7 +424,7 @@ This is a logic callback so you can access game state, entities, etc.</p>
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_ShouldHideScreen" data-uid="OnixRuntime.Api.Events.OnixEventRendering.ShouldHideScreen">
   ShouldHideScreen
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L404"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This is only for game screens, returning true will prevent that screen from rendering.</p>
@@ -454,10 +455,11 @@ This is a logic callback so you can access game state, entities, etc.</p>
 
   <h3 id="OnixRuntime_Api_Events_OnixEventRendering_WorldRender" data-uid="OnixRuntime.Api.Events.OnixEventRendering.WorldRender">
   WorldRender
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Occurs when the world (3D) should be rendered. Handlers receive a RendererWorld and the frame delta.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -485,7 +487,7 @@ This is a logic callback so you can access game state, entities, etc.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventRendering.cs/#L63" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventRendering.cs/#L68" class="edit-link">Edit this page</a>
         </div>
 
 

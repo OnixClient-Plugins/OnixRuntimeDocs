@@ -5,7 +5,7 @@ items:
   id: RendererWorld.WorldUIRenderSettingsPopper
   parent: OnixRuntime.Api.Rendering
   children:
-  - OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper,OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld)
+  - OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld,System.Boolean,OnixRuntime.Api.Rendering.GameMaterialParameters)
   - OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.Dispose
   langs:
   - csharp
@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WorldUIRenderSettingsPopper
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 59
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 19
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -39,44 +39,46 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper,OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld)
-  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper,OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld)
-  id: '#ctor(OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper,OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld)'
+- uid: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld,System.Boolean,OnixRuntime.Api.Rendering.GameMaterialParameters)
+  commentId: M:OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor(OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld,System.Boolean,OnixRuntime.Api.Rendering.GameMaterialParameters)
+  id: '#ctor(OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper,OnixRuntime.Api.Rendering.RendererWorld,System.Boolean,OnixRuntime.Api.Rendering.GameMaterialParameters)'
   parent: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper
   langs:
   - csharp
   - vb
-  name: WorldUIRenderSettingsPopper(WorldRenderSettingsPopper, TransformationPopper, RendererWorld)
-  nameWithType: RendererWorld.WorldUIRenderSettingsPopper.WorldUIRenderSettingsPopper(RendererWorld.WorldRenderSettingsPopper, RendererCommon.TransformationPopper, RendererWorld)
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.WorldUIRenderSettingsPopper(OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper, OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper, OnixRuntime.Api.Rendering.RendererWorld)
+  name: WorldUIRenderSettingsPopper(TransformationPopper, RendererWorld, bool, GameMaterialParameters)
+  nameWithType: RendererWorld.WorldUIRenderSettingsPopper.WorldUIRenderSettingsPopper(RendererCommon.TransformationPopper, RendererWorld, bool, GameMaterialParameters)
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.WorldUIRenderSettingsPopper(OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper, OnixRuntime.Api.Rendering.RendererWorld, bool, OnixRuntime.Api.Rendering.GameMaterialParameters)
   type: Constructor
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 59
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 19
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
   summary: Helper struct for managing world UI render settings and transformation stack with automatic pop on dispose.
   example: []
   syntax:
-    content: public WorldUIRenderSettingsPopper(RendererWorld.WorldRenderSettingsPopper worldSettingsPopperCtor, RendererCommon.TransformationPopper transformationPopperCtor, RendererWorld renderer)
+    content: public WorldUIRenderSettingsPopper(RendererCommon.TransformationPopper transformationPopperCtor, RendererWorld renderer, bool wasRenderingUi, GameMaterialParameters materialParameters)
     parameters:
-    - id: worldSettingsPopperCtor
-      type: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
     - id: transformationPopperCtor
       type: OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
     - id: renderer
       type: OnixRuntime.Api.Rendering.RendererWorld
-    content.vb: Public Sub New(worldSettingsPopperCtor As RendererWorld.WorldRenderSettingsPopper, transformationPopperCtor As RendererCommon.TransformationPopper, renderer As RendererWorld)
+    - id: wasRenderingUi
+      type: System.Boolean
+    - id: materialParameters
+      type: OnixRuntime.Api.Rendering.GameMaterialParameters
+    content.vb: Public Sub New(transformationPopperCtor As RendererCommon.TransformationPopper, renderer As RendererWorld, wasRenderingUi As Boolean, materialParameters As GameMaterialParameters)
   overload: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor*
-  nameWithType.vb: RendererWorld.WorldUIRenderSettingsPopper.New(RendererWorld.WorldRenderSettingsPopper, RendererCommon.TransformationPopper, RendererWorld)
-  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.New(OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper, OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper, OnixRuntime.Api.Rendering.RendererWorld)
-  name.vb: New(WorldRenderSettingsPopper, TransformationPopper, RendererWorld)
+  nameWithType.vb: RendererWorld.WorldUIRenderSettingsPopper.New(RendererCommon.TransformationPopper, RendererWorld, Boolean, GameMaterialParameters)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.New(OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper, OnixRuntime.Api.Rendering.RendererWorld, Boolean, OnixRuntime.Api.Rendering.GameMaterialParameters)
+  name.vb: New(TransformationPopper, RendererWorld, Boolean, GameMaterialParameters)
 - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.Dispose
   commentId: M:OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.Dispose
   id: Dispose
@@ -91,11 +93,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Rendering/RendererWorld.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dispose
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 67
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 28
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -365,36 +367,13 @@ references:
   name.vb: Object
 - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor*
   commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.#ctor
-  href: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.html#OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper__ctor_OnixRuntime_Api_Rendering_RendererWorld_WorldRenderSettingsPopper_OnixRuntime_Api_Rendering_RendererCommon_TransformationPopper_OnixRuntime_Api_Rendering_RendererWorld_
+  href: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.html#OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper__ctor_OnixRuntime_Api_Rendering_RendererCommon_TransformationPopper_OnixRuntime_Api_Rendering_RendererWorld_System_Boolean_OnixRuntime_Api_Rendering_GameMaterialParameters_
   name: WorldUIRenderSettingsPopper
   nameWithType: RendererWorld.WorldUIRenderSettingsPopper.WorldUIRenderSettingsPopper
   fullName: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.WorldUIRenderSettingsPopper
   nameWithType.vb: RendererWorld.WorldUIRenderSettingsPopper.New
   fullName.vb: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.New
   name.vb: New
-- uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  commentId: T:OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  parent: OnixRuntime.Api.Rendering
-  href: OnixRuntime.Api.Rendering.RendererWorld.html
-  name: RendererWorld.WorldRenderSettingsPopper
-  nameWithType: RendererWorld.WorldRenderSettingsPopper
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  spec.csharp:
-  - uid: OnixRuntime.Api.Rendering.RendererWorld
-    name: RendererWorld
-    href: OnixRuntime.Api.Rendering.RendererWorld.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    name: WorldRenderSettingsPopper
-    href: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Rendering.RendererWorld
-    name: RendererWorld
-    href: OnixRuntime.Api.Rendering.RendererWorld.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    name: WorldRenderSettingsPopper
-    href: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper.html
 - uid: OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
   commentId: T:OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
   parent: OnixRuntime.Api.Rendering
@@ -425,6 +404,24 @@ references:
   name: RendererWorld
   nameWithType: RendererWorld
   fullName: OnixRuntime.Api.Rendering.RendererWorld
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Rendering.GameMaterialParameters
+  commentId: T:OnixRuntime.Api.Rendering.GameMaterialParameters
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMaterialParameters.html
+  name: GameMaterialParameters
+  nameWithType: GameMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.GameMaterialParameters
 - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.Dispose*
   commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.Dispose
   href: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper.html#OnixRuntime_Api_Rendering_RendererWorld_WorldUIRenderSettingsPopper_Dispose

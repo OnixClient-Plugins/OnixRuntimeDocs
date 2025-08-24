@@ -106,7 +106,8 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventGame.html">OnixEventGame</a></dt>
-      <dd></dd>
+      <dd><p>Provides game-related events (URI invocations, etc.).</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventGui.html">OnixEventGui</a></dt>
@@ -119,13 +120,8 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServer.html">OnixEventLocalServer</a></dt>
-      <dd><p>Provides events for local server tick and player chat events.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html">OnixEventLocalServerPlayer</a></dt>
-      <dd><p>Provides events for local server player actions such as breaking, building, using items, and interacting with entities.</p>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerWorld.html">OnixEventLocalServerWorld</a></dt>
+      <dd><p>The class hosting the local server events.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -135,11 +131,22 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html">OnixEventRendering</a></dt>
-      <dd></dd>
+      <dd><p>Provides rendering-related events (world, HUD, screen rendering, 2D/Direct2D hooks).
+Subscribe to the events to receive renderer objects and timing deltas.
+Handlers are invoked with an appropriate renderer instance depending on the current rendering backend.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventWorld.html">OnixEventWorld</a></dt>
+      <dd><p>Provides events for handling world-related actions.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEvents.html">OnixEvents</a></dt>
-      <dd></dd>
+      <dd><p>Root container for all Onix event groups. Provides typed access to
+each domain of events (session, rendering, input, GUI, game, etc.).
+Instantiate once and subscribe to the specific event group(s) you need.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventsSession.html">OnixEventsSession</a></dt>
@@ -151,19 +158,27 @@ Delegates
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventAudio.OnSoundPlayedInUiDelegate.html">OnixEventAudio.OnSoundPlayedInUiDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Called when a sound is played in the UI.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventAudio.OnSoundPlayedInWorldDelegate.html">OnixEventAudio.OnSoundPlayedInWorldDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Called when a sound is played in the world.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate.html">OnixEventGame.OnUriInvokedDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Called when a URI is invoked. specific to plugins. Not logic safe.
+The plugin uri that was invoked, the format goes as follows.
+minecraft://plugin.onixclient.com/{verb}?{key}={value}&amp;{myKey}={myValue}
+You should use this whenever possible to make it clear it's for plugins and avoid conflicts if you're implementing custom ones.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate.html">OnixEventGame.OnUriInvokedRawDelegate</a></dt>
-      <dd></dd>
+      <dd><p>The raw uri that was invoked e.g. &quot;minecraft://openServersTab&quot;
+When implementing your own uri handlers you should use <a class="xref" href="OnixRuntime.Api.Events.OnixEventGame.html#OnixRuntime_Api_Events_OnixEventGame_UriInvoked">UriInvoked</a>.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.html">OnixEventGui.OnChatScreenGetClientCommandsDelegate</a></dt>
@@ -178,6 +193,14 @@ Delegates
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTickDelegate.html">OnixEventGui.OnChatScreenTickDelegate</a></dt>
       <dd><p>Delegate for handling chat screen tick events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate.html">OnixEventGui.OnContainerScreenHoverTextRequestedDelegate</a></dt>
+      <dd><p>Represents a method that is called to retrieve the hover text for a container screen when an item is hovered
+over. You can change or replace the text however you want, return the text that will be shown to the user.
+If you have no changes to make, you should return <code class="paramref">text</code>
+DO NOT USE <a class="xref" href="OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_OnixRuntime_Api_World_RuntimeWorld_System_Boolean_System_Boolean_">GetHoverText(RuntimeWorld, bool, bool)</a> or <a class="xref" href="OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_System_Boolean_System_Boolean_">GetHoverText(bool, bool)</a> unless you set vanilla to true. Otherwise, you will get infinite recursion.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -216,53 +239,15 @@ Delegates
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat.html">OnixEventLocalServer.OnPlayerChat</a></dt>
-      <dd><p>Delegate for handling player chat events on the local server.</p>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate.html">OnixEventLocalServerWorld.OnAreaChangedDelegate</a></dt>
+      <dd><p>Delegate that is invoked whenever an area in the world changes.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate.html">OnixEventLocalServer.OnTickDelegate</a></dt>
-      <dd><p>Delegate for handling local server tick events.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate</a></dt>
-      <dd><p>Delegate for handling when a player attacks an entity.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate</a></dt>
-      <dd><p>Delegate for handling when a player breaks a block.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate</a></dt>
-      <dd><p>Delegate for handling when a player builds a block.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate</a></dt>
-      <dd><p>Delegate for handling when a player interacts with an entity.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate</a></dt>
-      <dd><p>Delegate for handling when a player starts breaking a block.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate</a></dt>
-      <dd><p>Delegate for handling when a player stops using an item.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate</a></dt>
-      <dd><p>Delegate for handling when a player uses an item.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate</a></dt>
-      <dd><p>Delegate for handling when a player uses an item on a block.</p>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate.html">OnixEventLocalServerWorld.OnBlockChangedDelegate</a></dt>
+      <dd><p>Delegate that is invoked whenever a block in the world changes.
+Provides context about the region, position, old and new blocks,
+as well as how the change should be propagated and rendered.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -307,43 +292,82 @@ Delegates
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html">OnixEventRendering.OnHudRender2DDelegate</a></dt>
-      <dd></dd>
+      <dd><p>This event is called when on hud, hide hud is false and there is no client UI screen opened.
+This will be called from the user's preferred 2D renderer.
+This may or may not be a logic callback so don't access game state, entities, etc.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate.html">OnixEventRendering.OnHudRenderDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Called when HUD should be rendered via the game's renderer. Logic-safe: game state and entities are available.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDelegate.html">OnixEventRendering.OnPreRenderScreenDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Delegate for the game's rendering callbacks (always logic-safe).</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDirect2DDelegate.html">OnixEventRendering.OnPreRenderScreenDirect2DDelegate</a></dt>
-      <dd></dd>
+      <dd><p>This event is called all the time. The Pre is before the client's screens are rendered, not the game's.
+You should avoid this if <a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_RenderHudDirect2D">RenderHudDirect2D</a> gives you what you need.
+debug_screen should always be there if you want to pick that one, otherwise you can ignore debug_screen and toast_screen to have just the main screen.
+This will never be a logic callback so don't access game state, entities, etc.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnRenderHudDirect2DDelegate.html">OnixEventRendering.OnRenderHudDirect2DDelegate</a></dt>
-      <dd></dd>
+      <dd><p>This event is called when on hud, hide hud is false and there is no client UI screen opened.
+This will be called from the user's preferred 2D renderer.
+This will never be a logic callback so don't access game state, entities, etc.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate.html">OnixEventRendering.OnRenderScreen2DDelegate</a></dt>
-      <dd></dd>
+      <dd><p>This event is called all the time.
+You should avoid this if <a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_HudRender">HudRender</a> gives you what you need.
+This will be called from the user's preferred 2D renderer.
+This may or may not be a logic callback so don't access game state, entities, etc.
+There is no PreRenderScreen2D event, because depending on the renderer, pre means different things.
+You can handle this case manually by checking the different pre events and <a class="xref" href="OnixRuntime.Api.Rendering.RenderContexes.html#OnixRuntime_Api_Rendering_RenderContexes_MainRenderer">MainRenderer</a>.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate.html">OnixEventRendering.OnRenderScreenDelegate</a></dt>
-      <dd></dd>
+      <dd><p>This event is called all the time. (always logic-safe)
+This is a logic callback so you can access game state, entities, etc.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDirect2DDelegate.html">OnixEventRendering.OnRenderScreenDirect2DDelegate</a></dt>
-      <dd></dd>
+      <dd><p>This event is called all the time.
+You should avoid this if <a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.html#OnixRuntime_Api_Events_OnixEventRendering_RenderHudDirect2D">RenderHudDirect2D</a> gives you what you need.
+This will never be a logic callback so don't access game state, entities, etc.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnWorldRenderDelegate.html">OnixEventRendering.OnWorldRenderDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Called when the world (3D) should be rendered. Logic-safe: game state and entities are available.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.ShouldHideScreenDelegate.html">OnixEventRendering.ShouldHideScreenDelegate</a></dt>
-      <dd></dd>
+      <dd><p>This is only for game screens, returning true will prevent that screen from rendering.
+Delegate used to determine whether a given game screen should be hidden.
+Return true to prevent rendering of that screen.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate.html">OnixEventWorld.OnAreaChangedDelegate</a></dt>
+      <dd><p>Delegate that is invoked whenever an area in the world changes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate.html">OnixEventWorld.OnBlockChangedDelegate</a></dt>
+      <dd><p>Delegate that is invoked whenever a block in the world changes.
+Provides context about the region, position, old and new blocks,
+as well as how the change should be propagated and rendered.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventsSession.OnDimensionChangedDelegate.html">OnixEventsSession.OnDimensionChangedDelegate</a></dt>

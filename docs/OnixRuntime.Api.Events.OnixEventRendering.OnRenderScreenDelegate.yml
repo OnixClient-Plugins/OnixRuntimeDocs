@@ -15,27 +15,37 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventRendering.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRenderScreenDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
-    startLine: 101
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventRendering.cs
+    startLine: 171
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
+  summary: >-
+    This event is called all the time. (always logic-safe)
+
+    This is a logic callback so you can access game state, entities, etc.
+  example: []
   syntax:
     content: public delegate void OnixEventRendering.OnRenderScreenDelegate(RendererGame gfx, float delta, string screenName, bool isHudHidden, bool isClientUI)
     parameters:
     - id: gfx
       type: OnixRuntime.Api.Rendering.RendererGame
+      description: The 2D renderer instance.
     - id: delta
       type: System.Single
+      description: The time delta since the last frame.
     - id: screenName
       type: System.String
+      description: The name of the screen being rendered.
     - id: isHudHidden
       type: System.Boolean
+      description: Whether the HUD is hidden.
     - id: isClientUI
       type: System.Boolean
+      description: Whether the UI is for the client.
     content.vb: Public Delegate Sub OnixEventRendering.OnRenderScreenDelegate(gfx As RendererGame, delta As Single, screenName As String, isHudHidden As Boolean, isClientUI As Boolean)
 references:
 - uid: OnixRuntime.Api.Events

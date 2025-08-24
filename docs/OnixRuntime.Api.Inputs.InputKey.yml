@@ -5,6 +5,7 @@ items:
   id: InputKey
   parent: OnixRuntime.Api.Inputs
   children:
+  - OnixRuntime.Api.Inputs.InputKey.#ctor(OnixRuntime.Api.Inputs.InputKey.ClickType)
   - OnixRuntime.Api.Inputs.InputKey.#ctor(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)
   - OnixRuntime.Api.Inputs.InputKey.#ctor(OnixRuntime.Api.Inputs.InputKey.Type)
   - OnixRuntime.Api.Inputs.InputKey.ClickInput
@@ -19,6 +20,12 @@ items:
   - OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey)
   - OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.GamepadInputType)
   - OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.Type)
+  - OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.ClickType
+  - OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.GamepadInputType
+  - OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.Type
+  - OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.ClickType)~OnixRuntime.Api.Inputs.InputKey
+  - OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)~OnixRuntime.Api.Inputs.InputKey
+  - OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.Type)~OnixRuntime.Api.Inputs.InputKey
   - OnixRuntime.Api.Inputs.InputKey.op_Inequality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey)
   - OnixRuntime.Api.Inputs.InputKey.op_Inequality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.GamepadInputType)
   - OnixRuntime.Api.Inputs.InputKey.op_Inequality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey.Type)
@@ -32,10 +39,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InputKey
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
     startLine: 5
   assemblies:
   - OnixRuntime
@@ -66,14 +73,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: None
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 6
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 9
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
+  summary: Represents no input key.
+  example: []
   syntax:
     content: public static readonly InputKey None
     return:
@@ -93,11 +102,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Value
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 217
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 224
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -124,11 +133,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GamepadInput
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 222
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 229
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -155,11 +164,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ClickInput
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 227
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 234
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -186,11 +195,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsMouse
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 232
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 239
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -217,11 +226,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsGamepad
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 237
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 244
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -248,11 +257,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 242
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 249
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -282,11 +291,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 249
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 256
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -302,6 +311,268 @@ items:
   nameWithType.vb: InputKey.New(InputKey.Type)
   fullName.vb: OnixRuntime.Api.Inputs.InputKey.New(OnixRuntime.Api.Inputs.InputKey.Type)
   name.vb: New(Type)
+- uid: OnixRuntime.Api.Inputs.InputKey.#ctor(OnixRuntime.Api.Inputs.InputKey.ClickType)
+  commentId: M:OnixRuntime.Api.Inputs.InputKey.#ctor(OnixRuntime.Api.Inputs.InputKey.ClickType)
+  id: '#ctor(OnixRuntime.Api.Inputs.InputKey.ClickType)'
+  parent: OnixRuntime.Api.Inputs.InputKey
+  langs:
+  - csharp
+  - vb
+  name: InputKey(ClickType)
+  nameWithType: InputKey.InputKey(InputKey.ClickType)
+  fullName: OnixRuntime.Api.Inputs.InputKey.InputKey(OnixRuntime.Api.Inputs.InputKey.ClickType)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputKey.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 263
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Initializes a new InputKey from a click type.
+  example: []
+  syntax:
+    content: public InputKey(InputKey.ClickType input)
+    parameters:
+    - id: input
+      type: OnixRuntime.Api.Inputs.InputKey.ClickType
+    content.vb: Public Sub New(input As InputKey.ClickType)
+  overload: OnixRuntime.Api.Inputs.InputKey.#ctor*
+  nameWithType.vb: InputKey.New(InputKey.ClickType)
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.New(OnixRuntime.Api.Inputs.InputKey.ClickType)
+  name.vb: New(ClickType)
+- uid: OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)~OnixRuntime.Api.Inputs.InputKey
+  commentId: M:OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)~OnixRuntime.Api.Inputs.InputKey
+  id: op_Implicit(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)~OnixRuntime.Api.Inputs.InputKey
+  parent: OnixRuntime.Api.Inputs.InputKey
+  langs:
+  - csharp
+  - vb
+  name: implicit operator InputKey(GamepadInputType)
+  nameWithType: InputKey.implicit operator InputKey(InputKey.GamepadInputType)
+  fullName: OnixRuntime.Api.Inputs.InputKey.implicit operator OnixRuntime.Api.Inputs.InputKey(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputKey.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Implicit
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 272
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Implicitly converts a GamepadInputType to an InputKey.
+  example: []
+  syntax:
+    content: public static implicit operator InputKey(InputKey.GamepadInputType input)
+    parameters:
+    - id: input
+      type: OnixRuntime.Api.Inputs.InputKey.GamepadInputType
+      description: The gamepad input type to convert.
+    return:
+      type: OnixRuntime.Api.Inputs.InputKey
+      description: An InputKey representing the specified gamepad input.
+    content.vb: Public Shared Widening Operator CType(input As InputKey.GamepadInputType) As InputKey
+  overload: OnixRuntime.Api.Inputs.InputKey.op_Implicit*
+  nameWithType.vb: InputKey.CType(InputKey.GamepadInputType)
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.CType(OnixRuntime.Api.Inputs.InputKey.GamepadInputType)
+  name.vb: CType(GamepadInputType)
+- uid: OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.Type)~OnixRuntime.Api.Inputs.InputKey
+  commentId: M:OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.Type)~OnixRuntime.Api.Inputs.InputKey
+  id: op_Implicit(OnixRuntime.Api.Inputs.InputKey.Type)~OnixRuntime.Api.Inputs.InputKey
+  parent: OnixRuntime.Api.Inputs.InputKey
+  langs:
+  - csharp
+  - vb
+  name: implicit operator InputKey(Type)
+  nameWithType: InputKey.implicit operator InputKey(InputKey.Type)
+  fullName: OnixRuntime.Api.Inputs.InputKey.implicit operator OnixRuntime.Api.Inputs.InputKey(OnixRuntime.Api.Inputs.InputKey.Type)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputKey.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Implicit
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 280
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Implicitly converts a key Type to an InputKey.
+  example: []
+  syntax:
+    content: public static implicit operator InputKey(InputKey.Type input)
+    parameters:
+    - id: input
+      type: OnixRuntime.Api.Inputs.InputKey.Type
+      description: The key type to convert.
+    return:
+      type: OnixRuntime.Api.Inputs.InputKey
+      description: An InputKey representing the specified key type.
+    content.vb: Public Shared Widening Operator CType(input As InputKey.Type) As InputKey
+  overload: OnixRuntime.Api.Inputs.InputKey.op_Implicit*
+  nameWithType.vb: InputKey.CType(InputKey.Type)
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.CType(OnixRuntime.Api.Inputs.InputKey.Type)
+  name.vb: CType(Type)
+- uid: OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.ClickType)~OnixRuntime.Api.Inputs.InputKey
+  commentId: M:OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey.ClickType)~OnixRuntime.Api.Inputs.InputKey
+  id: op_Implicit(OnixRuntime.Api.Inputs.InputKey.ClickType)~OnixRuntime.Api.Inputs.InputKey
+  parent: OnixRuntime.Api.Inputs.InputKey
+  langs:
+  - csharp
+  - vb
+  name: implicit operator InputKey(ClickType)
+  nameWithType: InputKey.implicit operator InputKey(InputKey.ClickType)
+  fullName: OnixRuntime.Api.Inputs.InputKey.implicit operator OnixRuntime.Api.Inputs.InputKey(OnixRuntime.Api.Inputs.InputKey.ClickType)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputKey.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Implicit
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 288
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Implicitly converts a ClickType to an InputKey.
+  example: []
+  syntax:
+    content: public static implicit operator InputKey(InputKey.ClickType input)
+    parameters:
+    - id: input
+      type: OnixRuntime.Api.Inputs.InputKey.ClickType
+      description: The click type to convert.
+    return:
+      type: OnixRuntime.Api.Inputs.InputKey
+      description: An InputKey representing the specified click type.
+    content.vb: Public Shared Widening Operator CType(input As InputKey.ClickType) As InputKey
+  overload: OnixRuntime.Api.Inputs.InputKey.op_Implicit*
+  nameWithType.vb: InputKey.CType(InputKey.ClickType)
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.CType(OnixRuntime.Api.Inputs.InputKey.ClickType)
+  name.vb: CType(ClickType)
+- uid: OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.GamepadInputType
+  commentId: M:OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.GamepadInputType
+  id: op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.GamepadInputType
+  parent: OnixRuntime.Api.Inputs.InputKey
+  langs:
+  - csharp
+  - vb
+  name: implicit operator GamepadInputType(InputKey)
+  nameWithType: InputKey.implicit operator InputKey.GamepadInputType(InputKey)
+  fullName: OnixRuntime.Api.Inputs.InputKey.implicit operator OnixRuntime.Api.Inputs.InputKey.GamepadInputType(OnixRuntime.Api.Inputs.InputKey)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputKey.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Implicit
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 296
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Implicitly converts an InputKey to a GamepadInputType.
+  example: []
+  syntax:
+    content: public static implicit operator InputKey.GamepadInputType(InputKey input)
+    parameters:
+    - id: input
+      type: OnixRuntime.Api.Inputs.InputKey
+      description: The InputKey to convert.
+    return:
+      type: OnixRuntime.Api.Inputs.InputKey.GamepadInputType
+      description: The corresponding GamepadInputType, or None if not a gamepad key.
+    content.vb: Public Shared Widening Operator CType(input As InputKey) As InputKey.GamepadInputType
+  overload: OnixRuntime.Api.Inputs.InputKey.op_Implicit*
+  nameWithType.vb: InputKey.CType(InputKey)
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.CType(OnixRuntime.Api.Inputs.InputKey)
+  name.vb: CType(InputKey)
+- uid: OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.Type
+  commentId: M:OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.Type
+  id: op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.Type
+  parent: OnixRuntime.Api.Inputs.InputKey
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Type(InputKey)
+  nameWithType: InputKey.implicit operator InputKey.Type(InputKey)
+  fullName: OnixRuntime.Api.Inputs.InputKey.implicit operator OnixRuntime.Api.Inputs.InputKey.Type(OnixRuntime.Api.Inputs.InputKey)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputKey.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Implicit
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 304
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Implicitly converts an InputKey to its key Type.
+  example: []
+  syntax:
+    content: public static implicit operator InputKey.Type(InputKey input)
+    parameters:
+    - id: input
+      type: OnixRuntime.Api.Inputs.InputKey
+      description: The InputKey to convert.
+    return:
+      type: OnixRuntime.Api.Inputs.InputKey.Type
+      description: The underlying key Type value.
+    content.vb: Public Shared Widening Operator CType(input As InputKey) As InputKey.Type
+  overload: OnixRuntime.Api.Inputs.InputKey.op_Implicit*
+  nameWithType.vb: InputKey.CType(InputKey)
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.CType(OnixRuntime.Api.Inputs.InputKey)
+  name.vb: CType(InputKey)
+- uid: OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.ClickType
+  commentId: M:OnixRuntime.Api.Inputs.InputKey.op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.ClickType
+  id: op_Implicit(OnixRuntime.Api.Inputs.InputKey)~OnixRuntime.Api.Inputs.InputKey.ClickType
+  parent: OnixRuntime.Api.Inputs.InputKey
+  langs:
+  - csharp
+  - vb
+  name: implicit operator ClickType(InputKey)
+  nameWithType: InputKey.implicit operator InputKey.ClickType(InputKey)
+  fullName: OnixRuntime.Api.Inputs.InputKey.implicit operator OnixRuntime.Api.Inputs.InputKey.ClickType(OnixRuntime.Api.Inputs.InputKey)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Inputs/InputKey.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Implicit
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 312
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Inputs
+  summary: Implicitly converts an InputKey to a ClickType.
+  example: []
+  syntax:
+    content: public static implicit operator InputKey.ClickType(InputKey input)
+    parameters:
+    - id: input
+      type: OnixRuntime.Api.Inputs.InputKey
+      description: The InputKey to convert.
+    return:
+      type: OnixRuntime.Api.Inputs.InputKey.ClickType
+      description: The corresponding ClickType, or None if not a mouse click.
+    content.vb: Public Shared Widening Operator CType(input As InputKey) As InputKey.ClickType
+  overload: OnixRuntime.Api.Inputs.InputKey.op_Implicit*
+  nameWithType.vb: InputKey.CType(InputKey)
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.CType(OnixRuntime.Api.Inputs.InputKey)
+  name.vb: CType(InputKey)
 - uid: OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey)
   commentId: M:OnixRuntime.Api.Inputs.InputKey.op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey)
   id: op_Equality(OnixRuntime.Api.Inputs.InputKey,OnixRuntime.Api.Inputs.InputKey)
@@ -316,11 +587,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 256
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 319
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -354,11 +625,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 263
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 326
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -392,11 +663,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 270
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 333
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -430,11 +701,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 289
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 352
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -468,11 +739,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 296
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 359
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -506,11 +777,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 304
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 367
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -544,11 +815,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 311
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 374
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -581,11 +852,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 328
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 391
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -612,11 +883,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputKey.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputKey.cs
-    startLine: 335
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputKey.cs
+    startLine: 398
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
@@ -942,6 +1213,18 @@ references:
   nameWithType.vb: InputKey.New
   fullName.vb: OnixRuntime.Api.Inputs.InputKey.New
   name.vb: New
+- uid: OnixRuntime.Api.Inputs.InputKey.op_Implicit*
+  commentId: Overload:OnixRuntime.Api.Inputs.InputKey.op_Implicit
+  name: implicit operator
+  nameWithType: InputKey.implicit operator
+  fullName: OnixRuntime.Api.Inputs.InputKey.implicit operator
+  nameWithType.vb: InputKey.CType
+  fullName.vb: OnixRuntime.Api.Inputs.InputKey.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
 - uid: OnixRuntime.Api.Inputs.InputKey.op_Equality*
   commentId: Overload:OnixRuntime.Api.Inputs.InputKey.op_Equality
   href: OnixRuntime.Api.Inputs.InputKey.html#OnixRuntime_Api_Inputs_InputKey_op_Equality_OnixRuntime_Api_Inputs_InputKey_OnixRuntime_Api_Inputs_InputKey_

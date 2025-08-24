@@ -16,14 +16,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ControllerMappingLayout
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 377
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 532
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
+  summary: Represents the input mapping layout for controller input.
+  example: []
   syntax:
     content: 'public class ControllerMappingLayout : InputMappingLayout'
     content.vb: Public Class ControllerMappingLayout Inherits InputMappingLayout
@@ -35,6 +37,7 @@ items:
   - OnixRuntime.Api.Inputs.InputMappingLayout.Current
   - OnixRuntime.Api.Inputs.InputMappingLayout.Default
   - OnixRuntime.Api.Inputs.InputMappingLayout.GetKeys(System.String)
+  - OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
   - OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultKeys(System.String)
   - OnixRuntime.Api.Inputs.InputMappingLayout.HasKey(System.String,OnixRuntime.Api.Inputs.InputKey)
   - OnixRuntime.Api.Inputs.InputMappingLayout.HasDefaultKey(System.String,OnixRuntime.Api.Inputs.InputKey)
@@ -64,6 +67,7 @@ items:
   - OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar9
   - OnixRuntime.Api.Inputs.InputMappingLayout.Hotbar
   - OnixRuntime.Api.Inputs.InputMappingLayout.GetHotbar(System.Int32)
+  - OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
   - OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultHotbar(System.Int32)
   - OnixRuntime.Api.Inputs.InputMappingLayout.TogglePerspective
   - OnixRuntime.Api.Inputs.InputMappingLayout.MobEffects
@@ -114,9 +118,10 @@ items:
   - OnixRuntime.Api.Inputs.InputMappingLayout.DefaultPause
   - OnixRuntime.Api.Inputs.InputMappingLayout.DefaultCycleItemLeft
   - OnixRuntime.Api.Inputs.InputMappingLayout.DefaultCycleItemRight
-  - System.Object.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
@@ -135,14 +140,15 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Inputs/InputMappingLayout.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsController
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
-    startLine: 380
+    path: ../OnixRuntime/OnixRuntime/Api/Inputs/InputMappingLayout.cs
+    startLine: 537
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Inputs
+  summary: Indicates whether this layout is for controller input.
   example: []
   syntax:
     content: protected override bool IsController { get; }
@@ -252,6 +258,51 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
+  commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
+  parent: OnixRuntime.Api.Inputs.InputMappingLayout
+  isExternal: true
+  href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetKeys_System_String_OnixRuntime_Api_Inputs_InputKey___
+  name: SetKeys(string, InputKey[])
+  nameWithType: InputMappingLayout.SetKeys(string, InputKey[])
+  fullName: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(string, OnixRuntime.Api.Inputs.InputKey[])
+  nameWithType.vb: InputMappingLayout.SetKeys(String, InputKey())
+  fullName.vb: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(String, OnixRuntime.Api.Inputs.InputKey())
+  name.vb: SetKeys(String, InputKey())
+  spec.csharp:
+  - uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
+    name: SetKeys
+    href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetKeys_System_String_OnixRuntime_Api_Inputs_InputKey___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetKeys(System.String,OnixRuntime.Api.Inputs.InputKey[])
+    name: SetKeys
+    href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetKeys_System_String_OnixRuntime_Api_Inputs_InputKey___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: (
+  - name: )
   - name: )
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultKeys(System.String)
   commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultKeys(System.String)
@@ -607,6 +658,51 @@ references:
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+  commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+  parent: OnixRuntime.Api.Inputs.InputMappingLayout
+  isExternal: true
+  href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetHotbar_System_Int32_OnixRuntime_Api_Inputs_InputKey___
+  name: SetHotbar(int, InputKey[])
+  nameWithType: InputMappingLayout.SetHotbar(int, InputKey[])
+  fullName: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(int, OnixRuntime.Api.Inputs.InputKey[])
+  nameWithType.vb: InputMappingLayout.SetHotbar(Integer, InputKey())
+  fullName.vb: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(Integer, OnixRuntime.Api.Inputs.InputKey())
+  name.vb: SetHotbar(Integer, InputKey())
+  spec.csharp:
+  - uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+    name: SetHotbar
+    href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetHotbar_System_Int32_OnixRuntime_Api_Inputs_InputKey___
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Inputs.InputMappingLayout.SetHotbar(System.Int32,OnixRuntime.Api.Inputs.InputKey[])
+    name: SetHotbar
+    href: OnixRuntime.Api.Inputs.InputMappingLayout.html#OnixRuntime_Api_Inputs_InputMappingLayout_SetHotbar_System_Int32_OnixRuntime_Api_Inputs_InputKey___
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Inputs.InputKey
+    name: InputKey
+    href: OnixRuntime.Api.Inputs.InputKey.html
+  - name: (
+  - name: )
   - name: )
 - uid: OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultHotbar(System.Int32)
   commentId: M:OnixRuntime.Api.Inputs.InputMappingLayout.GetDefaultHotbar(System.Int32)
@@ -982,22 +1078,52 @@ references:
   name: DefaultCycleItemRight
   nameWithType: InputMappingLayout.DefaultCycleItemRight
   fullName: OnixRuntime.Api.Inputs.InputMappingLayout.DefaultCycleItemRight
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
   name.vb: Equals(Object)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -1005,15 +1131,33 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
@@ -1059,30 +1203,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType

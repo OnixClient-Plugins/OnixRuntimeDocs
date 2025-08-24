@@ -15,21 +15,33 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnConfigLoadDelegate
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 126
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 136
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: >-
+    Delegate for handling configuration load events.
+
+    This is going to be what you gave in <xref href="OnixRuntime.Plugin.OnixPluginSaveManager.ConfigSaved" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public delegate void OnixPluginSaveManager.OnConfigLoadDelegate(JsonNode config)
     parameters:
     - id: config
       type: System.Text.Json.Nodes.JsonNode
+      description: The configuration data.
     content.vb: Public Delegate Sub OnixPluginSaveManager.OnConfigLoadDelegate(config As JsonNode)
 references:
+- uid: OnixRuntime.Plugin.OnixPluginSaveManager.ConfigSaved
+  commentId: E:OnixRuntime.Plugin.OnixPluginSaveManager.ConfigSaved
+  href: OnixRuntime.Plugin.OnixPluginSaveManager.html#OnixRuntime_Plugin_OnixPluginSaveManager_ConfigSaved
+  name: ConfigSaved
+  nameWithType: OnixPluginSaveManager.ConfigSaved
+  fullName: OnixRuntime.Plugin.OnixPluginSaveManager.ConfigSaved
 - uid: OnixRuntime.Plugin
   commentId: N:OnixRuntime.Plugin
   href: OnixRuntime.html

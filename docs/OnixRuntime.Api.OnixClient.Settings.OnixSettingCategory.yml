@@ -7,8 +7,9 @@ items:
   children:
   - OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.String,System.String,System.Int32,System.Boolean)
   - OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludedCount
-  - OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory
+  - OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory
   - OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IsOpen
+  - OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString
   langs:
   - csharp
   - vb
@@ -19,11 +20,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixSettingCategory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-    startLine: 4
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
+    startLine: 7
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -34,7 +35,7 @@ items:
     content.vb: Public NotInheritable Class OnixSettingCategory Inherits OnixSetting Implements IDisposable
   inheritance:
   - System.Object
-  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   - OnixRuntime.Api.OnixClient.OnixSetting
   implements:
   - System.IDisposable
@@ -50,12 +51,11 @@ items:
   - OnixRuntime.Api.OnixClient.OnixSetting.RemoveFromParent(System.Boolean)
   - OnixRuntime.Api.OnixClient.OnixSetting.Save
   - OnixRuntime.Api.OnixClient.OnixSetting.Load(System.Text.Json.Nodes.JsonNode)
-  - System.Object.Equals(System.Object)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.String,System.String,System.Int32,System.Boolean)
   commentId: M:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.String,System.String,System.Int32,System.Boolean)
   id: '#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.String,System.String,System.Int32,System.Boolean)'
@@ -70,11 +70,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-    startLine: 15
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
+    startLine: 18
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -117,11 +117,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IncludedCount
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-    startLine: 23
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
+    startLine: 26
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -134,37 +134,37 @@ items:
       type: System.Int32
     content.vb: Public Property IncludedCount As Integer
   overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludedCount*
-- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory
-  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory
-  id: IncludesEverytingUntilNextCategory
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory
+  id: IncludesEverythingUntilNextCategory
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory
   langs:
   - csharp
   - vb
-  name: IncludesEverytingUntilNextCategory
-  nameWithType: OnixSettingCategory.IncludesEverytingUntilNextCategory
-  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory
+  name: IncludesEverythingUntilNextCategory
+  nameWithType: OnixSettingCategory.IncludesEverythingUntilNextCategory
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory
   type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
-    id: IncludesEverytingUntilNextCategory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-    startLine: 31
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IncludesEverythingUntilNextCategory
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
+    startLine: 34
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
   summary: Gets a value indicating whether this category includes everything until the next category.
   example: []
   syntax:
-    content: public bool IncludesEverytingUntilNextCategory { get; }
+    content: public bool IncludesEverythingUntilNextCategory { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IncludesEverytingUntilNextCategory As Boolean
-  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory*
+    content.vb: Public ReadOnly Property IncludesEverythingUntilNextCategory As Boolean
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory*
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IsOpen
   commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IsOpen
   id: IsOpen
@@ -179,11 +179,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsOpen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
-    startLine: 36
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
+    startLine: 39
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -196,6 +196,38 @@ items:
       type: System.Boolean
     content.vb: Public Property IsOpen As Boolean
   overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IsOpen*
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString
+  commentId: M:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString
+  id: ToString
+  parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: OnixSettingCategory.ToString()
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ToString
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingCategory.cs
+    startLine: 46
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Settings
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString*
 references:
 - uid: OnixRuntime.Api.OnixClient.Settings
   commentId: N:OnixRuntime.Api.OnixClient.Settings
@@ -246,13 +278,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
-  commentId: T:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   parent: OnixRuntime.Api.Internal
-  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html
-  name: MightOwnMemoryAddressContainer
-  nameWithType: MightOwnMemoryAddressContainer
-  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html
+  name: SharedMemoryAddressContainer
+  nameWithType: SharedMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
 - uid: OnixRuntime.Api.OnixClient.OnixSetting
   commentId: T:OnixRuntime.Api.OnixClient.OnixSetting
   parent: OnixRuntime.Api.OnixClient
@@ -414,22 +446,21 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_
   name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
+  nameWithType: SharedMemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(object)
+  nameWithType.vb: SharedMemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(Object)
   name.vb: Equals(Object)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -437,15 +468,33 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: SharedMemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode
+  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
@@ -491,30 +540,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
@@ -584,30 +609,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
   - name: )
 - uid: System
   commentId: N:System
@@ -737,15 +738,45 @@ references:
   name: IncludedCount
   nameWithType: OnixSettingCategory.IncludedCount
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludedCount
-- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory*
-  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory
-  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingCategory_IncludesEverytingUntilNextCategory
-  name: IncludesEverytingUntilNextCategory
-  nameWithType: OnixSettingCategory.IncludesEverytingUntilNextCategory
-  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverytingUntilNextCategory
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingCategory_IncludesEverythingUntilNextCategory
+  name: IncludesEverythingUntilNextCategory
+  nameWithType: OnixSettingCategory.IncludesEverythingUntilNextCategory
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IncludesEverythingUntilNextCategory
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IsOpen*
   commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IsOpen
   href: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingCategory_IsOpen
   name: IsOpen
   nameWithType: OnixSettingCategory.IsOpen
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.IsOpen
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingCategory_ToString
+  name: ToString
+  nameWithType: OnixSettingCategory.ToString
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingCategory.ToString

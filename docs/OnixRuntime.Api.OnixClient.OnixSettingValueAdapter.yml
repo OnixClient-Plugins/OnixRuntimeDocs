@@ -14,7 +14,7 @@ items:
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue``1(System.Reflection.PropertyInfo)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandleAirAndProperties(OnixRuntime.Api.OnixClient.OnixModule,System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SettingNameInfo@)
-  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
+  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.Initialize(OnixRuntime.Api.OnixClient.OnixModule,System.Reflection.PropertyInfo)
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.Redirector
   - OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SetValue(System.Object)
@@ -30,20 +30,27 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixSettingValueAdapter
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 12
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 15
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Abstract base class for adapting property values to OnixSetting types.
+
+    Provides common functionality for converting between property values and settings.
+  example: []
   syntax:
     content: public abstract class OnixSettingValueAdapter
     content.vb: Public MustInherit Class OnixSettingValueAdapter
   inheritance:
   - System.Object
   derivedClasses:
+  - OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterColorF
+  - OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterColorValue
   - OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterEnum
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -67,14 +74,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ValueType
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 13
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 19
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the type of value this adapter handles.
+  example: []
   syntax:
     content: public abstract Type ValueType { get; }
     parameters: []
@@ -96,14 +105,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Setting
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 14
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 24
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the OnixSetting instance associated with this adapter.
+  example: []
   syntax:
     content: public OnixSetting Setting { get; protected set; }
     parameters: []
@@ -125,16 +136,18 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Redirector
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 15
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 29
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the OnixModuleSettingRedirector instance that owns this adapter.
+  example: []
   syntax:
-    content: public OnixModuleSettingRedirector Redirector { get; protected set; }
+    content: public OnixModuleSettingRedirector Redirector { get; }
     parameters: []
     return:
       type: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
@@ -154,21 +167,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Initialize
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 16
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 36
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes the adapter with the specified module and property.
+  example: []
   syntax:
     content: public abstract void Initialize(OnixModule mod, PropertyInfo property)
     parameters:
     - id: mod
       type: OnixRuntime.Api.OnixClient.OnixModule
+      description: The OnixModule to initialize with.
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The PropertyInfo for the property being adapted.
     content.vb: Public MustOverride Sub Initialize([mod] As OnixModule, [property] As PropertyInfo)
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.Initialize*
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue
@@ -185,18 +202,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetValue
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 17
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 42
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the current value of the setting.
+  example: []
   syntax:
     content: public abstract object? GetValue()
     return:
       type: System.Object
+      description: The current setting value.
     content.vb: Public MustOverride Function GetValue() As Object
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue*
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SetValue(System.Object)
@@ -213,19 +233,22 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetValue
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 18
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 48
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Sets the value of the setting.
+  example: []
   syntax:
     content: public abstract void SetValue(object? value)
     parameters:
     - id: value
       type: System.Object
+      description: The value to set.
     content.vb: Public MustOverride Sub SetValue(value As Object)
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SetValue*
   nameWithType.vb: OnixSettingValueAdapter.SetValue(Object)
@@ -245,14 +268,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 19
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 53
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance of the OnixSettingValueAdapter class.
+  example: []
   syntax:
     content: public OnixSettingValueAdapter()
     content.vb: Public Sub New()
@@ -274,21 +299,28 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 25
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 70
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Gets the name information for a setting.
+
+    If none are provided, it will guess from the property's name.
+  example: []
   syntax:
     content: protected OnixSettingValueAdapter.SettingNameInfo GetName(PropertyInfo property)
     parameters:
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The property being adapted.
     return:
       type: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SettingNameInfo
+      description: The name information for the setting.
     content.vb: Protected Function GetName([property] As PropertyInfo) As OnixSettingValueAdapter.SettingNameInfo
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetName*
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue``1(System.Reflection.PropertyInfo)
@@ -305,23 +337,28 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetValue
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 34
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 85
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the current value of the setting.
+  example: []
   syntax:
     content: protected T? GetValue<T>(PropertyInfo property)
     parameters:
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The property being adapted.
     typeParameters:
     - id: T
+      description: The type of the setting value.
     return:
       type: '{T}'
+      description: The current setting value.
     content.vb: Protected Function GetValue(Of T)([property] As PropertyInfo) As T
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetValue*
   nameWithType.vb: OnixSettingValueAdapter.GetValue(Of T)(PropertyInfo)
@@ -341,58 +378,73 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HandleAirAndProperties
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 43
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 101
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the current value of the setting.
+  example: []
   syntax:
     content: protected bool HandleAirAndProperties(OnixModule mod, PropertyInfo property, out OnixSettingValueAdapter.SettingNameInfo nameInfo)
     parameters:
     - id: mod
       type: OnixRuntime.Api.OnixClient.OnixModule
+      description: The module containing the setting.
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The property being adapted.
     - id: nameInfo
       type: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SettingNameInfo
+      description: The name information for the setting for you to re-use.
     return:
       type: System.Boolean
+      description: The current setting value.
     content.vb: Protected Function HandleAirAndProperties([mod] As OnixModule, [property] As PropertyInfo, nameInfo As OnixSettingValueAdapter.SettingNameInfo) As Boolean
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandleAirAndProperties*
   nameWithType.vb: OnixSettingValueAdapter.HandleAirAndProperties(OnixModule, PropertyInfo, OnixSettingValueAdapter.SettingNameInfo)
   fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandleAirAndProperties(OnixRuntime.Api.OnixClient.OnixModule, System.Reflection.PropertyInfo, OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.SettingNameInfo)
   name.vb: HandleAirAndProperties(OnixModule, PropertyInfo, SettingNameInfo)
-- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
-  id: HandlePostProcessing(System.Reflection.PropertyInfo)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
+  id: HandlePostProcessing(System.Reflection.PropertyInfo,OnixRuntime.Api.OnixClient.OnixModule)
   parent: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
   langs:
   - csharp
   - vb
-  name: HandlePostProcessing(PropertyInfo)
-  nameWithType: OnixSettingValueAdapter.HandlePostProcessing(PropertyInfo)
-  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo)
+  name: HandlePostProcessing(PropertyInfo, OnixModule)
+  nameWithType: OnixSettingValueAdapter.HandlePostProcessing(PropertyInfo, OnixModule)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing(System.Reflection.PropertyInfo, OnixRuntime.Api.OnixClient.OnixModule)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HandlePostProcessing
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 68
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 135
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Handles post-processing for the specified property.
+
+    For things that can only happen after the setting has been created by your <xref href="OnixRuntime.Api.OnixClient.OnixSettingValueAdapter" data-throw-if-not-resolved="false"></xref>
+  example: []
   syntax:
-    content: protected void HandlePostProcessing(PropertyInfo property)
+    content: protected void HandlePostProcessing(PropertyInfo property, OnixModule mod)
     parameters:
     - id: property
       type: System.Reflection.PropertyInfo
-    content.vb: Protected Sub HandlePostProcessing([property] As PropertyInfo)
+      description: The property being adapted.
+    - id: mod
+      type: OnixRuntime.Api.OnixClient.OnixModule
+      description: The module containing the setting.
+    content.vb: Protected Sub HandlePostProcessing([property] As PropertyInfo, [mod] As OnixModule)
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing*
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetChangeCallback(System.Reflection.PropertyInfo)
   commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetChangeCallback(System.Reflection.PropertyInfo)
@@ -408,21 +460,25 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetChangeCallback
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 76
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 163
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the change callback out of the property if any.
+  example: []
   syntax:
     content: protected OnixSetting.SettingChangedDelegate? GetChangeCallback(PropertyInfo property)
     parameters:
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The property being adapted.
     return:
       type: OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate
+      description: The change callback delegate, if found; otherwise, null.
     content.vb: Protected Function GetChangeCallback([property] As PropertyInfo) As OnixSetting.SettingChangedDelegate
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetChangeCallback*
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMinMax``1(System.Reflection.PropertyInfo)
@@ -439,25 +495,37 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetMinMax
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 123
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 218
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Gets the change callback out of the property if any.
+
+    If there are none, <xref href="System.ArgumentNullException" data-throw-if-not-resolved="false"></xref> is thrown.
+  example: []
   syntax:
     content: protected (T Min, T Max) GetMinMax<T>(PropertyInfo property)
     parameters:
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The property being adapted.
     typeParameters:
     - id: T
+      description: The type of the setting.
     return:
       type: System.ValueTuple{{T},{T}}
+      description: The min and max values for the setting, if found; otherwise, null.
     content.vb: Protected Function GetMinMax(Of T)([property] As PropertyInfo) As (Min As T, Max As T)
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMinMax*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: When there is no MinMax attribute.
   nameWithType.vb: OnixSettingValueAdapter.GetMinMax(Of T)(PropertyInfo)
   fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMinMax(Of T)(System.Reflection.PropertyInfo)
   name.vb: GetMinMax(Of T)(PropertyInfo)
@@ -475,25 +543,37 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetMin
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 153
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 256
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Gets the min value only for the setting out of the property if any.
+
+    If there are none, <xref href="System.ArgumentNullException" data-throw-if-not-resolved="false"></xref> is thrown.
+  example: []
   syntax:
     content: protected T GetMin<T>(PropertyInfo property)
     parameters:
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The property being adapted.
     typeParameters:
     - id: T
+      description: The type of the setting.
     return:
       type: '{T}'
+      description: The min value for the setting, if found; otherwise, null.
     content.vb: Protected Function GetMin(Of T)([property] As PropertyInfo) As T
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMin*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: When there is no Min/MinMax attribute.
   nameWithType.vb: OnixSettingValueAdapter.GetMin(Of T)(PropertyInfo)
   fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMin(Of T)(System.Reflection.PropertyInfo)
   name.vb: GetMin(Of T)(PropertyInfo)
@@ -511,25 +591,37 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetMax
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 182
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 293
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Gets the max value only for the setting out of the property if any.
+
+    If there are none, <xref href="System.ArgumentNullException" data-throw-if-not-resolved="false"></xref> is thrown.
+  example: []
   syntax:
     content: protected T GetMax<T>(PropertyInfo property)
     parameters:
     - id: property
       type: System.Reflection.PropertyInfo
+      description: The property being adapted.
     typeParameters:
     - id: T
+      description: The type of the setting.
     return:
       type: '{T}'
+      description: The max value for the setting, if found; otherwise, null.
     content.vb: Protected Function GetMax(Of T)([property] As PropertyInfo) As T
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMax*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: When there is no Max/MinMax attribute.
   nameWithType.vb: OnixSettingValueAdapter.GetMax(Of T)(PropertyInfo)
   fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMax(Of T)(System.Reflection.PropertyInfo)
   name.vb: GetMax(Of T)(PropertyInfo)
@@ -966,9 +1058,16 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html
+  name: OnixSettingValueAdapter
+  nameWithType: OnixSettingValueAdapter
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing
-  href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_
+  href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_HandlePostProcessing_System_Reflection_PropertyInfo_OnixRuntime_Api_OnixClient_OnixModule_
   name: HandlePostProcessing
   nameWithType: OnixSettingValueAdapter.HandlePostProcessing
   fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.HandlePostProcessing
@@ -1001,6 +1100,13 @@ references:
   - uid: OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate
     name: SettingChangedDelegate
     href: OnixRuntime.Api.OnixClient.OnixSetting.SettingChangedDelegate.html
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMinMax*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.GetMinMax
   href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapter_GetMinMax__1_System_Reflection_PropertyInfo_

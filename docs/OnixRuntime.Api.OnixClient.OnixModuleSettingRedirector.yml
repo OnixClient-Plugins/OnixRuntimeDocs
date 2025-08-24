@@ -6,8 +6,9 @@ items:
   parent: OnixRuntime.Api.OnixClient
   children:
   - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor
-  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(OnixRuntime.Api.OnixClient.OnixModule)
+  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.Boolean)
   - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(System.String,System.String,System.String,System.Boolean)
+  - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AddMissingSettingsToModule
   - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.ConvertModuleToRedirectorClass(OnixRuntime.Api.OnixClient.OnixModule,System.String,System.String,System.Boolean,System.Boolean)
   - OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CurrentModule
   langs:
@@ -20,14 +21,19 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixModuleSettingRedirector
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 293
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 416
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Base class for redirecting module settings through properties with attributes.
+
+    Provides a declarative way to define module settings using properties and attributes.
+  example: []
   syntax:
     content: public class OnixModuleSettingRedirector
     content.vb: Public Class OnixModuleSettingRedirector
@@ -55,14 +61,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CurrentModule
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 294
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 420
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Gets the current OnixModule associated with this redirector.
+  example: []
   syntax:
     content: public OnixModule CurrentModule { get; }
     parameters: []
@@ -70,38 +78,76 @@ items:
       type: OnixRuntime.Api.OnixClient.OnixModule
     content.vb: Public Property CurrentModule As OnixModule
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CurrentModule*
-- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(OnixRuntime.Api.OnixClient.OnixModule)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(OnixRuntime.Api.OnixClient.OnixModule)
-  id: '#ctor(OnixRuntime.Api.OnixClient.OnixModule)'
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AddMissingSettingsToModule
+  commentId: F:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AddMissingSettingsToModule
+  id: AddMissingSettingsToModule
   parent: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
   langs:
   - csharp
   - vb
-  name: OnixModuleSettingRedirector(OnixModule)
-  nameWithType: OnixModuleSettingRedirector.OnixModuleSettingRedirector(OnixModule)
-  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.OnixModuleSettingRedirector(OnixRuntime.Api.OnixClient.OnixModule)
+  name: AddMissingSettingsToModule
+  nameWithType: OnixModuleSettingRedirector.AddMissingSettingsToModule
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AddMissingSettingsToModule
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddMissingSettingsToModule
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 426
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    If this is true, settings that aren't already present in the module will be added automatically.
+
+    If this is false, settings that aren't already present will be created as placeholders, not added to the <xref href="OnixRuntime.Api.OnixClient.OnixModule" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public bool AddMissingSettingsToModule
+    return:
+      type: System.Boolean
+    content.vb: Public AddMissingSettingsToModule As Boolean
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.Boolean)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.Boolean)
+  id: '#ctor(OnixRuntime.Api.OnixClient.OnixModule,System.Boolean)'
+  parent: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
+  langs:
+  - csharp
+  - vb
+  name: OnixModuleSettingRedirector(OnixModule, bool)
+  nameWithType: OnixModuleSettingRedirector.OnixModuleSettingRedirector(OnixModule, bool)
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.OnixModuleSettingRedirector(OnixRuntime.Api.OnixClient.OnixModule, bool)
   type: Constructor
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 296
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 433
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Will create a redirector with an existing mod.
+  example: []
   syntax:
-    content: protected OnixModuleSettingRedirector(OnixModule currentModule)
+    content: protected OnixModuleSettingRedirector(OnixModule currentModule, bool addMissingSettingsToModule)
     parameters:
     - id: currentModule
       type: OnixRuntime.Api.OnixClient.OnixModule
-    content.vb: Protected Sub New(currentModule As OnixModule)
+      description: The module to wrap.
+    - id: addMissingSettingsToModule
+      type: System.Boolean
+      description: Add missing settings into module or as placeholder.
+    content.vb: Protected Sub New(currentModule As OnixModule, addMissingSettingsToModule As Boolean)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor*
-  nameWithType.vb: OnixModuleSettingRedirector.New(OnixModule)
-  fullName.vb: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.New(OnixRuntime.Api.OnixClient.OnixModule)
-  name.vb: New(OnixModule)
+  nameWithType.vb: OnixModuleSettingRedirector.New(OnixModule, Boolean)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.New(OnixRuntime.Api.OnixClient.OnixModule, Boolean)
+  name.vb: New(OnixModule, Boolean)
 - uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(System.String,System.String,System.String,System.Boolean)
   commentId: M:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor(System.String,System.String,System.String,System.Boolean)
   id: '#ctor(System.String,System.String,System.String,System.Boolean)'
@@ -116,25 +162,31 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 300
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 444
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Creates a new redirector with a new module.
+  example: []
   syntax:
     content: protected OnixModuleSettingRedirector(string name, string description, string saveName, bool register = false)
     parameters:
     - id: name
       type: System.String
+      description: The name of the module.
     - id: description
       type: System.String
+      description: The description of the module.
     - id: saveName
       type: System.String
+      description: The save name of the module.
     - id: register
       type: System.Boolean
+      description: Should that module be registered into the client's modules list
     content.vb: Protected Sub New(name As String, description As String, saveName As String, register As Boolean = False)
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor*
   nameWithType.vb: OnixModuleSettingRedirector.New(String, String, String, Boolean)
@@ -154,14 +206,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 303
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 451
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Creates a blank mod, this is useful for creating UI. See <xref href="OnixRuntime.Api.OnixClient.OnixSettingListRenderer" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: protected OnixModuleSettingRedirector()
     content.vb: Protected Sub New()
@@ -183,29 +237,40 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ConvertModuleToRedirectorClass
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 529
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 976
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Converts an OnixModule to a C# class string representation using the redirector pattern.
+
+    This generates source code that can be used to recreate the module settings declaratively.
+  example: []
   syntax:
     content: public static string ConvertModuleToRedirectorClass(OnixModule mod, string className, string desiredNamespace, bool includeHidden = true, bool useSaveName = false)
     parameters:
     - id: mod
       type: OnixRuntime.Api.OnixClient.OnixModule
+      description: The OnixModule to convert.
     - id: className
       type: System.String
+      description: The name for the generated class.
     - id: desiredNamespace
       type: System.String
+      description: The namespace for the generated class.
     - id: includeHidden
       type: System.Boolean
+      description: Whether to include hidden settings in the output.
     - id: useSaveName
       type: System.Boolean
+      description: Whether to use save names instead of display names for property names.
     return:
       type: System.String
+      description: A string containing the generated C# class code.
     content.vb: Public Shared Function ConvertModuleToRedirectorClass([mod] As OnixModule, className As String, desiredNamespace As String, includeHidden As Boolean = True, useSaveName As Boolean = False) As String
   overload: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.ConvertModuleToRedirectorClass*
   nameWithType.vb: OnixModuleSettingRedirector.ConvertModuleToRedirectorClass(OnixModule, String, String, Boolean, Boolean)
@@ -492,9 +557,20 @@ references:
   name: OnixModule
   nameWithType: OnixModule
   fullName: OnixRuntime.Api.OnixClient.OnixModule
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.#ctor
-  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector__ctor_OnixRuntime_Api_OnixClient_OnixModule_
+  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector__ctor_OnixRuntime_Api_OnixClient_OnixModule_System_Boolean_
   name: OnixModuleSettingRedirector
   nameWithType: OnixModuleSettingRedirector.OnixModuleSettingRedirector
   fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.OnixModuleSettingRedirector
@@ -512,17 +588,12 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  commentId: T:OnixRuntime.Api.OnixClient.OnixSettingListRenderer
+  href: OnixRuntime.Api.OnixClient.OnixSettingListRenderer.html
+  name: OnixSettingListRenderer
+  nameWithType: OnixSettingListRenderer
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingListRenderer
 - uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.ConvertModuleToRedirectorClass*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.ConvertModuleToRedirectorClass
   href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html#OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_ConvertModuleToRedirectorClass_OnixRuntime_Api_OnixClient_OnixModule_System_String_System_String_System_Boolean_System_Boolean_

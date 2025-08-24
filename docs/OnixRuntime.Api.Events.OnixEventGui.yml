@@ -8,6 +8,7 @@ items:
   - OnixRuntime.Api.Events.OnixEventGui.ChatScreenGetClientCommands
   - OnixRuntime.Api.Events.OnixEventGui.ChatScreenTabComplete
   - OnixRuntime.Api.Events.OnixEventGui.ChatScreenTick
+  - OnixRuntime.Api.Events.OnixEventGui.ContainerScreenHoverTextRequested
   - OnixRuntime.Api.Events.OnixEventGui.ContainerScreenTick
   langs:
   - csharp
@@ -19,11 +20,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventGui.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixEventGui
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 51
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
+    startLine: 69
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -56,11 +57,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventGui.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ContainerScreenTick
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 59
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
+    startLine: 77
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -85,11 +86,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventGui.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatScreenTick
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 80
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
+    startLine: 98
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -114,11 +115,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventGui.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatScreenTabComplete
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 115
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
+    startLine: 133
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -143,11 +144,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventGui.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatScreenGetClientCommands
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 136
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
+    startLine: 154
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -158,6 +159,40 @@ items:
     return:
       type: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
     content.vb: Public Event ChatScreenGetClientCommands As OnixEventGui.OnChatScreenGetClientCommandsDelegate
+- uid: OnixRuntime.Api.Events.OnixEventGui.ContainerScreenHoverTextRequested
+  commentId: E:OnixRuntime.Api.Events.OnixEventGui.ContainerScreenHoverTextRequested
+  id: ContainerScreenHoverTextRequested
+  parent: OnixRuntime.Api.Events.OnixEventGui
+  langs:
+  - csharp
+  - vb
+  name: ContainerScreenHoverTextRequested
+  nameWithType: OnixEventGui.ContainerScreenHoverTextRequested
+  fullName: OnixRuntime.Api.Events.OnixEventGui.ContainerScreenHoverTextRequested
+  type: Event
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEventGui.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ContainerScreenHoverTextRequested
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
+    startLine: 187
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: >-
+    Occurs when the user hovers over an item in a container screen and the game requests the hover text to show.
+
+    Technically it could happen at any time if a plugin or the client requests it in a different context but oh well, that's not an issue.
+
+    DO NOT USE <xref href="OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld%2cSystem.Boolean%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> or <xref href="OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> unless you set vanilla to true. Otherwise, you will get infinite recursion.
+  example: []
+  syntax:
+    content: public event OnixEventGui.OnContainerScreenHoverTextRequestedDelegate? ContainerScreenHoverTextRequested
+    return:
+      type: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+    content.vb: Public Event ContainerScreenHoverTextRequested As OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
 references:
 - uid: OnixRuntime.Api.Events
   commentId: N:OnixRuntime.Api.Events
@@ -518,3 +553,120 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
     name: OnChatScreenGetClientCommandsDelegate
     href: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.html
+- uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+  isExternal: true
+  href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_OnixRuntime_Api_World_RuntimeWorld_System_Boolean_System_Boolean_
+  name: GetHoverText(RuntimeWorld, bool, bool)
+  nameWithType: ItemStack.GetHoverText(RuntimeWorld, bool, bool)
+  fullName: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld, bool, bool)
+  nameWithType.vb: ItemStack.GetHoverText(RuntimeWorld, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld, Boolean, Boolean)
+  name.vb: GetHoverText(RuntimeWorld, Boolean, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_OnixRuntime_Api_World_RuntimeWorld_System_Boolean_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.World.RuntimeWorld
+    name: RuntimeWorld
+    href: OnixRuntime.Api.World.RuntimeWorld.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_OnixRuntime_Api_World_RuntimeWorld_System_Boolean_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.World.RuntimeWorld
+    name: RuntimeWorld
+    href: OnixRuntime.Api.World.RuntimeWorld.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+  isExternal: true
+  href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_System_Boolean_System_Boolean_
+  name: GetHoverText(bool, bool)
+  nameWithType: ItemStack.GetHoverText(bool, bool)
+  fullName: OnixRuntime.Api.Items.ItemStack.GetHoverText(bool, bool)
+  nameWithType.vb: ItemStack.GetHoverText(Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.Items.ItemStack.GetHoverText(Boolean, Boolean)
+  name.vb: GetHoverText(Boolean, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(System.Boolean,System.Boolean)
+    name: GetHoverText
+    href: OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventGui.html
+  name: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  nameWithType: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventGui
+    name: OnixEventGui
+    href: OnixRuntime.Api.Events.OnixEventGui.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+    name: OnContainerScreenHoverTextRequestedDelegate
+    href: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventGui
+    name: OnixEventGui
+    href: OnixRuntime.Api.Events.OnixEventGui.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+    name: OnContainerScreenHoverTextRequestedDelegate
+    href: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate.html

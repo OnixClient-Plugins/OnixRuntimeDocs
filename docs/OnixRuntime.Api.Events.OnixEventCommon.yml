@@ -9,6 +9,7 @@ items:
   - OnixRuntime.Api.Events.OnixEventCommon.HudInput
   - OnixRuntime.Api.Events.OnixEventCommon.HudRender
   - OnixRuntime.Api.Events.OnixEventCommon.HudRenderDirect2D
+  - OnixRuntime.Api.Events.OnixEventCommon.HudRenderGame
   - OnixRuntime.Api.Events.OnixEventCommon.Tick
   - OnixRuntime.Api.Events.OnixEventCommon.WorldRender
   langs:
@@ -21,10 +22,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventCommon.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixEventCommon
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
     startLine: 6
   assemblies:
   - OnixRuntime
@@ -58,10 +59,10 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventCommon.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Tick
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
     startLine: 11
   assemblies:
   - OnixRuntime
@@ -87,21 +88,56 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventCommon.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HudRender
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
-    startLine: 23
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    startLine: 24
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
-  summary: Occurs when the HUD is rendered.
+  summary: >-
+    Occurs when the HUD is rendered on the user's preferred renderer.
+
+    This may or may not be a logic callback so don't access game state, entities, etc.
   example: []
   syntax:
-    content: public event OnixEventRendering.OnHudRenderDelegate? HudRender
+    content: public event OnixEventRendering.OnHudRender2DDelegate? HudRender
+    return:
+      type: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    content.vb: Public Event HudRender As OnixEventRendering.OnHudRender2DDelegate
+- uid: OnixRuntime.Api.Events.OnixEventCommon.HudRenderGame
+  commentId: E:OnixRuntime.Api.Events.OnixEventCommon.HudRenderGame
+  id: HudRenderGame
+  parent: OnixRuntime.Api.Events.OnixEventCommon
+  langs:
+  - csharp
+  - vb
+  name: HudRenderGame
+  nameWithType: OnixEventCommon.HudRenderGame
+  fullName: OnixRuntime.Api.Events.OnixEventCommon.HudRenderGame
+  type: Event
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/OnixEventCommon.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: HudRenderGame
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    startLine: 37
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events
+  summary: >-
+    Occurs when the HUD is rendered by the game.
+
+    This will be a logic callback so you can access game state, entities, etc.
+  example: []
+  syntax:
+    content: public event OnixEventRendering.OnHudRenderDelegate? HudRenderGame
     return:
       type: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
-    content.vb: Public Event HudRender As OnixEventRendering.OnHudRenderDelegate
+    content.vb: Public Event HudRenderGame As OnixEventRendering.OnHudRenderDelegate
 - uid: OnixRuntime.Api.Events.OnixEventCommon.WorldRender
   commentId: E:OnixRuntime.Api.Events.OnixEventCommon.WorldRender
   id: WorldRender
@@ -116,11 +152,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventCommon.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WorldRender
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
-    startLine: 35
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    startLine: 49
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -145,11 +181,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventCommon.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HudRenderDirect2D
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
-    startLine: 47
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    startLine: 61
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -174,11 +210,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventCommon.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HudInput
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
-    startLine: 59
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    startLine: 73
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -203,11 +239,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Events/OnixEventCommon.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatMessage
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
-    startLine: 71
+    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventCommon.cs
+    startLine: 85
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -509,6 +545,29 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventsSession.OnTickDelegate
     name: OnTickDelegate
     href: OnixRuntime.Api.Events.OnixEventsSession.OnTickDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventRendering.html
+  name: OnixEventRendering.OnHudRender2DDelegate
+  nameWithType: OnixEventRendering.OnHudRender2DDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    name: OnHudRender2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    name: OnHudRender2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
   commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
   parent: OnixRuntime.Api.Events

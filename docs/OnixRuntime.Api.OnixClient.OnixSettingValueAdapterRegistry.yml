@@ -5,8 +5,8 @@ items:
   id: OnixSettingValueAdapterRegistry
   parent: OnixRuntime.Api.OnixClient
   children:
-  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type)
-  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1
+  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type,OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
+  - OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1(OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
   langs:
   - csharp
   - vb
@@ -17,14 +17,19 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixSettingValueAdapterRegistry
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 212
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 327
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Registry for managing OnixSettingValueAdapter instances.
+
+    Provides functionality to register, retrieve, and manage adapters for different value types.
+  example: []
   syntax:
     content: public static class OnixSettingValueAdapterRegistry
     content.vb: Public Module OnixSettingValueAdapterRegistry
@@ -38,86 +43,96 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type)
-  id: GetAdapter(System.Type)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type,OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type,OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
+  id: GetAdapter(System.Type,OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
   parent: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry
   langs:
   - csharp
   - vb
-  name: GetAdapter(Type)
-  nameWithType: OnixSettingValueAdapterRegistry.GetAdapter(Type)
-  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type)
+  name: GetAdapter(Type, OnixModuleSettingRedirector?)
+  nameWithType: OnixSettingValueAdapterRegistry.GetAdapter(Type, OnixModuleSettingRedirector?)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type, OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector?)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAdapter
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 241
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 357
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
   summary: Gets the adapter for a specific type.
   example: []
   syntax:
-    content: public static OnixSettingValueAdapter GetAdapter(Type type)
+    content: public static OnixSettingValueAdapter GetAdapter(Type type, OnixModuleSettingRedirector? redirector = null)
     parameters:
     - id: type
       type: System.Type
       description: The type to get an adapter for.
+    - id: redirector
+      type: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
+      description: The setting redirector instance or null.
     return:
       type: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
-      description: The setting adapter or throws.
-    content.vb: Public Shared Function GetAdapter(type As Type) As OnixSettingValueAdapter
+      description: The setting adapter for the specified type.
+    content.vb: Public Shared Function GetAdapter(type As Type, redirector As OnixModuleSettingRedirector = Nothing) As OnixSettingValueAdapter
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter*
   exceptions:
   - type: System.NotImplementedException
     commentId: T:System.NotImplementedException
-    description: When there is not value adapter for a value type.
-- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1
-  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1
-  id: GetAdapter``1
+    description: Thrown when there is no value adapter for the specified type.
+  nameWithType.vb: OnixSettingValueAdapterRegistry.GetAdapter(Type, OnixModuleSettingRedirector)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(System.Type, OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
+  name.vb: GetAdapter(Type, OnixModuleSettingRedirector)
+- uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1(OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter``1(OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
+  id: GetAdapter``1(OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
   parent: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry
   langs:
   - csharp
   - vb
-  name: GetAdapter<T>()
-  nameWithType: OnixSettingValueAdapterRegistry.GetAdapter<T>()
-  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter<T>()
+  name: GetAdapter<T>(OnixModuleSettingRedirector?)
+  nameWithType: OnixSettingValueAdapterRegistry.GetAdapter<T>(OnixModuleSettingRedirector?)
+  fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter<T>(OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector?)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAdapter
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
-    startLine: 269
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleSettingRedirector.cs
+    startLine: 388
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
   summary: Gets the adapter for a specific type.
   example: []
   syntax:
-    content: public static OnixSettingValueAdapter GetAdapter<T>()
+    content: public static OnixSettingValueAdapter GetAdapter<T>(OnixModuleSettingRedirector? redirector = null)
+    parameters:
+    - id: redirector
+      type: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
+      description: The setting redirector instance or null.
     typeParameters:
     - id: T
-      description: he type to get an adapter for.
+      description: The type to get an adapter for.
     return:
       type: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
-      description: The setting adapter or throws.
-    content.vb: Public Shared Function GetAdapter(Of T)() As OnixSettingValueAdapter
+      description: The setting adapter for the specified type.
+    content.vb: Public Shared Function GetAdapter(Of T)(redirector As OnixModuleSettingRedirector = Nothing) As OnixSettingValueAdapter
   overload: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter*
   exceptions:
   - type: System.NotImplementedException
     commentId: T:System.NotImplementedException
-    description: When there is not value adapter for a value type.
-  nameWithType.vb: OnixSettingValueAdapterRegistry.GetAdapter(Of T)()
-  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(Of T)()
-  name.vb: GetAdapter(Of T)()
+    description: Thrown when there is no value adapter for the specified type.
+  nameWithType.vb: OnixSettingValueAdapterRegistry.GetAdapter(Of T)(OnixModuleSettingRedirector)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter(Of T)(OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector)
+  name.vb: GetAdapter(Of T)(OnixModuleSettingRedirector)
 references:
 - uid: OnixRuntime.Api.OnixClient
   commentId: N:OnixRuntime.Api.OnixClient
@@ -395,7 +410,7 @@ references:
   fullName: System.NotImplementedException
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter
-  href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter_System_Type_
+  href: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.html#OnixRuntime_Api_OnixClient_OnixSettingValueAdapterRegistry_GetAdapter_System_Type_OnixRuntime_Api_OnixClient_OnixModuleSettingRedirector_
   name: GetAdapter
   nameWithType: OnixSettingValueAdapterRegistry.GetAdapter
   fullName: OnixRuntime.Api.OnixClient.OnixSettingValueAdapterRegistry.GetAdapter
@@ -407,6 +422,13 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
+- uid: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
+  commentId: T:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
+  parent: OnixRuntime.Api.OnixClient
+  href: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.html
+  name: OnixModuleSettingRedirector
+  nameWithType: OnixModuleSettingRedirector
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector
 - uid: OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
   commentId: T:OnixRuntime.Api.OnixClient.OnixSettingValueAdapter
   parent: OnixRuntime.Api.OnixClient

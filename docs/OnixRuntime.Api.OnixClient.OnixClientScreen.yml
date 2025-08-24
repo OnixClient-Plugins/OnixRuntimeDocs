@@ -18,8 +18,8 @@ items:
   - OnixRuntime.Api.OnixClient.OnixClientScreen.OnGameWindowResized(OnixRuntime.Api.Maths.Vec2)
   - OnixRuntime.Api.OnixClient.OnixClientScreen.OnInput(OnixRuntime.Api.Inputs.InputKey,System.Boolean)
   - OnixRuntime.Api.OnixClient.OnixClientScreen.OnOpened
-  - OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  - OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+  - OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  - OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
   - OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGame(OnixRuntime.Api.Rendering.RendererGame)
   - OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGameClosing(OnixRuntime.Api.Rendering.RendererGame)
   - OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderWorld(OnixRuntime.Api.Rendering.RendererWorld)
@@ -40,28 +40,32 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixClientScreen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 10
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 14
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Represents an in client screen that you can implement.
+
+    This lets you do proper in-client ui without having to worry about the mods showing up on top.
+  example: []
   syntax:
-    content: 'public class OnixClientScreen : MightOwnMemoryAddressContainer, IDisposable'
-    content.vb: Public Class OnixClientScreen Inherits MightOwnMemoryAddressContainer Implements IDisposable
+    content: 'public class OnixClientScreen : SharedMemoryAddressContainer, IDisposable'
+    content.vb: Public Class OnixClientScreen Inherits SharedMemoryAddressContainer Implements IDisposable
   inheritance:
   - System.Object
-  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   implements:
   - System.IDisposable
   inheritedMembers:
-  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-  - System.Object.Equals(System.Object)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
@@ -80,14 +84,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ScreenName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 13
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 20
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: The name of the screen.
+  example: []
   syntax:
     content: public string ScreenName { get; }
     parameters: []
@@ -109,14 +115,15 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dispose
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 72
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 84
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  example: []
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose()
@@ -135,11 +142,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 86
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 98
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -185,11 +192,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Position
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 112
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 123
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -216,11 +223,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Size
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 119
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 130
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -247,11 +254,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderArea
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 126
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 137
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -278,11 +285,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsFullscreen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 134
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 145
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -312,11 +319,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ClickInput
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 141
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 152
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -343,11 +350,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ScrollCount
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 145
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 156
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -374,11 +381,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HandleAllInputs
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 150
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 161
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -405,11 +412,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnOpened
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 156
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 167
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -433,11 +440,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnClosed
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 162
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 173
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -467,18 +474,18 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetCloseAnimationDuration
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 168
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 179
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
   summary: >-
     How long in seconds is this screen's close animation.
 
-    Will switch to <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGameClosing(OnixRuntime.Api.Rendering.RendererGame)" data-throw-if-not-resolved="false"></xref> and then call <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnCloseFinished" data-throw-if-not-resolved="false"></xref> when the time is over.
+    Will switch to <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGameClosing(OnixRuntime.Api.Rendering.RendererGame)" data-throw-if-not-resolved="false"></xref> and then call <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnCloseFinished" data-throw-if-not-resolved="false"></xref> when the time is over.
   example: []
   syntax:
     content: public virtual float GetCloseAnimationDuration()
@@ -501,11 +508,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnCloseFinished
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 174
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 185
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -532,11 +539,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShouldPreventInputs
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 179
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 190
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -563,15 +570,15 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ForceDirect2D
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 184
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 195
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
-  summary: Force the use of Direct2D for rendering <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)" data-throw-if-not-resolved="false"></xref>.
+  summary: Force the use of Direct2D for rendering <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public virtual bool ForceDirect2D()
@@ -593,11 +600,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnGameWindowResized
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 189
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 200
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -625,11 +632,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnInput
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 197
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 208
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -669,11 +676,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRenderWorld
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 201
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 212
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -686,25 +693,25 @@ items:
       type: OnixRuntime.Api.Rendering.RendererWorld
     content.vb: Public Overridable Sub OnRenderWorld(gfx As RendererWorld)
   overload: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderWorld*
-- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  id: OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  id: OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
   parent: OnixRuntime.Api.OnixClient.OnixClientScreen
   langs:
   - csharp
   - vb
-  name: OnRender(RendererTwoDimentional)
-  nameWithType: OnixClientScreen.OnRender(RendererTwoDimentional)
-  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+  name: OnRender(RendererCommon2D)
+  nameWithType: OnixClientScreen.OnRender(RendererCommon2D)
+  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRender
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 206
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 217
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -714,31 +721,31 @@ items:
     This could be RednererDirect2D or RendererGame, depending on user preference or <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.ForceDirect2D" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
-    content: public virtual void OnRender(RendererTwoDimentional gfx)
+    content: public virtual void OnRender(RendererCommon2D gfx)
     parameters:
     - id: gfx
-      type: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    content.vb: Public Overridable Sub OnRender(gfx As RendererTwoDimentional)
+      type: OnixRuntime.Api.Rendering.RendererCommon2D
+    content.vb: Public Overridable Sub OnRender(gfx As RendererCommon2D)
   overload: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender*
-- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  id: OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
+  id: OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
   parent: OnixRuntime.Api.OnixClient.OnixClientScreen
   langs:
   - csharp
   - vb
-  name: OnRenderClosing(RendererTwoDimentional)
-  nameWithType: OnixClientScreen.OnRenderClosing(RendererTwoDimentional)
-  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+  name: OnRenderClosing(RendererCommon2D)
+  nameWithType: OnixClientScreen.OnRenderClosing(RendererCommon2D)
+  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
   type: Method
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRenderClosing
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 212
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 223
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -748,11 +755,11 @@ items:
     This could be RednererDirect2D or RendererGame, depending on user preference or <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.ForceDirect2D" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
-    content: public virtual void OnRenderClosing(RendererTwoDimentional gfx)
+    content: public virtual void OnRenderClosing(RendererCommon2D gfx)
     parameters:
     - id: gfx
-      type: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    content.vb: Public Overridable Sub OnRenderClosing(gfx As RendererTwoDimentional)
+      type: OnixRuntime.Api.Rendering.RendererCommon2D
+    content.vb: Public Overridable Sub OnRenderClosing(gfx As RendererCommon2D)
   overload: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing*
 - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGame(OnixRuntime.Api.Rendering.RendererGame)
   commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGame(OnixRuntime.Api.Rendering.RendererGame)
@@ -768,18 +775,18 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRenderGame
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 217
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 228
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
   summary: >-
-    Called when the game is being rendered and your screen is closing. This is useful for getting data from the game since <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)" data-throw-if-not-resolved="false"></xref> may be Direct2D.
+    Called when the game is being rendered and your screen is closing. This is useful for getting data from the game since <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)" data-throw-if-not-resolved="false"></xref> may be Direct2D.
 
-    You should use <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)" data-throw-if-not-resolved="false"></xref> to actually render the content.
+    You should use <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)" data-throw-if-not-resolved="false"></xref> to actually render the content.
   example: []
   syntax:
     content: public virtual void OnRenderGame(RendererGame gfx)
@@ -802,18 +809,18 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnRenderGameClosing
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 222
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 233
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
   summary: >-
-    Called when the game is being rendered. This is useful for getting data from the game since <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)" data-throw-if-not-resolved="false"></xref> may be Direct2D.
+    Called when the game is being rendered. This is useful for getting data from the game since <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)" data-throw-if-not-resolved="false"></xref> may be Direct2D.
 
-    You should use <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)" data-throw-if-not-resolved="false"></xref> to actually render the content.
+    You should use <xref href="OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)" data-throw-if-not-resolved="false"></xref> to actually render the content.
   example: []
   syntax:
     content: public virtual void OnRenderGameClosing(RendererGame gfx)
@@ -836,11 +843,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OpenScreen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 227
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 238
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -867,11 +874,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CloseScreen
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
-    startLine: 232
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixClientScreen.cs
+    startLine: 243
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -926,13 +933,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
-  commentId: T:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   parent: OnixRuntime.Api.Internal
-  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html
-  name: MightOwnMemoryAddressContainer
-  nameWithType: MightOwnMemoryAddressContainer
-  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html
+  name: SharedMemoryAddressContainer
+  nameWithType: SharedMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
 - uid: System.IDisposable
   commentId: T:System.IDisposable
   parent: System
@@ -941,72 +948,46 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-  commentId: P:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
-  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership
-  name: HasMemoryOwnership
-  nameWithType: MightOwnMemoryAddressContainer.HasMemoryOwnership
-  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-  commentId: M:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
-  isExternal: true
-  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
-  name: SetMemoryAddressValues(nint, nint)
-  nameWithType: MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
-  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
-  nameWithType.vb: MightOwnMemoryAddressContainer.SetMemoryAddressValues(IntPtr, IntPtr)
-  fullName.vb: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr, System.IntPtr)
-  name.vb: SetMemoryAddressValues(IntPtr, IntPtr)
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
+  name: SetMemoryAddressValues(PointerContainer)
+  nameWithType: SharedMemoryAddressContainer.SetMemoryAddressValues(SharedMemoryAddressContainer.PointerContainer)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
   spec.csharp:
-  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
     name: SetMemoryAddressValues
-    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
   - name: (
-  - uid: System.IntPtr
-    name: nint
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
-  - name: ','
-  - name: " "
-  - uid: System.IntPtr
-    name: nint
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+    name: PointerContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer.html
   - name: )
   spec.vb:
-  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
     name: SetMemoryAddressValues
-    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
   - name: (
-  - uid: System.IntPtr
-    name: IntPtr
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
-  - name: ','
-  - name: " "
-  - uid: System.IntPtr
-    name: IntPtr
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+    name: PointerContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer.html
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_
   name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
+  nameWithType: SharedMemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(object)
+  nameWithType.vb: SharedMemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(Object)
   name.vb: Equals(Object)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -1014,15 +995,33 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: SharedMemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_GetHashCode
+  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
@@ -1068,30 +1067,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
@@ -1519,29 +1494,29 @@ references:
   name: OnClosed
   nameWithType: OnixClientScreen.OnClosed
   fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnClosed
-- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_
-  name: OnRenderClosing(RendererTwoDimentional)
-  nameWithType: OnixClientScreen.OnRenderClosing(RendererTwoDimentional)
-  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
+  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_
+  name: OnRenderClosing(RendererCommon2D)
+  nameWithType: OnixClientScreen.OnRenderClosing(RendererCommon2D)
+  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
   spec.csharp:
-  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
     name: OnRenderClosing
-    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_
+    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_
   - name: (
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    name: RendererTwoDimentional
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
   - name: )
   spec.vb:
-  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing(OnixRuntime.Api.Rendering.RendererCommon2D)
     name: OnRenderClosing
-    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_
+    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_
   - name: (
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    name: RendererTwoDimentional
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
   - name: )
 - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGameClosing(OnixRuntime.Api.Rendering.RendererGame)
   commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderGameClosing(OnixRuntime.Api.Rendering.RendererGame)
@@ -1632,29 +1607,29 @@ references:
   name: ShouldPreventInputs
   nameWithType: OnixClientScreen.ShouldPreventInputs
   fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.ShouldPreventInputs
-- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
-  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererTwoDimentional_
-  name: OnRender(RendererTwoDimentional)
-  nameWithType: OnixClientScreen.OnRender(RendererTwoDimentional)
-  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+- uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_
+  name: OnRender(RendererCommon2D)
+  nameWithType: OnixClientScreen.OnRender(RendererCommon2D)
+  fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
   spec.csharp:
-  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
     name: OnRender
-    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererTwoDimentional_
+    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_
   - name: (
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    name: RendererTwoDimentional
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
   - name: )
   spec.vb:
-  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererTwoDimentional)
+  - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
     name: OnRender
-    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererTwoDimentional_
+    href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_
   - name: (
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    name: RendererTwoDimentional
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
   - name: )
 - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.ForceDirect2D*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixClientScreen.ForceDirect2D
@@ -1744,20 +1719,20 @@ references:
   - name: )
 - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender
-  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererTwoDimentional_
+  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_
   name: OnRender
   nameWithType: OnixClientScreen.OnRender
   fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRender
-- uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-  commentId: T:OnixRuntime.Api.Rendering.RendererTwoDimentional
+- uid: OnixRuntime.Api.Rendering.RendererCommon2D
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon2D
   parent: OnixRuntime.Api.Rendering
-  href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
-  name: RendererTwoDimentional
-  nameWithType: RendererTwoDimentional
-  fullName: OnixRuntime.Api.Rendering.RendererTwoDimentional
+  href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  name: RendererCommon2D
+  nameWithType: RendererCommon2D
+  fullName: OnixRuntime.Api.Rendering.RendererCommon2D
 - uid: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing*
   commentId: Overload:OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing
-  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererTwoDimentional_
+  href: OnixRuntime.Api.OnixClient.OnixClientScreen.html#OnixRuntime_Api_OnixClient_OnixClientScreen_OnRenderClosing_OnixRuntime_Api_Rendering_RendererCommon2D_
   name: OnRenderClosing
   nameWithType: OnixClientScreen.OnRenderClosing
   fullName: OnixRuntime.Api.OnixClient.OnixClientScreen.OnRenderClosing

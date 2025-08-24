@@ -16,14 +16,19 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WaypointsNotEnabledException
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
-    startLine: 6
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 10
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: >-
+    Thrown when the waypoints are not enabled.
+
+    The waypoints are per world and not active unless the mod is enabled.
+  example: []
   syntax:
     content: 'public class WaypointsNotEnabledException : OnixRuntimeException, ISerializable'
     content.vb: Public Class WaypointsNotEnabledException Inherits OnixRuntimeException Implements ISerializable
@@ -65,14 +70,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
-    startLine: 7
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixWaypointManager.cs
+    startLine: 14
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
+  summary: Initializes a new instance of the <xref href="OnixRuntime.Api.OnixClient.WaypointsNotEnabledException" data-throw-if-not-resolved="false"></xref> class.
+  example: []
   syntax:
     content: public WaypointsNotEnabledException()
     content.vb: Public Sub New()
@@ -528,6 +535,12 @@ references:
     name: Serialization
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+- uid: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+  commentId: T:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
+  href: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException.html
+  name: WaypointsNotEnabledException
+  nameWithType: WaypointsNotEnabledException
+  fullName: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
 - uid: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException.#ctor*
   commentId: Overload:OnixRuntime.Api.OnixClient.WaypointsNotEnabledException.#ctor
   href: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException.html#OnixRuntime_Api_OnixClient_WaypointsNotEnabledException__ctor

@@ -23,14 +23,19 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixPluginSaveManager
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 8
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 13
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: >-
+    Class responsible for saving and loading onix module data in plugins.
+
+    This is for the default setting system, you can go the manual route of course.
+  example: []
   syntax:
     content: public class OnixPluginSaveManager
     content.vb: Public Class OnixPluginSaveManager
@@ -58,11 +63,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CurrentConfigName
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 21
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 26
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -92,14 +97,21 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ConfigLoaded
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 128
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 149
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: >-
+    Event triggered when the configuration data is loaded.
+
+    This can happen from any thread.
+
+    Note: Adding a delegate will automatically call it if data is available, so no need to handle that case yourself.
+  example: []
   syntax:
     content: public event OnixPluginSaveManager.OnConfigLoadDelegate? ConfigLoaded
     return:
@@ -119,14 +131,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ConfigSaved
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 129
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 165
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: Event triggered when the configuration data is saved.
+  example: []
   syntax:
     content: public event OnixPluginSaveManager.OnConfigSaveDelegate? ConfigSaved
     return:
@@ -146,11 +160,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TrackModule
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 182
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 231
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -183,11 +197,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TrackSetting
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 198
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 253
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -227,11 +241,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UntrackModule
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 215
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 270
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -262,11 +276,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UntrackSetting
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 226
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 281
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -297,11 +311,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/OnixPluginSaveManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UntrackAll
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
-    startLine: 236
+    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginSaveManager.cs
+    startLine: 291
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin

@@ -106,15 +106,20 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a></dt>
-      <dd></dd>
+      <dd><p>Handles installing, uninstalling, packaging and managing plugins asynchronously.
+Provides methods to start operations and track progress via TaskProgressReport.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">OnixPluginInstaller.TaskProgressReport</a></dt>
-      <dd></dd>
+      <dd><p>Represents progress and status for a long-running plugin operation.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginSaveManager.html">OnixPluginSaveManager</a></dt>
-      <dd></dd>
+      <dd><p>Class responsible for saving and loading onix module data in plugins.
+This is for the default setting system, you can go the manual route of course.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.PluginManifest.html">PluginManifest</a></dt>
@@ -133,11 +138,18 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.PluginStateExtensions.html">PluginStateExtensions</a></dt>
-      <dd></dd>
+      <dd><p>Extensions to add some convenience methods to the <a class="xref" href="OnixRuntime.Plugin.PluginState.html">PluginState</a>.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.PublicPluginManager.html">PublicPluginManager</a></dt>
       <dd><p>Wrapper allowing you to access public plugin data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a></dt>
+      <dd><p>A <a class="xref" href="OnixRuntime.Plugin.PluginManifest.html">PluginManifest</a> that includes the original remote source URL
+the manifest was retrieved from.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -155,29 +167,36 @@ Interfaces
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.IOnixPlugin.html">IOnixPlugin</a></dt>
-      <dd></dd>
+      <dd><p>A basic onix plugin interface to interact with other plugins.</p>
+</dd>
     </dl>
     <h3 id="enums">
 Enums
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.PluginLoadMode.html">PluginLoadMode</a></dt>
-      <dd></dd>
+      <dd><p>Specifies the various modes for loading plugins.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.PluginState.html">PluginState</a></dt>
-      <dd></dd>
+      <dd><p>Represents the various states a plugin can be in.</p>
+</dd>
     </dl>
     <h3 id="delegates">
 Delegates
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginSaveManager.OnConfigLoadDelegate.html">OnixPluginSaveManager.OnConfigLoadDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Delegate for handling configuration load events.
+This is going to be what you gave in <a class="xref" href="OnixRuntime.Plugin.OnixPluginSaveManager.html#OnixRuntime_Plugin_OnixPluginSaveManager_ConfigSaved">ConfigSaved</a>.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Plugin.OnixPluginSaveManager.OnConfigSaveDelegate.html">OnixPluginSaveManager.OnConfigSaveDelegate</a></dt>
-      <dd></dd>
+      <dd><p>Delegate for handling configuration save events.
+Return a JSON representation of what you need to save, it will be given back in <a class="xref" href="OnixRuntime.Plugin.OnixPluginSaveManager.html#OnixRuntime_Plugin_OnixPluginSaveManager_ConfigLoaded">ConfigLoaded</a></p>
+</dd>
     </dl>
 
 

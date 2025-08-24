@@ -8,7 +8,9 @@ items:
   - OnixRuntime.Plugin.PublicPluginManager.GetDelegatesForEventInvocations(System.Delegate[])
   - OnixRuntime.Plugin.PublicPluginManager.GetPluginByUuid(System.String,System.Boolean)
   - OnixRuntime.Plugin.PublicPluginManager.GetPlugins(System.Boolean)
+  - OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy(System.String)
   - OnixRuntime.Plugin.PublicPluginManager.PluginDirectory
+  - OnixRuntime.Plugin.PublicPluginManager.PluginInstaller
   - OnixRuntime.Plugin.PublicPluginManager.PluginsLock
   - OnixRuntime.Plugin.PublicPluginManager.SaveRelevantPlugins
   - OnixRuntime.Plugin.PublicPluginManager.SaveRelevantPluginsInTheBackground
@@ -23,11 +25,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PublicPluginManager
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 9
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 32
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -60,11 +62,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginDirectory
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 15
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 38
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -94,11 +96,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PluginsLock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 21
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 44
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -108,10 +110,79 @@ items:
     Note that by default <xref href="OnixRuntime.Plugin.PublicPluginManager.GetPlugins(System.Boolean)" data-throw-if-not-resolved="false"></xref> will lock the lock for you in reader mode.
   example: []
   syntax:
-    content: public ReaderWriterLockSlim PluginsLock
+    content: public static ReaderWriterLock PluginsLock
     return:
-      type: System.Threading.ReaderWriterLockSlim
-    content.vb: Public PluginsLock As ReaderWriterLockSlim
+      type: System.Threading.ReaderWriterLock
+    content.vb: Public Shared PluginsLock As ReaderWriterLock
+- uid: OnixRuntime.Plugin.PublicPluginManager.PluginInstaller
+  commentId: P:OnixRuntime.Plugin.PublicPluginManager.PluginInstaller
+  id: PluginInstaller
+  parent: OnixRuntime.Plugin.PublicPluginManager
+  langs:
+  - csharp
+  - vb
+  name: PluginInstaller
+  nameWithType: PublicPluginManager.PluginInstaller
+  fullName: OnixRuntime.Plugin.PublicPluginManager.PluginInstaller
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PublicPluginManager.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PluginInstaller
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 49
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Gets the plugin manager instance so you can manage plugins.
+  example: []
+  syntax:
+    content: public static OnixPluginInstaller PluginInstaller { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Plugin.OnixPluginInstaller
+    content.vb: Public Shared ReadOnly Property PluginInstaller As OnixPluginInstaller
+  overload: OnixRuntime.Plugin.PublicPluginManager.PluginInstaller*
+- uid: OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy(System.String)
+  commentId: M:OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy(System.String)
+  id: IsPluginBusy(System.String)
+  parent: OnixRuntime.Plugin.PublicPluginManager
+  langs:
+  - csharp
+  - vb
+  name: IsPluginBusy(string)
+  nameWithType: PublicPluginManager.IsPluginBusy(string)
+  fullName: OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Plugin/PublicPluginManager.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsPluginBusy
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 56
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Plugin
+  summary: Gets if that plugin is currently busy or not.
+  example: []
+  syntax:
+    content: public static bool IsPluginBusy(string uuid)
+    parameters:
+    - id: uuid
+      type: System.String
+      description: The uuid of the plugin.
+    return:
+      type: System.Boolean
+      description: true when that plugin is busy.
+    content.vb: Public Shared Function IsPluginBusy(uuid As String) As Boolean
+  overload: OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy*
+  nameWithType.vb: PublicPluginManager.IsPluginBusy(String)
+  fullName.vb: OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy(String)
+  name.vb: IsPluginBusy(String)
 - uid: OnixRuntime.Plugin.PublicPluginManager.GetDelegatesForEventInvocations(System.Delegate[])
   commentId: M:OnixRuntime.Plugin.PublicPluginManager.GetDelegatesForEventInvocations(System.Delegate[])
   id: GetDelegatesForEventInvocations(System.Delegate[])
@@ -126,11 +197,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetDelegatesForEventInvocations
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 28
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 67
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -164,11 +235,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetPlugins
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 55
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 94
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -205,11 +276,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetPluginByUuid
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 76
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 115
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -253,11 +324,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetAndLoadConfig
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 84
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 131
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -288,11 +359,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveRelevantPlugins
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 93
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 140
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -319,11 +390,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Plugin/PublicPluginManager.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveRelevantPluginsInTheBackground
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
-    startLine: 99
+    path: ../OnixRuntime/OnixRuntime/Plugin/PublicPluginManager.cs
+    startLine: 146
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -643,14 +714,14 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: System.Threading.ReaderWriterLockSlim
-  commentId: T:System.Threading.ReaderWriterLockSlim
+- uid: System.Threading.ReaderWriterLock
+  commentId: T:System.Threading.ReaderWriterLock
   parent: System.Threading
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.readerwriterlockslim
-  name: ReaderWriterLockSlim
-  nameWithType: ReaderWriterLockSlim
-  fullName: System.Threading.ReaderWriterLockSlim
+  href: https://learn.microsoft.com/dotnet/api/system.threading.readerwriterlock
+  name: ReaderWriterLock
+  nameWithType: ReaderWriterLock
+  fullName: System.Threading.ReaderWriterLock
 - uid: System.Threading
   commentId: N:System.Threading
   isExternal: true
@@ -678,6 +749,36 @@ references:
     name: Threading
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: OnixRuntime.Plugin.PublicPluginManager.PluginInstaller*
+  commentId: Overload:OnixRuntime.Plugin.PublicPluginManager.PluginInstaller
+  href: OnixRuntime.Plugin.PublicPluginManager.html#OnixRuntime_Plugin_PublicPluginManager_PluginInstaller
+  name: PluginInstaller
+  nameWithType: PublicPluginManager.PluginInstaller
+  fullName: OnixRuntime.Plugin.PublicPluginManager.PluginInstaller
+- uid: OnixRuntime.Plugin.OnixPluginInstaller
+  commentId: T:OnixRuntime.Plugin.OnixPluginInstaller
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html
+  name: OnixPluginInstaller
+  nameWithType: OnixPluginInstaller
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller
+- uid: OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy*
+  commentId: Overload:OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy
+  href: OnixRuntime.Plugin.PublicPluginManager.html#OnixRuntime_Plugin_PublicPluginManager_IsPluginBusy_System_String_
+  name: IsPluginBusy
+  nameWithType: PublicPluginManager.IsPluginBusy
+  fullName: OnixRuntime.Plugin.PublicPluginManager.IsPluginBusy
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: OnixRuntime.Plugin.PublicPluginManager.GetDelegatesForEventInvocations*
   commentId: Overload:OnixRuntime.Plugin.PublicPluginManager.GetDelegatesForEventInvocations
   href: OnixRuntime.Plugin.PublicPluginManager.html#OnixRuntime_Plugin_PublicPluginManager_GetDelegatesForEventInvocations_System_Delegate___
@@ -813,17 +914,6 @@ references:
   name: GetPlugins
   nameWithType: PublicPluginManager.GetPlugins
   fullName: OnixRuntime.Plugin.PublicPluginManager.GetPlugins
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: System.Collections.Generic.IEnumerable{OnixRuntime.Plugin.IOnixPlugin}
   commentId: T:System.Collections.Generic.IEnumerable{OnixRuntime.Plugin.IOnixPlugin}
   parent: System.Collections.Generic

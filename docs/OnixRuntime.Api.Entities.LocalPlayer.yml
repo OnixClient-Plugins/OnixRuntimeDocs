@@ -48,14 +48,16 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LocalPlayer
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 8
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 10
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
+  summary: Represents the local player in the game.
+  example: []
   syntax:
     content: 'public class LocalPlayer : Player'
     content.vb: Public Class LocalPlayer Inherits Player
@@ -142,9 +144,10 @@ items:
   - OnixRuntime.Api.Entities.Entity.Riding
   - OnixRuntime.Api.Entities.Entity.RiddenBy
   - OnixRuntime.Api.Entities.Entity.ToString
-  - System.Object.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
@@ -162,11 +165,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Raycast
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 12
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 14
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -193,11 +196,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MovementInputs
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 15
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 17
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -224,15 +227,20 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MainHandItem
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 18
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 25
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
-  summary: Gets or sets the item in the player's main hand.
+  summary: >-
+    Gets or sets the item in the main hand.
+
+    Note that for the local player, this will select the item if it is in the hotbar. 
+
+    Otherwise it will just set the item on the client which will require trust.
   example: []
   syntax:
     content: public override ItemStack MainHandItem { get; set; }
@@ -256,11 +264,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddRotation
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 35
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 42
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -293,11 +301,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddRotation
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 42
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 49
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -336,11 +344,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetRotation
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 48
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 55
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -373,11 +381,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetRotation
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 55
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 62
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -416,11 +424,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetFacingXYZ
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 63
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 70
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -459,11 +467,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetFacingXYZ
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 71
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 78
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -502,11 +510,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetFacingXYZ
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 80
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 87
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -548,11 +556,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BuildBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 104
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 111
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -603,11 +611,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BuildBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 115
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 122
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -649,11 +657,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BuildBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 126
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 133
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -692,11 +700,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BuildBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 136
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 143
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -731,11 +739,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 151
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 158
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -792,11 +800,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 164
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 171
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -844,11 +852,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 176
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 183
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -893,11 +901,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 202
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 209
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -951,11 +959,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 213
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 220
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -997,11 +1005,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 223
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 230
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1039,11 +1047,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StopBreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 229
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 236
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1076,11 +1084,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StopBreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 236
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 243
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1122,11 +1130,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StopBreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 242
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 249
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1159,11 +1167,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StopBreakBlock
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 250
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 257
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1192,11 +1200,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Attack
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 261
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 268
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1232,11 +1240,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Interact
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 269
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 276
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1275,11 +1283,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Interact
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 276
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 283
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1315,11 +1323,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UseItem
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 285
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 292
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1354,11 +1362,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UseItemOn
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 299
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 306
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1403,11 +1411,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UseItemOn
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 315
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 322
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1461,11 +1469,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UseItemOn
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 328
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 335
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1507,11 +1515,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UseItemOn
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 343
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 350
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1562,11 +1570,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/Entities/LocalPlayer.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StopUsingItem
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
-    startLine: 359
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/LocalPlayer.cs
+    startLine: 366
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -2498,22 +2506,52 @@ references:
     href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_ToString
   - name: (
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
   name.vb: Equals(Object)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -2521,15 +2559,33 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
@@ -2575,30 +2631,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Delegate OnixEventGame.OnUriInvokedDelegate | Onix Plugin Documentation ">
       
-      
+      <meta name="description" content="Called when a URI is invoked. specific to plugins. Not logic safe. The plugin uri that was invoked, the format goes as follows. minecraft://plugin.onixclient.com/{verb}?{key}={value}&amp;amp;{myKey}={myValue} You should use this whenever possible to make it clear it&#39;s for plugins and avoid conflicts if you&#39;re implementing custom ones.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Events_OnixEventGame_OnUriInvokedDelegate.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/dev/apiSpec/new?filename=OnixRuntime_Api_Events_OnixEventGame_OnUriInvokedDelegate.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Events_OnixEventGame_OnUriInvokedDelegate" data-uid="OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate" class="text-break">
-Delegate OnixEventGame.OnUriInvokedDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventGame.cs/#L34"><i class="bi bi-code-slash"></i></a>
+Delegate OnixEventGame.OnUriInvokedDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventGame.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,11 @@ Delegate OnixEventGame.OnUriInvokedDelegate  <a class="header-action link-second
   <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Called when a URI is invoked. specific to plugins. Not logic safe.
+The plugin uri that was invoked, the format goes as follows.
+minecraft://plugin.onixclient.com/{verb}?{key}={value}&amp;{myKey}={myValue}
+You should use this whenever possible to make it clear it's for plugins and avoid conflicts if you're implementing custom ones.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -107,9 +111,11 @@ Delegate OnixEventGame.OnUriInvokedDelegate  <a class="header-action link-second
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>verb</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The verb that was invoked. what goes after minecraft://verb/</p>
+</dd>
     <dt><code>parameters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>The key-value parameters that were passed to the URI.</p>
+</dd>
   </dl>
 
 
@@ -127,7 +133,7 @@ Delegate OnixEventGame.OnUriInvokedDelegate  <a class="header-action link-second
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventGame.cs/#L34" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Events/OnixEventGame.cs/#L50" class="edit-link">Edit this page</a>
         </div>
 
 

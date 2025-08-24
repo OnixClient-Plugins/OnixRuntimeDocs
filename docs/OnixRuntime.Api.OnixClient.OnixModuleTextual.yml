@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixModuleTextual
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
-    startLine: 156
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
+    startLine: 236
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -32,7 +32,7 @@ items:
     content.vb: Public Class OnixModuleTextual Inherits OnixModuleVisual Implements IDisposable
   inheritance:
   - System.Object
-  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   - OnixRuntime.Api.OnixClient.OnixModule
   - OnixRuntime.Api.OnixClient.OnixModuleVisual
   implements:
@@ -40,12 +40,15 @@ items:
   inheritedMembers:
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.Position
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.Size
+  - OnixRuntime.Api.OnixClient.OnixModuleVisual.Area
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.RelativePosition
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.AnchorSetting
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.Anchor
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.ExpandDirectionSetting
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.ExpandDirection
   - OnixRuntime.Api.OnixClient.OnixModuleVisual.ShouldHideInHudEditor
+  - OnixRuntime.Api.OnixClient.OnixModuleVisual.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  - OnixRuntime.Api.OnixClient.OnixModuleVisual.Render
   - OnixRuntime.Api.OnixClient.OnixModule.Dispose
   - OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
   - OnixRuntime.Api.OnixClient.OnixModule.Name
@@ -53,6 +56,7 @@ items:
   - OnixRuntime.Api.OnixClient.OnixModule.Description
   - OnixRuntime.Api.OnixClient.OnixModule.Enabled
   - OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+  - OnixRuntime.Api.OnixClient.OnixModule.IsBlockedEnabled
   - OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
   - OnixRuntime.Api.OnixClient.OnixModule.IsToggle
   - OnixRuntime.Api.OnixClient.OnixModule.IsFavorite
@@ -68,15 +72,14 @@ items:
   - OnixRuntime.Api.OnixClient.OnixModule.StopLastCategoryHere
   - OnixRuntime.Api.OnixClient.OnixModule.Save
   - OnixRuntime.Api.OnixClient.OnixModule.Load(System.Text.Json.Nodes.JsonNode)
-  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-  - OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-  - System.Object.Equals(System.Object)
+  - OnixRuntime.Api.OnixClient.OnixModule.Equals(System.Object)
+  - OnixRuntime.Api.OnixClient.OnixModule.GetHashCode
+  - OnixRuntime.Api.OnixClient.OnixModule.ToString
+  - OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
 - uid: OnixRuntime.Api.OnixClient.OnixModuleTextual.#ctor(System.String,System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.OnixClient.OnixModuleVisual.VisualAnchor,OnixRuntime.Api.Maths.Vec2,System.String,System.Boolean)
   commentId: M:OnixRuntime.Api.OnixClient.OnixModuleTextual.#ctor(System.String,System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.OnixClient.OnixModuleVisual.VisualAnchor,OnixRuntime.Api.Maths.Vec2,System.String,System.Boolean)
   id: '#ctor(System.String,System.String,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.OnixClient.OnixModuleVisual.VisualAnchor,OnixRuntime.Api.Maths.Vec2,System.String,System.Boolean)'
@@ -91,11 +94,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
-    startLine: 169
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
+    startLine: 249
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -144,11 +147,11 @@ items:
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
-      branch: master
-      repo: https://github.com/OnixClient/OnixDotnetRuntime
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Text
-    path: ../../../../../../../Users/jqms/source/repos/OnixDotnetRuntime/OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
-    startLine: 184
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModuleVisual.cs
+    startLine: 263
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -206,13 +209,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
-  commentId: T:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.SharedMemoryAddressContainer
   parent: OnixRuntime.Api.Internal
-  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html
-  name: MightOwnMemoryAddressContainer
-  nameWithType: MightOwnMemoryAddressContainer
-  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html
+  name: SharedMemoryAddressContainer
+  nameWithType: SharedMemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
 - uid: OnixRuntime.Api.OnixClient.OnixModule
   commentId: T:OnixRuntime.Api.OnixClient.OnixModule
   parent: OnixRuntime.Api.OnixClient
@@ -249,6 +252,13 @@ references:
   name: Size
   nameWithType: OnixModuleVisual.Size
   fullName: OnixRuntime.Api.OnixClient.OnixModuleVisual.Size
+- uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.Area
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModuleVisual.Area
+  parent: OnixRuntime.Api.OnixClient.OnixModuleVisual
+  href: OnixRuntime.Api.OnixClient.OnixModuleVisual.html#OnixRuntime_Api_OnixClient_OnixModuleVisual_Area
+  name: Area
+  nameWithType: OnixModuleVisual.Area
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleVisual.Area
 - uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.RelativePosition
   commentId: P:OnixRuntime.Api.OnixClient.OnixModuleVisual.RelativePosition
   parent: OnixRuntime.Api.OnixClient.OnixModuleVisual
@@ -291,6 +301,38 @@ references:
   name: ShouldHideInHudEditor
   nameWithType: OnixModuleVisual.ShouldHideInHudEditor
   fullName: OnixRuntime.Api.OnixClient.OnixModuleVisual.ShouldHideInHudEditor
+- uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModuleVisual.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  parent: OnixRuntime.Api.OnixClient.OnixModuleVisual
+  href: OnixRuntime.Api.OnixClient.OnixModuleVisual.html#OnixRuntime_Api_OnixClient_OnixModuleVisual_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_
+  name: OnRender(RendererCommon2D)
+  nameWithType: OnixModuleVisual.OnRender(RendererCommon2D)
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleVisual.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+    name: OnRender
+    href: OnixRuntime.Api.OnixClient.OnixModuleVisual.html#OnixRuntime_Api_OnixClient_OnixModuleVisual_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.OnRender(OnixRuntime.Api.Rendering.RendererCommon2D)
+    name: OnRender
+    href: OnixRuntime.Api.OnixClient.OnixModuleVisual.html#OnixRuntime_Api_OnixClient_OnixModuleVisual_OnRender_OnixRuntime_Api_Rendering_RendererCommon2D_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixModuleVisual.Render
+  commentId: E:OnixRuntime.Api.OnixClient.OnixModuleVisual.Render
+  parent: OnixRuntime.Api.OnixClient.OnixModuleVisual
+  href: OnixRuntime.Api.OnixClient.OnixModuleVisual.html#OnixRuntime_Api_OnixClient_OnixModuleVisual_Render
+  name: Render
+  nameWithType: OnixModuleVisual.Render
+  fullName: OnixRuntime.Api.OnixClient.OnixModuleVisual.Render
 - uid: OnixRuntime.Api.OnixClient.OnixModule.Dispose
   commentId: M:OnixRuntime.Api.OnixClient.OnixModule.Dispose
   parent: OnixRuntime.Api.OnixClient.OnixModule
@@ -352,6 +394,13 @@ references:
   name: IsBlocked
   nameWithType: OnixModule.IsBlocked
   fullName: OnixRuntime.Api.OnixClient.OnixModule.IsBlocked
+- uid: OnixRuntime.Api.OnixClient.OnixModule.IsBlockedEnabled
+  commentId: P:OnixRuntime.Api.OnixClient.OnixModule.IsBlockedEnabled
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_IsBlockedEnabled
+  name: IsBlockedEnabled
+  nameWithType: OnixModule.IsBlockedEnabled
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.IsBlockedEnabled
 - uid: OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
   commentId: P:OnixRuntime.Api.OnixClient.OnixModule.ToggleKey
   parent: OnixRuntime.Api.OnixClient.OnixModule
@@ -660,72 +709,21 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode
   - name: )
-- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-  commentId: P:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
-  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_HasMemoryOwnership
-  name: HasMemoryOwnership
-  nameWithType: MightOwnMemoryAddressContainer.HasMemoryOwnership
-  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.HasMemoryOwnership
-- uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-  commentId: M:OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-  parent: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer
+- uid: OnixRuntime.Api.OnixClient.OnixModule.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.Equals(System.Object)
+  parent: OnixRuntime.Api.OnixClient.OnixModule
   isExternal: true
-  href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
-  name: SetMemoryAddressValues(nint, nint)
-  nameWithType: MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
-  fullName: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(nint, nint)
-  nameWithType.vb: MightOwnMemoryAddressContainer.SetMemoryAddressValues(IntPtr, IntPtr)
-  fullName.vb: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr, System.IntPtr)
-  name.vb: SetMemoryAddressValues(IntPtr, IntPtr)
-  spec.csharp:
-  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-    name: SetMemoryAddressValues
-    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
-  - name: (
-  - uid: System.IntPtr
-    name: nint
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
-  - name: ','
-  - name: " "
-  - uid: System.IntPtr
-    name: nint
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
-  - name: )
-  spec.vb:
-  - uid: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.SetMemoryAddressValues(System.IntPtr,System.IntPtr)
-    name: SetMemoryAddressValues
-    href: OnixRuntime.Api.Internal.MightOwnMemoryAddressContainer.html#OnixRuntime_Api_Internal_MightOwnMemoryAddressContainer_SetMemoryAddressValues_System_IntPtr_System_IntPtr_
-  - name: (
-  - uid: System.IntPtr
-    name: IntPtr
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
-  - name: ','
-  - name: " "
-  - uid: System.IntPtr
-    name: IntPtr
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.intptr
-  - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Equals_System_Object_
   name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
+  nameWithType: OnixModule.Equals(object)
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.Equals(object)
+  nameWithType.vb: OnixModule.Equals(Object)
+  fullName.vb: OnixRuntime.Api.OnixClient.OnixModule.Equals(Object)
   name.vb: Equals(Object)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -733,15 +731,77 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.Equals(System.Object)
     name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Equals_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixModule.GetHashCode
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.GetHashCode
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_GetHashCode
+  name: GetHashCode()
+  nameWithType: OnixModule.GetHashCode()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_GetHashCode
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.OnixModule.ToString
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.ToString
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_ToString
+  name: ToString()
+  nameWithType: OnixModule.ToString()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.ToString()
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.ToString
+    name: ToString
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.OnixModule.ToString
+    name: ToString
+    href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_ToString
+  - name: (
+  - name: )
+- uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  commentId: M:OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  parent: OnixRuntime.Api.Internal.SharedMemoryAddressContainer
+  href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
+  name: SetMemoryAddressValues(PointerContainer)
+  nameWithType: SharedMemoryAddressContainer.SetMemoryAddressValues(SharedMemoryAddressContainer.PointerContainer)
+  fullName: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
+  - name: (
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+    name: PointerContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.SetMemoryAddressValues(OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer)
+    name: SetMemoryAddressValues
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.html#OnixRuntime_Api_Internal_SharedMemoryAddressContainer_SetMemoryAddressValues_OnixRuntime_Api_Internal_SharedMemoryAddressContainer_PointerContainer_
+  - name: (
+  - uid: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer
+    name: PointerContainer
+    href: OnixRuntime.Api.Internal.SharedMemoryAddressContainer.PointerContainer.html
   - name: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
@@ -787,30 +847,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
   - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
@@ -904,30 +940,6 @@ references:
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
   - name: )
 - uid: System
   commentId: N:System

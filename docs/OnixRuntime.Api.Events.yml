@@ -8,10 +8,14 @@ items:
   - OnixRuntime.Api.Events.OnixEventAudio.OnSoundPlayedInUiDelegate
   - OnixRuntime.Api.Events.OnixEventAudio.OnSoundPlayedInWorldDelegate
   - OnixRuntime.Api.Events.OnixEventCommon
+  - OnixRuntime.Api.Events.OnixEventGame
+  - OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate
+  - OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate
   - OnixRuntime.Api.Events.OnixEventGui
   - OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
   - OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTabCompleteDelegate
   - OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTickDelegate
+  - OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
   - OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenTickDelegate
   - OnixRuntime.Api.Events.OnixEventInputs
   - OnixRuntime.Api.Events.OnixEventInputs.OnInputDelegate
@@ -20,18 +24,9 @@ items:
   - OnixRuntime.Api.Events.OnixEventInputs.OnRawTextCharDelegate
   - OnixRuntime.Api.Events.OnixEventInputs.OnShouldCancelAnalogMovementDelegate
   - OnixRuntime.Api.Events.OnixEventInputs.OnTextCharDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServer
-  - OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat
-  - OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-  - OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
+  - OnixRuntime.Api.Events.OnixEventLocalServerWorld
+  - OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate
+  - OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate
   - OnixRuntime.Api.Events.OnixEventPlayer
   - OnixRuntime.Api.Events.OnixEventPlayer.OnLocalServerPlayerAttackDelegate
   - OnixRuntime.Api.Events.OnixEventPlayer.OnLocalServerPlayerBreakBlockDelegate
@@ -42,14 +37,19 @@ items:
   - OnixRuntime.Api.Events.OnixEventPlayer.OnLocalServerPlayerUseItemDelegate
   - OnixRuntime.Api.Events.OnixEventPlayer.OnLocalServerPlayerUseItemOnDelegate
   - OnixRuntime.Api.Events.OnixEventRendering
+  - OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDirect2DDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.OnRenderHudDirect2DDelegate
+  - OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDirect2DDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.OnWorldRenderDelegate
   - OnixRuntime.Api.Events.OnixEventRendering.ShouldHideScreenDelegate
+  - OnixRuntime.Api.Events.OnixEventWorld
+  - OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate
+  - OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate
   - OnixRuntime.Api.Events.OnixEvents
   - OnixRuntime.Api.Events.OnixEventsSession
   - OnixRuntime.Api.Events.OnixEventsSession.OnDimensionChangedDelegate
@@ -66,6 +66,59 @@ items:
   assemblies:
   - OnixRuntime
 references:
+- uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld
+  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerWorld
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.html
+  name: OnixEventLocalServerWorld
+  nameWithType: OnixEventLocalServerWorld
+  fullName: OnixRuntime.Api.Events.OnixEventLocalServerWorld
+- uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.html
+  name: OnixEventLocalServerWorld.OnBlockChangedDelegate
+  nameWithType: OnixEventLocalServerWorld.OnBlockChangedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld
+    name: OnixEventLocalServerWorld
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate
+    name: OnBlockChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld
+    name: OnixEventLocalServerWorld
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate
+    name: OnBlockChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.html
+  name: OnixEventLocalServerWorld.OnAreaChangedDelegate
+  nameWithType: OnixEventLocalServerWorld.OnAreaChangedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld
+    name: OnixEventLocalServerWorld
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate
+    name: OnAreaChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld
+    name: OnixEventLocalServerWorld
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate
+    name: OnAreaChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnAreaChangedDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventAudio
   commentId: T:OnixRuntime.Api.Events.OnixEventAudio
   parent: OnixRuntime.Api.Events
@@ -126,6 +179,59 @@ references:
   name: OnixEventCommon
   nameWithType: OnixEventCommon
   fullName: OnixRuntime.Api.Events.OnixEventCommon
+- uid: OnixRuntime.Api.Events.OnixEventGame
+  commentId: T:OnixRuntime.Api.Events.OnixEventGame
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventGame.html
+  name: OnixEventGame
+  nameWithType: OnixEventGame
+  fullName: OnixRuntime.Api.Events.OnixEventGame
+- uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventGame.html
+  name: OnixEventGame.OnUriInvokedRawDelegate
+  nameWithType: OnixEventGame.OnUriInvokedRawDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventGame
+    name: OnixEventGame
+    href: OnixRuntime.Api.Events.OnixEventGame.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate
+    name: OnUriInvokedRawDelegate
+    href: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventGame
+    name: OnixEventGame
+    href: OnixRuntime.Api.Events.OnixEventGame.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate
+    name: OnUriInvokedRawDelegate
+    href: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedRawDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventGame.html
+  name: OnixEventGame.OnUriInvokedDelegate
+  nameWithType: OnixEventGame.OnUriInvokedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventGame
+    name: OnixEventGame
+    href: OnixRuntime.Api.Events.OnixEventGame.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate
+    name: OnUriInvokedDelegate
+    href: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventGame
+    name: OnixEventGame
+    href: OnixRuntime.Api.Events.OnixEventGame.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate
+    name: OnUriInvokedDelegate
+    href: OnixRuntime.Api.Events.OnixEventGame.OnUriInvokedDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventGui
   commentId: T:OnixRuntime.Api.Events.OnixEventGui
   parent: OnixRuntime.Api.Events
@@ -225,6 +331,29 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
     name: OnChatScreenGetClientCommandsDelegate
     href: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventGui.html
+  name: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  nameWithType: OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventGui
+    name: OnixEventGui
+    href: OnixRuntime.Api.Events.OnixEventGui.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+    name: OnContainerScreenHoverTextRequestedDelegate
+    href: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventGui
+    name: OnixEventGui
+    href: OnixRuntime.Api.Events.OnixEventGui.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate
+    name: OnContainerScreenHoverTextRequestedDelegate
+    href: OnixRuntime.Api.Events.OnixEventGui.OnContainerScreenHoverTextRequestedDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventInputs
   commentId: T:OnixRuntime.Api.Events.OnixEventInputs
   parent: OnixRuntime.Api.Events
@@ -370,250 +499,6 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventInputs.OnInputResetDelegate
     name: OnInputResetDelegate
     href: OnixRuntime.Api.Events.OnixEventInputs.OnInputResetDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServer
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServer
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServer.html
-  name: OnixEventLocalServer
-  nameWithType: OnixEventLocalServer
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServer
-- uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServer.html
-  name: OnixEventLocalServer.OnTickDelegate
-  nameWithType: OnixEventLocalServer.OnTickDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer
-    name: OnixEventLocalServer
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate
-    name: OnTickDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer
-    name: OnixEventLocalServer
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate
-    name: OnTickDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.OnTickDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServer.html
-  name: OnixEventLocalServer.OnPlayerChat
-  nameWithType: OnixEventLocalServer.OnPlayerChat
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer
-    name: OnixEventLocalServer
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat
-    name: OnPlayerChat
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer
-    name: OnixEventLocalServer
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat
-    name: OnPlayerChat
-    href: OnixRuntime.Api.Events.OnixEventLocalServer.OnPlayerChat.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer
-  nameWithType: OnixEventLocalServerPlayer
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-    name: OnLocalServerPlayerStartBreakBlockDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate
-    name: OnLocalServerPlayerStartBreakBlockDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStartBreakBlockDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-    name: OnLocalServerPlayerBreakBlockDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate
-    name: OnLocalServerPlayerBreakBlockDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBreakBlockDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-    name: OnLocalServerPlayerBuildBlockDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate
-    name: OnLocalServerPlayerBuildBlockDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerBuildBlockDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-    name: OnLocalServerPlayerUseItemDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate
-    name: OnLocalServerPlayerUseItemDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-    name: OnLocalServerPlayerUseItemOnDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate
-    name: OnLocalServerPlayerUseItemOnDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-    name: OnLocalServerPlayerInteractDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate
-    name: OnLocalServerPlayerInteractDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerInteractDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-    name: OnLocalServerPlayerAttackDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate
-    name: OnLocalServerPlayerAttackDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerAttackDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  name: OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-  nameWithType: OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-    name: OnLocalServerPlayerStopUsingItemDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer
-    name: OnixEventLocalServerPlayer
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate
-    name: OnLocalServerPlayerStopUsingItemDelegate
-    href: OnixRuntime.Api.Events.OnixEventLocalServerPlayer.OnLocalServerPlayerStopUsingItemDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventPlayer
   commentId: T:OnixRuntime.Api.Events.OnixEventPlayer
   parent: OnixRuntime.Api.Events
@@ -858,6 +743,29 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate
     name: OnHudRenderDelegate
     href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRenderDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventRendering.html
+  name: OnixEventRendering.OnHudRender2DDelegate
+  nameWithType: OnixEventRendering.OnHudRender2DDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    name: OnHudRender2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate
+    name: OnHudRender2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnHudRender2DDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
   commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
   parent: OnixRuntime.Api.Events
@@ -881,6 +789,29 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate
     name: OnRenderScreenDelegate
     href: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreenDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventRendering.html
+  name: OnixEventRendering.OnRenderScreen2DDelegate
+  nameWithType: OnixEventRendering.OnRenderScreen2DDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+    name: OnRenderScreen2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventRendering
+    name: OnixEventRendering
+    href: OnixRuntime.Api.Events.OnixEventRendering.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate
+    name: OnRenderScreen2DDelegate
+    href: OnixRuntime.Api.Events.OnixEventRendering.OnRenderScreen2DDelegate.html
 - uid: OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDelegate
   commentId: T:OnixRuntime.Api.Events.OnixEventRendering.OnPreRenderScreenDelegate
   parent: OnixRuntime.Api.Events
@@ -1102,6 +1033,59 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventsSession.OnSessionJoinedDelegate
     name: OnSessionJoinedDelegate
     href: OnixRuntime.Api.Events.OnixEventsSession.OnSessionJoinedDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventWorld
+  commentId: T:OnixRuntime.Api.Events.OnixEventWorld
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventWorld.html
+  name: OnixEventWorld
+  nameWithType: OnixEventWorld
+  fullName: OnixRuntime.Api.Events.OnixEventWorld
+- uid: OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventWorld.html
+  name: OnixEventWorld.OnBlockChangedDelegate
+  nameWithType: OnixEventWorld.OnBlockChangedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventWorld
+    name: OnixEventWorld
+    href: OnixRuntime.Api.Events.OnixEventWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate
+    name: OnBlockChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventWorld
+    name: OnixEventWorld
+    href: OnixRuntime.Api.Events.OnixEventWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate
+    name: OnBlockChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventWorld.OnBlockChangedDelegate.html
+- uid: OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate
+  commentId: T:OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate
+  parent: OnixRuntime.Api.Events
+  href: OnixRuntime.Api.Events.OnixEventWorld.html
+  name: OnixEventWorld.OnAreaChangedDelegate
+  nameWithType: OnixEventWorld.OnAreaChangedDelegate
+  fullName: OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.OnixEventWorld
+    name: OnixEventWorld
+    href: OnixRuntime.Api.Events.OnixEventWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate
+    name: OnAreaChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.OnixEventWorld
+    name: OnixEventWorld
+    href: OnixRuntime.Api.Events.OnixEventWorld.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate
+    name: OnAreaChangedDelegate
+    href: OnixRuntime.Api.Events.OnixEventWorld.OnAreaChangedDelegate.html
 - uid: OnixRuntime.Api.Events
   commentId: N:OnixRuntime.Api.Events
   href: OnixRuntime.html

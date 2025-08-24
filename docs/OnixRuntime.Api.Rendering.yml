@@ -4,8 +4,13 @@ items:
   commentId: N:OnixRuntime.Api.Rendering
   id: OnixRuntime.Api.Rendering
   children:
+  - OnixRuntime.Api.Rendering.BlockGraphics
+  - OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+  - OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
   - OnixRuntime.Api.Rendering.FontType
   - OnixRuntime.Api.Rendering.FontUsage
+  - OnixRuntime.Api.Rendering.GameMaterialParameterType
+  - OnixRuntime.Api.Rendering.GameMaterialParameters
   - OnixRuntime.Api.Rendering.GameMesh
   - OnixRuntime.Api.Rendering.GameMeshBuilder
   - OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
@@ -19,21 +24,23 @@ items:
   - OnixRuntime.Api.Rendering.MeshBuilderVertexNormal
   - OnixRuntime.Api.Rendering.MeshBuilderVertexUv
   - OnixRuntime.Api.Rendering.MeshBuilderVertexUvNormal
+  - OnixRuntime.Api.Rendering.OnixRendererType
   - OnixRuntime.Api.Rendering.RenderContexes
   - OnixRuntime.Api.Rendering.RendererCommon
   - OnixRuntime.Api.Rendering.RendererCommon.OpacityPopper
   - OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
+  - OnixRuntime.Api.Rendering.RendererCommon2D
+  - OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper
   - OnixRuntime.Api.Rendering.RendererDirect2D
   - OnixRuntime.Api.Rendering.RendererGame
   - OnixRuntime.Api.Rendering.RendererTextureStatus
-  - OnixRuntime.Api.Rendering.RendererTwoDimentional
-  - OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper
   - OnixRuntime.Api.Rendering.RendererWorld
-  - OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
   - OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper
   - OnixRuntime.Api.Rendering.TextAlignment
+  - OnixRuntime.Api.Rendering.TextureAtlasItem
   - OnixRuntime.Api.Rendering.TexturePath
   - OnixRuntime.Api.Rendering.TexturePathBase
+  - OnixRuntime.Api.Rendering.TextureUVCoordinates
   langs:
   - csharp
   - vb
@@ -44,6 +51,72 @@ items:
   assemblies:
   - OnixRuntime
 references:
+- uid: OnixRuntime.Api.Rendering.BlockGraphics
+  commentId: T:OnixRuntime.Api.Rendering.BlockGraphics
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  name: BlockGraphics
+  nameWithType: BlockGraphics
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+  commentId: T:OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  name: BlockGraphics.BlockShapes
+  nameWithType: BlockGraphics.BlockShapes
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics
+    name: BlockGraphics
+    href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+    name: BlockShapes
+    href: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics
+    name: BlockGraphics
+    href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes
+    name: BlockShapes
+    href: OnixRuntime.Api.Rendering.BlockGraphics.BlockShapes.html
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+  commentId: T:OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  name: BlockGraphics.TextureItem
+  nameWithType: BlockGraphics.TextureItem
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics
+    name: BlockGraphics
+    href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+    name: TextureItem
+    href: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics
+    name: BlockGraphics
+    href: OnixRuntime.Api.Rendering.BlockGraphics.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem
+    name: TextureItem
+    href: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem.html
+- uid: OnixRuntime.Api.Rendering.GameMaterialParameters
+  commentId: T:OnixRuntime.Api.Rendering.GameMaterialParameters
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMaterialParameters.html
+  name: GameMaterialParameters
+  nameWithType: GameMaterialParameters
+  fullName: OnixRuntime.Api.Rendering.GameMaterialParameters
+- uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
+  commentId: T:OnixRuntime.Api.Rendering.GameMaterialParameterType
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMaterialParameterType.html
+  name: GameMaterialParameterType
+  nameWithType: GameMaterialParameterType
+  fullName: OnixRuntime.Api.Rendering.GameMaterialParameterType
 - uid: OnixRuntime.Api.Rendering.GameMesh
   commentId: T:OnixRuntime.Api.Rendering.GameMesh
   parent: OnixRuntime.Api.Rendering
@@ -143,6 +216,13 @@ references:
   name: MeshBuilderVertexColorUvNormal
   nameWithType: MeshBuilderVertexColorUvNormal
   fullName: OnixRuntime.Api.Rendering.MeshBuilderVertexColorUvNormal
+- uid: OnixRuntime.Api.Rendering.OnixRendererType
+  commentId: T:OnixRuntime.Api.Rendering.OnixRendererType
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.OnixRendererType.html
+  name: OnixRendererType
+  nameWithType: OnixRendererType
+  fullName: OnixRuntime.Api.Rendering.OnixRendererType
 - uid: OnixRuntime.Api.Rendering.RenderContexes
   commentId: T:OnixRuntime.Api.Rendering.RenderContexes
   parent: OnixRuntime.Api.Rendering
@@ -231,6 +311,36 @@ references:
   - uid: OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper
     name: TransformationPopper
     href: OnixRuntime.Api.Rendering.RendererCommon.TransformationPopper.html
+- uid: OnixRuntime.Api.Rendering.RendererCommon2D
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon2D
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  name: RendererCommon2D
+  nameWithType: RendererCommon2D
+  fullName: OnixRuntime.Api.Rendering.RendererCommon2D
+- uid: OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  name: RendererCommon2D.ClippingRectanglePopper
+  nameWithType: RendererCommon2D.ClippingRectanglePopper
+  fullName: OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper
+    name: ClippingRectanglePopper
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D
+    name: RendererCommon2D
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper
+    name: ClippingRectanglePopper
+    href: OnixRuntime.Api.Rendering.RendererCommon2D.ClippingRectanglePopper.html
 - uid: OnixRuntime.Api.Rendering.RendererDirect2D
   commentId: T:OnixRuntime.Api.Rendering.RendererDirect2D
   parent: OnixRuntime.Api.Rendering
@@ -245,36 +355,6 @@ references:
   name: RendererGame
   nameWithType: RendererGame
   fullName: OnixRuntime.Api.Rendering.RendererGame
-- uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-  commentId: T:OnixRuntime.Api.Rendering.RendererTwoDimentional
-  parent: OnixRuntime.Api.Rendering
-  href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
-  name: RendererTwoDimentional
-  nameWithType: RendererTwoDimentional
-  fullName: OnixRuntime.Api.Rendering.RendererTwoDimentional
-- uid: OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper
-  commentId: T:OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper
-  parent: OnixRuntime.Api.Rendering
-  href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
-  name: RendererTwoDimentional.ClippingRectanglePopper
-  nameWithType: RendererTwoDimentional.ClippingRectanglePopper
-  fullName: OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper
-  spec.csharp:
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    name: RendererTwoDimentional
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper
-    name: ClippingRectanglePopper
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional
-    name: RendererTwoDimentional
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper
-    name: ClippingRectanglePopper
-    href: OnixRuntime.Api.Rendering.RendererTwoDimentional.ClippingRectanglePopper.html
 - uid: OnixRuntime.Api.Rendering.RendererWorld
   commentId: T:OnixRuntime.Api.Rendering.RendererWorld
   parent: OnixRuntime.Api.Rendering
@@ -282,29 +362,6 @@ references:
   name: RendererWorld
   nameWithType: RendererWorld
   fullName: OnixRuntime.Api.Rendering.RendererWorld
-- uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  commentId: T:OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  parent: OnixRuntime.Api.Rendering
-  href: OnixRuntime.Api.Rendering.RendererWorld.html
-  name: RendererWorld.WorldRenderSettingsPopper
-  nameWithType: RendererWorld.WorldRenderSettingsPopper
-  fullName: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-  spec.csharp:
-  - uid: OnixRuntime.Api.Rendering.RendererWorld
-    name: RendererWorld
-    href: OnixRuntime.Api.Rendering.RendererWorld.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    name: WorldRenderSettingsPopper
-    href: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Rendering.RendererWorld
-    name: RendererWorld
-    href: OnixRuntime.Api.Rendering.RendererWorld.html
-  - name: .
-  - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper
-    name: WorldRenderSettingsPopper
-    href: OnixRuntime.Api.Rendering.RendererWorld.WorldRenderSettingsPopper.html
 - uid: OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper
   commentId: T:OnixRuntime.Api.Rendering.RendererWorld.WorldUIRenderSettingsPopper
   parent: OnixRuntime.Api.Rendering
@@ -342,6 +399,20 @@ references:
   name: TexturePath
   nameWithType: TexturePath
   fullName: OnixRuntime.Api.Rendering.TexturePath
+- uid: OnixRuntime.Api.Rendering.TextureAtlasItem
+  commentId: T:OnixRuntime.Api.Rendering.TextureAtlasItem
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.TextureAtlasItem.html
+  name: TextureAtlasItem
+  nameWithType: TextureAtlasItem
+  fullName: OnixRuntime.Api.Rendering.TextureAtlasItem
+- uid: OnixRuntime.Api.Rendering.TextureUVCoordinates
+  commentId: T:OnixRuntime.Api.Rendering.TextureUVCoordinates
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.TextureUVCoordinates.html
+  name: TextureUVCoordinates
+  nameWithType: TextureUVCoordinates
+  fullName: OnixRuntime.Api.Rendering.TextureUVCoordinates
 - uid: OnixRuntime.Api.Rendering
   commentId: N:OnixRuntime.Api.Rendering
   href: OnixRuntime.html

@@ -76,7 +76,7 @@
 <p><a href="https://plugin.onixclient.com/docs/3/guide/changelog.html">Previous Changelog</a></p>
 <h2 id="introduction">Introduction</h2>
 <p>This changelog documents what changed in the fourth update of the Plugins API.<br>
-Since this is very early-access and the API is still being developed, there will a lot of changes and breaking changes.<br>
+Since this is very early-access and the API is still being developed, there will be a lot of changes and breaking changes.<br>
 There will be a clear changelog for each update, so you can easily see what changed and what you need to do to adapt your plugin.<br>
 This update is pretty much the whole package, you need to update the client first, that should take care of the new runtime.<br>
 With this update, the PluginManager UI should update automatically, so you can just update your plugins from there.<br></p>
@@ -84,16 +84,16 @@ With this update, the PluginManager UI should update automatically, so you can j
 <h2 id="breaking-changes">Breaking Changes</h2>
 <ul>
 <li><a href="xref:OnixRuntime.Api.UI.ContainerScreen">ContainerScreen</a>'s <a href="xref:OnixRuntime.Api.UI.ContainerScreen.GetItem*">GetItem</a> method will now return a null item stack on failure instead of a disposed one.</li>
-<li><a href="xref:OnixRuntime.Api.UI.ContainerScreen">ContainerScreen</a>'s HoveringItem property was renamed to <a href="xref:OnixRuntime.Api.UI.ContainerScreen.IsHoveringItem">IsHoveringItem</a> for clarity.</li>
-<li>The event Onix.Events.Input.OnPlayerInputTick was renamed to <a href="xref:OnixRuntime.Api.Events.OnixEventInputs.PlayerInputTick">Onix.Events.Input.PlayerInputTick</a> for the IDE to not generate OnOnPLayerInputTick.</li>
-<li><a href="xref:OnixRuntime.Api.Inputs.GameInputHandler">GameInputHandler</a>'s IsAAllDown was renamed to <a href="xref:OnixRuntime.Api.Inputs.GameInputHandler.IsAllDown*">IsAllDown</a> as it clearly contained a typo.</li>
+<li><a href="xref:OnixRuntime.Api.UI.ContainerScreen">ContainerScreen</a>'s <code>HoveringItem</code> property was renamed to <a href="xref:OnixRuntime.Api.UI.ContainerScreen.IsHoveringItem">IsHoveringItem</a> for clarity.</li>
+<li>The event <code>Onix.Events.Input.OnPlayerInputTick</code> was renamed to <a href="xref:OnixRuntime.Api.Events.OnixEventInputs.PlayerInputTick">Onix.Events.Input.PlayerInputTick</a> for the IDE to not generate <code>OnOnPlayerInputTick</code>.</li>
+<li><a href="xref:OnixRuntime.Api.Inputs.GameInputHandler">GameInputHandler</a>'s <code>IsAAllDown</code> was renamed to <a href="xref:OnixRuntime.Api.Inputs.GameInputHandler.IsAllDown*">IsAllDown</a> as it clearly contained a typo.</li>
 <li>The constructor of <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a> taking an <a href="xref:OnixRuntime.Api.OnixClient.OnixModule">OnixModule</a> now also takes a bool.
 <ul>
 <li>This breaks every single plugin with a config.</li>
 <li>To fix it, simply add <code>, true</code> in your <a href="xref:OnixRuntime.Plugin.OnixPluginBase.OnLoaded">OnLoaded</a> method where you create your <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a>.</li>
 <li>It should look something like this: <code>Config = new(PluginDisplayModule, true);</code></li>
 <li>The bool is for whether you want missing settings to be added to your module automatically.</li>
-<li>This is important because if you start wrapping Onix Client modules in a class like that, you don't want a deleted setting to be re-added automatically linking to nothing.</li>
+<li>This is important because if you start wrapping base Onix Client modules in a class like that, you don't want a deleted setting to be re-added automatically linking to nothing, as this will cause serious problems.</li>
 </ul>
 </li>
 <li><a href="xref:OnixRuntime.Api.Maths.TransformationMatrix">TransformationMatrix</a> fields are now public. (And for the sillyheads that were using reflection, the field 11 now exists.)</li>
@@ -102,7 +102,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 <li>We still have a <code>.plugin loglevel</code> to change the chat and log file levels.</li>
 </ul>
 </li>
-<li>OnixModuleList was renamed to <a href="xref:OnixRuntime.Api.OnixClient.OnixModulesList">OnixModulesList</a> for consistency.</li>
+<li><code>OnixModuleList</code> was renamed to <a href="xref:OnixRuntime.Api.OnixClient.OnixModulesList">OnixModulesList</a> for consistency.</li>
 </ul>
 <h2 id="runtime-changes">Runtime Changes</h2>
 <ul>
@@ -111,7 +111,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 <li>You can now specify multiple plugin repository sources in the <code>runtime/config.json</code>.
 <ul>
 <li>The default one is always there but you can add more.</li>
-<li>This can be useful for early access plugins or private plugins (still have the user provide any API secrets as someone can just leak or stumble upon that repo url).</li>
+<li>This can be useful for early access plugins or private plugins (still have the user provide any API secrets as someone can just leak or stumble upon that repo URL).</li>
 <li>For now you can change them in the <code>runtime/config.json</code> or from C# using <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls">RemoteSourceUrls</a> and <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls">SaveRemoteSourceUrls()</a> from the <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller">OnixPluginInstaller</a>.</li>
 </ul>
 </li>
@@ -130,8 +130,8 @@ With this update, the PluginManager UI should update automatically, so you can j
 <br>
 <h3 id="new-features">New Features</h3>
 <ul>
-<li><a href="xref:OnixRuntime.Api.Items.Item">Item</a> now has a <a href="xref:OnixRuntime.Api.Items.Item.DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's jsons and lang files.</li>
-<li><a href="xref:OnixRuntime.Api.World.Block">Block</a> now has a <a href="xref:OnixRuntime.Api.World.Block.DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's jsons and lang files.</li>
+<li><a href="xref:OnixRuntime.Api.Items.Item">Item</a> now has a <a href="xref:OnixRuntime.Api.Items.Item.DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's json and lang files.</li>
+<li><a href="xref:OnixRuntime.Api.World.Block">Block</a> now has a <a href="xref:OnixRuntime.Api.World.Block.DescriptionIdentifier">DescriptionIdentifier</a> property. This is used in the game's json and lang files.</li>
 <li><a href="xref:OnixRuntime.Api.UI.ContainerScreen">ContainerScreen</a> now has <a href="xref:OnixRuntime.Api.UI.ContainerScreen.GetVisualItem*">GetVisualItem</a> method which returns some items that <a href="xref:OnixRuntime.Api.UI.ContainerScreen.GetItem*">GetItem</a> does not.</li>
 <li><a href="xref:OnixRuntime.Api.Items.ItemStack">ItemStack</a> now has a <a href="xref:OnixRuntime.Api.Items.ItemStack.GetHoverText*">GetHoverText</a> method which returns the hover text of that item, before or after client modifications.</li>
 <li><a href="xref:OnixRuntime.Api.Items.EnchantType">EnchantType</a> now has a <a href="xref:OnixRuntime.Api.Items.EnchantmentTypesExtensions.DisplayName*">DisplayName</a> extension which returns the translated name or name and level for that enchantment type.</li>
@@ -154,13 +154,13 @@ With this update, the PluginManager UI should update automatically, so you can j
 <li><a href="xref:OnixRuntime.Api.Options.GameOptionUInt64">GameOptionUInt64</a> - Unused in the game's options.txt, not sure where or what they use it for.</li>
 </ul>
 </li>
-<li><a href="xref:OnixRuntime.Api.World.RuntimeWorld">RuntimeWorld</a> now has a <a href="xref:OnixRuntime.Api.World.RuntimeWorld.IsHardcore">IsHardcore</a> which you can get AND set :D.
+<li><a href="xref:OnixRuntime.Api.World.RuntimeWorld">RuntimeWorld</a> now has <a href="xref:OnixRuntime.Api.World.RuntimeWorld.IsHardcore">IsHardcore</a>, which you can get AND set :D.
 <ul>
-<li>Setting it on the client will require trust and probably not do much other than change the client-side UI.</li>
+<li>Setting it on the client will require trust and probably not do much other than change the client-side UI (hearts).</li>
 <li>Setting it on the server won't immediately do anything but after a relog it should apply.</li>
 </ul>
 </li>
-<li>All Onix Settings and Modules have a ToString method now.
+<li>All Onix Client Settings and Modules have a <code>ToString()</code> method now.
 <ul>
 <li>This mostly helps in the debugger to see what you're working with at a glance.</li>
 </ul>
@@ -170,7 +170,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 <li>I got annoyed when testing having to add , so I added this. <code>var pos = BlockPos.FromString(&quot;451 74 17&quot;);</code> is now a thing.</li>
 </ul>
 </li>
-<li>A few of <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a> now have an AfterSetting bool you can set to have them take effect after the setting.
+<li>A few of the <a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector">OnixModuleSettingRedirector</a>'s now have an <code>AfterSetting</code> bool you can set to have them take effect after the setting.
 <ul>
 <li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryAttribute">CategoryAttribute</a> has is.</li>
 <li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.CategoryStopAttribute">CategoryStopAttribute</a> has is.</li>
@@ -178,7 +178,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 <li><a href="xref:OnixRuntime.Api.OnixClient.OnixModuleSettingRedirector.AirAttribute">AirAttribute</a> has is.</li>
 </ul>
 </li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule">OnixModule</a> now has a <a href="xref:OnixRuntime.Api.OnixClient.OnixModule.IsBlockedEnabled">IsBlockedEnabled</a> to reflect recent changes in the blocking system.</li>
+<li><a href="xref:OnixRuntime.Api.OnixClient.OnixModule">OnixModule</a> now has <a href="xref:OnixRuntime.Api.OnixClient.OnixModule.IsBlockedEnabled">IsBlockedEnabled</a> to reflect recent changes in the blocking system.</li>
 <li><a href="xref:OnixRuntime.Api.World.WorldChunks">WorldChunks</a> now has a <a href="xref:OnixRuntime.Api.World.WorldChunks.LoadedChunks">LoadedChunks</a> property and an <a href="xref:OnixRuntime.Api.World.WorldChunks.AllChunks">AllChunks</a> property. <a href="xref:OnixRuntime.Api.World.WorldChunks.LoadedChunks">LoadedChunks</a> does the same as iterating over the <a href="xref:OnixRuntime.Api.World.WorldChunks">WorldChunks</a> instance but is more explicit.</li>
 <li>NEW <a href="xref:OnixRuntime.Api.Events.OnixEvents.World">World</a> EVENTS!
 <ul>
@@ -196,7 +196,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 </li>
 <li>You can now create your own <a href="xref:OnixRuntime.Api.World.WorldBlocks">WorldBlocks</a> instances!
 <ul>
-<li>You should create it on the thread it will be used on. This lets you use it on other threads. (Aka async <a href="">GetBlock</a>)</li>
+<li>You should create it on the thread it will be used on. This lets you use it on other threads. (AKA async <a href="">GetBlock</a>)</li>
 <li>I can't guarantee the absolute stability if not used exactly how the game wants you to.</li>
 <li>Here are the different 'constructors'.
 <ul>
@@ -222,10 +222,10 @@ With this update, the PluginManager UI should update automatically, so you can j
 </ul>
 </li>
 <li><code>Onix.Client.</code> <a href="xref:OnixRuntime.Api.OnixClientThings.Notify*">Notify</a>, <a href="xref:OnixRuntime.Api.OnixClientThings.NotifyBanner*">NotifyBanner</a> and <a href="xref:OnixRuntime.Api.OnixClientThings.NotifyTray*">NotifyTray</a> now all take an onClick parameter.</li>
-<li>The <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller">OnixPluginInstaller</a> now has a few more functions to help with the multiple sources.
+<li>The <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller">OnixPluginInstaller</a> now has a few more functions to help with the multiple plugin sources.
 <ul>
-<li>The static <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl">OnixPluginInstaller.OfficialRepositoryUrl</a> property lets you get the official repository url.</li>
-<li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls">GetCuratedRemoteSourceUrls()</a> gets a list of urls for the sources. (Fixes formatting and makes sure the official one is always there and first in the list. It never has a trailing /.)</li>
+<li>The static <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl">OnixPluginInstaller.OfficialRepositoryUrl</a> property lets you get the official repository URL.</li>
+<li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.GetCuratedRemoteSourceUrls">GetCuratedRemoteSourceUrls()</a> gets a list of URLs for the sources. (Fixes formatting and makes sure the official one is always there and first in the list. It never has a trailing /.)</li>
 <li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.SaveRemoteSourceUrls">SaveRemoteSourceUrls()</a> for when you change the <a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.RemoteSourceUrls">RemoteSourceUrls</a> property.</li>
 <li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources*">GetRemotePluginFromSources()</a> gets all versions of a plugin from all sources. Note that there is a bool to get only the compatible ones. The list it returns is sorted from best to worst.</li>
 <li><a href="xref:OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources*">GetRemotePluginsFromSources()</a> Gets all plugins from all sources regardless of compatibility or duplicates. The list is unsorted.</li>
@@ -255,7 +255,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 <li>The Modules API now uses shared memory address containers for all modules, fixing a lot of issues with the previous runtime.
 <ul>
 <li>(1k changes moment...)</li>
-<li>This fixes AddSetting but also anything else that was broken that I was aware of.</li>
+<li>This fixes <code>AddSetting</code> but also anything else that was broken that I was or was not aware of.</li>
 <li>This also ensures that you don't get your setting taken away from you randomly.</li>
 <li>Now when that happens you'll get a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.objectdisposedexception?view=net-8.0">ObjectDisposedException</a> instead of a crash.
 <br></li>
@@ -282,8 +282,8 @@ With this update, the PluginManager UI should update automatically, so you can j
 </ul>
 <h3 id="client-bug-fixes">Client Bug Fixes</h3>
 <ul>
-<li>Rendering with vibrant visuals now works as you'd expect.</li>
-<li>Notifications now stack properly again. (You could only ever have one notification at a time before)</li>
+<li>Rendering with Vibrant Visuals now works as you'd expect.</li>
+<li>Notifications now stack properly again. (You could only ever have one notification at a time before).</li>
 </ul>
 
 </article>

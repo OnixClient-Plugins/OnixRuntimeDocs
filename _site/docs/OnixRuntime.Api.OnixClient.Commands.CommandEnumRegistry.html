@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CommandEnumRegistry | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CommandEnumRegistry | Onix Plugin Documentation ">
+      
+      <meta name="description" content="This is a registry for command enums, it lets you hold enum values, their icons, change and register them. This is what you use to make them available for command arguments of type enum. Soft enums are suggested values that can be added to at runtime, they don&#39;t have to be predefined and the user doesn&#39;t have to put one of those values. Enums are values that are predefined (you can change them later by re-registering the enum) and the user has to pick one of those values, nothing else.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/dev/apiSpec/new?filename=OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry">
+
+
+
+  <h1 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" class="text-break">
+Class CommandEnumRegistry  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.html">OnixClient</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.html">Commands</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This is a registry for command enums, it lets you hold enum values, their icons, change and register them.
+This is what you use to make them available for command arguments of type enum.
+Soft enums are suggested values that can be added to at runtime, they don't have to be predefined and the user doesn't have to put one of those values.
+Enums are values that are predefined (you can change them later by re-registering the enum) and the user has to pick one of those values, nothing else.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class CommandEnumRegistry</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CommandEnumRegistry</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_AddSoftEnumValue_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_AddSoftEnumValue_System_String_OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_SoftEnumValue_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)">
+  AddSoftEnumValue(string, SoftEnumValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a soft enum value to an existing enum.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddSoftEnumValue(string enumName, CommandEnumRegistry.SoftEnumValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enumName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the enum to add the value to</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html">SoftEnumValue</a></dt>
+    <dd><p>The soft enum value to add</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_AddSoftEnumValue_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_AddSoftEnumValue_System_String_System_String_System_String_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,System.String,System.String)">
+  AddSoftEnumValue(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a soft enum value to an existing enum.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddSoftEnumValue(string enumName, string value, string icon = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enumName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the enum to add the value to</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string value to add</p>
+</dd>
+    <dt><code>icon</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The icon for the enum value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_GetPrefixedName_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_GetPrefixedName_System_String_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String)">
+  GetPrefixedName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a prefixed name by combining the plugin's unique identifier with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPrefixedName(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The base name to be prefixed. Cannot be null.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing the plugin's unique identifier followed by a colon and the specified name.  If the
+plugin cannot be determined, the prefix &quot;unknown:&quot; is used instead.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_GetPrefixedName_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_GetPrefixedName_System_String_System_Reflection_Assembly_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String,System.Reflection.Assembly)">
+  GetPrefixedName(string, Assembly?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a prefixed name by combining a plugin's unique identifier with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPrefixedName(string name, Assembly? assembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to be prefixed. Cannot be null or empty.</p>
+</dd>
+    <dt><code>assembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly associated with the plugin. If null, the plugin is determined from the current call stack.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string containing the plugin's unique identifier followed by a colon and the specified name.  If the
+plugin cannot be determined, the prefix &quot;unknown:&quot; is used instead.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnum_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnum_System_String_System_Collections_Generic_Dictionary_System_String_OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_EnumValue__" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue})">
+  RegisterEnum(string, Dictionary&lt;string, EnumValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an enum type in the registry.
+The name only has to be unique in your plugin, not across all plugins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterEnum(string name, Dictionary&lt;string, CommandEnumRegistry.EnumValue&gt; values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue.html">EnumValue</a>&gt;</dt>
+    <dd><p>The dictionary of enum values to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnum_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnum_System_String_System_Type_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Type)">
+  RegisterEnum(string, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an enum type in the registry.
+The name only has to be unique in your plugin, not across all plugins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterEnum(string name, Type enumType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+    <dt><code>enumType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The enum type to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnumIfNotExist_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnumIfNotExist_System_String_System_Type_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist(System.String,System.Type)">
+  RegisterEnumIfNotExist(string, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an enum type if it doesn't already exist in the registry.
+The name only has to be unique in your plugin, not across all plugins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterEnumIfNotExist(string name, Type enumType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+    <dt><code>enumType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The enum type to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnumIfNotExist_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnumIfNotExist__1_System_String_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist``1(System.String)">
+  RegisterEnumIfNotExist&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an enum type if it doesn't already exist in the registry.
+The name only has to be unique in your plugin, not across all plugins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterEnumIfNotExist&lt;T&gt;(string name) where T : Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The enum type to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnum_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnum__1_System_String_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum``1(System.String)">
+  RegisterEnum&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an enum type in the registry.
+The name only has to be unique in your plugin, not across all plugins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterEnum&lt;T&gt;(string name) where T : Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The enum type to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_System_String_System_Collections_Generic_IEnumerable_OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_SoftEnumValue__" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})">
+  RegisterSoftEnum(string, IEnumerable&lt;SoftEnumValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a soft enum type if it doesn't already exist in the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterSoftEnum(string name, IEnumerable&lt;CommandEnumRegistry.SoftEnumValue&gt; values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html">SoftEnumValue</a>&gt;</dt>
+    <dd><p>The list of soft enum values to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{System.String})">
+  RegisterSoftEnum(string, IEnumerable&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a soft enum type if it doesn't already exist in the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterSoftEnum(string name, IEnumerable&lt;string&gt; values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The list of string values to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_System_String_System_Collections_Generic_List_OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_SoftEnumValue__" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})">
+  RegisterSoftEnum(string, List&lt;SoftEnumValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a soft enum type if it doesn't already exist in the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterSoftEnum(string name, List&lt;CommandEnumRegistry.SoftEnumValue&gt; values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html">SoftEnumValue</a>&gt;</dt>
+    <dd><p>The list of soft enum values to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_System_String_System_Collections_Generic_List_System_String__" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{System.String})">
+  RegisterSoftEnum(string, List&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a soft enum type if it doesn't already exist in the registry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterSoftEnum(string name, List&lt;string&gt; values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name to use for the enum registration</p>
+</dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The list of string values to register</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RemoveSoftEnumValue_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RemoveSoftEnumValue_System_String_System_String_" data-uid="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue(System.String,System.String)">
+  RemoveSoftEnumValue(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a soft enum value from an existing enum.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveSoftEnumValue(string enumName, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enumName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the enum to remove the value from</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string value to remove</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

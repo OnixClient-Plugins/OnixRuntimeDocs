@@ -108,6 +108,25 @@ Example: The carried grass texture is hardcoded green while the default one is g
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html">GameBlockRenderer</a></dt>
+      <dd><p>Allows you to render game blocks, this is a little more involved of a process than calling a magical render block function, but the results are pretty good.
+You get almost every block and their hardcoded behavior handled for you, occlusion if you set it up.
+It's still a lot less involved than implementing all of this yourself!</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRendererCache.html">GameBlockRendererCache</a></dt>
+      <dd><p>IMPORTANT: You HAVE to <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRendererCache.html#OnixRuntime_Api_Rendering_GameBlockRendererCache_Reset_OnixRuntime_Api_Maths_BlockPos_">Reset(BlockPos)</a> the cache if you plan on making use of it, getting or setting any values out of it.
+This is what the <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html">GameBlockRenderer</a> goes to everytime it needs a block.
+This lets you cheat by changing the cache yourself to manipulate the rendering.
+Very notably, <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder">UseOccluder</a> needs to be properly setup in order to work.
+Now this cache has a 20x20x20 area. You don't want to be rendering blocks outside of that.
+This cache is meant to contain a subchunk and two blocks outwards.
+You reset it with the starting position of your subchunk (+15 x,y,z should be the last/end position of the subchunk).
+Often, you will want the edges of your chunks to not be culled, so you can call <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRendererCache.html#OnixRuntime_Api_Rendering_GameBlockRendererCache_SurroundInAir_System_Boolean_System_Boolean_System_Boolean_">SurroundInAir(bool, bool, bool)</a> after resetting it to make it believe the edges are air.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html">GameMesh</a></dt>
       <dd><p>Represents a 3D/2D mesh in the game's renderer.
 You can render it later on.</p>
@@ -116,6 +135,11 @@ You can render it later on.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a></dt>
       <dd><p>Provides methods to build and render meshes at runtime.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameViewport.html">GameViewport</a></dt>
+      <dd><p>Represents the game's viewport. You can change those, they are read once per frame.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -261,6 +285,11 @@ There are always custom blocks that they added some time ago but for vanilla blo
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Rendering.FontUsage.html">FontUsage</a></dt>
       <dd><p>What scenario is the font used for?</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html">GameBlockRenderer.BlockLightingType</a></dt>
+      <dd><p>How the light should be rendered</p>
 </dd>
     </dl>
     <dl class="jumplist">

@@ -11,14 +11,17 @@ items:
   - OnixRuntime.Api.Maths.Vec3.#ctor(System.Single)
   - OnixRuntime.Api.Maths.Vec3.#ctor(System.Single,System.Single,System.Single)
   - OnixRuntime.Api.Maths.Vec3.Angle(OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.Vec3.Ceil
   - OnixRuntime.Api.Maths.Vec3.Clamp(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.Vec3.Clamp(System.Single,System.Single)
   - OnixRuntime.Api.Maths.Vec3.Cross(OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.Vec3.Direction
   - OnixRuntime.Api.Maths.Vec3.Distance(OnixRuntime.Api.Maths.Vec3)
+  - OnixRuntime.Api.Maths.Vec3.DistanceSqr(OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.Vec3.Dot(OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.Vec3.Equals(OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.Vec3.Equals(System.Object)
+  - OnixRuntime.Api.Maths.Vec3.Floor
   - OnixRuntime.Api.Maths.Vec3.GetHashCode
   - OnixRuntime.Api.Maths.Vec3.Length
   - OnixRuntime.Api.Maths.Vec3.Lerp(OnixRuntime.Api.Maths.Vec3,System.Single)
@@ -29,6 +32,7 @@ items:
   - OnixRuntime.Api.Maths.Vec3.Normalized
   - OnixRuntime.Api.Maths.Vec3.One
   - OnixRuntime.Api.Maths.Vec3.Rotate(System.Single,System.Single)
+  - OnixRuntime.Api.Maths.Vec3.Round
   - OnixRuntime.Api.Maths.Vec3.SetDirection(OnixRuntime.Api.Maths.Vec2)
   - OnixRuntime.Api.Maths.Vec3.SetMagnitude(System.Single)
   - OnixRuntime.Api.Maths.Vec3.ToString
@@ -329,6 +333,103 @@ items:
       type: OnixRuntime.Api.Maths.Vec2
     content.vb: Public ReadOnly Property Direction As Vec2
   overload: OnixRuntime.Api.Maths.Vec3.Direction*
+- uid: OnixRuntime.Api.Maths.Vec3.Floor
+  commentId: M:OnixRuntime.Api.Maths.Vec3.Floor
+  id: Floor
+  parent: OnixRuntime.Api.Maths.Vec3
+  langs:
+  - csharp
+  - vb
+  name: Floor()
+  nameWithType: Vec3.Floor()
+  fullName: OnixRuntime.Api.Maths.Vec3.Floor()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Vec3.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Floor
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
+    startLine: 53
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a new vector with each component rounded down to the nearest integer.
+  example: []
+  syntax:
+    content: public Vec3 Floor()
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+      description: >-
+        A <xref href="OnixRuntime.Api.Maths.Vec3" data-throw-if-not-resolved="false"></xref> instance where each component is the largest integer less than or equal to the
+            corresponding component of the current vector.
+    content.vb: Public Function Floor() As Vec3
+  overload: OnixRuntime.Api.Maths.Vec3.Floor*
+- uid: OnixRuntime.Api.Maths.Vec3.Ceil
+  commentId: M:OnixRuntime.Api.Maths.Vec3.Ceil
+  id: Ceil
+  parent: OnixRuntime.Api.Maths.Vec3
+  langs:
+  - csharp
+  - vb
+  name: Ceil()
+  nameWithType: Vec3.Ceil()
+  fullName: OnixRuntime.Api.Maths.Vec3.Ceil()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Vec3.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Ceil
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
+    startLine: 59
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns a new <xref href="OnixRuntime.Api.Maths.Vec3" data-throw-if-not-resolved="false"></xref> instance with each component rounded up to the nearest integer.
+  example: []
+  syntax:
+    content: public Vec3 Ceil()
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+      description: >-
+        A <xref href="OnixRuntime.Api.Maths.Vec3" data-throw-if-not-resolved="false"></xref> where each component is the smallest integer greater than or equal to the corresponding
+            component of the current instance.
+    content.vb: Public Function Ceil() As Vec3
+  overload: OnixRuntime.Api.Maths.Vec3.Ceil*
+- uid: OnixRuntime.Api.Maths.Vec3.Round
+  commentId: M:OnixRuntime.Api.Maths.Vec3.Round
+  id: Round
+  parent: OnixRuntime.Api.Maths.Vec3
+  langs:
+  - csharp
+  - vb
+  name: Round()
+  nameWithType: Vec3.Round()
+  fullName: OnixRuntime.Api.Maths.Vec3.Round()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Vec3.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Round
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Rounds the components of the vector to the nearest integer values.
+  example: []
+  syntax:
+    content: public Vec3 Round()
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+      description: A new <xref href="OnixRuntime.Api.Maths.Vec3" data-throw-if-not-resolved="false"></xref> instance with each component rounded to the nearest integer.
+    content.vb: Public Function Round() As Vec3
+  overload: OnixRuntime.Api.Maths.Vec3.Round*
 - uid: OnixRuntime.Api.Maths.Vec3.#ctor
   commentId: M:OnixRuntime.Api.Maths.Vec3.#ctor
   id: '#ctor'
@@ -347,7 +448,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 51
+    startLine: 69
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -378,7 +479,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: One
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 55
+    startLine: 73
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -409,7 +510,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Zero
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 59
+    startLine: 77
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -440,7 +541,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 67
+    startLine: 85
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -481,7 +582,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 77
+    startLine: 95
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -519,7 +620,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 86
+    startLine: 104
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -554,7 +655,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 95
+    startLine: 113
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -589,7 +690,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WithX
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 107
+    startLine: 125
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -630,7 +731,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WithY
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 116
+    startLine: 134
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -671,7 +772,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WithZ
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 126
+    startLine: 144
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -714,7 +815,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Distance
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 134
+    startLine: 152
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -730,6 +831,41 @@ items:
       type: System.Single
     content.vb: Public Function Distance(vec As Vec3) As Single
   overload: OnixRuntime.Api.Maths.Vec3.Distance*
+- uid: OnixRuntime.Api.Maths.Vec3.DistanceSqr(OnixRuntime.Api.Maths.Vec3)
+  commentId: M:OnixRuntime.Api.Maths.Vec3.DistanceSqr(OnixRuntime.Api.Maths.Vec3)
+  id: DistanceSqr(OnixRuntime.Api.Maths.Vec3)
+  parent: OnixRuntime.Api.Maths.Vec3
+  langs:
+  - csharp
+  - vb
+  name: DistanceSqr(Vec3)
+  nameWithType: Vec3.DistanceSqr(Vec3)
+  fullName: OnixRuntime.Api.Maths.Vec3.DistanceSqr(OnixRuntime.Api.Maths.Vec3)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Vec3.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: DistanceSqr
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
+    startLine: 164
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns the squared distance between this vector and another vector.
+  example: []
+  syntax:
+    content: public float DistanceSqr(Vec3 vec)
+    parameters:
+    - id: vec
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The other vector to get the squared distance from.
+    return:
+      type: System.Single
+      description: The squared distance from that other vector.
+    content.vb: Public Function DistanceSqr(vec As Vec3) As Single
+  overload: OnixRuntime.Api.Maths.Vec3.DistanceSqr*
 - uid: OnixRuntime.Api.Maths.Vec3.Angle(OnixRuntime.Api.Maths.Vec3)
   commentId: M:OnixRuntime.Api.Maths.Vec3.Angle(OnixRuntime.Api.Maths.Vec3)
   id: Angle(OnixRuntime.Api.Maths.Vec3)
@@ -748,7 +884,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Angle
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 144
+    startLine: 174
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -782,7 +918,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dot
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 152
+    startLine: 182
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -816,7 +952,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetMagnitude
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 159
+    startLine: 189
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -851,7 +987,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetDirection
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 171
+    startLine: 201
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -883,7 +1019,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Rotate
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 182
+    startLine: 212
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -923,7 +1059,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Cross
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 192
+    startLine: 222
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -957,7 +1093,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Lerp
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 203
+    startLine: 233
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -997,7 +1133,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Min
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 211
+    startLine: 241
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1031,7 +1167,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Max
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 218
+    startLine: 248
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1065,7 +1201,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clamp
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 226
+    startLine: 256
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1102,7 +1238,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clamp
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 238
+    startLine: 268
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1142,7 +1278,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Addition
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 247
+    startLine: 277
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1182,7 +1318,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Addition
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 255
+    startLine: 285
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1222,7 +1358,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_UnaryNegation
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 262
+    startLine: 292
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1259,7 +1395,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Subtraction
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 270
+    startLine: 300
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1299,7 +1435,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Subtraction
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 278
+    startLine: 308
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1339,7 +1475,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 286
+    startLine: 316
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1379,7 +1515,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 294
+    startLine: 324
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1419,7 +1555,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 302
+    startLine: 332
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1459,7 +1595,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 310
+    startLine: 340
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1499,7 +1635,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 321
+    startLine: 351
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1539,7 +1675,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Implicit
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 332
+    startLine: 362
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1576,7 +1712,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Implicit
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 337
+    startLine: 367
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1613,7 +1749,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 344
+    startLine: 374
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1653,7 +1789,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 352
+    startLine: 382
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1693,7 +1829,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_LessThan
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 360
+    startLine: 390
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1733,7 +1869,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_GreaterThan
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 368
+    startLine: 398
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1773,7 +1909,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_LessThanOrEqual
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 376
+    startLine: 406
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1813,7 +1949,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_GreaterThanOrEqual
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 384
+    startLine: 414
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1853,7 +1989,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 391
+    startLine: 421
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1884,7 +2020,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 398
+    startLine: 428
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1920,7 +2056,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 405
+    startLine: 435
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1958,7 +2094,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 414
+    startLine: 444
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1989,7 +2125,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Vec3.cs
-    startLine: 422
+    startLine: 452
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -2290,6 +2426,24 @@ references:
   name: Vec2
   nameWithType: Vec2
   fullName: OnixRuntime.Api.Maths.Vec2
+- uid: OnixRuntime.Api.Maths.Vec3.Floor*
+  commentId: Overload:OnixRuntime.Api.Maths.Vec3.Floor
+  href: OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_Floor
+  name: Floor
+  nameWithType: Vec3.Floor
+  fullName: OnixRuntime.Api.Maths.Vec3.Floor
+- uid: OnixRuntime.Api.Maths.Vec3.Ceil*
+  commentId: Overload:OnixRuntime.Api.Maths.Vec3.Ceil
+  href: OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_Ceil
+  name: Ceil
+  nameWithType: Vec3.Ceil
+  fullName: OnixRuntime.Api.Maths.Vec3.Ceil
+- uid: OnixRuntime.Api.Maths.Vec3.Round*
+  commentId: Overload:OnixRuntime.Api.Maths.Vec3.Round
+  href: OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_Round
+  name: Round
+  nameWithType: Vec3.Round
+  fullName: OnixRuntime.Api.Maths.Vec3.Round
 - uid: OnixRuntime.Api.Maths.Vec3.#ctor*
   commentId: Overload:OnixRuntime.Api.Maths.Vec3.#ctor
   href: OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3__ctor
@@ -2377,6 +2531,12 @@ references:
   name: Distance
   nameWithType: Vec3.Distance
   fullName: OnixRuntime.Api.Maths.Vec3.Distance
+- uid: OnixRuntime.Api.Maths.Vec3.DistanceSqr*
+  commentId: Overload:OnixRuntime.Api.Maths.Vec3.DistanceSqr
+  href: OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_DistanceSqr_OnixRuntime_Api_Maths_Vec3_
+  name: DistanceSqr
+  nameWithType: Vec3.DistanceSqr
+  fullName: OnixRuntime.Api.Maths.Vec3.DistanceSqr
 - uid: OnixRuntime.Api.Maths.Vec3.Angle*
   commentId: Overload:OnixRuntime.Api.Maths.Vec3.Angle
   href: OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_Angle_OnixRuntime_Api_Maths_Vec3_

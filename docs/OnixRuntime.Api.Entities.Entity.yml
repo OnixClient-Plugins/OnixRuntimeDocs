@@ -26,6 +26,7 @@ items:
   - OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
   - OnixRuntime.Api.Entities.Entity.HeightOffset
   - OnixRuntime.Api.Entities.Entity.HelmetItem
+  - OnixRuntime.Api.Entities.Entity.IsAlive
   - OnixRuntime.Api.Entities.Entity.IsClientSide
   - OnixRuntime.Api.Entities.Entity.IsTargetable
   - OnixRuntime.Api.Entities.Entity.Kill
@@ -152,6 +153,37 @@ items:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsClientSide As Boolean
   overload: OnixRuntime.Api.Entities.Entity.IsClientSide*
+- uid: OnixRuntime.Api.Entities.Entity.IsAlive
+  commentId: P:OnixRuntime.Api.Entities.Entity.IsAlive
+  id: IsAlive
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: IsAlive
+  nameWithType: Entity.IsAlive
+  fullName: OnixRuntime.Api.Entities.Entity.IsAlive
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsAlive
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 64
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: True when the entity is alive, false when it is dead. It's quite simple really.
+  example: []
+  syntax:
+    content: public bool IsAlive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAlive As Boolean
+  overload: OnixRuntime.Api.Entities.Entity.IsAlive*
 - uid: OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
   commentId: M:OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
   id: HasCategory(OnixRuntime.Api.Entities.EntityCategory)
@@ -170,7 +202,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HasCategory
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 65
+    startLine: 69
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -203,7 +235,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetFlag
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 72
+    startLine: 76
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -236,7 +268,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetFlag
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 80
+    startLine: 84
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -279,7 +311,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsTargetable
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 87
+    startLine: 91
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -310,7 +342,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Nametag
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 92
+    startLine: 96
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -341,7 +373,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RawPosition
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 99
+    startLine: 103
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -372,7 +404,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Position
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 103
+    startLine: 107
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -403,7 +435,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ForwardPosition
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 111
+    startLine: 115
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -439,7 +471,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BlockPosition
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 115
+    startLine: 119
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -470,7 +502,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChunkPosition
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 119
+    startLine: 123
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -501,7 +533,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Velocity
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 123
+    startLine: 127
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -532,7 +564,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Rotation
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 127
+    startLine: 131
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -563,7 +595,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TypeName
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 131
+    startLine: 135
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -594,7 +626,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TypeNamespace
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 135
+    startLine: 139
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -625,7 +657,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: TypeNameFull
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 139
+    startLine: 143
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -656,7 +688,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UniqueId
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 143
+    startLine: 147
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -687,7 +719,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RuntimeId
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 147
+    startLine: 151
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -718,7 +750,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ScoreboardIdentity
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 151
+    startLine: 155
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -749,7 +781,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HeightOffset
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 155
+    startLine: 159
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -780,7 +812,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StepHeight
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 159
+    startLine: 163
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -811,7 +843,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AliveDuration
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 163
+    startLine: 167
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -842,7 +874,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AliveTicks
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 167
+    startLine: 171
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -873,7 +905,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Attributes
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 171
+    startLine: 175
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -904,7 +936,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 175
+    startLine: 179
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -937,7 +969,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 179
+    startLine: 183
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -973,7 +1005,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UpdateAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 183
+    startLine: 187
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1004,7 +1036,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UpdateAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 189
+    startLine: 193
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1043,7 +1075,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Kill
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 200
+    startLine: 204
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1071,7 +1103,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Effects
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 204
+    startLine: 208
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1102,7 +1134,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBox
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 208
+    startLine: 212
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1133,7 +1165,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBoxRaw
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 212
+    startLine: 216
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1164,7 +1196,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBoxSize
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 216
+    startLine: 220
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1195,7 +1227,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SimpleMolangVariables
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 220
+    startLine: 224
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1226,7 +1258,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dimension
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 224
+    startLine: 228
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1257,7 +1289,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Region
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 228
+    startLine: 232
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1288,7 +1320,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: World
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 232
+    startLine: 236
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1319,7 +1351,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Riding
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 236
+    startLine: 240
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1350,7 +1382,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RiddenBy
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 240
+    startLine: 244
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1381,7 +1413,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MainHandItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 248
+    startLine: 252
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1412,7 +1444,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OffhandItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 256
+    startLine: 260
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1443,7 +1475,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HelmetItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 264
+    startLine: 268
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1474,7 +1506,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChestplateItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 272
+    startLine: 276
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1505,7 +1537,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LeggingsItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 280
+    startLine: 284
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1536,7 +1568,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BootsItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 288
+    startLine: 292
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1567,7 +1599,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ArmorItems
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 296
+    startLine: 300
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1598,7 +1630,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 310
+    startLine: 314
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1946,6 +1978,12 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: OnixRuntime.Api.Entities.Entity.IsAlive*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.IsAlive
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsAlive
+  name: IsAlive
+  nameWithType: Entity.IsAlive
+  fullName: OnixRuntime.Api.Entities.Entity.IsAlive
 - uid: OnixRuntime.Api.Entities.Entity.HasCategory*
   commentId: Overload:OnixRuntime.Api.Entities.Entity.HasCategory
   href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_HasCategory_OnixRuntime_Api_Entities_EntityCategory_

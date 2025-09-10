@@ -44,6 +44,9 @@ items:
   - OnixRuntime.Api.Maths.BlockPos.ToString(System.String)
   - OnixRuntime.Api.Maths.BlockPos.Up
   - OnixRuntime.Api.Maths.BlockPos.West
+  - OnixRuntime.Api.Maths.BlockPos.WithX(System.Int32)
+  - OnixRuntime.Api.Maths.BlockPos.WithY(System.Int32)
+  - OnixRuntime.Api.Maths.BlockPos.WithZ(System.Int32)
   - OnixRuntime.Api.Maths.BlockPos.X
   - OnixRuntime.Api.Maths.BlockPos.Y
   - OnixRuntime.Api.Maths.BlockPos.Z
@@ -351,6 +354,129 @@ items:
   nameWithType.vb: BlockPos.FromString(ReadOnlySpan(Of Char), Boolean)
   fullName.vb: OnixRuntime.Api.Maths.BlockPos.FromString(System.ReadOnlySpan(Of Char), Boolean)
   name.vb: FromString(ReadOnlySpan(Of Char), Boolean)
+- uid: OnixRuntime.Api.Maths.BlockPos.WithX(System.Int32)
+  commentId: M:OnixRuntime.Api.Maths.BlockPos.WithX(System.Int32)
+  id: WithX(System.Int32)
+  parent: OnixRuntime.Api.Maths.BlockPos
+  langs:
+  - csharp
+  - vb
+  name: WithX(int)
+  nameWithType: BlockPos.WithX(int)
+  fullName: OnixRuntime.Api.Maths.BlockPos.WithX(int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BlockPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithX
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 98
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: >-
+    Creates a new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance with the specified X-coordinate,  while retaining the current
+
+    Y and Z coordinates.
+  example: []
+  syntax:
+    content: public BlockPos WithX(int x)
+    parameters:
+    - id: x
+      type: System.Int32
+      description: The X-coordinate to use for the new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: A new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance with the specified X-coordinate.
+    content.vb: Public Function WithX(x As Integer) As BlockPos
+  overload: OnixRuntime.Api.Maths.BlockPos.WithX*
+  nameWithType.vb: BlockPos.WithX(Integer)
+  fullName.vb: OnixRuntime.Api.Maths.BlockPos.WithX(Integer)
+  name.vb: WithX(Integer)
+- uid: OnixRuntime.Api.Maths.BlockPos.WithY(System.Int32)
+  commentId: M:OnixRuntime.Api.Maths.BlockPos.WithY(System.Int32)
+  id: WithY(System.Int32)
+  parent: OnixRuntime.Api.Maths.BlockPos
+  langs:
+  - csharp
+  - vb
+  name: WithY(int)
+  nameWithType: BlockPos.WithY(int)
+  fullName: OnixRuntime.Api.Maths.BlockPos.WithY(int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BlockPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithY
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 107
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: >-
+    Creates a new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance with the specified Y-coordinate,  while retaining the current
+
+    X and Z coordinates.
+  example: []
+  syntax:
+    content: public BlockPos WithY(int y)
+    parameters:
+    - id: y
+      type: System.Int32
+      description: The Y-coordinate to use for the new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: A new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance with the specified Y-coordinate.
+    content.vb: Public Function WithY(y As Integer) As BlockPos
+  overload: OnixRuntime.Api.Maths.BlockPos.WithY*
+  nameWithType.vb: BlockPos.WithY(Integer)
+  fullName.vb: OnixRuntime.Api.Maths.BlockPos.WithY(Integer)
+  name.vb: WithY(Integer)
+- uid: OnixRuntime.Api.Maths.BlockPos.WithZ(System.Int32)
+  commentId: M:OnixRuntime.Api.Maths.BlockPos.WithZ(System.Int32)
+  id: WithZ(System.Int32)
+  parent: OnixRuntime.Api.Maths.BlockPos
+  langs:
+  - csharp
+  - vb
+  name: WithZ(int)
+  nameWithType: BlockPos.WithZ(int)
+  fullName: OnixRuntime.Api.Maths.BlockPos.WithZ(int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/BlockPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithZ
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/BlockPos.cs
+    startLine: 116
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: >-
+    Creates a new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance with the specified Z-coordinate,  while retaining the current
+
+    X and Y coordinates.
+  example: []
+  syntax:
+    content: public BlockPos WithZ(int z)
+    parameters:
+    - id: z
+      type: System.Int32
+      description: The Z-coordinate to use for the new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: A new <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> instance with the specified Z-coordinate.
+    content.vb: Public Function WithZ(z As Integer) As BlockPos
+  overload: OnixRuntime.Api.Maths.BlockPos.WithZ*
+  nameWithType.vb: BlockPos.WithZ(Integer)
+  fullName.vb: OnixRuntime.Api.Maths.BlockPos.WithZ(Integer)
+  name.vb: WithZ(Integer)
 - uid: OnixRuntime.Api.Maths.BlockPos.Add(System.Int32,System.Int32,System.Int32)
   commentId: M:OnixRuntime.Api.Maths.BlockPos.Add(System.Int32,System.Int32,System.Int32)
   id: Add(System.Int32,System.Int32,System.Int32)
@@ -2849,6 +2975,24 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: OnixRuntime.Api.Maths.BlockPos.WithX*
+  commentId: Overload:OnixRuntime.Api.Maths.BlockPos.WithX
+  href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_WithX_System_Int32_
+  name: WithX
+  nameWithType: BlockPos.WithX
+  fullName: OnixRuntime.Api.Maths.BlockPos.WithX
+- uid: OnixRuntime.Api.Maths.BlockPos.WithY*
+  commentId: Overload:OnixRuntime.Api.Maths.BlockPos.WithY
+  href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_WithY_System_Int32_
+  name: WithY
+  nameWithType: BlockPos.WithY
+  fullName: OnixRuntime.Api.Maths.BlockPos.WithY
+- uid: OnixRuntime.Api.Maths.BlockPos.WithZ*
+  commentId: Overload:OnixRuntime.Api.Maths.BlockPos.WithZ
+  href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_WithZ_System_Int32_
+  name: WithZ
+  nameWithType: BlockPos.WithZ
+  fullName: OnixRuntime.Api.Maths.BlockPos.WithZ
 - uid: OnixRuntime.Api.Maths.BlockPos.Add*
   commentId: Overload:OnixRuntime.Api.Maths.BlockPos.Add
   href: OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_Add_System_Int32_System_Int32_System_Int32_

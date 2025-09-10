@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128030; Using a Debugger | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128030; Using a Debugger | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/guide/using-a-debugger.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-using-a-debugger">🐞 Using a Debugger</h1>
+
+<hr>
+<p>One of the best tools you can use when developing <strong>Onix Client Plugins</strong> is a debugger.
+Instead of spamming <code>Console.WriteLine</code> and hoping for the best, you can:</p>
+<ul>
+<li>Set <strong>breakpoints</strong> and step through your code.</li>
+<li><strong>Inspect values</strong> at runtime.</li>
+<li>Quickly figure out what's going wrong.</li>
+</ul>
+<hr>
+<h3 id="-note-for-jetbrains-rider-users">⚠️ Note For <em>JetBrains Rider</em> Users</h3>
+<p>If you're using <strong>JetBrains Rider</strong>, you won't be able to attach directly to the game as a .NET process.
+To use a debugger, you'll need to open your project in <strong>Visual Studio</strong> or <strong>Visual Studio Code</strong> instead.</p>
+<hr>
+<h2 id="-using-visual-studio">💻 Using Visual Studio</h2>
+<ul>
+<li>You will need Visual Studio installed with the <code>.NET desktop development</code> workload selected.</li>
+<li>Open your plugin's solution in Visual Studio for the best experience.</li>
+<li>Then in the <code>Debug</code> menubar option, click on <code>Attach to Process...</code>.
+<ul>
+<li>The default keybind is <code>Ctrl+Alt+P</code>.</li>
+<li>You can use the keybind to re-attach quickly when you have already attached once, the default keybind is <code>Shift+Alt+P</code>.</li>
+</ul>
+</li>
+<li>This should bring up the <code>Attach to Process</code> window.</li>
+<li>Before you do anything, make sure at the bottom right that <code>Code Type: </code> is set to <code>Managed (.NET Core, .NET 5+) code</code>
+<ul>
+<li>Make sure to select specifically that one and not another option that looks &quot;close enough&quot;.</li>
+<li>If <code>Native</code> or any other options are selected, make sure to uncheck them.</li>
+<li>If you don't uncheck <code>Native</code>, the debugger will be very slow and will crash the game when you stop debugging.</li>
+</ul>
+</li>
+<li>Then find (or search for) the <code>Minecraft.Windows.exe</code> process in the list.
+<ul>
+<li>If you don't see it, open the game.</li>
+</ul>
+</li>
+<li>You can double-click the process or select it and click <code>Attach</code>.</li>
+<li>You're done! You can now set breakpoints and debug your plugin.</li>
+</ul>
+<hr>
+<h2 id="-using-visual-studio-code">📝 Using Visual Studio Code</h2>
+<ul>
+<li>For Visual Studio Code, you will need to install the <code>C# Dev Kit</code> extension if you haven't already.</li>
+<li>I'm not sure how well it will work if you don't load the solution, so you should load your plugin's solution in Visual Studio Code.</li>
+<li>Then you could do it manually every time by doing the following steps:
+<ul>
+<li>Open the command palette with <code>Ctrl+Shift+P</code>.</li>
+<li>Type <code>Debug: Attach to .NET Core</code> and select it.</li>
+<li>This should bring up a list of processes, select <code>Minecraft.Windows.exe</code>.</li>
+</ul>
+</li>
+<li>Iff you want to set up keybinds, you can do the following:
+<ul>
+<li>In your project's root (in the folder view, not the Solution Explorer), create a folder named <code>.vscode</code> if it doesn't already exist.</li>
+<li>Create a file named <code>launch.json</code> in the <code>.vscode</code> folder.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;version&quot;: &quot;0.2.0&quot;,
+  &quot;configurations&quot;: [
+    {
+      &quot;name&quot;: &quot;Build &amp; Attach Debugger&quot;,
+      &quot;type&quot;: &quot;coreclr&quot;,
+      &quot;request&quot;: &quot;attach&quot;,
+      &quot;processName&quot;: &quot;Minecraft.Windows.exe&quot;,
+      &quot;justMyCode&quot;: false
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>With this, you should be able to build and attach the debugger by pressing <code>F5</code> or going to the Run and Debug view and clicking the green play button.
+<ul>
+<li>Note: If you don't have a <code>tasks.json</code> or a task named <code>dotnet build</code>, it will only attach the debugger without building.</li>
+<li>Here is a simple <code>tasks.json</code> that you can use to build your project:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;version&quot;: &quot;2.0.0&quot;,
+  &quot;tasks&quot;: [
+    {
+      &quot;label&quot;: &quot;dotnet build&quot;,
+      &quot;type&quot;: &quot;shell&quot;,
+      &quot;command&quot;: &quot;dotnet&quot;,
+      &quot;args&quot;: [
+        &quot;build&quot;,
+        &quot;${workspaceFolder}&quot;
+      ],
+      &quot;problemMatcher&quot;: &quot;$msCompile&quot;,
+      &quot;group&quot;: {
+        &quot;kind&quot;: &quot;build&quot;,
+        &quot;isDefault&quot;: true
+      },
+      &quot;presentation&quot;: {
+        &quot;reveal&quot;: &quot;always&quot;,
+        &quot;panel&quot;: &quot;shared&quot;
+      }
+    }
+  ]
+}
+
+</code></pre>
+<h2 id="-using-the-debugger">🔍 Using The Debugger</h2>
+<p>It's quite simple to use, it's useful when:</p>
+<ul>
+<li>You want to inspect variables.</li>
+<li>You want to step through your code line by line to see where it all went wrong.</li>
+<li>You want to set breakpoints to pause execution at a specific line of code.</li>
+<li>You want to see the call stack to understand how you got to a certain point in your code.</li>
+<li>You can use the icons in Visual Studio or Visual Studio Code to step over, step into, step out, continue, and stop debugging.</li>
+<li>Or learn the shortcuts, the defaults are:
+<ul>
+<li><code>F10</code> to step over.
+<ul>
+<li>Step over means it will execute the function without going into it.</li>
+</ul>
+</li>
+<li><code>F11</code> to step into.
+<ul>
+<li>Step into means it will go into the function and pause at the first line of it.</li>
+</ul>
+</li>
+<li><code>Shift+F11</code> to step out.
+<ul>
+<li>Step out means it will execute the rest of the function and pause at the line after the function call.</li>
+</ul>
+</li>
+<li><code>F5</code> to continue.
+<ul>
+<li>Continue means it will resume execution until the next breakpoint or the end of the program.</li>
+</ul>
+</li>
+<li><code>Shift+F5</code> to stop debugging.
+<ul>
+<li>Stop debugging means it will detach the debugger and resume normal execution.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://youtu.be/ntOpMI7rmJM?si=-DquI7Omx8j_FxOK">Here is a tutorial showing the basics of using the Visual Studio debugger.</a></li>
+<li><a href="https://learn.microsoft.com/en-us/visualstudio/debugger/debugger-feature-tour?view=vs-2022">Or if you prefer the written format, here is a guide from Microsoft.</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/guide/using-a-debugger.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

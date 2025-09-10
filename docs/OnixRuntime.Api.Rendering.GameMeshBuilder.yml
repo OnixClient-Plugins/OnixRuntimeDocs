@@ -91,6 +91,7 @@ items:
   - OnixRuntime.Api.Rendering.GameMeshBuilder.Clear
   - OnixRuntime.Api.Rendering.GameMeshBuilder.Color(OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.GameMeshBuilder.Color(System.UInt32)
+  - OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1
   - OnixRuntime.Api.Rendering.GameMeshBuilder.HasStarted
   - OnixRuntime.Api.Rendering.GameMeshBuilder.New(OnixRuntime.Api.Maths.ColorF,OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Boolean)
   - OnixRuntime.Api.Rendering.GameMeshBuilder.New(OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType,System.Boolean)
@@ -809,6 +810,37 @@ items:
       type: OnixRuntime.Api.Maths.Vec2
     content.vb: Public Sub Uv(uv As Vec2)
   overload: OnixRuntime.Api.Rendering.GameMeshBuilder.Uv*
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1
+  commentId: M:OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1
+  id: DisableUv1
+  parent: OnixRuntime.Api.Rendering.GameMeshBuilder
+  langs:
+  - csharp
+  - vb
+  name: DisableUv1()
+  nameWithType: GameMeshBuilder.DisableUv1()
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameMeshBuilder.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: DisableUv1
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
+    startLine: 175
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Disables the second UV in the mesh. To call before rendering or building.
+
+    This is useful when something out of control uses UV1, but you have no texture to provide for it.
+  example: []
+  syntax:
+    content: public void DisableUv1()
+    content.vb: Public Sub DisableUv1()
+  overload: OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1*
 - uid: OnixRuntime.Api.Rendering.GameMeshBuilder.PrimitiveType
   commentId: P:OnixRuntime.Api.Rendering.GameMeshBuilder.PrimitiveType
   id: PrimitiveType
@@ -827,7 +859,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PrimitiveType
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 174
+    startLine: 180
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -858,7 +890,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HasStarted
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 178
+    startLine: 184
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -889,7 +921,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PostTransformOffset
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 183
+    startLine: 189
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -920,7 +952,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PostScaleOffset
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 190
+    startLine: 196
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -951,7 +983,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: New
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 201
+    startLine: 207
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -992,7 +1024,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: New
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 214
+    startLine: 220
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1030,7 +1062,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clear
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 219
+    startLine: 225
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1058,7 +1090,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Render
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 227
+    startLine: 233
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1086,7 +1118,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Render
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 231
+    startLine: 237
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1117,7 +1149,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Build
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 242
+    startLine: 248
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1158,7 +1190,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 266
+    startLine: 272
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1215,7 +1247,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 285
+    startLine: 291
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1272,7 +1304,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 304
+    startLine: 310
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1329,7 +1361,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 323
+    startLine: 329
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1386,7 +1418,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddRoundRectVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 331
+    startLine: 337
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1427,7 +1459,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddRoundRectOutlineVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 343
+    startLine: 349
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1471,7 +1503,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 354
+    startLine: 360
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1512,7 +1544,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 365
+    startLine: 371
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1556,7 +1588,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 373
+    startLine: 379
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1600,7 +1632,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 382
+    startLine: 388
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1647,7 +1679,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddCircleVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 389
+    startLine: 395
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1688,7 +1720,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddCircleVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 397
+    startLine: 403
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1732,7 +1764,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseOutlineVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 406
+    startLine: 412
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1776,7 +1808,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseOutlineVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 418
+    startLine: 424
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1823,7 +1855,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseOutlineVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 427
+    startLine: 433
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1870,7 +1902,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddEllipseOutlineVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 437
+    startLine: 443
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1920,7 +1952,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddCircleOutlineVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 445
+    startLine: 451
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1964,7 +1996,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddCircleOutlineVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 454
+    startLine: 460
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2011,7 +2043,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesForFaceUv
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 465
+    startLine: 471
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2061,7 +2093,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesForFaceUv
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 632
+    startLine: 638
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2108,7 +2140,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesForFaceUvNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 645
+    startLine: 651
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2158,7 +2190,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesForFaceNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 810
+    startLine: 816
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2202,7 +2234,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesForFaceUvNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 948
+    startLine: 954
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2249,7 +2281,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesForFace
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 958
+    startLine: 964
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2293,7 +2325,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1097
+    startLine: 1103
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2337,7 +2369,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1283
+    startLine: 1289
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2378,7 +2410,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUv
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1295
+    startLine: 1301
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2428,7 +2460,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUv
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1519
+    startLine: 1525
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2475,7 +2507,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUv
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1528
+    startLine: 1534
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2522,7 +2554,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUv
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1538
+    startLine: 1544
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2566,7 +2598,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUv
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1546
+    startLine: 1552
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2607,7 +2639,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUvNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1562
+    startLine: 1568
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2657,7 +2689,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1787
+    startLine: 1793
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2701,7 +2733,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1948
+    startLine: 1954
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2742,7 +2774,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUvNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1959
+    startLine: 1965
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2789,7 +2821,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUvNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1969
+    startLine: 1975
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2836,7 +2868,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUvNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1980
+    startLine: 1986
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2880,7 +2912,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddBoundingBoxVerticesUvNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 1989
+    startLine: 1995
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2921,7 +2953,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadQuadVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2010
+    startLine: 2016
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2962,7 +2994,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadQuadVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2018
+    startLine: 2024
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3003,7 +3035,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2030
+    startLine: 2036
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3059,7 +3091,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2042
+    startLine: 2048
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3115,7 +3147,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2054
+    startLine: 2060
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3168,7 +3200,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2066
+    startLine: 2072
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3221,7 +3253,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2078
+    startLine: 2084
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3274,7 +3306,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2090
+    startLine: 2096
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3327,7 +3359,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2106
+    startLine: 2112
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3395,7 +3427,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2122
+    startLine: 2128
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3463,7 +3495,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2138
+    startLine: 2144
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3528,7 +3560,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2154
+    startLine: 2160
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3593,7 +3625,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2164
+    startLine: 2170
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3637,7 +3669,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2173
+    startLine: 2179
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3681,7 +3713,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2186
+    startLine: 2192
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3740,7 +3772,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2199
+    startLine: 2205
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3799,7 +3831,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2212
+    startLine: 2218
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3855,7 +3887,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2225
+    startLine: 2231
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3911,7 +3943,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2238
+    startLine: 2244
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -3967,7 +3999,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2251
+    startLine: 2257
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4023,7 +4055,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2268
+    startLine: 2274
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4094,7 +4126,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2285
+    startLine: 2291
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4165,7 +4197,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2302
+    startLine: 2308
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4233,7 +4265,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddQuadUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2319
+    startLine: 2325
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4301,7 +4333,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2327
+    startLine: 2333
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4339,7 +4371,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2334
+    startLine: 2340
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4377,7 +4409,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2344
+    startLine: 2350
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4427,7 +4459,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2354
+    startLine: 2360
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4477,7 +4509,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2364
+    startLine: 2370
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4524,7 +4556,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2374
+    startLine: 2380
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4571,7 +4603,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2384
+    startLine: 2390
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4618,7 +4650,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2394
+    startLine: 2400
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4665,7 +4697,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2407
+    startLine: 2413
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4724,7 +4756,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2420
+    startLine: 2426
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4783,7 +4815,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2433
+    startLine: 2439
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4839,7 +4871,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2446
+    startLine: 2452
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4895,7 +4927,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2456
+    startLine: 2462
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4936,7 +4968,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2464
+    startLine: 2470
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4977,7 +5009,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2475
+    startLine: 2481
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5030,7 +5062,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2486
+    startLine: 2492
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5083,7 +5115,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2497
+    startLine: 2503
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5133,7 +5165,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2508
+    startLine: 2514
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5183,7 +5215,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2519
+    startLine: 2525
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5233,7 +5265,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2530
+    startLine: 2536
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5283,7 +5315,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2544
+    startLine: 2550
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5345,7 +5377,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2558
+    startLine: 2564
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5407,7 +5439,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2572
+    startLine: 2578
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5466,7 +5498,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AddTriangleUvGradientNormalVertices
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2586
+    startLine: 2592
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5525,7 +5557,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2594
+    startLine: 2600
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5566,7 +5598,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2602
+    startLine: 2608
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5607,7 +5639,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2610
+    startLine: 2616
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5648,7 +5680,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2618
+    startLine: 2624
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5689,7 +5721,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2626
+    startLine: 2632
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5730,7 +5762,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2634
+    startLine: 2640
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5771,7 +5803,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2642
+    startLine: 2648
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5812,7 +5844,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2650
+    startLine: 2656
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5853,7 +5885,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2658
+    startLine: 2664
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5894,7 +5926,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2666
+    startLine: 2672
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5935,7 +5967,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2674
+    startLine: 2680
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -5976,7 +6008,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2682
+    startLine: 2688
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -6017,7 +6049,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2690
+    startLine: 2696
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -6058,7 +6090,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2698
+    startLine: 2704
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -6099,7 +6131,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2706
+    startLine: 2712
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -6140,7 +6172,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VertexBatch
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameMeshBuilder.cs
-    startLine: 2714
+    startLine: 2720
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -6589,6 +6621,12 @@ references:
   name: Uv
   nameWithType: GameMeshBuilder.Uv
   fullName: OnixRuntime.Api.Rendering.GameMeshBuilder.Uv
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1
+  href: OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_DisableUv1
+  name: DisableUv1
+  nameWithType: GameMeshBuilder.DisableUv1
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder.DisableUv1
 - uid: OnixRuntime.Api.Rendering.GameMeshBuilder.PrimitiveType*
   commentId: Overload:OnixRuntime.Api.Rendering.GameMeshBuilder.PrimitiveType
   href: OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_PrimitiveType

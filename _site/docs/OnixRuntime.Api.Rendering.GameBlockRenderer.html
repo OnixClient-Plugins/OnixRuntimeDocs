@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GameBlockRenderer | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GameBlockRenderer | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Allows you to render game blocks, this is a little more involved of a process than calling a magical render block function, but the results are pretty good. You get almost every block and their hardcoded behavior handled for you, occlusion if you set it up. It&#39;s still a lot less involved than implementing all of this yourself!">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/dev/apiSpec/new?filename=OnixRuntime_Api_Rendering_GameBlockRenderer.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Rendering.GameBlockRenderer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer">
+
+
+
+  <h1 id="OnixRuntime_Api_Rendering_GameBlockRenderer" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer" class="text-break">
+Class GameBlockRenderer  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Rendering.html">Rendering</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Allows you to render game blocks, this is a little more involved of a process than calling a magical render block function, but the results are pretty good.
+You get almost every block and their hardcoded behavior handled for you, occlusion if you set it up.
+It's still a lot less involved than implementing all of this yourself!</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GameBlockRenderer : MemoryAddressContainer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html">MemoryAddressContainer</a></div>
+      <div><span class="xref">GameBlockRenderer</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_">MemoryAddressContainer.SetMemoryAddress(nint)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_">MemoryAddressContainer.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode">MemoryAddressContainer.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_Cache_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.Cache*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_Cache" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.Cache">
+  Cache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is what the <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html">GameBlockRenderer</a> goes to everytime it needs a block.
+This lets you cheat by changing the cache yourself to manipulate the rendering.
+Very notably, <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder">UseOccluder</a> needs to be properly setup in order to work.
+The cache contains a region of 20x20x20 blocks, which is meant to be a subchunk and two blocks around it.
+Going outside the cache usually will lead to air being returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameBlockRendererCache Cache { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRendererCache.html">GameBlockRendererCache</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentBlock_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentBlock" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock">
+  CurrentBlock
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L647"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>You should probably use <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> instead of setting this yourself.
+The block for the shape, set it to the block you're about to render</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Block? CurrentBlock { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentPosition_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentPosition" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition">
+  CurrentPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L655"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>You should probably use <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> instead of setting this yourself.
+The position of the block in the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockPos CurrentPosition { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentScale_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentScale" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale">
+  CurrentScale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L666"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>You should probably leave this alone at all times, this messes up a lot of stuff.
+Can be quite funny to mess with it though.
+<a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> does set that to 1.0f for you.
+If you DO want to scale, you should use <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_PostScaleOffset">PostScaleOffset</a> because this one does not do good scaling with many blocks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CurrentScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentShapeSet_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentShapeSet" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet">
+  CurrentShapeSet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L638"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>You should probably use <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> instead of setting this yourself.
+Tells the renderer if the <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentVisualShape">CurrentVisualShape</a> is set or not.
+Best to leave this at false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CurrentShapeSet { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentVisualShape_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentVisualShape" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape">
+  CurrentVisualShape
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>You should probably use <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> instead of setting this yourself.
+The current visual shape of the block being rendered.
+You should just set <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentBlock">CurrentBlock</a> and <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentPosition">CurrentPosition</a> then explicitly set <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentShapeSet">CurrentShapeSet</a> to false.
+This will make the game retrieve the proper shape on its own, which will likely be better than what you will come up with.
+You can even collect it after it is done rendering the block too!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingBox CurrentVisualShape { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.BoundingBox.html">BoundingBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_IsRenderingExtra_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_IsRenderingExtra" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra">
+  IsRenderingExtra
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L574"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is to tell the renderer that it is rendering the extra block, or the block at the layer 1.
+This is for waterlogged blocks or foliage with snow in it.
+You would use <a class="xref" href="OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetExtraBlock_OnixRuntime_Api_Maths_BlockPos_">GetExtraBlock(BlockPos)</a> to get the extra block, you'd <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> and after that, set this to true.
+Remember to not render it if it's air.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRenderingExtra { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_IsRenderingGui_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_IsRenderingGui" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui">
+  IsRenderingGui
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L582"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This tells the renderer that you are rendering it in the UI.
+It does some special things, like disabling lighting, culling, ambient occlusion, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRenderingGui { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_LightingType_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_LightingType" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType">
+  LightingType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L598"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of lighting to use when rendering blocks.
+You can have it flat, with ambient occlusion or just normals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameBlockRenderer.BlockLightingType LightingType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html">GameBlockRenderer</a>.<a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html">BlockLightingType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_Region_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.Region*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_Region" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.Region">
+  Region
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="OnixRuntime.Api.World.WorldBlocks.html">WorldBlocks</a> this game block renderer uses. You should probably not use this in most cases unless it's the only one you got access to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WorldBlocks Region { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.World.WorldBlocks.html">WorldBlocks</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_RenderingLayer_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_RenderingLayer" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer">
+  RenderingLayer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L618"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is to tell the renderer which block layer it's rendering right now. You can set it to the <a class="xref" href="OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_RawRenderLayer">RawRenderLayer</a> and forget it.
+You should not rely on the specific values as they changed over the versions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RenderingLayer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_UseNormals_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_UseNormals" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals">
+  UseNormals
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L590"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If it should use the normals vertex attribute. Do see <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_LightingType">LightingType</a> as the usefulness of normals depends on the lighting type.
+You should set this to false in most cases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseNormals { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder">
+  UseOccluder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L610"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The occluder is what allows the faces that aren't visible to not be rendered.
+This does not do camera based culling, only at the face level, seeing if a block is hiding that face.
+This is very useful but requires a little more work to work properly.
+You need to make sure the <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_Cache">Cache</a> is properly filled up/reset with a position that can be accessed in the cache.
+The cache contains a region of 20x20x20 blocks, which is meant to be a subchunk and two blocks around it.
+Going outside the cache usually will lead to air being returned and no culling/occlusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseOccluder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_GetTexture_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_GetTexture_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_World_BlockFace_System_Int32_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.World.BlockFace,System.Int32)">
+  GetTexture(BlockPos, Block, BlockFace, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the coordinates for this face on the <a class="xref" href="OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_TerrainAtlas">TerrainAtlas</a>.
+This function needs no setup to properly work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureUVCoordinates GetTexture(BlockPos renderPosition, Block blockToRender, BlockFace blockFace, int forcedVariant = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>This will be where the block will be rendered but the world block doesn't have to match the <code class="paramref">blockToRender</code>.
+The issue is that if you do <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder">UseOccluder</a>, this will use the <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_Cache">Cache</a> to determine if it should be occluded or not.
+Now if the block you're trying to do isn't actually in the world, but you still want to occlude, you could manually fill up the cache.</p>
+</dd>
+    <dt><code>blockToRender</code> <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a></dt>
+    <dd><p>The block you want to render.</p>
+</dd>
+    <dt><code>blockFace</code> <a class="xref" href="OnixRuntime.Api.World.BlockFace.html">BlockFace</a></dt>
+    <dd><p>The face of the block you're trying to render.
+Just remember, not everything is a full block and this won't give the best result on non-full blocks.</p>
+</dd>
+    <dt><code>forcedVariant</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>This is to force a specific variant of a block, you should probably not touch that, the game half hardcodes values for those.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Rendering.TextureUVCoordinates.html">TextureUVCoordinates</a></dt>
+    <dd><p>The face's UV in the atlas.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)">
+  RenderBlock(GameMeshBuilder, BlockPos, Block)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L504"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If you're looking for opacity or tinting, look at <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlockTinted_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Maths_ColorF_">RenderBlockTinted(GameMeshBuilder, BlockPos, Block, ColorF)</a>.
+This function does require setup before it is used. You can get <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> to do most of it for you.
+You should try to batch blocks into a single mesh whenever possible.
+You should re-use that mesh as generating those meshes can be quite slow.
+You will probably want to <a class="xref" href="OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_">SetMaterialCustom(string, bool)</a> use a custom material like &quot;terrain_alpha&quot; or &quot;terrain_blend&quot; or &quot;terrain_opaque&quot; (note that &quot;terrain_blend&quot; decided to not work on 1.21.40 specifically...)
+Now to use this, you will need a <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a> that has a session started.
+Remember that this function can only render with <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html#OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_Quad">Quad</a>.
+For testing, you should likely use applyReverseOriginOffsetIf3D and add -32 or something to the height of <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_PostTransformOffset">PostTransformOffset</a>.
+This will let you see the results so you know you're doing something right.
+Once you're ready to get serious, you can put it to false and offset it by the invert of the first block on the x and y (assuming you're rendering a group of blocks of course.)
+This will then let you offset it where you want without much precision loss using <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_PushTransformation_OnixRuntime_Api_Maths_TransformationMatrix_System_Boolean_">PushTransformation(TransformationMatrix, bool)</a> before rendering the mesh.
+Once you rendered every block you want, call <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_Build_System_Boolean_System_Boolean_">Build(bool, bool)</a> to get the mesh out of it.
+Note: You should never render an air block. You'll get the update block otherwise.
+Don't hesitate to ask for help if you do need some. You can also look at the examples below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RenderBlock(GameMeshBuilder meshBuilder, BlockPos renderPosition, Block blockToRender)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>meshBuilder</code> <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a> That has started.</p>
+</dd>
+    <dt><code>renderPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The position at which you want to render that block, this will render it at that position in the world, but also take things like rotation for that position. (How a few blocks like grass or sand rotates depending on its world position.)
+It doesn't have to match where the block actually is or actually exist in the world.
+Note that if you DO use <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder">UseOccluder</a> you will absolutely want to trick the <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_Cache">Cache</a> if the position does not match to ensure the desired result.</p>
+</dd>
+    <dt><code>blockToRender</code> <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a></dt>
+    <dd><p>The block that you actually do want to render.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block__examples">Examples</h4>
+  <p>This example shows how to render a block at a specific position.
+Specifically, mirror a block that's in the world.
+Taking the player's targeted block and rendering it two blocks above.</p>
+<pre><code class="lang-csharp"> private void OnWorldRender(RendererWorld gfx, float delta) {
+    // Check if we are even looking at a block.
+    if (Onix.LocalPlayer is { Raycast: { Type: RaycastResultType.Block } }) {
+        // Get the block we're targeting's position in the world.
+        BlockPos blockPos = Onix.LocalPlayer.Raycast.BlockPosition;
+        // Get is as a block.
+        Block block = Onix.Region!.GetBlock(blockPos);
+        // This lets us support waterlogging / snow with foliage inside.
+        Block extraBlock = Onix.Region!.GetExtraBlock(blockPos);
+        // Get the coordinates of the second block from the one we're targeting.
+        BlockPos desiredRenderPosition = blockPos.Up.Up;
+        // Never render an air block guys!
+        if (!block.IsAir()) {
+            // Start a new mesh builder session with quads.
+            using (var session = gfx.NewMeshBuilderSession(MeshBuilderPrimitiveType.Quad, ColorF.White, TexturePath.TerrainAtlas)) {
+                // Usually for more complex movement, you'd probably want to use a transformation matrix, especially that you would have saved the mesh.
+                // For now, this will offset the vertices further, causing them to be where we want them.
+                // And since we're rendering a block that is actually in the world, it means we won't have to mess with the cache.
+                session.Builder.PostTransformOffset = session.Builder.PostTransformOffset + new Vec3(desiredRenderPosition - blockPos);
+                // Get our wonderful block renderer.
+                var blockRenderer = gfx.BlockRenderer;
+                // Let it do the basic configuring for us, no need to go into the weeds here.
+                blockRenderer.SetupRenderingForBlock(blockPos, block);
+                // We don't want to hide any faces in this case, plus setting up the occluder is a bit more efforts.
+                // Since we're not using an occluder, no real need to reset the cache.
+                blockRenderer.UseOccluder = false;
+                // If we want biome tinting to work, we have to reset the cache. You may not care about that so that's why it's manual.
+                blockRenderer.ResetBiomeCache(blockPos);
+
+                // Add the block onto our mesh builder session.
+                // For one block it's fine to not use an occluder but for larger volumes, you should consider setting it up.
+                blockRenderer.RenderBlock(session.Builder, blockPos, block);
+
+                // Render the second layer if any. Remember, don't render air. Don't do it guys.
+                if (!extraBlock.IsAir()) {
+                    // Setup this new block at our new position.
+                    blockRenderer.SetupRenderingForBlock(blockPos, extraBlock);
+                    // We're rendering an extra block right now, not the main block. Let it know.
+                    blockRenderer.IsRenderingExtra = true;
+                    // And render that one too!
+                    blockRenderer.RenderBlock(session.Builder, blockPos, extraBlock);
+                }
+
+                // For lighting, it usually puts UVs from the light texture into the UV1 slot of the vertices.
+                // Since we can't provide it, we make sure it's not rendering from whatever was last bound there.
+                session.Builder.DisableUv1();
+            } // Now, if we had anything to render, when that } calls Dispose() it should render our block with the material we picked.
+        }
+
+    }
+}</code></pre>
+<p>This example shows how to render a single block that is not actually in the world at a specific position.</p>
+<pre><code class="lang-csharp"> private void OnWorldRender(RendererWorld gfx, float delta) {
+
+    // Easy example: Render a specific block that is not really in the world.
+    // Gets the water and fence block we want to render. (the ?? is because the fence changed its name at some point, so this handles both cases)
+    Block oakFenceBlock = (Onix.World!.BlockRegistry.GetBlock("oak_fence", 0) ?? Onix.World.BlockRegistry.GetBlock("fence"))!;
+    Block extraBlockWater = Onix.World.BlockRegistry.GetBlock("water")!;
+    // Get the coordinates of where we want to render, in my case it'll be at 5, 5, 5.
+    BlockPos fakeBlockRenderPosition = BlockPos.FromString("5 5 5");
+    // Start a new mesh builder session with quads.
+    using (var session = gfx.NewMeshBuilderSession(MeshBuilderPrimitiveType.Quad, ColorF.White, TexturePath.TerrainAtlas)) {
+        // Get our wonderful block renderer.
+        var blockRenderer = gfx.BlockRenderer;
+
+        // We'll need to cheat the cache to get the result we want, first we have to reset it.
+        // In this case, we could probably get away with not resetting it, but because of the water
+        // We have to reset it and lie, otherwise it becomes a flat plane.
+        blockRenderer.ResetCache(fakeBlockRenderPosition);
+        // If we want biome tinting to work, we have to reset the cache. You may not care about that so that's why it's manual.
+        blockRenderer.ResetBiomeCache(fakeBlockRenderPosition);
+        // This is our actual block we want to render, we'll put it in the cache for good measure
+        blockRenderer.Cache.SetBlock(fakeBlockRenderPosition, oakFenceBlock);
+        // I also want this fence to be waterlogged, so let's set that too.
+        blockRenderer.Cache.SetExtraBlock(fakeBlockRenderPosition, extraBlockWater);
+
+
+        // Let it do the basic configuring for us, no need to go into the weeds here.
+        // We give it the position we tampered with in the cache.
+        blockRenderer.SetupRenderingForBlock(fakeBlockRenderPosition, oakFenceBlock);
+        // We don't want to hide any faces in this case, plus setting up the occluder is a bit more efforts.
+        blockRenderer.UseOccluder = false;
+
+        // Add the block onto our mesh builder session.
+        // For one block it's fine to not use an occluder but for larger volumes, you should consider setting it up.
+        blockRenderer.RenderBlock(session.Builder, fakeBlockRenderPosition, oakFenceBlock);
+
+        // Render the second layer, in this case we know we have one so no checks.
+        // Setup this new block at our new position.
+        blockRenderer.SetupRenderingForBlock(fakeBlockRenderPosition, extraBlockWater);
+        // We're rendering an extra block right now, not the main block. Let it know.
+        blockRenderer.IsRenderingExtra = true;
+        // And render that one too!
+        blockRenderer.RenderBlock(session.Builder, fakeBlockRenderPosition, extraBlockWater);
+
+        // For lighting, it usually puts UVs from the light texture into the UV1 slot of the vertices.
+        // Since we can't provide it, we make sure it's not rendering from whatever was last bound there.
+        session.Builder.DisableUv1();
+    } // Now, if we had anything to render, when that } calls Dispose() it should render our block with the material we picked.
+}</code></pre>
+<p>This example shows how to render more than one block, in this case part of a chunk.
+You can adapt it or learn from it to build your own larger meshes but it should be a good starting point.</p>
+<pre><code class="lang-csharp"> private GameMesh? _subChunkMesh = null;
+ private void OnWorldRender(RendererWorld gfx, float delta) {
+    // Only generate a mesh when we don't have one already.
+    if (_subChunkMesh is null) {
+        var mb = gfx.MeshBuilder;
+        var blockRenderer = gfx.BlockRenderer;
+
+
+        // We start our new session here, note that I'm not applying the reverse origin, since we're going to render it at the origin.
+        // Well at least at the mesh level.
+        mb.New(ColorF.White, MeshBuilderPrimitiveType.Quad, false);
+
+        // Get our coordinates for what we want to pick up.
+        // We'll take two sub chunks from height 0. We'll pick the chunkToGrab chunk data.
+        // Of course, you can do less or more, you have to split it up for the cache though.
+        int subChunksToInclude = 2;
+        ChunkPos chunkToGrab = new(0, 0);
+        BlockPos chunkStartPos = new(chunkToGrab.X * 16, 0, chunkToGrab.Y * 16);
+
+        // We're going to offset our first block to be at 0,0, 0 when the mesh is built, which is the invert of our first block's position.
+        mb.PostTransformOffset = new Vec3(-chunkStartPos);
+
+        for (int currentSubChunk = 0; currentSubChunk &lt; subChunksToInclude; currentSubChunk++) {
+            // Reset our cache to this subchunk. I'll also surround with air so the sides are visible.
+            // The bottom and top will also be surrounded, but not of every subchunk, only the first and last.
+            bool shouldSurroundTopAndBottom = currentSubChunk == 0 || currentSubChunk == (subChunksToInclude - 1);
+            blockRenderer.ResetCacheAndSurroundInAir(chunkStartPos.WithY(chunkStartPos.Y + currentSubChunk * 16), true, shouldSurroundTopAndBottom);
+            // If we want biome tinting to work, we have to reset the cache. You may not care about that so that's why it's manual.
+            blockRenderer.ResetBiomeCache(chunkStartPos.WithY(chunkStartPos.Y + currentSubChunk * 16));
+            for (int x = 0; x &lt; 16; x++) {
+                for (int y = 0; y &lt; 16; y++) {
+                    for (int z = 0; z &lt; 16; z++) {
+                        // This gets our coordinates from our for loops into a BlockPos
+                        BlockPos currentBlockPos = new(chunkStartPos.X + x, chunkStartPos.Y + y + currentSubChunk * 16, chunkStartPos.Z + z);
+                        Block blockAtPos = Onix.Region!.GetBlock(currentBlockPos);
+                        // Don't render air guys!
+                        if (blockAtPos.IsAir()) continue;
+
+                        // Setup our block as before, no need for anything fancy.
+                        blockRenderer.SetupRenderingForBlock(currentBlockPos, blockAtPos);
+                        // Tell it to occlude faces we can't see, this doesn't do anything with the camera, just at the mesh level.
+                        // Still, that's very good and since we've set up the cache, it should be able to detect what it needs.
+                        blockRenderer.UseOccluder = true;
+
+                        // And send it!
+                        blockRenderer.RenderBlock(mb, currentBlockPos, blockAtPos);
+
+                        // And now, to support the second layer, waterlogging, etc.
+                        Block extraBlockAtPos = Onix.Region!.GetExtraBlock(currentBlockPos);
+                        if (!extraBlockAtPos.IsAir()) { // Just don't render air!
+                            // Set that block up.
+                            blockRenderer.SetupRenderingForBlock(currentBlockPos, extraBlockAtPos);
+                            // We're rendering an extra block right now, not the main block. Let it know.
+                            blockRenderer.IsRenderingExtra = true;
+                            // Send that one too, great that one block is done and added to our mesh.
+                            blockRenderer.RenderBlock(mb, currentBlockPos, extraBlockAtPos);
+                        }
+                    }
+                }
+            }
+        }
+
+        // For lighting, it usually puts UVs from the light texture into the UV1 slot of the vertices.
+        // Since we can't provide it, we make sure it's not rendering from whatever was last bound there.
+        // This has to be done before we build/render the mesh.
+        session.Builder.DisableUv1();
+
+        // Okay, we've just finished adding all those blocks, that probably took some time but now time to convert it to a mesh.
+        // That way, we don't have to do all that work again. Make sure to put immediate to false.
+        _subChunkMesh = mb.Build(false);
+    }
+
+    if (_subChunkMesh is not null) {
+        // Now, to render it. It's quite tricky to find a material, but this seems to give decent results.
+        // Pretty well with almost every block, doesn't support blending or tinted glass very well though.
+        // This is why we have render layers exposed now, so you can try to do different things, good luck.
+        gfx.SetMaterialParameters(new GameMaterialParameters() {
+             AlphaTest = true,
+             Uv = true,
+             Gradient = true,
+         });
+
+        // Now we have to position it, remembered how we made sure to render it at 0,0,0?
+        // Now we have to move it not only back into view but where we actually want to render it.
+        // Whatever position we do give, will represent the block in the bottom corner with the smallest coordinates.
+        // I'll render mine at 16, 10, 16. You can pick any coordinates in 3d, sub-coordinates. Rotate it, scale it, have fun!
+        TransformationMatrix transformation = TransformationMatrix.TranslateWorldPosition(16, 10, 16);
+        using (_ = gfx.PushTransformation(transformation)) {
+            // Finally, while that transformation is applied, let's render our mesh. 
+            // Don't forget to give it the terrain texture atlas!
+            // And that's done, you should see a copy of your chunk where you rendered it.
+            // The inside should be hollow if you set up your cache and enabled UseOccluder.
+            // To reflect the changes of course, you'd have to rebuild the mesh.
+            gfx.RenderMesh(_subChunkMesh, ColorF.White, TexturePath.TerrainAtlas);
+        }
+    }
+}</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlockTinted_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlockTinted_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Maths_ColorF_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)">
+  RenderBlockTinted(GameMeshBuilder, BlockPos, Block, ColorF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L536"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sorry, I don't really want to put every example here again, please see <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_">RenderBlock(GameMeshBuilder, BlockPos, Block)</a> for examples.
+This function does require setup before it is used. You can get <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_">SetupRenderingForBlock(BlockPos, Block, BlockLightingType)</a> to do most of it for you.
+You should try to batch blocks into a single mesh whenever possible.
+You should re-use that mesh as generating those meshes can be quite slow.
+You will probably want to <a class="xref" href="OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_">SetMaterialCustom(string, bool)</a> use a custom material like &quot;terrain_alpha&quot; or &quot;terrain_blend&quot; or &quot;terrain_opaque&quot; (note that &quot;terrain_blend&quot; decided to not work on 1.21.40 specifically...)
+Now to use this, you will need a <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a> that has a session started.
+Remember that this function can only render with <a class="xref" href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html#OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_Quad">Quad</a>.
+For testing, you should likely use applyReverseOriginOffsetIf3D and add -32 or something to the height of <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_PostTransformOffset">PostTransformOffset</a>.
+This will let you see the results so you know you're doing something right.
+Once you're ready to get serious, you can put it to false and offset it by the invert of the first block on the x and y (assuming you're rendering a group of blocks of course.)
+This will then let you offset it where you want without much precision loss using <a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_PushTransformation_OnixRuntime_Api_Maths_TransformationMatrix_System_Boolean_">PushTransformation(TransformationMatrix, bool)</a> before rendering the mesh.
+Once you rendered every block you want, call <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_Build_System_Boolean_System_Boolean_">Build(bool, bool)</a> to get the mesh out of it.
+Note: You should never render an air block. You'll get the update block otherwise.
+Don't hesitate to ask for help if you do need some. You can also look at the examples in <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_">RenderBlock(GameMeshBuilder, BlockPos, Block)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RenderBlockTinted(GameMeshBuilder meshBuilder, BlockPos renderPosition, Block blockToRender, ColorF tint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>meshBuilder</code> <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Rendering.GameMeshBuilder.html">GameMeshBuilder</a> That has started.</p>
+</dd>
+    <dt><code>renderPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The position at which you want to render that block, this will render it at that position in the world, but also take things like rotation for that position. (How a few blocks like grass or sand rotates depending on its world position.)
+It doesn't have to match where the block actually is or actually exist in the world.
+Note that if you DO use <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder">UseOccluder</a> you will absolutely want to trick the <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_Cache">Cache</a> if the position does not match to ensure the desired result.</p>
+</dd>
+    <dt><code>blockToRender</code> <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a></dt>
+    <dd><p>The block that you actually do want to render.</p>
+</dd>
+    <dt><code>tint</code> <a class="xref" href="OnixRuntime.Api.Maths.ColorF.html">ColorF</a></dt>
+    <dd><p>The tint to use when rendering. Note that for opacity, you'd give a white color with the desired opacity.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_ResetBiomeCache_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_ResetBiomeCache_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache(OnixRuntime.Api.Maths.BlockPos)">
+  ResetBiomeCache(BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This resets the biome cache for this subchunk, you should call if you want biome tinting to apply.
+This is obviously made to render subchunks, but if you're just rendering a single block, you can just give it that position as is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetBiomeCache(BlockPos worldSubChunkStartPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>worldSubChunkStartPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The starting position of your sub chunk.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCache_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCache_OnixRuntime_Api_Maths_BlockPos_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache(OnixRuntime.Api.Maths.BlockPos)">
+  ResetCache(BlockPos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This resets the cache to an empty state, you should call this before doing anything with the cache.
+This will do -2 to the position you add to it, so you should just give it the start of your subchunk.
+This is obviously made to render subchunks, but if you're just rendering a single block, you can just give it that position as is.
+When rendering a subchunk, if you want the sides to render too, you should call <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCacheAndSurroundInAir_OnixRuntime_Api_Maths_BlockPos_System_Boolean_System_Boolean_">ResetCacheAndSurroundInAir(BlockPos, bool, bool)</a> instead to surround it in air at the same time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetCache(BlockPos worldSubChunkStartPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>worldSubChunkStartPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The starting position of your sub chunk.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCacheAndSurroundInAir_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCacheAndSurroundInAir_OnixRuntime_Api_Maths_BlockPos_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)">
+  ResetCacheAndSurroundInAir(BlockPos, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This resets the cache to an empty state, you should call this before doing anything with the cache.
+This will do -2 to the position you add to it, so you should just give it the start of your subchunk.
+This is obviously made to render subchunks, but if you're just rendering a single block, you can just give it that position as is.
+When rendering a subchunk, if you want the sides to render too, this is the function for it!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetCacheAndSurroundInAir(BlockPos worldSubChunkStartPosition, bool sides = true, bool topAndBottom = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>worldSubChunkStartPosition</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The starting position of your sub chunk.</p>
+</dd>
+    <dt><code>sides</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if you want the sides to be surrounded by air.</p>
+</dd>
+    <dt><code>topAndBottom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if you want the top and bottom faces to be surrounded</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_" data-uid="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)">
+  SetupRenderingForBlock(BlockPos, Block, BlockLightingType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L563"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets up a lot of renderer parameters for you. Note that you should make your changes after calling this function if the defaults don't satisfy you.
+Note that this does not touch <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder">UseOccluder</a>. You are responsible for managing this bit yourself as it requires more flexibility than this simple function can provide.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupRenderingForBlock(BlockPos pos, Block block, GameBlockRenderer.BlockLightingType lightingType = BlockLightingType.BakedWithAmbientOcclusion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pos</code> <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a></dt>
+    <dd><p>The position of the block in the world.</p>
+</dd>
+    <dt><code>block</code> <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a></dt>
+    <dd><p>The block to set it up for.</p>
+</dd>
+    <dt><code>lightingType</code> <a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.html">GameBlockRenderer</a>.<a class="xref" href="OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html">BlockLightingType</a></dt>
+    <dd><p>The kind of lighting you want.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Here is what this function does for you.</p>
+<pre><code class="lang-csharp">CurrentShapeSet = false;
+CurrentBlock = block;
+CurrentPosition = pos;
+RenderingLayer = block.RawRenderLayer;
+IsRenderingExtra = false;
+IsRenderingGui = false;
+UseNormals = false;
+LightingType = lightingType;
+CurrentScale = 1.0f;</code></pre>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/dev/OnixRuntime/Api/Rendering/GameBlockRenderer.cs/#L178" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

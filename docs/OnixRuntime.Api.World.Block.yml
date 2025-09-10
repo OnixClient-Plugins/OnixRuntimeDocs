@@ -9,6 +9,7 @@ items:
   - OnixRuntime.Api.World.Block.Data
   - OnixRuntime.Api.World.Block.DefaultState
   - OnixRuntime.Api.World.Block.DescriptionIdentifier
+  - OnixRuntime.Api.World.Block.GetClientSideAirBlock
   - OnixRuntime.Api.World.Block.GetStateValue(OnixRuntime.Api.World.VanillaBlockStateType)
   - OnixRuntime.Api.World.Block.GetStateValue(System.Int32)
   - OnixRuntime.Api.World.Block.GetStateValue(System.String)
@@ -25,6 +26,7 @@ items:
   - OnixRuntime.Api.World.Block.NextPermutation
   - OnixRuntime.Api.World.Block.Permutations
   - OnixRuntime.Api.World.Block.PreviousPermutation
+  - OnixRuntime.Api.World.Block.RawRenderLayer
   - OnixRuntime.Api.World.Block.RawStates
   - OnixRuntime.Api.World.Block.RuntimeId
   - OnixRuntime.Api.World.Block.State
@@ -343,6 +345,42 @@ items:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsSolid As Boolean
   overload: OnixRuntime.Api.World.Block.IsSolid*
+- uid: OnixRuntime.Api.World.Block.RawRenderLayer
+  commentId: P:OnixRuntime.Api.World.Block.RawRenderLayer
+  id: RawRenderLayer
+  parent: OnixRuntime.Api.World.Block
+  langs:
+  - csharp
+  - vb
+  name: RawRenderLayer
+  nameWithType: Block.RawRenderLayer
+  fullName: OnixRuntime.Api.World.Block.RawRenderLayer
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/World/Block.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RawRenderLayer
+    path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
+    startLine: 68
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    The raw render layer number for this block. You should not rely on the specific values as they changed over the versions.
+
+    You can use it to tell the game about a render layer OR see if it's different from another.
+
+    This one is named raw in case we do want to have a proper stable enum for it in the future.
+  example: []
+  syntax:
+    content: public int RawRenderLayer { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RawRenderLayer As Integer
+  overload: OnixRuntime.Api.World.Block.RawRenderLayer*
 - uid: OnixRuntime.Api.World.Block.VisualBoundingBox
   commentId: P:OnixRuntime.Api.World.Block.VisualBoundingBox
   id: VisualBoundingBox
@@ -361,7 +399,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: VisualBoundingBox
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 66
+    startLine: 72
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -392,7 +430,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: State
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 70
+    startLine: 76
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -423,7 +461,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Permutations
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 74
+    startLine: 80
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -454,7 +492,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NextPermutation
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 78
+    startLine: 84
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -485,7 +523,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PreviousPermutation
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 82
+    startLine: 88
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -516,7 +554,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Graphics
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 86
+    startLine: 92
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -547,7 +585,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LegacyDataLookup
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 90
+    startLine: 96
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -578,7 +616,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LookupLegacyData
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 96
+    startLine: 102
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -616,7 +654,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DefaultState
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 100
+    startLine: 106
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -647,7 +685,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RawStates
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 105
+    startLine: 111
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -681,7 +719,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetStateValue
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 111
+    startLine: 117
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -719,7 +757,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetStateValue
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 117
+    startLine: 123
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -757,7 +795,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetStateValue
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 123
+    startLine: 129
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -792,7 +830,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsAir
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 128
+    startLine: 134
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -823,7 +861,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsRequestPlaceholder
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 133
+    startLine: 139
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -836,6 +874,44 @@ items:
       description: True if the block is a request placeholder; otherwise, false.
     content.vb: Public Function IsRequestPlaceholder() As Boolean
   overload: OnixRuntime.Api.World.Block.IsRequestPlaceholder*
+- uid: OnixRuntime.Api.World.Block.GetClientSideAirBlock
+  commentId: M:OnixRuntime.Api.World.Block.GetClientSideAirBlock
+  id: GetClientSideAirBlock
+  parent: OnixRuntime.Api.World.Block
+  langs:
+  - csharp
+  - vb
+  name: GetClientSideAirBlock()
+  nameWithType: Block.GetClientSideAirBlock()
+  fullName: OnixRuntime.Api.World.Block.GetClientSideAirBlock()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/World/Block.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetClientSideAirBlock
+    path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
+    startLine: 147
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    Gets the air block used on the client side.
+
+    Note: You must be inside a world, otherwise you will get an exception.
+  example: []
+  syntax:
+    content: public static Block GetClientSideAirBlock()
+    return:
+      type: OnixRuntime.Api.World.Block
+      description: The air block used on the client side.
+    content.vb: Public Shared Function GetClientSideAirBlock() As Block
+  overload: OnixRuntime.Api.World.Block.GetClientSideAirBlock*
+  exceptions:
+  - type: OnixRuntime.Api.Errors.NotInRuntimeWorldException
+    commentId: T:OnixRuntime.Api.Errors.NotInRuntimeWorldException
+    description: When you're not in a world.
 - uid: OnixRuntime.Api.World.Block.ToString
   commentId: M:OnixRuntime.Api.World.Block.ToString
   id: ToString
@@ -854,7 +930,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
-    startLine: 143
+    startLine: 157
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -1278,6 +1354,12 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: OnixRuntime.Api.World.Block.RawRenderLayer*
+  commentId: Overload:OnixRuntime.Api.World.Block.RawRenderLayer
+  href: OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_RawRenderLayer
+  name: RawRenderLayer
+  nameWithType: Block.RawRenderLayer
+  fullName: OnixRuntime.Api.World.Block.RawRenderLayer
 - uid: OnixRuntime.Api.World.Block.VisualBoundingBox*
   commentId: Overload:OnixRuntime.Api.World.Block.VisualBoundingBox
   href: OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_VisualBoundingBox
@@ -1645,6 +1727,18 @@ references:
   name: IsRequestPlaceholder
   nameWithType: Block.IsRequestPlaceholder
   fullName: OnixRuntime.Api.World.Block.IsRequestPlaceholder
+- uid: OnixRuntime.Api.Errors.NotInRuntimeWorldException
+  commentId: T:OnixRuntime.Api.Errors.NotInRuntimeWorldException
+  href: OnixRuntime.Api.Errors.NotInRuntimeWorldException.html
+  name: NotInRuntimeWorldException
+  nameWithType: NotInRuntimeWorldException
+  fullName: OnixRuntime.Api.Errors.NotInRuntimeWorldException
+- uid: OnixRuntime.Api.World.Block.GetClientSideAirBlock*
+  commentId: Overload:OnixRuntime.Api.World.Block.GetClientSideAirBlock
+  href: OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_GetClientSideAirBlock
+  name: GetClientSideAirBlock
+  nameWithType: Block.GetClientSideAirBlock
+  fullName: OnixRuntime.Api.World.Block.GetClientSideAirBlock
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object

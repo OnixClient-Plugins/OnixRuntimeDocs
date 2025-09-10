@@ -6,6 +6,7 @@ items:
   parent: OnixRuntime.Api
   children:
   - OnixRuntime.Api.OnixClientThings.CommandPrefix
+  - OnixRuntime.Api.OnixClientThings.CommandRegistry
   - OnixRuntime.Api.OnixClientThings.ExecuteCommand(System.String,System.Boolean)
   - OnixRuntime.Api.OnixClientThings.Modules
   - OnixRuntime.Api.OnixClientThings.Notify(System.String,System.String,System.Single,OnixRuntime.Api.ClientNotificationType,System.Boolean,OnixRuntime.Api.OnixClientThings.OnNotificationClickedDelegate)
@@ -35,7 +36,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixClientThings
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -72,7 +73,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Notify
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -125,7 +126,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NotifyBanner
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -175,7 +176,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NotifyTray
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -225,7 +226,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetTooltipText
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 68
+    startLine: 69
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -267,7 +268,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetTooltipText
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 76
+    startLine: 77
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -310,7 +311,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OpenUrl
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 85
+    startLine: 86
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -345,7 +346,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OpenDirectory
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 90
+    startLine: 91
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -380,7 +381,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OpenFile
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 95
+    startLine: 96
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -415,7 +416,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Modules
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 100
+    startLine: 101
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -446,7 +447,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SettingRegistry
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -477,7 +478,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CommandPrefix
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 108
+    startLine: 109
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -490,6 +491,37 @@ items:
       type: System.String
     content.vb: Public ReadOnly Property CommandPrefix As String
   overload: OnixRuntime.Api.OnixClientThings.CommandPrefix*
+- uid: OnixRuntime.Api.OnixClientThings.CommandRegistry
+  commentId: P:OnixRuntime.Api.OnixClientThings.CommandRegistry
+  id: CommandRegistry
+  parent: OnixRuntime.Api.OnixClientThings
+  langs:
+  - csharp
+  - vb
+  name: CommandRegistry
+  nameWithType: OnixClientThings.CommandRegistry
+  fullName: OnixRuntime.Api.OnixClientThings.CommandRegistry
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClientThings.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CommandRegistry
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
+    startLine: 114
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: The command registry for registering and managing client/server commands.
+  example: []
+  syntax:
+    content: public OnixCommandRegistry CommandRegistry { get; init; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry
+    content.vb: Public Property CommandRegistry As OnixCommandRegistry
+  overload: OnixRuntime.Api.OnixClientThings.CommandRegistry*
 - uid: OnixRuntime.Api.OnixClientThings.Waypoints
   commentId: P:OnixRuntime.Api.OnixClientThings.Waypoints
   id: Waypoints
@@ -508,7 +540,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Waypoints
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 114
+    startLine: 120
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -542,7 +574,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ExecuteCommand
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 120
+    startLine: 126
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -580,7 +612,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShowColorPicker
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 129
+    startLine: 135
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -624,7 +656,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShowKeyPicker
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 137
+    startLine: 143
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -656,7 +688,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ThemeV3
     path: ../OnixRuntime/OnixRuntime/Api/OnixClientThings.cs
-    startLine: 146
+    startLine: 152
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -1138,6 +1170,57 @@ references:
   name: CommandPrefix
   nameWithType: OnixClientThings.CommandPrefix
   fullName: OnixRuntime.Api.OnixClientThings.CommandPrefix
+- uid: OnixRuntime.Api.OnixClientThings.CommandRegistry*
+  commentId: Overload:OnixRuntime.Api.OnixClientThings.CommandRegistry
+  href: OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_CommandRegistry
+  name: CommandRegistry
+  nameWithType: OnixClientThings.CommandRegistry
+  fullName: OnixRuntime.Api.OnixClientThings.CommandRegistry
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry
+  parent: OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html
+  name: OnixCommandRegistry
+  nameWithType: OnixCommandRegistry
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry
+- uid: OnixRuntime.Api.OnixClient.Commands
+  commentId: N:OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Commands
+  nameWithType: OnixRuntime.Api.OnixClient.Commands
+  fullName: OnixRuntime.Api.OnixClient.Commands
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
 - uid: OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
   commentId: P:OnixRuntime.Api.OnixClient.OnixWaypointManager.Enabled
   href: OnixRuntime.Api.OnixClient.OnixWaypointManager.html#OnixRuntime_Api_OnixClient_OnixWaypointManager_Enabled

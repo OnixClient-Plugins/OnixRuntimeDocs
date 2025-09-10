@@ -8,6 +8,7 @@ items:
   - OnixRuntime.Api.OnixClient.OnixSetting.ConvertNameToSaveName(System.String)
   - OnixRuntime.Api.OnixClient.OnixSetting.Description
   - OnixRuntime.Api.OnixClient.OnixSetting.Dispose
+  - OnixRuntime.Api.OnixClient.OnixSetting.Finalize
   - OnixRuntime.Api.OnixClient.OnixSetting.IsHidden
   - OnixRuntime.Api.OnixClient.OnixSetting.IsLocked
   - OnixRuntime.Api.OnixClient.OnixSetting.Load(System.Text.Json.Nodes.JsonNode)
@@ -101,6 +102,37 @@ items:
     return:
       type: System.String
     content.vb: Protected _pluginUuid As String
+- uid: OnixRuntime.Api.OnixClient.OnixSetting.Finalize
+  commentId: M:OnixRuntime.Api.OnixClient.OnixSetting.Finalize
+  id: Finalize
+  parent: OnixRuntime.Api.OnixClient.OnixSetting
+  langs:
+  - csharp
+  - vb
+  name: ~OnixSetting()
+  nameWithType: OnixSetting.~OnixSetting()
+  fullName: OnixRuntime.Api.OnixClient.OnixSetting.~OnixSetting()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixSetting.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Finalize
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
+    startLine: 179
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Finalizes the setting, or prevents it from being disposed by our base destructor
+  example: []
+  syntax:
+    content: protected ~OnixSetting()
+    content.vb: 'Protected '
+  overload: OnixRuntime.Api.OnixClient.OnixSetting.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
 - uid: OnixRuntime.Api.OnixClient.OnixSetting.Dispose
   commentId: M:OnixRuntime.Api.OnixClient.OnixSetting.Dispose
   id: Dispose
@@ -119,7 +151,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dispose
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 178
+    startLine: 186
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -149,7 +181,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ConvertNameToSaveName
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 198
+    startLine: 212
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -192,7 +224,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Name
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 211
+    startLine: 225
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -223,7 +255,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveName
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 219
+    startLine: 233
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -254,7 +286,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Description
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 224
+    startLine: 238
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -285,7 +317,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Type
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 232
+    startLine: 246
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -316,7 +348,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ParentModule
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 238
+    startLine: 252
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -347,7 +379,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsHidden
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 243
+    startLine: 257
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -378,7 +410,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsLocked
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 250
+    startLine: 264
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -409,7 +441,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RemoveFromParent
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 255
+    startLine: 269
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -443,7 +475,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Save
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 261
+    startLine: 275
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -474,7 +506,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Load
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixSetting.cs
-    startLine: 269
+    startLine: 283
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -837,6 +869,17 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: OnixRuntime.Api.OnixClient.OnixSetting.Finalize*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixSetting.Finalize
+  href: OnixRuntime.Api.OnixClient.OnixSetting.html#OnixRuntime_Api_OnixClient_OnixSetting_Finalize
+  name: ~OnixSetting
+  nameWithType: OnixSetting.~OnixSetting
+  fullName: OnixRuntime.Api.OnixClient.OnixSetting.~OnixSetting
+  spec.csharp:
+  - name: "~"
+  - uid: OnixRuntime.Api.OnixClient.OnixSetting.Finalize*
+    name: OnixSetting
+    href: OnixRuntime.Api.OnixClient.OnixSetting.html#OnixRuntime_Api_OnixClient_OnixSetting_Finalize
 - uid: OnixRuntime.Api.OnixClient.OnixSetting.ParentModule
   commentId: P:OnixRuntime.Api.OnixClient.OnixSetting.ParentModule
   parent: OnixRuntime.Api.OnixClient.OnixSetting

@@ -1,0 +1,2199 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+  commentId: T:OnixRuntime.Api.Rendering.GameBlockRenderer
+  id: GameBlockRenderer
+  parent: OnixRuntime.Api.Rendering
+  children:
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.World.BlockFace,System.Int32)
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.Region
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache(OnixRuntime.Api.Maths.BlockPos)
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache(OnixRuntime.Api.Maths.BlockPos)
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+  langs:
+  - csharp
+  - vb
+  name: GameBlockRenderer
+  nameWithType: GameBlockRenderer
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GameBlockRenderer
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 177
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Allows you to render game blocks, this is a little more involved of a process than calling a magical render block function, but the results are pretty good.
+
+    You get almost every block and their hardcoded behavior handled for you, occlusion if you set it up.
+
+    It's still a lot less involved than implementing all of this yourself!
+  example: []
+  syntax:
+    content: 'public class GameBlockRenderer : MemoryAddressContainer'
+    content.vb: Public Class GameBlockRenderer Inherits MemoryAddressContainer
+  inheritance:
+  - System.Object
+  - OnixRuntime.Api.Internal.MemoryAddressContainer
+  inheritedMembers:
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  - OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.Region
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.Region
+  id: Region
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: GameBlockRenderer.Region
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.Region
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Region
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 203
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: The <xref href="OnixRuntime.Api.World.WorldBlocks" data-throw-if-not-resolved="false"></xref> this game block renderer uses. You should probably not use this in most cases unless it's the only one you got access to.
+  example: []
+  syntax:
+    content: public WorldBlocks Region { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+    content.vb: Public ReadOnly Property Region As WorldBlocks
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.Region*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+  id: Cache
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: Cache
+  nameWithType: GameBlockRenderer.Cache
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Cache
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 212
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This is what the <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer" data-throw-if-not-resolved="false"></xref> goes to everytime it needs a block.
+
+    This lets you cheat by changing the cache yourself to manipulate the rendering.
+
+    Very notably, <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder" data-throw-if-not-resolved="false"></xref> needs to be properly setup in order to work.
+
+    The cache contains a region of 20x20x20 blocks, which is meant to be a subchunk and two blocks around it.
+
+    Going outside the cache usually will lead to air being returned.
+  example: []
+  syntax:
+    content: public GameBlockRendererCache Cache { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.GameBlockRendererCache
+    content.vb: Public ReadOnly Property Cache As GameBlockRendererCache
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.Cache*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache(OnixRuntime.Api.Maths.BlockPos)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache(OnixRuntime.Api.Maths.BlockPos)
+  id: ResetCache(OnixRuntime.Api.Maths.BlockPos)
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: ResetCache(BlockPos)
+  nameWithType: GameBlockRenderer.ResetCache(BlockPos)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache(OnixRuntime.Api.Maths.BlockPos)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ResetCache
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 220
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This resets the cache to an empty state, you should call this before doing anything with the cache.
+
+    This will do -2 to the position you add to it, so you should just give it the start of your subchunk.
+
+    This is obviously made to render subchunks, but if you're just rendering a single block, you can just give it that position as is.
+
+    When rendering a subchunk, if you want the sides to render too, you should call <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos%2cSystem.Boolean%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> instead to surround it in air at the same time.
+  example: []
+  syntax:
+    content: public void ResetCache(BlockPos worldSubChunkStartPosition)
+    parameters:
+    - id: worldSubChunkStartPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The starting position of your sub chunk.
+    content.vb: Public Sub ResetCache(worldSubChunkStartPosition As BlockPos)
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache(OnixRuntime.Api.Maths.BlockPos)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache(OnixRuntime.Api.Maths.BlockPos)
+  id: ResetBiomeCache(OnixRuntime.Api.Maths.BlockPos)
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: ResetBiomeCache(BlockPos)
+  nameWithType: GameBlockRenderer.ResetBiomeCache(BlockPos)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache(OnixRuntime.Api.Maths.BlockPos)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ResetBiomeCache
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 226
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This resets the biome cache for this subchunk, you should call if you want biome tinting to apply.
+
+    This is obviously made to render subchunks, but if you're just rendering a single block, you can just give it that position as is.
+  example: []
+  syntax:
+    content: public void ResetBiomeCache(BlockPos worldSubChunkStartPosition)
+    parameters:
+    - id: worldSubChunkStartPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The starting position of your sub chunk.
+    content.vb: Public Sub ResetBiomeCache(worldSubChunkStartPosition As BlockPos)
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+  id: ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: ResetCacheAndSurroundInAir(BlockPos, bool, bool)
+  nameWithType: GameBlockRenderer.ResetCacheAndSurroundInAir(BlockPos, bool, bool)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ResetCacheAndSurroundInAir
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 237
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This resets the cache to an empty state, you should call this before doing anything with the cache.
+
+    This will do -2 to the position you add to it, so you should just give it the start of your subchunk.
+
+    This is obviously made to render subchunks, but if you're just rendering a single block, you can just give it that position as is.
+
+    When rendering a subchunk, if you want the sides to render too, this is the function for it!
+  example: []
+  syntax:
+    content: public void ResetCacheAndSurroundInAir(BlockPos worldSubChunkStartPosition, bool sides = true, bool topAndBottom = true)
+    parameters:
+    - id: worldSubChunkStartPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The starting position of your sub chunk.
+    - id: sides
+      type: System.Boolean
+      description: True if you want the sides to be surrounded by air.
+    - id: topAndBottom
+      type: System.Boolean
+      description: True if you want the top and bottom faces to be surrounded
+    content.vb: Public Sub ResetCacheAndSurroundInAir(worldSubChunkStartPosition As BlockPos, sides As Boolean = True, topAndBottom As Boolean = True)
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir*
+  nameWithType.vb: GameBlockRenderer.ResetCacheAndSurroundInAir(BlockPos, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos, Boolean, Boolean)
+  name.vb: ResetCacheAndSurroundInAir(BlockPos, Boolean, Boolean)
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.World.BlockFace,System.Int32)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.World.BlockFace,System.Int32)
+  id: GetTexture(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.World.BlockFace,System.Int32)
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetTexture(BlockPos, Block, BlockFace, int)
+  nameWithType: GameBlockRenderer.GetTexture(BlockPos, Block, BlockFace, int)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture(OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block, OnixRuntime.Api.World.BlockFace, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetTexture
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 259
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Returns the coordinates for this face on the <xref href="OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas" data-throw-if-not-resolved="false"></xref>.
+
+    This function needs no setup to properly work.
+  example: []
+  syntax:
+    content: public TextureUVCoordinates GetTexture(BlockPos renderPosition, Block blockToRender, BlockFace blockFace, int forcedVariant = -1)
+    parameters:
+    - id: renderPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: >-
+        This will be where the block will be rendered but the world block doesn't have to match the <code class="paramref">blockToRender</code>.
+
+        The issue is that if you do <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder" data-throw-if-not-resolved="false"></xref>, this will use the <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.Cache" data-throw-if-not-resolved="false"></xref> to determine if it should be occluded or not.
+
+        Now if the block you're trying to do isn't actually in the world, but you still want to occlude, you could manually fill up the cache.
+    - id: blockToRender
+      type: OnixRuntime.Api.World.Block
+      description: The block you want to render.
+    - id: blockFace
+      type: OnixRuntime.Api.World.BlockFace
+      description: >-
+        The face of the block you're trying to render.
+
+        Just remember, not everything is a full block and this won't give the best result on non-full blocks.
+    - id: forcedVariant
+      type: System.Int32
+      description: This is to force a specific variant of a block, you should probably not touch that, the game half hardcodes values for those.
+    return:
+      type: OnixRuntime.Api.Rendering.TextureUVCoordinates
+      description: The face's UV in the atlas.
+    content.vb: Public Function GetTexture(renderPosition As BlockPos, blockToRender As Block, blockFace As BlockFace, forcedVariant As Integer = -1) As TextureUVCoordinates
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture*
+  nameWithType.vb: GameBlockRenderer.GetTexture(BlockPos, Block, BlockFace, Integer)
+  fullName.vb: OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture(OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block, OnixRuntime.Api.World.BlockFace, Integer)
+  name.vb: GetTexture(BlockPos, Block, BlockFace, Integer)
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+  id: RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderBlock(GameMeshBuilder, BlockPos, Block)
+  nameWithType: GameBlockRenderer.RenderBlock(GameMeshBuilder, BlockPos, Block)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBlock
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 503
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    If you're looking for opacity or tinting, look at <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder%2cOnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Maths.ColorF)" data-throw-if-not-resolved="false"></xref>.
+
+    This function does require setup before it is used. You can get <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> to do most of it for you.
+
+    You should try to batch blocks into a single mesh whenever possible.
+
+    You should re-use that mesh as generating those meshes can be quite slow.
+
+    You will probably want to <xref href="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> use a custom material like "terrain_alpha" or "terrain_blend" or "terrain_opaque" (note that "terrain_blend" decided to not work on 1.21.40 specifically...)
+
+    Now to use this, you will need a <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder" data-throw-if-not-resolved="false"></xref> that has a session started.
+
+    Remember that this function can only render with <xref href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.Quad" data-throw-if-not-resolved="false"></xref>.
+
+    For testing, you should likely use applyReverseOriginOffsetIf3D and add -32 or something to the height of <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder.PostTransformOffset" data-throw-if-not-resolved="false"></xref>.
+
+    This will let you see the results so you know you're doing something right.
+
+    Once you're ready to get serious, you can put it to false and offset it by the invert of the first block on the x and y (assuming you're rendering a group of blocks of course.)
+
+    This will then let you offset it where you want without much precision loss using <xref href="OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> before rendering the mesh.
+
+    Once you rendered every block you want, call <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder.Build(System.Boolean%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> to get the mesh out of it.
+
+    Note: You should never render an air block. You'll get the update block otherwise.
+
+    Don't hesitate to ask for help if you do need some. You can also look at the examples below.
+  example:
+  - >-
+    This example shows how to render a block at a specific position.
+
+    Specifically, mirror a block that's in the world.
+
+    Taking the player's targeted block and rendering it two blocks above.
+
+    <pre><code class="lang-csharp"> private void OnWorldRender(RendererWorld gfx, float delta) {
+        // Check if we are even looking at a block.
+        if (Onix.LocalPlayer is { Raycast: { Type: RaycastResultType.Block } }) {
+            // Get the block we're targeting's position in the world.
+            BlockPos blockPos = Onix.LocalPlayer.Raycast.BlockPosition;
+            // Get is as a block.
+            Block block = Onix.Region!.GetBlock(blockPos);
+            // This lets us support waterlogging / snow with foliage inside.
+            Block extraBlock = Onix.Region!.GetExtraBlock(blockPos);
+            // Get the coordinates of the second block from the one we're targeting.
+            BlockPos desiredRenderPosition = blockPos.Up.Up;
+            // Never render an air block guys!
+            if (!block.IsAir()) {
+                // Start a new mesh builder session with quads.
+                using (var session = gfx.NewMeshBuilderSession(MeshBuilderPrimitiveType.Quad, ColorF.White, TexturePath.TerrainAtlas)) {
+                    // Usually for more complex movement, you'd probably want to use a transformation matrix, especially that you would have saved the mesh.
+                    // For now, this will offset the vertices further, causing them to be where we want them.
+                    // And since we're rendering a block that is actually in the world, it means we won't have to mess with the cache.
+                    session.Builder.PostTransformOffset = session.Builder.PostTransformOffset + new Vec3(desiredRenderPosition - blockPos);
+                    // Get our wonderful block renderer.
+                    var blockRenderer = gfx.BlockRenderer;
+                    // Let it do the basic configuring for us, no need to go into the weeds here.
+                    blockRenderer.SetupRenderingForBlock(blockPos, block);
+                    // We don't want to hide any faces in this case, plus setting up the occluder is a bit more efforts.
+                    // Since we're not using an occluder, no real need to reset the cache.
+                    blockRenderer.UseOccluder = false;
+                    // If we want biome tinting to work, we have to reset the cache. You may not care about that so that's why it's manual.
+                    blockRenderer.ResetBiomeCache(blockPos);
+
+                    // Add the block onto our mesh builder session.
+                    // For one block it's fine to not use an occluder but for larger volumes, you should consider setting it up.
+                    blockRenderer.RenderBlock(session.Builder, blockPos, block);
+
+                    // Render the second layer if any. Remember, don't render air. Don't do it guys.
+                    if (!extraBlock.IsAir()) {
+                        // Setup this new block at our new position.
+                        blockRenderer.SetupRenderingForBlock(blockPos, extraBlock);
+                        // We're rendering an extra block right now, not the main block. Let it know.
+                        blockRenderer.IsRenderingExtra = true;
+                        // And render that one too!
+                        blockRenderer.RenderBlock(session.Builder, blockPos, extraBlock);
+                    }
+
+                    // For lighting, it usually puts UVs from the light texture into the UV1 slot of the vertices.
+                    // Since we can't provide it, we make sure it's not rendering from whatever was last bound there.
+                    session.Builder.DisableUv1();
+                } // Now, if we had anything to render, when that } calls Dispose() it should render our block with the material we picked.
+            }
+
+        }
+    }</code></pre>
+
+
+    This example shows how to render a single block that is not actually in the world at a specific position.
+
+    <pre><code class="lang-csharp"> private void OnWorldRender(RendererWorld gfx, float delta) {
+
+        // Easy example: Render a specific block that is not really in the world.
+        // Gets the water and fence block we want to render. (the ?? is because the fence changed its name at some point, so this handles both cases)
+        Block oakFenceBlock = (Onix.World!.BlockRegistry.GetBlock("oak_fence", 0) ?? Onix.World.BlockRegistry.GetBlock("fence"))!;
+        Block extraBlockWater = Onix.World.BlockRegistry.GetBlock("water")!;
+        // Get the coordinates of where we want to render, in my case it'll be at 5, 5, 5.
+        BlockPos fakeBlockRenderPosition = BlockPos.FromString("5 5 5");
+        // Start a new mesh builder session with quads.
+        using (var session = gfx.NewMeshBuilderSession(MeshBuilderPrimitiveType.Quad, ColorF.White, TexturePath.TerrainAtlas)) {
+            // Get our wonderful block renderer.
+            var blockRenderer = gfx.BlockRenderer;
+
+            // We'll need to cheat the cache to get the result we want, first we have to reset it.
+            // In this case, we could probably get away with not resetting it, but because of the water
+            // We have to reset it and lie, otherwise it becomes a flat plane.
+            blockRenderer.ResetCache(fakeBlockRenderPosition);
+            // If we want biome tinting to work, we have to reset the cache. You may not care about that so that's why it's manual.
+            blockRenderer.ResetBiomeCache(fakeBlockRenderPosition);
+            // This is our actual block we want to render, we'll put it in the cache for good measure
+            blockRenderer.Cache.SetBlock(fakeBlockRenderPosition, oakFenceBlock);
+            // I also want this fence to be waterlogged, so let's set that too.
+            blockRenderer.Cache.SetExtraBlock(fakeBlockRenderPosition, extraBlockWater);
+
+
+            // Let it do the basic configuring for us, no need to go into the weeds here.
+            // We give it the position we tampered with in the cache.
+            blockRenderer.SetupRenderingForBlock(fakeBlockRenderPosition, oakFenceBlock);
+            // We don't want to hide any faces in this case, plus setting up the occluder is a bit more efforts.
+            blockRenderer.UseOccluder = false;
+
+            // Add the block onto our mesh builder session.
+            // For one block it's fine to not use an occluder but for larger volumes, you should consider setting it up.
+            blockRenderer.RenderBlock(session.Builder, fakeBlockRenderPosition, oakFenceBlock);
+
+            // Render the second layer, in this case we know we have one so no checks.
+            // Setup this new block at our new position.
+            blockRenderer.SetupRenderingForBlock(fakeBlockRenderPosition, extraBlockWater);
+            // We're rendering an extra block right now, not the main block. Let it know.
+            blockRenderer.IsRenderingExtra = true;
+            // And render that one too!
+            blockRenderer.RenderBlock(session.Builder, fakeBlockRenderPosition, extraBlockWater);
+
+            // For lighting, it usually puts UVs from the light texture into the UV1 slot of the vertices.
+            // Since we can't provide it, we make sure it's not rendering from whatever was last bound there.
+            session.Builder.DisableUv1();
+        } // Now, if we had anything to render, when that } calls Dispose() it should render our block with the material we picked.
+    }</code></pre>
+
+
+
+    This example shows how to render more than one block, in this case part of a chunk.
+
+    You can adapt it or learn from it to build your own larger meshes but it should be a good starting point.
+
+    <pre><code class="lang-csharp"> private GameMesh? _subChunkMesh = null;
+     private void OnWorldRender(RendererWorld gfx, float delta) {
+        // Only generate a mesh when we don't have one already.
+        if (_subChunkMesh is null) {
+            var mb = gfx.MeshBuilder;
+            var blockRenderer = gfx.BlockRenderer;
+
+
+            // We start our new session here, note that I'm not applying the reverse origin, since we're going to render it at the origin.
+            // Well at least at the mesh level.
+            mb.New(ColorF.White, MeshBuilderPrimitiveType.Quad, false);
+
+            // Get our coordinates for what we want to pick up.
+            // We'll take two sub chunks from height 0. We'll pick the chunkToGrab chunk data.
+            // Of course, you can do less or more, you have to split it up for the cache though.
+            int subChunksToInclude = 2;
+            ChunkPos chunkToGrab = new(0, 0);
+            BlockPos chunkStartPos = new(chunkToGrab.X * 16, 0, chunkToGrab.Y * 16);
+
+            // We're going to offset our first block to be at 0,0, 0 when the mesh is built, which is the invert of our first block's position.
+            mb.PostTransformOffset = new Vec3(-chunkStartPos);
+
+            for (int currentSubChunk = 0; currentSubChunk &lt; subChunksToInclude; currentSubChunk++) {
+                // Reset our cache to this subchunk. I'll also surround with air so the sides are visible.
+                // The bottom and top will also be surrounded, but not of every subchunk, only the first and last.
+                bool shouldSurroundTopAndBottom = currentSubChunk == 0 || currentSubChunk == (subChunksToInclude - 1);
+                blockRenderer.ResetCacheAndSurroundInAir(chunkStartPos.WithY(chunkStartPos.Y + currentSubChunk * 16), true, shouldSurroundTopAndBottom);
+                // If we want biome tinting to work, we have to reset the cache. You may not care about that so that's why it's manual.
+                blockRenderer.ResetBiomeCache(chunkStartPos.WithY(chunkStartPos.Y + currentSubChunk * 16));
+                for (int x = 0; x &lt; 16; x++) {
+                    for (int y = 0; y &lt; 16; y++) {
+                        for (int z = 0; z &lt; 16; z++) {
+                            // This gets our coordinates from our for loops into a BlockPos
+                            BlockPos currentBlockPos = new(chunkStartPos.X + x, chunkStartPos.Y + y + currentSubChunk * 16, chunkStartPos.Z + z);
+                            Block blockAtPos = Onix.Region!.GetBlock(currentBlockPos);
+                            // Don't render air guys!
+                            if (blockAtPos.IsAir()) continue;
+
+                            // Setup our block as before, no need for anything fancy.
+                            blockRenderer.SetupRenderingForBlock(currentBlockPos, blockAtPos);
+                            // Tell it to occlude faces we can't see, this doesn't do anything with the camera, just at the mesh level.
+                            // Still, that's very good and since we've set up the cache, it should be able to detect what it needs.
+                            blockRenderer.UseOccluder = true;
+
+                            // And send it!
+                            blockRenderer.RenderBlock(mb, currentBlockPos, blockAtPos);
+
+                            // And now, to support the second layer, waterlogging, etc.
+                            Block extraBlockAtPos = Onix.Region!.GetExtraBlock(currentBlockPos);
+                            if (!extraBlockAtPos.IsAir()) { // Just don't render air!
+                                // Set that block up.
+                                blockRenderer.SetupRenderingForBlock(currentBlockPos, extraBlockAtPos);
+                                // We're rendering an extra block right now, not the main block. Let it know.
+                                blockRenderer.IsRenderingExtra = true;
+                                // Send that one too, great that one block is done and added to our mesh.
+                                blockRenderer.RenderBlock(mb, currentBlockPos, extraBlockAtPos);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // For lighting, it usually puts UVs from the light texture into the UV1 slot of the vertices.
+            // Since we can't provide it, we make sure it's not rendering from whatever was last bound there.
+            // This has to be done before we build/render the mesh.
+            session.Builder.DisableUv1();
+
+            // Okay, we've just finished adding all those blocks, that probably took some time but now time to convert it to a mesh.
+            // That way, we don't have to do all that work again. Make sure to put immediate to false.
+            _subChunkMesh = mb.Build(false);
+        }
+
+        if (_subChunkMesh is not null) {
+            // Now, to render it. It's quite tricky to find a material, but this seems to give decent results.
+            // Pretty well with almost every block, doesn't support blending or tinted glass very well though.
+            // This is why we have render layers exposed now, so you can try to do different things, good luck.
+            gfx.SetMaterialParameters(new GameMaterialParameters() {
+                 AlphaTest = true,
+                 Uv = true,
+                 Gradient = true,
+             });
+
+            // Now we have to position it, remembered how we made sure to render it at 0,0,0?
+            // Now we have to move it not only back into view but where we actually want to render it.
+            // Whatever position we do give, will represent the block in the bottom corner with the smallest coordinates.
+            // I'll render mine at 16, 10, 16. You can pick any coordinates in 3d, sub-coordinates. Rotate it, scale it, have fun!
+            TransformationMatrix transformation = TransformationMatrix.TranslateWorldPosition(16, 10, 16);
+            using (_ = gfx.PushTransformation(transformation)) {
+                // Finally, while that transformation is applied, let's render our mesh. 
+                // Don't forget to give it the terrain texture atlas!
+                // And that's done, you should see a copy of your chunk where you rendered it.
+                // The inside should be hollow if you set up your cache and enabled UseOccluder.
+                // To reflect the changes of course, you'd have to rebuild the mesh.
+                gfx.RenderMesh(_subChunkMesh, ColorF.White, TexturePath.TerrainAtlas);
+            }
+        }
+    }</code></pre>
+  syntax:
+    content: public void RenderBlock(GameMeshBuilder meshBuilder, BlockPos renderPosition, Block blockToRender)
+    parameters:
+    - id: meshBuilder
+      type: OnixRuntime.Api.Rendering.GameMeshBuilder
+      description: A <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder" data-throw-if-not-resolved="false"></xref> That has started.
+    - id: renderPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: >-
+        The position at which you want to render that block, this will render it at that position in the world, but also take things like rotation for that position. (How a few blocks like grass or sand rotates depending on its world position.)
+
+        It doesn't have to match where the block actually is or actually exist in the world.
+
+        Note that if you DO use <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder" data-throw-if-not-resolved="false"></xref> you will absolutely want to trick the <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.Cache" data-throw-if-not-resolved="false"></xref> if the position does not match to ensure the desired result.
+    - id: blockToRender
+      type: OnixRuntime.Api.World.Block
+      description: The block that you actually do want to render.
+    content.vb: Public Sub RenderBlock(meshBuilder As GameMeshBuilder, renderPosition As BlockPos, blockToRender As Block)
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+  id: RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderBlockTinted(GameMeshBuilder, BlockPos, Block, ColorF)
+  nameWithType: GameBlockRenderer.RenderBlockTinted(GameMeshBuilder, BlockPos, Block, ColorF)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block, OnixRuntime.Api.Maths.ColorF)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderBlockTinted
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 535
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Sorry, I don't really want to put every example here again, please see <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder%2cOnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block)" data-throw-if-not-resolved="false"></xref> for examples.
+
+    This function does require setup before it is used. You can get <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> to do most of it for you.
+
+    You should try to batch blocks into a single mesh whenever possible.
+
+    You should re-use that mesh as generating those meshes can be quite slow.
+
+    You will probably want to <xref href="OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> use a custom material like "terrain_alpha" or "terrain_blend" or "terrain_opaque" (note that "terrain_blend" decided to not work on 1.21.40 specifically...)
+
+    Now to use this, you will need a <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder" data-throw-if-not-resolved="false"></xref> that has a session started.
+
+    Remember that this function can only render with <xref href="OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.Quad" data-throw-if-not-resolved="false"></xref>.
+
+    For testing, you should likely use applyReverseOriginOffsetIf3D and add -32 or something to the height of <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder.PostTransformOffset" data-throw-if-not-resolved="false"></xref>.
+
+    This will let you see the results so you know you're doing something right.
+
+    Once you're ready to get serious, you can put it to false and offset it by the invert of the first block on the x and y (assuming you're rendering a group of blocks of course.)
+
+    This will then let you offset it where you want without much precision loss using <xref href="OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> before rendering the mesh.
+
+    Once you rendered every block you want, call <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder.Build(System.Boolean%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> to get the mesh out of it.
+
+    Note: You should never render an air block. You'll get the update block otherwise.
+
+    Don't hesitate to ask for help if you do need some. You can also look at the examples in <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder%2cOnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void RenderBlockTinted(GameMeshBuilder meshBuilder, BlockPos renderPosition, Block blockToRender, ColorF tint)
+    parameters:
+    - id: meshBuilder
+      type: OnixRuntime.Api.Rendering.GameMeshBuilder
+      description: A <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder" data-throw-if-not-resolved="false"></xref> That has started.
+    - id: renderPosition
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: >-
+        The position at which you want to render that block, this will render it at that position in the world, but also take things like rotation for that position. (How a few blocks like grass or sand rotates depending on its world position.)
+
+        It doesn't have to match where the block actually is or actually exist in the world.
+
+        Note that if you DO use <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder" data-throw-if-not-resolved="false"></xref> you will absolutely want to trick the <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.Cache" data-throw-if-not-resolved="false"></xref> if the position does not match to ensure the desired result.
+    - id: blockToRender
+      type: OnixRuntime.Api.World.Block
+      description: The block that you actually do want to render.
+    - id: tint
+      type: OnixRuntime.Api.Maths.ColorF
+      description: The tint to use when rendering. Note that for opacity, you'd give a white color with the desired opacity.
+    content.vb: Public Sub RenderBlockTinted(meshBuilder As GameMeshBuilder, renderPosition As BlockPos, blockToRender As Block, tint As ColorF)
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  id: SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetupRenderingForBlock(BlockPos, Block, BlockLightingType)
+  nameWithType: GameBlockRenderer.SetupRenderingForBlock(BlockPos, Block, GameBlockRenderer.BlockLightingType)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block, OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SetupRenderingForBlock
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 562
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Sets up a lot of renderer parameters for you. Note that you should make your changes after calling this function if the defaults don't satisfy you.
+
+    Note that this does not touch <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder" data-throw-if-not-resolved="false"></xref>. You are responsible for managing this bit yourself as it requires more flexibility than this simple function can provide.
+  remarks: >-
+    Here is what this function does for you.
+
+    <pre><code class="lang-csharp">CurrentShapeSet = false;
+
+    CurrentBlock = block;
+
+    CurrentPosition = pos;
+
+    RenderingLayer = block.RawRenderLayer;
+
+    IsRenderingExtra = false;
+
+    IsRenderingGui = false;
+
+    UseNormals = false;
+
+    LightingType = lightingType;
+
+    CurrentScale = 1.0f;</code></pre>
+  example: []
+  syntax:
+    content: public void SetupRenderingForBlock(BlockPos pos, Block block, GameBlockRenderer.BlockLightingType lightingType = BlockLightingType.BakedWithAmbientOcclusion)
+    parameters:
+    - id: pos
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The position of the block in the world.
+    - id: block
+      type: OnixRuntime.Api.World.Block
+      description: The block to set it up for.
+    - id: lightingType
+      type: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+      description: The kind of lighting you want.
+    content.vb: Public Sub SetupRenderingForBlock(pos As BlockPos, block As Block, lightingType As GameBlockRenderer.BlockLightingType = BlockLightingType.BakedWithAmbientOcclusion)
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra
+  id: IsRenderingExtra
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: IsRenderingExtra
+  nameWithType: GameBlockRenderer.IsRenderingExtra
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsRenderingExtra
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 573
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This is to tell the renderer that it is rendering the extra block, or the block at the layer 1.
+
+    This is for waterlogged blocks or foliage with snow in it.
+
+    You would use <xref href="OnixRuntime.Api.World.WorldBlocks.GetExtraBlock(OnixRuntime.Api.Maths.BlockPos)" data-throw-if-not-resolved="false"></xref> to get the extra block, you'd <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> and after that, set this to true.
+
+    Remember to not render it if it's air.
+  example: []
+  syntax:
+    content: public bool IsRenderingExtra { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsRenderingExtra As Boolean
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui
+  id: IsRenderingGui
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: IsRenderingGui
+  nameWithType: GameBlockRenderer.IsRenderingGui
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsRenderingGui
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 581
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This tells the renderer that you are rendering it in the UI.
+
+    It does some special things, like disabling lighting, culling, ambient occlusion, etc.
+  example: []
+  syntax:
+    content: public bool IsRenderingGui { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsRenderingGui As Boolean
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+  id: UseNormals
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: UseNormals
+  nameWithType: GameBlockRenderer.UseNormals
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: UseNormals
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 589
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    If it should use the normals vertex attribute. Do see <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType" data-throw-if-not-resolved="false"></xref> as the usefulness of normals depends on the lighting type.
+
+    You should set this to false in most cases.
+  example: []
+  syntax:
+    content: public bool UseNormals { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseNormals As Boolean
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+  id: LightingType
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: LightingType
+  nameWithType: GameBlockRenderer.LightingType
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: LightingType
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 597
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    The type of lighting to use when rendering blocks.
+
+    You can have it flat, with ambient occlusion or just normals.
+  example: []
+  syntax:
+    content: public GameBlockRenderer.BlockLightingType LightingType { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    content.vb: Public Property LightingType As GameBlockRenderer.BlockLightingType
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+  id: UseOccluder
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: UseOccluder
+  nameWithType: GameBlockRenderer.UseOccluder
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: UseOccluder
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 609
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    The occluder is what allows the faces that aren't visible to not be rendered.
+
+    This does not do camera based culling, only at the face level, seeing if a block is hiding that face.
+
+    This is very useful but requires a little more work to work properly.
+
+    You need to make sure the <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.Cache" data-throw-if-not-resolved="false"></xref> is properly filled up/reset with a position that can be accessed in the cache.
+
+    The cache contains a region of 20x20x20 blocks, which is meant to be a subchunk and two blocks around it.
+
+    Going outside the cache usually will lead to air being returned and no culling/occlusion.
+  example: []
+  syntax:
+    content: public bool UseOccluder { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseOccluder As Boolean
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer
+  id: RenderingLayer
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderingLayer
+  nameWithType: GameBlockRenderer.RenderingLayer
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RenderingLayer
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 617
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This is to tell the renderer which block layer it's rendering right now. You can set it to the <xref href="OnixRuntime.Api.World.Block.RawRenderLayer" data-throw-if-not-resolved="false"></xref> and forget it.
+
+    You should not rely on the specific values as they changed over the versions.
+  example: []
+  syntax:
+    content: public int RenderingLayer { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property RenderingLayer As Integer
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+  id: CurrentVisualShape
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: CurrentVisualShape
+  nameWithType: GameBlockRenderer.CurrentVisualShape
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CurrentVisualShape
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 628
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    You should probably use <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> instead of setting this yourself.
+
+    The current visual shape of the block being rendered.
+
+    You should just set <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition" data-throw-if-not-resolved="false"></xref> then explicitly set <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet" data-throw-if-not-resolved="false"></xref> to false.
+
+    This will make the game retrieve the proper shape on its own, which will likely be better than what you will come up with.
+
+    You can even collect it after it is done rendering the block too!
+  example: []
+  syntax:
+    content: public BoundingBox CurrentVisualShape { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BoundingBox
+    content.vb: Public Property CurrentVisualShape As BoundingBox
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+  id: CurrentShapeSet
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: CurrentShapeSet
+  nameWithType: GameBlockRenderer.CurrentShapeSet
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CurrentShapeSet
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 637
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    You should probably use <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> instead of setting this yourself.
+
+    Tells the renderer if the <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape" data-throw-if-not-resolved="false"></xref> is set or not.
+
+    Best to leave this at false.
+  example: []
+  syntax:
+    content: public bool CurrentShapeSet { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CurrentShapeSet As Boolean
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+  id: CurrentBlock
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: CurrentBlock
+  nameWithType: GameBlockRenderer.CurrentBlock
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CurrentBlock
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 646
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    You should probably use <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> instead of setting this yourself.
+
+    The block for the shape, set it to the block you're about to render
+  example: []
+  syntax:
+    content: public Block? CurrentBlock { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.Block
+    content.vb: Public Property CurrentBlock As Block
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+  id: CurrentPosition
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: CurrentPosition
+  nameWithType: GameBlockRenderer.CurrentPosition
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CurrentPosition
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 654
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    You should probably use <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> instead of setting this yourself.
+
+    The position of the block in the world.
+  example: []
+  syntax:
+    content: public BlockPos CurrentPosition { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+    content.vb: Public Property CurrentPosition As BlockPos
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition*
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale
+  id: CurrentScale
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer
+  langs:
+  - csharp
+  - vb
+  name: CurrentScale
+  nameWithType: GameBlockRenderer.CurrentScale
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CurrentScale
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 665
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    You should probably leave this alone at all times, this messes up a lot of stuff.
+
+    Can be quite funny to mess with it though.
+
+    <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos%2cOnixRuntime.Api.World.Block%2cOnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)" data-throw-if-not-resolved="false"></xref> does set that to 1.0f for you.
+
+    If you DO want to scale, you should use <xref href="OnixRuntime.Api.Rendering.GameMeshBuilder.PostScaleOffset" data-throw-if-not-resolved="false"></xref> because this one does not do good scaling with many blocks.
+  example: []
+  syntax:
+    content: public float CurrentScale { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property CurrentScale As Single
+  overload: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale*
+references:
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer
+  commentId: T:OnixRuntime.Api.Internal.MemoryAddressContainer
+  parent: OnixRuntime.Api.Internal
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html
+  name: MemoryAddressContainer
+  nameWithType: MemoryAddressContainer
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  name: SetMemoryAddress(nint)
+  nameWithType: MemoryAddressContainer.SetMemoryAddress(nint)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(nint)
+  nameWithType.vb: MemoryAddressContainer.SetMemoryAddress(IntPtr)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+  name.vb: SetMemoryAddress(IntPtr)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.SetMemoryAddress(System.IntPtr)
+    name: SetMemoryAddress
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_SetMemoryAddress_System_IntPtr_
+  - name: (
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  isExternal: true
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MemoryAddressContainer.Equals(object)
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(object)
+  nameWithType.vb: MemoryAddressContainer.Equals(Object)
+  fullName.vb: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.Equals(System.Object)
+    name: Equals
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  commentId: M:OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+  parent: OnixRuntime.Api.Internal.MemoryAddressContainer
+  href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MemoryAddressContainer.GetHashCode()
+  fullName: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode()
+  spec.csharp:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Internal.MemoryAddressContainer.GetHashCode
+    name: GetHashCode
+    href: OnixRuntime.Api.Internal.MemoryAddressContainer.html#OnixRuntime_Api_Internal_MemoryAddressContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.Internal
+  commentId: N:OnixRuntime.Api.Internal
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Internal
+  nameWithType: OnixRuntime.Api.Internal
+  fullName: OnixRuntime.Api.Internal
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Internal
+    name: Internal
+    href: OnixRuntime.Api.Internal.html
+- uid: OnixRuntime.Api.World.WorldBlocks
+  commentId: T:OnixRuntime.Api.World.WorldBlocks
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.WorldBlocks.html
+  name: WorldBlocks
+  nameWithType: WorldBlocks
+  fullName: OnixRuntime.Api.World.WorldBlocks
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.Region*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.Region
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_Region
+  name: Region
+  nameWithType: GameBlockRenderer.Region
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.Region
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+  commentId: T:OnixRuntime.Api.Rendering.GameBlockRenderer
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  name: GameBlockRenderer
+  nameWithType: GameBlockRenderer
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder
+  name: UseOccluder
+  nameWithType: GameBlockRenderer.UseOccluder
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.Cache*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_Cache
+  name: Cache
+  nameWithType: GameBlockRenderer.Cache
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+- uid: OnixRuntime.Api.Rendering.GameBlockRendererCache
+  commentId: T:OnixRuntime.Api.Rendering.GameBlockRendererCache
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameBlockRendererCache.html
+  name: GameBlockRendererCache
+  nameWithType: GameBlockRendererCache
+  fullName: OnixRuntime.Api.Rendering.GameBlockRendererCache
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCacheAndSurroundInAir_OnixRuntime_Api_Maths_BlockPos_System_Boolean_System_Boolean_
+  name: ResetCacheAndSurroundInAir(BlockPos, bool, bool)
+  nameWithType: GameBlockRenderer.ResetCacheAndSurroundInAir(BlockPos, bool, bool)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos, bool, bool)
+  nameWithType.vb: GameBlockRenderer.ResetCacheAndSurroundInAir(BlockPos, Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos, Boolean, Boolean)
+  name.vb: ResetCacheAndSurroundInAir(BlockPos, Boolean, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+    name: ResetCacheAndSurroundInAir
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCacheAndSurroundInAir_OnixRuntime_Api_Maths_BlockPos_System_Boolean_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir(OnixRuntime.Api.Maths.BlockPos,System.Boolean,System.Boolean)
+    name: ResetCacheAndSurroundInAir
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCacheAndSurroundInAir_OnixRuntime_Api_Maths_BlockPos_System_Boolean_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCache_OnixRuntime_Api_Maths_BlockPos_
+  name: ResetCache
+  nameWithType: GameBlockRenderer.ResetCache
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCache
+- uid: OnixRuntime.Api.Maths.BlockPos
+  commentId: T:OnixRuntime.Api.Maths.BlockPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BlockPos.html
+  name: BlockPos
+  nameWithType: BlockPos
+  fullName: OnixRuntime.Api.Maths.BlockPos
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_ResetBiomeCache_OnixRuntime_Api_Maths_BlockPos_
+  name: ResetBiomeCache
+  nameWithType: GameBlockRenderer.ResetBiomeCache
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetBiomeCache
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_ResetCacheAndSurroundInAir_OnixRuntime_Api_Maths_BlockPos_System_Boolean_System_Boolean_
+  name: ResetCacheAndSurroundInAir
+  nameWithType: GameBlockRenderer.ResetCacheAndSurroundInAir
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.ResetCacheAndSurroundInAir
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas
+  commentId: F:OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas
+  href: OnixRuntime.Api.Rendering.TexturePath.html#OnixRuntime_Api_Rendering_TexturePath_TerrainAtlas
+  name: TerrainAtlas
+  nameWithType: TexturePath.TerrainAtlas
+  fullName: OnixRuntime.Api.Rendering.TexturePath.TerrainAtlas
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_Cache
+  name: Cache
+  nameWithType: GameBlockRenderer.Cache
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.Cache
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_GetTexture_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_World_BlockFace_System_Int32_
+  name: GetTexture
+  nameWithType: GameBlockRenderer.GetTexture
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.GetTexture
+- uid: OnixRuntime.Api.World.Block
+  commentId: T:OnixRuntime.Api.World.Block
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: OnixRuntime.Api.World.Block
+- uid: OnixRuntime.Api.World.BlockFace
+  commentId: T:OnixRuntime.Api.World.BlockFace
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.BlockFace.html
+  name: BlockFace
+  nameWithType: BlockFace
+  fullName: OnixRuntime.Api.World.BlockFace
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.Rendering.TextureUVCoordinates
+  commentId: T:OnixRuntime.Api.Rendering.TextureUVCoordinates
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.TextureUVCoordinates.html
+  name: TextureUVCoordinates
+  nameWithType: TextureUVCoordinates
+  fullName: OnixRuntime.Api.Rendering.TextureUVCoordinates
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlockTinted_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Maths_ColorF_
+  name: RenderBlockTinted(GameMeshBuilder, BlockPos, Block, ColorF)
+  nameWithType: GameBlockRenderer.RenderBlockTinted(GameMeshBuilder, BlockPos, Block, ColorF)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block, OnixRuntime.Api.Maths.ColorF)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+    name: RenderBlockTinted
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlockTinted_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Maths_ColorF_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+    name: GameMeshBuilder
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.Block
+    name: Block
+    href: OnixRuntime.Api.World.Block.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.ColorF
+    name: ColorF
+    href: OnixRuntime.Api.Maths.ColorF.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Maths.ColorF)
+    name: RenderBlockTinted
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlockTinted_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Maths_ColorF_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+    name: GameMeshBuilder
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.Block
+    name: Block
+    href: OnixRuntime.Api.World.Block.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.ColorF
+    name: ColorF
+    href: OnixRuntime.Api.Maths.ColorF.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_
+  name: SetupRenderingForBlock(BlockPos, Block, BlockLightingType)
+  nameWithType: GameBlockRenderer.SetupRenderingForBlock(BlockPos, Block, GameBlockRenderer.BlockLightingType)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block, OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+    name: SetupRenderingForBlock
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.Block
+    name: Block
+    href: OnixRuntime.Api.World.Block.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    name: BlockLightingType
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock(OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block,OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType)
+    name: SetupRenderingForBlock
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.Block
+    name: Block
+    href: OnixRuntime.Api.World.Block.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    name: BlockLightingType
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.IGameRenderer
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_
+  name: SetMaterialCustom(string, bool)
+  nameWithType: IGameRenderer.SetMaterialCustom(string, bool)
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(string, bool)
+  nameWithType.vb: IGameRenderer.SetMaterialCustom(String, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(String, Boolean)
+  name.vb: SetMaterialCustom(String, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+    name: SetMaterialCustom
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.IGameRenderer.SetMaterialCustom(System.String,System.Boolean)
+    name: SetMaterialCustom
+    href: OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_SetMaterialCustom_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+  commentId: T:OnixRuntime.Api.Rendering.GameMeshBuilder
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  name: GameMeshBuilder
+  nameWithType: GameMeshBuilder
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder
+- uid: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.Quad
+  commentId: F:OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.Quad
+  href: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.html#OnixRuntime_Api_Rendering_MeshBuilderPrimitiveType_Quad
+  name: Quad
+  nameWithType: MeshBuilderPrimitiveType.Quad
+  fullName: OnixRuntime.Api.Rendering.MeshBuilderPrimitiveType.Quad
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder.PostTransformOffset
+  commentId: P:OnixRuntime.Api.Rendering.GameMeshBuilder.PostTransformOffset
+  href: OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_PostTransformOffset
+  name: PostTransformOffset
+  nameWithType: GameMeshBuilder.PostTransformOffset
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder.PostTransformOffset
+- uid: OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
+  parent: OnixRuntime.Api.Rendering.RendererCommon
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_PushTransformation_OnixRuntime_Api_Maths_TransformationMatrix_System_Boolean_
+  name: PushTransformation(TransformationMatrix, bool)
+  nameWithType: RendererCommon.PushTransformation(TransformationMatrix, bool)
+  fullName: OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix, bool)
+  nameWithType.vb: RendererCommon.PushTransformation(TransformationMatrix, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix, Boolean)
+  name.vb: PushTransformation(TransformationMatrix, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
+    name: PushTransformation
+    href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_PushTransformation_OnixRuntime_Api_Maths_TransformationMatrix_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix
+    name: TransformationMatrix
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.RendererCommon.PushTransformation(OnixRuntime.Api.Maths.TransformationMatrix,System.Boolean)
+    name: PushTransformation
+    href: OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_PushTransformation_OnixRuntime_Api_Maths_TransformationMatrix_System_Boolean_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix
+    name: TransformationMatrix
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder.Build(System.Boolean,System.Boolean)
+  commentId: M:OnixRuntime.Api.Rendering.GameMeshBuilder.Build(System.Boolean,System.Boolean)
+  isExternal: true
+  href: OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_Build_System_Boolean_System_Boolean_
+  name: Build(bool, bool)
+  nameWithType: GameMeshBuilder.Build(bool, bool)
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder.Build(bool, bool)
+  nameWithType.vb: GameMeshBuilder.Build(Boolean, Boolean)
+  fullName.vb: OnixRuntime.Api.Rendering.GameMeshBuilder.Build(Boolean, Boolean)
+  name.vb: Build(Boolean, Boolean)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder.Build(System.Boolean,System.Boolean)
+    name: Build
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_Build_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder.Build(System.Boolean,System.Boolean)
+    name: Build
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_Build_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_
+  name: RenderBlock
+  nameWithType: GameBlockRenderer.RenderBlock
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock
+- uid: OnixRuntime.Api.Rendering.IGameRenderer
+  commentId: T:OnixRuntime.Api.Rendering.IGameRenderer
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.IGameRenderer.html
+  name: IGameRenderer
+  nameWithType: IGameRenderer
+  fullName: OnixRuntime.Api.Rendering.IGameRenderer
+- uid: OnixRuntime.Api.Rendering.RendererCommon
+  commentId: T:OnixRuntime.Api.Rendering.RendererCommon
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.RendererCommon.html
+  name: RendererCommon
+  nameWithType: RendererCommon
+  fullName: OnixRuntime.Api.Rendering.RendererCommon
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+  commentId: M:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_
+  name: RenderBlock(GameMeshBuilder, BlockPos, Block)
+  nameWithType: GameBlockRenderer.RenderBlock(GameMeshBuilder, BlockPos, Block)
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder, OnixRuntime.Api.Maths.BlockPos, OnixRuntime.Api.World.Block)
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+    name: RenderBlock
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+    name: GameMeshBuilder
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.Block
+    name: Block
+    href: OnixRuntime.Api.World.Block.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlock(OnixRuntime.Api.Rendering.GameMeshBuilder,OnixRuntime.Api.Maths.BlockPos,OnixRuntime.Api.World.Block)
+    name: RenderBlock
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_
+  - name: (
+  - uid: OnixRuntime.Api.Rendering.GameMeshBuilder
+    name: GameMeshBuilder
+    href: OnixRuntime.Api.Rendering.GameMeshBuilder.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.World.Block
+    name: Block
+    href: OnixRuntime.Api.World.Block.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlockTinted_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Maths_ColorF_
+  name: RenderBlockTinted
+  nameWithType: GameBlockRenderer.RenderBlockTinted
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderBlockTinted
+- uid: OnixRuntime.Api.Maths.ColorF
+  commentId: T:OnixRuntime.Api.Maths.ColorF
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.ColorF.html
+  name: ColorF
+  nameWithType: ColorF
+  fullName: OnixRuntime.Api.Maths.ColorF
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_SetupRenderingForBlock_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_OnixRuntime_Api_Rendering_GameBlockRenderer_BlockLightingType_
+  name: SetupRenderingForBlock
+  nameWithType: GameBlockRenderer.SetupRenderingForBlock
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.SetupRenderingForBlock
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  commentId: T:OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  name: GameBlockRenderer.BlockLightingType
+  nameWithType: GameBlockRenderer.BlockLightingType
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+    name: GameBlockRenderer
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    name: BlockLightingType
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+    name: GameBlockRenderer
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    name: BlockLightingType
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html
+- uid: OnixRuntime.Api.World.WorldBlocks.GetExtraBlock(OnixRuntime.Api.Maths.BlockPos)
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.GetExtraBlock(OnixRuntime.Api.Maths.BlockPos)
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetExtraBlock_OnixRuntime_Api_Maths_BlockPos_
+  name: GetExtraBlock(BlockPos)
+  nameWithType: WorldBlocks.GetExtraBlock(BlockPos)
+  fullName: OnixRuntime.Api.World.WorldBlocks.GetExtraBlock(OnixRuntime.Api.Maths.BlockPos)
+  spec.csharp:
+  - uid: OnixRuntime.Api.World.WorldBlocks.GetExtraBlock(OnixRuntime.Api.Maths.BlockPos)
+    name: GetExtraBlock
+    href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetExtraBlock_OnixRuntime_Api_Maths_BlockPos_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.World.WorldBlocks.GetExtraBlock(OnixRuntime.Api.Maths.BlockPos)
+    name: GetExtraBlock
+    href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetExtraBlock_OnixRuntime_Api_Maths_BlockPos_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: )
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_IsRenderingExtra
+  name: IsRenderingExtra
+  nameWithType: GameBlockRenderer.IsRenderingExtra
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingExtra
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_IsRenderingGui
+  name: IsRenderingGui
+  nameWithType: GameBlockRenderer.IsRenderingGui
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.IsRenderingGui
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_LightingType
+  name: LightingType
+  nameWithType: GameBlockRenderer.LightingType
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseNormals
+  name: UseNormals
+  nameWithType: GameBlockRenderer.UseNormals
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_LightingType
+  name: LightingType
+  nameWithType: GameBlockRenderer.LightingType
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.LightingType
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseOccluder
+  name: UseOccluder
+  nameWithType: GameBlockRenderer.UseOccluder
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.UseOccluder
+- uid: OnixRuntime.Api.World.Block.RawRenderLayer
+  commentId: P:OnixRuntime.Api.World.Block.RawRenderLayer
+  href: OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_RawRenderLayer
+  name: RawRenderLayer
+  nameWithType: Block.RawRenderLayer
+  fullName: OnixRuntime.Api.World.Block.RawRenderLayer
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderingLayer
+  name: RenderingLayer
+  nameWithType: GameBlockRenderer.RenderingLayer
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.RenderingLayer
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentBlock
+  name: CurrentBlock
+  nameWithType: GameBlockRenderer.CurrentBlock
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentPosition
+  name: CurrentPosition
+  nameWithType: GameBlockRenderer.CurrentPosition
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentShapeSet
+  name: CurrentShapeSet
+  nameWithType: GameBlockRenderer.CurrentShapeSet
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentVisualShape
+  name: CurrentVisualShape
+  nameWithType: GameBlockRenderer.CurrentVisualShape
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+- uid: OnixRuntime.Api.Maths.BoundingBox
+  commentId: T:OnixRuntime.Api.Maths.BoundingBox
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BoundingBox.html
+  name: BoundingBox
+  nameWithType: BoundingBox
+  fullName: OnixRuntime.Api.Maths.BoundingBox
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentVisualShape
+  name: CurrentVisualShape
+  nameWithType: GameBlockRenderer.CurrentVisualShape
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentVisualShape
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentShapeSet
+  name: CurrentShapeSet
+  nameWithType: GameBlockRenderer.CurrentShapeSet
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentShapeSet
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentBlock
+  name: CurrentBlock
+  nameWithType: GameBlockRenderer.CurrentBlock
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentBlock
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentPosition
+  name: CurrentPosition
+  nameWithType: GameBlockRenderer.CurrentPosition
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentPosition
+- uid: OnixRuntime.Api.Rendering.GameMeshBuilder.PostScaleOffset
+  commentId: P:OnixRuntime.Api.Rendering.GameMeshBuilder.PostScaleOffset
+  href: OnixRuntime.Api.Rendering.GameMeshBuilder.html#OnixRuntime_Api_Rendering_GameMeshBuilder_PostScaleOffset
+  name: PostScaleOffset
+  nameWithType: GameMeshBuilder.PostScaleOffset
+  fullName: OnixRuntime.Api.Rendering.GameMeshBuilder.PostScaleOffset
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale*
+  commentId: Overload:OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_CurrentScale
+  name: CurrentScale
+  nameWithType: GameBlockRenderer.CurrentScale
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.CurrentScale
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

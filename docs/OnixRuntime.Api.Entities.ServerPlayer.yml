@@ -6,6 +6,7 @@ items:
   parent: OnixRuntime.Api.Entities
   children:
   - OnixRuntime.Api.Entities.ServerPlayer.SendChatMessage(System.String,OnixRuntime.Api.UI.ChatMessageType,System.String)
+  - OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput(System.String,System.Int32,System.UInt64,System.UInt64)
   langs:
   - csharp
   - vb
@@ -74,6 +75,7 @@ items:
   - OnixRuntime.Api.Entities.Mob.ArmorItems
   - OnixRuntime.Api.Entities.Entity.Categories
   - OnixRuntime.Api.Entities.Entity.IsClientSide
+  - OnixRuntime.Api.Entities.Entity.IsAlive
   - OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
   - OnixRuntime.Api.Entities.Entity.GetFlag(OnixRuntime.Api.Entities.EntityFlag)
   - OnixRuntime.Api.Entities.Entity.SetFlag(OnixRuntime.Api.Entities.EntityFlag,System.Boolean)
@@ -161,6 +163,51 @@ items:
   nameWithType.vb: ServerPlayer.SendChatMessage(String, ChatMessageType, String)
   fullName.vb: OnixRuntime.Api.Entities.ServerPlayer.SendChatMessage(String, OnixRuntime.Api.UI.ChatMessageType, String)
   name.vb: SendChatMessage(String, ChatMessageType, String)
+- uid: OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput(System.String,System.Int32,System.UInt64,System.UInt64)
+  commentId: M:OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput(System.String,System.Int32,System.UInt64,System.UInt64)
+  id: SendCommandOutput(System.String,System.Int32,System.UInt64,System.UInt64)
+  parent: OnixRuntime.Api.Entities.ServerPlayer
+  langs:
+  - csharp
+  - vb
+  name: SendCommandOutput(string, int, ulong, ulong)
+  nameWithType: ServerPlayer.SendCommandOutput(string, int, ulong, ulong)
+  fullName: OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput(string, int, ulong, ulong)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/ServerPlayer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: SendCommandOutput
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/ServerPlayer.cs
+    startLine: 24
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: >-
+    Sends the command output to the player.
+
+    This is not too close to the game's internal command output system, but it has the essentials.
+  example: []
+  syntax:
+    content: public void SendCommandOutput(string message, int successCount, ulong requestId1, ulong requestId2)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message/command output text.
+    - id: successCount
+      type: System.Int32
+      description: The amount of successes, like /testfor can have a higher count. Just go 0 for error and 1 when it works, unless you know what you're doing.
+    - id: requestId1
+      type: System.UInt64
+    - id: requestId2
+      type: System.UInt64
+    content.vb: Public Sub SendCommandOutput(message As String, successCount As Integer, requestId1 As ULong, requestId2 As ULong)
+  overload: OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput*
+  nameWithType.vb: ServerPlayer.SendCommandOutput(String, Integer, ULong, ULong)
+  fullName.vb: OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput(String, Integer, ULong, ULong)
+  name.vb: SendCommandOutput(String, Integer, ULong, ULong)
 references:
 - uid: OnixRuntime.Api.Entities
   commentId: N:OnixRuntime.Api.Entities
@@ -589,6 +636,13 @@ references:
   name: IsClientSide
   nameWithType: Entity.IsClientSide
   fullName: OnixRuntime.Api.Entities.Entity.IsClientSide
+- uid: OnixRuntime.Api.Entities.Entity.IsAlive
+  commentId: P:OnixRuntime.Api.Entities.Entity.IsAlive
+  parent: OnixRuntime.Api.Entities.Entity
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsAlive
+  name: IsAlive
+  nameWithType: Entity.IsAlive
+  fullName: OnixRuntime.Api.Entities.Entity.IsAlive
 - uid: OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
   commentId: M:OnixRuntime.Api.Entities.Entity.HasCategory(OnixRuntime.Api.Entities.EntityCategory)
   parent: OnixRuntime.Api.Entities.Entity
@@ -1396,3 +1450,31 @@ references:
   - uid: OnixRuntime.Api.UI
     name: UI
     href: OnixRuntime.Api.UI.html
+- uid: OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput*
+  commentId: Overload:OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput
+  href: OnixRuntime.Api.Entities.ServerPlayer.html#OnixRuntime_Api_Entities_ServerPlayer_SendCommandOutput_System_String_System_Int32_System_UInt64_System_UInt64_
+  name: SendCommandOutput
+  nameWithType: ServerPlayer.SendCommandOutput
+  fullName: OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

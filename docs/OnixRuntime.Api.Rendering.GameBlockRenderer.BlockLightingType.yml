@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  commentId: T:OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  id: GameBlockRenderer.BlockLightingType
+  parent: OnixRuntime.Api.Rendering
+  children:
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedNoAmbientOcclusion
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedWithAmbientOcclusion
+  - OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.Flat
+  langs:
+  - csharp
+  - vb
+  name: GameBlockRenderer.BlockLightingType
+  nameWithType: GameBlockRenderer.BlockLightingType
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  type: Enum
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BlockLightingType
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 183
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: How the light should be rendered
+  example: []
+  syntax:
+    content: public enum GameBlockRenderer.BlockLightingType
+    content.vb: Public Enum GameBlockRenderer.BlockLightingType
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.Flat
+  commentId: F:OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.Flat
+  id: Flat
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  langs:
+  - csharp
+  - vb
+  name: Flat
+  nameWithType: GameBlockRenderer.BlockLightingType.Flat
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.Flat
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Flat
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 187
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: There will be no lighting effect, you can <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals" data-throw-if-not-resolved="false"></xref> use actual normals here if you want to.
+  example: []
+  syntax:
+    content: Flat = 0
+    return:
+      type: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedNoAmbientOcclusion
+  commentId: F:OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedNoAmbientOcclusion
+  id: BakedNoAmbientOcclusion
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  langs:
+  - csharp
+  - vb
+  name: BakedNoAmbientOcclusion
+  nameWithType: GameBlockRenderer.BlockLightingType.BakedNoAmbientOcclusion
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedNoAmbientOcclusion
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BakedNoAmbientOcclusion
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 192
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This will bake the lighting with a color vertex attribute, not actually using normals
+
+    <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals" data-throw-if-not-resolved="false"></xref> should be turned false when using this, they are generally ignored by the game in this mode though.
+  example: []
+  syntax:
+    content: BakedNoAmbientOcclusion = 1
+    return:
+      type: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedWithAmbientOcclusion
+  commentId: F:OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedWithAmbientOcclusion
+  id: BakedWithAmbientOcclusion
+  parent: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  langs:
+  - csharp
+  - vb
+  name: BakedWithAmbientOcclusion
+  nameWithType: GameBlockRenderer.BlockLightingType.BakedWithAmbientOcclusion
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.BakedWithAmbientOcclusion
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BakedWithAmbientOcclusion
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/GameBlockRenderer.cs
+    startLine: 197
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    This will bake the lighting with the color vertex attribute, not actually using normals
+
+    <xref href="OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals" data-throw-if-not-resolved="false"></xref> should be false as otherwise it will combine for a funny effect.
+  example: []
+  syntax:
+    content: BakedWithAmbientOcclusion = 2
+    return:
+      type: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+references:
+- uid: OnixRuntime.Api.Rendering
+  commentId: N:OnixRuntime.Api.Rendering
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Rendering
+  nameWithType: OnixRuntime.Api.Rendering
+  fullName: OnixRuntime.Api.Rendering
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering
+    name: Rendering
+    href: OnixRuntime.Api.Rendering.html
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+  commentId: P:OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_UseNormals
+  name: UseNormals
+  nameWithType: GameBlockRenderer.UseNormals
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.UseNormals
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  commentId: T:OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  name: GameBlockRenderer.BlockLightingType
+  nameWithType: GameBlockRenderer.BlockLightingType
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+  spec.csharp:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+    name: GameBlockRenderer
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    name: BlockLightingType
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+    name: GameBlockRenderer
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  - name: .
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    name: BlockLightingType
+    href: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType.html

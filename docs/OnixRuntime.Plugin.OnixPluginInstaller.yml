@@ -15,7 +15,6 @@ items:
   - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest,System.Threading.CancellationToken)
   - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(System.String,System.String,System.Threading.CancellationToken)
   - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
-  - OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
   - OnixRuntime.Plugin.OnixPluginInstaller.OfficialRepositoryUrl
   - OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(System.String,System.Threading.CancellationToken)
   - OnixRuntime.Plugin.OnixPluginInstaller.PluginsFolder
@@ -465,42 +464,6 @@ items:
   nameWithType.vb: OnixPluginInstaller.InstallPluginFromUrl(String, String, CancellationToken)
   fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl(String, String, System.Threading.CancellationToken)
   name.vb: InstallPluginFromUrl(String, String, CancellationToken)
-- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
-  commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
-  id: InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
-  parent: OnixRuntime.Plugin.OnixPluginInstaller
-  langs:
-  - csharp
-  - vb
-  name: InstallPluginFromUuidInternal(string, TaskProgressReport)
-  nameWithType: OnixPluginInstaller.InstallPluginFromUuidInternal(string, OnixPluginInstaller.TaskProgressReport)
-  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(string, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
-  type: Method
-  source:
-    remote:
-      path: OnixRuntime/Plugin/OnixPluginInstaller.cs
-      branch: dev
-      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
-    id: InstallPluginFromUuidInternal
-    path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 367
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Plugin
-  syntax:
-    content: public Task InstallPluginFromUuidInternal(string uuid, OnixPluginInstaller.TaskProgressReport report)
-    parameters:
-    - id: uuid
-      type: System.String
-    - id: report
-      type: OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: Public Function InstallPluginFromUuidInternal(uuid As String, report As OnixPluginInstaller.TaskProgressReport) As Task
-  overload: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal*
-  nameWithType.vb: OnixPluginInstaller.InstallPluginFromUuidInternal(String, OnixPluginInstaller.TaskProgressReport)
-  fullName.vb: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(String, OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)
-  name.vb: InstallPluginFromUuidInternal(String, TaskProgressReport)
 - uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
   commentId: M:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
   id: InstallPluginFromUuid(System.String,System.Threading.CancellationToken)
@@ -519,7 +482,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InstallPluginFromUuid
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 413
+    startLine: 414
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -560,7 +523,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InstallPluginFromRemoteManifest
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 424
+    startLine: 425
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -571,6 +534,7 @@ items:
     parameters:
     - id: manifest
       type: OnixRuntime.Plugin.RemotePluginManifest
+      description: The remote manifest that was chosen for this installation.
     - id: cancellationToken
       type: System.Threading.CancellationToken
       description: Token to cancel the operation.
@@ -597,7 +561,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InstallPluginFromFileInternal
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 437
+    startLine: 438
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -645,7 +609,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InstallPluginFromFile
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 459
+    startLine: 460
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -689,7 +653,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InstallPluginFromBytes
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 530
+    startLine: 531
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -733,7 +697,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PackagePlugin
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 574
+    startLine: 575
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
@@ -774,17 +738,21 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetRemotePluginsFromSources
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 581
+    startLine: 587
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: Gets every plugin from every source.
+  example: []
   syntax:
     content: public Task<List<RemotePluginManifest>> GetRemotePluginsFromSources(CancellationToken cancellationToken = default)
     parameters:
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: When you're bored and decide to abort the search.
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.List{OnixRuntime.Plugin.RemotePluginManifest}}
+      description: Every plugin with their sources as a <xref href="OnixRuntime.Plugin.RemotePluginManifest" data-throw-if-not-resolved="false"></xref>
     content.vb: Public Function GetRemotePluginsFromSources(cancellationToken As CancellationToken = Nothing) As Task(Of List(Of RemotePluginManifest))
   overload: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources*
 - uid: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(System.String,System.Boolean,System.Threading.CancellationToken)
@@ -805,21 +773,30 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetRemotePluginFromSources
     path: ../OnixRuntime/OnixRuntime/Plugin/OnixPluginInstaller.cs
-    startLine: 600
+    startLine: 614
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Plugin
+  summary: >-
+    Gets all remote plugins matching a specific UUID from the user's sources.
+
+    You can choose to filter only compatible plugins.
+  example: []
   syntax:
     content: public Task<List<RemotePluginManifest>> GetRemotePluginFromSources(string uuid, bool compatibleOnly = true, CancellationToken cancellationToken = default)
     parameters:
     - id: uuid
       type: System.String
+      description: The UUID to look for.
     - id: compatibleOnly
       type: System.Boolean
+      description: If you only want compatible plugins.
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: For when you change your mind 3 seconds later.
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.List{OnixRuntime.Plugin.RemotePluginManifest}}
+      description: A task of the list of plugins matching those criteria.
     content.vb: Public Function GetRemotePluginFromSources(uuid As String, compatibleOnly As Boolean = True, cancellationToken As CancellationToken = Nothing) As Task(Of List(Of RemotePluginManifest))
   overload: OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources*
   nameWithType.vb: OnixPluginInstaller.GetRemotePluginFromSources(String, Boolean, CancellationToken)
@@ -1532,12 +1509,46 @@ references:
   name: InstallPluginFromUrl
   nameWithType: OnixPluginInstaller.InstallPluginFromUrl
   fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUrl
-- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal*
-  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal
-  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuidInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_
-  name: InstallPluginFromUuidInternal
-  nameWithType: OnixPluginInstaller.InstallPluginFromUuidInternal
-  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_System_String_System_Threading_CancellationToken_
+  name: InstallPluginFromUuid
+  nameWithType: OnixPluginInstaller.InstallPluginFromUuid
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromRemoteManifest_OnixRuntime_Plugin_RemotePluginManifest_System_Threading_CancellationToken_
+  name: InstallPluginFromRemoteManifest
+  nameWithType: OnixPluginInstaller.InstallPluginFromRemoteManifest
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest
+- uid: OnixRuntime.Plugin.RemotePluginManifest
+  commentId: T:OnixRuntime.Plugin.RemotePluginManifest
+  parent: OnixRuntime.Plugin
+  href: OnixRuntime.Plugin.RemotePluginManifest.html
+  name: RemotePluginManifest
+  nameWithType: RemotePluginManifest
+  fullName: OnixRuntime.Plugin.RemotePluginManifest
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
+  name: FileNotFoundException
+  nameWithType: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal*
+  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal
+  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFileInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_
+  name: InstallPluginFromFileInternal
+  nameWithType: OnixPluginInstaller.InstallPluginFromFileInternal
+  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal
 - uid: System.Threading.Tasks.Task
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
@@ -1583,46 +1594,6 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid*
-  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid
-  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_System_String_System_Threading_CancellationToken_
-  name: InstallPluginFromUuid
-  nameWithType: OnixPluginInstaller.InstallPluginFromUuid
-  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid
-- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest*
-  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest
-  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromRemoteManifest_OnixRuntime_Plugin_RemotePluginManifest_System_Threading_CancellationToken_
-  name: InstallPluginFromRemoteManifest
-  nameWithType: OnixPluginInstaller.InstallPluginFromRemoteManifest
-  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest
-- uid: OnixRuntime.Plugin.RemotePluginManifest
-  commentId: T:OnixRuntime.Plugin.RemotePluginManifest
-  parent: OnixRuntime.Plugin
-  href: OnixRuntime.Plugin.RemotePluginManifest.html
-  name: RemotePluginManifest
-  nameWithType: RemotePluginManifest
-  fullName: OnixRuntime.Plugin.RemotePluginManifest
-- uid: System.IO.FileNotFoundException
-  commentId: T:System.IO.FileNotFoundException
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
-  name: FileNotFoundException
-  nameWithType: FileNotFoundException
-  fullName: System.IO.FileNotFoundException
-- uid: System.Exception
-  commentId: T:System.Exception
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception
-  name: Exception
-  nameWithType: Exception
-  fullName: System.Exception
-- uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal*
-  commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal
-  href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFileInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_
-  name: InstallPluginFromFileInternal
-  nameWithType: OnixPluginInstaller.InstallPluginFromFileInternal
-  fullName: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal
 - uid: OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile*
   commentId: Overload:OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile
   href: OnixRuntime.Plugin.OnixPluginInstaller.html#OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFile_System_String_System_String_System_Threading_CancellationToken_

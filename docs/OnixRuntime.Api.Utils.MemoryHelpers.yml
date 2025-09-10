@@ -42,6 +42,7 @@ items:
   - OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.Collections.Generic.IEnumerable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature},System.IntPtr,System.IntPtr)
   - OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.String)
   - OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.String,System.IntPtr,System.IntPtr)
+  - OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.String,System.String)
   - OnixRuntime.Api.Utils.MemoryHelpers.WriteArray``1(System.IntPtr,``0[])
   - OnixRuntime.Api.Utils.MemoryHelpers.WriteArray``1(System.IntPtr,``0[],System.Boolean)
   - OnixRuntime.Api.Utils.MemoryHelpers.WriteBoolean(System.IntPtr,System.Boolean)
@@ -249,6 +250,78 @@ items:
   nameWithType.vb: MemoryHelpers.ScanSignature(String, IntPtr, IntPtr)
   fullName.vb: OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(String, System.IntPtr, System.IntPtr)
   name.vb: ScanSignature(String, IntPtr, IntPtr)
+- uid: OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.String,System.String)
+  commentId: M:OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.String,System.String)
+  id: ScanSignature(System.String,System.String)
+  parent: OnixRuntime.Api.Utils.MemoryHelpers
+  langs:
+  - csharp
+  - vb
+  name: ScanSignature(string, string)
+  nameWithType: MemoryHelpers.ScanSignature(string, string)
+  fullName: OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(string, string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Utils/MemoryHelpers.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ScanSignature
+    path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
+    startLine: 92
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Utils
+  summary: >-
+    Scans memory within a specified address range for a given signature pattern.
+
+
+    Signature Format:
+
+    - The signature is a string of space-separated hexadecimal bytes, without `0x`.
+
+    - Wildcards can be represented by `?` or `??`.
+      Example: "48 89 54 24 ?? 48 89 4C 24 ?? 55 53 56 57 41 54 41 55 41 56 41 57 48 8D 6C 24 ??"
+
+    Signature Modifiers (optional):
+
+    You can append one or more modifiers to the signature to alter how the final address is resolved:
+
+    - `iN`: Selects the N-th match result (0-based index). Example: `i2` selects the third match.
+
+    - `oN`: Reads a 4-byte offset starting N bytes after the match (useful for instructions like CALL/LEA).
+
+    - `nN`: Treats the result as a pointer and reads the value at `result + N`.
+
+    - `pN`: Adds N to the final result. Example: `p4` adds 4 to the result.
+
+
+    If no matching signature is found, <xref href="System.IntPtr.Zero" data-throw-if-not-resolved="false"></xref> is returned.
+  example: []
+  syntax:
+    content: public static nint ScanSignature(string signature, string moduleName)
+    parameters:
+    - id: signature
+      type: System.String
+      description: The signature pattern and optional modifiers to search for.
+    - id: moduleName
+      type: System.String
+      description: The name of the module to scan. e.g. "Minecraft.Windows.exe" or "fmod.dll"
+    return:
+      type: System.IntPtr
+      description: The resolved address from the matched signature, or <xref href="System.IntPtr.Zero" data-throw-if-not-resolved="false"></xref> if not found.
+    content.vb: Public Shared Function ScanSignature(signature As String, moduleName As String) As IntPtr
+  overload: OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the signature is empty or cannot be parsed.
+  - type: OnixRuntime.Api.Errors.InsufficientTrustException
+    commentId: T:OnixRuntime.Api.Errors.InsufficientTrustException
+    description: Thrown when you are not trusted.
+  nameWithType.vb: MemoryHelpers.ScanSignature(String, String)
+  fullName.vb: OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(String, String)
+  name.vb: ScanSignature(String, String)
 - uid: OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.Collections.Generic.IEnumerable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature})
   commentId: M:OnixRuntime.Api.Utils.MemoryHelpers.ScanSignature(System.Collections.Generic.IEnumerable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature})
   id: ScanSignature(System.Collections.Generic.IEnumerable{OnixRuntime.Api.Utils.MemoryHelpers.VersionedSignature})
@@ -267,7 +340,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ScanSignature
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 140
+    startLine: 167
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -343,7 +416,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ScanSignature
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 187
+    startLine: 214
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -425,7 +498,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAddress
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 234
+    startLine: 261
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -464,7 +537,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAddress
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 244
+    startLine: 271
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -503,7 +576,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Read
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 256
+    startLine: 283
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -548,7 +621,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Read
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 269
+    startLine: 296
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -596,7 +669,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Write
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 282
+    startLine: 309
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -641,7 +714,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Write
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 295
+    startLine: 322
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -689,7 +762,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 307
+    startLine: 334
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -731,7 +804,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 319
+    startLine: 346
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -776,7 +849,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 331
+    startLine: 358
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -818,7 +891,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 343
+    startLine: 370
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -863,7 +936,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadSByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 355
+    startLine: 382
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -905,7 +978,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadSByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 367
+    startLine: 394
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -950,7 +1023,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteSByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 379
+    startLine: 406
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -992,7 +1065,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteSByte
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 391
+    startLine: 418
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1037,7 +1110,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 403
+    startLine: 430
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1079,7 +1152,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 415
+    startLine: 442
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1124,7 +1197,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 427
+    startLine: 454
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1166,7 +1239,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 439
+    startLine: 466
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1211,7 +1284,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadUInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 451
+    startLine: 478
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1253,7 +1326,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadUInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 463
+    startLine: 490
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1298,7 +1371,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteUInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 475
+    startLine: 502
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1340,7 +1413,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteUInt16
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 487
+    startLine: 514
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1385,7 +1458,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 499
+    startLine: 526
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1427,7 +1500,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 511
+    startLine: 538
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1472,7 +1545,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 523
+    startLine: 550
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1514,7 +1587,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 535
+    startLine: 562
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1559,7 +1632,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadUInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 547
+    startLine: 574
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1601,7 +1674,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadUInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 559
+    startLine: 586
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1646,7 +1719,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteUInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 571
+    startLine: 598
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1688,7 +1761,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteUInt32
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 583
+    startLine: 610
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1733,7 +1806,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 595
+    startLine: 622
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1775,7 +1848,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 607
+    startLine: 634
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1820,7 +1893,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 619
+    startLine: 646
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1862,7 +1935,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 631
+    startLine: 658
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1907,7 +1980,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadUInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 643
+    startLine: 670
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1949,7 +2022,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadUInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 655
+    startLine: 682
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -1994,7 +2067,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteUInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 667
+    startLine: 694
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2036,7 +2109,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteUInt64
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 679
+    startLine: 706
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2081,7 +2154,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadIntPtr
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 691
+    startLine: 718
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2123,7 +2196,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadIntPtr
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 703
+    startLine: 730
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2168,7 +2241,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteIntPtr
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 715
+    startLine: 742
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2210,7 +2283,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteIntPtr
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 727
+    startLine: 754
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2255,7 +2328,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadFloat
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 739
+    startLine: 766
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2297,7 +2370,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadFloat
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 751
+    startLine: 778
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2342,7 +2415,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteFloat
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 764
+    startLine: 791
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2384,7 +2457,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteFloat
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 776
+    startLine: 803
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2429,7 +2502,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadDouble
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 789
+    startLine: 816
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2471,7 +2544,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadDouble
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 801
+    startLine: 828
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2516,7 +2589,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteDouble
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 814
+    startLine: 841
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2558,7 +2631,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteDouble
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 826
+    startLine: 853
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2603,7 +2676,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadBoolean
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 839
+    startLine: 866
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2645,7 +2718,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadBoolean
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 851
+    startLine: 878
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2690,7 +2763,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteBoolean
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 863
+    startLine: 890
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2732,7 +2805,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteBoolean
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 875
+    startLine: 902
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2777,7 +2850,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadBytes
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 888
+    startLine: 915
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2822,7 +2895,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadBytes
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 901
+    startLine: 928
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2870,7 +2943,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteBytes
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 917
+    startLine: 944
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2912,7 +2985,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteBytes
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 929
+    startLine: 956
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -2957,7 +3030,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadArray
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 946
+    startLine: 973
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -3008,7 +3081,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ReadArray
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 961
+    startLine: 988
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -3062,7 +3135,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteArray
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 1008
+    startLine: 1035
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -3110,7 +3183,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WriteArray
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 1022
+    startLine: 1049
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils
@@ -3161,7 +3234,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: CreateEntityFromPtr
     path: ../OnixRuntime/OnixRuntime/Api/Utils/MemoryHelpers.cs
-    startLine: 1062
+    startLine: 1089
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Utils

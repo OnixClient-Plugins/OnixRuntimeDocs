@@ -19,7 +19,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnBlockChangedDelegate
     path: ../OnixRuntime/OnixRuntime/Api/Events/LocalServer/OnixEventLocalServerWorld.cs
-    startLine: 57
+    startLine: 59
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -29,6 +29,10 @@ items:
     Provides context about the region, position, old and new blocks, 
 
     as well as how the change should be propagated and rendered.
+
+    If you want to keep the block, use <code class="paramref">region</code>'s <xref href="OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)" data-throw-if-not-resolved="false"></xref> at <code class="paramref">position</code>.
+
+    You can also use the runtime ID and the <xref href="OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(System.UInt32)" data-throw-if-not-resolved="false"></xref> for both old or new block if you want to keep it.
   example: []
   syntax:
     content: public delegate void OnixEventLocalServerWorld.OnBlockChangedDelegate(WorldBlocks region, BlockPos position, Block oldBlock, Block newBlock, int layer, WorldBlocks.BlockUpdateType updateType)
@@ -41,10 +45,10 @@ items:
       description: The <xref href="OnixRuntime.Api.Maths.BlockPos" data-throw-if-not-resolved="false"></xref> of the block that was modified.
     - id: oldBlock
       type: OnixRuntime.Api.World.Block
-      description: The <xref href="OnixRuntime.Api.World.Block" data-throw-if-not-resolved="false"></xref> instance that previously occupied the position.
+      description: The <xref href="OnixRuntime.Api.World.Block" data-throw-if-not-resolved="false"></xref> instance that previously occupied the position. Don't keep this.
     - id: newBlock
       type: OnixRuntime.Api.World.Block
-      description: The <xref href="OnixRuntime.Api.World.Block" data-throw-if-not-resolved="false"></xref> instance that replaced the old block.
+      description: The <xref href="OnixRuntime.Api.World.Block" data-throw-if-not-resolved="false"></xref> instance that replaced the old block. Don't keep this.
     - id: layer
       type: System.Int32
       description: The layer, there are two layers. 0 is the main layer, 1 is generally used for waterlogging and things snow layers merging with some plants.
@@ -53,6 +57,60 @@ items:
       description: A <xref href="OnixRuntime.Api.World.WorldBlocks.BlockUpdateType" data-throw-if-not-resolved="false"></xref> flag that specifies how the update should be handled, such as updating neighbors, notifying the network, skipping graphics updates, or forcing priority updates.
     content.vb: Public Delegate Sub OnixEventLocalServerWorld.OnBlockChangedDelegate(region As WorldBlocks, position As BlockPos, oldBlock As Block, newBlock As Block, layer As Integer, updateType As WorldBlocks.BlockUpdateType)
 references:
+- uid: OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)
+  commentId: M:OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)
+  href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetBlock_OnixRuntime_Api_Maths_BlockPos_
+  name: GetBlock(BlockPos)
+  nameWithType: WorldBlocks.GetBlock(BlockPos)
+  fullName: OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)
+  spec.csharp:
+  - uid: OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)
+    name: GetBlock
+    href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetBlock_OnixRuntime_Api_Maths_BlockPos_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)
+    name: GetBlock
+    href: OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetBlock_OnixRuntime_Api_Maths_BlockPos_
+  - name: (
+  - uid: OnixRuntime.Api.Maths.BlockPos
+    name: BlockPos
+    href: OnixRuntime.Api.Maths.BlockPos.html
+  - name: )
+- uid: OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(System.UInt32)
+  commentId: M:OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(System.UInt32)
+  isExternal: true
+  href: OnixRuntime.Api.World.BlockRegistry.html#OnixRuntime_Api_World_BlockRegistry_GetBlockFromRuntimeId_System_UInt32_
+  name: GetBlockFromRuntimeId(uint)
+  nameWithType: BlockRegistry.GetBlockFromRuntimeId(uint)
+  fullName: OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(uint)
+  nameWithType.vb: BlockRegistry.GetBlockFromRuntimeId(UInteger)
+  fullName.vb: OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(UInteger)
+  name.vb: GetBlockFromRuntimeId(UInteger)
+  spec.csharp:
+  - uid: OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(System.UInt32)
+    name: GetBlockFromRuntimeId
+    href: OnixRuntime.Api.World.BlockRegistry.html#OnixRuntime_Api_World_BlockRegistry_GetBlockFromRuntimeId_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(System.UInt32)
+    name: GetBlockFromRuntimeId
+    href: OnixRuntime.Api.World.BlockRegistry.html#OnixRuntime_Api_World_BlockRegistry_GetBlockFromRuntimeId_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
 - uid: OnixRuntime.Api.World.WorldBlocks
   commentId: T:OnixRuntime.Api.World.WorldBlocks
   parent: OnixRuntime.Api.World

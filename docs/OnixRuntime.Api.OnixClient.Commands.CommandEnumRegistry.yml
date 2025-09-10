@@ -1,0 +1,1339 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  id: CommandEnumRegistry
+  parent: OnixRuntime.Api.OnixClient.Commands
+  children:
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,System.String,System.String)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String,System.Reflection.Assembly)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue})
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Type)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist(System.String,System.Type)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist``1(System.String)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum``1(System.String)
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{System.String})
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{System.String})
+  - OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: CommandEnumRegistry
+  nameWithType: CommandEnumRegistry
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CommandEnumRegistry
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 13
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    This is a registry for command enums, it lets you hold enum values, their icons, change and register them.
+
+    This is what you use to make them available for command arguments of type enum.
+
+    Soft enums are suggested values that can be added to at runtime, they don't have to be predefined and the user doesn't have to put one of those values.
+
+    Enums are values that are predefined (you can change them later by re-registering the enum) and the user has to pick one of those values, nothing else.
+  example: []
+  syntax:
+    content: public static class CommandEnumRegistry
+    content.vb: Public Module CommandEnumRegistry
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String)
+  id: GetPrefixedName(System.String)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: GetPrefixedName(string)
+  nameWithType: CommandEnumRegistry.GetPrefixedName(string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetPrefixedName
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 65
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Generates a prefixed name by combining the plugin's unique identifier with the specified name.
+  example: []
+  syntax:
+    content: public static string GetPrefixedName(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The base name to be prefixed. Cannot be null.
+    return:
+      type: System.String
+      description: >-
+        A string containing the plugin's unique identifier followed by a colon and the specified name.  If the
+            plugin cannot be determined, the prefix "unknown:" is used instead.
+    content.vb: Public Shared Function GetPrefixedName(name As String) As String
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName*
+  nameWithType.vb: CommandEnumRegistry.GetPrefixedName(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(String)
+  name.vb: GetPrefixedName(String)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String,System.Reflection.Assembly)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(System.String,System.Reflection.Assembly)
+  id: GetPrefixedName(System.String,System.Reflection.Assembly)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: GetPrefixedName(string, Assembly?)
+  nameWithType: CommandEnumRegistry.GetPrefixedName(string, Assembly?)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(string, System.Reflection.Assembly?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetPrefixedName
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 77
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Generates a prefixed name by combining a plugin's unique identifier with the specified name.
+  example: []
+  syntax:
+    content: public static string GetPrefixedName(string name, Assembly? assembly)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to be prefixed. Cannot be null or empty.
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: The assembly associated with the plugin. If null, the plugin is determined from the current call stack.
+    return:
+      type: System.String
+      description: >-
+        A string containing the plugin's unique identifier followed by a colon and the specified name.  If the
+            plugin cannot be determined, the prefix "unknown:" is used instead.
+    content.vb: Public Shared Function GetPrefixedName(name As String, assembly As Assembly) As String
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName*
+  nameWithType.vb: CommandEnumRegistry.GetPrefixedName(String, Assembly)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName(String, System.Reflection.Assembly)
+  name.vb: GetPrefixedName(String, Assembly)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist``1(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist``1(System.String)
+  id: RegisterEnumIfNotExist``1(System.String)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterEnumIfNotExist<T>(string)
+  nameWithType: CommandEnumRegistry.RegisterEnumIfNotExist<T>(string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist<T>(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterEnumIfNotExist
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 124
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Registers an enum type if it doesn't already exist in the registry.
+
+    The name only has to be unique in your plugin, not across all plugins.
+  example: []
+  syntax:
+    content: 'public static void RegisterEnumIfNotExist<T>(string name) where T : Enum'
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    typeParameters:
+    - id: T
+      description: The enum type to register
+    content.vb: Public Shared Sub RegisterEnumIfNotExist(Of T As [Enum])(name As String)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist*
+  nameWithType.vb: CommandEnumRegistry.RegisterEnumIfNotExist(Of T)(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist(Of T)(String)
+  name.vb: RegisterEnumIfNotExist(Of T)(String)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist(System.String,System.Type)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist(System.String,System.Type)
+  id: RegisterEnumIfNotExist(System.String,System.Type)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterEnumIfNotExist(string, Type)
+  nameWithType: CommandEnumRegistry.RegisterEnumIfNotExist(string, Type)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist(string, System.Type)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterEnumIfNotExist
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 134
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Registers an enum type if it doesn't already exist in the registry.
+
+    The name only has to be unique in your plugin, not across all plugins.
+  example: []
+  syntax:
+    content: public static void RegisterEnumIfNotExist(string name, Type enumType)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    - id: enumType
+      type: System.Type
+      description: The enum type to register
+    content.vb: Public Shared Sub RegisterEnumIfNotExist(name As String, enumType As Type)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist*
+  nameWithType.vb: CommandEnumRegistry.RegisterEnumIfNotExist(String, Type)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist(String, System.Type)
+  name.vb: RegisterEnumIfNotExist(String, Type)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum``1(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum``1(System.String)
+  id: RegisterEnum``1(System.String)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterEnum<T>(string)
+  nameWithType: CommandEnumRegistry.RegisterEnum<T>(string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum<T>(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterEnum
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 144
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Registers an enum type in the registry.
+
+    The name only has to be unique in your plugin, not across all plugins.
+  example: []
+  syntax:
+    content: 'public static void RegisterEnum<T>(string name) where T : Enum'
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    typeParameters:
+    - id: T
+      description: The enum type to register
+    content.vb: Public Shared Sub RegisterEnum(Of T As [Enum])(name As String)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum*
+  nameWithType.vb: CommandEnumRegistry.RegisterEnum(Of T)(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(Of T)(String)
+  name.vb: RegisterEnum(Of T)(String)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Type)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Type)
+  id: RegisterEnum(System.String,System.Type)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterEnum(string, Type)
+  nameWithType: CommandEnumRegistry.RegisterEnum(string, Type)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(string, System.Type)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterEnum
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 154
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Registers an enum type in the registry.
+
+    The name only has to be unique in your plugin, not across all plugins.
+  example: []
+  syntax:
+    content: public static void RegisterEnum(string name, Type enumType)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    - id: enumType
+      type: System.Type
+      description: The enum type to register
+    content.vb: Public Shared Sub RegisterEnum(name As String, enumType As Type)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum*
+  nameWithType.vb: CommandEnumRegistry.RegisterEnum(String, Type)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(String, System.Type)
+  name.vb: RegisterEnum(String, Type)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue})
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(System.String,System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue})
+  id: RegisterEnum(System.String,System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue})
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterEnum(string, Dictionary<string, EnumValue>)
+  nameWithType: CommandEnumRegistry.RegisterEnum(string, Dictionary<string, CommandEnumRegistry.EnumValue>)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(string, System.Collections.Generic.Dictionary<string, OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterEnum
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 164
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Registers an enum type in the registry.
+
+    The name only has to be unique in your plugin, not across all plugins.
+  example: []
+  syntax:
+    content: public static void RegisterEnum(string name, Dictionary<string, CommandEnumRegistry.EnumValue> values)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    - id: values
+      type: System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue}
+      description: The dictionary of enum values to register
+    content.vb: Public Shared Sub RegisterEnum(name As String, values As Dictionary(Of String, CommandEnumRegistry.EnumValue))
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum*
+  nameWithType.vb: CommandEnumRegistry.RegisterEnum(String, Dictionary(Of String, CommandEnumRegistry.EnumValue))
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum(String, System.Collections.Generic.Dictionary(Of String, OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue))
+  name.vb: RegisterEnum(String, Dictionary(Of String, EnumValue))
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{System.String})
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{System.String})
+  id: RegisterSoftEnum(System.String,System.Collections.Generic.List{System.String})
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterSoftEnum(string, List<string>)
+  nameWithType: CommandEnumRegistry.RegisterSoftEnum(string, List<string>)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(string, System.Collections.Generic.List<string>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterSoftEnum
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 233
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Registers a soft enum type if it doesn't already exist in the registry.
+  example: []
+  syntax:
+    content: public static void RegisterSoftEnum(string name, List<string> values)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    - id: values
+      type: System.Collections.Generic.List{System.String}
+      description: The list of string values to register
+    content.vb: Public Shared Sub RegisterSoftEnum(name As String, values As List(Of String))
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*
+  nameWithType.vb: CommandEnumRegistry.RegisterSoftEnum(String, List(Of String))
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(String, System.Collections.Generic.List(Of String))
+  name.vb: RegisterSoftEnum(String, List(Of String))
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  id: RegisterSoftEnum(System.String,System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterSoftEnum(string, List<SoftEnumValue>)
+  nameWithType: CommandEnumRegistry.RegisterSoftEnum(string, List<CommandEnumRegistry.SoftEnumValue>)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(string, System.Collections.Generic.List<OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterSoftEnum
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 242
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Registers a soft enum type if it doesn't already exist in the registry.
+  example: []
+  syntax:
+    content: public static void RegisterSoftEnum(string name, List<CommandEnumRegistry.SoftEnumValue> values)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    - id: values
+      type: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue}
+      description: The list of soft enum values to register
+    content.vb: Public Shared Sub RegisterSoftEnum(name As String, values As List(Of CommandEnumRegistry.SoftEnumValue))
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*
+  nameWithType.vb: CommandEnumRegistry.RegisterSoftEnum(String, List(Of CommandEnumRegistry.SoftEnumValue))
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(String, System.Collections.Generic.List(Of OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue))
+  name.vb: RegisterSoftEnum(String, List(Of SoftEnumValue))
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{System.String})
+  id: RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{System.String})
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterSoftEnum(string, IEnumerable<string>)
+  nameWithType: CommandEnumRegistry.RegisterSoftEnum(string, IEnumerable<string>)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(string, System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterSoftEnum
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 251
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Registers a soft enum type if it doesn't already exist in the registry.
+  example: []
+  syntax:
+    content: public static void RegisterSoftEnum(string name, IEnumerable<string> values)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The list of string values to register
+    content.vb: Public Shared Sub RegisterSoftEnum(name As String, values As IEnumerable(Of String))
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*
+  nameWithType.vb: CommandEnumRegistry.RegisterSoftEnum(String, IEnumerable(Of String))
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(String, System.Collections.Generic.IEnumerable(Of String))
+  name.vb: RegisterSoftEnum(String, IEnumerable(Of String))
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  id: RegisterSoftEnum(System.String,System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue})
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterSoftEnum(string, IEnumerable<SoftEnumValue>)
+  nameWithType: CommandEnumRegistry.RegisterSoftEnum(string, IEnumerable<CommandEnumRegistry.SoftEnumValue>)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(string, System.Collections.Generic.IEnumerable<OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue>)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RegisterSoftEnum
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 260
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Registers a soft enum type if it doesn't already exist in the registry.
+  example: []
+  syntax:
+    content: public static void RegisterSoftEnum(string name, IEnumerable<CommandEnumRegistry.SoftEnumValue> values)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to use for the enum registration
+    - id: values
+      type: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue}
+      description: The list of soft enum values to register
+    content.vb: Public Shared Sub RegisterSoftEnum(name As String, values As IEnumerable(Of CommandEnumRegistry.SoftEnumValue))
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*
+  nameWithType.vb: CommandEnumRegistry.RegisterSoftEnum(String, IEnumerable(Of CommandEnumRegistry.SoftEnumValue))
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum(String, System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue))
+  name.vb: RegisterSoftEnum(String, IEnumerable(Of SoftEnumValue))
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,System.String,System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,System.String,System.String)
+  id: AddSoftEnumValue(System.String,System.String,System.String)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: AddSoftEnumValue(string, string, string)
+  nameWithType: CommandEnumRegistry.AddSoftEnumValue(string, string, string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddSoftEnumValue
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 270
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Adds a soft enum value to an existing enum.
+  example: []
+  syntax:
+    content: public static void AddSoftEnumValue(string enumName, string value, string icon = "")
+    parameters:
+    - id: enumName
+      type: System.String
+      description: The name of the enum to add the value to
+    - id: value
+      type: System.String
+      description: The string value to add
+    - id: icon
+      type: System.String
+      description: The icon for the enum value
+    content.vb: Public Shared Sub AddSoftEnumValue(enumName As String, value As String, icon As String = "")
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue*
+  nameWithType.vb: CommandEnumRegistry.AddSoftEnumValue(String, String, String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(String, String, String)
+  name.vb: AddSoftEnumValue(String, String, String)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  id: AddSoftEnumValue(System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: AddSoftEnumValue(string, SoftEnumValue)
+  nameWithType: CommandEnumRegistry.AddSoftEnumValue(string, CommandEnumRegistry.SoftEnumValue)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(string, OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddSoftEnumValue
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 279
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Adds a soft enum value to an existing enum.
+  example: []
+  syntax:
+    content: public static void AddSoftEnumValue(string enumName, CommandEnumRegistry.SoftEnumValue value)
+    parameters:
+    - id: enumName
+      type: System.String
+      description: The name of the enum to add the value to
+    - id: value
+      type: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+      description: The soft enum value to add
+    content.vb: Public Shared Sub AddSoftEnumValue(enumName As String, value As CommandEnumRegistry.SoftEnumValue)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue*
+  nameWithType.vb: CommandEnumRegistry.AddSoftEnumValue(String, CommandEnumRegistry.SoftEnumValue)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue(String, OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  name.vb: AddSoftEnumValue(String, SoftEnumValue)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue(System.String,System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue(System.String,System.String)
+  id: RemoveSoftEnumValue(System.String,System.String)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  langs:
+  - csharp
+  - vb
+  name: RemoveSoftEnumValue(string, string)
+  nameWithType: CommandEnumRegistry.RemoveSoftEnumValue(string, string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue(string, string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RemoveSoftEnumValue
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandEnumRegistry.cs
+    startLine: 288
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Removes a soft enum value from an existing enum.
+  example: []
+  syntax:
+    content: public static void RemoveSoftEnumValue(string enumName, string value)
+    parameters:
+    - id: enumName
+      type: System.String
+      description: The name of the enum to remove the value from
+    - id: value
+      type: System.String
+      description: The string value to remove
+    content.vb: Public Shared Sub RemoveSoftEnumValue(enumName As String, value As String)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue*
+  nameWithType.vb: CommandEnumRegistry.RemoveSoftEnumValue(String, String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue(String, String)
+  name.vb: RemoveSoftEnumValue(String, String)
+references:
+- uid: OnixRuntime.Api.OnixClient.Commands
+  commentId: N:OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Commands
+  nameWithType: OnixRuntime.Api.OnixClient.Commands
+  fullName: OnixRuntime.Api.OnixClient.Commands
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_GetPrefixedName_System_String_
+  name: GetPrefixedName
+  nameWithType: CommandEnumRegistry.GetPrefixedName
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.GetPrefixedName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.assembly
+  name: Assembly
+  nameWithType: Assembly
+  fullName: System.Reflection.Assembly
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnumIfNotExist__1_System_String_
+  name: RegisterEnumIfNotExist
+  nameWithType: CommandEnumRegistry.RegisterEnumIfNotExist
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnumIfNotExist
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterEnum__1_System_String_
+  name: RegisterEnum
+  nameWithType: CommandEnumRegistry.RegisterEnum
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterEnum
+- uid: System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, CommandEnumRegistry.EnumValue>
+  nameWithType: Dictionary<string, CommandEnumRegistry.EnumValue>
+  fullName: System.Collections.Generic.Dictionary<string, OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue>
+  nameWithType.vb: Dictionary(Of String, CommandEnumRegistry.EnumValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue)
+  name.vb: Dictionary(Of String, CommandEnumRegistry.EnumValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue
+    name: EnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue
+    name: EnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_System_String_System_Collections_Generic_List_System_String__
+  name: RegisterSoftEnum
+  nameWithType: CommandEnumRegistry.RegisterSoftEnum
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue}
+  commentId: T:System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<CommandEnumRegistry.SoftEnumValue>
+  nameWithType: List<CommandEnumRegistry.SoftEnumValue>
+  fullName: System.Collections.Generic.List<OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue>
+  nameWithType.vb: List(Of CommandEnumRegistry.SoftEnumValue)
+  fullName.vb: System.Collections.Generic.List(Of OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  name.vb: List(Of CommandEnumRegistry.SoftEnumValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+    name: SoftEnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+    name: SoftEnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue}
+  commentId: T:System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<CommandEnumRegistry.SoftEnumValue>
+  nameWithType: IEnumerable<CommandEnumRegistry.SoftEnumValue>
+  fullName: System.Collections.Generic.IEnumerable<OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue>
+  nameWithType.vb: IEnumerable(Of CommandEnumRegistry.SoftEnumValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue)
+  name.vb: IEnumerable(Of CommandEnumRegistry.SoftEnumValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+    name: SoftEnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+    name: SoftEnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html
+  - name: )
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_AddSoftEnumValue_System_String_System_String_System_String_
+  name: AddSoftEnumValue
+  nameWithType: CommandEnumRegistry.AddSoftEnumValue
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+  parent: OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  name: CommandEnumRegistry.SoftEnumValue
+  nameWithType: CommandEnumRegistry.SoftEnumValue
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+    name: SoftEnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+    name: SoftEnumValue
+    href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RemoveSoftEnumValue_System_String_System_String_
+  name: RemoveSoftEnumValue
+  nameWithType: CommandEnumRegistry.RemoveSoftEnumValue
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue

@@ -7,12 +7,19 @@ items:
   children:
   - OnixRuntime.Api.Logger.#ctor(System.String)
   - OnixRuntime.Api.Logger.Debug(System.String)
+  - OnixRuntime.Api.Logger.DebugException(System.String,System.Exception)
   - OnixRuntime.Api.Logger.Error(System.String)
+  - OnixRuntime.Api.Logger.ErrorException(System.String,System.Exception)
+  - OnixRuntime.Api.Logger.GetForPlugin
   - OnixRuntime.Api.Logger.Info(System.String)
+  - OnixRuntime.Api.Logger.InfoException(System.String,System.Exception)
   - OnixRuntime.Api.Logger.Log(OnixRuntime.Api.Logger.Level,System.String)
+  - OnixRuntime.Api.Logger.LogException(OnixRuntime.Api.Logger.Level,System.String,System.Exception)
   - OnixRuntime.Api.Logger.Name
   - OnixRuntime.Api.Logger.Trace(System.String)
+  - OnixRuntime.Api.Logger.TraceException(System.String,System.Exception)
   - OnixRuntime.Api.Logger.Warning(System.String)
+  - OnixRuntime.Api.Logger.WarningException(System.String,System.Exception)
   langs:
   - csharp
   - vb
@@ -27,7 +34,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Logger
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -64,7 +71,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Name
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -77,6 +84,40 @@ items:
       type: System.String
     content.vb: Public Property Name As String
   overload: OnixRuntime.Api.Logger.Name*
+- uid: OnixRuntime.Api.Logger.GetForPlugin
+  commentId: M:OnixRuntime.Api.Logger.GetForPlugin
+  id: GetForPlugin
+  parent: OnixRuntime.Api.Logger
+  langs:
+  - csharp
+  - vb
+  name: GetForPlugin()
+  nameWithType: Logger.GetForPlugin()
+  fullName: OnixRuntime.Api.Logger.GetForPlugin()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Logger.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetForPlugin
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 78
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: >-
+    Gets a logger for your plugin. It's fine to call that whenever but you should store the result if you do more than one log call at that place.
+
+    You can call this everytime you need to log something, that's why it's there.
+  example: []
+  syntax:
+    content: public static Logger GetForPlugin()
+    return:
+      type: OnixRuntime.Api.Logger
+      description: A logger instance that already has your plugin's name.
+    content.vb: Public Shared Function GetForPlugin() As Logger
+  overload: OnixRuntime.Api.Logger.GetForPlugin*
 - uid: OnixRuntime.Api.Logger.#ctor(System.String)
   commentId: M:OnixRuntime.Api.Logger.#ctor(System.String)
   id: '#ctor(System.String)'
@@ -95,7 +136,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 76
+    startLine: 93
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -133,7 +174,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Log
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 96
+    startLine: 113
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -171,7 +212,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Trace
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 111
+    startLine: 128
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -206,7 +247,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Debug
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 119
+    startLine: 136
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -241,7 +282,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Info
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 127
+    startLine: 144
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -276,7 +317,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Warning
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 135
+    startLine: 152
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -311,7 +352,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Error
     path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
-    startLine: 143
+    startLine: 160
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -328,6 +369,227 @@ items:
   nameWithType.vb: Logger.Error(String)
   fullName.vb: OnixRuntime.Api.Logger.Error(String)
   name.vb: Error(String)
+- uid: OnixRuntime.Api.Logger.LogException(OnixRuntime.Api.Logger.Level,System.String,System.Exception)
+  commentId: M:OnixRuntime.Api.Logger.LogException(OnixRuntime.Api.Logger.Level,System.String,System.Exception)
+  id: LogException(OnixRuntime.Api.Logger.Level,System.String,System.Exception)
+  parent: OnixRuntime.Api.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogException(Level, string, Exception)
+  nameWithType: Logger.LogException(Logger.Level, string, Exception)
+  fullName: OnixRuntime.Api.Logger.LogException(OnixRuntime.Api.Logger.Level, string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Logger.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: LogException
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 171
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Logs text according to the logging rules with the given message, level, and exception details.
+  example: []
+  syntax:
+    content: public void LogException(Logger.Level logLevel, string message, Exception exception)
+    parameters:
+    - id: logLevel
+      type: OnixRuntime.Api.Logger.Level
+      description: The level of importance.
+    - id: message
+      type: System.String
+      description: The content of the log.
+    - id: exception
+      type: System.Exception
+      description: The exception to include.
+    content.vb: Public Sub LogException(logLevel As Logger.Level, message As String, exception As Exception)
+  overload: OnixRuntime.Api.Logger.LogException*
+  nameWithType.vb: Logger.LogException(Logger.Level, String, Exception)
+  fullName.vb: OnixRuntime.Api.Logger.LogException(OnixRuntime.Api.Logger.Level, String, System.Exception)
+  name.vb: LogException(Level, String, Exception)
+- uid: OnixRuntime.Api.Logger.TraceException(System.String,System.Exception)
+  commentId: M:OnixRuntime.Api.Logger.TraceException(System.String,System.Exception)
+  id: TraceException(System.String,System.Exception)
+  parent: OnixRuntime.Api.Logger
+  langs:
+  - csharp
+  - vb
+  name: TraceException(string, Exception)
+  nameWithType: Logger.TraceException(string, Exception)
+  fullName: OnixRuntime.Api.Logger.TraceException(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Logger.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: TraceException
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 189
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Calls log with the specified text and exception at the Trace level.
+  example: []
+  syntax:
+    content: public void TraceException(string text, Exception ex)
+    parameters:
+    - id: text
+      type: System.String
+    - id: ex
+      type: System.Exception
+    content.vb: Public Sub TraceException(text As String, ex As Exception)
+  overload: OnixRuntime.Api.Logger.TraceException*
+  nameWithType.vb: Logger.TraceException(String, Exception)
+  fullName.vb: OnixRuntime.Api.Logger.TraceException(String, System.Exception)
+  name.vb: TraceException(String, Exception)
+- uid: OnixRuntime.Api.Logger.DebugException(System.String,System.Exception)
+  commentId: M:OnixRuntime.Api.Logger.DebugException(System.String,System.Exception)
+  id: DebugException(System.String,System.Exception)
+  parent: OnixRuntime.Api.Logger
+  langs:
+  - csharp
+  - vb
+  name: DebugException(string, Exception)
+  nameWithType: Logger.DebugException(string, Exception)
+  fullName: OnixRuntime.Api.Logger.DebugException(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Logger.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: DebugException
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 196
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Calls log with the specified text and exception at the Debug level.
+  example: []
+  syntax:
+    content: public void DebugException(string text, Exception ex)
+    parameters:
+    - id: text
+      type: System.String
+    - id: ex
+      type: System.Exception
+    content.vb: Public Sub DebugException(text As String, ex As Exception)
+  overload: OnixRuntime.Api.Logger.DebugException*
+  nameWithType.vb: Logger.DebugException(String, Exception)
+  fullName.vb: OnixRuntime.Api.Logger.DebugException(String, System.Exception)
+  name.vb: DebugException(String, Exception)
+- uid: OnixRuntime.Api.Logger.InfoException(System.String,System.Exception)
+  commentId: M:OnixRuntime.Api.Logger.InfoException(System.String,System.Exception)
+  id: InfoException(System.String,System.Exception)
+  parent: OnixRuntime.Api.Logger
+  langs:
+  - csharp
+  - vb
+  name: InfoException(string, Exception)
+  nameWithType: Logger.InfoException(string, Exception)
+  fullName: OnixRuntime.Api.Logger.InfoException(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Logger.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InfoException
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 203
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Calls log with the specified text and exception at the Info level.
+  example: []
+  syntax:
+    content: public void InfoException(string text, Exception ex)
+    parameters:
+    - id: text
+      type: System.String
+    - id: ex
+      type: System.Exception
+    content.vb: Public Sub InfoException(text As String, ex As Exception)
+  overload: OnixRuntime.Api.Logger.InfoException*
+  nameWithType.vb: Logger.InfoException(String, Exception)
+  fullName.vb: OnixRuntime.Api.Logger.InfoException(String, System.Exception)
+  name.vb: InfoException(String, Exception)
+- uid: OnixRuntime.Api.Logger.WarningException(System.String,System.Exception)
+  commentId: M:OnixRuntime.Api.Logger.WarningException(System.String,System.Exception)
+  id: WarningException(System.String,System.Exception)
+  parent: OnixRuntime.Api.Logger
+  langs:
+  - csharp
+  - vb
+  name: WarningException(string, Exception)
+  nameWithType: Logger.WarningException(string, Exception)
+  fullName: OnixRuntime.Api.Logger.WarningException(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Logger.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WarningException
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 210
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Calls log with the specified text and exception at the Warning level.
+  example: []
+  syntax:
+    content: public void WarningException(string text, Exception ex)
+    parameters:
+    - id: text
+      type: System.String
+    - id: ex
+      type: System.Exception
+    content.vb: Public Sub WarningException(text As String, ex As Exception)
+  overload: OnixRuntime.Api.Logger.WarningException*
+  nameWithType.vb: Logger.WarningException(String, Exception)
+  fullName.vb: OnixRuntime.Api.Logger.WarningException(String, System.Exception)
+  name.vb: WarningException(String, Exception)
+- uid: OnixRuntime.Api.Logger.ErrorException(System.String,System.Exception)
+  commentId: M:OnixRuntime.Api.Logger.ErrorException(System.String,System.Exception)
+  id: ErrorException(System.String,System.Exception)
+  parent: OnixRuntime.Api.Logger
+  langs:
+  - csharp
+  - vb
+  name: ErrorException(string, Exception)
+  nameWithType: Logger.ErrorException(string, Exception)
+  fullName: OnixRuntime.Api.Logger.ErrorException(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Logger.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ErrorException
+    path: ../OnixRuntime/OnixRuntime/Api/Logger.cs
+    startLine: 217
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api
+  summary: Calls log with the specified text and exception at the Error level.
+  example: []
+  syntax:
+    content: public void ErrorException(string text, Exception ex)
+    parameters:
+    - id: text
+      type: System.String
+    - id: ex
+      type: System.Exception
+    content.vb: Public Sub ErrorException(text As String, ex As Exception)
+  overload: OnixRuntime.Api.Logger.ErrorException*
+  nameWithType.vb: Logger.ErrorException(String, Exception)
+  fullName.vb: OnixRuntime.Api.Logger.ErrorException(String, System.Exception)
+  name.vb: ErrorException(String, Exception)
 references:
 - uid: OnixRuntime.Api
   commentId: N:OnixRuntime.Api
@@ -605,6 +867,19 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: OnixRuntime.Api.Logger.GetForPlugin*
+  commentId: Overload:OnixRuntime.Api.Logger.GetForPlugin
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_GetForPlugin
+  name: GetForPlugin
+  nameWithType: Logger.GetForPlugin
+  fullName: OnixRuntime.Api.Logger.GetForPlugin
+- uid: OnixRuntime.Api.Logger
+  commentId: T:OnixRuntime.Api.Logger
+  parent: OnixRuntime.Api
+  href: OnixRuntime.Api.Logger.html
+  name: Logger
+  nameWithType: Logger
+  fullName: OnixRuntime.Api.Logger
 - uid: OnixRuntime.Api.Logger.#ctor*
   commentId: Overload:OnixRuntime.Api.Logger.#ctor
   href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger__ctor_System_String_
@@ -673,3 +948,47 @@ references:
   name: Error
   nameWithType: Logger.Error
   fullName: OnixRuntime.Api.Logger.Error
+- uid: OnixRuntime.Api.Logger.LogException*
+  commentId: Overload:OnixRuntime.Api.Logger.LogException
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_LogException_OnixRuntime_Api_Logger_Level_System_String_System_Exception_
+  name: LogException
+  nameWithType: Logger.LogException
+  fullName: OnixRuntime.Api.Logger.LogException
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: OnixRuntime.Api.Logger.TraceException*
+  commentId: Overload:OnixRuntime.Api.Logger.TraceException
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_TraceException_System_String_System_Exception_
+  name: TraceException
+  nameWithType: Logger.TraceException
+  fullName: OnixRuntime.Api.Logger.TraceException
+- uid: OnixRuntime.Api.Logger.DebugException*
+  commentId: Overload:OnixRuntime.Api.Logger.DebugException
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_DebugException_System_String_System_Exception_
+  name: DebugException
+  nameWithType: Logger.DebugException
+  fullName: OnixRuntime.Api.Logger.DebugException
+- uid: OnixRuntime.Api.Logger.InfoException*
+  commentId: Overload:OnixRuntime.Api.Logger.InfoException
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_InfoException_System_String_System_Exception_
+  name: InfoException
+  nameWithType: Logger.InfoException
+  fullName: OnixRuntime.Api.Logger.InfoException
+- uid: OnixRuntime.Api.Logger.WarningException*
+  commentId: Overload:OnixRuntime.Api.Logger.WarningException
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_WarningException_System_String_System_Exception_
+  name: WarningException
+  nameWithType: Logger.WarningException
+  fullName: OnixRuntime.Api.Logger.WarningException
+- uid: OnixRuntime.Api.Logger.ErrorException*
+  commentId: Overload:OnixRuntime.Api.Logger.ErrorException
+  href: OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_ErrorException_System_String_System_Exception_
+  name: ErrorException
+  nameWithType: Logger.ErrorException
+  fullName: OnixRuntime.Api.Logger.ErrorException

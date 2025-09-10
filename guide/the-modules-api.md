@@ -1,4 +1,4 @@
-﻿### The modules API
+﻿### The Modules API
 
 The modules API is similar to the one found in the Lua API, but it has some extra features.
 

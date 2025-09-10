@@ -49,7 +49,7 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color
   id: Color
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable
   langs:
@@ -58,7 +58,7 @@ items:
   name: Color
   nameWithType: OnixSettingColor.ValueTypeMutable.Color
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -73,12 +73,24 @@ items:
   summary: The color value.
   example: []
   syntax:
-    content: public ColorF Color
+    content: >-
+      [JsonIgnore]
+
+      public ColorF Color { get; set; }
+    parameters: []
     return:
       type: OnixRuntime.Api.Maths.ColorF
-    content.vb: Public Color As ColorF
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property Color As ColorF
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity
   id: ShowOpacity
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable
   langs:
@@ -87,7 +99,7 @@ items:
   name: ShowOpacity
   nameWithType: OnixSettingColor.ValueTypeMutable.ShowOpacity
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -95,19 +107,31 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ShowOpacity
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
-    startLine: 130
+    startLine: 134
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
   summary: Indicates if opacity is shown.
   example: []
   syntax:
-    content: public bool ShowOpacity
+    content: >-
+      [JsonIgnore]
+
+      public bool ShowOpacity { get; set; }
+    parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ShowOpacity As Boolean
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property ShowOpacity As Boolean
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow
   id: IsRainbow
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable
   langs:
@@ -116,7 +140,7 @@ items:
   name: IsRainbow
   nameWithType: OnixSettingColor.ValueTypeMutable.IsRainbow
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -124,19 +148,31 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsRainbow
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
-    startLine: 134
+    startLine: 142
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
   summary: Indicates if the color is a rainbow effect.
   example: []
   syntax:
-    content: public bool IsRainbow
+    content: >-
+      [JsonIgnore]
+
+      public bool IsRainbow { get; set; }
+    parameters: []
     return:
       type: System.Boolean
-    content.vb: Public IsRainbow As Boolean
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property IsRainbow As Boolean
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma
   id: IsChroma
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable
   langs:
@@ -145,7 +181,7 @@ items:
   name: IsChroma
   nameWithType: OnixSettingColor.ValueTypeMutable.IsChroma
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -153,17 +189,29 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: IsChroma
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
-    startLine: 138
+    startLine: 154
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
   summary: Indicates if the color is a chroma effect.
   example: []
   syntax:
-    content: public bool IsChroma
+    content: >-
+      [JsonIgnore]
+
+      public bool IsChroma { get; set; }
+    parameters: []
     return:
       type: System.Boolean
-    content.vb: Public IsChroma As Boolean
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property IsChroma As Boolean
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.#ctor(OnixRuntime.Api.Maths.ColorF,System.Boolean,System.Boolean,System.Boolean)
   commentId: M:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.#ctor(OnixRuntime.Api.Maths.ColorF,System.Boolean,System.Boolean,System.Boolean)
   id: '#ctor(OnixRuntime.Api.Maths.ColorF,System.Boolean,System.Boolean,System.Boolean)'
@@ -182,7 +230,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: .ctor
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
-    startLine: 146
+    startLine: 169
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -226,7 +274,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
-    startLine: 151
+    startLine: 174
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient.Settings
@@ -612,6 +660,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueTypeMutable_Color
+  name: Color
+  nameWithType: OnixSettingColor.ValueTypeMutable.Color
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.Color
 - uid: OnixRuntime.Api.Maths.ColorF
   commentId: T:OnixRuntime.Api.Maths.ColorF
   parent: OnixRuntime.Api.Maths
@@ -649,6 +703,12 @@ references:
   - uid: OnixRuntime.Api.Maths
     name: Maths
     href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueTypeMutable_ShowOpacity
+  name: ShowOpacity
+  nameWithType: OnixSettingColor.ValueTypeMutable.ShowOpacity
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.ShowOpacity
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -660,6 +720,18 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueTypeMutable_IsRainbow
+  name: IsRainbow
+  nameWithType: OnixSettingColor.ValueTypeMutable.IsRainbow
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsRainbow
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueTypeMutable_IsChroma
+  name: IsChroma
+  nameWithType: OnixSettingColor.ValueTypeMutable.IsChroma
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.IsChroma
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.#ctor*
   commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.#ctor
   href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueTypeMutable__ctor_OnixRuntime_Api_Maths_ColorF_System_Boolean_System_Boolean_System_Boolean_

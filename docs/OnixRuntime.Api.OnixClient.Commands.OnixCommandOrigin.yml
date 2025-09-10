@@ -1,0 +1,966 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  id: OnixCommandOrigin
+  parent: OnixRuntime.Api.OnixClient.Commands
+  children:
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor(OnixRuntime.Api.Entities.Entity)
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor(OnixRuntime.Api.World.Dimension,OnixRuntime.Api.Maths.BlockPos)
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+  - OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+  langs:
+  - csharp
+  - vb
+  name: OnixCommandOrigin
+  nameWithType: OnixCommandOrigin
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OnixCommandOrigin
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 61
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Wraper around the origin of a command getting run.
+
+    When you check <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld" data-throw-if-not-resolved="false"></xref>, you can assume <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World" data-throw-if-not-resolved="false"></xref>, <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region" data-throw-if-not-resolved="false"></xref> are not null.
+
+    When you check <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity" data-throw-if-not-resolved="false"></xref>, you can assume <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity" data-throw-if-not-resolved="false"></xref>, <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World" data-throw-if-not-resolved="false"></xref>, <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region" data-throw-if-not-resolved="false"></xref> are not null.
+
+    When you check <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide" data-throw-if-not-resolved="false"></xref>, you can run client specific code.
+  example: []
+  syntax:
+    content: public class OnixCommandOrigin
+    content.vb: Public Class OnixCommandOrigin
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+  id: World
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: OnixCommandOrigin.World
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: World
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 65
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The world the command is being run in, null if not run in a world (e.g. in the menu).
+  example: []
+  syntax:
+    content: public RuntimeWorld? World { get; init; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.RuntimeWorld
+    content.vb: Public Property World As RuntimeWorld
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+  id: Dimension
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: Dimension
+  nameWithType: OnixCommandOrigin.Dimension
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Dimension
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 69
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The dimension the command is being run in, null if not run in a world (e.g. in the menu).
+  example: []
+  syntax:
+    content: public Dimension? Dimension { get; init; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.Dimension
+    content.vb: Public Property Dimension As Dimension
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+  id: Region
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: OnixCommandOrigin.Region
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Region
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 73
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The region the command is being run in, null if not run in a world (e.g. in the menu).
+  example: []
+  syntax:
+    content: public WorldBlocks? Region { get; init; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.World.WorldBlocks
+    content.vb: Public Property Region As WorldBlocks
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+  id: Entity
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: OnixCommandOrigin.Entity
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Entity
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 77
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The entity that ran the command, null if run in the menu or by a command block.
+  example: []
+  syntax:
+    content: public Entity? Entity { get; init; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Entities.Entity
+    content.vb: Public Property Entity As Entity
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition
+  id: BlockPosition
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: BlockPosition
+  nameWithType: OnixCommandOrigin.BlockPosition
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BlockPosition
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 81
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The block position of whatever ran the command, (0,0,0) if run in the menu.
+  example: []
+  syntax:
+    content: public BlockPos BlockPosition { get; init; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.BlockPos
+    content.vb: Public Property BlockPosition As BlockPos
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position
+  id: Position
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: OnixCommandOrigin.Position
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Position
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 85
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The exact position of whatever ran the command, (0,0,0) if run in the menu.
+  example: []
+  syntax:
+    content: public Vec3 Position { get; init; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.Vec3
+    content.vb: Public Property Position As Vec3
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+  id: IsEntity
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: IsEntity
+  nameWithType: OnixCommandOrigin.IsEntity
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsEntity
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 89
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: When an entity ran this, you can assume <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity" data-throw-if-not-resolved="false"></xref>, <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World" data-throw-if-not-resolved="false"></xref>, <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region" data-throw-if-not-resolved="false"></xref> are not null.
+  example: []
+  syntax:
+    content: public bool IsEntity { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEntity As Boolean
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+  id: IsClientSide
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: IsClientSide
+  nameWithType: OnixCommandOrigin.IsClientSide
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsClientSide
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 93
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Whether this command was run on the client side. If false, it was run on the server side.
+  example: []
+  syntax:
+    content: public bool IsClientSide { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsClientSide As Boolean
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+  id: IsInWorld
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: IsInWorld
+  nameWithType: OnixCommandOrigin.IsInWorld
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IsInWorld
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 97
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: When something in the world ran this, you can assume <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World" data-throw-if-not-resolved="false"></xref>, <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension" data-throw-if-not-resolved="false"></xref> and <xref href="OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region" data-throw-if-not-resolved="false"></xref> are not null.
+  example: []
+  syntax:
+    content: public bool IsInWorld { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInWorld As Boolean
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld*
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor(OnixRuntime.Api.Entities.Entity)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor(OnixRuntime.Api.Entities.Entity)
+  id: '#ctor(OnixRuntime.Api.Entities.Entity)'
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: OnixCommandOrigin(Entity?)
+  nameWithType: OnixCommandOrigin.OnixCommandOrigin(Entity?)
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.OnixCommandOrigin(OnixRuntime.Api.Entities.Entity?)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 103
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Creates a new command origin from the given entity.
+  example: []
+  syntax:
+    content: public OnixCommandOrigin(Entity? entity)
+    parameters:
+    - id: entity
+      type: OnixRuntime.Api.Entities.Entity
+      description: The entity that will be the origin of the command.
+    content.vb: Public Sub New(entity As Entity)
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor*
+  nameWithType.vb: OnixCommandOrigin.New(Entity)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.New(OnixRuntime.Api.Entities.Entity)
+  name.vb: New(Entity)
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor(OnixRuntime.Api.World.Dimension,OnixRuntime.Api.Maths.BlockPos)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor(OnixRuntime.Api.World.Dimension,OnixRuntime.Api.Maths.BlockPos)
+  id: '#ctor(OnixRuntime.Api.World.Dimension,OnixRuntime.Api.Maths.BlockPos)'
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: OnixCommandOrigin(Dimension?, BlockPos)
+  nameWithType: OnixCommandOrigin.OnixCommandOrigin(Dimension?, BlockPos)
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.OnixCommandOrigin(OnixRuntime.Api.World.Dimension?, OnixRuntime.Api.Maths.BlockPos)
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 116
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The dimension and position the command is being run at.
+  example: []
+  syntax:
+    content: public OnixCommandOrigin(Dimension? dimension, BlockPos position)
+    parameters:
+    - id: dimension
+      type: OnixRuntime.Api.World.Dimension
+      description: The dimension in which the command was run.
+    - id: position
+      type: OnixRuntime.Api.Maths.BlockPos
+      description: The position at which the command was run.
+    content.vb: Public Sub New(dimension As Dimension, position As BlockPos)
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor*
+  nameWithType.vb: OnixCommandOrigin.New(Dimension, BlockPos)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.New(OnixRuntime.Api.World.Dimension, OnixRuntime.Api.Maths.BlockPos)
+  name.vb: New(Dimension, BlockPos)
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor
+  id: '#ctor'
+  parent: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+  langs:
+  - csharp
+  - vb
+  name: OnixCommandOrigin()
+  nameWithType: OnixCommandOrigin.OnixCommandOrigin()
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.OnixCommandOrigin()
+  type: Constructor
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: .ctor
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOriginOutput.cs
+    startLine: 128
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Creates an origin with everything null or zero, this is used when the command is run in the menu.
+  example: []
+  syntax:
+    content: public OnixCommandOrigin()
+    content.vb: Public Sub New()
+  overload: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor*
+  nameWithType.vb: OnixCommandOrigin.New()
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.New()
+  name.vb: New()
+references:
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_IsInWorld
+  name: IsInWorld
+  nameWithType: OnixCommandOrigin.IsInWorld
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_World
+  name: World
+  nameWithType: OnixCommandOrigin.World
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_Dimension
+  name: Dimension
+  nameWithType: OnixCommandOrigin.Dimension
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_Region
+  name: Region
+  nameWithType: OnixCommandOrigin.Region
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_IsEntity
+  name: IsEntity
+  nameWithType: OnixCommandOrigin.IsEntity
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_Entity
+  name: Entity
+  nameWithType: OnixCommandOrigin.Entity
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_IsClientSide
+  name: IsClientSide
+  nameWithType: OnixCommandOrigin.IsClientSide
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+- uid: OnixRuntime.Api.OnixClient.Commands
+  commentId: N:OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Commands
+  nameWithType: OnixRuntime.Api.OnixClient.Commands
+  fullName: OnixRuntime.Api.OnixClient.Commands
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_World
+  name: World
+  nameWithType: OnixCommandOrigin.World
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World
+- uid: OnixRuntime.Api.World.RuntimeWorld
+  commentId: T:OnixRuntime.Api.World.RuntimeWorld
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.RuntimeWorld.html
+  name: RuntimeWorld
+  nameWithType: RuntimeWorld
+  fullName: OnixRuntime.Api.World.RuntimeWorld
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_Dimension
+  name: Dimension
+  nameWithType: OnixCommandOrigin.Dimension
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension
+- uid: OnixRuntime.Api.World.Dimension
+  commentId: T:OnixRuntime.Api.World.Dimension
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.Dimension.html
+  name: Dimension
+  nameWithType: Dimension
+  fullName: OnixRuntime.Api.World.Dimension
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_Region
+  name: Region
+  nameWithType: OnixCommandOrigin.Region
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region
+- uid: OnixRuntime.Api.World.WorldBlocks
+  commentId: T:OnixRuntime.Api.World.WorldBlocks
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.WorldBlocks.html
+  name: WorldBlocks
+  nameWithType: WorldBlocks
+  fullName: OnixRuntime.Api.World.WorldBlocks
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_Entity
+  name: Entity
+  nameWithType: OnixCommandOrigin.Entity
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity
+- uid: OnixRuntime.Api.Entities.Entity
+  commentId: T:OnixRuntime.Api.Entities.Entity
+  parent: OnixRuntime.Api.Entities
+  href: OnixRuntime.Api.Entities.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: OnixRuntime.Api.Entities.Entity
+- uid: OnixRuntime.Api.Entities
+  commentId: N:OnixRuntime.Api.Entities
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Entities
+  nameWithType: OnixRuntime.Api.Entities
+  fullName: OnixRuntime.Api.Entities
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Entities
+    name: Entities
+    href: OnixRuntime.Api.Entities.html
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_BlockPosition
+  name: BlockPosition
+  nameWithType: OnixCommandOrigin.BlockPosition
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.BlockPosition
+- uid: OnixRuntime.Api.Maths.BlockPos
+  commentId: T:OnixRuntime.Api.Maths.BlockPos
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.BlockPos.html
+  name: BlockPos
+  nameWithType: BlockPos
+  fullName: OnixRuntime.Api.Maths.BlockPos
+- uid: OnixRuntime.Api.Maths
+  commentId: N:OnixRuntime.Api.Maths
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.Maths
+  nameWithType: OnixRuntime.Api.Maths
+  fullName: OnixRuntime.Api.Maths
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths
+    name: Maths
+    href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_Position
+  name: Position
+  nameWithType: OnixCommandOrigin.Position
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Position
+- uid: OnixRuntime.Api.Maths.Vec3
+  commentId: T:OnixRuntime.Api.Maths.Vec3
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec3.html
+  name: Vec3
+  nameWithType: Vec3
+  fullName: OnixRuntime.Api.Maths.Vec3
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_IsEntity
+  name: IsEntity
+  nameWithType: OnixCommandOrigin.IsEntity
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_IsClientSide
+  name: IsClientSide
+  nameWithType: OnixCommandOrigin.IsClientSide
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin_IsInWorld
+  name: IsInWorld
+  nameWithType: OnixCommandOrigin.IsInWorld
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.#ctor
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandOrigin__ctor_OnixRuntime_Api_Entities_Entity_
+  name: OnixCommandOrigin
+  nameWithType: OnixCommandOrigin.OnixCommandOrigin
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.OnixCommandOrigin
+  nameWithType.vb: OnixCommandOrigin.New
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.New
+  name.vb: New

@@ -213,9 +213,6 @@ items:
   - uid: OnixRuntime.Api.Events.OnixEventGui
     name: OnixEventGui
     type: Class
-  - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
-    name: OnixEventGui.OnChatScreenGetClientCommandsDelegate
-    type: Delegate
   - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTabCompleteDelegate
     name: OnixEventGui.OnChatScreenTabCompleteDelegate
     type: Delegate
@@ -389,6 +386,9 @@ items:
   name: OnixRuntime.Api.Events.Session
   type: Namespace
   items:
+  - uid: OnixRuntime.Api.Events.Session.CommandResponseMessage
+    name: CommandResponseMessage
+    type: Class
   - uid: OnixRuntime.Api.Events.Session.GameTitleType
     name: GameTitleType
     type: Enum
@@ -403,6 +403,9 @@ items:
     type: Class
   - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnChatScreenMessageAboutToBeSentDelegate
     name: OnixEventSessionChat.OnChatScreenMessageAboutToBeSentDelegate
+    type: Delegate
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+    name: OnixEventSessionChat.OnCommandResponseDelegate
     type: Delegate
   - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnReceiveDelegate
     name: OnixEventSessionChat.OnReceiveDelegate
@@ -764,6 +767,140 @@ items:
   - uid: OnixRuntime.Api.OnixClient.WaypointsNotEnabledException
     name: WaypointsNotEnabledException
     type: Class
+- uid: OnixRuntime.Api.OnixClient.Commands
+  name: OnixRuntime.Api.OnixClient.Commands
+  type: Namespace
+  items:
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition
+    name: CommandBlockPosition
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector
+    name: CommandEntitySelector
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.InvertableFilter`1
+    name: CommandEntitySelector.InvertableFilter<T>
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectionOrder
+    name: CommandEntitySelector.SelectionOrder
+    type: Enum
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectorType
+    name: CommandEntitySelector.SelectorType
+    type: Enum
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute
+    name: CommandEnumIconAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute
+    name: CommandEnumNameAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+    name: CommandEnumRegistry
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue
+    name: CommandEnumRegistry.EnumValue
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue
+    name: CommandEnumRegistry.SoftEnumValue
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumTypeNameAttribute
+    name: CommandEnumTypeNameAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+    name: CommandExecutionTarget
+    type: Enum
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandNbtTagTypeAttribute
+    name: CommandNbtTagTypeAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+    name: CommandOverload
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandParameterType
+    name: CommandParameterType
+    type: Enum
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandParserMetadataAttribute
+    name: CommandParserMetadataAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute
+    name: CommandPathAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.CommandPosition
+    name: CommandPosition
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandBase
+    name: OnixCommandBase
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute
+    name: OnixCommandBase.OverloadAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute
+    name: OnixCommandBase.RawStringAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute
+    name: OnixCommandBase.SoftEnumNameAttribute
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin
+    name: OnixCommandOrigin
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput
+    name: OnixCommandOutput
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+    name: OnixCommandParameter
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry
+    name: OnixCommandRegistry
+    type: Class
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing
+  name: OnixRuntime.Api.OnixClient.Commands.Parsing
+  type: Namespace
+  items:
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.BoolToken
+    name: BoolToken
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption
+    name: CommandAutoCompleteOption
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser
+    name: CommandOverloadParser
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+    name: CommandOverloadParser.ParseResult
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandTokenizer
+    name: CommandTokenizer
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.IdentifierToken
+    name: IdentifierToken
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.NumberToken
+    name: NumberToken
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.RangeToken
+    name: RangeToken
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.StringToken
+    name: StringToken
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolToken
+    name: SymbolToken
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenType
+    name: SymbolTokenType
+    type: Enum
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenValues
+    name: SymbolTokenValues
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.Token
+    name: Token
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.TokenPosition
+    name: TokenPosition
+    type: Struct
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.TokenType
+    name: TokenType
+    type: Enum
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.WhitespaceToken
+    name: WhitespaceToken
+    type: Class
 - uid: OnixRuntime.Api.OnixClient.Settings
   name: OnixRuntime.Api.OnixClient.Settings
   type: Namespace
@@ -794,6 +931,9 @@ items:
     type: Class
   - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeConverter
     name: OnixSettingColor_ValueTypeConverter
+    type: Class
+  - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeMutableConverter
+    name: OnixSettingColor_ValueTypeMutableConverter
     type: Class
   - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingCustom
     name: OnixSettingCustom
@@ -920,6 +1060,15 @@ items:
   - uid: OnixRuntime.Api.Rendering.FontUsage
     name: FontUsage
     type: Enum
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+    name: GameBlockRenderer
+    type: Class
+  - uid: OnixRuntime.Api.Rendering.GameBlockRenderer.BlockLightingType
+    name: GameBlockRenderer.BlockLightingType
+    type: Enum
+  - uid: OnixRuntime.Api.Rendering.GameBlockRendererCache
+    name: GameBlockRendererCache
+    type: Class
   - uid: OnixRuntime.Api.Rendering.GameMaterialParameterType
     name: GameMaterialParameterType
     type: Enum
@@ -935,6 +1084,9 @@ items:
   - uid: OnixRuntime.Api.Rendering.GameMeshBuilder.GameMeshBuilderSession
     name: GameMeshBuilder.GameMeshBuilderSession
     type: Struct
+  - uid: OnixRuntime.Api.Rendering.GameViewport
+    name: GameViewport
+    type: Class
   - uid: OnixRuntime.Api.Rendering.IGameRenderer
     name: IGameRenderer
     type: Interface

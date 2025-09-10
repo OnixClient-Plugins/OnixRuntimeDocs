@@ -9,6 +9,7 @@ items:
   - OnixRuntime.Api.Rendering.RenderContexes.Common2D
   - OnixRuntime.Api.Rendering.RenderContexes.Direct2D
   - OnixRuntime.Api.Rendering.RenderContexes.Game
+  - OnixRuntime.Api.Rendering.RenderContexes.GameViewport
   - OnixRuntime.Api.Rendering.RenderContexes.MainRenderer
   - OnixRuntime.Api.Rendering.RenderContexes.Origin
   - OnixRuntime.Api.Rendering.RenderContexes.RawFov
@@ -28,7 +29,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderContexes
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 22
+    startLine: 70
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -65,7 +66,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Origin
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 27
+    startLine: 75
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -96,12 +97,12 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RawFov
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 32
+    startLine: 80
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
   summary: >-
-    According to O2Flash,
+    According to O2Flash20,
 
     The current horizontal and vertical field of view. With no zoom or other effects on the camera, fovY (vertical) should be the same as the fov in setting and game effects.
   example: []
@@ -130,7 +131,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Common
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 41
+    startLine: 89
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -161,7 +162,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: World
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 59
+    startLine: 107
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -192,7 +193,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Direct2D
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 72
+    startLine: 120
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -223,7 +224,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Game
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 85
+    startLine: 133
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -254,7 +255,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Common2D
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 98
+    startLine: 146
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -285,7 +286,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MainRenderer
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 114
+    startLine: 162
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -319,7 +320,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: WorldToScreen
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
-    startLine: 121
+    startLine: 169
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -336,6 +337,37 @@ items:
       description: The screen position as a Vec2, or null if not available.
     content.vb: Public Function WorldToScreen(point As Vec3) As Vec2?
   overload: OnixRuntime.Api.Rendering.RenderContexes.WorldToScreen*
+- uid: OnixRuntime.Api.Rendering.RenderContexes.GameViewport
+  commentId: P:OnixRuntime.Api.Rendering.RenderContexes.GameViewport
+  id: GameViewport
+  parent: OnixRuntime.Api.Rendering.RenderContexes
+  langs:
+  - csharp
+  - vb
+  name: GameViewport
+  nameWithType: RenderContexes.GameViewport
+  fullName: OnixRuntime.Api.Rendering.RenderContexes.GameViewport
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RenderContexes.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GameViewport
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RenderContexes.cs
+    startLine: 174
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the current game viewport, which represents the visible area of the game.
+  example: []
+  syntax:
+    content: public GameViewport GameViewport { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.GameViewport
+    content.vb: Public ReadOnly Property GameViewport As GameViewport
+  overload: OnixRuntime.Api.Rendering.RenderContexes.GameViewport*
 references:
 - uid: OnixRuntime.Api.Rendering
   commentId: N:OnixRuntime.Api.Rendering
@@ -790,3 +822,16 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: OnixRuntime.Api.Rendering.RenderContexes.GameViewport*
+  commentId: Overload:OnixRuntime.Api.Rendering.RenderContexes.GameViewport
+  href: OnixRuntime.Api.Rendering.RenderContexes.html#OnixRuntime_Api_Rendering_RenderContexes_GameViewport
+  name: GameViewport
+  nameWithType: RenderContexes.GameViewport
+  fullName: OnixRuntime.Api.Rendering.RenderContexes.GameViewport
+- uid: OnixRuntime.Api.Rendering.GameViewport
+  commentId: T:OnixRuntime.Api.Rendering.GameViewport
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameViewport.html
+  name: GameViewport
+  nameWithType: GameViewport
+  fullName: OnixRuntime.Api.Rendering.GameViewport

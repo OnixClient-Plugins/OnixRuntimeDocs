@@ -198,19 +198,22 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ExecuteCommand
     path: ../OnixRuntime/OnixRuntime/Api/OnixGame.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
   summary: Executes a command in the game.
   example: []
   syntax:
-    content: public void ExecuteCommand(string command)
+    content: public int ExecuteCommand(string command)
     parameters:
     - id: command
       type: System.String
       description: The command to execute.
-    content.vb: Public Sub ExecuteCommand(command As String)
+    return:
+      type: System.Int32
+      description: The request ID for the command. Note that the server might not always do this properly but vanilla should.
+    content.vb: Public Function ExecuteCommand(command As String) As Integer
   overload: OnixRuntime.Api.OnixGame.ExecuteCommand*
   nameWithType.vb: OnixGame.ExecuteCommand(String)
   fullName.vb: OnixRuntime.Api.OnixGame.ExecuteCommand(String)
@@ -233,7 +236,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetTranslatedMessage
     path: ../OnixRuntime/OnixRuntime/Api/OnixGame.cs
-    startLine: 51
+    startLine: 50
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -277,7 +280,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetTranslatedMessage
     path: ../OnixRuntime/OnixRuntime/Api/OnixGame.cs
-    startLine: 61
+    startLine: 60
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -321,7 +324,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AudioEngine
     path: ../OnixRuntime/OnixRuntime/Api/OnixGame.cs
-    startLine: 69
+    startLine: 68
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -355,7 +358,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LanguageCode
     path: ../OnixRuntime/OnixRuntime/Api/OnixGame.cs
-    startLine: 74
+    startLine: 73
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -386,7 +389,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InvokeUri
     path: ../OnixRuntime/OnixRuntime/Api/OnixGame.cs
-    startLine: 83
+    startLine: 82
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -429,7 +432,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Options
     path: ../OnixRuntime/OnixRuntime/Api/OnixGame.cs
-    startLine: 88
+    startLine: 87
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api
@@ -815,6 +818,17 @@ references:
   name: ExecuteCommand
   nameWithType: OnixGame.ExecuteCommand
   fullName: OnixRuntime.Api.OnixGame.ExecuteCommand
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: OnixRuntime.Api.OnixGame.GetTranslatedMessage*
   commentId: Overload:OnixRuntime.Api.OnixGame.GetTranslatedMessage
   href: OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_GetTranslatedMessage_System_String_System_Collections_Generic_IEnumerable_System_String__

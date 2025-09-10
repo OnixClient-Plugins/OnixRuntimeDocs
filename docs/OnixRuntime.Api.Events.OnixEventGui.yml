@@ -5,7 +5,6 @@ items:
   id: OnixEventGui
   parent: OnixRuntime.Api.Events
   children:
-  - OnixRuntime.Api.Events.OnixEventGui.ChatScreenGetClientCommands
   - OnixRuntime.Api.Events.OnixEventGui.ChatScreenTabComplete
   - OnixRuntime.Api.Events.OnixEventGui.ChatScreenTick
   - OnixRuntime.Api.Events.OnixEventGui.ContainerScreenHoverTextRequested
@@ -24,7 +23,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixEventGui
     path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 69
+    startLine: 62
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -61,7 +60,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ContainerScreenTick
     path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 77
+    startLine: 70
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -90,7 +89,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatScreenTick
     path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 98
+    startLine: 91
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -119,7 +118,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatScreenTabComplete
     path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 133
+    startLine: 129
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -130,35 +129,6 @@ items:
     return:
       type: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTabCompleteDelegate
     content.vb: Public Event ChatScreenTabComplete As OnixEventGui.OnChatScreenTabCompleteDelegate
-- uid: OnixRuntime.Api.Events.OnixEventGui.ChatScreenGetClientCommands
-  commentId: E:OnixRuntime.Api.Events.OnixEventGui.ChatScreenGetClientCommands
-  id: ChatScreenGetClientCommands
-  parent: OnixRuntime.Api.Events.OnixEventGui
-  langs:
-  - csharp
-  - vb
-  name: ChatScreenGetClientCommands
-  nameWithType: OnixEventGui.ChatScreenGetClientCommands
-  fullName: OnixRuntime.Api.Events.OnixEventGui.ChatScreenGetClientCommands
-  type: Event
-  source:
-    remote:
-      path: OnixRuntime/Api/Events/OnixEventGui.cs
-      branch: dev
-      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
-    id: ChatScreenGetClientCommands
-    path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 154
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api.Events
-  summary: Occurs when the chat screen requests the list of available client commands.
-  example: []
-  syntax:
-    content: public event OnixEventGui.OnChatScreenGetClientCommandsDelegate? ChatScreenGetClientCommands
-    return:
-      type: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
-    content.vb: Public Event ChatScreenGetClientCommands As OnixEventGui.OnChatScreenGetClientCommandsDelegate
 - uid: OnixRuntime.Api.Events.OnixEventGui.ContainerScreenHoverTextRequested
   commentId: E:OnixRuntime.Api.Events.OnixEventGui.ContainerScreenHoverTextRequested
   id: ContainerScreenHoverTextRequested
@@ -177,7 +147,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ContainerScreenHoverTextRequested
     path: ../OnixRuntime/OnixRuntime/Api/Events/OnixEventGui.cs
-    startLine: 187
+    startLine: 160
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events
@@ -530,29 +500,6 @@ references:
   - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTabCompleteDelegate
     name: OnChatScreenTabCompleteDelegate
     href: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTabCompleteDelegate.html
-- uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
-  commentId: T:OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
-  parent: OnixRuntime.Api.Events
-  href: OnixRuntime.Api.Events.OnixEventGui.html
-  name: OnixEventGui.OnChatScreenGetClientCommandsDelegate
-  nameWithType: OnixEventGui.OnChatScreenGetClientCommandsDelegate
-  fullName: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
-  spec.csharp:
-  - uid: OnixRuntime.Api.Events.OnixEventGui
-    name: OnixEventGui
-    href: OnixRuntime.Api.Events.OnixEventGui.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
-    name: OnChatScreenGetClientCommandsDelegate
-    href: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.html
-  spec.vb:
-  - uid: OnixRuntime.Api.Events.OnixEventGui
-    name: OnixEventGui
-    href: OnixRuntime.Api.Events.OnixEventGui.html
-  - name: .
-  - uid: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate
-    name: OnChatScreenGetClientCommandsDelegate
-    href: OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.html
 - uid: OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
   commentId: M:OnixRuntime.Api.Items.ItemStack.GetHoverText(OnixRuntime.Api.World.RuntimeWorld,System.Boolean,System.Boolean)
   isExternal: true

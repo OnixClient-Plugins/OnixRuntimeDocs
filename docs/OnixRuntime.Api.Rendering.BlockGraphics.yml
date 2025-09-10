@@ -13,6 +13,7 @@ items:
   - OnixRuntime.Api.Rendering.BlockGraphics.GetTextureCarriedVariations(System.UInt32,System.Int32)
   - OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariation(OnixRuntime.Api.Maths.BlockPos,System.UInt32,System.Int32)
   - OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(System.UInt32,System.Int32)
+  - OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex
   - OnixRuntime.Api.Rendering.BlockGraphics.Shape
   - OnixRuntime.Api.Rendering.BlockGraphics.TextureItems
   - OnixRuntime.Api.Rendering.BlockGraphics.VisualShape
@@ -277,6 +278,40 @@ items:
       type: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem[]
     content.vb: Public ReadOnly Property TextureItems As BlockGraphics.TextureItem()
   overload: OnixRuntime.Api.Rendering.BlockGraphics.TextureItems*
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex
+  commentId: P:OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex
+  id: IconTextureIndex
+  parent: OnixRuntime.Api.Rendering.BlockGraphics
+  langs:
+  - csharp
+  - vb
+  name: IconTextureIndex
+  nameWithType: BlockGraphics.IconTextureIndex
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/BlockGraphics.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: IconTextureIndex
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
+    startLine: 242
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: >-
+    Gets the index of the icon texture in the terrain atlas for this block.
+
+    This is useful for things like torches.
+  example: []
+  syntax:
+    content: public int IconTextureIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property IconTextureIndex As Integer
+  overload: OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex*
 - uid: OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(System.UInt32,System.Int32)
   commentId: M:OnixRuntime.Api.Rendering.BlockGraphics.GetTextureDefaultVariations(System.UInt32,System.Int32)
   id: GetTextureDefaultVariations(System.UInt32,System.Int32)
@@ -295,7 +330,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetTextureDefaultVariations
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
-    startLine: 246
+    startLine: 251
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -338,7 +373,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetTextureDefaultVariation
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
-    startLine: 255
+    startLine: 260
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -384,7 +419,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetTextureCarriedVariations
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
-    startLine: 265
+    startLine: 270
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -430,7 +465,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetTextureCarriedVariation
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/BlockGraphics.cs
-    startLine: 275
+    startLine: 280
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -979,6 +1014,23 @@ references:
     href: OnixRuntime.Api.Rendering.BlockGraphics.TextureItem.html
   - name: (
   - name: )
+- uid: OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex*
+  commentId: Overload:OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex
+  href: OnixRuntime.Api.Rendering.BlockGraphics.html#OnixRuntime_Api_Rendering_BlockGraphics_IconTextureIndex
+  name: IconTextureIndex
+  nameWithType: BlockGraphics.IconTextureIndex
+  fullName: OnixRuntime.Api.Rendering.BlockGraphics.IconTextureIndex
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: OnixRuntime.Api.Rendering.TextureUVCoordinates
   commentId: T:OnixRuntime.Api.Rendering.TextureUVCoordinates
   parent: OnixRuntime.Api.Rendering
@@ -1003,17 +1055,6 @@ references:
   nameWithType.vb: UInteger
   fullName.vb: UInteger
   name.vb: UInteger
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: OnixRuntime.Api.Rendering.TextureUVCoordinates[]
   isExternal: true
   href: OnixRuntime.Api.Rendering.TextureUVCoordinates.html

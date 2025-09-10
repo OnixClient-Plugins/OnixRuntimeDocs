@@ -7,13 +7,17 @@ items:
   children:
   - OnixRuntime.Api.Maths.ChunkPos.#ctor(OnixRuntime.Api.Maths.BlockPos)
   - OnixRuntime.Api.Maths.ChunkPos.#ctor(System.Int32,System.Int32)
+  - OnixRuntime.Api.Maths.ChunkPos.East
   - OnixRuntime.Api.Maths.ChunkPos.Equals(OnixRuntime.Api.Maths.ChunkPos)
   - OnixRuntime.Api.Maths.ChunkPos.Equals(System.Object)
   - OnixRuntime.Api.Maths.ChunkPos.FromWorld(OnixRuntime.Api.Maths.BlockPos)
   - OnixRuntime.Api.Maths.ChunkPos.FromWorld(System.Int32,System.Int32)
   - OnixRuntime.Api.Maths.ChunkPos.GetHashCode
   - OnixRuntime.Api.Maths.ChunkPos.GetInChunkBlockPos(System.Int32,System.Int32)
+  - OnixRuntime.Api.Maths.ChunkPos.North
+  - OnixRuntime.Api.Maths.ChunkPos.South
   - OnixRuntime.Api.Maths.ChunkPos.ToString
+  - OnixRuntime.Api.Maths.ChunkPos.West
   - OnixRuntime.Api.Maths.ChunkPos.X
   - OnixRuntime.Api.Maths.ChunkPos.Y
   - OnixRuntime.Api.Maths.ChunkPos.op_Equality(OnixRuntime.Api.Maths.ChunkPos,OnixRuntime.Api.Maths.ChunkPos)
@@ -295,6 +299,130 @@ items:
   nameWithType.vb: ChunkPos.GetInChunkBlockPos(Integer, Integer)
   fullName.vb: OnixRuntime.Api.Maths.ChunkPos.GetInChunkBlockPos(Integer, Integer)
   name.vb: GetInChunkBlockPos(Integer, Integer)
+- uid: OnixRuntime.Api.Maths.ChunkPos.North
+  commentId: P:OnixRuntime.Api.Maths.ChunkPos.North
+  id: North
+  parent: OnixRuntime.Api.Maths.ChunkPos
+  langs:
+  - csharp
+  - vb
+  name: North
+  nameWithType: ChunkPos.North
+  fullName: OnixRuntime.Api.Maths.ChunkPos.North
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/ChunkPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: North
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
+    startLine: 69
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets a ChunkPos that is one unit north from the current position.
+  example: []
+  syntax:
+    content: public ChunkPos North { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.ChunkPos
+    content.vb: Public ReadOnly Property North As ChunkPos
+  overload: OnixRuntime.Api.Maths.ChunkPos.North*
+- uid: OnixRuntime.Api.Maths.ChunkPos.South
+  commentId: P:OnixRuntime.Api.Maths.ChunkPos.South
+  id: South
+  parent: OnixRuntime.Api.Maths.ChunkPos
+  langs:
+  - csharp
+  - vb
+  name: South
+  nameWithType: ChunkPos.South
+  fullName: OnixRuntime.Api.Maths.ChunkPos.South
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/ChunkPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: South
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
+    startLine: 73
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets a ChunkPos that is one unit south from the current position.
+  example: []
+  syntax:
+    content: public ChunkPos South { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.ChunkPos
+    content.vb: Public ReadOnly Property South As ChunkPos
+  overload: OnixRuntime.Api.Maths.ChunkPos.South*
+- uid: OnixRuntime.Api.Maths.ChunkPos.East
+  commentId: P:OnixRuntime.Api.Maths.ChunkPos.East
+  id: East
+  parent: OnixRuntime.Api.Maths.ChunkPos
+  langs:
+  - csharp
+  - vb
+  name: East
+  nameWithType: ChunkPos.East
+  fullName: OnixRuntime.Api.Maths.ChunkPos.East
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/ChunkPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: East
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
+    startLine: 77
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets a ChunkPos that is one unit east from the current position.
+  example: []
+  syntax:
+    content: public ChunkPos East { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.ChunkPos
+    content.vb: Public ReadOnly Property East As ChunkPos
+  overload: OnixRuntime.Api.Maths.ChunkPos.East*
+- uid: OnixRuntime.Api.Maths.ChunkPos.West
+  commentId: P:OnixRuntime.Api.Maths.ChunkPos.West
+  id: West
+  parent: OnixRuntime.Api.Maths.ChunkPos
+  langs:
+  - csharp
+  - vb
+  name: West
+  nameWithType: ChunkPos.West
+  fullName: OnixRuntime.Api.Maths.ChunkPos.West
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/ChunkPos.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: West
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
+    startLine: 81
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Gets a ChunkPos that is one unit west from the current position.
+  example: []
+  syntax:
+    content: public ChunkPos West { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Maths.ChunkPos
+    content.vb: Public ReadOnly Property West As ChunkPos
+  overload: OnixRuntime.Api.Maths.ChunkPos.West*
 - uid: OnixRuntime.Api.Maths.ChunkPos.op_Equality(OnixRuntime.Api.Maths.ChunkPos,OnixRuntime.Api.Maths.ChunkPos)
   commentId: M:OnixRuntime.Api.Maths.ChunkPos.op_Equality(OnixRuntime.Api.Maths.ChunkPos,OnixRuntime.Api.Maths.ChunkPos)
   id: op_Equality(OnixRuntime.Api.Maths.ChunkPos,OnixRuntime.Api.Maths.ChunkPos)
@@ -313,7 +441,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
     path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
-    startLine: 69
+    startLine: 86
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -351,7 +479,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
     path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
-    startLine: 75
+    startLine: 92
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -389,7 +517,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
     path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
-    startLine: 82
+    startLine: 99
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -426,7 +554,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
     path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
-    startLine: 92
+    startLine: 109
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -461,7 +589,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
     path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
-    startLine: 98
+    startLine: 115
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -492,7 +620,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/Maths/ChunkPos.cs
-    startLine: 103
+    startLine: 120
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -776,6 +904,30 @@ references:
   name: GetInChunkBlockPos
   nameWithType: ChunkPos.GetInChunkBlockPos
   fullName: OnixRuntime.Api.Maths.ChunkPos.GetInChunkBlockPos
+- uid: OnixRuntime.Api.Maths.ChunkPos.North*
+  commentId: Overload:OnixRuntime.Api.Maths.ChunkPos.North
+  href: OnixRuntime.Api.Maths.ChunkPos.html#OnixRuntime_Api_Maths_ChunkPos_North
+  name: North
+  nameWithType: ChunkPos.North
+  fullName: OnixRuntime.Api.Maths.ChunkPos.North
+- uid: OnixRuntime.Api.Maths.ChunkPos.South*
+  commentId: Overload:OnixRuntime.Api.Maths.ChunkPos.South
+  href: OnixRuntime.Api.Maths.ChunkPos.html#OnixRuntime_Api_Maths_ChunkPos_South
+  name: South
+  nameWithType: ChunkPos.South
+  fullName: OnixRuntime.Api.Maths.ChunkPos.South
+- uid: OnixRuntime.Api.Maths.ChunkPos.East*
+  commentId: Overload:OnixRuntime.Api.Maths.ChunkPos.East
+  href: OnixRuntime.Api.Maths.ChunkPos.html#OnixRuntime_Api_Maths_ChunkPos_East
+  name: East
+  nameWithType: ChunkPos.East
+  fullName: OnixRuntime.Api.Maths.ChunkPos.East
+- uid: OnixRuntime.Api.Maths.ChunkPos.West*
+  commentId: Overload:OnixRuntime.Api.Maths.ChunkPos.West
+  href: OnixRuntime.Api.Maths.ChunkPos.html#OnixRuntime_Api_Maths_ChunkPos_West
+  name: West
+  nameWithType: ChunkPos.West
+  fullName: OnixRuntime.Api.Maths.ChunkPos.West
 - uid: OnixRuntime.Api.Maths.ChunkPos.op_Equality*
   commentId: Overload:OnixRuntime.Api.Maths.ChunkPos.op_Equality
   href: OnixRuntime.Api.Maths.ChunkPos.html#OnixRuntime_Api_Maths_ChunkPos_op_Equality_OnixRuntime_Api_Maths_ChunkPos_OnixRuntime_Api_Maths_ChunkPos_

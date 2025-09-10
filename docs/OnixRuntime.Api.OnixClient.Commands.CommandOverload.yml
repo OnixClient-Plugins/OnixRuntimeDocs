@@ -1,0 +1,1162 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  id: CommandOverload
+  parent: OnixRuntime.Api.OnixClient.Commands
+  children:
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(System.Reflection.ParameterInfo)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(System.String,OnixRuntime.Api.OnixClient.Commands.CommandParameterType,System.Boolean,System.Object)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(System.String,System.String,System.Boolean,System.Object)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo(System.Reflection.MethodInfo)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString(System.String,System.Int32)
+  - OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters
+  langs:
+  - csharp
+  - vb
+  name: CommandOverload
+  nameWithType: CommandOverload
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CommandOverload
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 98
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Represents a specific overload of a command, defining its parameters and their types.
+  example: []
+  syntax:
+    content: public class CommandOverload
+    content.vb: Public Class CommandOverload
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters
+  id: Parameters
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: CommandOverload.Parameters
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Parameters
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 102
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The parameters this overload takes.
+  example: []
+  syntax:
+    content: public List<OnixCommandParameter> Parameters { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter}
+    content.vb: Public Property Parameters As List(Of OnixCommandParameter)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters*
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets
+  commentId: P:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets
+  id: AllowedExecutionTargets
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AllowedExecutionTargets
+  nameWithType: CommandOverload.AllowedExecutionTargets
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AllowedExecutionTargets
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 113
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Limits the overload's execution targets to have server only overload and client only overloads, or whatever floats your boat.
+  example: []
+  syntax:
+    content: public CommandExecutionTarget AllowedExecutionTargets { get; set; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+    content.vb: Public Property AllowedExecutionTargets As CommandExecutionTarget
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets*
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  id: AddParameter(OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddParameter(OnixCommandParameter)
+  nameWithType: CommandOverload.AddParameter(OnixCommandParameter)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 119
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Wrapper to add a parameter to the list.
+  example: []
+  syntax:
+    content: public void AddParameter(OnixCommandParameter parameter)
+    parameters:
+    - id: parameter
+      type: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+      description: The parameter to add.
+    content.vb: Public Sub AddParameter(parameter As OnixCommandParameter)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter*
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(System.String,OnixRuntime.Api.OnixClient.Commands.CommandParameterType,System.Boolean,System.Object)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(System.String,OnixRuntime.Api.OnixClient.Commands.CommandParameterType,System.Boolean,System.Object)
+  id: AddParameter(System.String,OnixRuntime.Api.OnixClient.Commands.CommandParameterType,System.Boolean,System.Object)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddParameter(string, CommandParameterType, bool, object?)
+  nameWithType: CommandOverload.AddParameter(string, CommandParameterType, bool, object?)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(string, OnixRuntime.Api.OnixClient.Commands.CommandParameterType, bool, object?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 130
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Wrapper to add a parameter to the list.
+
+    Note: If you're adding a soft enum/enum parameter
+  example: []
+  syntax:
+    content: public void AddParameter(string name, CommandParameterType type, bool isOptional = false, object? defaultValue = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the parameter.
+    - id: type
+      type: OnixRuntime.Api.OnixClient.Commands.CommandParameterType
+      description: The type of the parameter.
+    - id: isOptional
+      type: System.Boolean
+      description: If the parameter is optional or not.
+    - id: defaultValue
+      type: System.Object
+      description: The default value for this parameter.
+    content.vb: Public Sub AddParameter(name As String, type As CommandParameterType, isOptional As Boolean = False, defaultValue As Object = Nothing)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter*
+  nameWithType.vb: CommandOverload.AddParameter(String, CommandParameterType, Boolean, Object)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(String, OnixRuntime.Api.OnixClient.Commands.CommandParameterType, Boolean, Object)
+  name.vb: AddParameter(String, CommandParameterType, Boolean, Object)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  id: AddEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddEnumParameter(string, OnixCommandParameter)
+  nameWithType: CommandOverload.AddEnumParameter(string, OnixCommandParameter)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(string, OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddEnumParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 140
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Adds a new parameter to the list, specifically an enum parameter so it can be linked to the registry.
+
+    Note: The enum must be registered separately in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public void AddEnumParameter(string enumName, OnixCommandParameter parameter)
+    parameters:
+    - id: enumName
+      type: System.String
+      description: The name of the enum in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+    - id: parameter
+      type: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+      description: The parameter to add.
+    content.vb: Public Sub AddEnumParameter(enumName As String, parameter As OnixCommandParameter)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the parameter type is not Enum.
+  nameWithType.vb: CommandOverload.AddEnumParameter(String, OnixCommandParameter)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(String, OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  name.vb: AddEnumParameter(String, OnixCommandParameter)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  id: AddEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddEnumParameter(string, string, bool, object?)
+  nameWithType: CommandOverload.AddEnumParameter(string, string, bool, object?)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(string, string, bool, object?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddEnumParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 155
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Adds a new parameter to the list, specifically an enum parameter so it can be linked to the registry.
+
+    Note: The enum must be registered separately in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public void AddEnumParameter(string enumName, string name, bool isOptional = false, object? defaultValue = null)
+    parameters:
+    - id: enumName
+      type: System.String
+      description: The name of the enum in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+    - id: name
+      type: System.String
+      description: The name of the parameter.
+    - id: isOptional
+      type: System.Boolean
+      description: If the parameter is optional or not.
+    - id: defaultValue
+      type: System.Object
+      description: The default value for this parameter.
+    content.vb: Public Sub AddEnumParameter(enumName As String, name As String, isOptional As Boolean = False, defaultValue As Object = Nothing)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter*
+  nameWithType.vb: CommandOverload.AddEnumParameter(String, String, Boolean, Object)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter(String, String, Boolean, Object)
+  name.vb: AddEnumParameter(String, String, Boolean, Object)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  id: AddSoftEnumParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddSoftEnumParameter(string, OnixCommandParameter)
+  nameWithType: CommandOverload.AddSoftEnumParameter(string, OnixCommandParameter)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(string, OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddSoftEnumParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 166
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Adds a new parameter to the list, specifically a soft enum parameter so it can be linked to the registry.
+
+    Note: The enum must be registered separately in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public void AddSoftEnumParameter(string enumName, OnixCommandParameter parameter)
+    parameters:
+    - id: enumName
+      type: System.String
+      description: The name of the soft enum in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+    - id: parameter
+      type: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+      description: The parameter to add.
+    content.vb: Public Sub AddSoftEnumParameter(enumName As String, parameter As OnixCommandParameter)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the parameter type is not Enum.
+  nameWithType.vb: CommandOverload.AddSoftEnumParameter(String, OnixCommandParameter)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(String, OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  name.vb: AddSoftEnumParameter(String, OnixCommandParameter)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  id: AddSoftEnumParameter(System.String,System.String,System.Boolean,System.Object)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddSoftEnumParameter(string, string, bool, object?)
+  nameWithType: CommandOverload.AddSoftEnumParameter(string, string, bool, object?)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(string, string, bool, object?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddSoftEnumParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 180
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Adds a new parameter to the list, specifically a command path parameter. This adds the required metadata to make it behave as such.
+  example: []
+  syntax:
+    content: public void AddSoftEnumParameter(string enumName, string name, bool isOptional = false, object? defaultValue = null)
+    parameters:
+    - id: enumName
+      type: System.String
+      description: The name of the soft enum in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+    - id: name
+      type: System.String
+      description: The name of the parameter.
+    - id: isOptional
+      type: System.Boolean
+      description: If the parameter is optional or not.
+    - id: defaultValue
+      type: System.Object
+      description: The default value for this parameter.
+    content.vb: Public Sub AddSoftEnumParameter(enumName As String, name As String, isOptional As Boolean = False, defaultValue As Object = Nothing)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter*
+  nameWithType.vb: CommandOverload.AddSoftEnumParameter(String, String, Boolean, Object)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter(String, String, Boolean, Object)
+  name.vb: AddSoftEnumParameter(String, String, Boolean, Object)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  id: AddPathParameter(System.String,OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddPathParameter(string, OnixCommandParameter)
+  nameWithType: CommandOverload.AddPathParameter(string, OnixCommandParameter)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(string, OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddPathParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 191
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Adds a new parameter to the list, specifically an enum parameter so it can be linked to the registry.
+
+    Note: The enum must be registered separately in the <xref href="OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public void AddPathParameter(string commandPathName, OnixCommandParameter parameter)
+    parameters:
+    - id: commandPathName
+      type: System.String
+      description: The name of the command path
+    - id: parameter
+      type: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+      description: The parameter to add.
+    content.vb: Public Sub AddPathParameter(commandPathName As String, parameter As OnixCommandParameter)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the parameter type is not Enum.
+  nameWithType.vb: CommandOverload.AddPathParameter(String, OnixCommandParameter)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(String, OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  name.vb: AddPathParameter(String, OnixCommandParameter)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(System.String,System.String,System.Boolean,System.Object)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(System.String,System.String,System.Boolean,System.Object)
+  id: AddPathParameter(System.String,System.String,System.Boolean,System.Object)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddPathParameter(string, string, bool, object?)
+  nameWithType: CommandOverload.AddPathParameter(string, string, bool, object?)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(string, string, bool, object?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddPathParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 205
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Adds a new parameter to the list, specifically a command path parameter. This adds the required metadata to make it behave as such.
+  example: []
+  syntax:
+    content: public void AddPathParameter(string commandPathName, string name, bool isOptional = false, object? defaultValue = null)
+    parameters:
+    - id: commandPathName
+      type: System.String
+      description: The name of the command path
+    - id: name
+      type: System.String
+      description: The name of the parameter.
+    - id: isOptional
+      type: System.Boolean
+      description: If the parameter is optional or not.
+    - id: defaultValue
+      type: System.Object
+      description: The default value for this parameter.
+    content.vb: Public Sub AddPathParameter(commandPathName As String, name As String, isOptional As Boolean = False, defaultValue As Object = Nothing)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter*
+  nameWithType.vb: CommandOverload.AddPathParameter(String, String, Boolean, Object)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter(String, String, Boolean, Object)
+  name.vb: AddPathParameter(String, String, Boolean, Object)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld
+  id: CanInvokeOutsideWorld
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: CanInvokeOutsideWorld()
+  nameWithType: CommandOverload.CanInvokeOutsideWorld()
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CanInvokeOutsideWorld
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 214
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: This returns true when this overload can be called from outside a world.
+  example: []
+  syntax:
+    content: public bool CanInvokeOutsideWorld()
+    return:
+      type: System.Boolean
+      description: True when this overload can be called from outside a world.
+    content.vb: Public Function CanInvokeOutsideWorld() As Boolean
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld*
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(System.Reflection.ParameterInfo)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(System.Reflection.ParameterInfo)
+  id: AddParameter(System.Reflection.ParameterInfo)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: AddParameter(ParameterInfo)
+  nameWithType: CommandOverload.AddParameter(ParameterInfo)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter(System.Reflection.ParameterInfo)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AddParameter
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 236
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Adds a parameter from the given ParameterInfo.
+  example: []
+  syntax:
+    content: public void AddParameter(ParameterInfo param)
+    parameters:
+    - id: param
+      type: System.Reflection.ParameterInfo
+      description: The parameter to steal everything from.
+    content.vb: Public Sub AddParameter(param As ParameterInfo)
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: When that parameter is not supported.
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString(System.String,System.Int32)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString(System.String,System.Int32)
+  id: GetHighlightedDisplayString(System.String,System.Int32)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: GetHighlightedDisplayString(string, int)
+  nameWithType: CommandOverload.GetHighlightedDisplayString(string, int)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString(string, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetHighlightedDisplayString
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 311
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Generates a formatted display string for a command, highlighting specific parameters based on their index.
+  example: []
+  syntax:
+    content: public string GetHighlightedDisplayString(string commandName, int highlightIndex)
+    parameters:
+    - id: commandName
+      type: System.String
+      description: The name of the command to be displayed.
+    - id: highlightIndex
+      type: System.Int32
+      description: >-
+        The index of the parameter to highlight. Parameters at or below this index will be highlighted,  while
+            others will be displayed in a dimmed style.
+    return:
+      type: System.String
+      description: A formatted string representing the command and its parameters, with appropriate highlighting and type annotations for each parameter.
+    content.vb: Public Function GetHighlightedDisplayString(commandName As String, highlightIndex As Integer) As String
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString*
+  nameWithType.vb: CommandOverload.GetHighlightedDisplayString(String, Integer)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString(String, Integer)
+  name.vb: GetHighlightedDisplayString(String, Integer)
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo(System.Reflection.MethodInfo)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo(System.Reflection.MethodInfo)
+  id: FromMethodInfo(System.Reflection.MethodInfo)
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  langs:
+  - csharp
+  - vb
+  name: FromMethodInfo(MethodInfo)
+  nameWithType: CommandOverload.FromMethodInfo(MethodInfo)
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo(System.Reflection.MethodInfo)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FromMethodInfo
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/CommandOverload.cs
+    startLine: 414
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: Creates a CommandOverload instance from a MethodInfo object.
+  example: []
+  syntax:
+    content: public static CommandOverload FromMethodInfo(MethodInfo method)
+    parameters:
+    - id: method
+      type: System.Reflection.MethodInfo
+      description: The method to extract info from.
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+      description: The created overload.
+    content.vb: Public Shared Function FromMethodInfo(method As MethodInfo) As CommandOverload
+  overload: OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo*
+references:
+- uid: OnixRuntime.Api.OnixClient.Commands
+  commentId: N:OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Commands
+  nameWithType: OnixRuntime.Api.OnixClient.Commands
+  fullName: OnixRuntime.Api.OnixClient.Commands
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_Parameters
+  name: Parameters
+  nameWithType: CommandOverload.Parameters
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.Parameters
+- uid: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter}
+  commentId: T:System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<OnixCommandParameter>
+  nameWithType: List<OnixCommandParameter>
+  fullName: System.Collections.Generic.List<OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter>
+  nameWithType.vb: List(Of OnixCommandParameter)
+  fullName.vb: System.Collections.Generic.List(Of OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter)
+  name.vb: List(Of OnixCommandParameter)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+    name: OnixCommandParameter
+    href: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+    name: OnixCommandParameter
+    href: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_AllowedExecutionTargets
+  name: AllowedExecutionTargets
+  nameWithType: CommandOverload.AllowedExecutionTargets
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AllowedExecutionTargets
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  parent: OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.html
+  name: CommandExecutionTarget
+  nameWithType: CommandExecutionTarget
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_AddParameter_OnixRuntime_Api_OnixClient_Commands_OnixCommandParameter_
+  name: AddParameter
+  nameWithType: CommandOverload.AddParameter
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddParameter
+- uid: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+  parent: OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter.html
+  name: OnixCommandParameter
+  nameWithType: OnixCommandParameter
+  fullName: OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandParameterType
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandParameterType
+  parent: OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.Api.OnixClient.Commands.CommandParameterType.html
+  name: CommandParameterType
+  nameWithType: CommandParameterType
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandParameterType
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+  href: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html
+  name: CommandEnumRegistry
+  nameWithType: CommandEnumRegistry
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_AddEnumParameter_System_String_OnixRuntime_Api_OnixClient_Commands_OnixCommandParameter_
+  name: AddEnumParameter
+  nameWithType: CommandOverload.AddEnumParameter
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddEnumParameter
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_AddSoftEnumParameter_System_String_OnixRuntime_Api_OnixClient_Commands_OnixCommandParameter_
+  name: AddSoftEnumParameter
+  nameWithType: CommandOverload.AddSoftEnumParameter
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddSoftEnumParameter
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_AddPathParameter_System_String_OnixRuntime_Api_OnixClient_Commands_OnixCommandParameter_
+  name: AddPathParameter
+  nameWithType: CommandOverload.AddPathParameter
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.AddPathParameter
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_CanInvokeOutsideWorld
+  name: CanInvokeOutsideWorld
+  nameWithType: CommandOverload.CanInvokeOutsideWorld
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.CanInvokeOutsideWorld
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notsupportedexception
+  name: NotSupportedException
+  nameWithType: NotSupportedException
+  fullName: System.NotSupportedException
+- uid: System.Reflection.ParameterInfo
+  commentId: T:System.Reflection.ParameterInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.parameterinfo
+  name: ParameterInfo
+  nameWithType: ParameterInfo
+  fullName: System.Reflection.ParameterInfo
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_GetHighlightedDisplayString_System_String_System_Int32_
+  name: GetHighlightedDisplayString
+  nameWithType: CommandOverload.GetHighlightedDisplayString
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.GetHighlightedDisplayString
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html#OnixRuntime_Api_OnixClient_Commands_CommandOverload_FromMethodInfo_System_Reflection_MethodInfo_
+  name: FromMethodInfo
+  nameWithType: CommandOverload.FromMethodInfo
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload.FromMethodInfo
+- uid: System.Reflection.MethodInfo
+  commentId: T:System.Reflection.MethodInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo
+  name: MethodInfo
+  nameWithType: MethodInfo
+  fullName: System.Reflection.MethodInfo
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandOverload
+  parent: OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.Api.OnixClient.Commands.CommandOverload.html
+  name: CommandOverload
+  nameWithType: CommandOverload
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandOverload

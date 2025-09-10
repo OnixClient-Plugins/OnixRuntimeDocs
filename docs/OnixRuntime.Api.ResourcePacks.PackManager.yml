@@ -6,7 +6,6 @@ items:
   parent: OnixRuntime.Api.ResourcePacks
   children:
   - OnixRuntime.Api.ResourcePacks.PackManager.AddonStack
-  - OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks
   - OnixRuntime.Api.ResourcePacks.PackManager.BaseGameStack
   - OnixRuntime.Api.ResourcePacks.PackManager.FullStack
   - OnixRuntime.Api.ResourcePacks.PackManager.GlobalStack
@@ -269,37 +268,6 @@ items:
       type: System.Boolean
     content.vb: Public ReadOnly Property UsesGlobalStack As Boolean
   overload: OnixRuntime.Api.ResourcePacks.PackManager.UsesGlobalStack*
-- uid: OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks
-  commentId: P:OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks
-  id: AllKnownResourcePacks
-  parent: OnixRuntime.Api.ResourcePacks.PackManager
-  langs:
-  - csharp
-  - vb
-  name: AllKnownResourcePacks
-  nameWithType: PackManager.AllKnownResourcePacks
-  fullName: OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks
-  type: Property
-  source:
-    remote:
-      path: OnixRuntime/Api/ResourcePacks/PackManager.cs
-      branch: dev
-      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
-    id: AllKnownResourcePacks
-    path: ../OnixRuntime/OnixRuntime/Api/ResourcePacks/PackManager.cs
-    startLine: 71
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api.ResourcePacks
-  summary: Gets a list of all the resource packs the client knows about.
-  example: []
-  syntax:
-    content: public ResourcePack[] AllKnownResourcePacks { get; }
-    parameters: []
-    return:
-      type: OnixRuntime.Api.ResourcePacks.ResourcePack[]
-    content.vb: Public ReadOnly Property AllKnownResourcePacks As ResourcePack()
-  overload: OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks*
 - uid: OnixRuntime.Api.ResourcePacks.PackManager.LoadContentOrNull(OnixRuntime.Api.Rendering.TexturePath)
   commentId: M:OnixRuntime.Api.ResourcePacks.PackManager.LoadContentOrNull(OnixRuntime.Api.Rendering.TexturePath)
   id: LoadContentOrNull(OnixRuntime.Api.Rendering.TexturePath)
@@ -847,33 +815,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks*
-  commentId: Overload:OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks
-  href: OnixRuntime.Api.ResourcePacks.PackManager.html#OnixRuntime_Api_ResourcePacks_PackManager_AllKnownResourcePacks
-  name: AllKnownResourcePacks
-  nameWithType: PackManager.AllKnownResourcePacks
-  fullName: OnixRuntime.Api.ResourcePacks.PackManager.AllKnownResourcePacks
-- uid: OnixRuntime.Api.ResourcePacks.ResourcePack[]
-  isExternal: true
-  href: OnixRuntime.Api.ResourcePacks.ResourcePack.html
-  name: ResourcePack[]
-  nameWithType: ResourcePack[]
-  fullName: OnixRuntime.Api.ResourcePacks.ResourcePack[]
-  nameWithType.vb: ResourcePack()
-  fullName.vb: OnixRuntime.Api.ResourcePacks.ResourcePack()
-  name.vb: ResourcePack()
-  spec.csharp:
-  - uid: OnixRuntime.Api.ResourcePacks.ResourcePack
-    name: ResourcePack
-    href: OnixRuntime.Api.ResourcePacks.ResourcePack.html
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: OnixRuntime.Api.ResourcePacks.ResourcePack
-    name: ResourcePack
-    href: OnixRuntime.Api.ResourcePacks.ResourcePack.html
-  - name: (
-  - name: )
 - uid: OnixRuntime.Api.ResourcePacks.PackManager.LoadContentOrNull*
   commentId: Overload:OnixRuntime.Api.ResourcePacks.PackManager.LoadContentOrNull
   href: OnixRuntime.Api.ResourcePacks.PackManager.html#OnixRuntime_Api_ResourcePacks_PackManager_LoadContentOrNull_OnixRuntime_Api_Rendering_TexturePath_

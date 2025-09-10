@@ -1,0 +1,931 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  id: CommandOverloadParser.ParseResult
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing
+  children:
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.AutoCompleteOptions
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailRange
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailReason
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FullyMatched
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion(System.String)
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(System.String,OnixRuntime.Api.OnixClient.Commands.Parsing.Token)
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(System.String,System.Int32,System.Int32)
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.ParameterHighlightIndex
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut
+  - OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.Values
+  langs:
+  - csharp
+  - vb
+  name: CommandOverloadParser.ParseResult
+  nameWithType: CommandOverloadParser.ParseResult
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  type: Class
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ParseResult
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 144
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: The result from parsing an overload.
+  example: []
+  syntax:
+    content: public class CommandOverloadParser.ParseResult
+    content.vb: Public Class CommandOverloadParser.ParseResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.Values
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.Values
+  id: Values
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: Values
+  nameWithType: CommandOverloadParser.ParseResult.Values
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.Values
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Values
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 148
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: The values that were parsed, in order of the parameters.
+  example: []
+  syntax:
+    content: public List<object?> Values
+    return:
+      type: System.Collections.Generic.List{System.Object}
+    content.vb: Public Values As List(Of Object)
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.AutoCompleteOptions
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.AutoCompleteOptions
+  id: AutoCompleteOptions
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: AutoCompleteOptions
+  nameWithType: CommandOverloadParser.ParseResult.AutoCompleteOptions
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.AutoCompleteOptions
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: AutoCompleteOptions
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 152
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: If the autocomplete was requested, this will contain the options for autocompletion.
+  example: []
+  syntax:
+    content: public List<CommandAutoCompleteOption> AutoCompleteOptions
+    return:
+      type: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption}
+    content.vb: Public AutoCompleteOptions As List(Of CommandAutoCompleteOption)
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FullyMatched
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FullyMatched
+  id: FullyMatched
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: FullyMatched
+  nameWithType: CommandOverloadParser.ParseResult.FullyMatched
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FullyMatched
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FullyMatched
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 156
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: This will be true when the whole overload has been matched.
+  example: []
+  syntax:
+    content: public bool FullyMatched
+    return:
+      type: System.Boolean
+    content.vb: Public FullyMatched As Boolean
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut
+  id: RuledOut
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: RuledOut
+  nameWithType: CommandOverloadParser.ParseResult.RuledOut
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: RuledOut
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 160
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: This will be true when this overload has been ruled out, because it didn't contain the expected data types or values.
+  example: []
+  syntax:
+    content: public bool RuledOut
+    return:
+      type: System.Boolean
+    content.vb: Public RuledOut As Boolean
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailReason
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailReason
+  id: FailReason
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: FailReason
+  nameWithType: CommandOverloadParser.ParseResult.FailReason
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailReason
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FailReason
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 164
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: The reason why this overload was ruled out, if <xref href="OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut" data-throw-if-not-resolved="false"></xref> is true.
+  example: []
+  syntax:
+    content: public string FailReason
+    return:
+      type: System.String
+    content.vb: Public FailReason As String
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailRange
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailRange
+  id: FailRange
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: FailRange
+  nameWithType: CommandOverloadParser.ParseResult.FailRange
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.FailRange
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: FailRange
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 169
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: >-
+    The region that was responsible for the failure, if <xref href="OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut" data-throw-if-not-resolved="false"></xref> is true.
+
+    You should use <xref href="OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public Range FailRange
+    return:
+      type: System.Range
+    content.vb: Public FailRange As Range
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.ParameterHighlightIndex
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.ParameterHighlightIndex
+  id: ParameterHighlightIndex
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: ParameterHighlightIndex
+  nameWithType: CommandOverloadParser.ParseResult.ParameterHighlightIndex
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.ParameterHighlightIndex
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: ParameterHighlightIndex
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 173
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: The parameter index to highlight to.
+  example: []
+  syntax:
+    content: public int ParameterHighlightIndex
+    return:
+      type: System.Int32
+    content.vb: Public ParameterHighlightIndex As Integer
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(System.String,OnixRuntime.Api.OnixClient.Commands.Parsing.Token)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(System.String,OnixRuntime.Api.OnixClient.Commands.Parsing.Token)
+  id: MarkFailed(System.String,OnixRuntime.Api.OnixClient.Commands.Parsing.Token)
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: MarkFailed(string, Token?)
+  nameWithType: CommandOverloadParser.ParseResult.MarkFailed(string, Token?)
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(string, OnixRuntime.Api.OnixClient.Commands.Parsing.Token?)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: MarkFailed
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 180
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: This marks the result as failed.
+  example: []
+  syntax:
+    content: public void MarkFailed(string reason = "", Token? token = null)
+    parameters:
+    - id: reason
+      type: System.String
+      description: The reason you're saying it failed.
+    - id: token
+      type: OnixRuntime.Api.OnixClient.Commands.Parsing.Token
+      description: For convenience, the failure range will be extracted from the token.
+    content.vb: Public Sub MarkFailed(reason As String = "", token As Token = Nothing)
+  overload: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed*
+  nameWithType.vb: CommandOverloadParser.ParseResult.MarkFailed(String, Token)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(String, OnixRuntime.Api.OnixClient.Commands.Parsing.Token)
+  name.vb: MarkFailed(String, Token)
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(System.String,System.Int32,System.Int32)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(System.String,System.Int32,System.Int32)
+  id: MarkFailed(System.String,System.Int32,System.Int32)
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: MarkFailed(string, int, int)
+  nameWithType: CommandOverloadParser.ParseResult.MarkFailed(string, int, int)
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(string, int, int)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: MarkFailed
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 194
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: This marks the result as failed.
+  example: []
+  syntax:
+    content: public void MarkFailed(string reason, int startIndex, int endIndex)
+    parameters:
+    - id: reason
+      type: System.String
+      description: The reason you're saying it failed.
+    - id: startIndex
+      type: System.Int32
+      description: Where the problematic area begins.
+    - id: endIndex
+      type: System.Int32
+      description: Where the problematic area ends.
+    content.vb: Public Sub MarkFailed(reason As String, startIndex As Integer, endIndex As Integer)
+  overload: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed*
+  nameWithType.vb: CommandOverloadParser.ParseResult.MarkFailed(String, Integer, Integer)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed(String, Integer, Integer)
+  name.vb: MarkFailed(String, Integer, Integer)
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)
+  id: GetFailRangeFor(System.String)
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: GetFailRangeFor(string)
+  nameWithType: CommandOverloadParser.ParseResult.GetFailRangeFor(string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetFailRangeFor
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 206
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: Gets the range that failed, adjusted for the input length. This handles invalid/explicitly out of range indices.
+  example: []
+  syntax:
+    content: public Range GetFailRangeFor(string input)
+    parameters:
+    - id: input
+      type: System.String
+      description: The input text the range was built for.
+    return:
+      type: System.Range
+      description: The new safe range.
+    content.vb: Public Function GetFailRangeFor(input As String) As Range
+  overload: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor*
+  nameWithType.vb: CommandOverloadParser.ParseResult.GetFailRangeFor(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(String)
+  name.vb: GetFailRangeFor(String)
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion(System.String)
+  id: GetFailTextRegion(System.String)
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult
+  langs:
+  - csharp
+  - vb
+  name: GetFailTextRegion(string)
+  nameWithType: CommandOverloadParser.ParseResult.GetFailTextRegion(string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion(string)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: GetFailTextRegion
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/Parsing/CommandOverloadParser.cs
+    startLine: 222
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands.Parsing
+  summary: Gets the text in the region that failed.
+  example: []
+  syntax:
+    content: public string GetFailTextRegion(string input)
+    parameters:
+    - id: input
+      type: System.String
+      description: The input text the range was built for.
+    return:
+      type: System.String
+      description: The text in the fail range.
+    content.vb: Public Function GetFailTextRegion(input As String) As String
+  overload: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion*
+  nameWithType.vb: CommandOverloadParser.ParseResult.GetFailTextRegion(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion(String)
+  name.vb: GetFailTextRegion(String)
+references:
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing
+  commentId: N:OnixRuntime.Api.OnixClient.Commands.Parsing
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Commands.Parsing
+  nameWithType: OnixRuntime.Api.OnixClient.Commands.Parsing
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing
+    name: Parsing
+    href: OnixRuntime.Api.OnixClient.Commands.Parsing.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing
+    name: Parsing
+    href: OnixRuntime.Api.OnixClient.Commands.Parsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{System.Object}
+  commentId: T:System.Collections.Generic.List{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<object>
+  nameWithType: List<object>
+  fullName: System.Collections.Generic.List<object>
+  nameWithType.vb: List(Of Object)
+  fullName.vb: System.Collections.Generic.List(Of Object)
+  name.vb: List(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption}
+  commentId: T:System.Collections.Generic.List{OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<CommandAutoCompleteOption>
+  nameWithType: List<CommandAutoCompleteOption>
+  fullName: System.Collections.Generic.List<OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption>
+  nameWithType.vb: List(Of CommandAutoCompleteOption)
+  fullName.vb: System.Collections.Generic.List(Of OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption)
+  name.vb: List(Of CommandAutoCompleteOption)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption
+    name: CommandAutoCompleteOption
+    href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption
+    name: CommandAutoCompleteOption
+    href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut
+  href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html#OnixRuntime_Api_OnixClient_Commands_Parsing_CommandOverloadParser_ParseResult_RuledOut
+  name: RuledOut
+  nameWithType: CommandOverloadParser.ParseResult.RuledOut
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.RuledOut
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)
+  commentId: M:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)
+  isExternal: true
+  href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html#OnixRuntime_Api_OnixClient_Commands_Parsing_CommandOverloadParser_ParseResult_GetFailRangeFor_System_String_
+  name: GetFailRangeFor(string)
+  nameWithType: CommandOverloadParser.ParseResult.GetFailRangeFor(string)
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(string)
+  nameWithType.vb: CommandOverloadParser.ParseResult.GetFailRangeFor(String)
+  fullName.vb: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(String)
+  name.vb: GetFailRangeFor(String)
+  spec.csharp:
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)
+    name: GetFailRangeFor
+    href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html#OnixRuntime_Api_OnixClient_Commands_Parsing_CommandOverloadParser_ParseResult_GetFailRangeFor_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor(System.String)
+    name: GetFailRangeFor
+    href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html#OnixRuntime_Api_OnixClient_Commands_Parsing_CommandOverloadParser_ParseResult_GetFailRangeFor_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Range
+  commentId: T:System.Range
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.range
+  name: Range
+  nameWithType: Range
+  fullName: System.Range
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed
+  href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html#OnixRuntime_Api_OnixClient_Commands_Parsing_CommandOverloadParser_ParseResult_MarkFailed_System_String_OnixRuntime_Api_OnixClient_Commands_Parsing_Token_
+  name: MarkFailed
+  nameWithType: CommandOverloadParser.ParseResult.MarkFailed
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.MarkFailed
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.Token
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.Parsing.Token
+  parent: OnixRuntime.Api.OnixClient.Commands.Parsing
+  href: OnixRuntime.Api.OnixClient.Commands.Parsing.Token.html
+  name: Token
+  nameWithType: Token
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.Token
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor
+  href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html#OnixRuntime_Api_OnixClient_Commands_Parsing_CommandOverloadParser_ParseResult_GetFailRangeFor_System_String_
+  name: GetFailRangeFor
+  nameWithType: CommandOverloadParser.ParseResult.GetFailRangeFor
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailRangeFor
+- uid: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion
+  href: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html#OnixRuntime_Api_OnixClient_Commands_Parsing_CommandOverloadParser_ParseResult_GetFailTextRegion_System_String_
+  name: GetFailTextRegion
+  nameWithType: CommandOverloadParser.ParseResult.GetFailTextRegion
+  fullName: OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.GetFailTextRegion

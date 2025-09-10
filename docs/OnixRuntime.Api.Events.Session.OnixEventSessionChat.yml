@@ -6,6 +6,7 @@ items:
   parent: OnixRuntime.Api.Events.Session
   children:
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.ChatScreenMessageAboutToBeSent
+  - OnixRuntime.Api.Events.Session.OnixEventSessionChat.CommandResponse
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.Receive
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.Send
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.SendCommand
@@ -23,7 +24,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OnixEventSessionChat
     path: ../OnixRuntime/OnixRuntime/Api/Events/Session/OnixEventSessionChat.cs
-    startLine: 42
+    startLine: 85
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events.Session
@@ -60,7 +61,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Receive
     path: ../OnixRuntime/OnixRuntime/Api/Events/Session/OnixEventSessionChat.cs
-    startLine: 50
+    startLine: 93
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events.Session
@@ -89,7 +90,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChatScreenMessageAboutToBeSent
     path: ../OnixRuntime/OnixRuntime/Api/Events/Session/OnixEventSessionChat.cs
-    startLine: 76
+    startLine: 119
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events.Session
@@ -118,7 +119,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Send
     path: ../OnixRuntime/OnixRuntime/Api/Events/Session/OnixEventSessionChat.cs
-    startLine: 98
+    startLine: 141
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events.Session
@@ -147,7 +148,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SendCommand
     path: ../OnixRuntime/OnixRuntime/Api/Events/Session/OnixEventSessionChat.cs
-    startLine: 123
+    startLine: 166
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Events.Session
@@ -158,6 +159,40 @@ items:
     return:
       type: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnSendCommandDelegate
     content.vb: Public Event SendCommand As OnixEventSessionChat.OnSendCommandDelegate
+- uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.CommandResponse
+  commentId: E:OnixRuntime.Api.Events.Session.OnixEventSessionChat.CommandResponse
+  id: CommandResponse
+  parent: OnixRuntime.Api.Events.Session.OnixEventSessionChat
+  langs:
+  - csharp
+  - vb
+  name: CommandResponse
+  nameWithType: OnixEventSessionChat.CommandResponse
+  fullName: OnixRuntime.Api.Events.Session.OnixEventSessionChat.CommandResponse
+  type: Event
+  source:
+    remote:
+      path: OnixRuntime/Api/Events/Session/OnixEventSessionChat.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CommandResponse
+    path: ../OnixRuntime/OnixRuntime/Api/Events/Session/OnixEventSessionChat.cs
+    startLine: 197
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Events.Session
+  summary: >-
+    Occurs when a chat command response is received by the client.
+
+    Note that this might not be received if the server uses TextPacket for its responses or sends a different id.
+
+    This will also not work when 'sendcommandfeedback' is disabled.
+  example: []
+  syntax:
+    content: public event OnixEventSessionChat.OnCommandResponseDelegate? CommandResponse
+    return:
+      type: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+    content.vb: Public Event CommandResponse As OnixEventSessionChat.OnCommandResponseDelegate
 references:
 - uid: OnixRuntime.Api.Events.Session
   commentId: N:OnixRuntime.Api.Events.Session
@@ -526,3 +561,26 @@ references:
   - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnSendCommandDelegate
     name: OnSendCommandDelegate
     href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnSendCommandDelegate.html
+- uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+  commentId: T:OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+  parent: OnixRuntime.Api.Events.Session
+  href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.html
+  name: OnixEventSessionChat.OnCommandResponseDelegate
+  nameWithType: OnixEventSessionChat.OnCommandResponseDelegate
+  fullName: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat
+    name: OnixEventSessionChat
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+    name: OnCommandResponseDelegate
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat
+    name: OnixEventSessionChat
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+    name: OnCommandResponseDelegate
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.html

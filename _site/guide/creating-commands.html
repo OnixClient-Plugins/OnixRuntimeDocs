@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Creating Commands | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Creating Commands | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/guide/creating-commands.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="creating-commands">Creating Commands</h1>
+
+<h2 id="-overview">📜 Overview</h2>
+<ul>
+<li>Commands are a way to interact with your plugin through the in-game chat.</li>
+<li>They can be more versatile then a UI and, most importantly, a lot easier and faster to implement.</li>
+<li>In most cases, you won't even need to parse the command arguments yourself, as the API will do it for you.</li>
+<li>You can also create commands that will run on the local server.</li>
+<li>Commands can have multiple overloads, meaning you can have the same command with different parameters.</li>
+<li>Client sided commands can be run anywhere, with the client's prefix.</li>
+<li>Server sided commands can be run when you're hosting a world, the prefix is <code>/.</code></li>
+</ul>
+<h2 id="-creating-a-command">🛠️ Creating a Command</h2>
+<ul>
+<li>To create a command, you need to create a class that inherits from <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html">OnixCommandBase</a>.</li>
+<li>You'll need to make sure you can construct it outside, you'll be the one constructing it so how you do it is not important to the API.
+<ul>
+<li>You will need to provide at least a name and description, note that conflicting names are not handled at all as of writing this on the 7th of September, 2025.</li>
+<li>This is also where you define if the command is client sided, server side or both.</li>
+<li>You can also provide a permission level, useful for server sided commands, and also for client sided commands if you want to restrict access to certain users.</li>
+</ul>
+</li>
+<li>Then, create a function and mark it with the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute.html">Overload</a> attribute.
+<ul>
+<li>Make sure the function returns an <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput.html">OnixCommandOutput</a> for any of its outputs, this lets the API handle it properly for the client and the server.</li>
+<li>You can use the convenient <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_Success_">Success(string)</a> and <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_Error_">Error(String)</a> methods in <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html">OnixCommandBase</a> to create a success or error output quickly.</li>
+</ul>
+</li>
+</ul>
+<p>Here's what it should look like, I explicitly passed in the last two parameters, but you don't have to do that if you want the defaults (client sided, permission level any)
+<br>
+Now sure, this command doesn't do much, but it should work. We'll expand on it in the next sections.</p>
+<pre><code class="lang-csharp">using OnixRuntime.Api.Entities;
+using OnixRuntime.Api.OnixClient.Commands;
+
+namespace PluginCommandExample {
+    
+    public class ExampleCommand : OnixCommandBase {
+        public ExampleCommand() : base(&quot;example&quot;, &quot;A simple example command to show you how they work.&quot;, CommandExecutionTarget.Client, CommandPermissionLevel.Any) { }
+
+        [Overload]
+        OnixCommandOutput Example() {
+            return Success(&quot;Hello world!&quot;);
+        }
+    }
+}
+</code></pre>
+<p>Now, you have a command, how to make it work in game? Simple! We just need to register it when the plugin is loaded with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RegisterCommand_">Onix.Client.CommandRegistry.RegisterCommand</a>.
+<br>
+Note that no cleanup is really necessary, the API will handle it when the plugin is unloaded.</p>
+<pre><code class="lang-csharp">// Inside your plugin's main class.
+protected override void OnLoaded() {
+    Console.WriteLine($&quot;Plugin {CurrentPluginManifest.Name} loaded!&quot;);
+    Config = new PluginCommandExampleConfig(PluginDisplayModule, true);
+    
+    // Register our command here!
+    Onix.Client.CommandRegistry.RegisterCommand(new ExampleCommand());
+}
+</code></pre>
+<hr>
+<h2 id="-getting-arguments">🧩 Getting Arguments</h2>
+<ul>
+<li>Getting arguments is very easy, you just add parameters to your overload function and the API will handle parsing them and calling the function for you.</li>
+<li>For optional arguments, you just need to provide a default value for the parameter, the API will use it if the argument is not provided.</li>
+<li>You can see what <a href="#-parameters-types">Parameter Types</a> are supported but it's quite straight forward for most of them.</li>
+<li>Let's get some arguments!</li>
+</ul>
+<pre><code class="lang-csharp">[Overload]
+OnixCommandOutput Example(string name, Block? block = null) {
+    return Success($&quot;Hello {name}, do you like {block?.Name ?? &quot;the lack of creativity you have&quot;}?&quot;);
+}
+</code></pre>
+<ul>
+<li>Now, this command takes a string and an optional block.</li>
+<li>If you run <code>.example Steve oak_planks</code>, it will say &quot;Hello Steve, do you like oak_planks?&quot;.
+<br><br></li>
+<li>Now, what if you want to get some more information about the entity running the command?</li>
+<li>Remember those commands have the option to run on the server side or both sides, so you can't just use <code>Onix.LocalPlayer</code> and hope for the best.</li>
+<li>Any of the function's parameters can be a <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html">OnixCommandOrigin</a> which will give you more information.</li>
+<li>Note that things are default null in the case the command is ran in the menu or maybe in a command block. (Command blocks are not yet supported but you should check so they don't break if they ever get supported)</li>
+</ul>
+<pre><code class="lang-csharp">[Overload]
+OnixCommandOutput Example(OnixCommandOrigin origin, BlockPos targetPosition) {
+    return Success($&quot;Hello {origin.Entity?.Nametag ?? &quot;Who are you?&quot;}, you are {origin.BlockPosition.Distance(targetPosition)} blocks away from {targetPosition}.&quot;);
+}
+</code></pre>
+<ul>
+<li>Here we use the origin to get where the command was executed from, and the entity that executed it.</li>
+<li>We no longer need a name parameter as we get it from the entity running the command. For our command that's client only, we know it'll be our local player and we are in a world.</li>
+<li>If you support out of world commands, you should have checks. And you should also check if the entity is not null when on the server side.</li>
+</ul>
+<hr>
+<h2 id="-parameters-types">✅ Parameters Types</h2>
+<ul>
+<li>There are different types of arguments and specializations for them, here are the currently supported ones.
+<ul>
+<li><code>bool</code> - A boolean value, can be <code>true</code> or <code>false</code>.</li>
+<li><code>int</code> - An integer value, can be any whole number.</li>
+<li><code>float</code> - A floating point value, can be any number with decimals.</li>
+<li><code>string</code> - A string value, can be any text, that can also be used with quotes and escape sequences like \n, &quot; and things like that.
+<ul>
+<li>Strings have a few specializations:</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute.html">[RawString]</a> string - A string that captures everything until the end of the argument list, this will capture EVERYTHING, including spaces and things like that. Make sure it's the last parameter!</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute.html">[SoftEnumName]</a> string - A string that will have recommendations based on a soft enum. See the <a href="#-enums">Enums Section</a> for more information on this one.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute.html">[CommandPath]</a> string - This is a string that must be a specific value. If the text the user enters is not the one specified, this overload will be ruled out. This is useful for subcommands.
+<ul>
+<li>The command path can also specify an item to use as an icon if you're going for something fancy.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Entity Types
+<ul>
+<li>On the client, entities, especially players might not be loaded/out of range so keep that in mind when testing.</li>
+<li>On the client, when your plugin is not trusted and the user is not either, only the local player is evaluated.</li>
+<li>Those cases are all handled for you, by giving a no entities found error. Trust is also gracefully handled so no need to worry about it.</li>
+<li>On the server, do what you want, you're allowed more things, entities will always be loaded and things like that.
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Entities.Player.html">Player</a> - A player entity that is loaded.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Entities.Player.html">Player[]</a> - One or more player entities that are loaded.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Entities.Entity.html">Entity</a> - An entity that is loaded.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Entities.Entity.html">Entity[]</a> - One or more entities that are loaded.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.html">CommandEntitySelector</a> - A selector that can be used to discriminate entities manually, having to gather a list of entities yourself. You should avoid this unless you know why you need it.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a> - A 3D integer position, relative <code>~</code> coordinates are supported and automatically handled when using a <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html">Vec3</a>.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition.html">CommandBlockPosition</a> - Same as a BlockPos but you have to calculate the relative coordinates yourself. You should use a [BlockPos].(xref:OnixRuntime.Api.Maths.BlockPos) version unless you know why you need this one.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html">Vec3</a> - A 3D float position, relative <code>~</code> coordinates are supported and automatically handled when using a <a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a>.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandPosition.html">CommandPosition</a> - Same as a Vec3 but you have to calculate the relative coordinates yourself. You should use a [Vec3].(xref:OnixRuntime.Api.Maths.Vec3) version unless you know why you need this one.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec2.html">Vec2</a> - Two floating point numbers. No relative coordinates as what would they even take. This is useful if you need two points that arent an angle (rare, I know).</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles.html">Angles</a> - A pair of yaw and pitch angles, in degrees. This will be useful for the user in intellisense as they will know the yaw/pitch order.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles3.html">Angles3</a> - A triplet of yaw, pitch and roll angles, in degrees. This will be useful for the user in intellisense as they will know the yaw/pitch/roll order.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.World.Block.html">Block</a> - A block type, this will have intellisense for all the blocks available in the game.
+<ul>
+<li>The user can specify a state using data by using a comma, like <code>oak_button,8</code>.</li>
+<li>Alternatively, NBT can be used to specify a state too. This will be merged into the default state of the block. Example: <code>oak_button{button_pressed_bit:1b}</code>.</li>
+<li>The user can also specify the whole block using its entire NBT state. Example: <code>{&quot;name&quot;:&quot;minecraft:wooden_button&quot;,&quot;states&quot;:{&quot;button_pressed_bit&quot;:1b,&quot;facing_direction&quot;:0},&quot;version&quot;:15393}</code></li>
+</ul>
+</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Items.Item.html">Item</a> - An item type, this will have intellisense for all the items available in the game.
+<ul>
+<li>This is just the item type, not a full item stack, so no count, NBT or aux. That is done for <a class="xref" href="../docs/OnixRuntime.Api.Items.ItemStack.html">ItemStack</a>.</li>
+<li>You could follow it with a count, aux and NBT parameters to then create an <a class="xref" href="../docs/OnixRuntime.Api.Items.ItemStack.html">ItemStack</a>.</li>
+</ul>
+</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Items.ItemStack.html">ItemStack</a> - An item stack with optional aux or nbt.
+<ul>
+<li>You can specify the aux using a <code>,</code> after the name. Example: <code>stone,1</code> for granite in older bedrock versions. (not much is using aux anymore, sorry for the lack of practical examples.)</li>
+<li>Then after the item name and/or aux, you can specify the NBT using <code>{}</code>. Example: <code>diamond_sword{Damage: 542}</code> for a diamond sword with 542 damage.</li>
+<li>For the count, you can just add an <code>int</code> parameter after and set the count on the item stack yourself.</li>
+<li>This is convenient as it lets the user give you any item in any stat without you having to provide any extra work.</li>
+<li>Note that the entire item can be specified as just NBT too.
+<ul>
+<li>Example: <code>{&quot;Count&quot;:1b,&quot;Damage&quot;:0s,&quot;Name&quot;:&quot;minecraft:diamond_sword&quot;,&quot;WasPickedUp&quot;:0b,&quot;tag&quot;:{&quot;Damage&quot;:984,&quot;display&quot;:{&quot;Lore&quot;:[&quot;A sword that has been passed down through generations.&quot;],&quot;Name&quot;:&quot;§r§bThe Sword of the Ancients&quot;},&quot;ench&quot;:[{&quot;id&quot;:9s,&quot;lvl&quot;:5s}]}}</code></li>
+<li>This gives a diamond sword. A little over halfway used. Named &quot;The Sword of the Ancients&quot; in blue. With lore and enchanted with Sharpness V.</li>
+<li>And you would have had to zero effort to allow the user to give you that.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NBT Types.
+<ul>
+<li>Those let you get arbitrary NBT data from the user.</li>
+<li>You can get either an <a class="xref" href="../docs/OnixRuntime.Api.NBT.ArrayListTag.html">ArrayListTag</a> or an <a class="xref" href="../docs/OnixRuntime.Api.NBT.ObjectTag.html">ObjectTag</a>.</li>
+<li>If you want to support getting both, just take in an <a class="xref" href="../docs/OnixRuntime.Api.NBT.NbtTag.html">NbtTag</a> and then check the type at runtime.</li>
+<li>Here are the supported parameter types:</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.NBT.NbtTag.html">NbtTag</a> - Any NBT tag (between Object/Array), you will need to check the type at runtime.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.NBT.ObjectTag.html">ObjectTag</a> - An NBT object, must start and end with <code>{}</code>.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.NBT.ArrayListTag.html">ArrayListTag</a> - An NBT array, must start and end with <code>[]</code>.</li>
+</ul>
+</li>
+<li>Enum Types
+<ul>
+<li>Soft Enums
+<ul>
+<li>I will talk more about those in the <a href="#-enums">Enums Section</a>.</li>
+</ul>
+</li>
+<li>Enums
+<ul>
+<li>Those are your normal C# enums.</li>
+<li>You can put any enum you want as a parameter and the API will handle parsing it for you.</li>
+<li>Names are automatically converted to <code>snake_case</code> for the user, so <code>MyEnumValue</code> becomes <code>my_enum_value</code>.</li>
+<li>Normal enums get registered in the registry automatically so you don't have to do anything special for them to work.</li>
+<li>I will talk some more about those in the <a href="#-enums">Enums Section</a>.
+<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>So those are the types that you can use as parameters, I know it's a bit much but all the info is there.</li>
+</ul>
+<hr>
+<h2 id="-enums">📃 Enums</h2>
+<ul>
+<li>Anything related to enums is stored in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.</li>
+<li>Note that the names only have to be unique per plugin, so name them cleanly and don't worry about conflicts with other plugins.</li>
+</ul>
+<h3 id="-enums-are-a-special-type-of-parameter-that-lets-you-get-a-value-from-a-predefined-set-of-values">⭐ Enums are a special type of parameter that lets you get a value from a predefined set of values.</h3>
+<ul>
+<li>Enums are registered automatically in the parameters so you shouldn't have to manually register them in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.</li>
+<li>Enums use normal C# enums so you can use any enum you want.</li>
+<li>Enum names are automatically converted to <code>snake_case</code> for the user, so <code>MyEnumValue</code> becomes <code>my_enum_value</code>.</li>
+<li>If you want to specify a different name for the user to type in, you can use the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute.html">[CommandEnumName]</a>.</li>
+<li>If you want that value to have an item for its icon, use a <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute.html">[CommandEnumIconAttribute]</a>.</li>
+<li>Here is an example enum that uses those attributes, note that those attributes are optional:</li>
+</ul>
+<pre><code class="lang-csharp">public enum BuildAction {
+    [CommandEnumIcon(&quot;tnt&quot;)]
+    [CommandEnumName(&quot;destroy&quot;)]
+    Explode,
+    [CommandEnumIcon(&quot;lime_concrete&quot;)]
+    Confirm,
+    [CommandEnumIcon(&quot;barrier&quot;)]
+    Cancel
+}
+
+[Overload]
+OnixCommandOutput Example(OnixCommandOrigin origin, BuildAction action) {
+    return Success($&quot;Yeah man, I'll {action} soon...&quot;);
+}
+</code></pre>
+<p>Here is what it looks like in game:</p>
+<p><img src="../images/creating-commands/BuildActionEnumResult.png" alt="Auto Complete Options Result"></p>
+<h3 id="softenums-are-a-recommendation-in-the-auto-complete-it-holds-no-weight-and-the-user-can-enter-any-string-they-want">SoftEnums are a recommendation in the auto complete, it holds no weight and the user can enter any string they want.</h3>
+<ul>
+<li>They will be synced automatically between the client and server.</li>
+<li>You can add/remove/re-register values at any time, they will be updated automatically.</li>
+<li>You can have icons for them too, just like normal enums.</li>
+<li>This is useful for data that you get at runtime only.</li>
+<li>Those are not registered automatically, you need to register them yourself in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.
+<ul>
+<li>You can call this in your plugin's <code>OnLoaded()</code> method or the command's constructor, if it's that specific.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_">RegisterSoftEnum()</a> is the method to use to set an entire list of values.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_AddSoftEnumValue_">AddSoftEnumValue()</a> is the method to use to add a single value.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RemoveSoftEnumValue_">RemoveSoftEnumValue()</a> is the method to use to remove a single value.</li>
+</ul>
+</li>
+<li>Here is an example of registering a soft enum:</li>
+</ul>
+<pre><code class="lang-csharp">protected override void OnLoaded() {
+    Console.WriteLine($&quot;Plugin {CurrentPluginManifest.Name} loaded!&quot;);
+    Config = new PluginCommandExampleConfig(PluginDisplayModule, true);
+    
+    Onix.Client.CommandRegistry.RegisterCommand(new ExampleCommand());
+    
+    string notesDirectory = Path.Combine(PluginPersistentDataPath, &quot;Notes&quot;);
+    if (!Directory.Exists(notesDirectory))
+        Directory.CreateDirectory(notesDirectory);
+    CommandEnumRegistry.RegisterSoftEnum(&quot;Note&quot;, Directory.GetFiles(notesDirectory).Select(Path.GetFileNameWithoutExtension)!);
+}
+</code></pre>
+<p>We read all the files in a directory and register them as a soft enum called &quot;Note&quot;.</p>
+<hr>
+<h2 id="-server-sided-commands">🛰️ Server Sided Commands</h2>
+<ul>
+<li>Server sided commands can be run when you're hosting a world, the prefix is <code>/.</code>.</li>
+<li>Anyone in the world can run them, so make sure to set the permission level properly.</li>
+<li>You can have a specific overload be just for the server side by specifying it in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute.html">[Overload]</a> attribute.</li>
+</ul>
+<pre><code class="lang-csharp">public class ExampleCommand : OnixCommandBase {
+    public ExampleCommand() : base(&quot;example&quot;, &quot;A simple example command to show you how they work.&quot;, CommandExecutionTarget.Server, CommandPermissionLevel.Any) { }
+
+    
+    [Overload]
+    OnixCommandOutput Exterminate(OnixCommandOrigin origin, Entity[] entities, bool allowSuicide = false) {
+        int count = 0;
+        foreach (Entity entity in entities) {
+            if (entity is Entity {IsAlive:true}) {
+                if (!allowSuicide &amp;&amp; entity == origin.Entity)
+                    continue;
+                entity.Kill();
+                count++;
+            }
+        }
+        return Success($&quot;{count} entities were exterminated. (Reference???)&quot;);
+    }
+}
+</code></pre>
+<ul>
+<li>In this example, we changed our command to be server only and added an overload that takes in entities and kills them.</li>
+<li>If we wanted a client sided version too, we could specify which side the overload is for.</li>
+<li>There is an optional bool for allowing the player to kill themselves, which is false by default.</li>
+</ul>
+<hr>
+<h2 id="-hybrid-commands-client-and-server">🔄 Hybrid Commands (Client and Server)</h2>
+<ul>
+<li>You can have a command that works on both the client and server side by specifying <code>CommandExecutionTarget.Both</code> in the constructor.</li>
+<li>Then, you can have overloads that are client only, server only or both.</li>
+<li>You can also have overloads that do both if they can work on both sides.</li>
+</ul>
+<pre><code class="lang-csharp">public class ExampleCommand : OnixCommandBase {
+    public ExampleCommand() : base(&quot;example&quot;, &quot;A simple example command to show you how they work.&quot;, CommandExecutionTarget.Both, CommandPermissionLevel.Any) { }
+
+    // If we're running it as a server command, kill every entity in the list that is alive.
+    [Overload(CommandExecutionTarget.Server)]
+    OnixCommandOutput Exterminate(OnixCommandOrigin origin, Entity[] entities, bool allowSuicide = false) {
+        int count = 0;
+        foreach (Entity entity in entities) {
+            if (entity is Entity {IsAlive:true}) {
+                if (!allowSuicide &amp;&amp; entity == origin.Entity)
+                    continue;
+                entity.Kill();
+                count++;
+            }
+        }
+        return Success($&quot;{count} entities were exterminated.&quot;);
+        
+    }
+    // When running from the client, we can just say how many entities matched on the client side.
+    // This is useless but for demonstration purposes, it's fine.
+    [Overload(CommandExecutionTarget.Client)]
+    OnixCommandOutput ListEntities(OnixCommandOrigin origin, Entity[] entities, bool allowSelf = false) {
+        return Success($&quot;{entities.Length} entities have been selected.&quot;);
+    }
+
+    // Not specifying a target means any, note that this won't expand the command's execution target.
+    // out of world gets ruled out automatically when things like entities, blocks or items are in the parameters.
+    [Overload]
+    OnixCommandOutput Teleport(OnixCommandOrigin origin, BlockPos position) {
+        if (origin.IsClientSide) {
+            Onix.Game.ExecuteCommand($&quot;/tp @s {position}&quot;);
+            return Success(&quot;&quot;); // empty string means no output from us as the game will do that when executing the /tp command.
+        } else if (origin.IsEntity) {
+            origin.Entity!.Position = position.Center.WithY(position.Y);
+            return Success($&quot;Teleported to {position}.&quot;); // server side feedback, since we dont use /tp here, this is the only feedback.
+        } 
+        return Error(&quot;Could not teleport you, you don't seem to be an entity.&quot;);
+    }
+}
+
+</code></pre>
+<hr>
+<h2 id="-sub-commands">📂 Sub Commands</h2>
+<ul>
+<li>You can easily create sub commands using the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute.html">[CommandPath]</a> attribute.</li>
+<li>Simply add the attribute in front of a string parameter and set the value to what you want the user to type.</li>
+<li>If the user types anything else, this overload will be ruled out and not executed.</li>
+<li>Here is an example of a command with sub commands:</li>
+</ul>
+<pre><code class="lang-csharp">public class NotesCommand : OnixCommandBase {
+    public NotesCommand() : base(&quot;notes&quot;, &quot;Allows you to store and retrieve notes.&quot;) {
+        CommandEnumRegistry.RegisterSoftEnum(&quot;Note&quot;, Directory.GetFiles(GetNotesDirectory()).Select(Path.GetFileNameWithoutExtension)!);
+    }
+
+    string GetNotesDirectory() {
+        string notesDirectory = Path.Combine(PluginCommandExample.Instance.PluginPersistentDataPath, &quot;Notes&quot;);
+        if (!Directory.Exists(notesDirectory))
+            Directory.CreateDirectory(notesDirectory);
+        return notesDirectory;
+    }
+    public string GetNotePath(string title) {
+        string notesDirectory = GetNotesDirectory();
+        foreach (var c in Path.GetInvalidFileNameChars()) {
+            title = title.Replace(c, '_');
+        }
+        return Path.Combine(notesDirectory, $&quot;{title}.txt&quot;);
+    }
+    
+    [Overload]
+    OnixCommandOutput AddNote(OnixCommandOrigin origin, [CommandPath(&quot;add&quot;)] string addPath, string title, string content) {
+        string filePath = GetNotePath(title);
+        if (File.Exists(filePath))
+            return Error(&quot;A note with that title already exists.&quot;);
+        File.WriteAllText(filePath, content);
+        CommandEnumRegistry.AddSoftEnumValue(&quot;Note&quot;, title);
+        return Success($&quot;Note '{title}' added.&quot;);
+    }
+    [Overload]
+    OnixCommandOutput RemoveNote(OnixCommandOrigin origin, [CommandPath(&quot;remove&quot;)] string removePath, [SoftEnumName(&quot;Note&quot;)] string title) {
+        string filePath = GetNotePath(title);
+        if (!File.Exists(filePath))
+            return Error(&quot;No note with that title exists.&quot;);
+        File.Delete(filePath);
+        CommandEnumRegistry.RemoveSoftEnumValue(&quot;Note&quot;, title);
+        return Success($&quot;Note '{title}' removed.&quot;);
+    }
+    [Overload]
+    OnixCommandOutput ViewNote(OnixCommandOrigin origin, [CommandPath(&quot;view&quot;)] string viewPath, [SoftEnumName(&quot;Note&quot;)] string title) {
+        string filePath = GetNotePath(title);
+        if (!File.Exists(filePath))
+            return Error(&quot;No note with that title exists.&quot;);
+        string content = File.ReadAllText(filePath);
+        return Success($&quot;Note '{title}':\n{content}&quot;);
+    }
+
+    [Overload]
+    OnixCommandOutput ListNotes(OnixCommandOrigin origin, [CommandPath(&quot;list&quot;)] string listPath) {
+        var files = Directory.GetFiles(GetNotesDirectory());
+        if (files.Length == 0)
+            return Success(&quot;No notes available.&quot;);
+        var titles = files.Select(f =&gt; Path.GetFileNameWithoutExtension(f)!);
+        return Success(&quot;Available notes:\n&quot; + string.Join(&quot;\n&quot;, titles));
+    }
+    
+}
+</code></pre>
+<ul>
+<li>As you can see, this command lets the user add, remove, view and list notes.</li>
+<li>In the constructor we register the soft enum for the notes, reading all the file names in the notes directory.</li>
+<li>Then we have different overloads that have a different path for each sub command.</li>
+<li>After that, well it's just normal C# and command things!</li>
+<li>Don't forget to register the command in your plugin's <code>OnLoaded()</code> method:</li>
+</ul>
+<pre><code class="lang-csharp">protected override void OnLoaded() {
+    Console.WriteLine($&quot;Plugin {CurrentPluginManifest.Name} loaded!&quot;);
+    Config = new PluginCommandExampleConfig(PluginDisplayModule, true);
+    
+    Onix.Client.CommandRegistry.RegisterCommand(new ExampleCommand());
+    Onix.Client.CommandRegistry.RegisterCommand(new NotesCommand());
+}
+</code></pre>
+<hr>
+<p>So here you have it, that's how you create commands with varying complexities!</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntimeDocs/blob/main/guide/creating-commands.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

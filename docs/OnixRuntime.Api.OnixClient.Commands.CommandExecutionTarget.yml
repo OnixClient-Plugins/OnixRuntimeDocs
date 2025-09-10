@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  id: CommandExecutionTarget
+  parent: OnixRuntime.Api.OnixClient.Commands
+  children:
+  - OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Any
+  - OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both
+  - OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Client
+  - OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.OutOfWorld
+  - OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Server
+  langs:
+  - csharp
+  - vb
+  name: CommandExecutionTarget
+  nameWithType: CommandExecutionTarget
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  type: Enum
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CommandExecutionTarget
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+    startLine: 15
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    This defines what side(s) the command can be executed on.
+
+    If you do a command for both, it will work with both /. and . but be careful or full of care to not guess the side and check the origin.
+
+    Or get your base types from the origin too, that's cool too.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum CommandExecutionTarget
+    content.vb: >-
+      <Flags>
+
+      Public Enum CommandExecutionTarget
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Client
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Client
+  id: Client
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  langs:
+  - csharp
+  - vb
+  name: Client
+  nameWithType: CommandExecutionTarget.Client
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Client
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Client
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+    startLine: 20
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The command is a client command, it will work with `.`
+  example: []
+  syntax:
+    content: Client = 1
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Server
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Server
+  id: Server
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  langs:
+  - csharp
+  - vb
+  name: Server
+  nameWithType: CommandExecutionTarget.Server
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Server
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Server
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+    startLine: 24
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The command is a server command, it will work with `/.`
+  example: []
+  syntax:
+    content: Server = 2
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.OutOfWorld
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.OutOfWorld
+  id: OutOfWorld
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  langs:
+  - csharp
+  - vb
+  name: OutOfWorld
+  nameWithType: CommandExecutionTarget.OutOfWorld
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.OutOfWorld
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OutOfWorld
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+    startLine: 28
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: The command can be executed in the menu or really absolutely anywhere.
+  example: []
+  syntax:
+    content: OutOfWorld = 4
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both
+  id: Both
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  langs:
+  - csharp
+  - vb
+  name: Both
+  nameWithType: CommandExecutionTarget.Both
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Both
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+    startLine: 33
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    The command works on both client and server, it will work with both `/.` and `.`
+
+    Make sure to get everything you need from the origin and not assume anything.
+  example: []
+  syntax:
+    content: Both = Client | Server
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+    content.vb: Both = Client Or Server
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Any
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Any
+  id: Any
+  parent: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  langs:
+  - csharp
+  - vb
+  name: Any
+  nameWithType: CommandExecutionTarget.Any
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Any
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Any
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/Commands/OnixCommandBase.cs
+    startLine: 38
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient.Commands
+  summary: >-
+    Be careful, there is a chance you would rather want <xref href="OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both" data-throw-if-not-resolved="false"></xref>.
+
+    This can run in the menu and anywhere else, which means no one ran the command, no world info to get or anything.
+  example: []
+  syntax:
+    content: Any = Both | OutOfWorld
+    return:
+      type: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+    content.vb: Any = Both Or OutOfWorld
+references:
+- uid: OnixRuntime.Api.OnixClient.Commands
+  commentId: N:OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.OnixClient.Commands
+  nameWithType: OnixRuntime.Api.OnixClient.Commands
+  fullName: OnixRuntime.Api.OnixClient.Commands
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient
+    name: OnixClient
+    href: OnixRuntime.Api.OnixClient.html
+  - name: .
+  - uid: OnixRuntime.Api.OnixClient.Commands
+    name: Commands
+    href: OnixRuntime.Api.OnixClient.Commands.html
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  commentId: T:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+  parent: OnixRuntime.Api.OnixClient.Commands
+  href: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.html
+  name: CommandExecutionTarget
+  nameWithType: CommandExecutionTarget
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget
+- uid: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both
+  commentId: F:OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both
+  href: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.html#OnixRuntime_Api_OnixClient_Commands_CommandExecutionTarget_Both
+  name: Both
+  nameWithType: CommandExecutionTarget.Both
+  fullName: OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.Both

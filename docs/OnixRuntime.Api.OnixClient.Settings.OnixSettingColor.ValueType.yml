@@ -52,7 +52,7 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color
   id: Color
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
   langs:
@@ -61,7 +61,7 @@ items:
   name: Color
   nameWithType: OnixSettingColor.ValueType.Color
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -76,12 +76,14 @@ items:
   summary: The color value.
   example: []
   syntax:
-    content: public readonly ColorF Color
+    content: public ColorF Color { get; protected set; }
+    parameters: []
     return:
       type: OnixRuntime.Api.Maths.ColorF
-    content.vb: Public ReadOnly Color As ColorF
+    content.vb: Public Property Color As ColorF
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color*
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity
   id: ShowOpacity
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
   langs:
@@ -90,7 +92,7 @@ items:
   name: ShowOpacity
   nameWithType: OnixSettingColor.ValueType.ShowOpacity
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -105,12 +107,14 @@ items:
   summary: Indicates if opacity is shown.
   example: []
   syntax:
-    content: public readonly bool ShowOpacity
+    content: public bool ShowOpacity { get; protected set; }
+    parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly ShowOpacity As Boolean
+    content.vb: Public Property ShowOpacity As Boolean
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity*
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow
   id: IsRainbow
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
   langs:
@@ -119,7 +123,7 @@ items:
   name: IsRainbow
   nameWithType: OnixSettingColor.ValueType.IsRainbow
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -134,12 +138,14 @@ items:
   summary: Indicates if the color is a rainbow effect.
   example: []
   syntax:
-    content: public readonly bool IsRainbow
+    content: public bool IsRainbow { get; protected set; }
+    parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly IsRainbow As Boolean
+    content.vb: Public Property IsRainbow As Boolean
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow*
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma
-  commentId: F:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma
+  commentId: P:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma
   id: IsChroma
   parent: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
   langs:
@@ -148,7 +154,7 @@ items:
   name: IsChroma
   nameWithType: OnixSettingColor.ValueType.IsChroma
   fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma
-  type: Field
+  type: Property
   source:
     remote:
       path: OnixRuntime/Api/OnixClient/Settings/OnixSettingColor.cs
@@ -163,10 +169,12 @@ items:
   summary: Indicates if the color is a chroma effect.
   example: []
   syntax:
-    content: public readonly bool IsChroma
+    content: public bool IsChroma { get; protected set; }
+    parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly IsChroma As Boolean
+    content.vb: Public Property IsChroma As Boolean
+  overload: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma*
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.#ctor(OnixRuntime.Api.Maths.ColorF,System.Boolean,System.Boolean,System.Boolean)
   commentId: M:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.#ctor(OnixRuntime.Api.Maths.ColorF,System.Boolean,System.Boolean,System.Boolean)
   id: '#ctor(OnixRuntime.Api.Maths.ColorF,System.Boolean,System.Boolean,System.Boolean)'
@@ -705,6 +713,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueType_Color
+  name: Color
+  nameWithType: OnixSettingColor.ValueType.Color
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.Color
 - uid: OnixRuntime.Api.Maths.ColorF
   commentId: T:OnixRuntime.Api.Maths.ColorF
   parent: OnixRuntime.Api.Maths
@@ -742,6 +756,12 @@ references:
   - uid: OnixRuntime.Api.Maths
     name: Maths
     href: OnixRuntime.Api.Maths.html
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueType_ShowOpacity
+  name: ShowOpacity
+  nameWithType: OnixSettingColor.ValueType.ShowOpacity
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.ShowOpacity
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -753,6 +773,18 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueType_IsRainbow
+  name: IsRainbow
+  nameWithType: OnixSettingColor.ValueType.IsRainbow
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsRainbow
+- uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma*
+  commentId: Overload:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma
+  href: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingColor_ValueType_IsChroma
+  name: IsChroma
+  nameWithType: OnixSettingColor.ValueType.IsChroma
+  fullName: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType.IsChroma
 - uid: OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
   commentId: T:OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueType
   parent: OnixRuntime.Api.OnixClient.Settings

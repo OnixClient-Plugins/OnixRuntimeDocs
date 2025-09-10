@@ -31,6 +31,8 @@ items:
   - OnixRuntime.Api.Maths.Angles.SetMagnitude(System.Single)
   - OnixRuntime.Api.Maths.Angles.ToString
   - OnixRuntime.Api.Maths.Angles.ToString(System.String,System.Globalization.CultureInfo)
+  - OnixRuntime.Api.Maths.Angles.WithPitch(System.Single)
+  - OnixRuntime.Api.Maths.Angles.WithYaw(System.Single)
   - OnixRuntime.Api.Maths.Angles.Yaw
   - OnixRuntime.Api.Maths.Angles.op_Addition(OnixRuntime.Api.Maths.Angles,OnixRuntime.Api.Maths.Angles)
   - OnixRuntime.Api.Maths.Angles.op_Addition(OnixRuntime.Api.Maths.Angles,System.Single)
@@ -355,6 +357,85 @@ items:
       type: OnixRuntime.Api.Maths.Angles
     content.vb: Public Shared Function AnglesRandom() As Angles
   overload: OnixRuntime.Api.Maths.Angles.AnglesRandom*
+- uid: OnixRuntime.Api.Maths.Angles.WithYaw(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Angles.WithYaw(System.Single)
+  id: WithYaw(System.Single)
+  parent: OnixRuntime.Api.Maths.Angles
+  langs:
+  - csharp
+  - vb
+  name: WithYaw(float)
+  nameWithType: Angles.WithYaw(float)
+  fullName: OnixRuntime.Api.Maths.Angles.WithYaw(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Angles.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithYaw
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
+    startLine: 70
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Creates a new <xref href="OnixRuntime.Api.Maths.Angles" data-throw-if-not-resolved="false"></xref> instance with the specified yaw value, preserving the current pitch.
+  example: []
+  syntax:
+    content: public Angles WithYaw(float yaw)
+    parameters:
+    - id: yaw
+      type: System.Single
+      description: The yaw value to set for the new <xref href="OnixRuntime.Api.Maths.Angles" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: OnixRuntime.Api.Maths.Angles
+      description: A new <xref href="OnixRuntime.Api.Maths.Angles" data-throw-if-not-resolved="false"></xref> instance with the specified yaw value and the same pitch as the current instance.
+    content.vb: Public Function WithYaw(yaw As Single) As Angles
+  overload: OnixRuntime.Api.Maths.Angles.WithYaw*
+  nameWithType.vb: Angles.WithYaw(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Angles.WithYaw(Single)
+  name.vb: WithYaw(Single)
+- uid: OnixRuntime.Api.Maths.Angles.WithPitch(System.Single)
+  commentId: M:OnixRuntime.Api.Maths.Angles.WithPitch(System.Single)
+  id: WithPitch(System.Single)
+  parent: OnixRuntime.Api.Maths.Angles
+  langs:
+  - csharp
+  - vb
+  name: WithPitch(float)
+  nameWithType: Angles.WithPitch(float)
+  fullName: OnixRuntime.Api.Maths.Angles.WithPitch(float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/Angles.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: WithPitch
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
+    startLine: 77
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: >-
+    Creates a new <xref href="OnixRuntime.Api.Maths.Angles" data-throw-if-not-resolved="false"></xref> instance with the specified pitch value,  while retaining the current yaw
+
+    value.
+  example: []
+  syntax:
+    content: public Angles WithPitch(float pitch)
+    parameters:
+    - id: pitch
+      type: System.Single
+      description: The pitch value to set, in degrees.
+    return:
+      type: OnixRuntime.Api.Maths.Angles
+      description: A new <xref href="OnixRuntime.Api.Maths.Angles" data-throw-if-not-resolved="false"></xref> instance with the updated pitch value.
+    content.vb: Public Function WithPitch(pitch As Single) As Angles
+  overload: OnixRuntime.Api.Maths.Angles.WithPitch*
+  nameWithType.vb: Angles.WithPitch(Single)
+  fullName.vb: OnixRuntime.Api.Maths.Angles.WithPitch(Single)
+  name.vb: WithPitch(Single)
 - uid: OnixRuntime.Api.Maths.Angles.SetMagnitude(System.Single)
   commentId: M:OnixRuntime.Api.Maths.Angles.SetMagnitude(System.Single)
   id: SetMagnitude(System.Single)
@@ -373,7 +454,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetMagnitude
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 69
+    startLine: 83
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -408,7 +489,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetDirection
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 81
+    startLine: 95
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -443,7 +524,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Distance
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 91
+    startLine: 105
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -477,7 +558,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Angle
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 101
+    startLine: 115
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -511,7 +592,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dot
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 110
+    startLine: 124
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -545,7 +626,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Cross
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 118
+    startLine: 132
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -579,7 +660,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Lerp
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 152
+    startLine: 166
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -619,7 +700,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Min
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 158
+    startLine: 172
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -653,7 +734,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Max
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 164
+    startLine: 178
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -687,7 +768,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Min
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 170
+    startLine: 184
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -724,7 +805,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Max
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 176
+    startLine: 190
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -761,7 +842,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clamp
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 185
+    startLine: 199
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -798,7 +879,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Clamp
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 194
+    startLine: 208
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -838,7 +919,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Addition
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 203
+    startLine: 217
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -878,7 +959,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Addition
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 212
+    startLine: 226
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -918,7 +999,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Subtraction
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 221
+    startLine: 235
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -958,7 +1039,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Subtraction
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 230
+    startLine: 244
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -998,7 +1079,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_UnaryNegation
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 238
+    startLine: 252
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1035,7 +1116,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 247
+    startLine: 261
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1075,7 +1156,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 256
+    startLine: 270
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1115,7 +1196,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 265
+    startLine: 279
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1155,7 +1236,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 275
+    startLine: 289
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1199,7 +1280,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 289
+    startLine: 303
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1243,7 +1324,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Division
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 302
+    startLine: 316
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1283,7 +1364,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 311
+    startLine: 325
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1323,7 +1404,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 320
+    startLine: 334
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1363,7 +1444,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 328
+    startLine: 342
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1399,7 +1480,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 336
+    startLine: 350
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1437,7 +1518,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 346
+    startLine: 360
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1468,7 +1549,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 353
+    startLine: 367
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1499,7 +1580,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/Maths/Angles.cs
-    startLine: 362
+    startLine: 376
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1802,6 +1883,18 @@ references:
   name: AnglesRandom
   nameWithType: Angles.AnglesRandom
   fullName: OnixRuntime.Api.Maths.Angles.AnglesRandom
+- uid: OnixRuntime.Api.Maths.Angles.WithYaw*
+  commentId: Overload:OnixRuntime.Api.Maths.Angles.WithYaw
+  href: OnixRuntime.Api.Maths.Angles.html#OnixRuntime_Api_Maths_Angles_WithYaw_System_Single_
+  name: WithYaw
+  nameWithType: Angles.WithYaw
+  fullName: OnixRuntime.Api.Maths.Angles.WithYaw
+- uid: OnixRuntime.Api.Maths.Angles.WithPitch*
+  commentId: Overload:OnixRuntime.Api.Maths.Angles.WithPitch
+  href: OnixRuntime.Api.Maths.Angles.html#OnixRuntime_Api_Maths_Angles_WithPitch_System_Single_
+  name: WithPitch
+  nameWithType: Angles.WithPitch
+  fullName: OnixRuntime.Api.Maths.Angles.WithPitch
 - uid: OnixRuntime.Api.Maths.Angles.SetMagnitude*
   commentId: Overload:OnixRuntime.Api.Maths.Angles.SetMagnitude
   href: OnixRuntime.Api.Maths.Angles.html#OnixRuntime_Api_Maths_Angles_SetMagnitude_System_Single_

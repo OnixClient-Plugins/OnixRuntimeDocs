@@ -5,6 +5,7 @@ items:
   id: RendererWorld
   parent: OnixRuntime.Api.Rendering
   children:
+  - OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer
   - OnixRuntime.Api.Rendering.RendererWorld.DrawEllipse(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF,System.Single,System.Single,System.Single,System.Int32)
   - OnixRuntime.Api.Rendering.RendererWorld.DrawLine(OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.Vec2,OnixRuntime.Api.Maths.ColorF)
   - OnixRuntime.Api.Rendering.RendererWorld.DrawLine(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.ColorF)
@@ -395,6 +396,37 @@ items:
   overload: OnixRuntime.Api.Rendering.RendererWorld.MeshBuilder*
   implements:
   - OnixRuntime.Api.Rendering.IGameRenderer.MeshBuilder
+- uid: OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer
+  commentId: P:OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer
+  id: BlockRenderer
+  parent: OnixRuntime.Api.Rendering.RendererWorld
+  langs:
+  - csharp
+  - vb
+  name: BlockRenderer
+  nameWithType: RendererWorld.BlockRenderer
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Rendering/RendererWorld.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BlockRenderer
+    path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
+    startLine: 158
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Rendering
+  summary: Gets the block renderer, used for block rendering. Make sure to properly look at the documentation for it.
+  example: []
+  syntax:
+    content: public GameBlockRenderer BlockRenderer { get; }
+    parameters: []
+    return:
+      type: OnixRuntime.Api.Rendering.GameBlockRenderer
+    content.vb: Public ReadOnly Property BlockRenderer As GameBlockRenderer
+  overload: OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer*
 - uid: OnixRuntime.Api.Rendering.RendererWorld.FlushMesh
   commentId: M:OnixRuntime.Api.Rendering.RendererWorld.FlushMesh
   id: FlushMesh
@@ -413,7 +445,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FlushMesh
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 158
+    startLine: 163
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -441,7 +473,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 217
+    startLine: 222
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -499,7 +531,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 238
+    startLine: 243
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -557,7 +589,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 258
+    startLine: 263
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -615,7 +647,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: NewMeshBuilderSession
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 278
+    startLine: 283
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -673,7 +705,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetMaterialParameters
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 282
+    startLine: 287
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -710,7 +742,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetMaterialCustom
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 288
+    startLine: 293
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -753,7 +785,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetMaterialParameters
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 294
+    startLine: 299
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -786,7 +818,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetMaterialParameter
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 297
+    startLine: 302
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -823,7 +855,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetMaterialParameter
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 300
+    startLine: 305
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -865,7 +897,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FillRectangle
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 310
+    startLine: 315
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -901,7 +933,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawRectangle
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 336
+    startLine: 341
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -943,7 +975,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FillRoundedRectangle
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 351
+    startLine: 356
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -988,7 +1020,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawRoundedRectangle
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 365
+    startLine: 370
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1036,7 +1068,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawEllipse
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 380
+    startLine: 385
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1087,7 +1119,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: FillEllipse
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 394
+    startLine: 399
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1135,7 +1167,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderText
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 407
+    startLine: 412
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1180,7 +1212,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderText
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 421
+    startLine: 426
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1231,7 +1263,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 432
+    startLine: 437
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1273,7 +1305,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 440
+    startLine: 445
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1312,7 +1344,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 449
+    startLine: 454
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1357,7 +1389,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderTexture
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 458
+    startLine: 463
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1399,7 +1431,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 489
+    startLine: 494
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1448,7 +1480,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 497
+    startLine: 502
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1494,7 +1526,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderMesh
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 505
+    startLine: 510
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1540,7 +1572,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawLine
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 517
+    startLine: 522
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1578,7 +1610,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawLine
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 529
+    startLine: 534
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1616,7 +1648,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: DrawLine
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 542
+    startLine: 547
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1657,7 +1689,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxOutline
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 555
+    startLine: 560
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1692,7 +1724,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxFill
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 565
+    startLine: 570
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1727,7 +1759,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxFill
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 576
+    startLine: 581
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1768,7 +1800,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 591
+    startLine: 596
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1818,7 +1850,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 603
+    startLine: 608
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1859,7 +1891,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 613
+    startLine: 618
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1894,7 +1926,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 623
+    startLine: 628
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1941,7 +1973,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 633
+    startLine: 638
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -1985,7 +2017,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 641
+    startLine: 646
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2026,7 +2058,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 648
+    startLine: 653
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2061,7 +2093,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 659
+    startLine: 664
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2108,7 +2140,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 668
+    startLine: 673
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2152,7 +2184,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTextured
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 676
+    startLine: 681
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2190,7 +2222,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 689
+    startLine: 694
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2240,7 +2272,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 703
+    startLine: 708
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2287,7 +2319,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 713
+    startLine: 718
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2331,7 +2363,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 721
+    startLine: 726
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2372,7 +2404,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 728
+    startLine: 733
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2407,7 +2439,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 739
+    startLine: 744
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2454,7 +2486,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 748
+    startLine: 753
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2498,7 +2530,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderBoundingBoxTexturedNormal
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 756
+    startLine: 761
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2536,7 +2568,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PushTransformation
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 771
+    startLine: 776
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2578,7 +2610,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: PopTransformation
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 781
+    startLine: 786
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2607,7 +2639,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderItem
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 798
+    startLine: 803
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2660,7 +2692,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RenderItem
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 812
+    startLine: 817
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2710,7 +2742,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetupLights
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 821
+    startLine: 826
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2753,7 +2785,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetupLights
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 830
+    startLine: 835
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2799,7 +2831,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetupLights
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 838
+    startLine: 843
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -2842,7 +2874,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SetDefaultState
     path: ../OnixRuntime/OnixRuntime/Api/Rendering/RendererWorld.cs
-    startLine: 845
+    startLine: 850
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Rendering
@@ -4661,6 +4693,19 @@ references:
   name: GameMeshBuilder
   nameWithType: GameMeshBuilder
   fullName: OnixRuntime.Api.Rendering.GameMeshBuilder
+- uid: OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer*
+  commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer
+  href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_BlockRenderer
+  name: BlockRenderer
+  nameWithType: RendererWorld.BlockRenderer
+  fullName: OnixRuntime.Api.Rendering.RendererWorld.BlockRenderer
+- uid: OnixRuntime.Api.Rendering.GameBlockRenderer
+  commentId: T:OnixRuntime.Api.Rendering.GameBlockRenderer
+  parent: OnixRuntime.Api.Rendering
+  href: OnixRuntime.Api.Rendering.GameBlockRenderer.html
+  name: GameBlockRenderer
+  nameWithType: GameBlockRenderer
+  fullName: OnixRuntime.Api.Rendering.GameBlockRenderer
 - uid: OnixRuntime.Api.Rendering.RendererWorld.FlushMesh*
   commentId: Overload:OnixRuntime.Api.Rendering.RendererWorld.FlushMesh
   href: OnixRuntime.Api.Rendering.RendererWorld.html#OnixRuntime_Api_Rendering_RendererWorld_FlushMesh

@@ -4,11 +4,13 @@ items:
   commentId: N:OnixRuntime.Api.Events.Session
   id: OnixRuntime.Api.Events.Session
   children:
+  - OnixRuntime.Api.Events.Session.CommandResponseMessage
   - OnixRuntime.Api.Events.Session.GameTitleType
   - OnixRuntime.Api.Events.Session.IModalFormReplyer
   - OnixRuntime.Api.Events.Session.ModalFormReplyer
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnChatScreenMessageAboutToBeSentDelegate
+  - OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnReceiveDelegate
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnSendCommandDelegate
   - OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnSendMessageDelegate
@@ -35,6 +37,12 @@ items:
   assemblies:
   - OnixRuntime
 references:
+- uid: OnixRuntime.Api.Events.Session.CommandResponseMessage
+  commentId: T:OnixRuntime.Api.Events.Session.CommandResponseMessage
+  href: OnixRuntime.Api.Events.Session.CommandResponseMessage.html
+  name: CommandResponseMessage
+  nameWithType: CommandResponseMessage
+  fullName: OnixRuntime.Api.Events.Session.CommandResponseMessage
 - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat
   commentId: T:OnixRuntime.Api.Events.Session.OnixEventSessionChat
   parent: OnixRuntime.Api.Events.Session
@@ -134,6 +142,29 @@ references:
   - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnSendCommandDelegate
     name: OnSendCommandDelegate
     href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnSendCommandDelegate.html
+- uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+  commentId: T:OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+  parent: OnixRuntime.Api.Events.Session
+  href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.html
+  name: OnixEventSessionChat.OnCommandResponseDelegate
+  nameWithType: OnixEventSessionChat.OnCommandResponseDelegate
+  fullName: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+  spec.csharp:
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat
+    name: OnixEventSessionChat
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+    name: OnCommandResponseDelegate
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat
+    name: OnixEventSessionChat
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.html
+  - name: .
+  - uid: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate
+    name: OnCommandResponseDelegate
+    href: OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.html
 - uid: OnixRuntime.Api.Events.Session.IModalFormReplyer
   commentId: T:OnixRuntime.Api.Events.Session.IModalFormReplyer
   parent: OnixRuntime.Api.Events.Session

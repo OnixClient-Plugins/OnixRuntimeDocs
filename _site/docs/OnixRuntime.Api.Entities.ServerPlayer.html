@@ -240,6 +240,9 @@ Class ServerPlayer  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsClientSide">Entity.IsClientSide</a>
     </div>
     <div>
+      <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsAlive">Entity.IsAlive</a>
+    </div>
+    <div>
       <a class="xref" href="OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_HasCategory_OnixRuntime_Api_Entities_EntityCategory_">Entity.HasCategory(EntityCategory)</a>
     </div>
     <div>
@@ -414,6 +417,47 @@ Class ServerPlayer  <a class="header-action link-secondary" title="View source" 
     <dt><code>authorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Optional author name for the message.</p>
 </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Entities_ServerPlayer_SendCommandOutput_" data-uid="OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput*"></a>
+
+  <h3 id="OnixRuntime_Api_Entities_ServerPlayer_SendCommandOutput_System_String_System_Int32_System_UInt64_System_UInt64_" data-uid="OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput(System.String,System.Int32,System.UInt64,System.UInt64)">
+  SendCommandOutput(string, int, ulong, ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Entities/ServerPlayer.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends the command output to the player.
+This is not too close to the game's internal command output system, but it has the essentials.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendCommandOutput(string message, int successCount, ulong requestId1, ulong requestId2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message/command output text.</p>
+</dd>
+    <dt><code>successCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The amount of successes, like /testfor can have a higher count. Just go 0 for error and 1 when it works, unless you know what you're doing.</p>
+</dd>
+    <dt><code>requestId1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>requestId2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
   </dl>
 
 

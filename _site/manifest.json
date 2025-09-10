@@ -1034,20 +1034,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docs/OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.yml",
-      "output": {
-        ".html": {
-          "relative_path": "docs/OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate",
-      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Events.OnixEventGui.OnChatScreenGetClientCommandsDelegate.yml\" sourcestartlinenumber=\"1\">Delegate for handling requests to get client chat commands.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "docs/OnixRuntime.Api.Events.OnixEventGui.OnChatScreenTabCompleteDelegate.yml",
       "output": {
         ".html": {
@@ -1240,7 +1226,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate",
-      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that is invoked whenever a block in the world changes.\nProvides context about the region, position, old and new blocks,\nas well as how the change should be propagated and rendered.</p>\n"
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that is invoked whenever a block in the world changes.\nProvides context about the region, position, old and new blocks,\nas well as how the change should be propagated and rendered.\nIf you want to keep the block, use <code class=\"paramref\">region</code>'s <xref href=\"OnixRuntime.Api.World.WorldBlocks.GetBlock(OnixRuntime.Api.Maths.BlockPos)\" data-throw-if-not-resolved=\"false\"></xref> at <code class=\"paramref\">position</code>.\nYou can also use the runtime ID and the <xref href=\"OnixRuntime.Api.World.BlockRegistry.GetBlockFromRuntimeId(System.UInt32)\" data-throw-if-not-resolved=\"false\"></xref> for both old or new block if you want to keep it.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1664,6 +1650,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.Events.Session.CommandResponseMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.Events.Session.CommandResponseMessage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.Events.Session.CommandResponseMessage",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Events.Session.CommandResponseMessage.yml\" sourcestartlinenumber=\"1\">Represents a message in a command's response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/OnixRuntime.Api.Events.Session.GameTitleType.yml",
       "output": {
         ".html": {
@@ -1717,6 +1717,20 @@
       "IsMRef": true,
       "Title": "OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnChatScreenMessageAboutToBeSentDelegate",
       "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnChatScreenMessageAboutToBeSentDelegate.yml\" sourcestartlinenumber=\"1\">Delegate for handling chat message about to be sent events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.yml\" sourcestartlinenumber=\"1\">Delegate for handling chat command received events.\nNote that this might not be received if the server uses TextPacket for its responses or sends a different id.\nThis will also not work when 'sendcommandfeedback' is disabled.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2840,6 +2854,622 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition.yml\" sourcestartlinenumber=\"1\">Represents a block position that can be absolute or relative.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.InvertableFilter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.InvertableFilter-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.InvertableFilter<T>",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.InvertableFilter-1.yml\" sourcestartlinenumber=\"1\">Stores a value with a flag to know if it's inverted or not.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectionOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectionOrder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectionOrder",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectionOrder.yml\" sourcestartlinenumber=\"1\">The order in which to select entities.\nThe following are not supported, by lack of information or for scores, lazyness.\nscores=, tag=, has_property=, hasitem=, haspermission=</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectorType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectorType",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.SelectorType.yml\" sourcestartlinenumber=\"1\">The type of selector.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.yml\" sourcestartlinenumber=\"1\">Represents a command selector.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute.yml\" sourcestartlinenumber=\"1\">This lets you add an icon to your enum's value in the intellisense.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute.yml\" sourcestartlinenumber=\"1\">This lets you change the name the user needs to type for that value.\nBy default, it will convert the names to snake_case.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.EnumValue.yml\" sourcestartlinenumber=\"1\">The value type for enums, having the icon and the actual int value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.SoftEnumValue.yml\" sourcestartlinenumber=\"1\">The value type for a soft enum, having the icon and the actual value string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.yml\" sourcestartlinenumber=\"1\">This is a registry for command enums, it lets you hold enum values, their icons, change and register them.\nThis is what you use to make them available for command arguments of type enum.\nSoft enums are suggested values that can be added to at runtime, they don't have to be predefined and the user doesn't have to put one of those values.\nEnums are values that are predefined (you can change them later by re-registering the enum) and the user has to pick one of those values, nothing else.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumTypeNameAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumTypeNameAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandEnumTypeNameAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumTypeNameAttribute.yml\" sourcestartlinenumber=\"1\">You should probably not use this but if you do then fair enough I guess.\nThis is to have the parser link the original enum type name to this parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.yml\" sourcestartlinenumber=\"1\">This defines what side(s) the command can be executed on.\nIf you do a command for both, it will work with both /. and . but be careful or full of care to not guess the side and check the origin.\nOr get your base types from the origin too, that's cool too.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandNbtTagTypeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandNbtTagTypeAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandNbtTagTypeAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandNbtTagTypeAttribute.yml\" sourcestartlinenumber=\"1\">Metadata for the parser to know what types to allow.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandOverload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandOverload.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandOverload",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandOverload.yml\" sourcestartlinenumber=\"1\">Represents a specific overload of a command, defining its parameters and their types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandParameterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandParameterType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandParameterType",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandParameterType.yml\" sourcestartlinenumber=\"1\">The various types of command parameters that can be parsed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandParserMetadataAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandParserMetadataAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandParserMetadataAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandParserMetadataAttribute.yml\" sourcestartlinenumber=\"1\">This is an attribute that will be given to the parser as metadata.\nThis is essentially a base attribute type that tells it what to collect.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute.yml\" sourcestartlinenumber=\"1\">This lets you attach a path to a parameter, specifically a string.\nIt's kind of like an enum, but the command can only execute if the name matches.\nThis is useful for subcommands.\nThis goes on a string and will always contain the path's name in the parameter as it's the only option that will be allowed to be called.\nDifferent overloads can have different path values, keeping only the ones that match the input.\nSee the command guide if it's still unclear, basically it's selecting one value of an 'enum', not any others.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.CommandPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.CommandPosition",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.CommandPosition.yml\" sourcestartlinenumber=\"1\">Represents a position that can be absolute or relative.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute.yml\" sourcestartlinenumber=\"1\">This is the attribute you need to put on your function for it to be considered.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute.yml\" sourcestartlinenumber=\"1\">This marks this string parameter as a raw string. This must be the last parameter, it will eat the whole input. (it was hungry.)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute.yml\" sourcestartlinenumber=\"1\">This lets you attach a soft enum to a string parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandBase",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.yml\" sourcestartlinenumber=\"1\">The base class for all commands.\nYou should inherit from this class to create your own commands.\nYou should mark overload methods with the <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute\" data-throw-if-not-resolved=\"false\"></xref> attribute for them to be called.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.yml\" sourcestartlinenumber=\"1\">Wraper around the origin of a command getting run.\nWhen you check <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsInWorld\" data-throw-if-not-resolved=\"false\"></xref>, you can assume <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region\" data-throw-if-not-resolved=\"false\"></xref> are not null.\nWhen you check <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsEntity\" data-throw-if-not-resolved=\"false\"></xref>, you can assume <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Entity\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.World\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Dimension\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.Region\" data-throw-if-not-resolved=\"false\"></xref> are not null.\nWhen you check <xref href=\"OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.IsClientSide\" data-throw-if-not-resolved=\"false\"></xref>, you can run client specific code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput.yml\" sourcestartlinenumber=\"1\">Represents the output of a command execution.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandParameter.yml\" sourcestartlinenumber=\"1\">Represents a parameter for an onix command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.yml\" sourcestartlinenumber=\"1\">This class manages the registration and unregistration of commands for both client and server.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.BoolToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.BoolToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.BoolToken",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.BoolToken.yml\" sourcestartlinenumber=\"1\">Represents a boolean token used in parsing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.CommandAutoCompleteOption",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.ParseResult.yml\" sourcestartlinenumber=\"1\">The result from parsing an overload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandOverloadParser.yml\" sourcestartlinenumber=\"1\">Class that handles parsing a <xref href=\"OnixRuntime.Api.OnixClient.Commands.CommandOverload\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandTokenizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandTokenizer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.CommandTokenizer",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.CommandTokenizer.yml\" sourcestartlinenumber=\"1\">This parses a string into tokens for command parsing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.IdentifierToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.IdentifierToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.IdentifierToken",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.IdentifierToken.yml\" sourcestartlinenumber=\"1\">This is essentially the same as a bare token, but it lets you use the is keyword in C# to check for identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.NumberToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.NumberToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.NumberToken",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.NumberToken.yml\" sourcestartlinenumber=\"1\">A token representing a number, either integer or float.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.RangeToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.RangeToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.RangeToken",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.RangeToken.yml\" sourcestartlinenumber=\"1\">Represents a range token used in parsing, containing minimum and maximum values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.StringToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.StringToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.StringToken",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.StringToken.yml\" sourcestartlinenumber=\"1\">This is a quoted string token, containing a quoted string with escape characters parsed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolToken",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolToken.yml\" sourcestartlinenumber=\"1\">Represents a single symbol token used in parsing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenType",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenType.yml\" sourcestartlinenumber=\"1\">The different types of symbols that can be parsed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenValues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenValues.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenValues",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.SymbolTokenValues.yml\" sourcestartlinenumber=\"1\">Represents a collection of symbol tokens used in parsing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.Token.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.Token",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.Token.yml\" sourcestartlinenumber=\"1\">Represents the base token class used in parsing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.TokenPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.TokenPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.TokenPosition",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.TokenPosition.yml\" sourcestartlinenumber=\"1\">Represents the position of a token within the source text.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.TokenType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.TokenType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.TokenType",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.TokenType.yml\" sourcestartlinenumber=\"1\">Represents the type of token encountered during parsing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.WhitespaceToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.WhitespaceToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing.WhitespaceToken",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Commands.Parsing.WhitespaceToken.yml\" sourcestartlinenumber=\"1\">Represents a whitespace token used in parsing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.Parsing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands.Parsing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Commands.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Commands",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/OnixRuntime.Api.OnixClient.OnixClientScreen.yml",
       "output": {
         ".html": {
@@ -3551,6 +4181,20 @@
       "IsMRef": true,
       "Title": "OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeConverter",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeMutableConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeMutableConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeMutableConverter",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingColor_ValueTypeMutableConverter.yml\" sourcestartlinenumber=\"1\">Provides functionality to convert JSON data to and from instances of <xref href=\"OnixRuntime.Api.OnixClient.Settings.OnixSettingColor.ValueTypeMutable\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4307,6 +4951,20 @@
       "IsMRef": true,
       "Title": "OnixRuntime.Api.Rendering.GameMeshBuilder",
       "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Rendering.GameMeshBuilder.yml\" sourcestartlinenumber=\"1\">Provides methods to build and render meshes at runtime.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/OnixRuntime.Api.Rendering.GameViewport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/OnixRuntime.Api.Rendering.GameViewport.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "OnixRuntime.Api.Rendering.GameViewport",
+      "Summary": "<p sourcefile=\"docs/OnixRuntime.Api.Rendering.GameViewport.yml\" sourcestartlinenumber=\"1\">Represents the game's viewport. You can change those, they are read once per frame.</p>\n"
     },
     {
       "type": "ManagedReference",

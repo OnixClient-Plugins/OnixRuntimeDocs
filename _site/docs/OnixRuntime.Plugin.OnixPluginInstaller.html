@@ -362,10 +362,12 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginFromSources_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginFromSources(System.String,System.Boolean,System.Threading.CancellationToken)">
   GetRemotePluginFromSources(string, bool, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L615"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets all remote plugins matching a specific UUID from the user's sources.
+You can choose to filter only compatible plugins.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -375,17 +377,21 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The UUID to look for.</p>
+</dd>
     <dt><code>compatibleOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>If you only want compatible plugins.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>For when you change your mind 3 seconds later.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A task of the list of plugins matching those criteria.</p>
+</dd>
   </dl>
 
 
@@ -402,10 +408,11 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_GetRemotePluginsFromSources_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.GetRemotePluginsFromSources(System.Threading.CancellationToken)">
   GetRemotePluginsFromSources(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L582"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L588"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets every plugin from every source.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -415,13 +422,15 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>When you're bored and decide to abort the search.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>Every plugin with their sources as a <a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a></p>
+</dd>
   </dl>
 
 
@@ -438,7 +447,7 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromBytes_System_Byte___System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromBytes(System.Byte[],System.String,System.Threading.CancellationToken)">
   InstallPluginFromBytes(byte[], string?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L532"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Start installing a plugin from raw bytes.</p>
@@ -483,7 +492,7 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFile_System_String_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFile(System.String,System.String,System.Threading.CancellationToken)">
   InstallPluginFromFile(string, string?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L460"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L461"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Install a plugin from a local file.</p>
@@ -528,7 +537,7 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromFileInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromFileInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)">
   InstallPluginFromFileInternal(string, TaskProgressReport)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L439"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Install a plugin from a local file.</p>
@@ -624,7 +633,7 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromRemoteManifest_OnixRuntime_Plugin_RemotePluginManifest_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromRemoteManifest(OnixRuntime.Plugin.RemotePluginManifest,System.Threading.CancellationToken)">
   InstallPluginFromRemoteManifest(RemotePluginManifest, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L426"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Install a plugin by its remote manifest from the source URLs.</p>
@@ -638,7 +647,8 @@ This gives you url without a / so you can do $&quot;{url}/plugins/uuid&quot; wit
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>manifest</code> <a class="xref" href="OnixRuntime.Plugin.RemotePluginManifest.html">RemotePluginManifest</a></dt>
-    <dd></dd>
+    <dd><p>The remote manifest that was chosen for this installation.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Token to cancel the operation.</p>
 </dd>
@@ -711,7 +721,7 @@ This url must point directly to a .onixplugin or .zip file.</p>
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuid_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuid(System.String,System.Threading.CancellationToken)">
   InstallPluginFromUuid(string, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L415"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Install a plugin by its known UUID from the source URLs.</p>
@@ -749,49 +759,11 @@ This url must point directly to a .onixplugin or .zip file.</p>
 
 
 
-  <a id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuidInternal_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal*"></a>
-
-  <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_InstallPluginFromUuidInternal_System_String_OnixRuntime_Plugin_OnixPluginInstaller_TaskProgressReport_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.InstallPluginFromUuidInternal(System.String,OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport)">
-  InstallPluginFromUuidInternal(string, TaskProgressReport)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L368"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task InstallPluginFromUuidInternal(string uuid, OnixPluginInstaller.TaskProgressReport report)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>uuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>report</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.html">OnixPluginInstaller</a>.<a class="xref" href="OnixRuntime.Plugin.OnixPluginInstaller.TaskProgressReport.html">TaskProgressReport</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="OnixRuntime_Plugin_OnixPluginInstaller_PackagePlugin_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin*"></a>
 
   <h3 id="OnixRuntime_Plugin_OnixPluginInstaller_PackagePlugin_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Plugin.OnixPluginInstaller.PackagePlugin(System.String,System.Threading.CancellationToken)">
   PackagePlugin(string, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L575"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Plugin/OnixPluginInstaller.cs/#L576"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Package a plugin folder into a zip and return a TaskProgressReport to monitor the packaging process.</p>

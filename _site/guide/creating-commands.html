@@ -99,7 +99,7 @@
 </ul>
 <h2 id="-creating-a-command">🛠️ Creating a Command</h2>
 <ul>
-<li>To create a command, you need to create a class that inherits from <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase">OnixCommandBase</a>.</li>
+<li>To create a command, you need to create a class that inherits from <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html">OnixCommandBase</a>.</li>
 <li>You'll need to make sure you can construct it outside, you'll be the one constructing it so how you do it is not important to the API.
 <ul>
 <li>You will need to provide at least a name and description, note that conflicting names are not handled at all as of writing this on the 7th of September, 2025.</li>
@@ -107,10 +107,10 @@
 <li>You can also provide a permission level, useful for server sided commands, and also for client sided commands if you want to restrict access to certain users.</li>
 </ul>
 </li>
-<li>Then, create a function and mark it with the <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute">Overload</a> attribute.
+<li>Then, create a function and mark it with the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute.html">Overload</a> attribute.
 <ul>
-<li>Make sure the function returns an <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput">OnixCommandOutput</a> for any of its outputs, this lets the API handle it properly for the client and the server.</li>
-<li>You can use the convenient <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.Success*">Success(string)</a> and <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.Error*">Error(String)</a> methods in <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase">OnixCommandBase</a> to create a success or error output quickly.</li>
+<li>Make sure the function returns an <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOutput.html">OnixCommandOutput</a> for any of its outputs, this lets the API handle it properly for the client and the server.</li>
+<li>You can use the convenient <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_Success_">Success(string)</a> and <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_Error_">Error(String)</a> methods in <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html">OnixCommandBase</a> to create a success or error output quickly.</li>
 </ul>
 </li>
 </ul>
@@ -132,7 +132,7 @@ namespace PluginCommandExample {
     }
 }
 </code></pre>
-<p>Now, you have a command, how to make it work in game? Simple! We just need to register it when the plugin is loaded with <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.RegisterCommand*">Onix.Client.CommandRegistry.RegisterCommand</a>.
+<p>Now, you have a command, how to make it work in game? Simple! We just need to register it when the plugin is loaded with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RegisterCommand_">Onix.Client.CommandRegistry.RegisterCommand</a>.
 <br>
 Note that no cleanup is really necessary, the API will handle it when the plugin is unloaded.</p>
 <pre><code class="lang-csharp">// Inside your plugin's main class.
@@ -163,7 +163,7 @@ OnixCommandOutput Example(string name, Block? block = null) {
 <br><br></li>
 <li>Now, what if you want to get some more information about the entity running the command?</li>
 <li>Remember those commands have the option to run on the server side or both sides, so you can't just use <code>Onix.LocalPlayer</code> and hope for the best.</li>
-<li>Any of the function's parameters can be a <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin">OnixCommandOrigin</a> which will give you more information.</li>
+<li>Any of the function's parameters can be a <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandOrigin.html">OnixCommandOrigin</a> which will give you more information.</li>
 <li>Note that things are default null in the case the command is ran in the menu or maybe in a command block. (Command blocks are not yet supported but you should check so they don't break if they ever get supported)</li>
 </ul>
 <pre><code class="lang-csharp">[Overload]
@@ -187,9 +187,9 @@ OnixCommandOutput Example(OnixCommandOrigin origin, BlockPos targetPosition) {
 <li><code>string</code> - A string value, can be any text, that can also be used with quotes and escape sequences like \n, &quot; and things like that.
 <ul>
 <li>Strings have a few specializations:</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute">[RawString]</a> string - A string that captures everything until the end of the argument list, this will capture EVERYTHING, including spaces and things like that. Make sure it's the last parameter!</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute">[SoftEnumName]</a> string - A string that will have recommendations based on a soft enum. See the <a href="#-enums">Enums Section</a> for more information on this one.</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute">[CommandPath]</a> string - This is a string that must be a specific value. If the text the user enters is not the one specified, this overload will be ruled out. This is useful for subcommands.
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.RawStringAttribute.html">[RawString]</a> string - A string that captures everything until the end of the argument list, this will capture EVERYTHING, including spaces and things like that. Make sure it's the last parameter!</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.SoftEnumNameAttribute.html">[SoftEnumName]</a> string - A string that will have recommendations based on a soft enum. See the <a href="#-enums">Enums Section</a> for more information on this one.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute.html">[CommandPath]</a> string - This is a string that must be a specific value. If the text the user enters is not the one specified, this overload will be ruled out. This is useful for subcommands.
 <ul>
 <li>The command path can also specify an item to use as an icon if you're going for something fancy.</li>
 </ul>
@@ -207,15 +207,15 @@ OnixCommandOutput Example(OnixCommandOrigin origin, BlockPos targetPosition) {
 <li><a class="xref" href="../docs/OnixRuntime.Api.Entities.Player.html">Player[]</a> - One or more player entities that are loaded.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.Entities.Entity.html">Entity</a> - An entity that is loaded.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.Entities.Entity.html">Entity[]</a> - One or more entities that are loaded.</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector">CommandEntitySelector</a> - A selector that can be used to discriminate entities manually, having to gather a list of entities yourself. You should avoid this unless you know why you need it.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEntitySelector.html">CommandEntitySelector</a> - A selector that can be used to discriminate entities manually, having to gather a list of entities yourself. You should avoid this unless you know why you need it.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a> - A 3D integer position, relative <code>~</code> coordinates are supported and automatically handled when using a <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html">Vec3</a>.</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition">CommandBlockPosition</a> - Same as a BlockPos but you have to calculate the relative coordinates yourself. You should use a [BlockPos].(xref:OnixRuntime.Api.Maths.BlockPos) version unless you know why you need this one.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandBlockPosition.html">CommandBlockPosition</a> - Same as a BlockPos but you have to calculate the relative coordinates yourself. You should use a [BlockPos].(xref:OnixRuntime.Api.Maths.BlockPos) version unless you know why you need this one.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html">Vec3</a> - A 3D float position, relative <code>~</code> coordinates are supported and automatically handled when using a <a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a>.</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandPosition">CommandPosition</a> - Same as a Vec3 but you have to calculate the relative coordinates yourself. You should use a [Vec3].(xref:OnixRuntime.Api.Maths.Vec3) version unless you know why you need this one.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandPosition.html">CommandPosition</a> - Same as a Vec3 but you have to calculate the relative coordinates yourself. You should use a [Vec3].(xref:OnixRuntime.Api.Maths.Vec3) version unless you know why you need this one.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec2.html">Vec2</a> - Two floating point numbers. No relative coordinates as what would they even take. This is useful if you need two points that arent an angle (rare, I know).</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles.html">Angles</a> - A pair of yaw and pitch angles, in degrees. This will be useful for the user in intellisense as they will know the yaw/pitch order.</li>
 <li><a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles3.html">Angles3</a> - A triplet of yaw, pitch and roll angles, in degrees. This will be useful for the user in intellisense as they will know the yaw/pitch/roll order.</li>
@@ -284,16 +284,16 @@ OnixCommandOutput Example(OnixCommandOrigin origin, BlockPos targetPosition) {
 <hr>
 <h2 id="-enums">📃 Enums</h2>
 <ul>
-<li>Anything related to enums is stored in the <a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry">CommandEnumRegistry</a>.</li>
+<li>Anything related to enums is stored in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.</li>
 <li>Note that the names only have to be unique per plugin, so name them cleanly and don't worry about conflicts with other plugins.</li>
 </ul>
 <h3 id="-enums-are-a-special-type-of-parameter-that-lets-you-get-a-value-from-a-predefined-set-of-values">⭐ Enums are a special type of parameter that lets you get a value from a predefined set of values.</h3>
 <ul>
-<li>Enums are registered automatically in the parameters so you shouldn't have to manually register them in the <a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry">CommandEnumRegistry</a>.</li>
+<li>Enums are registered automatically in the parameters so you shouldn't have to manually register them in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.</li>
 <li>Enums use normal C# enums so you can use any enum you want.</li>
 <li>Enum names are automatically converted to <code>snake_case</code> for the user, so <code>MyEnumValue</code> becomes <code>my_enum_value</code>.</li>
-<li>If you want to specify a different name for the user to type in, you can use the <a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute">[CommandEnumName]</a>.</li>
-<li>If you want that value to have an item for its icon, use a <a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute">[CommandEnumIconAttribute]</a>.</li>
+<li>If you want to specify a different name for the user to type in, you can use the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumNameAttribute.html">[CommandEnumName]</a>.</li>
+<li>If you want that value to have an item for its icon, use a <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumIconAttribute.html">[CommandEnumIconAttribute]</a>.</li>
 <li>Here is an example enum that uses those attributes, note that those attributes are optional:</li>
 </ul>
 <pre><code class="lang-csharp">public enum BuildAction {
@@ -319,12 +319,12 @@ OnixCommandOutput Example(OnixCommandOrigin origin, BuildAction action) {
 <li>You can add/remove/re-register values at any time, they will be updated automatically.</li>
 <li>You can have icons for them too, just like normal enums.</li>
 <li>This is useful for data that you get at runtime only.</li>
-<li>Those are not registered automatically, you need to register them yourself in the <a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry">CommandEnumRegistry</a>.
+<li>Those are not registered automatically, you need to register them yourself in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html">CommandEnumRegistry</a>.
 <ul>
 <li>You can call this in your plugin's <code>OnLoaded()</code> method or the command's constructor, if it's that specific.</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RegisterSoftEnum*">RegisterSoftEnum()</a> is the method to use to set an entire list of values.</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.AddSoftEnumValue*">AddSoftEnumValue()</a> is the method to use to add a single value.</li>
-<li><a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.RemoveSoftEnumValue*">RemoveSoftEnumValue()</a> is the method to use to remove a single value.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RegisterSoftEnum_">RegisterSoftEnum()</a> is the method to use to set an entire list of values.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_AddSoftEnumValue_">AddSoftEnumValue()</a> is the method to use to add a single value.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandEnumRegistry.html#OnixRuntime_Api_OnixClient_Commands_CommandEnumRegistry_RemoveSoftEnumValue_">RemoveSoftEnumValue()</a> is the method to use to remove a single value.</li>
 </ul>
 </li>
 <li>Here is an example of registering a soft enum:</li>
@@ -347,7 +347,7 @@ OnixCommandOutput Example(OnixCommandOrigin origin, BuildAction action) {
 <ul>
 <li>Server sided commands can be run when you're hosting a world, the prefix is <code>/.</code>.</li>
 <li>Anyone in the world can run them, so make sure to set the permission level properly.</li>
-<li>You can have a specific overload be just for the server side by specifying it in the <a href="xref:OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute">[Overload]</a> attribute.</li>
+<li>You can have a specific overload be just for the server side by specifying it in the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.OverloadAttribute.html">[Overload]</a> attribute.</li>
 </ul>
 <pre><code class="lang-csharp">public class ExampleCommand : OnixCommandBase {
     public ExampleCommand() : base(&quot;example&quot;, &quot;A simple example command to show you how they work.&quot;, CommandExecutionTarget.Server, CommandPermissionLevel.Any) { }
@@ -424,7 +424,7 @@ OnixCommandOutput Example(OnixCommandOrigin origin, BuildAction action) {
 <hr>
 <h2 id="-sub-commands">📂 Sub Commands</h2>
 <ul>
-<li>You can easily create sub commands using the <a href="xref:OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute">[CommandPath]</a> attribute.</li>
+<li>You can easily create sub commands using the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Commands.CommandPathAttribute.html">[CommandPath]</a> attribute.</li>
 <li>Simply add the attribute in front of a string parameter and set the value to what you want the user to type.</li>
 <li>If the user types anything else, this overload will be ruled out and not executed.</li>
 <li>Here is an example of a command with sub commands:</li>

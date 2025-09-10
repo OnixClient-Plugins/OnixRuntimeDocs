@@ -95,6 +95,11 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.CommandResponseMessage.html">CommandResponseMessage</a></dt>
+      <dd><p>Represents a message in a command's response.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormReplyer.html">ModalFormReplyer</a></dt>
       <dd><p>Implements IModalFormReplyer for modal form requests.</p>
 </dd>
@@ -141,6 +146,13 @@ Delegates
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnChatScreenMessageAboutToBeSentDelegate.html">OnixEventSessionChat.OnChatScreenMessageAboutToBeSentDelegate</a></dt>
       <dd><p>Delegate for handling chat message about to be sent events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionChat.OnCommandResponseDelegate.html">OnixEventSessionChat.OnCommandResponseDelegate</a></dt>
+      <dd><p>Delegate for handling chat command received events.
+Note that this might not be received if the server uses TextPacket for its responses or sends a different id.
+This will also not work when 'sendcommandfeedback' is disabled.</p>
 </dd>
     </dl>
     <dl class="jumplist">

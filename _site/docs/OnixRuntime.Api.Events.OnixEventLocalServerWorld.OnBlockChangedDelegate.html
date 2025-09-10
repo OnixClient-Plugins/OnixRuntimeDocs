@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Delegate OnixEventLocalServerWorld.OnBlockChangedDelegate | Onix Plugin Documentation ">
       
-      <meta name="description" content="Delegate that is invoked whenever a block in the world changes. Provides context about the region, position, old and new blocks, as well as how the change should be propagated and rendered.">
+      <meta name="description" content="Delegate that is invoked whenever a block in the world changes. Provides context about the region, position, old and new blocks, as well as how the change should be propagated and rendered. If you want to keep the block, use region&#39;s  at position. You can also use the runtime ID and the  for both old or new block if you want to keep it.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Events_OnixEventLocalServerWorld_OnBlockChangedDelegate" data-uid="OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnBlockChangedDelegate" class="text-break">
-Delegate OnixEventLocalServerWorld.OnBlockChangedDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/LocalServer/OnixEventLocalServerWorld.cs/#L58"><i class="bi bi-code-slash"></i></a>
+Delegate OnixEventLocalServerWorld.OnBlockChangedDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/LocalServer/OnixEventLocalServerWorld.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,7 +99,9 @@ Delegate OnixEventLocalServerWorld.OnBlockChangedDelegate  <a class="header-acti
 
   <div class="markdown summary"><p>Delegate that is invoked whenever a block in the world changes.
 Provides context about the region, position, old and new blocks,
-as well as how the change should be propagated and rendered.</p>
+as well as how the change should be propagated and rendered.
+If you want to keep the block, use <code class="paramref">region</code>'s <a class="xref" href="OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetBlock_OnixRuntime_Api_Maths_BlockPos_">GetBlock(BlockPos)</a> at <code class="paramref">position</code>.
+You can also use the runtime ID and the <a class="xref" href="OnixRuntime.Api.World.BlockRegistry.html#OnixRuntime_Api_World_BlockRegistry_GetBlockFromRuntimeId_System_UInt32_">GetBlockFromRuntimeId(uint)</a> for both old or new block if you want to keep it.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -116,10 +118,10 @@ as well as how the change should be propagated and rendered.</p>
     <dd><p>The <a class="xref" href="OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a> of the block that was modified.</p>
 </dd>
     <dt><code>oldBlock</code> <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a></dt>
-    <dd><p>The <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a> instance that previously occupied the position.</p>
+    <dd><p>The <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a> instance that previously occupied the position. Don't keep this.</p>
 </dd>
     <dt><code>newBlock</code> <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a></dt>
-    <dd><p>The <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a> instance that replaced the old block.</p>
+    <dd><p>The <a class="xref" href="OnixRuntime.Api.World.Block.html">Block</a> instance that replaced the old block. Don't keep this.</p>
 </dd>
     <dt><code>layer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The layer, there are two layers. 0 is the main layer, 1 is generally used for waterlogging and things snow layers merging with some plants.</p>
@@ -144,7 +146,7 @@ as well as how the change should be propagated and rendered.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/LocalServer/OnixEventLocalServerWorld.cs/#L58" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/LocalServer/OnixEventLocalServerWorld.cs/#L60" class="edit-link">Edit this page</a>
         </div>
 
 

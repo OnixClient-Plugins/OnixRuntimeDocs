@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum WorldBlocks.BlockUpdateType | Onix Plugin Documentation </title>
+      <title>Enum BlockShapeType | Onix Plugin Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum WorldBlocks.BlockUpdateType | Onix Plugin Documentation ">
+      <meta name="title" content="Enum BlockShapeType | Onix Plugin Documentation ">
       
-      <meta name="description" content="Specifies the type of block update to perform.">
+      <meta name="description" content="Specifies which precomputed shape a block should provide or which shape should be used when querying block geometry. Use these values when requesting different block shape types for rendering, physics, or camera collision checks.">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_World_WorldBlocks_BlockUpdateType.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.World.WorldBlocks.BlockUpdateType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_World_BlockShapeType.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.World.BlockShapeType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,13 +84,13 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="OnixRuntime.Api.World.WorldBlocks.BlockUpdateType">
+        <article data-uid="OnixRuntime.Api.World.BlockShapeType">
 
 
 
 
-  <h1 id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType" data-uid="OnixRuntime.Api.World.WorldBlocks.BlockUpdateType" class="text-break">
-Enum WorldBlocks.BlockUpdateType  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/World/WorldBlocks.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <h1 id="OnixRuntime_Api_World_BlockShapeType" data-uid="OnixRuntime.Api.World.BlockShapeType" class="text-break">
+Enum BlockShapeType  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/World/Block.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,13 +98,13 @@ Enum WorldBlocks.BlockUpdateType  <a class="header-action link-secondary" title=
   <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Specifies the type of block update to perform.</p>
+  <div class="markdown summary"><p>Specifies which precomputed shape a block should provide or which shape should be used when querying block geometry.
+Use these values when requesting different block shape types for rendering, physics, or camera collision checks.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Flags]
-public enum WorldBlocks.BlockUpdateType</code></pre>
+    <pre><code class="lang-csharp hljs">public enum BlockShapeType</code></pre>
   </div>
 
 
@@ -118,48 +118,24 @@ public enum WorldBlocks.BlockUpdateType</code></pre>
   <h2 id="fields">Fields
 </h2>
   <dl class="parameters">
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_All"><code>All = Default | NoGraphicsAndNoPriority</code></dt>
+    <dt id="OnixRuntime_Api_World_BlockShapeType_CameraCollision"><code>CameraCollision = 2</code></dt>
   
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_AllButNoGraphics"><code>AllButNoGraphics = Neighbors | NetworkAndNoPriority</code></dt>
+  <dd><p>The camera collision shape.
+This shape is a simplified or specialized collision volume intended for camera clipping and line-of-sight calculations.
+It may differ from the full physical collision shape to produce smoother camera behavior.</p>
+</dd>
+    <dt id="OnixRuntime_Api_World_BlockShapeType_Collision"><code>Collision = 1</code></dt>
   
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_Default"><code>Default = Neighbors | Network</code></dt>
+  <dd><p>The collision shape used for physical interactions.
+This shape represents the solid volume used by the physics system and entity movement to determine collisions and blocking.
+Use this when testing for movement obstruction or physical contact with the block.</p>
+</dd>
+    <dt id="OnixRuntime_Api_World_BlockShapeType_Outline"><code>Outline = 0</code></dt>
   
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_Neighbors"><code>Neighbors = 1</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_NeighborsAndNetwork"><code>NeighborsAndNetwork = Neighbors | Network</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_NeighborsAndNoGraphics"><code>NeighborsAndNoGraphics = Neighbors | NoGraphics</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_NeighborsAndNoPriority"><code>NeighborsAndNoPriority = Neighbors | Priority</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_Network"><code>Network = 2</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_NetworkAndNoGraphics"><code>NetworkAndNoGraphics = Network | NoGraphics</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_NetworkAndNoPriority"><code>NetworkAndNoPriority = Network | Priority</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_NoGraphics"><code>NoGraphics = 4</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_NoGraphicsAndNoPriority"><code>NoGraphicsAndNoPriority = NoGraphics | Priority</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_None"><code>None = 0</code></dt>
-  
-  <dd></dd>
-    <dt id="OnixRuntime_Api_World_WorldBlocks_BlockUpdateType_Priority"><code>Priority = 8</code></dt>
-  
-  <dd></dd>
+  <dd><p>The visual outline shape of the block.
+This shape is typically used for rendering selection outlines, highlighting, and any purpose where the visual silhouette
+of the block is required rather than its physical collision volume.</p>
+</dd>
   </dl>
 
 
@@ -167,7 +143,7 @@ public enum WorldBlocks.BlockUpdateType</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/World/WorldBlocks.cs/#L46" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/World/Block.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

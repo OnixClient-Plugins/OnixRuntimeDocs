@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Changelog 5 | Onix Plugin Documentation </title>
+      <title>Changelog 6 | Onix Plugin Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Changelog 5 | Onix Plugin Documentation ">
+      <meta name="title" content="Changelog 6 | Onix Plugin Documentation ">
       
       
       <link rel="icon" href="../images/favicon.ico">
@@ -71,75 +71,43 @@
         </div>
 
         <article data-uid="">
-<h1 id="changelog-5">Changelog 5</h1>
+<h1 id="changelog-6">Changelog 6</h1>
 
-<p><a href="https://plugin.onixclient.com/docs/4/guide/changelog.html">Previous Changelog</a></p>
+<p><a href="https://plugin.onixclient.com/docs/5/guide/changelog.html">Previous Changelog</a></p>
 <h2 id="introduction">Introduction</h2>
-<p>This changelog documents what changed in the fifth update of the Plugins API.<br>
+<p>This changelog documents what changed in the sixth update of the Plugins API.<br>
 Since this is very early-access and the API is still being developed, there will be a lot of changes and breaking changes.<br>
 There will be a clear changelog for each update, so you can easily see what changed and what you need to do to adapt your plugin.<br>
 This update is pretty much the whole package, you need to update the client first, that should take care of the new runtime.<br>
 With this update, the PluginManager UI should update automatically, so you can just update your plugins from there.<br></p>
 <hr>
 <h2 id="breaking-changes">Breaking Changes</h2>
-<p>Nothing that won't be fixed by recompiling your plugin.</p>
+<ul>
+<li>The <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Raycast_">Raycast</a> function in <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html">WorldBlocks</a> now takes <a class="xref" href="../docs/OnixRuntime.Api.World.BlockShapeType.html">BlockShapeType</a> instead of the <code>isSolid</code>.</li>
+<li>The <a class="xref" href="../docs/OnixRuntime.Api.World.BlockEntity.html">BlockEntity</a> class no longer has a <code>Block</code> property, use <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetBlock_">WorldBlocks.GetBlock</a> with <a class="xref" href="../docs/OnixRuntime.Api.World.BlockEntity.html#OnixRuntime_Api_World_BlockEntity_Position">BlockEntity.Position</a> instead.
+<ul>
+<li>It wasn't accurate to the current state either before so that's better anyways.</li>
+</ul>
+</li>
+</ul>
 <h2 id="runtime-changes">Runtime Changes</h2>
 <ul>
-<li>The plugin manager UI will not always reinstall itself over and over again.</li>
+<li>There were no runtime changes this update.</li>
 </ul>
 <br>
 <h3 id="new-features">New Features</h3>
 <ul>
-<li>You can render blocks.
-<ul>
-<li>This is a single small entry but is huge and required a lot of work so please enjoy it.</li>
-<li>You can find example in the documentation for <a class="xref" href="../docs/OnixRuntime.Api.Rendering.GameBlockRenderer.html#OnixRuntime_Api_Rendering_GameBlockRenderer_RenderBlock_OnixRuntime_Api_Rendering_GameMeshBuilder_OnixRuntime_Api_Maths_BlockPos_OnixRuntime_Api_World_Block_">RenderBlock()</a>.</li>
-</ul>
-</li>
-<li>There is now a system for commands (supports both the client side and the local server side.)
-<ul>
-<li>This is also a very big feature that took forever to implement, so please enjoy it.</li>
-<li>You can find the guide for commands at <a href="creating-commands.html">Command Guide</a>.</li>
-</ul>
-</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.OnixGame.html#OnixRuntime_Api_OnixGame_ExecuteCommand_">Onix.Game.ExecuteCommand</a> now returns an int representing the command request ID.</li>
-<li>With this there is also the <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionChat.html#OnixRuntime_Api_Events_Session_OnixEventSessionChat_CommandResponse">Onix.Events.Session.Chat.CommandResponse</a> for getting the response of a command.
-<ul>
-<li>Note: You can also cancel it at this higher level, not sure if it would help when spamming commands for lag but you can cancel it here.</li>
-<li>Note: Not every server honors the command response, so if you don't get the responses you expect, it might be the server.</li>
-<li>This will work on vanilla servers where command feedback is enabled.</li>
-</ul>
-</li>
+<li>Nothing that hasn't been mentionned in the breaking changes.</li>
 </ul>
 <br>
-<ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.NBT.ObjectTag.html">ObjectTag</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.NBT.ObjectTag.html#OnixRuntime_Api_NBT_ObjectTag_MergeWith_">MergeWith</a>.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html">WorldBlocks</a> now has a <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetExtraBlock_">GetExtraBlock</a> method.
-<ul>
-<li>The extra block (layer 1) is used for things like snow layers that are on top of vegetation. Or waterlogged blocks.</li>
-</ul>
-</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles.html#OnixRuntime_Api_Maths_Angles_WithYaw_">Angles.WithYaw</a> and <a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles.html#OnixRuntime_Api_Maths_Angles_WithPitch_">Angles.WithPitch</a>, letting you keep one angle and change the other.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles3.html#OnixRuntime_Api_Maths_Angles3_WithYaw_">Angles3.WithYaw</a>, <a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles3.html#OnixRuntime_Api_Maths_Angles3_WithPitch_">Angles3.WithPitch</a> and <a class="xref" href="../docs/OnixRuntime.Api.Maths.Angles3.html#OnixRuntime_Api_Maths_Angles3_WithPitch_">Angles3.WithPitch</a>, letting you keep one angle and change the other.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_Floor">Vec3.Floor()</a> and <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_Ceil">Vec3.Ceil()</a> and <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_Round">Vec3.Round()</a> methods.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec3.html#OnixRuntime_Api_Maths_Vec3_DistanceSqr_">Vec3.DistanceSqr()</a>.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec2.html#OnixRuntime_Api_Maths_Vec2_Floor">Vec2.Floor()</a> and <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec2.html#OnixRuntime_Api_Maths_Vec2_Ceil">Vec2.Ceil()</a> and <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec2.html#OnixRuntime_Api_Maths_Vec2_Round">Vec2.Round()</a> methods.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.Vec2.html#OnixRuntime_Api_Maths_Vec2_DistanceSqr_">Vec2.DistanceSqr()</a>.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_IsAlive">Entity.IsAlive</a>.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Logger.html#OnixRuntime_Api_Logger_GetForPlugin">Logger.GetForPlugin()</a> which lets you get a logger for your plugin easier.</li>
-<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Rendering.GameViewport.html">GameViewport</a> in <code>Onix.Render.GameViewport</code> which gives you information about the current viewport, or lets you be naughty.
-<br></li>
-</ul>
 <h3 id="bug-fixes">Bug Fixes</h3>
 <ul>
-<li>Notifications sent from a plugin without a callback won't crash when clicked anymore.</li>
-<li>The <a class="xref" href="../docs/OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetHoverText_">ItemStack.GetHoverText</a> method no longer crashes on recent versions.</li>
-<li>Players will not show up twice in the list of all entities.
+<li>There was no bugs, so there was nothing to fix (real)
 <br></li>
 </ul>
 <h3 id="version-updates">Version Updates</h3>
 <ul>
-<li>Now expects runtime version 5.</li>
+<li>Now expects runtime version 6.</li>
 </ul>
 
 </article>

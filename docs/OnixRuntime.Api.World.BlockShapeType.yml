@@ -1,0 +1,173 @@
+### YamlMime:ManagedReference
+items:
+- uid: OnixRuntime.Api.World.BlockShapeType
+  commentId: T:OnixRuntime.Api.World.BlockShapeType
+  id: BlockShapeType
+  parent: OnixRuntime.Api.World
+  children:
+  - OnixRuntime.Api.World.BlockShapeType.CameraCollision
+  - OnixRuntime.Api.World.BlockShapeType.Collision
+  - OnixRuntime.Api.World.BlockShapeType.Outline
+  langs:
+  - csharp
+  - vb
+  name: BlockShapeType
+  nameWithType: BlockShapeType
+  fullName: OnixRuntime.Api.World.BlockShapeType
+  type: Enum
+  source:
+    remote:
+      path: OnixRuntime/Api/World/Block.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: BlockShapeType
+    path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
+    startLine: 27
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    Specifies which precomputed shape a block should provide or which shape should be used when querying block geometry.
+
+    Use these values when requesting different block shape types for rendering, physics, or camera collision checks.
+  example: []
+  syntax:
+    content: public enum BlockShapeType
+    content.vb: Public Enum BlockShapeType
+- uid: OnixRuntime.Api.World.BlockShapeType.Outline
+  commentId: F:OnixRuntime.Api.World.BlockShapeType.Outline
+  id: Outline
+  parent: OnixRuntime.Api.World.BlockShapeType
+  langs:
+  - csharp
+  - vb
+  name: Outline
+  nameWithType: BlockShapeType.Outline
+  fullName: OnixRuntime.Api.World.BlockShapeType.Outline
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/World/Block.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Outline
+    path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
+    startLine: 33
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    The visual outline shape of the block.
+
+    This shape is typically used for rendering selection outlines, highlighting, and any purpose where the visual silhouette
+
+    of the block is required rather than its physical collision volume.
+  example: []
+  syntax:
+    content: Outline = 0
+    return:
+      type: OnixRuntime.Api.World.BlockShapeType
+- uid: OnixRuntime.Api.World.BlockShapeType.Collision
+  commentId: F:OnixRuntime.Api.World.BlockShapeType.Collision
+  id: Collision
+  parent: OnixRuntime.Api.World.BlockShapeType
+  langs:
+  - csharp
+  - vb
+  name: Collision
+  nameWithType: BlockShapeType.Collision
+  fullName: OnixRuntime.Api.World.BlockShapeType.Collision
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/World/Block.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Collision
+    path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
+    startLine: 39
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    The collision shape used for physical interactions.
+
+    This shape represents the solid volume used by the physics system and entity movement to determine collisions and blocking.
+
+    Use this when testing for movement obstruction or physical contact with the block.
+  example: []
+  syntax:
+    content: Collision = 1
+    return:
+      type: OnixRuntime.Api.World.BlockShapeType
+- uid: OnixRuntime.Api.World.BlockShapeType.CameraCollision
+  commentId: F:OnixRuntime.Api.World.BlockShapeType.CameraCollision
+  id: CameraCollision
+  parent: OnixRuntime.Api.World.BlockShapeType
+  langs:
+  - csharp
+  - vb
+  name: CameraCollision
+  nameWithType: BlockShapeType.CameraCollision
+  fullName: OnixRuntime.Api.World.BlockShapeType.CameraCollision
+  type: Field
+  source:
+    remote:
+      path: OnixRuntime/Api/World/Block.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: CameraCollision
+    path: ../OnixRuntime/OnixRuntime/Api/World/Block.cs
+    startLine: 45
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.World
+  summary: >-
+    The camera collision shape.
+
+    This shape is a simplified or specialized collision volume intended for camera clipping and line-of-sight calculations.
+
+    It may differ from the full physical collision shape to produce smoother camera behavior.
+  example: []
+  syntax:
+    content: CameraCollision = 2
+    return:
+      type: OnixRuntime.Api.World.BlockShapeType
+references:
+- uid: OnixRuntime.Api.World
+  commentId: N:OnixRuntime.Api.World
+  href: OnixRuntime.html
+  name: OnixRuntime.Api.World
+  nameWithType: OnixRuntime.Api.World
+  fullName: OnixRuntime.Api.World
+  spec.csharp:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+  spec.vb:
+  - uid: OnixRuntime
+    name: OnixRuntime
+    href: OnixRuntime.html
+  - name: .
+  - uid: OnixRuntime.Api
+    name: Api
+    href: OnixRuntime.Api.html
+  - name: .
+  - uid: OnixRuntime.Api.World
+    name: World
+    href: OnixRuntime.Api.World.html
+- uid: OnixRuntime.Api.World.BlockShapeType
+  commentId: T:OnixRuntime.Api.World.BlockShapeType
+  parent: OnixRuntime.Api.World
+  href: OnixRuntime.Api.World.BlockShapeType.html
+  name: BlockShapeType
+  nameWithType: BlockShapeType
+  fullName: OnixRuntime.Api.World.BlockShapeType

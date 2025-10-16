@@ -19,6 +19,8 @@ items:
   - OnixRuntime.Api.Entities.Entity.ChunkPosition
   - OnixRuntime.Api.Entities.Entity.Dimension
   - OnixRuntime.Api.Entities.Entity.Effects
+  - OnixRuntime.Api.Entities.Entity.EyeOffset
+  - OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
   - OnixRuntime.Api.Entities.Entity.ForwardPosition(System.Single)
   - OnixRuntime.Api.Entities.Entity.GetAttribute(OnixRuntime.Api.Entities.EntityAttributeId)
   - OnixRuntime.Api.Entities.Entity.GetAttribute(System.String)
@@ -794,6 +796,68 @@ items:
       type: System.Single
     content.vb: Public ReadOnly Property HeightOffset As Single
   overload: OnixRuntime.Api.Entities.Entity.HeightOffset*
+- uid: OnixRuntime.Api.Entities.Entity.EyeOffset
+  commentId: P:OnixRuntime.Api.Entities.Entity.EyeOffset
+  id: EyeOffset
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: EyeOffset
+  nameWithType: Entity.EyeOffset
+  fullName: OnixRuntime.Api.Entities.Entity.EyeOffset
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: EyeOffset
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 163
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the eye offset of the entity if any, nullable you can use this to avoid entities with no eyes.
+  example: []
+  syntax:
+    content: public float? EyeOffset { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public ReadOnly Property EyeOffset As Single?
+  overload: OnixRuntime.Api.Entities.Entity.EyeOffset*
+- uid: OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
+  commentId: P:OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
+  id: EyeOffsetNonZero
+  parent: OnixRuntime.Api.Entities.Entity
+  langs:
+  - csharp
+  - vb
+  name: EyeOffsetNonZero
+  nameWithType: Entity.EyeOffsetNonZero
+  fullName: OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
+  type: Property
+  source:
+    remote:
+      path: OnixRuntime/Api/Entities/Entity.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: EyeOffsetNonZero
+    path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
+    startLine: 167
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Entities
+  summary: Gets the eye offset of the entity if any, nullable you can use this to avoid entities with no eyes. A value of 0 will return also null.
+  example: []
+  syntax:
+    content: public float? EyeOffsetNonZero { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public ReadOnly Property EyeOffsetNonZero As Single?
+  overload: OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero*
 - uid: OnixRuntime.Api.Entities.Entity.StepHeight
   commentId: P:OnixRuntime.Api.Entities.Entity.StepHeight
   id: StepHeight
@@ -812,7 +876,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StepHeight
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 163
+    startLine: 171
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -843,7 +907,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AliveDuration
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 167
+    startLine: 175
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -874,7 +938,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: AliveTicks
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 171
+    startLine: 179
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -905,7 +969,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Attributes
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 175
+    startLine: 183
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -936,7 +1000,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 179
+    startLine: 187
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -969,7 +1033,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 183
+    startLine: 191
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1005,7 +1069,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UpdateAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 187
+    startLine: 195
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1036,7 +1100,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: UpdateAttribute
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 193
+    startLine: 201
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1075,7 +1139,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Kill
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 204
+    startLine: 212
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1103,7 +1167,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Effects
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 208
+    startLine: 216
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1134,7 +1198,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBox
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 212
+    startLine: 220
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1165,7 +1229,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBoxRaw
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 216
+    startLine: 224
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1196,7 +1260,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBoxSize
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 220
+    startLine: 228
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1227,7 +1291,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SimpleMolangVariables
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 224
+    startLine: 232
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1258,7 +1322,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Dimension
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 228
+    startLine: 236
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1289,7 +1353,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Region
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 232
+    startLine: 240
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1320,7 +1384,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: World
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 236
+    startLine: 244
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1351,7 +1415,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Riding
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 240
+    startLine: 248
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1382,7 +1446,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: RiddenBy
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 244
+    startLine: 252
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1413,7 +1477,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MainHandItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 252
+    startLine: 260
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1444,7 +1508,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: OffhandItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 260
+    startLine: 268
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1475,7 +1539,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: HelmetItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 268
+    startLine: 276
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1506,7 +1570,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ChestplateItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 276
+    startLine: 284
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1537,7 +1601,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: LeggingsItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 284
+    startLine: 292
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1568,7 +1632,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BootsItem
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 292
+    startLine: 300
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1599,7 +1663,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ArmorItems
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 300
+    startLine: 308
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -1630,7 +1694,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/Entities/Entity.cs
-    startLine: 314
+    startLine: 322
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -2324,6 +2388,69 @@ references:
   name: HeightOffset
   nameWithType: Entity.HeightOffset
   fullName: OnixRuntime.Api.Entities.Entity.HeightOffset
+- uid: OnixRuntime.Api.Entities.Entity.EyeOffset*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.EyeOffset
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_EyeOffset
+  name: EyeOffset
+  nameWithType: Entity.EyeOffset
+  fullName: OnixRuntime.Api.Entities.Entity.EyeOffset
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero*
+  commentId: Overload:OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_EyeOffsetNonZero
+  name: EyeOffsetNonZero
+  nameWithType: Entity.EyeOffsetNonZero
+  fullName: OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
 - uid: OnixRuntime.Api.Entities.Entity.StepHeight*
   commentId: Overload:OnixRuntime.Api.Entities.Entity.StepHeight
   href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_StepHeight

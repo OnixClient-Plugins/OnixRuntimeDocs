@@ -95,6 +95,8 @@ items:
   - OnixRuntime.Api.Entities.Entity.RuntimeId
   - OnixRuntime.Api.Entities.Entity.ScoreboardIdentity
   - OnixRuntime.Api.Entities.Entity.HeightOffset
+  - OnixRuntime.Api.Entities.Entity.EyeOffset
+  - OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
   - OnixRuntime.Api.Entities.Entity.StepHeight
   - OnixRuntime.Api.Entities.Entity.AliveDuration
   - OnixRuntime.Api.Entities.Entity.AliveTicks
@@ -181,7 +183,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SendCommandOutput
     path: ../OnixRuntime/OnixRuntime/Api/Entities/ServerPlayer.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Entities
@@ -201,8 +203,10 @@ items:
       description: The amount of successes, like /testfor can have a higher count. Just go 0 for error and 1 when it works, unless you know what you're doing.
     - id: requestId1
       type: System.UInt64
+      description: The first request ID, used to identify the command output request.
     - id: requestId2
       type: System.UInt64
+      description: The second request ID, used to identify the command output request.
     content.vb: Public Sub SendCommandOutput(message As String, successCount As Integer, requestId1 As ULong, requestId2 As ULong)
   overload: OnixRuntime.Api.Entities.ServerPlayer.SendCommandOutput*
   nameWithType.vb: ServerPlayer.SendCommandOutput(String, Integer, ULong, ULong)
@@ -870,6 +874,20 @@ references:
   name: HeightOffset
   nameWithType: Entity.HeightOffset
   fullName: OnixRuntime.Api.Entities.Entity.HeightOffset
+- uid: OnixRuntime.Api.Entities.Entity.EyeOffset
+  commentId: P:OnixRuntime.Api.Entities.Entity.EyeOffset
+  parent: OnixRuntime.Api.Entities.Entity
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_EyeOffset
+  name: EyeOffset
+  nameWithType: Entity.EyeOffset
+  fullName: OnixRuntime.Api.Entities.Entity.EyeOffset
+- uid: OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
+  commentId: P:OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
+  parent: OnixRuntime.Api.Entities.Entity
+  href: OnixRuntime.Api.Entities.Entity.html#OnixRuntime_Api_Entities_Entity_EyeOffsetNonZero
+  name: EyeOffsetNonZero
+  nameWithType: Entity.EyeOffsetNonZero
+  fullName: OnixRuntime.Api.Entities.Entity.EyeOffsetNonZero
 - uid: OnixRuntime.Api.Entities.Entity.StepHeight
   commentId: P:OnixRuntime.Api.Entities.Entity.StepHeight
   parent: OnixRuntime.Api.Entities.Entity

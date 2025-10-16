@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Changelog 6 | Onix Plugin Documentation </title>
+      <title>Changelog 7 | Onix Plugin Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Changelog 6 | Onix Plugin Documentation ">
+      <meta name="title" content="Changelog 7 | Onix Plugin Documentation ">
       
       
       <link rel="icon" href="../images/favicon.ico">
@@ -71,11 +71,11 @@
         </div>
 
         <article data-uid="">
-<h1 id="changelog-6">Changelog 6</h1>
+<h1 id="changelog-7">Changelog 7</h1>
 
 <p><a href="https://plugin.onixclient.com/docs/5/guide/changelog.html">Previous Changelog</a></p>
 <h2 id="introduction">Introduction</h2>
-<p>This changelog documents what changed in the sixth update of the Plugins API.<br>
+<p>This changelog documents what changed in the seventh update of the Plugins API.<br>
 Since this is very early-access and the API is still being developed, there will be a lot of changes and breaking changes.<br>
 There will be a clear changelog for each update, so you can easily see what changed and what you need to do to adapt your plugin.<br>
 This update is pretty much the whole package, you need to update the client first, that should take care of the new runtime.<br>
@@ -83,12 +83,7 @@ With this update, the PluginManager UI should update automatically, so you can j
 <hr>
 <h2 id="breaking-changes">Breaking Changes</h2>
 <ul>
-<li>The <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_Raycast_">Raycast</a> function in <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html">WorldBlocks</a> now takes <a class="xref" href="../docs/OnixRuntime.Api.World.BlockShapeType.html">BlockShapeType</a> instead of the <code>isSolid</code>.</li>
-<li>The <a class="xref" href="../docs/OnixRuntime.Api.World.BlockEntity.html">BlockEntity</a> class no longer has a <code>Block</code> property, use <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetBlock_">WorldBlocks.GetBlock</a> with <a class="xref" href="../docs/OnixRuntime.Api.World.BlockEntity.html#OnixRuntime_Api_World_BlockEntity_Position">BlockEntity.Position</a> instead.
-<ul>
-<li>It wasn't accurate to the current state either before so that's better anyways.</li>
-</ul>
-</li>
+<li>There are no breaking changes, just new features.</li>
 </ul>
 <h2 id="runtime-changes">Runtime Changes</h2>
 <ul>
@@ -97,17 +92,31 @@ With this update, the PluginManager UI should update automatically, so you can j
 <br>
 <h3 id="new-features">New Features</h3>
 <ul>
-<li>Nothing that hasn't been mentionned in the breaking changes.</li>
+<li>There are new <a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a> functions now.
+<ul>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Orthographic_">TransformationMatrix.Orthographic()</a> creates an orthographic projection matrix.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveFov_">TransformationMatrix.PerspectiveFov()</a> creates a perspective projection matrix based on a field of view.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveSize_">TransformationMatrix.PerspectiveSize()</a> same as Fov but gets the aspect ration from the provided width/height.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_LookAt_">TransformationMatrix.LookAt()</a> creates a view matrix looking from one point to another.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Frustum_">TransformationMatrix.Frustum()</a> creates a perspective projection matrix based on the frustum parameters.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Invert_">TransformationMatrix.Invert()</a> creates an inverted version of the provided matrix.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Transpose_">TransformationMatrix.Transpose()</a> creates a transposed version of the provided matrix.</li>
 </ul>
-<br>
+</li>
+<li>You can now get the client version with <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_Version">Onix.Client.Version</a>!</li>
+<li>You can now open an <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a>'s settings page with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_OpenSettingsUi_">OnixModule.OpenSettingsUi()</a>.
+<br></li>
+</ul>
 <h3 id="bug-fixes">Bug Fixes</h3>
 <ul>
-<li>There was no bugs, so there was nothing to fix (real)
+<li>Fixed a bug where <a class="xref" href="../docs/OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_RenderMesh_">IGameRenderer.RenderMesh(...)</a> would not work on 1.21.111+.</li>
+<li>Fixed a crash that could occur when using <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetCollisions_">WorldBlocks.GetCollisions(...)</a>.</li>
+<li>Fixed a bug where getting some <a class="xref" href="../docs/OnixRuntime.Api.Options.GameOption.html">GameOptions</a> would always be null when it happened to happen too early.
 <br></li>
 </ul>
 <h3 id="version-updates">Version Updates</h3>
 <ul>
-<li>Now expects runtime version 6.</li>
+<li>Now expects runtime version 7.</li>
 </ul>
 
 </article>

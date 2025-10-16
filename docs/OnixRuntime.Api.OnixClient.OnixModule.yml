@@ -23,6 +23,7 @@ items:
   - OnixRuntime.Api.OnixClient.OnixModule.LoadFromJson(System.String)
   - OnixRuntime.Api.OnixClient.OnixModule.ModuleType
   - OnixRuntime.Api.OnixClient.OnixModule.Name
+  - OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi
   - OnixRuntime.Api.OnixClient.OnixModule.PluginUuid
   - OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI
   - OnixRuntime.Api.OnixClient.OnixModule.Save
@@ -743,6 +744,34 @@ items:
     content: public void RefreshSettingsInUI()
     content.vb: Public Sub RefreshSettingsInUI()
   overload: OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI*
+- uid: OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi
+  commentId: M:OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi
+  id: OpenSettingsUi
+  parent: OnixRuntime.Api.OnixClient.OnixModule
+  langs:
+  - csharp
+  - vb
+  name: OpenSettingsUi()
+  nameWithType: OnixModule.OpenSettingsUi()
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/OnixClient/OnixModule.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: OpenSettingsUi
+    path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
+    startLine: 469
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.OnixClient
+  summary: Opens the settings UI for this module, letting the user configure it.
+  example: []
+  syntax:
+    content: public void OpenSettingsUi()
+    content.vb: Public Sub OpenSettingsUi()
+  overload: OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi*
 - uid: OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
   commentId: M:OnixRuntime.Api.OnixClient.OnixModule.InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
   id: InsertSetting(OnixRuntime.Api.OnixClient.OnixSetting,System.Int32,OnixRuntime.Api.OnixClient.OnixModule.SettingInsertionPosition,System.Boolean)
@@ -761,7 +790,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InsertSetting
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 476
+    startLine: 481
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -815,7 +844,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: InsertSetting
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 490
+    startLine: 495
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -866,7 +895,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: StopLastCategoryHere
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 516
+    startLine: 521
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -894,7 +923,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Equality
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 526
+    startLine: 531
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -935,7 +964,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Inequality
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 535
+    startLine: 540
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -976,7 +1005,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Save
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 543
+    startLine: 548
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -1007,7 +1036,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Load
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 570
+    startLine: 575
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -1046,7 +1075,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Equals
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 593
+    startLine: 598
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -1085,7 +1114,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: GetHashCode
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 600
+    startLine: 605
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -1117,7 +1146,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: ToString
     path: ../OnixRuntime/OnixRuntime/Api/OnixClient/OnixModule.cs
-    startLine: 605
+    startLine: 610
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.OnixClient
@@ -1651,6 +1680,12 @@ references:
   name: RefreshSettingsInUI
   nameWithType: OnixModule.RefreshSettingsInUI
   fullName: OnixRuntime.Api.OnixClient.OnixModule.RefreshSettingsInUI
+- uid: OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi*
+  commentId: Overload:OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi
+  href: OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_OpenSettingsUi
+  name: OpenSettingsUi
+  nameWithType: OnixModule.OpenSettingsUi
+  fullName: OnixRuntime.Api.OnixClient.OnixModule.OpenSettingsUi
 - uid: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
   commentId: T:OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException
   href: OnixRuntime.Api.OnixClient.SettingAlreadyHasAParentException.html

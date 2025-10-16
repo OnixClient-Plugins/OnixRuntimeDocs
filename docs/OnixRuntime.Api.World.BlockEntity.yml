@@ -5,7 +5,6 @@ items:
   id: BlockEntity
   parent: OnixRuntime.Api.World
   children:
-  - OnixRuntime.Api.World.BlockEntity.Block
   - OnixRuntime.Api.World.BlockEntity.BoundingBox
   - OnixRuntime.Api.World.BlockEntity.Container
   - OnixRuntime.Api.World.BlockEntity.Position
@@ -77,37 +76,6 @@ items:
       type: System.Int32
     content.vb: Public ReadOnly Property TickCount As Integer
   overload: OnixRuntime.Api.World.BlockEntity.TickCount*
-- uid: OnixRuntime.Api.World.BlockEntity.Block
-  commentId: P:OnixRuntime.Api.World.BlockEntity.Block
-  id: Block
-  parent: OnixRuntime.Api.World.BlockEntity
-  langs:
-  - csharp
-  - vb
-  name: Block
-  nameWithType: BlockEntity.Block
-  fullName: OnixRuntime.Api.World.BlockEntity.Block
-  type: Property
-  source:
-    remote:
-      path: OnixRuntime/Api/World/BlockEntity.cs
-      branch: dev
-      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
-    id: Block
-    path: ../OnixRuntime/OnixRuntime/Api/World/BlockEntity.cs
-    startLine: 23
-  assemblies:
-  - OnixRuntime
-  namespace: OnixRuntime.Api.World
-  summary: Gets the block associated with this block entity.
-  example: []
-  syntax:
-    content: public Block Block { get; }
-    parameters: []
-    return:
-      type: OnixRuntime.Api.World.Block
-    content.vb: Public ReadOnly Property Block As Block
-  overload: OnixRuntime.Api.World.BlockEntity.Block*
 - uid: OnixRuntime.Api.World.BlockEntity.Position
   commentId: P:OnixRuntime.Api.World.BlockEntity.Position
   id: Position
@@ -126,7 +94,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Position
     path: ../OnixRuntime/OnixRuntime/Api/World/BlockEntity.cs
-    startLine: 27
+    startLine: 23
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -157,7 +125,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: BoundingBox
     path: ../OnixRuntime/OnixRuntime/Api/World/BlockEntity.cs
-    startLine: 31
+    startLine: 27
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -188,7 +156,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Container
     path: ../OnixRuntime/OnixRuntime/Api/World/BlockEntity.cs
-    startLine: 35
+    startLine: 31
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -219,7 +187,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: SaveToNbt
     path: ../OnixRuntime/OnixRuntime/Api/World/BlockEntity.cs
-    startLine: 40
+    startLine: 36
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.World
@@ -578,19 +546,6 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: OnixRuntime.Api.World.BlockEntity.Block*
-  commentId: Overload:OnixRuntime.Api.World.BlockEntity.Block
-  href: OnixRuntime.Api.World.BlockEntity.html#OnixRuntime_Api_World_BlockEntity_Block
-  name: Block
-  nameWithType: BlockEntity.Block
-  fullName: OnixRuntime.Api.World.BlockEntity.Block
-- uid: OnixRuntime.Api.World.Block
-  commentId: T:OnixRuntime.Api.World.Block
-  parent: OnixRuntime.Api.World
-  href: OnixRuntime.Api.World.Block.html
-  name: Block
-  nameWithType: Block
-  fullName: OnixRuntime.Api.World.Block
 - uid: OnixRuntime.Api.World.BlockEntity.Position*
   commentId: Overload:OnixRuntime.Api.World.BlockEntity.Position
   href: OnixRuntime.Api.World.BlockEntity.html#OnixRuntime_Api_World_BlockEntity_Position

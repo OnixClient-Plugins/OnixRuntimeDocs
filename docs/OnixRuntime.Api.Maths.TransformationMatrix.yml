@@ -12,6 +12,7 @@ items:
   - OnixRuntime.Api.Maths.TransformationMatrix.D2d3x2_4
   - OnixRuntime.Api.Maths.TransformationMatrix.D2d3x2_5
   - OnixRuntime.Api.Maths.TransformationMatrix.D2d3x2_6
+  - OnixRuntime.Api.Maths.TransformationMatrix.Frustum(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
   - OnixRuntime.Api.Maths.TransformationMatrix.Glm4x4_1
   - OnixRuntime.Api.Maths.TransformationMatrix.Glm4x4_10
   - OnixRuntime.Api.Maths.TransformationMatrix.Glm4x4_11
@@ -29,10 +30,17 @@ items:
   - OnixRuntime.Api.Maths.TransformationMatrix.Glm4x4_8
   - OnixRuntime.Api.Maths.TransformationMatrix.Glm4x4_9
   - OnixRuntime.Api.Maths.TransformationMatrix.Identity
+  - OnixRuntime.Api.Maths.TransformationMatrix.Invert
+  - OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace
+  - OnixRuntime.Api.Maths.TransformationMatrix.LookAt(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness)
   - OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.Quaternion)
   - OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.TransformationMatrix)
+  - OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.Vec4)
   - OnixRuntime.Api.Maths.TransformationMatrix.MultiplyInplace(OnixRuntime.Api.Maths.Quaternion)
   - OnixRuntime.Api.Maths.TransformationMatrix.MultiplyInplace(OnixRuntime.Api.Maths.TransformationMatrix)
+  - OnixRuntime.Api.Maths.TransformationMatrix.Orthographic(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  - OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov(System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  - OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize(System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
   - OnixRuntime.Api.Maths.TransformationMatrix.Rotate(System.Single)
   - OnixRuntime.Api.Maths.TransformationMatrix.Rotate(System.Single,OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.TransformationMatrix.Rotate(System.Single,System.Single,System.Single,System.Single)
@@ -52,8 +60,10 @@ items:
   - OnixRuntime.Api.Maths.TransformationMatrix.Translate(System.Single,System.Single,System.Single)
   - OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(OnixRuntime.Api.Maths.Vec3)
   - OnixRuntime.Api.Maths.TransformationMatrix.TranslateWorldPosition(System.Single,System.Single,System.Single)
+  - OnixRuntime.Api.Maths.TransformationMatrix.Transpose
   - OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Quaternion)
   - OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.TransformationMatrix)
+  - OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Vec4)
   langs:
   - csharp
   - vb
@@ -1500,6 +1510,354 @@ items:
       type: OnixRuntime.Api.Maths.Vec2
     content.vb: Public Function Transform(position As Vec2) As Vec2
   overload: OnixRuntime.Api.Maths.TransformationMatrix.Transform*
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Invert
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.Invert
+  id: Invert
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: Invert()
+  nameWithType: TransformationMatrix.Invert()
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Invert()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Invert
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 176
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns the inverse of the current transformation matrix.
+  example: []
+  syntax:
+    content: public TransformationMatrix Invert()
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: A new <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> that is the inverse of this matrix.
+    content.vb: Public Function Invert() As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.Invert*
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace
+  id: InvertInPlace
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: InvertInPlace()
+  nameWithType: TransformationMatrix.InvertInPlace()
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: InvertInPlace
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 186
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Inverts the current transformation matrix in place.
+  example: []
+  syntax:
+    content: public TransformationMatrix InvertInPlace()
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: The same <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> instance after inversion.
+    content.vb: Public Function InvertInPlace() As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace*
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Transpose
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.Transpose
+  id: Transpose
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: Transpose()
+  nameWithType: TransformationMatrix.Transpose()
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Transpose()
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Transpose
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 195
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Returns the transpose of the current transformation matrix.
+  example: []
+  syntax:
+    content: public TransformationMatrix Transpose()
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: A new <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> representing the transposed matrix.
+    content.vb: Public Function Transpose() As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.Transpose*
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.LookAt(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.LookAt(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness)
+  id: LookAt(OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.Vec3,OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness)
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: LookAt(Vec3, Vec3, Vec3, ViewHandedness)
+  nameWithType: TransformationMatrix.LookAt(Vec3, Vec3, Vec3, TransformationMatrix.ViewHandedness)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.LookAt(OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.Vec3, OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: LookAt
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 208
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Builds a view matrix for a camera positioned at <code class="paramref">eye</code> looking toward <code class="paramref">center</code> with the specified <code class="paramref">up</code> direction.
+  example: []
+  syntax:
+    content: public static TransformationMatrix LookAt(Vec3 eye, Vec3 center, Vec3 up, TransformationMatrix.ViewHandedness handness = ViewHandedness.Default)
+    parameters:
+    - id: eye
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The camera position in world space.
+    - id: center
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The point the camera is looking at.
+    - id: up
+      type: OnixRuntime.Api.Maths.Vec3
+      description: The upward direction vector.
+    - id: handness
+      type: OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: A new <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> representing the view transformation.
+    content.vb: Public Shared Function LookAt(eye As Vec3, center As Vec3, up As Vec3, handness As TransformationMatrix.ViewHandedness = ViewHandedness.Default) As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.LookAt*
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Frustum(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.Frustum(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: Frustum(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: Frustum(float, float, float, float, float, float)
+  nameWithType: TransformationMatrix.Frustum(float, float, float, float, float, float)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Frustum(float, float, float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Frustum
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 224
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Creates a perspective projection matrix defined by the specified frustum parameters.
+  example: []
+  syntax:
+    content: public static TransformationMatrix Frustum(float left, float right, float bottom, float top, float near = 0.025, float far = 2500)
+    parameters:
+    - id: left
+      type: System.Single
+      description: The coordinate of the left vertical clipping plane.
+    - id: right
+      type: System.Single
+      description: The coordinate of the right vertical clipping plane.
+    - id: bottom
+      type: System.Single
+      description: The coordinate of the bottom horizontal clipping plane.
+    - id: top
+      type: System.Single
+      description: The coordinate of the top horizontal clipping plane.
+    - id: near
+      type: System.Single
+      description: The distance to the near depth clipping plane.
+    - id: far
+      type: System.Single
+      description: The distance to the far depth clipping plane.
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: A new <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> representing the frustum projection.
+    content.vb: Public Shared Function Frustum(left As Single, right As Single, bottom As Single, top As Single, near As Single = 0.025, far As Single = 2500) As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.Frustum*
+  nameWithType.vb: TransformationMatrix.Frustum(Single, Single, Single, Single, Single, Single)
+  fullName.vb: OnixRuntime.Api.Maths.TransformationMatrix.Frustum(Single, Single, Single, Single, Single, Single)
+  name.vb: Frustum(Single, Single, Single, Single, Single, Single)
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Orthographic(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.Orthographic(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  id: Orthographic(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: Orthographic(float, float, float, float, float, float, PerspectiveHandedness)
+  nameWithType: TransformationMatrix.Orthographic(float, float, float, float, float, float, TransformationMatrix.PerspectiveHandedness)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Orthographic(float, float, float, float, float, float, OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Orthographic
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 241
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Creates an orthographic projection matrix with the specified bounds.
+  example: []
+  syntax:
+    content: public static TransformationMatrix Orthographic(float left, float right, float bottom, float top, float near = 0.025, float far = 2500, TransformationMatrix.PerspectiveHandedness handness = PerspectiveHandedness.Default)
+    parameters:
+    - id: left
+      type: System.Single
+      description: The coordinate of the left vertical clipping plane.
+    - id: right
+      type: System.Single
+      description: The coordinate of the right vertical clipping plane.
+    - id: bottom
+      type: System.Single
+      description: The coordinate of the bottom horizontal clipping plane.
+    - id: top
+      type: System.Single
+      description: The coordinate of the top horizontal clipping plane.
+    - id: near
+      type: System.Single
+      description: The distance to the near depth clipping plane.
+    - id: far
+      type: System.Single
+      description: The distance to the far depth clipping plane.
+    - id: handness
+      type: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+      description: The handedness and depth range convention to use for the orthographic projection.
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: A new <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> representing the orthographic projection.
+    content.vb: Public Shared Function Orthographic(left As Single, right As Single, bottom As Single, top As Single, near As Single = 0.025, far As Single = 2500, handness As TransformationMatrix.PerspectiveHandedness = PerspectiveHandedness.Default) As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.Orthographic*
+  nameWithType.vb: TransformationMatrix.Orthographic(Single, Single, Single, Single, Single, Single, TransformationMatrix.PerspectiveHandedness)
+  fullName.vb: OnixRuntime.Api.Maths.TransformationMatrix.Orthographic(Single, Single, Single, Single, Single, Single, OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  name.vb: Orthographic(Single, Single, Single, Single, Single, Single, PerspectiveHandedness)
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov(System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov(System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  id: PerspectiveFov(System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: PerspectiveFov(float, float, float, float, PerspectiveHandedness)
+  nameWithType: TransformationMatrix.PerspectiveFov(float, float, float, float, TransformationMatrix.PerspectiveHandedness)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov(float, float, float, float, OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PerspectiveFov
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 256
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Creates a perspective projection matrix using a vertical field of view and aspect ratio.
+  example: []
+  syntax:
+    content: public static TransformationMatrix PerspectiveFov(float fovYInDegrees, float aspect, float near = 0.025, float far = 2500, TransformationMatrix.PerspectiveHandedness handness = PerspectiveHandedness.Default)
+    parameters:
+    - id: fovYInDegrees
+      type: System.Single
+      description: The vertical field of view in degrees.
+    - id: aspect
+      type: System.Single
+      description: The aspect ratio (width divided by height).
+    - id: near
+      type: System.Single
+      description: The distance to the near depth clipping plane.
+    - id: far
+      type: System.Single
+      description: The distance to the far depth clipping plane.
+    - id: handness
+      type: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+      description: The handedness and depth range convention to use for the orthographic projection.
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: A new <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> representing the perspective projection.
+    content.vb: Public Shared Function PerspectiveFov(fovYInDegrees As Single, aspect As Single, near As Single = 0.025, far As Single = 2500, handness As TransformationMatrix.PerspectiveHandedness = PerspectiveHandedness.Default) As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov*
+  nameWithType.vb: TransformationMatrix.PerspectiveFov(Single, Single, Single, Single, TransformationMatrix.PerspectiveHandedness)
+  fullName.vb: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov(Single, Single, Single, Single, OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  name.vb: PerspectiveFov(Single, Single, Single, Single, PerspectiveHandedness)
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize(System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize(System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  id: PerspectiveSize(System.Single,System.Single,System.Single,System.Single,System.Single,OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: PerspectiveSize(float, float, float, float, float, PerspectiveHandedness)
+  nameWithType: TransformationMatrix.PerspectiveSize(float, float, float, float, float, TransformationMatrix.PerspectiveHandedness)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize(float, float, float, float, float, OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: PerspectiveSize
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 272
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Creates a perspective projection matrix based on a field of view and viewport size.
+  example: []
+  syntax:
+    content: public static TransformationMatrix PerspectiveSize(float fovYInDegrees, float width, float height, float near = 0.025, float far = 2500, TransformationMatrix.PerspectiveHandedness handness = PerspectiveHandedness.Default)
+    parameters:
+    - id: fovYInDegrees
+      type: System.Single
+      description: The vertical field of view in degrees.
+    - id: width
+      type: System.Single
+      description: The viewport width.
+    - id: height
+      type: System.Single
+      description: The viewport height.
+    - id: near
+      type: System.Single
+      description: The distance to the near depth clipping plane.
+    - id: far
+      type: System.Single
+      description: The distance to the far depth clipping plane.
+    - id: handness
+      type: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+      description: The handedness and depth range convention to use for the orthographic projection.
+    return:
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+      description: A new <xref href="OnixRuntime.Api.Maths.TransformationMatrix" data-throw-if-not-resolved="false"></xref> representing the perspective projection.
+    content.vb: Public Shared Function PerspectiveSize(fovYInDegrees As Single, width As Single, height As Single, near As Single = 0.025, far As Single = 2500, handness As TransformationMatrix.PerspectiveHandedness = PerspectiveHandedness.Default) As TransformationMatrix
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize*
+  nameWithType.vb: TransformationMatrix.PerspectiveSize(Single, Single, Single, Single, Single, TransformationMatrix.PerspectiveHandedness)
+  fullName.vb: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize(Single, Single, Single, Single, Single, OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness)
+  name.vb: PerspectiveSize(Single, Single, Single, Single, Single, PerspectiveHandedness)
 - uid: OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.TransformationMatrix)
   commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.TransformationMatrix)
   id: Multiply(OnixRuntime.Api.Maths.TransformationMatrix)
@@ -1518,7 +1876,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
-    startLine: 175
+    startLine: 343
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1551,7 +1909,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MultiplyInplace
     path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
-    startLine: 183
+    startLine: 351
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1584,7 +1942,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
-    startLine: 190
+    startLine: 358
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1622,7 +1980,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
-    startLine: 194
+    startLine: 362
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1655,7 +2013,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: MultiplyInplace
     path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
-    startLine: 202
+    startLine: 370
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1670,6 +2028,44 @@ items:
       type: OnixRuntime.Api.Maths.TransformationMatrix
     content.vb: Public Function MultiplyInplace(rotation As Quaternion) As TransformationMatrix
   overload: OnixRuntime.Api.Maths.TransformationMatrix.MultiplyInplace*
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.Vec4)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.Vec4)
+  id: Multiply(OnixRuntime.Api.Maths.Vec4)
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Vec4)
+  nameWithType: TransformationMatrix.Multiply(Vec4)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Multiply(OnixRuntime.Api.Maths.Vec4)
+  type: Method
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: Multiply
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 382
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Multiplies the current transformation matrix by the specified 4D vector.
+  remarks: >-
+    This method applies the transformation represented by the current matrix to the given
+        vector. The input vector is modified in place and returned as the result.
+  example: []
+  syntax:
+    content: public Vec4 Multiply(Vec4 point)
+    parameters:
+    - id: point
+      type: OnixRuntime.Api.Maths.Vec4
+      description: The 4D vector to be transformed by the matrix.
+    return:
+      type: OnixRuntime.Api.Maths.Vec4
+      description: The transformed 4D vector resulting from the multiplication.
+    content.vb: Public Function Multiply(point As Vec4) As Vec4
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.Multiply*
 - uid: OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Quaternion)
   commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Quaternion)
   id: op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Quaternion)
@@ -1688,7 +2084,7 @@ items:
       repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
     id: op_Multiply
     path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
-    startLine: 209
+    startLine: 389
   assemblies:
   - OnixRuntime
   namespace: OnixRuntime.Api.Maths
@@ -1708,6 +2104,44 @@ items:
   nameWithType.vb: TransformationMatrix.*(TransformationMatrix, Quaternion)
   fullName.vb: OnixRuntime.Api.Maths.TransformationMatrix.*(OnixRuntime.Api.Maths.TransformationMatrix, OnixRuntime.Api.Maths.Quaternion)
   name.vb: '*(TransformationMatrix, Quaternion)'
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Vec4)
+  commentId: M:OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Vec4)
+  id: op_Multiply(OnixRuntime.Api.Maths.TransformationMatrix,OnixRuntime.Api.Maths.Vec4)
+  parent: OnixRuntime.Api.Maths.TransformationMatrix
+  langs:
+  - csharp
+  - vb
+  name: operator *(TransformationMatrix, Vec4)
+  nameWithType: TransformationMatrix.operator *(TransformationMatrix, Vec4)
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.operator *(OnixRuntime.Api.Maths.TransformationMatrix, OnixRuntime.Api.Maths.Vec4)
+  type: Operator
+  source:
+    remote:
+      path: OnixRuntime/Api/Maths/TransformationMatrix.cs
+      branch: dev
+      repo: https://github.com/OnixClient-Plugins/OnixRuntime.git
+    id: op_Multiply
+    path: ../OnixRuntime/OnixRuntime/Api/Maths/TransformationMatrix.cs
+    startLine: 393
+  assemblies:
+  - OnixRuntime
+  namespace: OnixRuntime.Api.Maths
+  summary: Multiplies a transformation matrix by a quaternion.
+  example: []
+  syntax:
+    content: public static Vec4 operator *(TransformationMatrix left, Vec4 right)
+    parameters:
+    - id: left
+      type: OnixRuntime.Api.Maths.TransformationMatrix
+    - id: right
+      type: OnixRuntime.Api.Maths.Vec4
+    return:
+      type: OnixRuntime.Api.Maths.Vec4
+    content.vb: Public Shared Operator *(left As TransformationMatrix, right As Vec4) As Vec4
+  overload: OnixRuntime.Api.Maths.TransformationMatrix.op_Multiply*
+  nameWithType.vb: TransformationMatrix.*(TransformationMatrix, Vec4)
+  fullName.vb: OnixRuntime.Api.Maths.TransformationMatrix.*(OnixRuntime.Api.Maths.TransformationMatrix, OnixRuntime.Api.Maths.Vec4)
+  name.vb: '*(TransformationMatrix, Vec4)'
 references:
 - uid: OnixRuntime.Api.Maths
   commentId: N:OnixRuntime.Api.Maths
@@ -2051,6 +2485,100 @@ references:
   name: Transform
   nameWithType: TransformationMatrix.Transform
   fullName: OnixRuntime.Api.Maths.TransformationMatrix.Transform
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Invert*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.Invert
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Invert
+  name: Invert
+  nameWithType: TransformationMatrix.Invert
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Invert
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_InvertInPlace
+  name: InvertInPlace
+  nameWithType: TransformationMatrix.InvertInPlace
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.InvertInPlace
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Transpose*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.Transpose
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Transpose
+  name: Transpose
+  nameWithType: TransformationMatrix.Transpose
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Transpose
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.LookAt*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.LookAt
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_LookAt_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_Vec3_OnixRuntime_Api_Maths_TransformationMatrix_ViewHandedness_
+  name: LookAt
+  nameWithType: TransformationMatrix.LookAt
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.LookAt
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness
+  commentId: T:OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  name: TransformationMatrix.ViewHandedness
+  nameWithType: TransformationMatrix.ViewHandedness
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness
+  spec.csharp:
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix
+    name: TransformationMatrix
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness
+    name: ViewHandedness
+    href: OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix
+    name: TransformationMatrix
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness
+    name: ViewHandedness
+    href: OnixRuntime.Api.Maths.TransformationMatrix.ViewHandedness.html
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Frustum*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.Frustum
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Frustum_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: Frustum
+  nameWithType: TransformationMatrix.Frustum
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Frustum
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.Orthographic*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.Orthographic
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Orthographic_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveHandedness_
+  name: Orthographic
+  nameWithType: TransformationMatrix.Orthographic
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.Orthographic
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+  commentId: T:OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  name: TransformationMatrix.PerspectiveHandedness
+  nameWithType: TransformationMatrix.PerspectiveHandedness
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+  spec.csharp:
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix
+    name: TransformationMatrix
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+    name: PerspectiveHandedness
+    href: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness.html
+  spec.vb:
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix
+    name: TransformationMatrix
+    href: OnixRuntime.Api.Maths.TransformationMatrix.html
+  - name: .
+  - uid: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness
+    name: PerspectiveHandedness
+    href: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveHandedness.html
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveFov_System_Single_System_Single_System_Single_System_Single_OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveHandedness_
+  name: PerspectiveFov
+  nameWithType: TransformationMatrix.PerspectiveFov
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveFov
+- uid: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize*
+  commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize
+  href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveSize_System_Single_System_Single_System_Single_System_Single_System_Single_OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveHandedness_
+  name: PerspectiveSize
+  nameWithType: TransformationMatrix.PerspectiveSize
+  fullName: OnixRuntime.Api.Maths.TransformationMatrix.PerspectiveSize
 - uid: OnixRuntime.Api.Maths.TransformationMatrix.Multiply*
   commentId: Overload:OnixRuntime.Api.Maths.TransformationMatrix.Multiply
   href: OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Multiply_OnixRuntime_Api_Maths_TransformationMatrix_
@@ -2085,3 +2613,10 @@ references:
   name: Quaternion
   nameWithType: Quaternion
   fullName: OnixRuntime.Api.Maths.Quaternion
+- uid: OnixRuntime.Api.Maths.Vec4
+  commentId: T:OnixRuntime.Api.Maths.Vec4
+  parent: OnixRuntime.Api.Maths
+  href: OnixRuntime.Api.Maths.Vec4.html
+  name: Vec4
+  nameWithType: Vec4
+  fullName: OnixRuntime.Api.Maths.Vec4

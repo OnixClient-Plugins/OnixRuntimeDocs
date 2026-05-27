@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Changelog 7 | Onix Plugin Documentation </title>
+      <title>Changelog 8 | Onix Plugin Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Changelog 7 | Onix Plugin Documentation ">
+      <meta name="title" content="Changelog 8 | Onix Plugin Documentation ">
       
       
       <link rel="icon" href="../images/favicon.ico">
@@ -71,11 +71,11 @@
         </div>
 
         <article data-uid="">
-<h1 id="changelog-7">Changelog 7</h1>
+<h1 id="changelog-8">Changelog 8</h1>
 
-<p><a href="https://plugin.onixclient.com/docs/5/guide/changelog.html">Previous Changelog</a></p>
+<p><a href="https://plugin.onixclient.com/docs/7/guide/changelog.html">Previous Changelog</a></p>
 <h2 id="introduction">Introduction</h2>
-<p>This changelog documents what changed in the seventh update of the Plugins API.<br>
+<p>This changelog documents what changed in the eith update of the Plugins API.<br>
 Since this is very early-access and the API is still being developed, there will be a lot of changes and breaking changes.<br>
 There will be a clear changelog for each update, so you can easily see what changed and what you need to do to adapt your plugin.<br>
 This update is pretty much the whole package, you need to update the client first, that should take care of the new runtime.<br>
@@ -83,40 +83,108 @@ With this update, the PluginManager UI should update automatically, so you can j
 <hr>
 <h2 id="breaking-changes">Breaking Changes</h2>
 <ul>
-<li>There are no breaking changes, just new features.</li>
+<li>dotnet10 support! You will need to set your projects's .net version to 10.0 and update the language version to 14 for the new runtime.</li>
+<li>Block.States are now <a class="xref" href="../docs/OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_RawStates">Block.RawStates</a> and Block.GetState is now replaced with <a class="xref" href="../docs/OnixRuntime.Api.World.Block.html#OnixRuntime_Api_World_Block_GetStateValue_">Block.GetStateValue</a></li>
 </ul>
 <h2 id="runtime-changes">Runtime Changes</h2>
 <ul>
-<li>There were no runtime changes this update.</li>
+<li>Server commands and soft enumeration values autocompletion is sent to other clients with plugins enabled.</li>
 </ul>
 <br>
 <h3 id="new-features">New Features</h3>
 <ul>
-<li>There are new <a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a> functions now.
+<li>You can now control/override the player's text shadow setting in <a class="xref" href="../docs/OnixRuntime.Api.Rendering.RendererCommon.html#OnixRuntime_Api_Rendering_RendererCommon_FontShadowType">RendererCommon.FontShadowType</a> with the options from <a class="xref" href="../docs/OnixRuntime.Api.Rendering.FontShadowType.html">FontShadowType</a>.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Rendering.OnixDebugDraw.html">Onix.DebugDraw</a> has been added! You can now draw various shapes in the world from any thread for quick debugging only purposes.</li>
+<li>You can now access module aliases with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_Aliases">OnixModule.Aliases</a>. Which is useful when making your own UI and just brings new client additions to C#.</li>
+<li>Similarly, you can now access <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_IsNew">OnixModule.IsNew</a> to check if a module is considered new or not. This shows up in the UI as the NEW bubble.</li>
+<li>Added the <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixClientThemeV3.html#OnixRuntime_Api_OnixClient_OnixClientThemeV3_SmallBubble_">SmallBubble</a> color to <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixClientThemeV3.html">OnixClientThemeV3</a> for the background of that NEW bubble and other things in the future.</li>
+<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Items.ItemStack.html#OnixRuntime_Api_Items_ItemStack_GetIcon_">ItemStack.GetIcon</a> which gets the item's texture coordinates in the item atlas texture.</li>
+<li>Added <a class="xref" href="../docs/OnixRuntime.Api.ResourcePacks.PackManager.html#OnixRuntime_Api_ResourcePacks_PackManager_LoadContentString_">PackManager.LoadContentString</a> and <a class="xref" href="../docs/OnixRuntime.Api.ResourcePacks.PackManager.html#OnixRuntime_Api_ResourcePacks_PackManager_LoadContentOrNullString_">PackManager.LoadContentOrNullString</a> functions to get the content as a UTF-8 string.
 <ul>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Orthographic_">TransformationMatrix.Orthographic()</a> creates an orthographic projection matrix.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveFov_">TransformationMatrix.PerspectiveFov()</a> creates a perspective projection matrix based on a field of view.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_PerspectiveSize_">TransformationMatrix.PerspectiveSize()</a> same as Fov but gets the aspect ration from the provided width/height.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_LookAt_">TransformationMatrix.LookAt()</a> creates a view matrix looking from one point to another.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Frustum_">TransformationMatrix.Frustum()</a> creates a perspective projection matrix based on the frustum parameters.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Invert_">TransformationMatrix.Invert()</a> creates an inverted version of the provided matrix.</li>
-<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html#OnixRuntime_Api_Maths_TransformationMatrix_Transpose_">TransformationMatrix.Transpose()</a> creates a transposed version of the provided matrix.</li>
+<li>Also added them in <a class="xref" href="../docs/OnixRuntime.Api.ResourcePacks.PackAssetLoader.html#OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContentString_">PackAssetLoader.GetContentString</a> and <a class="xref" href="../docs/OnixRuntime.Api.ResourcePacks.PackAssetLoader.html#OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContentOrNullString_">PackAssetLoader.GetContentOrNullString</a>.</li>
 </ul>
 </li>
-<li>You can now get the client version with <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_Version">Onix.Client.Version</a>!</li>
-<li>You can now open an <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html">OnixModule</a>'s settings page with <a class="xref" href="../docs/OnixRuntime.Api.OnixClient.OnixModule.html#OnixRuntime_Api_OnixClient_OnixModule_OpenSettingsUi_">OnixModule.OpenSettingsUi()</a>.
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a> has been added, it lets the user enable/disable entries and reorganize them in any order. It's very versatile and customizable.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.OnixClientPaths.html">Onix.Paths</a> is now available, allowing you to easily get to various game paths that GDK made annoying to get. It's good for UWP, GDK and the changes that happened in GDK for these.</li>
+<li>The <a class="xref" href="../docs/OnixRuntime.Api.Maths.RectI.html">RectI</a> struct has been added to allow integer based rectangles which were useful for new features.</li>
+<li><a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html">BlockPos</a> now has an <a class="xref" href="../docs/OnixRuntime.Api.Maths.BlockPos.html#OnixRuntime_Api_Maths_BlockPos_Offset_">Offset</a> function taking a <a class="xref" href="../docs/OnixRuntime.Api.World.BlockFace.html">BlockFace</a> to offset towards any direction easily.</li>
+<li>Added matrix handness functions to allow making left/right handed matrices with <a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrix.html">TransformationMatrix</a></li>
+<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Maths.TransformationMatrixAura.html">TransformationMatrixAura</a> which is a 4x4 matrix struct taking a regular matrix. The normal one includes a direct 2d matrix and is not suitable for Direct X buffers as a result.à</li>
+<li>All math types have their WithX/Y/Z functions now.</li>
+<li>Plugin Message Connection! You can now as the host send arbitrary data to another client running plugins.
+<ul>
+<li>This is probably going to be broken in a few ways at first, but it should get there if someone wants to use it.</li>
+<li>You can receive messages from just your own plugin with matching version by default or interop with other plugins/older versions.</li>
+<li>The client events (client side receiving from the server) are in <a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventsSession.html#OnixRuntime_Api_Events_OnixEventsSession_PluginMessageConnection">Onix.Events.Session.PluginMessageConnection</a></li>
+<li>The server events (client sending message to the server) are in <a class="xref" href="../docs/OnixRuntime.Api.Events.LocalServer.OnixEventLocalServer.html#OnixRuntime_Api_Events_LocalServer_OnixEventLocalServer_PluginMessageConnection">Onix.Events.LocalServer.PluginMessageConnection</a></li>
+<li>You can send a message to the server with <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_SendPluginMessage_">Onix.Client.SendPluginMessage()</a> when <a class="xref" href="../docs/OnixRuntime.Api.OnixClientThings.html#OnixRuntime_Api_OnixClientThings_PluginConnectionEstablished">Onix.Client.PluginConnectionEstablished</a> is true.</li>
+<li>You can send a message to a client/player with <a class="xref" href="../docs/OnixRuntime.Api.Entities.ServerPlayer.html#OnixRuntime_Api_Entities_ServerPlayer_SendPluginMessage_">ServerPlayer.SendPluginMessage()</a> when <a class="xref" href="../docs/OnixRuntime.Api.Entities.ServerPlayer.html#OnixRuntime_Api_Entities_ServerPlayer_PluginConnectionEstablished">ServerPlayer.PluginConnectionEstablished</a></li>
+<li>Bytes or string, it's up to you! But you must know what you're expecting to receive on the other end.</li>
+</ul>
+</li>
+<li>Added <a class="xref" href="../docs/OnixRuntime.Api.Entities.LocalPlayer.html#OnixRuntime_Api_Entities_LocalPlayer_OpenInventory">LocalPlayer.OpenInventory</a> which will open the inventory eventually. Don't spam it though, with server ping it could be some time before the screen updates/opens.</li>
+<li>Added Modal Forms! The raw events are still there, you have a generic event and you also have typed events for each form type.
+<ul>
+<li>Generic:
+<ul>
+<li>Receive and Response Events: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_AnyRequest">Onix.Events.Session.ModalForm.AnyRequest</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_AnyResponse">Onix.Events.Session.ModalForm.AnyResponse</a></li>
+<li>Parsed Class and Replier: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormAny.html">ModalFormAny</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormReplierAny.html">ModalFormReplierAny</a></li>
+</ul>
+</li>
+<li>Modal:
+<ul>
+<li>Receive and Response Events: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_ModalRequest">Onix.Events.Session.ModalForm.ModalRequest</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_ModalResponse">Onix.Events.Session.ModalForm.ModalResponse</a></li>
+<li>Parsed Class and Replier: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormModal.html">ModalFormModal</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormModalReplier.html">ModalFormModalReplier</a></li>
+</ul>
+</li>
+<li>Form:
+<ul>
+<li>Receive and Response Events: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_FormRequest">Onix.Events.Session.ModalForm.FormRequest</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_FormResponse">Onix.Events.Session.ModalForm.FormResponse</a></li>
+<li>Parsed Class and Replier: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormForm.html">ModalFormForm</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormFormReplier.html">ModalFormFormReplier</a></li>
+</ul>
+</li>
+<li>CustomForm:
+<ul>
+<li>Receive and Response Events: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_CustomRequest">Onix.Events.Session.ModalForm.CustomRequest</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html#OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_CustomResponse">Onix.Events.Session.ModalForm.CustomResponse</a></li>
+<li>Parsed Class and Replier: <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a> and <a class="xref" href="../docs/OnixRuntime.Api.Events.Session.ModalFormCustomReplier.html">ModalFormCustomReplier</a></li>
+</ul>
+</li>
+<li>Let me know if there is interest into receiving/sending them to local server players.</li>
+<li>As it is, it allows editing the forms and making your own ones. Would just need a player.SendModalForm() and an event for the response.</li>
+</ul>
+</li>
+<li>Added the <a class="xref" href="../docs/OnixRuntime.Api.Events.OnixEventScheduler.html">Scheduler</a>! This is the best thing ever and will save you decades and a lot of ugly code. It lets you interact with the game in an async context.
+<ul>
+<li>Check it out, it might just be the second best thing from this release. Note: you can schedule events even when your plugin isn't enabled so be careful what you do without an onEnabled call.</li>
+</ul>
+</li>
+<li>Added AURA. Go crazy! Aura is a DirectX wrapper that allows you to use the GPU in a low level way on all supported game backends.</li>
+<li>You will need these examples at <a href="https://github.com/OnixClient-Plugins/AuraExamplePlugin">https://github.com/OnixClient-Plugins/AuraExamplePlugin</a></li>
+<li>Some DirectX 11 and above experience would be beneficial.
 <br></li>
 </ul>
 <h3 id="bug-fixes">Bug Fixes</h3>
 <ul>
-<li>Fixed a bug where <a class="xref" href="../docs/OnixRuntime.Api.Rendering.IGameRenderer.html#OnixRuntime_Api_Rendering_IGameRenderer_RenderMesh_">IGameRenderer.RenderMesh(...)</a> would not work on 1.21.111+.</li>
-<li>Fixed a crash that could occur when using <a class="xref" href="../docs/OnixRuntime.Api.World.WorldBlocks.html#OnixRuntime_Api_World_WorldBlocks_GetCollisions_">WorldBlocks.GetCollisions(...)</a>.</li>
-<li>Fixed a bug where getting some <a class="xref" href="../docs/OnixRuntime.Api.Options.GameOption.html">GameOptions</a> would always be null when it happened to happen too early.
+<li>SetHardcore now refreshes the heart containers for the local player instead of needing a relog.</li>
+<li>Fix an issue with NBT from the client to C# sometimes crashing. That's with any NBT ever, yet it was rare for it to trigger.</li>
+<li>Fix WorldBlocks.CreateForServer creating a client sided version.</li>
+<li>RaycastResult.Clone now doesn't require a logic thread and can be called from any thread. Allowing raycasts to happen on background threads.</li>
+<li>Fix requiring no .dll extensions for external assemblies. Now you can include .dll in your [DllImport] calls. (Or more likely the library you're importing can.)
+<ul>
+<li>Also now releasing references to imported native DLLs when a plugin is unloaded.</li>
+</ul>
+</li>
+<li>Fix <a class="xref" href="../docs/OnixRuntime.Api.ResourcePacks.PackAssetLoader.html#OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetPathList_">PackAssetLoader.GetPathList()</a> crashing.</li>
+<li>Fix <a class="xref" href="../docs/OnixRuntime.Api.ResourcePacks.PackAssetLoader.html#OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetPathList_">PackAssetLoader.GetPathList()</a> sometimes returning the input path which would lead you to a stack overflow when recursively iterating.</li>
+<li>Fix <a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_GetBlock_">WorldChunk.GetBlock</a> crashing.</li>
+<li>Fix <a class="xref" href="../docs/OnixRuntime.Api.World.WorldChunk.html#OnixRuntime_Api_World_WorldChunk_LoadState">WorldChunk.LoadState</a> not being the right value.</li>
+<li>Fix <a class="xref" href="../docs/OnixRuntime.Api.World.Dimension.html#OnixRuntime_Api_World_Dimension_Id">Dimension.Id</a> always being overworld.</li>
+<li>Fix a bug in the runtime loader that caused the runtime to still fail to load after an update.
 <br></li>
 </ul>
 <h3 id="version-updates">Version Updates</h3>
 <ul>
-<li>Now expects runtime version 7.</li>
+<li>Now expects runtime version 8.</li>
 </ul>
 
 </article>

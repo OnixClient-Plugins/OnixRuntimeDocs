@@ -137,6 +137,11 @@ Handlers are invoked with an appropriate renderer instance depending on the curr
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html">OnixEventScheduler</a></dt>
+      <dd><p>Manages execution context switching for asynchronous operations to ensure code runs on the correct game thread or tick.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventWorld.html">OnixEventWorld</a></dt>
       <dd><p>Provides events for handling world-related actions.</p>
 </dd>
@@ -248,6 +253,13 @@ You can also use the runtime ID and the <a class="xref" href="OnixRuntime.Api.Wo
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventLocalServerWorld.OnPlayerJoinedDelegate.html">OnixEventLocalServerWorld.OnPlayerJoinedDelegate</a></dt>
+      <dd><p>Delegate that is invoked whenever a player joins the local server.
+This is a server only event, so only when you are hosting the world.
+The player may show up in the entity list before this event is fired, but this event should be fired when the player is ready to rock and roll.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventPlayer.OnLocalServerPlayerAttackDelegate.html">OnixEventPlayer.OnLocalServerPlayerAttackDelegate</a></dt>
       <dd><p>Delegate for handling when a player attacks an entity.</p>
 </dd>
@@ -285,6 +297,21 @@ You can also use the runtime ID and the <a class="xref" href="OnixRuntime.Api.Wo
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventPlayer.OnLocalServerPlayerUseItemOnDelegate.html">OnixEventPlayer.OnLocalServerPlayerUseItemOnDelegate</a></dt>
       <dd><p>Delegate for handling when a player uses an item on a block.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.LowLevelAuraRenderDelegate.html">OnixEventRendering.LowLevelAuraRenderDelegate</a></dt>
+      <dd><p>This is very low level, not for the weak. This is a D3D11 like API for graphics.
+This wrapper supports DirectX 12 and 11.
+You should look at the aura example plugin and ideally know some D3D11.
+You start in a <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html#OnixRuntime_Api_Aura_IAuraBackend_BeginFrame_System_Boolean_">BeginFrame(bool)</a> context and should exit the callback in such a way.
+Depending on what you do, you might need to restore the pipeline to a workable starting point.
+You should never keep the backend, and you need to dispose of every reference to the back buffer render target, which is going to be the game's.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.OnixEventRendering.OnAuraDeviceLostDelegate.html">OnixEventRendering.OnAuraDeviceLostDelegate</a></dt>
+      <dd><p>Delegate for handling graphics device loss events.</p>
 </dd>
     </dl>
     <dl class="jumplist">

@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Rendering_GameMesh" data-uid="OnixRuntime.Api.Rendering.GameMesh" class="text-break">
-Class GameMesh  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class GameMesh  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -166,11 +166,377 @@ You can render it later on.</p>
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_ColorData_" data-uid="OnixRuntime.Api.Rendering.GameMesh.ColorData*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_ColorData" data-uid="OnixRuntime.Api.Rendering.GameMesh.ColorData">
+  ColorData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The mesh's color vertices as bytes.
+Check <a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html#OnixRuntime_Api_Rendering_GameMesh_HasColors">HasColors</a> or check if size is above 0 to know if this field is used.
+When uploading to an aura vertex buffer, make sure to set <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html#OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes">ElementSizeInBytes</a> to 4 (uint or NUByte4).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] ColorData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_HasColors_" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasColors*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_HasColors" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasColors">
+  HasColors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when the mesh's vertices contain colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasColors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_HasNormals_" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasNormals*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_HasNormals" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasNormals">
+  HasNormals
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when the mesh's vertices contain normals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasNormals { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_HasPositions_" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasPositions*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_HasPositions" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasPositions">
+  HasPositions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when the mesh's vertices contain positions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasPositions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_HasUV1s_" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasUV1s*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_HasUV1s" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasUV1s">
+  HasUV1s
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when the mesh's vertices contain UV1s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasUV1s { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_HasUVs_" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasUVs*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_HasUVs" data-uid="OnixRuntime.Api.Rendering.GameMesh.HasUVs">
+  HasUVs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when the mesh's vertices contain UVs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasUVs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_NormalData_" data-uid="OnixRuntime.Api.Rendering.GameMesh.NormalData*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_NormalData" data-uid="OnixRuntime.Api.Rendering.GameMesh.NormalData">
+  NormalData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The mesh's normal vertices as bytes.
+Check <a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html#OnixRuntime_Api_Rendering_GameMesh_HasNormals">HasNormals</a> or check if size is above 0 to know if this field is used.
+When uploading to an aura vertex buffer, make sure to set <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html#OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes">ElementSizeInBytes</a> to 16 (Vec4 or Float4).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] NormalData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_PositionData_" data-uid="OnixRuntime.Api.Rendering.GameMesh.PositionData*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_PositionData" data-uid="OnixRuntime.Api.Rendering.GameMesh.PositionData">
+  PositionData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The mesh's position vertices as bytes.
+Check <a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html#OnixRuntime_Api_Rendering_GameMesh_HasPositions">HasPositions</a> or check if size is above 0 to know if this field is used.
+When uploading to an aura vertex buffer, make sure to set <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html#OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes">ElementSizeInBytes</a> to 12 (Vec3 or Float3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] PositionData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_UV1Data_" data-uid="OnixRuntime.Api.Rendering.GameMesh.UV1Data*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_UV1Data" data-uid="OnixRuntime.Api.Rendering.GameMesh.UV1Data">
+  UV1Data
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The mesh's UV 1 vertices as bytes.
+Check <a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html#OnixRuntime_Api_Rendering_GameMesh_HasUV1s">HasUV1s</a> or check if size is above 0 to know if this field is used.
+When uploading to an aura vertex buffer, make sure to set <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html#OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes">ElementSizeInBytes</a> to 8 (Vec2 or Float2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] UV1Data { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_UVData_" data-uid="OnixRuntime.Api.Rendering.GameMesh.UVData*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_UVData" data-uid="OnixRuntime.Api.Rendering.GameMesh.UVData">
+  UVData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The mesh's UV vertices as bytes.
+Check <a class="xref" href="OnixRuntime.Api.Rendering.GameMesh.html#OnixRuntime_Api_Rendering_GameMesh_HasUVs">HasUVs</a> or check if size is above 0 to know if this field is used.
+When uploading to an aura vertex buffer, make sure to set <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html#OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes">ElementSizeInBytes</a> to 8 (Vec2 or Float2).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] UVData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Rendering_GameMesh_VertexCount_" data-uid="OnixRuntime.Api.Rendering.GameMesh.VertexCount*"></a>
+
+  <h3 id="OnixRuntime_Api_Rendering_GameMesh_VertexCount" data-uid="OnixRuntime.Api.Rendering.GameMesh.VertexCount">
+  VertexCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The amount of vertices this mesh is made out of. All types that have a field should have this amount when not 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int VertexCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Rendering/GameMesh.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

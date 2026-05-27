@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ModalFormCustomReplier | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ModalFormCustomReplier | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Replier for custom-type forms (forms with interactive elements). Values are stored internally — the original form elements are never mutated. Pre-populated with each element&#39;s default so unset fields still produce a valid response.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Events_Session_ModalFormCustomReplier.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.Session.ModalFormCustomReplier%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier">
+
+
+
+  <h1 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier" class="text-break">
+Class ModalFormCustomReplier  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1125"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Events.html">Events</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.html">Session</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Replier for custom-type forms (forms with interactive elements).
+Values are stored internally — the original form elements are never mutated.
+Pre-populated with each element's default so unset fields still produce a valid response.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ModalFormCustomReplier : ModalFormReplierAny, IModalFormReplier</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormReplierAny.html">ModalFormReplierAny</a></div>
+      <div><span class="xref">ModalFormCustomReplier</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="OnixRuntime.Api.Events.Session.IModalFormReplier.html">IModalFormReplier</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormReplierAny.html#OnixRuntime_Api_Events_Session_ModalFormReplierAny_HasBeenRepliedAlready">ModalFormReplierAny.HasBeenRepliedAlready</a>
+    </div>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormReplierAny.html#OnixRuntime_Api_Events_Session_ModalFormReplierAny_Send">ModalFormReplierAny.Send()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier__ctor_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier__ctor_OnixRuntime_Api_Events_Session_ModalFormCustom_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.#ctor(OnixRuntime.Api.Events.Session.ModalFormCustom)">
+  ModalFormCustomReplier(ModalFormCustom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replier for custom-type forms (forms with interactive elements).
+Values are stored internally — the original form elements are never mutated.
+Pre-populated with each element's default so unset fields still produce a valid response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModalFormCustomReplier(ModalFormCustom modalForm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>modalForm</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_Form_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.Form*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_Form" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.Form">
+  Form
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The form the replier is trying to reply to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ModalFormAny? Form { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormAny.html">ModalFormAny</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_FormId_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.FormId*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_FormId" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.FormId">
+  FormId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The form ID we are replying to, I doubt you'll need this though.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override uint FormId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_ModalForm_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.ModalForm*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_ModalForm" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.ModalForm">
+  ModalForm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The typed modal form the reply is for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModalFormCustom ModalForm { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_ResponseJson_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.ResponseJson*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_ResponseJson" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.ResponseJson">
+  ResponseJson
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current json response of this replier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ResponseJson { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_Close_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.Close*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_Close" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.Close">
+  Close()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the form without submitting replies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetDropdownValue_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetDropdownValue*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetDropdownValue_OnixRuntime_Api_Events_Session_ModalFormCustom_Dropdown_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetDropdownValue(OnixRuntime.Api.Events.Session.ModalFormCustom.Dropdown)">
+  GetDropdownValue(Dropdown)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the dropdown index set by the replier, or the player's submitted value in a response event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? GetDropdownValue(ModalFormCustom.Dropdown dropdown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dropdown</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Dropdown.html">Dropdown</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetInputValue_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetInputValue*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetInputValue_OnixRuntime_Api_Events_Session_ModalFormCustom_Input_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetInputValue(OnixRuntime.Api.Events.Session.ModalFormCustom.Input)">
+  GetInputValue(Input)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the input value set by the replier, or the player's submitted value in a response event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetInputValue(ModalFormCustom.Input input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Input.html">Input</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetSliderValue_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetSliderValue*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetSliderValue_OnixRuntime_Api_Events_Session_ModalFormCustom_Slider_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetSliderValue(OnixRuntime.Api.Events.Session.ModalFormCustom.Slider)">
+  GetSliderValue(Slider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the slider value set by the replier, or the player's submitted value in a response event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? GetSliderValue(ModalFormCustom.Slider slider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>slider</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Slider.html">Slider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetStepSliderValue_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetStepSliderValue*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetStepSliderValue_OnixRuntime_Api_Events_Session_ModalFormCustom_StepSlider_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetStepSliderValue(OnixRuntime.Api.Events.Session.ModalFormCustom.StepSlider)">
+  GetStepSliderValue(StepSlider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the step slider index set by the replier, or the player's submitted value in a response event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? GetStepSliderValue(ModalFormCustom.StepSlider stepSlider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stepSlider</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.StepSlider.html">StepSlider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetToggleValue_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetToggleValue*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_GetToggleValue_OnixRuntime_Api_Events_Session_ModalFormCustom_Toggle_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.GetToggleValue(OnixRuntime.Api.Events.Session.ModalFormCustom.Toggle)">
+  GetToggleValue(Toggle)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the toggle value set by the replier, or the player's submitted value in a response event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? GetToggleValue(ModalFormCustom.Toggle toggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>toggle</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Toggle.html">Toggle</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetInput_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetInput*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetInput_OnixRuntime_Api_Events_Session_ModalFormCustom_Input_System_String_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetInput(OnixRuntime.Api.Events.Session.ModalFormCustom.Input,System.String)">
+  SetInput(Input, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the value for the specified input field in the modal form.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInput(ModalFormCustom.Input input, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Input.html">Input</a></dt>
+    <dd><p>The input control to update.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string value to assign to the input field. Can be null or empty.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetSlider_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetSlider*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetSlider_OnixRuntime_Api_Events_Session_ModalFormCustom_Slider_System_Single_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetSlider(OnixRuntime.Api.Events.Session.ModalFormCustom.Slider,System.Single)">
+  SetSlider(Slider, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the value for the specified slider control in the modal form.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSlider(ModalFormCustom.Slider slider, float value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>slider</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Slider.html">Slider</a></dt>
+    <dd><p>The slider control to update.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The float value to assign. Must be within the slider's minimum and maximum range.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown when the value is outside the slider's valid range.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetSliderClamped_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetSliderClamped*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetSliderClamped_OnixRuntime_Api_Events_Session_ModalFormCustom_Slider_System_Single_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetSliderClamped(OnixRuntime.Api.Events.Session.ModalFormCustom.Slider,System.Single)">
+  SetSliderClamped(Slider, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the value for the specified slider control, automatically clamping the value to the slider's valid range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSliderClamped(ModalFormCustom.Slider slider, float value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>slider</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Slider.html">Slider</a></dt>
+    <dd><p>The slider control to update.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The float value to assign. Values outside the range will be clamped to the nearest boundary.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetStepSlider_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetStepSlider*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetStepSlider_OnixRuntime_Api_Events_Session_ModalFormCustom_StepSlider_System_Int32_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetStepSlider(OnixRuntime.Api.Events.Session.ModalFormCustom.StepSlider,System.Int32)">
+  SetStepSlider(StepSlider, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the selected index for the specified step slider control in the modal form.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStepSlider(ModalFormCustom.StepSlider stepSlider, int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stepSlider</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.StepSlider.html">StepSlider</a></dt>
+    <dd><p>The step slider control to update.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The integer index representing the selected step.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown when the index is less than 0 or greater than or equal to the number of available steps.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetStepSliderClamped_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetStepSliderClamped*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetStepSliderClamped_OnixRuntime_Api_Events_Session_ModalFormCustom_StepSlider_System_Int32_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetStepSliderClamped(OnixRuntime.Api.Events.Session.ModalFormCustom.StepSlider,System.Int32)">
+  SetStepSliderClamped(StepSlider, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the selected index for the specified step slider control, automatically clamping the index to the valid range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStepSliderClamped(ModalFormCustom.StepSlider stepSlider, int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stepSlider</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.StepSlider.html">StepSlider</a></dt>
+    <dd><p>The step slider control to update.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The integer index representing the selected step. Values outside the range will be clamped to the nearest valid index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetToggle_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetToggle*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_Session_ModalFormCustomReplier_SetToggle_OnixRuntime_Api_Events_Session_ModalFormCustom_Toggle_System_Boolean_" data-uid="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.SetToggle(OnixRuntime.Api.Events.Session.ModalFormCustom.Toggle,System.Boolean)">
+  SetToggle(Toggle, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the value for the specified toggle control in the modal form.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetToggle(ModalFormCustom.Toggle toggle, bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>toggle</code> <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Toggle.html">Toggle</a></dt>
+    <dd><p>The toggle control to update.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The boolean state to assign to the toggle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1125" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

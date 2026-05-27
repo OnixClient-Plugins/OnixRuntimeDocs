@@ -205,6 +205,22 @@ Modules come with one by default so you should never need to create one.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a></dt>
+      <dd><p>Represents An enum that you can optionally allow enabling/disabling the values of.
+The user gets entries they can move around at the minimum.
+It supports having values with the same name be treated differently.
+This is a complex setting type, you definitely want to use the helper functions rather than interact with the data too directly unless you're making UI.
+You can use <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.html">ReorderableEnumValue</a> for your config class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">OnixSettingReorderableEnum.Entry</a></dt>
+      <dd><p>Represents a single entry among the <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>
+The value is something you can pick at runtime to help you identify what a specific save id or index mean.
+<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_Entry_SaveId">SaveId</a> is what is used for saving, the value is not saved, only the order is.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingTextbox.html">OnixSettingTextbox</a></dt>
       <dd><p>Represents a textbox setting in Onix, allowing configuration of text value, default, and maximum length.</p>
 </dd>
@@ -222,8 +238,28 @@ Modules come with one by default so you should never need to create one.</p>
       <dd></dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingValueAdapterReorderableEnum.html">OnixSettingValueAdapterReorderableEnum</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingVec2.html">OnixSettingVec2</a></dt>
       <dd><p>Represents a Vec2 setting in Onix, allowing configuration of value, default, min, and max.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.html">ReorderableEnumValue</a></dt>
+      <dd><p>Just a wrapper around the <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a> for usage in config classes, it basically just brings what the setting class has.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode.html">OnixSettingReorderableWrapMode</a></dt>
+      <dd><p>Represents how the wrapping behaves for reorderable enums.</p>
 </dd>
     </dl>
 

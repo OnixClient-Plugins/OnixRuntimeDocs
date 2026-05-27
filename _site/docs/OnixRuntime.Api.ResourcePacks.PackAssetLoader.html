@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader" class="text-break">
-Class PackAssetLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class PackAssetLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -161,7 +161,7 @@ Class PackAssetLoader  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContent_System_String_System_Boolean_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetContent(System.String,System.Boolean)">
   GetContent(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the content of the file at that path. This will return null if the file does not exist or was not trusted.
@@ -186,7 +186,7 @@ This variant returns an empty byte array when the file does not exist.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p>Returns the content or null if it could not be read from.</p>
+    <dd><p>Returns the content or an empty byte array if it could not be read from.</p>
 </dd>
   </dl>
 
@@ -204,7 +204,7 @@ This variant returns an empty byte array when the file does not exist.</p>
 
   <h3 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContentOrNull_System_String_System_Boolean_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetContentOrNull(System.String,System.Boolean)">
   GetContentOrNull(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the content of the file at that path. This will return null if the file does not exist or was not trusted.
@@ -243,11 +243,99 @@ This variant returns null when it cannot load the file that way you can check if
 
 
 
+  <a id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContentOrNullString_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetContentOrNullString*"></a>
+
+  <h3 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContentOrNullString_System_String_System_Boolean_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetContentOrNullString(System.String,System.Boolean)">
+  GetContentOrNullString(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the content of the file at that path. This will return null if the file does not exist or was not trusted.
+This variant returns null when it cannot load the file that way you can check if the file was read but empty or just not found.
+It returns a string instead of an array of bytes, making configuration/json files more convenient to work with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GetContentOrNullString(string filePath, bool trustedContentOnly = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file path of the file to get.</p>
+</dd>
+    <dt><code>trustedContentOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If only trusted content should be read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Returns the content as a string or null if it could not be read from.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContentString_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetContentString*"></a>
+
+  <h3 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetContentString_System_String_System_Boolean_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetContentString(System.String,System.Boolean)">
+  GetContentString(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the content of the file at that path. This will return null if the file does not exist or was not trusted.
+This variant returns an empty byte array when the file does not exist.
+It returns a string instead of an array of bytes, making configuration/json files more convenient to work with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetContentString(string filePath, bool trustedContentOnly = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file path of the file to get.</p>
+</dd>
+    <dt><code>trustedContentOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If only trusted content should be read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Returns the content as a string or an empty string if it could not be read from.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetPathList_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetPathList*"></a>
 
   <h3 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_GetPathList_System_String_System_Boolean_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.GetPathList(System.String,System.Boolean)">
   GetPathList(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a list of paths in the pack. This will return an empty array if the path does not exist or is not a directory.
@@ -257,12 +345,12 @@ So if you plan on recursing, you should not go folder by folder and manually do 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] GetPathList(string filePath, bool recurse = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public string[] GetPathList(string folderPath, bool recurse = false)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>folderPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The folder to get the files/directories in.</p>
 </dd>
     <dt><code>recurse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
@@ -273,7 +361,8 @@ So if you plan on recursing, you should not go folder by folder and manually do 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>The list of paths in a folder.</p>
+</dd>
   </dl>
 
 
@@ -290,7 +379,7 @@ So if you plan on recursing, you should not go folder by folder and manually do 
 
   <h3 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_HasDirectory_System_String_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.HasDirectory(System.String)">
   HasDirectory(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if there is a directory at this path.</p>
@@ -329,7 +418,7 @@ So if you plan on recursing, you should not go folder by folder and manually do 
 
   <h3 id="OnixRuntime_Api_ResourcePacks_PackAssetLoader_HasFile_System_String_System_Boolean_" data-uid="OnixRuntime.Api.ResourcePacks.PackAssetLoader.HasFile(System.String,System.Boolean)">
   HasFile(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if there is a file at this path.</p>
@@ -371,7 +460,7 @@ So if you plan on recursing, you should not go folder by folder and manually do 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/ResourcePacks/PackAssetLoader.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

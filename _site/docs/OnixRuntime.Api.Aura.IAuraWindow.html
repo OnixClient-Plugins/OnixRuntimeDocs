@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IAuraWindow | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IAuraWindow | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a native OS window. Provides control over window state, size, position, and appearance, as well as integration with the graphics backend for rendering.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Aura_IAuraWindow.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Aura.IAuraWindow%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Aura.IAuraWindow">
+
+
+
+  <h1 id="OnixRuntime_Api_Aura_IAuraWindow" data-uid="OnixRuntime.Api.Aura.IAuraWindow" class="text-break">
+Class IAuraWindow  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Aura.html">Aura</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a native OS window. Provides control over window state, size, position, and appearance,
+as well as integration with the graphics backend for rendering.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IAuraWindow : AuraResourcePointer, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html">AuraResourcePointer</a></div>
+      <div><span class="xref">IAuraWindow</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html#OnixRuntime_Api_Aura_AuraResourcePointer_Dispose">AuraResourcePointer.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Center_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Center*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Center" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Center">
+  Center()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Centers the window on the display it currently occupies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Center()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Close_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Close*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Close" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Close">
+  Close()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a close request to the window, equivalent to the user clicking the X button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_CreateWin32Window_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.CreateWin32Window*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_CreateWin32Window_System_Int32_System_Int32_System_String_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.CreateWin32Window(System.Int32,System.Int32,System.String)">
+  CreateWin32Window(int, int, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new Win32 window with the specified client area dimensions and title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraWindow CreateWin32Window(int clientWidth, int clientHeight, string windowTitle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clientWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the window's client (drawable) area in pixels.</p>
+</dd>
+    <dt><code>clientHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the window's client (drawable) area in pixels.</p>
+</dd>
+    <dt><code>windowTitle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to display in the window's title bar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The newly created <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Destroy_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Destroy*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Destroy" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Destroy">
+  Destroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destroys the window and releases all associated OS resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetClientSize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetClientSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetClientSize" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetClientSize">
+  GetClientSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the size of the window's client (drawable) area, excluding decorations such as title bar and borders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I GetClientSize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd><p>Client area dimensions in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetDpi_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetDpi*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetDpi" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetDpi">
+  GetDpi()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the DPI (dots per inch) of the display this window is currently on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetDpi()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The DPI of the window's current monitor.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetNativeHandle_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetNativeHandle*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetNativeHandle" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetNativeHandle">
+  GetNativeHandle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the native OS window handle (e.g., <code>HWND</code> on Windows).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public nint GetNativeHandle()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The platform-specific window handle as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetOpacity_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetOpacity" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetOpacity">
+  GetOpacity()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current opacity of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetOpacity()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Opacity in the range [0.0, 1.0].</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetPosition_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetPosition*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetPosition" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetPosition">
+  GetPosition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the position of the top-left corner of the window on screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I GetPosition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd><p>Screen coordinates of the window's top-left corner.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetPositionAndSizeClient_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetPositionAndSizeClient*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetPositionAndSizeClient" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetPositionAndSizeClient">
+  GetPositionAndSizeClient()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the window's position and client area size as a rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectI GetPositionAndSizeClient()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.RectI.html">RectI</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Maths.RectI.html">RectI</a> describing the window's screen position and drawable area size.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetPositionAndSizeReal_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetPositionAndSizeReal*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetPositionAndSizeReal" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetPositionAndSizeReal">
+  GetPositionAndSizeReal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the window's position and total size (including decorations) as a rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectI GetPositionAndSizeReal()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.RectI.html">RectI</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Maths.RectI.html">RectI</a> describing the window's screen position and full size.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetRealSize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetRealSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetRealSize" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetRealSize">
+  GetRealSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the total size of the window including decorations (title bar and borders).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vec2I GetRealSize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Maths.Vec2I.html">Vec2I</a></dt>
+    <dd><p>Total window dimensions in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetSupportedDisplayModes_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetSupportedDisplayModes*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetSupportedDisplayModes_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetSupportedDisplayModes(System.Boolean)">
+  GetSupportedDisplayModes(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the display modes supported by the monitor this window currently occupies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FullScreenDisplayMode[] GetSupportedDisplayModes(bool sortBestToWorse = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sortBestToWorse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, modes are sorted from highest to lowest quality. Defaults to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.FullScreenDisplayMode.html">FullScreenDisplayMode</a>[]</dt>
+    <dd><p>An array of supported <a class="xref" href="OnixRuntime.Api.Aura.FullScreenDisplayMode.html">FullScreenDisplayMode</a> values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetTitle_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetTitle*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetTitle" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetTitle">
+  GetTitle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the text currently displayed in the window's title bar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetTitle()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The current window title.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_GetWindowType_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetWindowType*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_GetWindowType" data-uid="OnixRuntime.Api.Aura.IAuraWindow.GetWindowType">
+  GetWindowType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a backend-specific type identifier for this window's underlying OS handle type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong GetWindowType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>A platform-specific value identifying the window handle type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_HasBeenDestroyed_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.HasBeenDestroyed*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_HasBeenDestroyed" data-uid="OnixRuntime.Api.Aura.IAuraWindow.HasBeenDestroyed">
+  HasBeenDestroyed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the window has been destroyed via <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html#OnixRuntime_Api_Aura_IAuraWindow_Destroy">Destroy()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasBeenDestroyed()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_HasFocus_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.HasFocus*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_HasFocus" data-uid="OnixRuntime.Api.Aura.IAuraWindow.HasFocus">
+  HasFocus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if this window currently has keyboard input focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasFocus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Hide_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Hide*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Hide" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Hide">
+  Hide()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hides the window without destroying it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Hide()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_IsAlwaysOnTop_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsAlwaysOnTop*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_IsAlwaysOnTop" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsAlwaysOnTop">
+  IsAlwaysOnTop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the window is currently set to always appear above other windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAlwaysOnTop()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_IsCursorVisible_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsCursorVisible*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_IsCursorVisible" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsCursorVisible">
+  IsCursorVisible()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the OS cursor is currently visible when over this window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCursorVisible()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_IsDummyWindow_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsDummyWindow*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_IsDummyWindow" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsDummyWindow">
+  IsDummyWindow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if this is a dummy (non-visible) window used for internal backend purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDummyWindow()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_IsFullscreen_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsFullscreen*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_IsFullscreen_OnixRuntime_Api_Aura_FullScreenState_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsFullscreen(OnixRuntime.Api.Aura.FullScreenState)">
+  IsFullscreen(FullScreenState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the window is currently in the specified fullscreen state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFullscreen(FullScreenState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="OnixRuntime.Api.Aura.FullScreenState.html">FullScreenState</a></dt>
+    <dd><p>The fullscreen state to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_IsFullscreenSupported_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsFullscreenSupported*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_IsFullscreenSupported_OnixRuntime_Api_Aura_FullScreenState_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsFullscreenSupported(OnixRuntime.Api.Aura.FullScreenState)">
+  IsFullscreenSupported(FullScreenState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether a given fullscreen mode is supported on the display this window occupies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFullscreenSupported(FullScreenState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="OnixRuntime.Api.Aura.FullScreenState.html">FullScreenState</a></dt>
+    <dd><p>The fullscreen state to query.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified fullscreen state is supported; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_IsMinimized_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsMinimized*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_IsMinimized" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsMinimized">
+  IsMinimized()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the window is currently minimized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMinimized()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_IsVisible_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsVisible*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_IsVisible" data-uid="OnixRuntime.Api.Aura.IAuraWindow.IsVisible">
+  IsVisible()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the window is currently visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsVisible()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Maximize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Maximize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Maximize" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Maximize">
+  Maximize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximizes the window to fill the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Maximize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Minimize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Minimize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Minimize" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Minimize">
+  Minimize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Minimizes the window to the taskbar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Minimize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Restore_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Restore*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Restore" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Restore">
+  Restore()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the window from a minimized or maximized state to its normal size and position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Restore()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetAlwaysOnTop_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetAlwaysOnTop*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetAlwaysOnTop_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetAlwaysOnTop(System.Boolean)">
+  SetAlwaysOnTop(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets whether the window stays on top of all other windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAlwaysOnTop(bool alwaysOnTop)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alwaysOnTop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to pin the window above all others; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to restore normal Z-order.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetClientSize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetClientSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetClientSize_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetClientSize(System.Int32,System.Int32)">
+  SetClientSize(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the size of the window's client (drawable) area. The total window size will be larger to account for decorations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetClientSize(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Client area width in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Client area height in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetCursorVisible_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetCursorVisible*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetCursorVisible_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetCursorVisible(System.Boolean)">
+  SetCursorVisible(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows or hides the OS cursor while it is positioned over this window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCursorVisible(bool visible)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>visible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to show the cursor; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to hide it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetDecorationsEnabled_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetDecorationsEnabled*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetDecorationsEnabled_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetDecorationsEnabled(System.Boolean)">
+  SetDecorationsEnabled(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows or hides window decorations such as the title bar and borders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDecorationsEnabled(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to show decorations; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to hide them.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetFocus_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetFocus*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetFocus" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetFocus">
+  SetFocus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives keyboard input focus to this window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFocus()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetFullscreen_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetFullscreen*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetFullscreen_OnixRuntime_Api_Aura_FullScreenState_System_Nullable_OnixRuntime_Api_Aura_FullScreenDisplayMode__" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetFullscreen(OnixRuntime.Api.Aura.FullScreenState,System.Nullable{OnixRuntime.Api.Aura.FullScreenDisplayMode})">
+  SetFullscreen(FullScreenState, FullScreenDisplayMode?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switches the window to the specified fullscreen state, optionally at a given display resolution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullscreen(FullScreenState state, FullScreenDisplayMode? resolution = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="OnixRuntime.Api.Aura.FullScreenState.html">FullScreenState</a></dt>
+    <dd><p>The target fullscreen state.</p>
+</dd>
+    <dt><code>resolution</code> <a class="xref" href="OnixRuntime.Api.Aura.FullScreenDisplayMode.html">FullScreenDisplayMode</a>?</dt>
+    <dd><p>The desired display mode for exclusive fullscreen. When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the current display mode is used.
+Ignored for <a class="xref" href="OnixRuntime.Api.Aura.FullScreenState.html#OnixRuntime_Api_Aura_FullScreenState_Windowed">Windowed</a> and <a class="xref" href="OnixRuntime.Api.Aura.FullScreenState.html#OnixRuntime_Api_Aura_FullScreenState_BorderlessFullscreen">BorderlessFullscreen</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetGraphicsBackend_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetGraphicsBackend*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetGraphicsBackend_OnixRuntime_Api_Aura_IAuraBackend_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetGraphicsBackend(OnixRuntime.Api.Aura.IAuraBackend)">
+  SetGraphicsBackend(IAuraBackend)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Associates a graphics backend with this window, enabling rendering and presentation via its swap chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGraphicsBackend(IAuraBackend backend)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>backend</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html">IAuraBackend</a></dt>
+    <dd><p>The backend to attach to this window.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetMaxSize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetMaxSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetMaxSize_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetMaxSize(System.Int32,System.Int32)">
+  SetMaxSize(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum size the user can resize this window to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMaxSize(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum width in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum height in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetMinSize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetMinSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetMinSize_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetMinSize(System.Int32,System.Int32)">
+  SetMinSize(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the minimum size the user can resize this window to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMinSize(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Minimum width in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Minimum height in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetOpacity_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetOpacity*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetOpacity_System_Single_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetOpacity(System.Single)">
+  SetOpacity(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the opacity of the window. Only supported on platforms that allow per-window transparency.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOpacity(float opacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Opacity value in the range [0.0, 1.0], where 0.0 is fully transparent and 1.0 is fully opaque.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetPosition_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetPosition*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetPosition_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetPosition(System.Int32,System.Int32)">
+  SetPosition(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the position of the window's top-left corner on screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPosition(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Horizontal screen coordinate in pixels.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Vertical screen coordinate in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetPositionAndSize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetPositionAndSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetPositionAndSize_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetPositionAndSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+  SetPositionAndSize(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the window's screen position and total size in a single call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPositionAndSize(int x, int y, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Horizontal screen coordinate in pixels.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Vertical screen coordinate in pixels.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Total window width in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Total window height in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetRealSize_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetRealSize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetRealSize_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetRealSize(System.Int32,System.Int32)">
+  SetRealSize(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the total size of the window including decorations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRealSize(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Total window width in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Total window height in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetResizable_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetResizable*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetResizable_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetResizable(System.Boolean)">
+  SetResizable(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets whether the user can resize the window by dragging its edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetResizable(bool resizable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resizable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to allow resizing; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to prevent it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetTitle_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetTitle*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetTitle_System_String_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetTitle(System.String)">
+  SetTitle(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the text displayed in the window's title bar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTitle(string title)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The new title string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_SetVisible_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetVisible*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_SetVisible_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.SetVisible(System.Boolean)">
+  SetVisible(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows or hides the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVisible(bool visible)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>visible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to show the window; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to hide it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Show_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Show*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Show" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Show">
+  Show()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes the window visible on screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Show()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraWindow_Update_" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Update*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraWindow_Update" data-uid="OnixRuntime.Api.Aura.IAuraWindow.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes pending window messages. Call once per frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Update()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>An OS message result code if the window received a quit or close message, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if no such message was received.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraWindow.cs/#L45" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

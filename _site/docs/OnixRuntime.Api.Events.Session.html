@@ -95,13 +95,119 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a></dt>
+      <dd><p>Represents the chat message that will be added if <a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html#OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_ShouldSilence">ShouldSilence</a> is false.
+This is basically the same as the on chat event, just as a class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.Session.CommandResponseMessage.html">CommandResponseMessage</a></dt>
       <dd><p>Represents a message in a command's response.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormReplyer.html">ModalFormReplyer</a></dt>
-      <dd><p>Implements IModalFormReplyer for modal form requests.</p>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormAny.html">ModalFormAny</a></dt>
+      <dd><p>Represents a modal form of any type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.html">ModalFormCustom</a></dt>
+      <dd><p>Represents a customizable modal form consisting of a title and input elements the user can change and submit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Dropdown.html">ModalFormCustom.Dropdown</a></dt>
+      <dd><p>A dropdown element with some entries to select from.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.FormElement.html">ModalFormCustom.FormElement</a></dt>
+      <dd><p>The base form element type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Input.html">ModalFormCustom.Input</a></dt>
+      <dd><p>A textbox element where the user can enter text.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Label.html">ModalFormCustom.Label</a></dt>
+      <dd><p>Represents a label element that can display text to the user.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Slider.html">ModalFormCustom.Slider</a></dt>
+      <dd><p>Represents a slider the user can slide around a range with a step.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.StepSlider.html">ModalFormCustom.StepSlider</a></dt>
+      <dd><p>Represents a slider that can be dragged across named elements, like a dropdown but in slider format.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustom.Toggle.html">ModalFormCustom.Toggle</a></dt>
+      <dd><p>Represents a true/false toggle element.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormCustomReplier.html">ModalFormCustomReplier</a></dt>
+      <dd><p>Replier for custom-type forms (forms with interactive elements).
+Values are stored internally — the original form elements are never mutated.
+Pre-populated with each element's default so unset fields still produce a valid response.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormForm.html">ModalFormForm</a></dt>
+      <dd><p>Represents a form that has many choices of buttons to click with an optional image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormForm.Button.html">ModalFormForm.Button</a></dt>
+      <dd><p>Represents one of the buttons that the user can click.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormForm.Button.ButtonImage.html">ModalFormForm.Button.ButtonImage</a></dt>
+      <dd><p>The base image type that a button can have.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormForm.Button.ImageFromPack.html">ModalFormForm.Button.ImageFromPack</a></dt>
+      <dd><p>A button image that contains a path in the resource pack.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormForm.Button.ImageFromUrl.html">ModalFormForm.Button.ImageFromUrl</a></dt>
+      <dd><p>A button image that contains a url.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormFormReplier.html">ModalFormFormReplier</a></dt>
+      <dd><p>Replier for form-type forms (button list).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormInvalid.html">ModalFormInvalid</a></dt>
+      <dd><p>Represents an invalid form, one that failed parsing.
+You should maybe report this as a bug if the form is supposed to be valid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormModal.html">ModalFormModal</a></dt>
+      <dd><p>Represents a modal form with two buttons, a title and some text.
+Mainly useful for yes/no questions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormModalReplier.html">ModalFormModalReplier</a></dt>
+      <dd><p>Replier for modal-type forms (two-button dialog), allowing you to safely reply to it.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormReplierAny.html">ModalFormReplierAny</a></dt>
+      <dd><p>Abstract base class for all modal form repliers. Allowing you to reply to forms safely.
+<a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormReplierAny.html#OnixRuntime_Api_Events_Session_ModalFormReplierAny_HasBeenRepliedAlready">HasBeenRepliedAlready</a> is only set to true when <code>FormEvent_ReplyToModalForm</code> is actually called.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -115,21 +221,31 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionPluginMessageConnection.html">OnixEventSessionPluginMessageConnection</a></dt>
+      <dd><p>Events plugin messages the server sends to your client.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionTitle.html">OnixEventSessionTitle</a></dt>
       <dd><p>Provides events for handling title, subtitle, actionbar, and timing changes in a session.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.RawModalFormReplyer.html">RawModalFormReplyer</a></dt>
-      <dd><p>Implements IModalFormReplyer for modal form responses.</p>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.RawModalFormReplier.html">RawModalFormReplier</a></dt>
+      <dd><p>Implements ModalFormReplierAny for raw JSON modal form events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.VanillaCommandResponse.html">VanillaCommandResponse</a></dt>
+      <dd><p>Represents a vanilla command response, but all in one struct.</p>
 </dd>
     </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.IModalFormReplyer.html">IModalFormReplyer</a></dt>
-      <dd><p>Represents a replyer for modal form events, providing form ID, response JSON, and reply status.</p>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.IModalFormReplier.html">IModalFormReplier</a></dt>
+      <dd><p>Represents a Replier for modal form events, providing form ID, response JSON, and reply status.</p>
 </dd>
     </dl>
     <h3 id="enums">
@@ -171,13 +287,79 @@ This will also not work when 'sendcommandfeedback' is disabled.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawModalFormRequestDelegate.html">OnixEventSessionModalForms.OnRawModalFormRequestDelegate</a></dt>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnAnyRequestDelegate.html">OnixEventSessionModalForms.OnAnyRequestDelegate</a></dt>
+      <dd><p>Delegate for typed modal form request events covering all form types.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnAnyResponseDelegate.html">OnixEventSessionModalForms.OnAnyResponseDelegate</a></dt>
+      <dd><p>Delegate for typed modal form response events covering all form types.
+The Replier is the same instance from the original request event, now with response data populated.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnCustomRequestDelegate.html">OnixEventSessionModalForms.OnCustomRequestDelegate</a></dt>
+      <dd><p>Delegate for custom-type (interactive elements) form request events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnCustomResponseDelegate.html">OnixEventSessionModalForms.OnCustomResponseDelegate</a></dt>
+      <dd><p>Delegate for custom-type form response events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnFormRequestDelegate.html">OnixEventSessionModalForms.OnFormRequestDelegate</a></dt>
+      <dd><p>Delegate for form-type (button list) form request events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnFormResponseDelegate.html">OnixEventSessionModalForms.OnFormResponseDelegate</a></dt>
+      <dd><p>Delegate for form-type form response events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnModalRequestDelegate.html">OnixEventSessionModalForms.OnModalRequestDelegate</a></dt>
+      <dd><p>Delegate for modal-type (two-button dialog) form request events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnModalResponseDelegate.html">OnixEventSessionModalForms.OnModalResponseDelegate</a></dt>
+      <dd><p>Delegate for modal-type form response events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawRequestDelegate.html">OnixEventSessionModalForms.OnRawRequestDelegate</a></dt>
       <dd><p>Delegate for handling raw modal form request events.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawModalFormResponseDelegate.html">OnixEventSessionModalForms.OnRawModalFormResponseDelegate</a></dt>
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawResponseDelegate.html">OnixEventSessionModalForms.OnRawResponseDelegate</a></dt>
       <dd><p>Delegate for handling raw modal form response events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionPluginMessageConnection.OnServerPluginMessageBytesDelegate.html">OnixEventSessionPluginMessageConnection.OnServerPluginMessageBytesDelegate</a></dt>
+      <dd><p>Delegate for handling server plugin binary message events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionPluginMessageConnection.OnServerPluginMessageDelegate.html">OnixEventSessionPluginMessageConnection.OnServerPluginMessageDelegate</a></dt>
+      <dd><p>Delegate for handling server plugin message events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionPluginMessageConnection.OnServerPluginMessageGlobalBytesDelegate.html">OnixEventSessionPluginMessageConnection.OnServerPluginMessageGlobalBytesDelegate</a></dt>
+      <dd><p>Delegate for handling server plugin global binary message events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionPluginMessageConnection.OnServerPluginMessageGlobalDelegate.html">OnixEventSessionPluginMessageConnection.OnServerPluginMessageGlobalDelegate</a></dt>
+      <dd><p>Delegate for handling server plugin message events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionPluginMessageConnection.OnSessionPluginMessageConnectionEstablishedDelegate.html">OnixEventSessionPluginMessageConnection.OnSessionPluginMessageConnectionEstablishedDelegate</a></dt>
+      <dd><p>Delegate for handling when the plugin connection with the server is confirmed. You can send them data from that point forward.</p>
 </dd>
     </dl>
     <dl class="jumplist">

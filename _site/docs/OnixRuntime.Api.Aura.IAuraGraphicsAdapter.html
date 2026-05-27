@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IAuraGraphicsAdapter | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IAuraGraphicsAdapter | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a physical or virtual graphics adapter (GPU) available on the system. Provides access to adapter properties such as memory sizes, hardware identifiers, and supported API versions.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Aura_IAuraGraphicsAdapter.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Aura.IAuraGraphicsAdapter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter">
+
+
+
+  <h1 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter" class="text-break">
+Class IAuraGraphicsAdapter  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Aura.html">Aura</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a physical or virtual graphics adapter (GPU) available on the system. Provides access to adapter properties such as memory sizes, hardware identifiers, and supported API versions.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IAuraGraphicsAdapter : AuraResourcePointer, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html">AuraResourcePointer</a></div>
+      <div><span class="xref">IAuraGraphicsAdapter</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html#OnixRuntime_Api_Aura_AuraResourcePointer_Dispose">AuraResourcePointer.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_DedicatedSystemMemory_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.DedicatedSystemMemory*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_DedicatedSystemMemory" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.DedicatedSystemMemory">
+  DedicatedSystemMemory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the size of dedicated system memory reserved for this adapter in bytes. This is system RAM set aside exclusively for GPU use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong DedicatedSystemMemory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_DedicatedVideoMemory_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.DedicatedVideoMemory*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_DedicatedVideoMemory" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.DedicatedVideoMemory">
+  DedicatedVideoMemory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the size of dedicated video memory on this adapter in bytes. This is memory physically located on the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong DedicatedVideoMemory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_DeviceId_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.DeviceId*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_DeviceId" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.DeviceId">
+  DeviceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the PCI device identifier that distinguishes this specific GPU model within its vendor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint DeviceId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_IsSoftwareAdapter_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.IsSoftwareAdapter*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_IsSoftwareAdapter" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.IsSoftwareAdapter">
+  IsSoftwareAdapter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if this adapter is a software (WARP) renderer rather than a hardware-accelerated GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSoftwareAdapter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_Luid_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.Luid*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_Luid" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.Luid">
+  Luid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the Locally Unique Identifier (LUID) for this adapter, which uniquely identifies it within the scope of the running system session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Luid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_Revision_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.Revision*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_Revision" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.Revision">
+  Revision
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the PCI revision identifier for this adapter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Revision { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_SharedSystemMemory_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.SharedSystemMemory*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_SharedSystemMemory" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.SharedSystemMemory">
+  SharedSystemMemory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the size of system memory shared between this adapter and the CPU in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SharedSystemMemory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_SubSysId_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.SubSysId*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_SubSysId" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.SubSysId">
+  SubSysId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the PCI subsystem identifier for this adapter, typically encoding the board vendor and model number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SubSysId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_VendorId_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.VendorId*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_VendorId" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.VendorId">
+  VendorId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the PCI vendor identifier for this adapter (e.g., 0x10DE for NVIDIA, 0x1002 for AMD, 0x8086 for Intel).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint VendorId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetAdapterDescription_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetAdapterDescription*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetAdapterDescription" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetAdapterDescription">
+  GetAdapterDescription()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a human-readable description string for this adapter (e.g., &quot;NVIDIA GeForce RTX 4090&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetAdapterDescription()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string describing this adapter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetBestApiVersion_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetBestApiVersion*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetBestApiVersion" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetBestApiVersion">
+  GetBestApiVersion()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the highest-capability API version this adapter supports for the current backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraSupportedAdapterApi GetBestApiVersion()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a></dt>
+    <dd><p>An <a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a> describing the best available API and whether it is software-based.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetGraphicsApiDescription_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetGraphicsApiDescription*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetGraphicsApiDescription_OnixRuntime_Api_Aura_AuraSupportedAdapterApi_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetGraphicsApiDescription(OnixRuntime.Api.Aura.AuraSupportedAdapterApi)">
+  GetGraphicsApiDescription(AuraSupportedAdapterApi)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a human-readable description of a specific graphics API version as it would run on this adapter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetGraphicsApiDescription(AuraSupportedAdapterApi apiWrapper)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>apiWrapper</code> <a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a></dt>
+    <dd><p>The API version to describe.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string describing the specified API version on this adapter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetRelevantApiVersions_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetRelevantApiVersions*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetRelevantApiVersions" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetRelevantApiVersions">
+  GetRelevantApiVersions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the API versions that are relevant for the current backend (i.e., those that can actually be used to create a backend on this adapter).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraSupportedAdapterApi[] GetRelevantApiVersions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a> values compatible with the current backend.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetSupportedApiVersions_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetSupportedApiVersions*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetSupportedApiVersions" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.GetSupportedApiVersions">
+  GetSupportedApiVersions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all API versions supported by this adapter, including both hardware and software variants.
+For only the versions usable with the current backend, see <a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html#OnixRuntime_Api_Aura_IAuraGraphicsAdapter_GetRelevantApiVersions">GetRelevantApiVersions()</a>.
+Only populated when <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html#OnixRuntime_Api_Aura_IAuraBackendCreator_SetQueryFullAdapterInformation_System_Boolean_">SetQueryFullAdapterInformation(bool)</a> is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraSupportedAdapterApi[] GetSupportedApiVersions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a>[]</dt>
+    <dd><p>An array of all supported <a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a> values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_IsSameAs_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.IsSameAs*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraGraphicsAdapter_IsSameAs_OnixRuntime_Api_Aura_IAuraGraphicsAdapter_" data-uid="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.IsSameAs(OnixRuntime.Api.Aura.IAuraGraphicsAdapter)">
+  IsSameAs(IAuraGraphicsAdapter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this adapter refers to the same physical device as another adapter instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSameAs(IAuraGraphicsAdapter other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a></dt>
+    <dd><p>The other adapter to compare against.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if both adapters represent the same physical device; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

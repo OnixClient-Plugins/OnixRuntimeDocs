@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OnixEventScheduler | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OnixEventScheduler | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Manages execution context switching for asynchronous operations to ensure code runs on the correct game thread or tick.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Events_OnixEventScheduler.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Events.OnixEventScheduler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Events.OnixEventScheduler">
+
+
+
+  <h1 id="OnixRuntime_Api_Events_OnixEventScheduler" data-uid="OnixRuntime.Api.Events.OnixEventScheduler" class="text-break">
+Class OnixEventScheduler  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Events.html">Events</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Manages execution context switching for asynchronous operations to ensure code runs on the correct game thread or tick.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OnixEventScheduler</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OnixEventScheduler</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="OnixRuntime_Api_Events_OnixEventScheduler_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This scheduler allows developers to sequence async logic that hops between background threads and specific game loops
+(e.g., Main Tick, Server Tick, or Render loops).</p>
+<p>Key features include:</p>
+<ul><li><b>Context Switching:</b> Awaitable methods to pause execution until the next specific game event occurs.</li><li><b>Fire-and-Forget Handling:</b> Use <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Threading_Tasks_Task_">HandleTask(Task)</a> to execute tasks without blocking, ensuring exceptions are logged rather than crashing the application.</li><li><b>Game Utilities:</b> Integrated helpers for managing inventory state and awaiting vanilla command responses.</li></ul>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponse_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponse*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponse_System_String_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponse(System.String,System.Threading.CancellationToken)">
+  ExecuteVanillaCommandWithResponse(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L759"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a game command asynchronously and waits for the result to come in. This only works for commands that return a proper response.
+Some servers use text packets instead for command output, making this function not work.
+But on a server that implemented commands responsibly, this is a great way to run a command and get the result of specifically that command in a split way.
+Uses a timeout of 20 seconds by default, which should be more than enough for any command to respond. If the timeout is reached without receiving a response, this function will return null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;VanillaCommandResponse?&gt; ExecuteVanillaCommandWithResponse(string command, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command to run.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.VanillaCommandResponse.html">VanillaCommandResponse</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the command response, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponse_System_String_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var testforCommandRes = await Scheduler.ExecuteVanillaCommandWithResponse("/testfor @e[rm=1]");
+if (testforCommandRes is not null) {
+    Console.WriteLine($"There are {testforCommandRes.SuccessCount} entities around you.");
+    Console.WriteLine("They are: " + string.Join(", ", testforCommandRes.Messages
+        .Where(x =&gt; x.MessageParams.Length &gt; 0)
+        .Select(x =&gt; x.MessageParams.LastOrDefault(""))));
+    testforCommandRes.ShouldSilence = true;
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponse_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponse*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponse_System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponse(System.String,System.TimeSpan,System.Threading.CancellationToken)">
+  ExecuteVanillaCommandWithResponse(string, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L782"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a game command asynchronously and waits for the result to come in. This only works for commands that return a proper response.
+Some servers use text packets instead for command output, making this function not work.
+But on a server that implemented commands responsibly, this is a great way to run a command and get the result of specifically that command in a split way.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;VanillaCommandResponse?&gt; ExecuteVanillaCommandWithResponse(string command, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command to run.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum amount of time to wait for a response. After that time, this function will return null.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.VanillaCommandResponse.html">VanillaCommandResponse</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the command response, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponse_System_String_System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var testforCommandRes = await Scheduler.ExecuteVanillaCommandWithResponse("/testfor @e[rm=1]", TimeSpan.FromSeconds(5));
+if (testforCommandRes is not null) {
+    Console.WriteLine($"There are {testforCommandRes.SuccessCount} entities around you.");
+    Console.WriteLine("They are: " + string.Join(", ", testforCommandRes.Messages
+        .Where(x =&gt; x.MessageParams.Length &gt; 0)
+        .Select(x =&gt; x.MessageParams.LastOrDefault(""))));
+    testforCommandRes.ShouldSilence = true;
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallback(System.String,System.Action{OnixRuntime.Api.Events.Session.VanillaCommandResponse},System.Threading.CancellationToken)">
+  ExecuteVanillaCommandWithResponseCallback(string, Action&lt;VanillaCommandResponse?&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L734"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a game command and waits for the result to come in. This only works for commands that return a proper response.
+Some servers use text packets instead for command output, making this function not work.
+But on a server that implemented commands responsibly, this is a great way to run a command and get the result of specifically that command in a split way.
+Uses a timeout of 20 seconds by default, which should be more than enough for any command to respond. If the timeout is reached without receiving a response, the callback will be invoked with null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExecuteVanillaCommandWithResponseCallback(string command, Action&lt;VanillaCommandResponse?&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command to execute.</p>
+</dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.VanillaCommandResponse.html">VanillaCommandResponse</a>&gt;</dt>
+    <dd><p>The callback to invoke with the command response.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Scheduler.ExecuteVanillaCommandWithResponseCallback("/testfor @e[rm=1]", testforCommandRes =&gt; {
+    if (testforCommandRes is not null) {
+        Console.WriteLine($"There are {testforCommandRes.SuccessCount} entities around you.");
+        Console.WriteLine("They are: " + string.Join(", ", testforCommandRes.Messages
+            .Where(x =&gt; x.MessageParams.Length &gt; 0)
+            .Select(x =&gt; x.MessageParams.LastOrDefault(""))));
+        testforCommandRes.ShouldSilence = true;
+    }
+});</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallback(System.String,System.Action{OnixRuntime.Api.Events.Session.VanillaCommandResponse},System.TimeSpan,System.Threading.CancellationToken)">
+  ExecuteVanillaCommandWithResponseCallback(string, Action&lt;VanillaCommandResponse?&gt;, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L708"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a game command and waits for the result to come in. This only works for commands that return a proper response.
+Some servers use text packets instead for command output, making this function not work.
+But on a server that implemented commands responsibly, this is a great way to run a command and get the result of specifically that command in a split way.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExecuteVanillaCommandWithResponseCallback(string command, Action&lt;VanillaCommandResponse?&gt; callback, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command to execute.</p>
+</dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.VanillaCommandResponse.html">VanillaCommandResponse</a>&gt;</dt>
+    <dd><p>The callback to invoke with the command response.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum time to wait for the command response. The callback will be invoked with null if the timeout is reached.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Scheduler.ExecuteVanillaCommandWithResponseCallback("/testfor @e[rm=1]", testforCommandRes =&gt; {
+    if (testforCommandRes is not null) {
+        Console.WriteLine($"There are {testforCommandRes.SuccessCount} entities around you.");
+        Console.WriteLine("They are: " + string.Join(", ", testforCommandRes.Messages
+            .Where(x =&gt; x.MessageParams.Length &gt; 0)
+            .Select(x =&gt; x.MessageParams.LastOrDefault(""))));
+        testforCommandRes.ShouldSilence = true;
+    }
+}, TimeSpan.FromSeconds(5));</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallbackAndTask_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallbackAndTask*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallbackAndTask_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallbackAndTask(System.String,System.Action{OnixRuntime.Api.Events.Session.VanillaCommandResponse},System.Threading.CancellationToken)">
+  ExecuteVanillaCommandWithResponseCallbackAndTask(string, Action&lt;VanillaCommandResponse?&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L682"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a game command and waits for the result to come in. This only works for commands that return a proper response.
+Some servers use text packets instead for command output, making this function not work.
+But on a server that implemented commands responsibly, this is a great way to run a command and get the result of specifically that command in a split way.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ExecuteVanillaCommandWithResponseCallbackAndTask(string command, Action&lt;VanillaCommandResponse?&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command to execute.</p>
+</dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.VanillaCommandResponse.html">VanillaCommandResponse</a>&gt;</dt>
+    <dd><p>The callback to invoke with the command response.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task you can track to know when the callback has been run.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallbackAndTask_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_Threading_CancellationToken__examples">Examples</h4>
+  <p><a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_Threading_CancellationToken_">ExecuteVanillaCommandWithResponseCallback(string, Action&lt;VanillaCommandResponse?&gt;, CancellationToken)</a> for an example, this one returns a task you can query for completion.</p>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallbackAndTask_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallbackAndTask*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallbackAndTask_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExecuteVanillaCommandWithResponseCallbackAndTask(System.String,System.Action{OnixRuntime.Api.Events.Session.VanillaCommandResponse},System.TimeSpan,System.Threading.CancellationToken)">
+  ExecuteVanillaCommandWithResponseCallbackAndTask(string, Action&lt;VanillaCommandResponse?&gt;, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L667"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a game command and waits for the result to come in. This only works for commands that return a proper response.
+Some servers use text packets instead for command output, making this function not work.
+But on a server that implemented commands responsibly, this is a great way to run a command and get the result of specifically that command in a split way.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ExecuteVanillaCommandWithResponseCallbackAndTask(string command, Action&lt;VanillaCommandResponse?&gt; callback, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command to execute.</p>
+</dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.VanillaCommandResponse.html">VanillaCommandResponse</a>&gt;</dt>
+    <dd><p>The callback to invoke with the command response.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum time to wait for the command response. The callback will be invoked with null if the timeout is reached.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task you can track to know when the callback has been run.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallbackAndTask_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <p><a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_ExecuteVanillaCommandWithResponseCallback_System_String_System_Action_OnixRuntime_Api_Events_Session_VanillaCommandResponse__System_TimeSpan_System_Threading_CancellationToken_">ExecuteVanillaCommandWithResponseCallback(string, Action&lt;VanillaCommandResponse?&gt;, TimeSpan, CancellationToken)</a> for an example, this one returns a task you can query for completion.</p>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ExitCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExitCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ExitCallback" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ExitCallback">
+  ExitCallback()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this to return in the async threadpool context.
+This ensures you don't hog the main thread for longer than necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public YieldAwaitable ExitCallback()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.yieldawaitable">YieldAwaitable</a></dt>
+    <dd><p>The awaitable structure that yields back to the thread pool.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage(System.Func{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData,System.Boolean},System.Threading.CancellationToken)">
+  GetNextChatMessage(Func&lt;ChatMessageAddedEventData, bool&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L936"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the predicate to be received and returns it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+This function will return null when the timeout is reached without receiving a message matching the predicate.
+The timeout is set to 10 seconds by default, which should be more than enough for any message to come in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ChatMessageAddedEventData?&gt; GetNextChatMessage(Func&lt;ChatMessageAddedEventData, bool&gt; isTheDesiredMessage, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A function returning true when the message is of interest to you.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>A task of the message that matched or nullptr.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var msg = await Onix.Events.Scheduler.GetNextChatMessage(
+    x =&gt; x.Content.Contains("among", StringComparison.OrdinalIgnoreCase),
+    PluginEjectionCancellationToken);
+if (msg is not null)
+    Console.WriteLine("Got your message, it says " + msg.Content);
+else
+    Console.WriteLine("Timeout expired, i never got your message.");</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage(System.Func{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData,System.Boolean},System.TimeSpan,System.Threading.CancellationToken)">
+  GetNextChatMessage(Func&lt;ChatMessageAddedEventData, bool&gt;, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L828"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the predicate to be received and returns it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+This function will return null when the timeout is reached without receiving a message matching the predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ChatMessageAddedEventData?&gt; GetNextChatMessage(Func&lt;ChatMessageAddedEventData, bool&gt; isTheDesiredMessage, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A function returning true when the message is of interest to you.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait for that message matching?</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>A task of the message that matched or nullptr.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var msg = await Onix.Events.Scheduler.GetNextChatMessage(
+    x =&gt; x.Content.Contains("among", StringComparison.OrdinalIgnoreCase),
+    TimeSpan.FromSeconds(20),
+    PluginEjectionCancellationToken);
+if (msg is not null)
+    Console.WriteLine("Got your message, it says " + msg.Content);
+else
+    Console.WriteLine("Timeout expired, i never got your message.");</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Text_RegularExpressions_Regex_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage(System.Text.RegularExpressions.Regex,System.Threading.CancellationToken)">
+  GetNextChatMessage(Regex, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L912"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the regex to be received and returns it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+This function will return null when the timeout is reached without receiving a message matching the regex.
+The timeout is set to 10 seconds by default, which should be more than enough for any message to come in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ChatMessageAddedEventData?&gt; GetNextChatMessage(Regex isTheDesiredMessage, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></dt>
+    <dd><p>A regex to match on the message's contents.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>A task of the message that matched or nullptr.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Text_RegularExpressions_Regex_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var msg = await Onix.Events.Scheduler.GetNextChatMessage(
+    new Regex(@"\b(hello|hi|hey|greetings)\b", RegexOptions.IgnoreCase),
+    PluginEjectionCancellationToken);
+if (msg is not null)
+    Console.WriteLine("Got your message, it says " + msg.Content);
+else
+    Console.WriteLine("Timeout expired, i never got your message.");</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Text_RegularExpressions_Regex_System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage(System.Text.RegularExpressions.Regex,System.TimeSpan,System.Threading.CancellationToken)">
+  GetNextChatMessage(Regex, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L866"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the regex to be received and returns it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+This function will return null when the timeout is reached without receiving a message matching the regex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ChatMessageAddedEventData?&gt; GetNextChatMessage(Regex isTheDesiredMessage, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></dt>
+    <dd><p>A regex to match on the message's contents.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait for a message matching the regex.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>A task of the message that matched or nullptr.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Text_RegularExpressions_Regex_System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var msg = await Onix.Events.Scheduler.GetNextChatMessage(
+    new Regex(@"\b(hello|hi|hey|greetings)\b", RegexOptions.IgnoreCase),
+    TimeSpan.FromSeconds(20),
+    PluginEjectionCancellationToken);
+if (msg is not null)
+    Console.WriteLine("Got your message, it says " + msg.Content);
+else
+    Console.WriteLine("Timeout expired, i never got your message.");</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage(System.Threading.CancellationToken)">
+  GetNextChatMessage(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L955"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message and returns it.
+This function will return null when the timeout is reached without receiving a message.
+The timeout is set to 10 seconds by default, which should be more than enough for any message to come in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ChatMessageAddedEventData?&gt; GetNextChatMessage(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>A task of the message that matched or nullptr.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var msg = await Onix.Events.Scheduler.GetNextChatMessage(PluginEjectionCancellationToken);
+if (msg is not null)
+    Console.WriteLine("Got your message, it says " + msg.Content);
+else
+    Console.WriteLine("Timeout expired, i never got your message.");</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessage(System.TimeSpan,System.Threading.CancellationToken)">
+  GetNextChatMessage(TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L888"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message and returns it.
+This function will return null when the timeout is reached without receiving a message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ChatMessageAddedEventData?&gt; GetNextChatMessage(TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait for that message matching?</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>A task of the message that matched or nullptr.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessage_System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">var msg = await Onix.Events.Scheduler.GetNextChatMessage(
+    TimeSpan.FromSeconds(20),
+    PluginEjectionCancellationToken);
+if (msg is not null)
+    Console.WriteLine("Got your message, it says " + msg.Content);
+else
+    Console.WriteLine("Timeout expired, i never got your message.");</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback(System.Action{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData},System.Func{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData,System.Boolean},System.Threading.CancellationToken)">
+  GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt;, Func&lt;ChatMessageAddedEventData, bool&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1069"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the predicate to be received and invokes the callback with it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+The callback will be invoked with null when the timeout is reached without receiving a message matching the predicate.
+The timeout is set to 10 seconds by default, which should be more than enough for any message to come in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt; callback, Func&lt;ChatMessageAddedEventData, bool&gt; isTheDesiredMessage, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>The callback to invoke with the matched message, or null if the timeout is reached.</p>
+</dd>
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A function returning true when the message is of interest to you.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.GetNextChatMessageCallback(msg =&gt; {
+    if (msg is not null)
+        Console.WriteLine("Got your message, it says " + msg.Content);
+    else
+        Console.WriteLine("Timeout expired, i never got your message.");
+}, x =&gt; x.Content.Contains("among", StringComparison.OrdinalIgnoreCase), PluginEjectionCancellationToken);</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback(System.Action{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData},System.Func{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData,System.Boolean},System.TimeSpan,System.Threading.CancellationToken)">
+  GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt;, Func&lt;ChatMessageAddedEventData, bool&gt;, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L979"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the predicate to be received and invokes the callback with it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+The callback will be invoked with null when the timeout is reached without receiving a message matching the predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt; callback, Func&lt;ChatMessageAddedEventData, bool&gt; isTheDesiredMessage, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>The callback to invoke with the matched message, or null if the timeout is reached.</p>
+</dd>
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A function returning true when the message is of interest to you.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait for that message matching?</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Func_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData_System_Boolean__System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.GetNextChatMessageCallback(msg =&gt; {
+    if (msg is not null)
+        Console.WriteLine("Got your message, it says " + msg.Content);
+    else
+        Console.WriteLine("Timeout expired, i never got your message.");
+}, x =&gt; x.Content.Contains("among", StringComparison.OrdinalIgnoreCase), TimeSpan.FromSeconds(20), PluginEjectionCancellationToken);</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Text_RegularExpressions_Regex_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback(System.Action{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData},System.Text.RegularExpressions.Regex,System.Threading.CancellationToken)">
+  GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt;, Regex, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1046"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the regex to be received and invokes the callback with it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+The callback will be invoked with null when the timeout is reached without receiving a message matching the regex.
+The timeout is set to 10 seconds by default, which should be more than enough for any message to come in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt; callback, Regex isTheDesiredMessage, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>The callback to invoke with the matched message, or null if the timeout is reached.</p>
+</dd>
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></dt>
+    <dd><p>A regex to match on the message's contents.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Text_RegularExpressions_Regex_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.GetNextChatMessageCallback(msg =&gt; {
+    if (msg is not null)
+        Console.WriteLine("Got your message, it says " + msg.Content);
+    else
+        Console.WriteLine("Timeout expired, i never got your message.");
+}, new Regex(@"\b(hello|hi|hey|greetings)\b", RegexOptions.IgnoreCase), PluginEjectionCancellationToken);</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Text_RegularExpressions_Regex_System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback(System.Action{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData},System.Text.RegularExpressions.Regex,System.TimeSpan,System.Threading.CancellationToken)">
+  GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt;, Regex, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1002"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message matching the regex to be received and invokes the callback with it.
+You can ensure it's the message you want to read and not a stray message as the chat can be quite unpredictable.
+The callback will be invoked with null when the timeout is reached without receiving a message matching the regex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt; callback, Regex isTheDesiredMessage, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>The callback to invoke with the matched message, or null if the timeout is reached.</p>
+</dd>
+    <dt><code>isTheDesiredMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></dt>
+    <dd><p>A regex to match on the message's contents.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait for a message matching the regex.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Text_RegularExpressions_Regex_System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.GetNextChatMessageCallback(msg =&gt; {
+    if (msg is not null)
+        Console.WriteLine("Got your message, it says " + msg.Content);
+    else
+        Console.WriteLine("Timeout expired, i never got your message.");
+}, new Regex(@"\b(hello|hi|hey|greetings)\b", RegexOptions.IgnoreCase), TimeSpan.FromSeconds(20), PluginEjectionCancellationToken);</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback(System.Action{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData},System.Threading.CancellationToken)">
+  GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1090"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message and invokes the callback with it.
+The callback will be invoked with null when the timeout is reached without receiving a message.
+The timeout is set to 10 seconds by default, which should be more than enough for any message to come in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>The callback to invoke with the message, or null if the timeout is reached.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.GetNextChatMessageCallback(msg =&gt; {
+    if (msg is not null)
+        Console.WriteLine("Got your message, it says " + msg.Content);
+    else
+        Console.WriteLine("Timeout expired, i never got your message.");
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.GetNextChatMessageCallback(System.Action{OnixRuntime.Api.Events.Session.ChatMessageAddedEventData},System.TimeSpan,System.Threading.CancellationToken)">
+  GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt;, TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1023"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a chat message and invokes the callback with it.
+The callback will be invoked with null when the timeout is reached without receiving a message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetNextChatMessageCallback(Action&lt;ChatMessageAddedEventData?&gt; callback, TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Events.Session.ChatMessageAddedEventData.html">ChatMessageAddedEventData</a>&gt;</dt>
+    <dd><p>The callback to invoke with the message, or null if the timeout is reached.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>How long to wait for that message?</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the wait early.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_GetNextChatMessageCallback_System_Action_OnixRuntime_Api_Events_Session_ChatMessageAddedEventData__System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.GetNextChatMessageCallback(msg =&gt; {
+    if (msg is not null)
+        Console.WriteLine("Got your message, it says " + msg.Content);
+    else
+        Console.WriteLine("Timeout expired, i never got your message.");
+}, TimeSpan.FromSeconds(20), PluginEjectionCancellationToken);</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>When the cancellation token is triggered, the timeout will not throw this exception.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Action_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask(System.Action)">
+  HandleTask(Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes ownership of a task that you don't have anywhere to await but still want to ensure that any exceptions it throws are caught and logged, preventing unhandled exceptions from crashing the game.
+This variant lets you use an async lambda directly without needing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task.run#system-threading-tasks-task-run(system-action)">Run(Action)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleTask(Action taskYouDontCareAbout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>taskYouDontCareAbout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The task you want to run in the background without tending to it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Func_System_Threading_Tasks_Task__" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask(System.Func{System.Threading.Tasks.Task})">
+  HandleTask(Func&lt;Task&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes ownership of a task that you don't have anywhere to await but still want to ensure that any exceptions it throws are caught and logged, preventing unhandled exceptions from crashing the game.
+This variant lets you use an async lambda directly without needing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task.run#system-threading-tasks-task-run(system-action)">Run(Action)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleTask(Func&lt;Task&gt; taskYouDontCareAbout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>taskYouDontCareAbout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd><p>The task you want to run in the background without tending to it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Threading_Tasks_Task_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask(System.Threading.Tasks.Task)">
+  HandleTask(Task)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes ownership of a task that you don't have anywhere to await but still want to ensure that any exceptions it throws are caught and logged, preventing unhandled exceptions from crashing the game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleTask(Task taskYouDontCareAbout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>taskYouDontCareAbout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>The task you want to run in the background without tending to it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTaskIgnoreCancel_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTaskIgnoreCancel*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTaskIgnoreCancel_System_Threading_Tasks_Task_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTaskIgnoreCancel(System.Threading.Tasks.Task)">
+  HandleTaskIgnoreCancel(Task)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes ownership of a task that you don't have anywhere to await but still want to ensure that any exceptions it throws are caught and logged, preventing unhandled exceptions from crashing the game.
+This will ignore <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a> exceptions that this class likes to throw around when your plugin is ejected or reloaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleTaskIgnoreCancel(Task taskYouDontCareAbout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>taskYouDontCareAbout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>The task you want to run in the background without tending to it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_HandleTask__1_System_Func_System_Threading_Tasks_Task___0___" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.HandleTask``1(System.Func{System.Threading.Tasks.Task{``0}})">
+  HandleTask&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes ownership of a task that you don't have anywhere to await but still want to ensure that any exceptions it throws are caught and logged, preventing unhandled exceptions from crashing the game.
+This variant lets you use an async lambda directly without needing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task.run#system-threading-tasks-task-run-1(system-func((-0)))">Run&lt;TResult&gt;(Func&lt;TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleTask&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt; taskYouDontCareAbout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>taskYouDontCareAbout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;&gt;</dt>
+    <dd><p>The task you want to run in the background without tending to it.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_OpenInventory_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.OpenInventory*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_OpenInventory_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.OpenInventory(System.Threading.CancellationToken)">
+  OpenInventory(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L616"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to open the inventory and get a <a class="xref" href="OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a> in the Container Tick context.
+This is a convenience function combining opening the player's inventory and letting you make changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ContainerScreen&gt; OpenInventory(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to prevent the operation from completing or stalling if the plugin is ejected or reloaded.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a>&gt;</dt>
+    <dd><p>A task that completes once the inventory has been opened or the operation was cancelled.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_OpenInventory_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">ContainerScreen container = await Onix.Events.Scheduler.OpenInventory(PluginEjectionCancellationToken);
+if (container.GetItem("hotbar_items", 0) is { IsEmpty: false } stack1 &amp;&amp; container.GetItem("hotbar_items", 1) is { IsEmpty: false } stack2) {
+    // This animation won't even be visible to almost everyone.
+    container.SendFlyingItem(stack1, "hotbar_items", 0, "hotbar_items", 1);
+    container.SendFlyingItem(stack2, "hotbar_items", 1, "hotbar_items", 0);
+    // Switch the first and second hotbar slots
+    container.TakeAll("hotbar_items", 0);
+    container.PlaceAll("hotbar_items", 1);
+    container.PlaceAll("hotbar_items", 0);
+    // (Optional) Leave the inventory because we did our changes.
+}
+Onix.Gui.CloseCurrentScreen();
+// Return to a threadpool thread for the rest if there is more to your function.
+await Onix.Events.Scheduler.ExitCallback();</code></pre>
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_OpenInventory_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Most functions in <a class="xref" href="OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a> still require trust, if you're trying to read items, you can read the player's inventory instead.</p>
+</div>
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_OpenInventoryCallback_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.OpenInventoryCallback*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_OpenInventoryCallback_System_Action_OnixRuntime_Api_UI_ContainerScreen__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.OpenInventoryCallback(System.Action{OnixRuntime.Api.UI.ContainerScreen},System.Threading.CancellationToken)">
+  OpenInventoryCallback(Action&lt;ContainerScreen&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L643"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the inventory and runs a callback with <a class="xref" href="OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a> when it is opened.
+This is a convenience function combining opening the player's inventory and letting you make changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OpenInventoryCallback(Action&lt;ContainerScreen&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.UI.ContainerScreen.html">ContainerScreen</a>&gt;</dt>
+    <dd><p>The callback to run once the inventory opens.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to prevent the operation from completing or stalling if the plugin is ejected or reloaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_OpenInventoryCallback_System_Action_OnixRuntime_Api_UI_ContainerScreen__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.OpenInventoryCallback((container) =&gt; {
+    // This animation won't even be visible to almost everyone.
+    if (container.GetItem("hotbar_items", 0) is { IsEmpty: false } stack1 &amp;&amp; container.GetItem("hotbar_items", 1) is { IsEmpty: false } stack2) {
+        container.SendFlyingItem(stack1, "hotbar_items", 0, "hotbar_items", 1);
+        container.SendFlyingItem(stack2, "hotbar_items", 1, "hotbar_items", 0);
+        // Switch the first and second hotbar slots
+        container.TakeAll("hotbar_items", 0);
+        container.PlaceAll("hotbar_items", 1);
+        container.PlaceAll("hotbar_items", 0);
+    }
+    // (Optional) Leave the inventory because we did our changes.
+    Onix.Gui.CloseCurrentScreen();
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleInServerTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleInServerTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleInServerTick_System_Int32_System_Action_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleInServerTick(System.Int32,System.Action,System.Threading.CancellationToken)">
+  ScheduleInServerTick(int, Action, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows you to run a callback on the next server tick without having to manually await the switch. This is useful for fire-and-forget style operations that still need to run on the main thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleInServerTick(int ticksToWait, Action callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ticksToWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of server ticks to wait before executing the callback. Must be a positive integer, 0 will execute on the next tick.</p>
+</dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The callback to execute on the next server tick.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleInServerTick_System_Int32_System_Action_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.ScheduleNextServerTick(() =&gt; {
+    // You know, sometimes you wake up and choose violence, cause a little genocide here and there, it happens, it really does.
+    foreach (Entity entity in Onix.LocalServer!.World.Entities) {
+        entity.Kill();
+    }
+    // Wait 5 ticks to let the items and experience orbs drop, then kill those.
+    await Onix.Events.Scheduler.SwitchToServerTick(5, PluginEjectionCancellationToken); 
+    foreach (Entity entity in Onix.LocalServer!.World.Entities) {
+        entity.Kill();
+    }
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleInTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleInTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleInTick_System_Int32_System_Action_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleInTick(System.Int32,System.Action,System.Threading.CancellationToken)">
+  ScheduleInTick(int, Action, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows you to run a callback on the next <code class="paramref">ticksToWait</code> client tick without having to manually await the switch. This is useful for fire-and-forget style operations that still need to run on the main thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleInTick(int ticksToWait, Action callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ticksToWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of ticks to wait before executing the callback. Must be a positive integer, 0 will execute on the next tick.</p>
+</dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The callback to execute on the next client tick.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleInTick_System_Int32_System_Action_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.ScheduleNextTick(() =&gt; {
+    // If we're facing a block, break it if it's an oak log.
+    // This only happens once, but at that time, we can't stand to look at oak logs I guess.
+    // There are plenty of things you could do by now being in the tick but that's for you to decide, I'm breaking an oak logs potentially.
+    if (Onix.LocalPlayer is { GameMode: GameMode.Creative, Raycast: { Type: RaycastResultType.Block } }) {
+        Block facingBlock = Onix.LocalPlayer.Region.GetBlock(Onix.LocalPlayer.Raycast.BlockPosition);
+        if (facingBlock is { NameFull: "minecraft:oak_log" }) {
+            Onix.LocalPlayer.BreakBlock(Onix.LocalPlayer.Raycast);
+            // wait 40 ticks or 2 seconds, then apologize for breaking the log.
+            await Onix.Events.Scheduler.SwitchToTick(40, PluginEjectionCancellationToken);
+            Onix.Gui.SetTitleText("Okay... I'm sorry for breaking your log...");
+        }
+    }
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextDirect2DRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextDirect2DRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextDirect2DRender_System_Action_OnixRuntime_Api_Rendering_RendererDirect2D_System_Single__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextDirect2DRender(System.Action{OnixRuntime.Api.Rendering.RendererDirect2D,System.Single},System.Threading.CancellationToken)">
+  ScheduleNextDirect2DRender(Action&lt;RendererDirect2D, float&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules a callback to be executed during the next direct 2d render frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleNextDirect2DRender(Action&lt;RendererDirect2D, float&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.RendererDirect2D.html">RendererDirect2D</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>The action to execute once the direct 2d render context is reached. Receives the renderer and delta time.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to prevent the callback from executing if the plugin is ejected or reloaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextDirect2DRender_System_Action_OnixRuntime_Api_Rendering_RendererDirect2D_System_Single__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.ScheduleNextDirect2DRender((gfx, delta) =&gt; {
+    // Perform one time rendering operations here
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextGameRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextGameRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextGameRender_System_Action_OnixRuntime_Api_Rendering_RendererGame_System_Single__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextGameRender(System.Action{OnixRuntime.Api.Rendering.RendererGame,System.Single},System.Threading.CancellationToken)">
+  ScheduleNextGameRender(Action&lt;RendererGame, float&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L490"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules a callback to be executed during the next game render frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleNextGameRender(Action&lt;RendererGame, float&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.RendererGame.html">RendererGame</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>The action to execute once the game render context is reached. Receives the renderer and delta time.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to prevent the callback from executing if the plugin is ejected or reloaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextGameRender_System_Action_OnixRuntime_Api_Rendering_RendererGame_System_Single__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">await Onix.Events.Scheduler.ScheduleNextGameRender((gfx, delta) =&gt; {
+    // Perform one time rendering operations here
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextServerTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextServerTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextServerTick_System_Action_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextServerTick(System.Action,System.Threading.CancellationToken)">
+  ScheduleNextServerTick(Action, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L457"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows you to run a callback on the next server tick without having to manually await the switch. This is useful for fire-and-forget style operations that still need to run on the main thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleNextServerTick(Action callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The callback to execute on the next server tick.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextServerTick_System_Action_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.ScheduleNextServerTick(() =&gt; {
+    // You know, sometimes you wake up and choose violence, cause a little genocide here and there, it happens, it really does.
+    foreach (Entity entity in Onix.LocalServer!.World.Entities) {
+        entity.Kill();
+    }
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextTick_System_Action_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextTick(System.Action,System.Threading.CancellationToken)">
+  ScheduleNextTick(Action, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows you to run a callback on the next client tick without having to manually await the switch. This is useful for fire-and-forget style operations that still need to run on the main thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleNextTick(Action callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The callback to execute on the next client tick.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextTick_System_Action_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Events.Scheduler.ScheduleNextTick(() =&gt; {
+    // If we're facing a block, break it if it's an oak log.
+    // This only happens once, but at that time, we can't stand to look at oak logs I guess.
+    // There are plenty of things you could do by now being in the tick but that's for you to decide, I'm breaking an oak logs potentially.
+    if (Onix.LocalPlayer is { GameMode: GameMode.Creative, Raycast: { Type: RaycastResultType.Block } }) {
+        Block facingBlock = Onix.LocalPlayer.Region.GetBlock(Onix.LocalPlayer.Raycast.BlockPosition);
+        if (facingBlock is { NameFull: "minecraft:oak_log" }) {
+            Onix.LocalPlayer.BreakBlock(Onix.LocalPlayer.Raycast);
+        }
+    }
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextUiRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextUiRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextUiRender_System_Action_OnixRuntime_Api_Rendering_RendererCommon2D_System_Single__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextUiRender(System.Action{OnixRuntime.Api.Rendering.RendererCommon2D,System.Single},System.Threading.CancellationToken)">
+  ScheduleNextUiRender(Action&lt;RendererCommon2D, float&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L550"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules a callback to be executed during the next ui render frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleNextUiRender(Action&lt;RendererCommon2D, float&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon2D.html">RendererCommon2D</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>The action to execute once the ui render context is reached. Receives the renderer and delta time.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to prevent the callback from executing if the plugin is ejected or reloaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextUiRender_System_Action_OnixRuntime_Api_Rendering_RendererCommon2D_System_Single__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">await Onix.Events.Scheduler.ScheduleNextUiRender((gfx, delta) =&gt; {
+    // Perform one time rendering operations here
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextWorldRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextWorldRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextWorldRender_System_Action_OnixRuntime_Api_Rendering_RendererWorld_System_Single__System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.ScheduleNextWorldRender(System.Action{OnixRuntime.Api.Rendering.RendererWorld,System.Single},System.Threading.CancellationToken)">
+  ScheduleNextWorldRender(Action&lt;RendererWorld, float&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules a callback to be executed during the next world render frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleNextWorldRender(Action&lt;RendererWorld, float&gt; callback, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="OnixRuntime.Api.Rendering.RendererWorld.html">RendererWorld</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>The action to execute once the world render context is reached. Receives the renderer and delta time.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to prevent the callback from executing if the plugin is ejected or reloaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_ScheduleNextWorldRender_System_Action_OnixRuntime_Api_Rendering_RendererWorld_System_Single__System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">await Onix.Events.Scheduler.ScheduleNextWorldRender((gfx, delta) =&gt; {
+    // Perform one time rendering operations here
+}, PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextDirect2DRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextDirect2DRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextDirect2DRender_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextDirect2DRender(System.Threading.CancellationToken)">
+  SwitchToNextDirect2DRender(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L567"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next direct 2d render. Any code you write after this will now run in the context of the direct 2d render loop, allowing you to upload textures, upload meshes, etc etc.
+This gives you the renderer and delta time, but if you're trying to do rendering, you should use the event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(RendererDirect2D gfx, float deltaTime)&gt; SwitchToNextDirect2DRender(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the task when your plugin is ejected or reloaded for example.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="OnixRuntime.Api.Rendering.RendererDirect2D.html">RendererDirect2D</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.rendererdirect2d,system.single-.gfx">gfx</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.rendererdirect2d,system.single-.deltatime">deltaTime</a>)&gt;</dt>
+    <dd><p>The task with the renderer and delta time for that particular frame.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextDirect2DRender_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">(RendererDirect2D gfx, float delta) = await Onix.Events.Scheduler.SwitchToNextDirect2DRender(PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextGameRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextGameRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextGameRender_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextGameRender(System.Threading.CancellationToken)">
+  SwitchToNextGameRender(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L477"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next game render. Any code you write after this will now run in the context of the game render loop, allowing you to upload textures, upload meshes, etc etc.
+This gives you the renderer and delta time, but if you're trying to do rendering, you should use the event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(RendererGame gfx, float deltaTime)&gt; SwitchToNextGameRender(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the task when your plugin is ejected or reloaded for example.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="OnixRuntime.Api.Rendering.RendererGame.html">RendererGame</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.renderergame,system.single-.gfx">gfx</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.renderergame,system.single-.deltatime">deltaTime</a>)&gt;</dt>
+    <dd><p>The task with the renderer and delta time for that particular frame.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextGameRender_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">(RendererGame gfx, float delta) = await Onix.Events.Scheduler.SwitchToNextGameRender(PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextServerTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextServerTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextServerTick_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextServerTick(System.Threading.CancellationToken)">
+  SwitchToNextServerTick(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next server tick. Any code you write after this will now run in the context of the main server tick, allowing you to call game functions at the right time.
+Make sure to return to the thread pool with <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_ExitCallback">ExitCallback()</a> if you need to do any heavy work to avoid freezing the game. You can also use <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Threading_Tasks_Task_">HandleTask(Task)</a> to run tasks in the background without awaiting them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SwitchToNextServerTick(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that completes on the next server tick.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextServerTick_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">await Onix.Events.Scheduler.SwitchToNextServerTick(PluginEjectionCancellationToken);
+// You know, sometimes you wake up and choose violence, cause a little genocide here and there, it happens, it really does.
+foreach (Entity entity in Onix.LocalServer!.World.Entities) {
+    entity.Kill();
+}
+// Exit the tick since our work here is done.
+await Onix.Events.Scheduler.ExitCallback();</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextTick_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextTick(System.Threading.CancellationToken)">
+  SwitchToNextTick(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next client tick. Any code you write after this will now run in the context of the main client tick, allowing you to call game functions at the right time.
+Make sure to return to the thread pool with <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_ExitCallback">ExitCallback()</a> if you need to do any heavy work to avoid freezing the game. You can also use <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Threading_Tasks_Task_">HandleTask(Task)</a> to run tasks in the background without awaiting them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SwitchToNextTick(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that completes on the next client tick.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextTick_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">await Onix.Events.Scheduler.SwitchToNextTick(PluginEjectionCancellationToken);
+// If we're facing a block, break it if it's an oak log.
+// This only happens once, but at that time, we can't stand to look at oak logs I guess.
+// There are plenty of things you could do by now being in the tick but that's for you to decide, I'm breaking an oak logs potentially.
+if (Onix.LocalPlayer is { GameMode: GameMode.Creative, Raycast: { Type: RaycastResultType.Block } }) {
+    Block facingBlock = Onix.LocalPlayer.Region.GetBlock(Onix.LocalPlayer.Raycast.BlockPosition);
+    if (facingBlock is { NameFull: "minecraft:oak_log" }) {
+        Onix.LocalPlayer.BreakBlock(Onix.LocalPlayer.Raycast);
+    }
+}
+// Exit the tick since our work here is done.
+await Onix.Events.Scheduler.ExitCallback();</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextUiRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextUiRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextUiRender_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextUiRender(System.Threading.CancellationToken)">
+  SwitchToNextUiRender(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next ui render. Any code you write after this will now run in the context of the ui render loop, allowing you to measure text or something.
+This gives you the renderer and delta time, but if you're trying to do rendering, you should use the event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(RendererCommon2D gfx, float deltaTime)&gt; SwitchToNextUiRender(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the task when your plugin is ejected or reloaded for example.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="OnixRuntime.Api.Rendering.RendererCommon2D.html">RendererCommon2D</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.renderercommon2d,system.single-.gfx">gfx</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.renderercommon2d,system.single-.deltatime">deltaTime</a>)&gt;</dt>
+    <dd><p>The task with the renderer and delta time for that particular frame.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextUiRender_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">(RendererCommon2D gfx, float delta) = await Onix.Events.Scheduler.SwitchToNextUiRender(PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextWorldRender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextWorldRender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextWorldRender_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToNextWorldRender(System.Threading.CancellationToken)">
+  SwitchToNextWorldRender(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L507"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next world render. Any code you write after this will now run in the context of the world render loop, allowing you to upload textures, upload meshes, etc etc.
+This gives you the renderer and delta time, but if you're trying to do rendering, you should use the event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(RendererWorld gfx, float deltaTime)&gt; SwitchToNextWorldRender(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the task when your plugin is ejected or reloaded for example.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="OnixRuntime.Api.Rendering.RendererWorld.html">RendererWorld</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.rendererworld,system.single-.gfx">gfx</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-onixruntime.api.rendering.rendererworld,system.single-.deltatime">deltaTime</a>)&gt;</dt>
+    <dd><p>The task with the renderer and delta time for that particular frame.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToNextWorldRender_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">(RendererWorld gfx, float delta) = await Onix.Events.Scheduler.SwitchToNextWorldRender(PluginEjectionCancellationToken);</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToServerTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToServerTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToServerTick_System_Int32_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToServerTick(System.Int32,System.Threading.CancellationToken)">
+  SwitchToServerTick(int, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next server tick. Any code you write after this will now run in the context of the main server tick, allowing you to call game functions at the right time.
+Make sure to return to the thread pool with <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_ExitCallback">ExitCallback()</a> if you need to do any heavy work to avoid freezing the game. You can also use <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Threading_Tasks_Task_">HandleTask(Task)</a> to run tasks in the background without awaiting them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SwitchToServerTick(int ticksToWait, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ticksToWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of server ticks to wait before switching. Must be a positive integer, 0 will switch on the next tick.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that completes on the next server tick.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToServerTick_System_Int32_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">await Onix.Events.Scheduler.SwitchToNextServerTick(PluginEjectionCancellationToken);
+// You know, sometimes you wake up and choose violence, cause a little genocide here and there, it happens, it really does.
+foreach (Entity entity in Onix.LocalServer!.World.Entities) {
+    entity.Kill();
+}
+// Wait 5 ticks to let the items and experience orbs drop, then kill those.
+await Onix.Events.Scheduler.SwitchToServerTick(5, PluginEjectionCancellationToken); 
+foreach (Entity entity in Onix.LocalServer!.World.Entities) {
+    entity.Kill();
+}
+// Exit the tick since our work here is done.
+await Onix.Events.Scheduler.ExitCallback();</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToTick_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToTick*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToTick_System_Int32_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.SwitchToTick(System.Int32,System.Threading.CancellationToken)">
+  SwitchToTick(int, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Await this task to switch to the next <code class="paramref">ticksToWait</code> client tick. Any code you write after this will now run in the context of the main client tick, allowing you to call game functions at the right time.
+Make sure to return to the thread pool with <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_ExitCallback">ExitCallback()</a> if you need to do any heavy work to avoid freezing the game. You can also use <a class="xref" href="OnixRuntime.Api.Events.OnixEventScheduler.html#OnixRuntime_Api_Events_OnixEventScheduler_HandleTask_System_Threading_Tasks_Task_">HandleTask(Task)</a> to run tasks in the background without awaiting them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SwitchToTick(int ticksToWait, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ticksToWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The amount of ticks to wait, must be positive, 0 will be next tick.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that completes on the next client tick.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_SwitchToTick_System_Int32_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">await Onix.Events.Scheduler.SwitchToNextTick(PluginEjectionCancellationToken);
+// If we're facing a block, break it if it's an oak log.
+// This only happens once, but at that time, we can't stand to look at oak logs I guess.
+// There are plenty of things you could do by now being in the tick but that's for you to decide, I'm breaking an oak logs potentially.
+if (Onix.LocalPlayer is { GameMode: GameMode.Creative, Raycast: { Type: RaycastResultType.Block } }) {
+    Block facingBlock = Onix.LocalPlayer.Region.GetBlock(Onix.LocalPlayer.Raycast.BlockPosition);
+    if (facingBlock is { NameFull: "minecraft:oak_log" }) {
+        Onix.LocalPlayer.BreakBlock(Onix.LocalPlayer.Raycast);
+        // wait 40 ticks or 2 seconds, then apologize for breaking the log.
+        await Onix.Events.Scheduler.SwitchToTick(40, PluginEjectionCancellationToken);
+        Onix.Gui.SetTitleText("Okay... I'm sorry for breaking your log...");
+    }
+}
+// Exit the tick since our work here is done.
+await Onix.Events.Scheduler.ExitCallback();</code></pre>
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessage_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessage(OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPlayerPluginMessage(OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message sent by a player to the local server until 5 seconds have passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPlayerPluginMessageEventData?&gt; WaitForServerPlayerPluginMessage(OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPlayerPluginMessageEventData.html">ServerPlayerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message event data including the sending player, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessage_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">ServerPlayerPluginMessageEventData? msg = await Onix.Events.Scheduler.WaitForServerPlayerPluginMessage(this);
+if (msg is not null) {
+    string content = msg.IsString ? msg.ContentString! : $"{msg.ContentBytes!.Length} bytes";
+    Console.WriteLine($"{msg.Sender.Name} sent: {content}");
+} else {
+    Console.WriteLine("Timeout expired, no player plugin message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessage_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessage(System.TimeSpan,OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPlayerPluginMessage(TimeSpan, OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message sent by a player to the local server until <code class="paramref">timeout</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPlayerPluginMessageEventData?&gt; WaitForServerPlayerPluginMessage(TimeSpan timeout, OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum amount of time to wait for a response. After that time, this function will return null.</p>
+</dd>
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPlayerPluginMessageEventData.html">ServerPlayerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message event data including the sending player, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessage_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">ServerPlayerPluginMessageEventData? msg = await Onix.Events.Scheduler.WaitForServerPlayerPluginMessage(TimeSpan.FromSeconds(5), this);
+if (msg is not null) {
+    string content = msg.IsString ? msg.ContentString! : $"{msg.ContentBytes!.Length} bytes";
+    Console.WriteLine($"{msg.Sender.Name} sent: {content}");
+} else {
+    Console.WriteLine("Timeout expired, no player plugin message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessageAnySender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessageAnySender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessageAnySender_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessageAnySender(System.Threading.CancellationToken)">
+  WaitForServerPlayerPluginMessageAnySender(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message sent by any player to the local server until 5 seconds have passed, regardless of which plugin sent it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPlayerPluginMessageEventData?&gt; WaitForServerPlayerPluginMessageAnySender(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPlayerPluginMessageEventData.html">ServerPlayerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message event data including the sending player, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessageAnySender_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">// You'd probably want to check the plugin uuid and version to know who sent it.
+ServerPlayerPluginMessageEventData? msg = await Onix.Events.Scheduler.WaitForServerPlayerPluginMessageAnySender(PluginEjectionCancellationToken);
+if (msg is not null) {
+    string content = msg.IsString ? msg.ContentString! : $"{msg.ContentBytes!.Length} bytes";
+    Console.WriteLine($"{msg.Sender.Name} (plugin {msg.PluginUuid}) sent: {content}");
+} else {
+    Console.WriteLine("Timeout expired, no player plugin message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessageAnySender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessageAnySender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessageAnySender_System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPlayerPluginMessageAnySender(System.TimeSpan,System.Threading.CancellationToken)">
+  WaitForServerPlayerPluginMessageAnySender(TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message sent by any player to the local server until <code class="paramref">timeout</code>, regardless of which plugin sent it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPlayerPluginMessageEventData?&gt; WaitForServerPlayerPluginMessageAnySender(TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum amount of time to wait for a response. After that time, this function will return null.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPlayerPluginMessageEventData.html">ServerPlayerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message event data including the sending player, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPlayerPluginMessageAnySender_System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">// You'd probably want to check the plugin uuid and version to know who sent it.
+ServerPlayerPluginMessageEventData? msg = await Onix.Events.Scheduler.WaitForServerPlayerPluginMessageAnySender(TimeSpan.FromSeconds(5), PluginEjectionCancellationToken);
+if (msg is not null) {
+    string content = msg.IsString ? msg.ContentString! : $"{msg.ContentBytes!.Length} bytes";
+    Console.WriteLine($"{msg.Sender.Name} (plugin {msg.PluginUuid}) sent: {content}");
+} else {
+    Console.WriteLine("Timeout expired, no player plugin message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessage_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessage(OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPluginMessage(OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message from the server to be received until 5 seconds have passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPluginMessageEventData?&gt; WaitForServerPluginMessage(OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token, and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPluginMessageEventData.html">ServerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the command response, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessage_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("SkinRenderer.GetToeCount", "");
+ServerPluginMessageEventData? nextMessage = await Onix.Events.Scheduler.WaitForServerPluginMessage(this);
+if (nextMessage is { IsString: true, MessageId: "SkinRenderer.SetToeCount" }) {
+    Console.WriteLine("Setting toe count to " + nextMessage.ContentString!);
+} else {
+    Console.WriteLine("Got some other message.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessage_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessage*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessage_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessage(System.TimeSpan,OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPluginMessage(TimeSpan, OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message from the server to be received until <code class="paramref">timeout</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPluginMessageEventData?&gt; WaitForServerPluginMessage(TimeSpan timeout, OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum amount of time to wait for a response. After that time, this function will return null.</p>
+</dd>
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token, and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPluginMessageEventData.html">ServerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the command response, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessage_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("SkinRenderer.GetToeCount", "");
+ServerPluginMessageEventData? nextMessage = await Onix.Events.Scheduler.WaitForServerPluginMessage(TimeSpan.FromSeconds(5), this);
+if (nextMessage is { IsString: true, MessageId: "SkinRenderer.SetToeCount" }) {
+    Console.WriteLine("Setting toe count to " + nextMessage.ContentString!);
+} else {
+    Console.WriteLine("Got some other message.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageAnySender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageAnySender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageAnySender_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageAnySender(System.Threading.CancellationToken)">
+  WaitForServerPluginMessageAnySender(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message from the server to be received until 5 seconds have passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPluginMessageEventData?&gt; WaitForServerPluginMessageAnySender(CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPluginMessageEventData.html">ServerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the command response, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageAnySender_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("SkinRenderer.GetToeCount", "");
+// Now, you'd probably want to check if the plugin uuid and version is in an acceptable range.
+ServerPluginMessageEventData? nextMessage = await Onix.Events.Scheduler.WaitForServerPluginMessageAnySender(PluginEjectionCancellationToken);
+if (nextMessage is { IsString: true, MessageId: "SkinRenderer.SetToeCount" }) {
+    Console.WriteLine("Setting toe count to " + nextMessage.ContentString!);
+} else {
+    Console.WriteLine("Got some other message.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageAnySender_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageAnySender*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageAnySender_System_TimeSpan_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageAnySender(System.TimeSpan,System.Threading.CancellationToken)">
+  WaitForServerPluginMessageAnySender(TimeSpan, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1312"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a plugin message from the server to be received until <code class="paramref">timeout</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ServerPluginMessageEventData?&gt; WaitForServerPluginMessageAnySender(TimeSpan timeout, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum amount of time to wait for a response. After that time, this function will return null.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="OnixRuntime.Api.Connection.ServerPluginMessageEventData.html">ServerPluginMessageEventData</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the command response, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageAnySender_System_TimeSpan_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("SkinRenderer.GetToeCount", "");
+// Now, you'd probably want to check if the plugin uuid and version is in an acceptable range.
+ServerPluginMessageEventData? nextMessage = await Onix.Events.Scheduler.WaitForServerPluginMessageAnySender(TimeSpan.FromSeconds(5), PluginEjectionCancellationToken);
+if (nextMessage is { IsString: true, MessageId: "SkinRenderer.SetToeCount" }) {
+    Console.WriteLine("Setting toe count to " + nextMessage.ContentString!);
+} else {
+    Console.WriteLine("Got some other message.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageBytes_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageBytes*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageBytes_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageBytes(OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPluginMessageBytes(OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a byte[] plugin message from the server to be received until 5 seconds have passed.
+Only resolves when a message containing binary content arrives from this plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;byte[]?&gt; WaitForServerPluginMessageBytes(OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message bytes, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageBytes_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("MyPlugin.GetRawData", "");
+byte[]? data = await Onix.Events.Scheduler.WaitForServerPluginMessageBytes(this, PluginEjectionCancellationToken);
+if (data is not null) {
+    Console.WriteLine($"Received {data.Length} bytes from the server.");
+} else {
+    Console.WriteLine("Timeout expired, no binary message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageBytes_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageBytes*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageBytes_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageBytes(System.TimeSpan,OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPluginMessageBytes(TimeSpan, OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a byte[] plugin message from the server to be received until <code class="paramref">timeout</code>.
+Only resolves when a message containing binary content arrives from this plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;byte[]?&gt; WaitForServerPluginMessageBytes(TimeSpan timeout, OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum amount of time to wait for a response. After that time, this function will return null.</p>
+</dd>
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message bytes, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageBytes_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("MyPlugin.GetRawData", "");
+byte[]? data = await Onix.Events.Scheduler.WaitForServerPluginMessageBytes(TimeSpan.FromSeconds(5), this, PluginEjectionCancellationToken);
+if (data is not null) {
+    Console.WriteLine($"Received {data.Length} bytes from the server.");
+} else {
+    Console.WriteLine("Timeout expired, no binary message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageString_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageString*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageString_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageString(OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPluginMessageString(OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a string plugin message from the server to be received until 5 seconds have passed.
+Only resolves when a message containing string content arrives from this plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string?&gt; WaitForServerPluginMessageString(OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message string, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageString_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("MyPlugin.GetStatus", "");
+string? status = await Onix.Events.Scheduler.WaitForServerPluginMessageString(this, PluginEjectionCancellationToken);
+if (status is not null) {
+    Console.WriteLine("Server status: " + status);
+} else {
+    Console.WriteLine("Timeout expired, no string message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageString_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageString*"></a>
+
+  <h3 id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageString_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken_" data-uid="OnixRuntime.Api.Events.OnixEventScheduler.WaitForServerPluginMessageString(System.TimeSpan,OnixRuntime.Plugin.OnixPluginBase,System.Threading.CancellationToken)">
+  WaitForServerPluginMessageString(TimeSpan, OnixPluginBase, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L1257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a string plugin message from the server to be received until <code class="paramref">timeout</code>.
+Only resolves when a message containing string content arrives from this plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string?&gt; WaitForServerPluginMessageString(TimeSpan timeout, OnixPluginBase plugin, CancellationToken ct = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The maximum amount of time to wait for a response. After that time, this function will return null.</p>
+</dd>
+    <dt><code>plugin</code> <a class="xref" href="OnixRuntime.Plugin.OnixPluginBase.html">OnixPluginBase</a></dt>
+    <dd><p>Your plugin instance, for the cancellation token and identity.</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A cancellation token to cancel the operation, by default taken from <code class="paramref">plugin</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation. The task result contains the message string, or null if the timeout is reached.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_Events_OnixEventScheduler_WaitForServerPluginMessageString_System_TimeSpan_OnixRuntime_Plugin_OnixPluginBase_System_Threading_CancellationToken__examples">Examples</h4>
+  <pre><code class="lang-csharp">Onix.Client.SendPluginMessage("MyPlugin.GetStatus", "");
+string? status = await Onix.Events.Scheduler.WaitForServerPluginMessageString(TimeSpan.FromSeconds(5), this, PluginEjectionCancellationToken);
+if (status is not null) {
+    Console.WriteLine("Server status: " + status);
+} else {
+    Console.WriteLine("Timeout expired, no string message received.");
+}</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Whenever the cancellation token is canceled, but not when the timeout expires or the client is no longer connected to the server.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/OnixEventScheduler.cs/#L160" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

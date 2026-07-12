@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IAuraBackendCreator | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IAuraBackendCreator | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Factory for creating  instances. Allows querying available graphics adapters and selecting an API version before creating the backend. Obtain one via the static factory methods such as  or .">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Aura_IAuraBackendCreator.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Aura.IAuraBackendCreator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator">
+
+
+
+  <h1 id="OnixRuntime_Api_Aura_IAuraBackendCreator" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator" class="text-break">
+Class IAuraBackendCreator  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Aura.html">Aura</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Factory for creating <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html">IAuraBackend</a> instances. Allows querying available graphics adapters and
+selecting an API version before creating the backend. Obtain one via the static factory methods such as
+<a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html#OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12">CreateD3d12()</a> or <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html#OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11">CreateD3d11()</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IAuraBackendCreator : AuraResourcePointer, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html">AuraResourcePointer</a></div>
+      <div><span class="xref">IAuraBackendCreator</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html#OnixRuntime_Api_Aura_AuraResourcePointer_Dispose">AuraResourcePointer.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateBackend*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateBackend">
+  CreateBackend()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a backend with the default adapter and highest api version the backend can do.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraBackend CreateBackend()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html">IAuraBackend</a></dt>
+    <dd><p>Hopefully a backend!</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateBackend*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend_OnixRuntime_Api_Aura_IAuraGraphicsAdapter_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateBackend(OnixRuntime.Api.Aura.IAuraGraphicsAdapter)">
+  CreateBackend(IAuraGraphicsAdapter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a backend with the specified adapter on the highest api version the backend can do.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraBackend CreateBackend(IAuraGraphicsAdapter adapter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>adapter</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a></dt>
+    <dd><p>The adapter to create the backend on.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html">IAuraBackend</a></dt>
+    <dd><p>Hopefully a backend!</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateBackend*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend_OnixRuntime_Api_Aura_IAuraGraphicsAdapter_OnixRuntime_Api_Aura_AuraSupportedAdapterApi_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateBackend(OnixRuntime.Api.Aura.IAuraGraphicsAdapter,OnixRuntime.Api.Aura.AuraSupportedAdapterApi)">
+  CreateBackend(IAuraGraphicsAdapter, AuraSupportedAdapterApi)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a backend with the specified adapter and api version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraBackend CreateBackend(IAuraGraphicsAdapter adapter, AuraSupportedAdapterApi targetVersion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>adapter</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a></dt>
+    <dd><p>The adapter to create the backend on.</p>
+</dd>
+    <dt><code>targetVersion</code> <a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a></dt>
+    <dd><p>The API version you want to use on that adapter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html">IAuraBackend</a></dt>
+    <dd><p>Hopefully a backend!</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11">
+  CreateD3d11()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a d3d11 backend creator. You can use this to get your backend with a new device and context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraBackendCreator CreateD3d11()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+    <dd><p>The backend creator you can then go query adapters for or create a backend out of.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11FromDevice_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11FromDevice*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11FromDevice_System_IntPtr_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11FromDevice(System.IntPtr)">
+  CreateD3d11FromDevice(nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a d3d11 backend creator. You give it your existing device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraBackendCreator CreateD3d11FromDevice(nint existingDevice)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>existingDevice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Your ID3D11Device. Note that this does AddRef so you should still Release/Dispose yours.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+    <dd><p>The backend creator you can then go query adapters for or create a backend out of.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11FromDevice_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11FromDevice*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11FromDevice_System_IntPtr_System_IntPtr_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11FromDevice(System.IntPtr,System.IntPtr)">
+  CreateD3d11FromDevice(nint, nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a d3d11 backend creator. You give it your existing device and context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraBackendCreator CreateD3d11FromDevice(nint existingDevice, nint existingContext)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>existingDevice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Your ID3D11Device. Note that this does AddRef so you should still Release/Dispose yours.</p>
+</dd>
+    <dt><code>existingContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Your ID3D11DeviceContext. Note that this does AddRef so you should still Release/Dispose yours.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+    <dd><p>The backend creator you can then go query adapters for or create a backend out of.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11FromSwapchain_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11FromSwapchain*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11FromSwapchain_System_IntPtr_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d11FromSwapchain(System.IntPtr)">
+  CreateD3d11FromSwapchain(nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a d3d11 backend creator. You give it your existing swap chain. Device is extracted from it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraBackendCreator CreateD3d11FromSwapchain(nint swapChain)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>swapChain</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Your IDXGISwapChain.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+    <dd><p>The backend creator you can then go query adapters for or create a backend out of.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d12*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d12">
+  CreateD3d12()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a d3d12 backend creator. You can use this to get your backend with a new device and queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraBackendCreator CreateD3d12()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+    <dd><p>The backend creator you can then go query adapters for or create a backend out of.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12FromDevice_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d12FromDevice*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12FromDevice_System_IntPtr_System_IntPtr_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d12FromDevice(System.IntPtr,System.IntPtr)">
+  CreateD3d12FromDevice(nint, nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a d3d12 backend creator. You give it your existing queue and device works on top of that.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraBackendCreator CreateD3d12FromDevice(nint existingDevice, nint existingQueue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>existingDevice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Your d3d12device. Note that this does AddRef so you should still Release/Dispose yours.</p>
+</dd>
+    <dt><code>existingQueue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Your Id3D12CommandQueue. Note that this does AddRef so you should still Release/Dispose yours.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+    <dd><p>The backend creator you can then go query adapters for or create a backend out of.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12FromSwapChain_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d12FromSwapChain*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12FromSwapChain_System_IntPtr_System_IntPtr_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.CreateD3d12FromSwapChain(System.IntPtr,System.IntPtr)">
+  CreateD3d12FromSwapChain(nint, nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a d3d12 backend creator. You give it your existing queue and device is extracted from swapchain, nothing else. it works on top of that.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAuraBackendCreator CreateD3d12FromSwapChain(nint swapChain3, nint existingQueue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>swapChain3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+    <dt><code>existingQueue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Your Id3D12CommandQueue. Note that this does AddRef so you should still Release/Dispose yours.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+    <dd><p>The backend creator you can then go query adapters for or create a backend out of.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_EnableDebugMode_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.EnableDebugMode*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_EnableDebugMode" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.EnableDebugMode">
+  EnableDebugMode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This will enable debug mode for the backend. For d3d12, there must be no devices created in the entire process before the one you're about to make.
+This only works if you don't pass in your own device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableDebugMode()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_GetAllGraphicsAdapters_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.GetAllGraphicsAdapters*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_GetAllGraphicsAdapters" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.GetAllGraphicsAdapters">
+  GetAllGraphicsAdapters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets every single graphics adapters, even ones that are not compatible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraGraphicsAdapter[] GetAllGraphicsAdapters()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a>[]</dt>
+    <dd><p>A list of all graphics adapter available.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_GetDefaultAdapter_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.GetDefaultAdapter*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_GetDefaultAdapter" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.GetDefaultAdapter">
+  GetDefaultAdapter()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default graphics adapter available on the system. This might not be the most powerful one, but it's the one the user/os chose for this app.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraGraphicsAdapter GetDefaultAdapter()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_GetRelevantGraphicsAdapters_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.GetRelevantGraphicsAdapters*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_GetRelevantGraphicsAdapters" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.GetRelevantGraphicsAdapters">
+  GetRelevantGraphicsAdapters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the graphics adapter you can actually use properly with the target backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraGraphicsAdapter[] GetRelevantGraphicsAdapters()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a>[]</dt>
+    <dd><p>A list of all relevant adapters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackendCreator_SetQueryFullAdapterInformation_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.SetQueryFullAdapterInformation*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackendCreator_SetQueryFullAdapterInformation_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackendCreator.SetQueryFullAdapterInformation(System.Boolean)">
+  SetQueryFullAdapterInformation(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets if the full adapter info should be collected. This is slow and should only be done for very specific scenarios. This queries all supported API versions of an adapter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetQueryFullAdapterInformation(bool shouldQueryFullAdapterInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shouldQueryFullAdapterInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the full information should be queried, defaults to false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraAdapter.cs/#L132" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

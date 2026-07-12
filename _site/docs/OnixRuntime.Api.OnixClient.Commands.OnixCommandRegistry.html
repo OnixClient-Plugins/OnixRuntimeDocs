@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry" class="text-break">
-Class OnixCommandRegistry  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class OnixCommandRegistry  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class OnixCommandRegistry  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ClientCommands" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.ClientCommands">
   ClientCommands
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The list of commands that can be executed on the client. <a class="xref" href="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ClientLock">ClientLock</a> for safety if you do access this for some reason. Don't .Add(), just use <a class="xref" href="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RegisterCommand_OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_">RegisterCommand(OnixCommandBase)</a>.</p>
@@ -189,7 +189,7 @@ Class OnixCommandRegistry  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ClientLock" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.ClientLock">
   ClientLock
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.readerwriterlockslim">ReaderWriterLockSlim</a> instance used to synchronize access to client-related resources.</p>
@@ -217,11 +217,76 @@ Class OnixCommandRegistry  <a class="header-action link-secondary" title="View s
 
 
 
+  <a id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RelevantServerCommands_" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.RelevantServerCommands*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RelevantServerCommands" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.RelevantServerCommands">
+  RelevantServerCommands
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the relevant server command list, depending on whether you are hosting or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;OnixCommandBase&gt; RelevantServerCommands { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html">OnixCommandBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RemoteServerCommands_" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.RemoteServerCommands*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RemoteServerCommands" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.RemoteServerCommands">
+  RemoteServerCommands
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The list of remote server commands that the client knows about. This lets you have autocomplete on server commands when someone else is the host.
+You should only ever read from this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;OnixCommandBase&gt; RemoteServerCommands { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html">OnixCommandBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ServerCommands_" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.ServerCommands*"></a>
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ServerCommands" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.ServerCommands">
   ServerCommands
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The list of commands that can be executed on the server. <a class="xref" href="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ServerLock">ServerLock</a> for safety if you do access this for some reason. Don't .Add(), just use <a class="xref" href="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.html#OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RegisterCommand_OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_">RegisterCommand(OnixCommandBase)</a>.</p>
@@ -253,7 +318,7 @@ Class OnixCommandRegistry  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ServerLock" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.ServerLock">
   ServerLock
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.readerwriterlockslim">ReaderWriterLockSlim</a> instance used to synchronize access to server-related resources.</p>
@@ -289,7 +354,7 @@ Class OnixCommandRegistry  <a class="header-action link-secondary" title="View s
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_ExtractCommandName_System_String_System_String_System_Int32__" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.ExtractCommandName(System.String,System.String,System.Int32@)">
   ExtractCommandName(string, string, out int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Extracts the command name from a message string that starts with a specified prefix.</p>
@@ -342,7 +407,7 @@ treated as the command name.</p>
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_GetCommand_System_String_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.GetCommand(System.String,System.Boolean,System.Boolean)">
   GetCommand(string, bool, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retrieves a command by name from the client or server command collections, based on the specified options.</p>
@@ -389,7 +454,7 @@ commands are searched.</p>
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_RegisterCommand_OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.RegisterCommand(OnixRuntime.Api.OnixClient.Commands.OnixCommandBase)">
   RegisterCommand(OnixCommandBase)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Registers a command that will be able to be executed.</p>
@@ -422,7 +487,7 @@ commands are searched.</p>
 
   <h3 id="OnixRuntime_Api_OnixClient_Commands_OnixCommandRegistry_UnregisterCommand_OnixRuntime_Api_OnixClient_Commands_OnixCommandBase_" data-uid="OnixRuntime.Api.OnixClient.Commands.OnixCommandRegistry.UnregisterCommand(OnixRuntime.Api.OnixClient.Commands.OnixCommandBase)">
   UnregisterCommand(OnixCommandBase)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unregisters the specified command from the system, removing it from the appropriate execution targets.</p>
@@ -451,7 +516,6 @@ commands are searched.</p>
   <div class="markdown level1 remarks"><p>The method removes the command from the client-side, server-side, or both, depending
 on the  <a class="xref" href="OnixRuntime.Api.OnixClient.Commands.CommandExecutionTarget.html">CommandExecutionTarget</a> specified in the command. If the command is registered for both
 client and server execution, it will be removed from both contexts. After the command is unregistered,  the
-<a class="xref" href="OnixRuntime.Api.OnixClient.Commands.OnixCommandBase.html">OnCommandUnregistered(OnixCommandBase)</a> method is invoked to handle any additional cleanup or
 notifications.</p>
 </div>
 
@@ -462,7 +526,7 @@ notifications.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Commands/OnixCommandRegistry.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

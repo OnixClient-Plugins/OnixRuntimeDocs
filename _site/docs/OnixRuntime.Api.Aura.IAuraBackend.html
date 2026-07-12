@@ -1,0 +1,2819 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IAuraBackend | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IAuraBackend | Onix Plugin Documentation ">
+      
+      <meta name="description" content="The main graphics backend interface. Manages the GPU device, resource creation, pipeline state, and rendering commands. Analogous to the combination of ID3D11Device and ID3D11DeviceContext in Direct3D 11. Create one via .">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Aura_IAuraBackend.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Aura.IAuraBackend%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Aura.IAuraBackend">
+
+
+
+  <h1 id="OnixRuntime_Api_Aura_IAuraBackend" data-uid="OnixRuntime.Api.Aura.IAuraBackend" class="text-break">
+Class IAuraBackend  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Aura.html">Aura</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The main graphics backend interface. Manages the GPU device, resource creation, pipeline state, and rendering commands.
+Analogous to the combination of <code>ID3D11Device</code> and <code>ID3D11DeviceContext</code> in Direct3D 11.
+Create one via <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html#OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend">CreateBackend()</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IAuraBackend : AuraResourcePointer, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html">AuraResourcePointer</a></div>
+      <div><span class="xref">IAuraBackend</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html#OnixRuntime_Api_Aura_AuraResourcePointer_Dispose">AuraResourcePointer.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_Capabilities_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Capabilities*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_Capabilities" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Capabilities">
+  Capabilities
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the hardware capabilities of this backend, such as texture dimension limits and per-format feature support.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraBackendCapabilities Capabilities { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraBackendCapabilities.html">AuraBackendCapabilities</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_GraphicsAdapter_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GraphicsAdapter*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_GraphicsAdapter" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GraphicsAdapter">
+  GraphicsAdapter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a> (GPU) that this backend is running on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraGraphicsAdapter GraphicsAdapter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_IsInitialized_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.IsInitialized*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_IsInitialized" data-uid="OnixRuntime.Api.Aura.IAuraBackend.IsInitialized">
+  IsInitialized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the backend has been successfully initialized and is ready for use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInitialized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BeginFrame_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BeginFrame*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BeginFrame_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BeginFrame(System.Boolean)">
+  BeginFrame(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signals the start of a new frame. Must be called before issuing any rendering commands for the frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginFrame(bool isPresentHook = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isPresentHook</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when hooking into an existing present call (e.g., injecting into a game's render loop).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindBlendState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindBlendState*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindBlendState_OnixRuntime_Api_Aura_IBlendState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindBlendState(OnixRuntime.Api.Aura.IBlendState)">
+  BindBlendState(IBlendState?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a blend state to the output merger stage. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindBlendState(IBlendState? state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="OnixRuntime.Api.Aura.IBlendState.html">IBlendState</a></dt>
+    <dd><p>The blend state to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to reset to default.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindConstantBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindConstantBuffer*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindConstantBuffer_OnixRuntime_Api_Aura_IAuraBuffer_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindConstantBuffer(OnixRuntime.Api.Aura.IAuraBuffer,System.Int32)">
+  BindConstantBuffer(IAuraBuffer?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a constant buffer to the specified shader slot. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindConstantBuffer(IAuraBuffer? constantBuffer, int slot = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>constantBuffer</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The constant buffer to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the slot.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The constant buffer slot index (0-based).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindDepthStencilBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindDepthStencilBuffer*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindDepthStencilBuffer_OnixRuntime_Api_Aura_IDepthStencilBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindDepthStencilBuffer(OnixRuntime.Api.Aura.IDepthStencilBuffer)">
+  BindDepthStencilBuffer(IDepthStencilBuffer?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a depth-stencil buffer to the output merger. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindDepthStencilBuffer(IDepthStencilBuffer? buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilBuffer.html">IDepthStencilBuffer</a></dt>
+    <dd><p>The depth-stencil buffer to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the binding.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindDepthStencilState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindDepthStencilState*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindDepthStencilState_OnixRuntime_Api_Aura_IDepthStencilState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindDepthStencilState(OnixRuntime.Api.Aura.IDepthStencilState)">
+  BindDepthStencilState(IDepthStencilState?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a depth-stencil state to the pipeline. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindDepthStencilState(IDepthStencilState? state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilState.html">IDepthStencilState</a></dt>
+    <dd><p>The depth-stencil state to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to reset to default.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindIndexBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindIndexBuffer*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindIndexBuffer_OnixRuntime_Api_Aura_IAuraBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindIndexBuffer(OnixRuntime.Api.Aura.IAuraBuffer)">
+  BindIndexBuffer(IAuraBuffer?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds an index buffer to the input assembler stage. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindIndexBuffer(IAuraBuffer? indexBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>indexBuffer</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The index buffer to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the binding.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindInputLayout_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindInputLayout*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindInputLayout_OnixRuntime_Api_Aura_IShaderInputLayout_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindInputLayout(OnixRuntime.Api.Aura.IShaderInputLayout)">
+  BindInputLayout(IShaderInputLayout?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a shader input layout to the input assembler stage. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindInputLayout(IShaderInputLayout? shaderLayout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shaderLayout</code> <a class="xref" href="OnixRuntime.Api.Aura.IShaderInputLayout.html">IShaderInputLayout</a></dt>
+    <dd><p>The input layout to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the binding.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindRasterizerState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindRasterizerState*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindRasterizerState_OnixRuntime_Api_Aura_IRasterizerState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindRasterizerState(OnixRuntime.Api.Aura.IRasterizerState)">
+  BindRasterizerState(IRasterizerState?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a rasterizer state to the pipeline. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindRasterizerState(IRasterizerState? state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="OnixRuntime.Api.Aura.IRasterizerState.html">IRasterizerState</a></dt>
+    <dd><p>The rasterizer state to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to reset to default.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindRenderTarget_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindRenderTarget*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindRenderTarget_OnixRuntime_Api_Aura_IRenderTarget_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindRenderTarget(OnixRuntime.Api.Aura.IRenderTarget,System.Int32)">
+  BindRenderTarget(IRenderTarget?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a render target to the output merger at the specified slot. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindRenderTarget(IRenderTarget? rt, int slot = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rt</code> <a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a></dt>
+    <dd><p>The render target to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the slot.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The render target output slot index (0-based).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindSampler_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindSampler*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindSampler_OnixRuntime_Api_Aura_ISampler_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindSampler(OnixRuntime.Api.Aura.ISampler,System.Int32)">
+  BindSampler(ISampler?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a sampler state to the specified slot. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindSampler(ISampler? sampler, int slot = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sampler</code> <a class="xref" href="OnixRuntime.Api.Aura.ISampler.html">ISampler</a></dt>
+    <dd><p>The sampler to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the slot.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sampler slot index (0-based).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindShader_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindShader*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindShader_OnixRuntime_Api_Aura_IShaderProgram_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindShader(OnixRuntime.Api.Aura.IShaderProgram,System.Boolean)">
+  BindShader(IShaderProgram?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a shader program to the pipeline. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind the current shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindShader(IShaderProgram? shader, bool applyRecommendedInputLayout = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shader</code> <a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html">IShaderProgram</a></dt>
+    <dd><p>The shader program to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the binding.</p>
+</dd>
+    <dt><code>applyRecommendedInputLayout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, automatically binds the shader's recommended input layout if one is set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>When providing a shader that is not compiled (or not successfully compiled).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindTexture_OnixRuntime_Api_Aura_ITexture_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindTexture(OnixRuntime.Api.Aura.ITexture,System.Int32)">
+  BindTexture(ITexture?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a texture as a shader resource at the specified slot. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindTexture(ITexture? texture, int slot = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The texture to bind as an SRV, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the slot.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The shader resource slot index (0-based).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindUnorderedAccessBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindUnorderedAccessBuffer*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindUnorderedAccessBuffer_OnixRuntime_Api_Aura_IAuraBuffer_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindUnorderedAccessBuffer(OnixRuntime.Api.Aura.IAuraBuffer,System.Int32)">
+  BindUnorderedAccessBuffer(IAuraBuffer?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds an unordered access buffer (UAV) to the specified slot for read/write access in shaders. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindUnorderedAccessBuffer(IAuraBuffer? uavBuffer, int slot = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uavBuffer</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The UAV buffer to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the slot.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The UAV slot index (0-based).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindUnorderedAccessTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindUnorderedAccessTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindUnorderedAccessTexture_OnixRuntime_Api_Aura_ITexture_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindUnorderedAccessTexture(OnixRuntime.Api.Aura.ITexture,System.Int32)">
+  BindUnorderedAccessTexture(ITexture?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds an unordered access texture (UAV) to the specified slot for read/write access in shaders. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindUnorderedAccessTexture(ITexture? uavTexture, int slot = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uavTexture</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The UAV texture to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the slot.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The UAV slot index (0-based).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_BindVertexBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindVertexBuffer*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_BindVertexBuffer_OnixRuntime_Api_Aura_IAuraBuffer_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.BindVertexBuffer(OnixRuntime.Api.Aura.IAuraBuffer,System.Int32)">
+  BindVertexBuffer(IAuraBuffer?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a vertex buffer to the specified input assembler slot. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to unbind.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindVertexBuffer(IAuraBuffer? vertexBuffer, int slot = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexBuffer</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The vertex buffer to bind, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to clear the slot.</p>
+</dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The input slot index (0-based).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CloneTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CloneTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CloneTexture_OnixRuntime_Api_Aura_ITexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CloneTexture(OnixRuntime.Api.Aura.ITexture)">
+  CloneTexture(ITexture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a full GPU-side copy of the source texture with the same description and content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITexture CloneTexture(ITexture source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The texture to clone.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>A new <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a> that is an identical copy of the source.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CopyInto_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CopyInto*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CopyInto_OnixRuntime_Api_Aura_ITexture_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CopyInto(OnixRuntime.Api.Aura.ITexture,OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  CopyInto(ITexture, ITexture, uint, uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L560"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the entire source texture into the destination texture, starting at the top-left corner of both.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyInto(ITexture destination, ITexture source, uint destinationArrayIndex = 0, uint sourceArrayIndex = 0, uint destinationMipIndex = 0, uint sourceMipIndex = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The destination texture.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture.</p>
+</dd>
+    <dt><code>destinationArrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index in the destination texture.</p>
+</dd>
+    <dt><code>sourceArrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index in the source texture.</p>
+</dd>
+    <dt><code>destinationMipIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to write into in the destination texture.</p>
+</dd>
+    <dt><code>sourceMipIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to read from in the source texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CopyTextureRegion_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CopyTextureRegion*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CopyTextureRegion_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CopyTextureRegion(OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32,OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  CopyTextureRegion(ITexture, uint, uint, ITexture, uint, uint, uint, uint, uint, uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L536"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies a rectangular region from one texture to another with full control over source and destination offsets and array indices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTextureRegion(ITexture destination, uint destinationX, uint destinationY, ITexture source, uint sourceX, uint sourceY, uint width, uint height, uint destinationArrayIndex = 0, uint sourceArrayIndex = 0, uint destinationMipIndex = 0, uint sourceMipIndex = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The destination texture.</p>
+</dd>
+    <dt><code>destinationX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>X offset in the destination texture.</p>
+</dd>
+    <dt><code>destinationY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Y offset in the destination texture.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture.</p>
+</dd>
+    <dt><code>sourceX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>X offset in the source texture.</p>
+</dd>
+    <dt><code>sourceY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Y offset in the source texture.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Width of the region to copy in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Height of the region to copy in pixels.</p>
+</dd>
+    <dt><code>destinationArrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index in the destination texture.</p>
+</dd>
+    <dt><code>sourceArrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index in the source texture.</p>
+</dd>
+    <dt><code>destinationMipIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to write into in the destination texture.</p>
+</dd>
+    <dt><code>sourceMipIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to read from in the source texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CopyTextureRegionSimple_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CopyTextureRegionSimple*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CopyTextureRegionSimple_OnixRuntime_Api_Aura_ITexture_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CopyTextureRegionSimple(OnixRuntime.Api.Aura.ITexture,OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  CopyTextureRegionSimple(ITexture, ITexture, uint, uint, uint, uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L550"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies a rectangular region from one texture to another without specifying pixel offsets (copies from and to the top-left corner).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTextureRegionSimple(ITexture destination, ITexture source, uint width, uint height, uint destinationArrayIndex = 0, uint sourceArrayIndex = 0, uint destinationMipIndex = 0, uint sourceMipIndex = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The destination texture.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Width of the region to copy in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Height of the region to copy in pixels.</p>
+</dd>
+    <dt><code>destinationArrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index in the destination texture.</p>
+</dd>
+    <dt><code>sourceArrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index in the source texture.</p>
+</dd>
+    <dt><code>destinationMipIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to write into in the destination texture.</p>
+</dd>
+    <dt><code>sourceMipIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to read from in the source texture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateBlendState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateBlendState*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateBlendState_OnixRuntime_Api_Aura_BlendStateDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateBlendState(OnixRuntime.Api.Aura.BlendStateDesc)">
+  CreateBlendState(BlendStateDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a blend state object from the given description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IBlendState CreateBlendState(BlendStateDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.BlendStateDesc.html">BlendStateDesc</a></dt>
+    <dd><p>The blend state configuration.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IBlendState.html">IBlendState</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IBlendState.html">IBlendState</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateBuffer*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateBuffer_OnixRuntime_Api_Aura_AuraBufferDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateBuffer(OnixRuntime.Api.Aura.AuraBufferDesc)">
+  CreateBuffer(AuraBufferDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a GPU buffer resource from the given description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraBuffer CreateBuffer(AuraBufferDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.AuraBufferDesc.html">AuraBufferDesc</a></dt>
+    <dd><p>The buffer description specifying size, usage, and other properties.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateDepthStencilBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateDepthStencilBuffer*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateDepthStencilBuffer_OnixRuntime_Api_Aura_DepthStencilBufferDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateDepthStencilBuffer(OnixRuntime.Api.Aura.DepthStencilBufferDesc)">
+  CreateDepthStencilBuffer(DepthStencilBufferDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a depth-stencil buffer from a native (unmanaged) descriptor pointer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDepthStencilBuffer CreateDepthStencilBuffer(DepthStencilBufferDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.DepthStencilBufferDesc.html">DepthStencilBufferDesc</a></dt>
+    <dd><p>Pointer to the native depth-stencil buffer descriptor structure.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilBuffer.html">IDepthStencilBuffer</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilBuffer.html">IDepthStencilBuffer</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateDepthStencilBufferFromTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateDepthStencilBufferFromTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateDepthStencilBufferFromTexture_OnixRuntime_Api_Aura_ITexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateDepthStencilBufferFromTexture(OnixRuntime.Api.Aura.ITexture)">
+  CreateDepthStencilBufferFromTexture(ITexture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a depth-stencil buffer view wrapping an existing texture resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDepthStencilBuffer CreateDepthStencilBufferFromTexture(ITexture texture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture, which must have been created with depth-stencil usage enabled.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilBuffer.html">IDepthStencilBuffer</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilBuffer.html">IDepthStencilBuffer</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateDepthStencilState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateDepthStencilState*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateDepthStencilState_OnixRuntime_Api_Aura_DepthStencilStateDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateDepthStencilState(OnixRuntime.Api.Aura.DepthStencilStateDesc)">
+  CreateDepthStencilState(DepthStencilStateDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a depth-stencil state object from the given description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDepthStencilState CreateDepthStencilState(DepthStencilStateDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.DepthStencilStateDesc.html">DepthStencilStateDesc</a></dt>
+    <dd><p>The depth-stencil state configuration.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilState.html">IDepthStencilState</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilState.html">IDepthStencilState</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateInputLayout_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateInputLayout*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateInputLayout_OnixRuntime_Api_Aura_ShaderInputLayoutDesc_OnixRuntime_Api_Aura_IShaderProgram_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateInputLayout(OnixRuntime.Api.Aura.ShaderInputLayoutDesc,OnixRuntime.Api.Aura.IShaderProgram)">
+  CreateInputLayout(ShaderInputLayoutDesc, IShaderProgram)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a shader input layout object that describes how vertex buffer data maps to shader inputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IShaderInputLayout CreateInputLayout(ShaderInputLayoutDesc desc, IShaderProgram shader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.ShaderInputLayoutDesc.html">ShaderInputLayoutDesc</a></dt>
+    <dd><p>The input layout description specifying vertex attribute formats, semantic names, and slots.</p>
+</dd>
+    <dt><code>shader</code> <a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html">IShaderProgram</a></dt>
+    <dd><p>The compiled shader program the layout will be used with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IShaderInputLayout.html">IShaderInputLayout</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IShaderInputLayout.html">IShaderInputLayout</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateRasterizerState_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateRasterizerState*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateRasterizerState_OnixRuntime_Api_Aura_RasterizerStateDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateRasterizerState(OnixRuntime.Api.Aura.RasterizerStateDesc)">
+  CreateRasterizerState(RasterizerStateDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a rasterizer state object from the given description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRasterizerState CreateRasterizerState(RasterizerStateDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.RasterizerStateDesc.html">RasterizerStateDesc</a></dt>
+    <dd><p>The rasterizer state configuration.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IRasterizerState.html">IRasterizerState</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IRasterizerState.html">IRasterizerState</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateRenderTarget_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateRenderTarget*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateRenderTarget_OnixRuntime_Api_Aura_RenderTargetDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateRenderTarget(OnixRuntime.Api.Aura.RenderTargetDesc)">
+  CreateRenderTarget(RenderTargetDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a render target from the provided description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRenderTarget CreateRenderTarget(RenderTargetDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.RenderTargetDesc.html">RenderTargetDesc</a></dt>
+    <dd><p>The description of the render target.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateRenderTargetFromTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateRenderTargetFromTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateRenderTargetFromTexture_OnixRuntime_Api_Aura_ITexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateRenderTargetFromTexture(OnixRuntime.Api.Aura.ITexture)">
+  CreateRenderTargetFromTexture(ITexture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a render target view wrapping an existing texture resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRenderTarget CreateRenderTargetFromTexture(ITexture source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture, which must have been created with render target usage enabled.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateSampler_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateSampler*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateSampler_OnixRuntime_Api_Aura_SamplerDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateSampler(OnixRuntime.Api.Aura.SamplerDesc)">
+  CreateSampler(SamplerDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a texture sampler object from the given description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISampler CreateSampler(SamplerDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.SamplerDesc.html">SamplerDesc</a></dt>
+    <dd><p>The sampler configuration.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.ISampler.html">ISampler</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.ISampler.html">ISampler</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateShaderProgram_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateShaderProgram*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateShaderProgram" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateShaderProgram">
+  CreateShaderProgram()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an empty shader program object. Call <a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html#OnixRuntime_Api_Aura_IShaderProgram_Compile_System_String_System_Boolean_">Compile(string, bool)</a> or
+<a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html#OnixRuntime_Api_Aura_IShaderProgram_LoadFromCacheBlob_System_Byte___">LoadFromCacheBlob(byte[])</a> on the returned object to populate it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IShaderProgram CreateShaderProgram()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html">IShaderProgram</a></dt>
+    <dd><p>The newly created, uncompiled <a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html">IShaderProgram</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_CreateTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_CreateTexture_OnixRuntime_Api_Aura_TextureDesc_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.CreateTexture(OnixRuntime.Api.Aura.TextureDesc)">
+  CreateTexture(TextureDesc)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a GPU texture resource from the given description (without uploading pixel data).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITexture CreateTexture(TextureDesc desc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>desc</code> <a class="xref" href="OnixRuntime.Api.Aura.TextureDesc.html">TextureDesc</a></dt>
+    <dd><p>The texture description specifying dimensions, format, and usage flags.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_Dispatch_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Dispatch*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_Dispatch_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Dispatch(System.UInt32,System.UInt32,System.UInt32)">
+  Dispatch(uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L479"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispatches a compute shader with the specified number of thread groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispatch(uint threadCountX, uint threadCountY, uint threadCountZ)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadCountX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of thread groups in the X dimension.</p>
+</dd>
+    <dt><code>threadCountY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of thread groups in the Y dimension.</p>
+</dd>
+    <dt><code>threadCountZ</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of thread groups in the Z dimension.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_Draw_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Draw*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_Draw_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Draw(System.UInt32,System.UInt32)">
+  Draw(uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues a non-indexed draw call using the currently bound vertex buffers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Draw(uint vertexCount, uint startVertexLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of vertices to draw.</p>
+</dd>
+    <dt><code>startVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Index of the first vertex to read from the vertex buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_DrawIndexed_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.DrawIndexed*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.DrawIndexed(System.UInt32,System.UInt32,System.UInt32)">
+  DrawIndexed(uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues an indexed draw call using the currently bound vertex and index buffers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexed(uint indexCount, uint startIndexLocation = 0, uint baseVertexLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>indexCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of indices to read.</p>
+</dd>
+    <dt><code>startIndexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Index of the first index to read from the index buffer.</p>
+</dd>
+    <dt><code>baseVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Value added to each index before reading a vertex from the vertex buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_DrawIndexedInstanced_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.DrawIndexedInstanced*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_DrawIndexedInstanced_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.DrawIndexedInstanced(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  DrawIndexedInstanced(uint, uint, uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues an instanced indexed draw call, rendering multiple copies of indexed geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexedInstanced(uint indexCount, uint instanceCount, uint startIndexLocation = 0, uint baseVertexLocation = 0, uint startInstanceLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>indexCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of indices per instance.</p>
+</dd>
+    <dt><code>instanceCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of instances to draw.</p>
+</dd>
+    <dt><code>startIndexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Index of the first index to read from the index buffer.</p>
+</dd>
+    <dt><code>baseVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Value added to each index before reading a vertex from the vertex buffer.</p>
+</dd>
+    <dt><code>startInstanceLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Value added to each instance index before reading per-instance data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_DrawInstanced_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.DrawInstanced*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_DrawInstanced_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.DrawInstanced(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  DrawInstanced(uint, uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issues an instanced non-indexed draw call, rendering multiple copies of the geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawInstanced(uint vertexCount, uint instanceCount, uint startVertexLocation = 0, uint startInstanceLocation = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of vertices per instance.</p>
+</dd>
+    <dt><code>instanceCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of instances to draw.</p>
+</dd>
+    <dt><code>startVertexLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Index of the first vertex in the vertex buffer.</p>
+</dd>
+    <dt><code>startInstanceLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Value added to each instance index before reading per-instance data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_EndFrame_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.EndFrame*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_EndFrame" data-uid="OnixRuntime.Api.Aura.IAuraBackend.EndFrame">
+  EndFrame()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signals the end of the current frame. Must be called after all rendering commands for the frame have been issued.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EndFrame()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_Flush_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Flush*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_Flush" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Flush">
+  Flush()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L627"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flushes all pending GPU commands to ensure they begin execution on the device immediately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_GetBackBufferTarget_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GetBackBufferTarget*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_GetBackBufferTarget" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GetBackBufferTarget">
+  GetBackBufferTarget()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L623"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current back buffer render target that will be used during the next <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html#OnixRuntime_Api_Aura_IAuraBackend_Present_OnixRuntime_Api_Aura_IAuraWindow_System_Boolean_System_Boolean_">Present(IAuraWindow, bool, bool)</a> call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRenderTarget GetBackBufferTarget()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a></dt>
+    <dd><p>The back buffer as an <a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_GetShaderProgramKind_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GetShaderProgramKind*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_GetShaderProgramKind_OnixRuntime_Api_Aura_IShaderProgram_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GetShaderProgramKind(OnixRuntime.Api.Aura.IShaderProgram)">
+  GetShaderProgramKind(IShaderProgram)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the shader language kind (e.g., HLSL version or GLSL) used by the given shader on this backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShaderProgramKind GetShaderProgramKind(IShaderProgram shader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shader</code> <a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html">IShaderProgram</a></dt>
+    <dd><p>The shader program to query.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.ShaderProgramKind.html">ShaderProgramKind</a></dt>
+    <dd><p>The <a class="xref" href="OnixRuntime.Api.Aura.ShaderProgramKind.html">ShaderProgramKind</a> of the shader.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_GetSupportedDisplayModes_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GetSupportedDisplayModes*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_GetSupportedDisplayModes_OnixRuntime_Api_Aura_IAuraWindow_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.GetSupportedDisplayModes(OnixRuntime.Api.Aura.IAuraWindow)">
+  GetSupportedDisplayModes(IAuraWindow)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all display modes supported for the monitor the given window occupies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FullScreenDisplayMode[] GetSupportedDisplayModes(IAuraWindow window)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The window whose monitor to query.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.FullScreenDisplayMode.html">FullScreenDisplayMode</a>[]</dt>
+    <dd><p>An array of supported <a class="xref" href="OnixRuntime.Api.Aura.FullScreenDisplayMode.html">FullScreenDisplayMode</a> values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_IsFullScreenSupported_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.IsFullScreenSupported*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_IsFullScreenSupported_OnixRuntime_Api_Aura_IAuraWindow_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.IsFullScreenSupported(OnixRuntime.Api.Aura.IAuraWindow,System.Boolean)">
+  IsFullScreenSupported(IAuraWindow, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the given window supports a fullscreen mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFullScreenSupported(IAuraWindow window, bool isWindowed = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The window to check.</p>
+</dd>
+    <dt><code>isWindowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, checks windowed fullscreen support; otherwise checks exclusive fullscreen.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the requested fullscreen mode is supported for the window.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_LoadTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.LoadTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_LoadTexture_OnixRuntime_Api_Utils_RawImageData_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.LoadTexture(OnixRuntime.Api.Utils.RawImageData,System.Boolean)">
+  LoadTexture(RawImageData, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a GPU texture and immediately uploads pixel data to it in one call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITexture LoadTexture(RawImageData image, bool allowRenderTarget = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>image</code> <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a></dt>
+    <dd><p>The image upload. Must be within the backend's capabilities..</p>
+</dd>
+    <dt><code>allowRenderTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the texture can be used as a render target.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a> with uploaded pixel data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_LoadTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.LoadTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_LoadTexture_System_Byte___System_UInt32_System_UInt32_OnixRuntime_Api_Aura_AuraColorFormat_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.LoadTexture(System.Byte[],System.UInt32,System.UInt32,OnixRuntime.Api.Aura.AuraColorFormat,System.Boolean)">
+  LoadTexture(byte[], uint, uint, AuraColorFormat, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a GPU texture and immediately uploads pixel data to it in one call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITexture LoadTexture(byte[] pixels, uint width, uint height, AuraColorFormat format, bool allowRenderTarget = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pixels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The raw pixel data to upload. Must match the dimensions and format.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Texture width in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Texture height in pixels.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html">AuraColorFormat</a></dt>
+    <dd><p>The pixel format of the provided data.</p>
+</dd>
+    <dt><code>allowRenderTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the texture can be used as a render target.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The created <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a> with uploaded pixel data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_Present_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Present*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_Present_OnixRuntime_Api_Aura_IAuraWindow_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Present(OnixRuntime.Api.Aura.IAuraWindow,System.Boolean,System.Boolean)">
+  Present(IAuraWindow, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Presents the rendered frame to the specified window's swap chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraPresentResult Present(IAuraWindow window, bool vsync = true, bool testOnly = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The window whose swap chain to present to.</p>
+</dd>
+    <dt><code>vsync</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, presentation is synchronized to the display's vertical refresh rate.</p>
+</dd>
+    <dt><code>testOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, tests whether the frame can be presented without actually displaying it.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraPresentResult.html">AuraPresentResult</a></dt>
+    <dd><p>An <a class="xref" href="OnixRuntime.Api.Aura.AuraPresentResult.html">AuraPresentResult</a> indicating the outcome of the present operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackBufferRegion_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackBufferRegion*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackBufferRegion_OnixRuntime_Api_Aura_IAuraBuffer_System_UInt64_System_UInt64_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackBufferRegion(OnixRuntime.Api.Aura.IAuraBuffer,System.UInt64,System.UInt64)">
+  ReadbackBufferRegion(IAuraBuffer, ulong, ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L618"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads back a contiguous region of a GPU buffer to CPU memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] ReadbackBufferRegion(IAuraBuffer buffer, ulong offsetInBytes, ulong sizeInBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The source buffer. Must have CPU readback enabled.</p>
+</dd>
+    <dt><code>offsetInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Byte offset from the start of the buffer to begin reading.</p>
+</dd>
+    <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Number of bytes to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The raw bytes read from the buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackTextureRegion_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackTextureRegion*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackTextureRegion_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackTextureRegion(OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  ReadbackTextureRegion(ITexture, uint, uint, uint, uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads back a rectangular region of a texture from the GPU to CPU memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? ReadbackTextureRegion(ITexture texture, uint x, uint y, uint width, uint height, uint arrayIndex = 0, uint mipLevel = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture to read from. Must have CPU readback enabled.</p>
+</dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Left edge of the region to read in pixels.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Top edge of the region to read in pixels.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Width of the region to read in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Height of the region to read in pixels.</p>
+</dd>
+    <dt><code>arrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index for texture arrays.</p>
+</dd>
+    <dt><code>mipLevel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to read from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The raw pixel bytes of the region, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the readback failed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackTextureRegionAsImage_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackTextureRegionAsImage*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackTextureRegionAsImage_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackTextureRegionAsImage(OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+  ReadbackTextureRegionAsImage(ITexture, uint, uint, uint, uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L511"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads back a rectangular region of a texture from the GPU as a <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a>.
+Only supported for <a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html#OnixRuntime_Api_Aura_AuraColorFormat_RGBA8">RGBA8</a> and <a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html#OnixRuntime_Api_Aura_AuraColorFormat_BGRA8">BGRA8</a> formats;
+BGRA8 channels are swapped to RGBA8 automatically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RawImageData? ReadbackTextureRegionAsImage(ITexture texture, uint x, uint y, uint width, uint height, uint arrayIndex = 0, uint mipLevel = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture. Must be RGBA8 or BGRA8 and have CPU readback enabled.</p>
+</dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Left edge of the region to read in pixels.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Top edge of the region to read in pixels.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Width of the region to read in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Height of the region to read in pixels.</p>
+</dd>
+    <dt><code>arrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index for texture arrays.</p>
+</dd>
+    <dt><code>mipLevel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to read from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a> with RGBA8 pixel data, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the readback failed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the texture format is not RGBA8 or BGRA8.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackWholeTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackWholeTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackWholeTexture_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackWholeTexture(OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32)">
+  ReadbackWholeTexture(ITexture, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L568"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads back an entire mip level of a texture from the GPU to CPU memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[]? ReadbackWholeTexture(ITexture texture, uint arrayIndex = 0, uint mipLevel = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture. Must have CPU readback enabled.</p>
+</dd>
+    <dt><code>arrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index for texture arrays.</p>
+</dd>
+    <dt><code>mipLevel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to read from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The raw pixel bytes of the texture mip level, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the readback failed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackWholeTextureAsImage_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackWholeTextureAsImage*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_ReadbackWholeTextureAsImage_OnixRuntime_Api_Aura_ITexture_System_UInt32_System_UInt32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ReadbackWholeTextureAsImage(OnixRuntime.Api.Aura.ITexture,System.UInt32,System.UInt32)">
+  ReadbackWholeTextureAsImage(ITexture, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads back an entire mip level of a texture from the GPU as a <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a>.
+Only supported for <a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html#OnixRuntime_Api_Aura_AuraColorFormat_RGBA8">RGBA8</a> and <a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html#OnixRuntime_Api_Aura_AuraColorFormat_BGRA8">BGRA8</a> formats;
+BGRA8 channels are swapped to RGBA8 automatically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RawImageData? ReadbackWholeTextureAsImage(ITexture texture, uint arrayIndex = 0, uint mipLevel = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The source texture. Must be RGBA8 or BGRA8 and have CPU readback enabled.</p>
+</dd>
+    <dt><code>arrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Array slice index for texture arrays.</p>
+</dd>
+    <dt><code>mipLevel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Mip level to read from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a></dt>
+    <dd><p>A <a class="xref" href="OnixRuntime.Api.Utils.RawImageData.html">RawImageData</a> with RGBA8 pixel data, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the readback failed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the texture format is not RGBA8 or BGRA8.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_RemoveWindowResources_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.RemoveWindowResources*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_RemoveWindowResources_OnixRuntime_Api_Aura_IAuraWindow_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.RemoveWindowResources(OnixRuntime.Api.Aura.IAuraWindow)">
+  RemoveWindowResources(IAuraWindow)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all backend-managed resources (swap chains, render targets, etc.) associated with the given window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveWindowResources(IAuraWindow window)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The window whose resources should be freed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_Resize_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Resize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_Resize_OnixRuntime_Api_Aura_IAuraWindow_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Resize(OnixRuntime.Api.Aura.IAuraWindow,System.Int32,System.Int32)">
+  Resize(IAuraWindow, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resizes the swap chain associated with the given window to the specified dimensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resize(IAuraWindow window, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The window whose swap chain to resize.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>New width in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>New height in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_ResolveTexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ResolveTexture*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_ResolveTexture_OnixRuntime_Api_Aura_ITexture_OnixRuntime_Api_Aura_ITexture_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.ResolveTexture(OnixRuntime.Api.Aura.ITexture,OnixRuntime.Api.Aura.ITexture)">
+  ResolveTexture(ITexture, ITexture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L610"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves a multisampled (MSAA) texture into a non-MSAA texture by averaging the samples per pixel.
+Both textures must have the same dimensions and a compatible format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResolveTexture(ITexture destination, ITexture source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The non-MSAA destination texture to write resolved data into.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+    <dd><p>The MSAA source texture to resolve.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_RestoreSnapshot_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.RestoreSnapshot*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_RestoreSnapshot_OnixRuntime_Api_Aura_IPipelineSnapshot_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.RestoreSnapshot(OnixRuntime.Api.Aura.IPipelineSnapshot,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  RestoreSnapshot(IPipelineSnapshot, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores a previously captured pipeline state snapshot to the backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RestoreSnapshot(IPipelineSnapshot snapshot, bool overrideIgnoreRenderTargets = false, bool overrideIgnoreTextures_CB_UAV = false, bool overrideIgnoreVertexIndexBuffer = false, bool overrideIgnoreState = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>snapshot</code> <a class="xref" href="OnixRuntime.Api.Aura.IPipelineSnapshot.html">IPipelineSnapshot</a></dt>
+    <dd><p>The snapshot to restore.</p>
+</dd>
+    <dt><code>overrideIgnoreRenderTargets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, restores render target bindings even if they were excluded at capture time.</p>
+</dd>
+    <dt><code>overrideIgnoreTextures_CB_UAV</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, restores texture, constant buffer, and UAV bindings even if excluded at capture time.</p>
+</dd>
+    <dt><code>overrideIgnoreVertexIndexBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, restores vertex and index buffer bindings even if excluded at capture time.</p>
+</dd>
+    <dt><code>overrideIgnoreState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, restores pipeline state objects even if excluded at capture time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_SetBackBufferTarget_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetBackBufferTarget*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_SetBackBufferTarget_OnixRuntime_Api_Aura_IRenderTarget_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetBackBufferTarget(OnixRuntime.Api.Aura.IRenderTarget)">
+  SetBackBufferTarget(IRenderTarget)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L638"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the render target that <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html#OnixRuntime_Api_Aura_IAuraBackend_Present_OnixRuntime_Api_Aura_IAuraWindow_System_Boolean_System_Boolean_">Present(IAuraWindow, bool, bool)</a> will display. Use this when you have rendered into a custom render target and want to make it the back buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBackBufferTarget(IRenderTarget target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a></dt>
+    <dd><p>The render target to use as the back buffer for presentation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_SetFullScreen_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetFullScreen*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_SetFullScreen_OnixRuntime_Api_Aura_IAuraWindow_System_Boolean_System_Nullable_OnixRuntime_Api_Aura_FullScreenDisplayMode__" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetFullScreen(OnixRuntime.Api.Aura.IAuraWindow,System.Boolean,System.Nullable{OnixRuntime.Api.Aura.FullScreenDisplayMode})">
+  SetFullScreen(IAuraWindow, bool, FullScreenDisplayMode?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the fullscreen mode for the given window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullScreen(IAuraWindow window, bool isWindowed, FullScreenDisplayMode? mode = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The target window.</p>
+</dd>
+    <dt><code>isWindowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, switches to windowed (borderless) fullscreen; otherwise, exclusive fullscreen.</p>
+</dd>
+    <dt><code>mode</code> <a class="xref" href="OnixRuntime.Api.Aura.FullScreenDisplayMode.html">FullScreenDisplayMode</a>?</dt>
+    <dd><p>The display mode to use for exclusive fullscreen. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to use the current display mode.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_SetPrimitiveTopology_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetPrimitiveTopology*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_SetPrimitiveTopology_OnixRuntime_Api_Aura_PrimitiveTopology_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetPrimitiveTopology(OnixRuntime.Api.Aura.PrimitiveTopology)">
+  SetPrimitiveTopology(PrimitiveTopology)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the primitive topology used to interpret vertex data for subsequent draw calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPrimitiveTopology(PrimitiveTopology topology)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topology</code> <a class="xref" href="OnixRuntime.Api.Aura.PrimitiveTopology.html">PrimitiveTopology</a></dt>
+    <dd><p>The primitive topology (e.g., triangle list, line strip).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_SetScissorRect_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetScissorRect*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_SetScissorRect_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetScissorRect(System.Int32,System.Int32,System.Int32,System.Int32)">
+  SetScissorRect(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the scissor rectangle, discarding any pixels outside this region when scissor testing is enabled via <a class="xref" href="OnixRuntime.Api.Aura.RasterizerStateDesc.html#OnixRuntime_Api_Aura_RasterizerStateDesc_ScissorEnabled">ScissorEnabled</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetScissorRect(int x, int y, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Left edge of the scissor rectangle in pixels.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Top edge of the scissor rectangle in pixels.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Width of the scissor rectangle in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Height of the scissor rectangle in pixels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_SetStencilRef_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetStencilRef*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_SetStencilRef_System_Byte_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetStencilRef(System.Byte)">
+  SetStencilRef(byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the primitive topology used to interpret vertex data for subsequent draw calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStencilRef(byte stencilRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stencilRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The new stencil reference value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_SetViewport_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetViewport*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_SetViewport_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetViewport(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  SetViewport(float, float, float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L432"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the viewport transform, mapping normalized device coordinates to pixel coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetViewport(float x, float y, float width, float height, float minDepth = 0, float maxDepth = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Top-left X coordinate of the viewport in pixels.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Top-left Y coordinate of the viewport in pixels.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Width of the viewport in pixels.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Height of the viewport in pixels.</p>
+</dd>
+    <dt><code>minDepth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Minimum depth value for the viewport depth range. Defaults to 0.0.</p>
+</dd>
+    <dt><code>maxDepth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Maximum depth value for the viewport depth range. Defaults to 1.0.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_SetWindowRenderTarget_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetWindowRenderTarget*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_SetWindowRenderTarget_OnixRuntime_Api_Aura_IAuraWindow_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.SetWindowRenderTarget(OnixRuntime.Api.Aura.IAuraWindow)">
+  SetWindowRenderTarget(IAuraWindow)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the window's swap chain render target as the currently active render target on the backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetWindowRenderTarget(IAuraWindow window)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+    <dd><p>The window whose back buffer to set as the active render target.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_Shutdown_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Shutdown*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_Shutdown" data-uid="OnixRuntime.Api.Aura.IAuraBackend.Shutdown">
+  Shutdown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuts down the backend and releases all associated GPU resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Shutdown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_TakeSnapshot_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.TakeSnapshot*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_TakeSnapshot_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.TakeSnapshot(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  TakeSnapshot(bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Captures a snapshot of the current pipeline state for later restoration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPipelineSnapshot TakeSnapshot(bool ignoreRenderTargets = false, bool ignoreTextures_CB_UAV = false, bool ignoreVertexIndexBuffer = false, bool ignoreState = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ignoreRenderTargets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, render target bindings are excluded from the snapshot.</p>
+</dd>
+    <dt><code>ignoreTextures_CB_UAV</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, texture, constant buffer, and UAV bindings are excluded from the snapshot.</p>
+</dd>
+    <dt><code>ignoreVertexIndexBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, vertex and index buffer bindings are excluded from the snapshot.</p>
+</dd>
+    <dt><code>ignoreState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, pipeline state objects (blend, rasterizer, depth-stencil) are excluded from the snapshot.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IPipelineSnapshot.html">IPipelineSnapshot</a></dt>
+    <dd><p>An <a class="xref" href="OnixRuntime.Api.Aura.IPipelineSnapshot.html">IPipelineSnapshot</a> holding the captured state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBackend_UnbindPipeline_" data-uid="OnixRuntime.Api.Aura.IAuraBackend.UnbindPipeline*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBackend_UnbindPipeline" data-uid="OnixRuntime.Api.Aura.IAuraBackend.UnbindPipeline">
+  UnbindPipeline()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L631"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unbinds all currently bound pipeline resources (shaders, buffers, textures, states, and render targets).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnbindPipeline()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBackend.cs/#L138" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

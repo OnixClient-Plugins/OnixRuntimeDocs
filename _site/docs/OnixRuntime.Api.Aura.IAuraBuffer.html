@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IAuraBuffer | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IAuraBuffer | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Represents a GPU buffer resource.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_Aura_IAuraBuffer.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.Aura.IAuraBuffer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Aura.IAuraBuffer">
+
+
+
+  <h1 id="OnixRuntime_Api_Aura_IAuraBuffer" data-uid="OnixRuntime.Api.Aura.IAuraBuffer" class="text-break">
+Class IAuraBuffer  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.Aura.html">Aura</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a GPU buffer resource.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IAuraBuffer : AuraResourcePointer, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html">AuraResourcePointer</a></div>
+      <div><span class="xref">IAuraBuffer</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html#OnixRuntime_Api_Aura_AuraResourcePointer_Dispose">AuraResourcePointer.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_CapacityInBytes_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CapacityInBytes*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_CapacityInBytes" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CapacityInBytes">
+  CapacityInBytes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the total capacity/allocated size of the buffer (in bytes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CapacityInBytes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_Description_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Description*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_Description" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the description of this buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuraBufferDesc Description { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraBufferDesc.html">AuraBufferDesc</a></dt>
+    <dd><p>A BufferDesc structure describing the buffer's properties.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_ElementCount_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.ElementCount*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_ElementCount" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.ElementCount">
+  ElementCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The amount of entries in the buffer, computed with <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html#OnixRuntime_Api_Aura_IAuraBuffer_SizeInBytes">SizeInBytes</a> / <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html#OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes">ElementSizeInBytes</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ElementCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.ElementSizeInBytes*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_ElementSizeInBytes" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.ElementSizeInBytes">
+  ElementSizeInBytes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The size of a single element in bytes, usually updated by Upload but can be seen/changed after the fact if necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ElementSizeInBytes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_SizeInBytes_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.SizeInBytes*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_SizeInBytes" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.SizeInBytes">
+  SizeInBytes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current size of valid data in the buffer (in bytes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SizeInBytes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_Clone_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Clone*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_Clone" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Clone">
+  Clone()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a clone (copy) of this buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuraBuffer Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>A new IBuffer that is a copy of this buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_CopyInto_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CopyInto*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_CopyInto_OnixRuntime_Api_Aura_IAuraBuffer_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CopyInto(OnixRuntime.Api.Aura.IAuraBuffer)">
+  CopyInto(IAuraBuffer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies all data from this buffer into a destination buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyInto(IAuraBuffer destination)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The target buffer to copy all data into.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_CopyInto_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CopyInto*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_CopyInto_OnixRuntime_Api_Aura_IAuraBuffer_System_UInt64_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CopyInto(OnixRuntime.Api.Aura.IAuraBuffer,System.UInt64)">
+  CopyInto(IAuraBuffer, ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies data from this buffer into a destination buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyInto(IAuraBuffer destination, ulong sizeInBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The target buffer to copy data into.</p>
+</dd>
+    <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Number of bytes to copy. Defaults to the full size of this buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_CopyInto_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CopyInto*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_CopyInto_OnixRuntime_Api_Aura_IAuraBuffer_System_UInt64_System_UInt64_System_UInt64_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.CopyInto(OnixRuntime.Api.Aura.IAuraBuffer,System.UInt64,System.UInt64,System.UInt64)">
+  CopyInto(IAuraBuffer, ulong, ulong, ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies data from this buffer into a destination buffer with specified offsets and size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyInto(IAuraBuffer destination, ulong sourceOffsetInBytes, ulong destinationOffsetInBytes, ulong sizeInBytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+    <dd><p>The target buffer to copy data into.</p>
+</dd>
+    <dt><code>sourceOffsetInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Byte offset in this source buffer where copying starts.</p>
+</dd>
+    <dt><code>destinationOffsetInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Byte offset in the destination buffer where writing starts.</p>
+</dd>
+    <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Number of bytes to copy.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_Resize_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Resize*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_Resize_System_Int64_System_Boolean_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Resize(System.Int64,System.Boolean)">
+  Resize(long, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resizes the buffer to a new size in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resize(long sizeInBytes, bool copyOldData = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The new size of the buffer in bytes.</p>
+</dd>
+    <dt><code>copyOldData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, copies existing data to the new buffer; if false, data is discarded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_Upload_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Upload*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_Upload_System_Byte___System_Int64_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Upload(System.Byte[],System.Int64)">
+  Upload(byte[], long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uploads data to the GPU buffer.
+For vertex/index buffers, make sure to specify the stride of your vertex structure or use the generic version taking a struct[]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Upload(byte[] data, long strideInBytes = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The byte array containing the data to upload.</p>
+</dd>
+    <dt><code>strideInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The stride of a single entry. This is mostly useful for things like vertex/index buffers, since with a wrong stride it'll do garbage.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_Upload_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Upload*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_Upload__1___0__" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Upload``1(``0@)">
+  Upload&lt;T&gt;(in T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uploads a struct to the GPU buffer, automatically inferring the stride from the struct type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Upload&lt;T&gt;(in T data) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <span class="xref">T</span></dt>
+    <dd><p>The array of structs to upload.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The struct type representing a single element (e.g. a vertex or index).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_Aura_IAuraBuffer_Upload_" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Upload*"></a>
+
+  <h3 id="OnixRuntime_Api_Aura_IAuraBuffer_Upload__1___0___" data-uid="OnixRuntime.Api.Aura.IAuraBuffer.Upload``1(``0[])">
+  Upload&lt;T&gt;(T[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uploads a struct array to the GPU buffer, automatically inferring the stride from the struct type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Upload&lt;T&gt;(T[] data) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> T[]</dt>
+    <dd><p>The array of structs to upload.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The struct type representing a single element (e.g. a vertex or index).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Aura/AuraBuffers.cs/#L64" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

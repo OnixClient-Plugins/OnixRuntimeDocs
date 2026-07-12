@@ -104,6 +104,11 @@ Classes
       <dd><p>Provides events for local server player actions such as breaking, building, using items, and interacting with entities.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPluginMessageConnection.html">OnixEventLocalServerPluginMessageConnection</a></dt>
+      <dd><p>Provides events for handling plugin messages sent from clients to the local server.</p>
+</dd>
+    </dl>
     <h3 id="delegates">
 Delegates
 </h3>
@@ -155,6 +160,37 @@ Delegates
     <dl class="jumplist">
       <dt><a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate.html">OnixEventLocalServerPlayer.OnLocalServerPlayerUseItemOnDelegate</a></dt>
       <dd><p>Delegate for handling when a player uses an item on a block.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerGlobalPluginMessageBinaryDelegate.html">OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerGlobalPluginMessageBinaryDelegate</a></dt>
+      <dd><p>Delegate for handling when a player's plugin sends a binary plugin message.
+Use <a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPluginMessageConnection.html#OnixRuntime_Api_Events_LocalServer_OnixEventLocalServerPluginMessageConnection_BytesReceived">BytesReceived</a> if you're not explicitly interacting with other plugins.
+This event is for all plugins, you get the plugin's UUID and version so you can filter who the message is from and handle it accordingly.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerGlobalPluginMessageDelegate.html">OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerGlobalPluginMessageDelegate</a></dt>
+      <dd><p>Delegate for handling when a player's plugin sends a plugin message.
+Use StringReceived if you're not explicitly interacting with other plugins.
+This event is for all plugins, you get the plugin's UUID and version so you can filter who the message is from and handle it accordingly.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerPluginMessageBinaryDelegate.html">OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerPluginMessageBinaryDelegate</a></dt>
+      <dd><p>Delegate for handling when a player's plugin sends a binary plugin message.
+This event will only be for plugins matching your UUID and version.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerPluginMessageConnectionEstablishedDelegate.html">OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerPluginMessageConnectionEstablishedDelegate</a></dt>
+      <dd><p>Delegate for handling when a player's plugin connection is confirmed. You can send them data from that point forward.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Events.LocalServer.OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerPluginMessageDelegate.html">OnixEventLocalServerPluginMessageConnection.OnLocalServerPlayerPluginMessageDelegate</a></dt>
+      <dd><p>Delegate for handling when a player's plugin sends a plugin message.
+This event will only be for plugins matching your UUID and version.</p>
 </dd>
     </dl>
 

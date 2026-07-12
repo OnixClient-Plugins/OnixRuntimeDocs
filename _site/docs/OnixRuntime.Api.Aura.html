@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace OnixRuntime.Api.Aura | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace OnixRuntime.Api.Aura | Onix Plugin Documentation ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.Aura">
+
+  <h1 id="OnixRuntime_Api_Aura" data-uid="OnixRuntime.Api.Aura" class="text-break">Namespace OnixRuntime.Api.Aura</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraBackendCapabilities.html">AuraBackendCapabilities</a></dt>
+      <dd><p>Exposes the hardware capabilities of a graphics backend, including per-format support flags and maximum resource binding counts.
+Retrieve this via <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html#OnixRuntime_Api_Aura_IAuraBackend_Capabilities">Capabilities</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraBackendCapabilities.PerFormat.html">AuraBackendCapabilities.PerFormat</a></dt>
+      <dd><p>Describes GPU support flags for a single <a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html">AuraColorFormat</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormatExtensions.html">AuraColorFormatExtensions</a></dt>
+      <dd><p>Extensions for the <a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html">AuraColorFormat</a> enum.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraResourcePointer.html">AuraResourcePointer</a></dt>
+      <dd><p>Holds an Aura resource reference.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html">IAuraBackend</a></dt>
+      <dd><p>The main graphics backend interface. Manages the GPU device, resource creation, pipeline state, and rendering commands.
+Analogous to the combination of <code>ID3D11Device</code> and <code>ID3D11DeviceContext</code> in Direct3D 11.
+Create one via <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html#OnixRuntime_Api_Aura_IAuraBackendCreator_CreateBackend">CreateBackend()</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html">IAuraBackendCreator</a></dt>
+      <dd><p>Factory for creating <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html">IAuraBackend</a> instances. Allows querying available graphics adapters and
+selecting an API version before creating the backend. Obtain one via the static factory methods such as
+<a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html#OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d12">CreateD3d12()</a> or <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackendCreator.html#OnixRuntime_Api_Aura_IAuraBackendCreator_CreateD3d11">CreateD3d11()</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraBuffer.html">IAuraBuffer</a></dt>
+      <dd><p>Represents a GPU buffer resource.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a></dt>
+      <dd><p>Represents a physical or virtual graphics adapter (GPU) available on the system. Provides access to adapter properties such as memory sizes, hardware identifiers, and supported API versions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IAuraWindow.html">IAuraWindow</a></dt>
+      <dd><p>Represents a native OS window. Provides control over window state, size, position, and appearance,
+as well as integration with the graphics backend for rendering.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IBlendState.html">IBlendState</a></dt>
+      <dd><p>Represents an instance of a BlendState. This dictates how blending will occur.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilBuffer.html">IDepthStencilBuffer</a></dt>
+      <dd><p>Represents a depth stencil buffer resource, containing the depth and stencil buffers depending on format.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IDepthStencilState.html">IDepthStencilState</a></dt>
+      <dd><p>Represents an instance of a depth stencil state. This dictates how the depth buffer and stencil buffers are handled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IPipelineSnapshot.html">IPipelineSnapshot</a></dt>
+      <dd><p>A captured snapshot of the graphics pipeline state that can be restored later, useful for preserving and recovering
+render state around third-party hooks or interop scenarios. Obtain one via <a class="xref" href="OnixRuntime.Api.Aura.IAuraBackend.html#OnixRuntime_Api_Aura_IAuraBackend_TakeSnapshot_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">TakeSnapshot(bool, bool, bool, bool)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IRasterizerState.html">IRasterizerState</a></dt>
+      <dd><p>Represents an instance of a rasterizer state. This dictates how pixels are created out of geometry.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IRenderTarget.html">IRenderTarget</a></dt>
+      <dd><p>Represents a render target resource instance, which is a texture that can be rendered to during rendering operations. A render target allows you to draw graphics onto a texture, enabling techniques such as off-screen rendering, post-processing effects, and dynamic texture generation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.ISampler.html">ISampler</a></dt>
+      <dd><p>Represents a texture sampler resource instance, which defines how textures are sampled during rendering operations, including filtering, addressing modes, and other sampling parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IShaderInputLayout.html">IShaderInputLayout</a></dt>
+      <dd><p>Represents an instance of a shader input layout, which defines how vertex data is organized and accessed by the GPU when rendering.
+It encapsulates the configuration of vertex attributes, including their formats, semantic names, and input slots.
+The shader input layout is essential for ensuring that the vertex data is correctly interpreted by the shader programs during rendering operations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.IShaderProgram.html">IShaderProgram</a></dt>
+      <dd><p>Represents a shader, which contains the Vertex Shader, Pixel Shader and other kinds potentially.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.ITexture.html">ITexture</a></dt>
+      <dd><p>Represents an aura texture.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.ShaderInputLayoutDesc.html">ShaderInputLayoutDesc</a></dt>
+      <dd><p>Represents a collection that describes the layout of input elements for a shader. Provides methods to define,
+modify, and enumerate the input elements used by a shader program.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.ShaderInputLayoutDesc.Storage.html">ShaderInputLayoutDesc.Storage</a></dt>
+      <dd><p>Represents a single element in the shader input layout description. It contains the format type, semantic name, slot, and whether it's per-instance data.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraBufferDesc.html">AuraBufferDesc</a></dt>
+      <dd><p>Describes a buffer resource, including its size, usage, and other properties that control how the buffer is created and used in graphics applications.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraSupportedAdapterApi.html">AuraSupportedAdapterApi</a></dt>
+      <dd><p>Describes a graphics API version supported by an <a class="xref" href="OnixRuntime.Api.Aura.IAuraGraphicsAdapter.html">IAuraGraphicsAdapter</a>, including whether the implementation is software-based and its version identifier.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.BlendStateDesc.html">BlendStateDesc</a></dt>
+      <dd><p>Describes the blend state configuration for a set of render targets, including blending, logic operations, and
+color write masks. Used to control how pixel colors are combined during rendering.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.BlendStateDesc.BlendTarget.html">BlendStateDesc.BlendTarget</a></dt>
+      <dd><p>Represents a render target blend description since all 8 render targets can have their own individual blend parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.DepthStencilBufferDesc.html">DepthStencilBufferDesc</a></dt>
+      <dd><p>Describes the configuration for a depth-stencil buffer.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.DepthStencilStateDesc.html">DepthStencilStateDesc</a></dt>
+      <dd><p>The description of the depth-stencil state, which controls how depth testing and stencil testing are performed during rendering.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.FullScreenDisplayMode.html">FullScreenDisplayMode</a></dt>
+      <dd><p>Describes a display mode including resolution and refresh rate. Used when switching to exclusive fullscreen or querying supported modes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.MsaaDesc.html">MsaaDesc</a></dt>
+      <dd><p>Describes the parameters used to control multisample anti-aliasing (MSAA) settings for textures, including the number of samples and quality level.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.RasterizerStateDesc.html">RasterizerStateDesc</a></dt>
+      <dd><p>Describes how the rasterizer should be configured.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.RenderTargetDesc.html">RenderTargetDesc</a></dt>
+      <dd><p>Describes the configuration for a render target.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.SamplerDesc.html">SamplerDesc</a></dt>
+      <dd><p>Describes the parameters used to control how textures are sampled in rendering operations, including filtering,
+addressing modes, level-of-detail bias, and comparison functions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.TextureDesc.html">TextureDesc</a></dt>
+      <dd><p>Describes properties and configuration of a texture resource.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraColorFormat.html">AuraColorFormat</a></dt>
+      <dd><p>Defines pixel formats for textures, render targets, and swap chains.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraDepthStencilFormat.html">AuraDepthStencilFormat</a></dt>
+      <dd><p>Defines formats for depth and stencil buffers used in rendering.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraFormatType.html">AuraFormatType</a></dt>
+      <dd><p>The type of format to use for data serialization or vertex attributes.
+Formats starting with 'N' mean Normalized (values are scaled between 0.0f-1.0f or -1.0f-1.0f within the entire bit length min/max).
+Formats starting with 'U' mean Unsigned (only positive numbers, e.g., 0 to Max).
+Formats starting with 'S' mean Signed (allow negative numbers, e.g., Min to Max).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraPresentResult.html">AuraPresentResult</a></dt>
+      <dd><p>Represents the result of presenting a frame on a swap chain. That's usually where you'll be alerted of any major error.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraSamplerAddressMode.html">AuraSamplerAddressMode</a></dt>
+      <dd><p>Defines how texture coordinates outside the [0,1] range are handled during sampling.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.AuraSamplerFilterType.html">AuraSamplerFilterType</a></dt>
+      <dd><p>Defines the filtering mode used when sampling a texture.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.BlendLogicOperation.html">BlendLogicOperation</a></dt>
+      <dd><p>Defines logic operations for pixel blending using bitwise boolean calculations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.BlendOperation.html">BlendOperation</a></dt>
+      <dd><p>Defines the operation used to combine source and destination colors/alphas during blending.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.BlendType.html">BlendType</a></dt>
+      <dd><p>Defines blending factors used in the pixel shader output merger stage.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.BufferBindUsage.html">BufferBindUsage</a></dt>
+      <dd><p>Defines the usage flags for binding buffer resources to the graphics pipeline.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.CullMode.html">CullMode</a></dt>
+      <dd><p>Defines which faces of a primitive are culled during rasterization.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.FillMode.html">FillMode</a></dt>
+      <dd><p>Defines how the interior of primitives is rasterized.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.FullScreenState.html">FullScreenState</a></dt>
+      <dd><p>Defines the fullscreen state of a window.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.PrimitiveTopology.html">PrimitiveTopology</a></dt>
+      <dd><p>Defines the topology of primitives to be rendered by the graphics pipeline.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.SamplerDesc.ComparisonFuncs.html">SamplerDesc.ComparisonFuncs</a></dt>
+      <dd><p>Defines comparison functions for depth and stencil buffer tests.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.ShaderProgramKind.html">ShaderProgramKind</a></dt>
+      <dd><p>Defines the shader language and profile version used for compiling graphics programs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.StencilComparisonFunc.html">StencilComparisonFunc</a></dt>
+      <dd><p>Defines comparison functions for stencil buffer testing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="OnixRuntime.Api.Aura.StencilOperation.html">StencilOperation</a></dt>
+      <dd><p>Defines operations applied to the stencil buffer value during rendering.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

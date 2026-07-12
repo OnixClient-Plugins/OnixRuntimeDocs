@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct ReorderableEnumValue | Onix Plugin Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct ReorderableEnumValue | Onix Plugin Documentation ">
+      
+      <meta name="description" content="Just a wrapper around the  for usage in config classes, it basically just brings what the setting class has.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/OnixClient-Plugins/OnixRuntime/new/main/apiSpec/new?filename=OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue.md&amp;value=---%0Auid%3A%20OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Onix Plugin Documentation">
+            Onix Plugin Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue">
+
+
+
+  <h1 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue" class="text-break">
+Struct ReorderableEnumValue  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OnixRuntime.html">OnixRuntime</a>.<a class="xref" href="OnixRuntime.Api.html">Api</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.html">OnixClient</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.html">Settings</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>OnixRuntime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Just a wrapper around the <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a> for usage in config classes, it basically just brings what the setting class has.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct ReorderableEnumValue : IEnumerable&lt;OnixSettingReorderableEnum.Entry&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue__ctor_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.#ctor*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue__ctor_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.#ctor(OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum)">
+  ReorderableEnumValue(OnixSettingReorderableEnum)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Just a wrapper around the <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a> for usage in config classes, it basically just brings what the setting class has.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReorderableEnumValue(OnixSettingReorderableEnum setting)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>setting</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a></dt>
+    <dd><p>The setting to get everything from.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_CanDisableEntries_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.CanDisableEntries*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_CanDisableEntries" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.CanDisableEntries">
+  CanDisableEntries
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls whether entries can or cannot be disabled by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanDisableEntries { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_Entries_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.Entries*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_Entries" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.Entries">
+  Entries
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The entries that make up this setting, you should avoid dealing with those if the helper functions can satisfy you.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry[] Entries { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_ExtraHeightBetweenEntries_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.ExtraHeightBetweenEntries*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_ExtraHeightBetweenEntries" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.ExtraHeightBetweenEntries">
+  ExtraHeightBetweenEntries
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional padding to add to every entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExtraHeightBetweenEntries { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_AddEntry_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.AddEntry*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_AddEntry_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_Entry_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.AddEntry(OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry,System.Boolean)">
+  AddEntry(Entry, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a new entry to this reorderable enum setting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEntry(OnixSettingReorderableEnum.Entry entry, bool ignoreOrderIndex = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry to add.</p>
+</dd>
+    <dt><code>ignoreOrderIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When true, the entry's <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_Entry_OrderIndex">OrderIndex</a> and <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_Entry_DefaultOrderIndex">DefaultOrderIndex</a> are set to the end of the list instead of using the values provided on creation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_AddEntry_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_Entry_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>You must never use the entry again after adding it; ownership is transferred to the setting.</p>
+</div>
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfOrderIndex_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfOrderIndex*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfOrderIndex_System_Int32_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfOrderIndex(System.Int32)">
+  GetEntryOfOrderIndex(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the entry that is at that reordered index or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetEntryOfOrderIndex(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index to get.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry or null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfSaveId_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfSaveId*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfSaveId_System_Int32_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfSaveId(System.Int32)">
+  GetEntryOfSaveId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an entry by its save id or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetEntryOfSaveId(int saveId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The id of the entry to get.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry or null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfValue_System_Int64_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfValue(System.Int64)">
+  GetEntryOfValue(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the first entry for <code class="paramref">value</code> or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetEntryOfValue(long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The value to get the entry of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The first entry with that value or null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEntryOfValue__1___0_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEntryOfValue``1(``0)">
+  GetEntryOfValue&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the first entry for <code class="paramref">value</code> or null. Accepts an enum for convenience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetEntryOfValue&lt;T&gt;(T value) where T : Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The enum value to get the entry of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The first entry with that value or null.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEnumerator_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEnumerator*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetEnumerator" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetEnumerator">
+  GetEnumerator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the collection of entries in the setting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;OnixSettingReorderableEnum.Entry&gt; GetEnumerator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a>&gt;</dt>
+    <dd><p>An enumerator for the collection of <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">OnixSettingReorderableEnum.Entry</a> objects contained in the
+setting.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetIndexOfValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetIndexOfValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetIndexOfValue_System_Int64_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetIndexOfValue(System.Int64)">
+  GetIndexOfValue(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the index of the first entry with <code class="paramref">value</code> or -1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetIndexOfValue(long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The value to search for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index or -1.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetIndexOfValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetIndexOfValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetIndexOfValue__1___0_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetIndexOfValue``1(``0)">
+  GetIndexOfValue&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the index of the first entry with <code class="paramref">value</code> or -1. Accepts an enum for convenience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetIndexOfValue&lt;T&gt;(T value) where T : Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The enum value to search for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index or -1.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetNextEntryBySaveId_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetNextEntryBySaveId*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetNextEntryBySaveId_System_Int32_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableWrapMode_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetNextEntryBySaveId(System.Int32,OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode,System.Boolean)">
+  GetNextEntryBySaveId(int, OnixSettingReorderableWrapMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the next entry after the first entry with the save id of <code class="paramref">saveId</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetNextEntryBySaveId(int saveId, OnixSettingReorderableWrapMode wrap = OnixSettingReorderableWrapMode.WrapAround, bool mustBeEnabled = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The save id to get the next entry of.</p>
+</dd>
+    <dt><code>wrap</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode.html">OnixSettingReorderableWrapMode</a></dt>
+    <dd><p>How you want the wrap-around to be.</p>
+</dd>
+    <dt><code>mustBeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether entries must be enabled to be included.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry and null if wrap mode allows for it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetNextEntryByValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetNextEntryByValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetNextEntryByValue_System_Int64_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableWrapMode_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetNextEntryByValue(System.Int64,OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode,System.Boolean)">
+  GetNextEntryByValue(long, OnixSettingReorderableWrapMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the next entry after the first entry with the value of <code class="paramref">value</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetNextEntryByValue(long value, OnixSettingReorderableWrapMode wrap = OnixSettingReorderableWrapMode.WrapAround, bool mustBeEnabled = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The value to get the next entry of.</p>
+</dd>
+    <dt><code>wrap</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode.html">OnixSettingReorderableWrapMode</a></dt>
+    <dd><p>How you want the wrap-around to be.</p>
+</dd>
+    <dt><code>mustBeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether entries must be enabled to be included.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry and null if wrap mode allows for it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetNextEntryByValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetNextEntryByValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetNextEntryByValue__1___0_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableWrapMode_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetNextEntryByValue``1(``0,OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode,System.Boolean)">
+  GetNextEntryByValue&lt;T&gt;(T, OnixSettingReorderableWrapMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the next entry after the first entry with the value of <code class="paramref">value</code>. Accepts an enum for convenience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetNextEntryByValue&lt;T&gt;(T value, OnixSettingReorderableWrapMode wrap = OnixSettingReorderableWrapMode.WrapAround, bool mustBeEnabled = true) where T : Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The enum value to get the next entry of.</p>
+</dd>
+    <dt><code>wrap</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode.html">OnixSettingReorderableWrapMode</a></dt>
+    <dd><p>How you want the wrap-around to be.</p>
+</dd>
+    <dt><code>mustBeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether entries must be enabled to be included.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry and null if wrap mode allows for it.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetPreviousEntryBySaveId_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetPreviousEntryBySaveId*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetPreviousEntryBySaveId_System_Int32_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableWrapMode_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetPreviousEntryBySaveId(System.Int32,OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode,System.Boolean)">
+  GetPreviousEntryBySaveId(int, OnixSettingReorderableWrapMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the previous entry before the first entry with the save id of <code class="paramref">saveId</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetPreviousEntryBySaveId(int saveId, OnixSettingReorderableWrapMode wrap = OnixSettingReorderableWrapMode.WrapAround, bool mustBeEnabled = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The save id to get the previous entry of.</p>
+</dd>
+    <dt><code>wrap</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode.html">OnixSettingReorderableWrapMode</a></dt>
+    <dd><p>How you want the wrap-around to be.</p>
+</dd>
+    <dt><code>mustBeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether entries must be enabled to be included.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry and null if wrap mode allows for it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetPreviousEntryByValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetPreviousEntryByValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetPreviousEntryByValue_System_Int64_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableWrapMode_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetPreviousEntryByValue(System.Int64,OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode,System.Boolean)">
+  GetPreviousEntryByValue(long, OnixSettingReorderableWrapMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the previous entry before the first entry with the value of <code class="paramref">value</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetPreviousEntryByValue(long value, OnixSettingReorderableWrapMode wrap = OnixSettingReorderableWrapMode.WrapAround, bool mustBeEnabled = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The value to get the previous entry of.</p>
+</dd>
+    <dt><code>wrap</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode.html">OnixSettingReorderableWrapMode</a></dt>
+    <dd><p>How you want the wrap-around to be.</p>
+</dd>
+    <dt><code>mustBeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether entries must be enabled to be included.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry and null if wrap mode allows for it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetPreviousEntryByValue_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetPreviousEntryByValue*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_GetPreviousEntryByValue__1___0_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableWrapMode_System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.GetPreviousEntryByValue``1(``0,OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode,System.Boolean)">
+  GetPreviousEntryByValue&lt;T&gt;(T, OnixSettingReorderableWrapMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the previous entry before the first entry with the value of <code class="paramref">value</code>. Accepts an enum for convenience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnixSettingReorderableEnum.Entry? GetPreviousEntryByValue&lt;T&gt;(T value, OnixSettingReorderableWrapMode wrap = OnixSettingReorderableWrapMode.WrapAround, bool mustBeEnabled = true) where T : Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The enum value to get the previous entry of.</p>
+</dd>
+    <dt><code>wrap</code> <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableWrapMode.html">OnixSettingReorderableWrapMode</a></dt>
+    <dd><p>How you want the wrap-around to be.</p>
+</dd>
+    <dt><code>mustBeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether entries must be enabled to be included.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a></dt>
+    <dd><p>The entry and null if wrap mode allows for it.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_SetEntries_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.SetEntries*"></a>
+
+  <h3 id="OnixRuntime_Api_OnixClient_Settings_ReorderableEnumValue_SetEntries_System_Collections_Generic_IEnumerable_OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_Entry__System_Boolean_" data-uid="OnixRuntime.Api.OnixClient.Settings.ReorderableEnumValue.SetEntries(System.Collections.Generic.IEnumerable{OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry},System.Boolean)">
+  SetEntries(IEnumerable&lt;Entry&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the new list of entries. You should never use any of those entries again, don't use the list it came from.
+You should use the helper functions whenever possible instead of dealing with raw entries like that.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEntries(IEnumerable&lt;OnixSettingReorderableEnum.Entry&gt; entries, bool orderFromEnumerableIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entries</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.html">OnixSettingReorderableEnum</a>.<a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html">Entry</a>&gt;</dt>
+    <dd><p>The entries to set.</p>
+</dd>
+    <dt><code>orderFromEnumerableIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the <a class="xref" href="OnixRuntime.Api.OnixClient.Settings.OnixSettingReorderableEnum.Entry.html#OnixRuntime_Api_OnixClient_Settings_OnixSettingReorderableEnum_Entry_OrderIndex">OrderIndex</a> gets set from the enumerable's index or stays untouched. (You need to make sure it's valid before you send it in if you don't.)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/OnixClient/Settings/OnixSettingReorderableEnum.cs/#L28" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

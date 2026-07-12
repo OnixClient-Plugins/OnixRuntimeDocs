@@ -89,7 +89,7 @@
 
 
   <h1 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms" class="text-break">
-Class OnixEventSessionModalForms  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L645"><i class="bi bi-code-slash"></i></a>
+Class OnixEventSessionModalForms  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1343"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -154,17 +154,19 @@ Class OnixEventSessionModalForms  <a class="header-action link-secondary" title=
 
 
 
-  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_RawModalFormRequest" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.RawModalFormRequest">
-  RawModalFormRequest
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_AnyRequest" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.AnyRequest">
+  AnyRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1360"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Occurs when a raw modal form request is received.</p>
+  <div class="markdown level1 summary"><p>Occurs when any modal form request is received, with the parsed form and a typed Replier.
+Cast the form and Replier to the specific subtype if needed,
+or subscribe to the form-type-specific events instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnRawModalFormRequestDelegate? RawModalFormRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnAnyRequestDelegate? AnyRequest</code></pre>
   </div>
 
 
@@ -174,7 +176,7 @@ Class OnixEventSessionModalForms  <a class="header-action link-secondary" title=
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawModalFormRequestDelegate.html">OnRawModalFormRequestDelegate</a></dt>
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnAnyRequestDelegate.html">OnAnyRequestDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -185,17 +187,18 @@ Class OnixEventSessionModalForms  <a class="header-action link-secondary" title=
 
 
 
-  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_RawModalFormResponse" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.RawModalFormResponse">
-  RawModalFormResponse
-  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L680"><i class="bi bi-code-slash"></i></a>
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_AnyResponse" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.AnyResponse">
+  AnyResponse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1400"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Occurs when a raw modal form response is received.</p>
+  <div class="markdown level1 summary"><p>Occurs when the player submits any modal form, with the original form definition and Replier.
+The Replier's data properties reflect what the player chose. The Replier is discarded after this event.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnRawModalFormResponseDelegate? RawModalFormResponse</code></pre>
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnAnyResponseDelegate? AnyResponse</code></pre>
   </div>
 
 
@@ -205,7 +208,258 @@ Class OnixEventSessionModalForms  <a class="header-action link-secondary" title=
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawModalFormResponseDelegate.html">OnRawModalFormResponseDelegate</a></dt>
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnAnyResponseDelegate.html">OnAnyResponseDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_CustomRequest" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.CustomRequest">
+  CustomRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a custom-type (interactive elements) form request is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnCustomRequestDelegate? CustomRequest</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnCustomRequestDelegate.html">OnCustomRequestDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_CustomResponse" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.CustomResponse">
+  CustomResponse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1430"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when the player submits a custom-type form.
+The form's element values have been updated to reflect the player's input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnCustomResponseDelegate? CustomResponse</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnCustomResponseDelegate.html">OnCustomResponseDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_FormRequest" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.FormRequest">
+  FormRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a form-type (button list) form request is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnFormRequestDelegate? FormRequest</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnFormRequestDelegate.html">OnFormRequestDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_FormResponse" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.FormResponse">
+  FormResponse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when the player submits a form-type (button list) form.
+Check <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormFormReplier.html#OnixRuntime_Api_Events_Session_ModalFormFormReplier_ButtonClicked">ButtonClicked</a> and <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormFormReplier.html#OnixRuntime_Api_Events_Session_ModalFormFormReplier_CloseButtonClicked">CloseButtonClicked</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnFormResponseDelegate? FormResponse</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnFormResponseDelegate.html">OnFormResponseDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_ModalRequest" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.ModalRequest">
+  ModalRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a modal-type (two-button dialog) form request is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnModalRequestDelegate? ModalRequest</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnModalRequestDelegate.html">OnModalRequestDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_ModalResponse" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.ModalResponse">
+  ModalResponse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1410"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when the player submits a modal-type (two-button dialog) form.
+Check <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormModalReplier.html#OnixRuntime_Api_Events_Session_ModalFormModalReplier_Button1Clicked">Button1Clicked</a> and <a class="xref" href="OnixRuntime.Api.Events.Session.ModalFormModalReplier.html#OnixRuntime_Api_Events_Session_ModalFormModalReplier_CloseButtonClicked">CloseButtonClicked</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnModalResponseDelegate? ModalResponse</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnModalResponseDelegate.html">OnModalResponseDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_RawRequest" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.RawRequest">
+  RawRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a raw modal form request is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnRawRequestDelegate? RawRequest</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawRequestDelegate.html">OnRawRequestDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="OnixRuntime_Api_Events_Session_OnixEventSessionModalForms_RawResponse" data-uid="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.RawResponse">
+  RawResponse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1450"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a raw modal form response is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event OnixEventSessionModalForms.OnRawResponseDelegate? RawResponse</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.html">OnixEventSessionModalForms</a>.<a class="xref" href="OnixRuntime.Api.Events.Session.OnixEventSessionModalForms.OnRawResponseDelegate.html">OnRawResponseDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -219,7 +473,7 @@ Class OnixEventSessionModalForms  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L645" class="edit-link">Edit this page</a>
+          <a href="https://github.com/OnixClient-Plugins/OnixRuntime/blob/main/OnixRuntime/Api/Events/Session/OnixEventSessionModalForms.cs/#L1343" class="edit-link">Edit this page</a>
         </div>
 
 

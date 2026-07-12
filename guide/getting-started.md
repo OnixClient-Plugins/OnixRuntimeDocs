@@ -49,4 +49,4 @@ The correct OnixRuntime version will be automatically downloaded to match the cl
 
 ### 🌐 Adding NuGet Source (Optional)
 - If you want the Onix Plugin NuGet packages, simply run `dotnet nuget add source https://plugin-nuget.onixclient.com/ -n "Onix Plugins"` in your terminal.
-  * If you don't have the .NET SDK installed, download both [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) and [.NET SDK 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) from these links.
+  * If you don't have the .NET SDK installed, download both [.NET SDK 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) from these links.
